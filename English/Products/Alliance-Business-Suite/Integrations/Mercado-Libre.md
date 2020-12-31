@@ -1,0 +1,1 @@
+[Authorization](https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=2066991843734925&redirect_uri=https%3A%2F%2Ffenixalliance.com.co%2Fapi%2FIO%2FMercadoLibre)

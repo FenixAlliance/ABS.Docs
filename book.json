@@ -1,0 +1,27 @@
+{
+    "absdocs": "3.2.3",
+    "plugins": [
+        "ga",
+        "hints",
+        "intopic-toc",
+        "include-html",
+        "insert-logo",
+        "back-to-top-button",
+        "hide-published-with",
+        "toggle-chapters"
+    ],
+    "links": {
+        "sidebar": {
+            "Contact us / Support": "https://fenixalliance.com.co/support"
+        }
+    },
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-XXXX-Y"
+        },
+        "insert-logo": {
+            "url": "https://fenixalliance.com.co/images/FenixAlliance/Branding/logo-onecolor-220x40.png",
+            "style": "background: none;"
+        }
+    }
+}

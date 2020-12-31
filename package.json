@@ -1,0 +1,15 @@
+{
+  "name": "fenixalliance.docs",
+  "version": "1.0.0",
+  "description": "---\r description: >-\r   Welcome to the open source documentation of Fenix Alliance's Applications.\r   Please review this README file to understand how you can assist in\r   contributing to the documentation.\r ---",
+  "main": "node_modules\\gitbook-cli\\bin\\gitbook.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "builddocs": "build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
