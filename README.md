@@ -1,5 +1,6 @@
 # Alliance Business Suite
 ![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://docs.fenixalliance.com.co" target="_blank">
@@ -28,20 +29,12 @@ We want to give you the power to harness your entire potential through technolog
 
 For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together.
 
-### Where we are on the stage?
+## The Alliance Business Creed
+
 We are creating our applications in such a form that they deliver as much value to your business and cause as we can. They work primarily as an interface for users to manage their services, products, and cloud resources. But the truth is that isn't limited to just that.
 
 Our applications are being developed to give you access to every functionality that we implement for our business, to power your business and vision as well. This is because if we can add value to our business and gain a competitive advantage through these tools, chances are you can too!
 
-### How to get started?
-To get started, you will need to create an Alliance ID account. Now, you may think... 🙄 another account? But don't worry. Creating your Alliance ID Account is (and will always be) free, takes just a few seconds and you don't even need a password (unless you want to have one). This account will give you instant access to everything else at Fenix Alliance Group.
-
-A note about your account and the privacy of your information.
-The Alliance ID Accounts engine is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, or you can talk to our technical team to integrate your own.
-
-We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
-
-To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
 ## About this Wiki
 Tagging system
@@ -65,6 +58,106 @@ Tagging system
 | GraphQl | GraphQl API |
 
 
+
+## Alliance Business Model (ABM) Schema
+---
+
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://docs.fenixalliance.com.co" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
+  </a>
+  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
+</p>
+
+The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
+
+Anyone can build on and extend ABM definitions to capture additional business-specific configurations.
+
+
+
+## Alliance Business Platform (ABP) 
+---
+
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://docs.fenixalliance.com.co" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
+  </a>
+  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
+</p>
+
+The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, GRPC, GraphQl, Bot Framework, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
+
+Anyone can build on and extend The Alliance Business Platform to capture additional business-specific scenarios.
+
+
+## Alliance Business Portal (ABS Portal) 
+---
+
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://docs.fenixalliance.com.co" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
+  </a>
+  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
+</p>
+
+The Alliance Business Portal is a Modular API Framework. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, GRPC, GraphQl, Bot Framework, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. B
+
+With ABS Portals, users can create external-facing websites that allow employees, customers, partners and others outside their organizations to sign in with a wide variety of identities, create and view data in the Alliance Business Model, or browse content anonymously. 
+
+These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Developers can reuse page designs through templates, add forms and views to display key data from the Alliance Business Model, and publish to users.
+
+Anyone can build on and extend The Alliance Business Platform to capture additional business-specific scenarios.
+
+## Alliance Business Studio (ABS Studio) 
+---
+
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://docs.fenixalliance.com.co" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
+  </a>
+  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
+</p>
+
+The Alliance Business Studio is the administration portal for one or more ABS Deployments. It allows users to manage their infrastructure
+
+# Getting Started
+
+To get started, you will need to create an Alliance ID account. Now, you may think... 🙄 another account? But don't worry. Creating your Alliance ID Account is (and will always be) free, takes just a few seconds and you don't even need a password (unless you want to have one). This account will give you instant access to everything else at Fenix Alliance Group.
+
+
+## Instalation Process
+
+### **Using Version 1.\*.\***
+
+- Install **[.NET 5 SDK (v5.0.100)](https://dotnet.microsoft.com/download/dotnet/5.0)**.
+   
+- Install the latest edition (v16.8 or higher) of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) (Community, Professional, or Enterprise Editions) with the **ASP.NET and web development** workload enabled. Alliance Business Suite works with ALL editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
+
+- Download a release or Clone the ABS.Portal repository to your local system using Git. Open the **FenixAlliance.ABS.Portal.sln** solution file and Build the solution. Make sure you specify FenixAlliance.ABS.Portal as the Startup Project and then Run the application.
+
+
+**Installing an official release:**
+
+- A detailed set of instructions for installing Alliance Business Suite on IIS is located here: [Installing Alliance Business Suite on IIS](https://absuite.net/blog/installing-abs-on-iis)
+- Instructions for upgrading Alliance Business Suite are located here: [Upgrading Alliance Business Suite ](https://absuite.net/blog/upgrading-abs)
+
+
 ## Requirements
  - MS SQL Server or My SQL.
  - MongoDB to manage state.
@@ -73,6 +166,7 @@ Tagging system
 - [User Guide] (https://docs.fenixalliance.com.co)
 
 ## Instalation
+
 ### Easy Install
 
 The Easy Way: As a Docker Container.
@@ -86,7 +180,7 @@ docker pull FenixAlliance.ABS.Portal:latest
 git clone https://github.com/FenixAlliance/ABS.Portal
 ```
 ```sh
-cd ABS.Portal
+cd ABS.Portal/FenixAlliance.ABS.Portal
 ```
 ```sh
 dotnet restore
@@ -147,97 +241,6 @@ namespace FenixAlliance.ABSP
 }
 ```
 
-## Alliance Business Model (ABM) Schema
----
-
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
-  </a>
-  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
-</p>
-
-The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
-
-Anyone can build on and extend ABM definitions to capture additional business-specific configurations.
-
-
-
-## Alliance Business Platform (ABP) 
----
-
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
-  </a>
-  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
-</p>
-
-The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, GRPC, GraphQl, Bot Framework, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
-
-Anyone can build on and extend The Alliance Business Platform to capture additional business-specific scenarios.
-
-
-## Alliance Business Portal (ABS Portal) 
----
-
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
-  </a>
-  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
-</p>
-
-The Alliance Business Portal is a Modular API Framework. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, GRPC, GraphQl, Bot Framework, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. B
-
-Anyone can build on and extend The Alliance Business Platform to capture additional business-specific scenarios.
-
-## Alliance Business Studio (ABS Studio) 
----
-
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
-  </a>
-  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
-</p>
-
-The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, GRPC, GraphQl, Bot Framework, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. B
-
-Anyone can build on and extend The Alliance Business Platform to capture additional business-specific scenarios.
-
-
-# Getting Started
-
-** Using Version 1.*.*
-
-- Install **[.NET 5 SDK (v5.0.100)](https://dotnet.microsoft.com/download/dotnet/5.0)**.
-   
-- Install the latest edition (v16.8 or higher) of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) (Community, Professional, or Enterprise Editions) with the **ASP.NET and web development** workload enabled. Alliance Business Suite works with ALL editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
-
-- Download a release or Clone the ABS.Portal repository to your local system using Git. Open the **FenixAlliance.ABS.Portal.sln** solution file and Build the solution. Make sure you specify FenixAlliance.ABS.Portal as the Startup Project and then Run the application.
-
-
-**Installing an official release:**
-
-- A detailed set of instructions for installing Alliance Business Suite on IIS is located here: [Installing Alliance Business Suite on IIS](https://absuite.net/blog/installing-abs-on-iis)
-- Instructions for upgrading Alliance Business Suite are located here: [Upgrading Alliance Business Suite ](https://absuite.net/blog/upgrading-abs)
 
 **Additional Instructions**
 
@@ -255,39 +258,41 @@ There is a separate [Documentation repository](https://github.com/fenixalliance/
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
 
-V.2.0.0 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.2.0.0 ( release in 2021 - T4 )
 - [ ] Migration to .NET 6
 
-V.1.7.5 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.7.5 ( release in 2021 - T3 )
 - [ ] PowerShell SDK 
 
-V.1.5.0 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.5.0 ( release in 2021 - T2 )
 - [ ] gRPC Modularization
-- [ ] gRPC Modularization
+- [ ] ACS Modularization
 
-V.1.2.5 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.2.5 ( release in T1 - 2021 - T1 )
 - [ ] Static Localization ( ie. labels, help text, etc.. )
-- [ ] Improved JavaScript reference support
-- [ ] Performance optimizations (Constant)
-- [ ] Developer productivity enhancements
-- [ ] Complete Static Localization of Admin UI
+- [ ] ARIA Tags Integration for Studio
+- [ ] ComputeWorks Cloud Platform Integration
 
 V.1.0.0 ( released in Dec 31, 2020 )
 - [x] In-App CLI (Studio)
 - [x] Modular Architecture
 - [x] Multi-Currency Support
+- [x] Improved JavaScript reference support
 - [x] Multi-Tenant ( Shared Database & Isolated Database ) 
-- [x] Multi-Portal ( Monolith & Microservice Distributed ) 
+- [x] Multi-Portal ( Monolith & Microservice nDistributed ) 
+- [x] i18n Enabled (Based on GeoAPI and Custom Settings)
 - [x] Cross Platform Database Support ( MySQL, MSSQL )
 - [x] EF Core Migrations for Database Installation / Upgrade
-- [x] Headless API with Swagger Support
-- [x] GeoAPI Enabled
+- [x] REST API with Swagger Support
+- [x] HealthCheck Rules with UI Support
+- [x] GraphQl API with Voyager, GraphiQl y GraphQl Playground
 - [x] Dynamic Page Compositing Model / Site & Page Management
 - [x] Authentication / User Management / Profile Management
 - [x] Authorization / Roles Management / Granular Permissions
 - [x] Support For Additional Authentication Providers (ie. OAuth)
 - [x] Dynamic Routing
 - [x] Dynamic Swagger Specs
+- [x] Enabled for Infinity Comex (eCommerce Extension)
 - [x] Slack integration (OAuth)
 - [x] Extensibility via Custom Modules
 - [x] Extensibility via Custom Themes
@@ -301,28 +306,55 @@ V.1.0.0 ( released in Dec 31, 2020 )
 - [x] JavaScript Lazy Loading
 - [x] Dynamic CSS/Lazy Loading
 
-Future Consideration
+Constant Consideration
 
-- [ ] Site Configuration Migrations
-- [ ] Pub/Sub Event Framework
-- [ ] Admin UI Markup Optimization ( ie. replace tables with divs in forms )
+- [ ] Code Annotations
+- [ ] A11y Improvements
+- [ ] i18n Improvements
+- [ ] UI/UX Improvements
+- [ ] SOLID Code Improvements
+- [ ] Security Improvements
+- [ ] Performance Improvements
+- [ ] Bug fixes & Dependency Management
+- [ ] Generic Integrations Improvements
+- [ ] Developer Productivity Improvements
+- [ ] ABM Entity Set Extensions
 
 # Release Announcements
 
-[Alliance Business Suite v1.2.5](https://absuite.net/Blog/PostId/544/announcing--20-for-net-5)
-
-# Architecture
-
-The following diagram visualizes the client and server components in the ABS architecture.
-
-![Architecture](https://github.com//framework/blob/master/screenshots/Architecture.png?raw=true "Alliance Business Suite Architecture")
-
+[Alliance Business Suite v1.2.5](https://absuite.net/Blog/announcing-1-25-for-net-5)
 
 # Example Screenshots
 
-Install Wizard:
+## APS IAM Social Providers:
+Alliance Passport Services provides Internal, B2B and B2C identity as a service. It allows users to use their preferred social, enterprise, or local account identities to get single sign-on access to the Alliance Business Suite.
 
-![Installer](https://github.com//framework/blob/master/screenshots/Installer.png?raw=true "Installer")
+Alliance Passport Services (APS) is Fenix Alliance's cloud-based identity and access management service, which helps your customers and employees to sign in and access resources in your deployment, such as apps on your tenant, portal instances, Infinity Comex Deployments, along with any cloud apps developed by your own organization.
+
+
+![Alliance Passport Services](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/image-a85a71aa-0553-47b3-bde4-0f2a7cb8b220.png?raw=true "Alliance Passport Services")
+
+## ABS Extensions:
+The ABS is absolutely modular. Wether you need to add pages, products or posts with no code at all (using the ABS Web Designer), modify the style or layout, or add your own Types, Controllers, Pages, Views, Components or Tag Helpers
+
+![ABS Extensions](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/YLVYb8WhDf.gif?raw=true "ABS Extensions")
+
+## ABS Commander Terminal:
+The ABS Commander Terminal is a Built-In functionality that allows users to execute commands against the ABP set of APIs.
+
+![ABS Commander Terminal](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/8Jbl76YPxD.gif?raw=true "ABS Commander Terminal")
+
+## ABS WOPI Connector:
+
+The ABS Workplace Module allows users to create, view and edit Office files with Office for the web, right from their ABS Instances. It also allows users to manage files for pretty much for every entity type.
+
+![ABS WOPI Connector](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/E9Or7BZKnX.gif?raw=true "ABS WOPI Connector")
+
+## ACS Bot Maker:
+
+The Alliance Conversational Services Bot Maker Platform is an ABS extension that allows users to create conversational flows using NLP and a graphical UI.
+
+![ABS Bot Maker](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/2id1XVYuYR.gif?raw=true "ABS Bot Maker")
 
 
 # Versioning
@@ -337,7 +369,7 @@ Maintaining forward and backward compatibility is a key goal of the ABS. Therefo
 
 Contributions, issues, and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/FenixAlliance/ABM.Models/issues). You can also take a look at the [contributing guide](https://fenixalliance.com.co/technologies/opensource/codeofconduct).
 
-1. [Issue Guidelines](https://github.com/fenixalliance/abs/wiki/Issue-Guidelines)
+1. [Issue Guidelines](https://github.com/fenixalliance/abs.portal/wiki/Issue-Guidelines)
 1. [Report Security Vulnerabilities](https://fenixalliance.com.com/security)
 1. [Pull Request Requirements](https://github.com/fenixalliance/ABS/wiki/Contribution-Guidelines)
 1. [Translations](https://translate.fenixalliance.com.co)
@@ -389,6 +421,15 @@ Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We h
 Your access to and use of the Alliance Business Suite's source code is governed by the Fenix Alliance's End User License Agreement "EULA". If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
 
 We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the develop branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Fenix Alliance coding standards. All contributions are governed by the terms of the EULA.
+
+
+**A note about your account and the privacy of your information.**
+
+The Alliance Passport Services engine is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, but you can also integrate your own.
+
+We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
+
+To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
 
 

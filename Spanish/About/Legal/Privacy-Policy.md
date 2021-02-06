@@ -4,7 +4,7 @@ Fenix ​​Alliance is deeply committed to ensuring the privacy and security of
 
 ### What information do we collect?
 
-We collect/collect your information when you obtain an AllianceIDHolder, you register on our site if you make an order, subscribe to our newsletter, answer a survey or fill out a form.
+We collect/collect your information when you obtain an AccountHolder, you register on our site if you make an order, subscribe to our newsletter, answer a survey or fill out a form.
 
 When you register or order on our site, as the case may be, you will be asked to enter: your name, email address, postal address, telephone number, credit card information or social security number. However, you can visit our site anonymously.
 
