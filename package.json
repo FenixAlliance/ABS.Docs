@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-ga": "^2.0.0",
+    "is-plain-object": "^5.0.0"
+  },
+  "devDependencies": {
+    "graceful-fs": "^4.2.6"
   }
 }
