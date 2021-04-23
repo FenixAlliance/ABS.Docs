@@ -1,13 +1,12 @@
 ---
 description: >-
-  Whether you need help creating or managing your Alliance ID Account, you are in the right place.
+  A holder account is a CredentialsPrincipal for the application. It represents a human user identified by a username/password. (Unless using some kind of federated identity service like Azure Active Directory, Google, Facebook, Microsoft Identity, etc...)
 ---
 
-# Create your Alliance ID Account
-
+# Create your Account Holder
 ## Creating your Alliance ID through an identity provider: \(e.g. Amazon, Facebook, LinkedIn, Google...\)
 ------------------------------------------------------------ -------------------------------------------
- If you don’t already have an Alliance ID account, you can get it for free by using those accounts that you already own and use \(like your social media accounts\). For this matter, you will need to select the identity provider of your choice when you [create your Alliance ID](https://fenixalliance.com.co/Account/SignIn). 
+If you don’t already have an Alliance ID account, you can get it for free by using those accounts that you already own and use \(like your social media accounts\). For this matter, you will need to select the identity provider of your choice when you [create your Alliance ID](https://fenixalliance.com.co/Account/SignIn). 
 
 
 You will need to login to your Alliance ID account through tour chosen identity provider to get access to your account and resources.
