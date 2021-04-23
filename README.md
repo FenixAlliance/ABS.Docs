@@ -15,7 +15,7 @@
 
 Welcome to the Alliance Business Suite!
 
-The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart your business through the acceleration of several core aspects of any given business.
+The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart their business through the acceleration of several core aspects of any given business.
 
 The Alliance Business Suite gives users a Full-Stack, Modular Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
@@ -89,7 +89,10 @@ cd ABS.Bin
 ```sh
 ./FenixAlliance.ABS.Studio.exe
 ```
-
+or
+```sh
+dotnet FenixAlliance.ABS.Studio.dll
+```
 #### Usage
 
 Add the NuGet package
