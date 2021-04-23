@@ -21,3 +21,55 @@ The following browsers are supported:
 - Microsoft Edge (supported on Windows 10)
 - Apple Safari 11
 - Internet Explorer 11
+
+
+## Recommended Windows Server Hardware (Minimum)
+- Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
+- 8GB Memory (4GB Memory)
+- 40GB free hard disk space (10GB free hard disk)
+- Recommended SQL Server Hardware (Minimum)
+- Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
+- 16GB Memory (4GB Memory)
+- Hard Disk: SAS RAID 5 or RAID 10 Hard Disk Array
+
+## Supported Operating Systems
+The following operating systems are supported with the recommendation that the latest Windows updates are applied.
+
+- Windows Server 2012 R2 x64 Datacenter / Standard
+- Windows Server 2012 x64 Datacenter / Standard
+
+## Supported SQL Server Editions
+The following SQL Server Editions are supported with the recommendation that the latest Windows updates are applied.
+
+- Microsoft SQL Server 2014 Enterprise x64
+- Microsoft SQL Server 2014 Business Intelligence x64
+- Microsoft SQL Server 2014 Standard x64
+- Microsoft SQL Server 2012 Enterprise x64 SP1
+- Microsoft SQL Server 2012 Business Intelligence x64 SP1
+- Microsoft SQL Server 2012 Standard x64 SP1
+
+Supported SQL Server Reporting Services (SSRS)
+The following SQL Server Reporting Services are supported with the recommendation that the latest Windows updates are applied.
+
+- Microsoft SQL Server 2014 Enterprise x64
+- Microsoft SQL Server 2014 Business Intelligence x64
+- Microsoft SQL Server 2014 Standard x64
+- Microsoft SQL Server 2012 Enterprise x64 SP1
+- Microsoft SQL Server 2012 Business Intelligence x64 SP1
+- Microsoft SQL Server 2012 Standard x64 SP1
+
+## Active Directory Modes
+
+- Windows Server 2008 Modes
+- Windows Server 2008 R2 Modes
+- Windows Server 2012
+- Windows Server 2012 R2
+
+##Internet Information Services (IIS)
+- IIS 8.5
+- IIS 8.0
+
+## Required Software Components
+- SQL – SQL Word Breakers
+- SQL – SQL Server Agent Service
+- SQL – Server Full-Text Indexing
