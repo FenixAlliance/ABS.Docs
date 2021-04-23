@@ -56,13 +56,6 @@ We think that it's also worth pointing out that we DO NOT store any identity inf
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
 
-<br >
-
-### ABS requirements:
- - MS SQL Server or My SQL, 
- - .NET 6.0 (Latest preview release)
-
-<br >
 
 ### User Guide
 - [ABS Documentation](https://docs.fenixalliance.com.co)
