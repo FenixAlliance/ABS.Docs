@@ -22,7 +22,6 @@ The following browsers are supported:
 - Apple Safari 11
 - Internet Explorer 11
 
-
 ## Recommended Windows Server Hardware (Minimum)
 - Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
 - 8GB Memory (4GB Memory)
