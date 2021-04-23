@@ -21,4 +21,5 @@ We want to give you options. If you don't want to use or you don't have any soci
 
 ## The IAM module contains all the access logic to the Alliance ID account, It is composed of roles capable of assuming a certain set of permissions to act on behalf of a Business Tenant.
 
+![image.png](/.attachments/image-e958c1ab-1f3e-4219-9b64-36df68784c32.png)
 
