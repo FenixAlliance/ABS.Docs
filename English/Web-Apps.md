@@ -43,5 +43,6 @@ Implicit Razor expressions start with @ followed by C# code:
 With the exception of the C# await keyword, implicit expressions must not contain spaces. If the C# statement has a clear ending, spaces can be intermingled:
 
  ```html
-<a href="mailto:Support@contoso.com">Support@contoso.com</a>
+<p>@await DoSomething("hello", "world")</p>
 ```
+
