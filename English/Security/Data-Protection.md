@@ -10,3 +10,13 @@ The GDPR grants individuals (or data subjects) certain rights in connection with
 
 ## Compliance Manager
 **Alliance Business Suite - Compliance Manager** is a modular cloud service solution that is designed to help organizations meet complex compliance obligations like the GDPR. It does real-time risk assessment that reflects your compliance posture against data protection regulations when you use Fenix Alliance's cloud services. It also provides recommended actions and step-by-step guidance.
+
+## HTTPS Enforcement in the Alliance Business Suite.
+
+Although no API can prevent a client from sending sensitive data on the first request. the Alliance Business Platform (which serves as a middleware for incoming/outgoing requests, as a rule of thumb, is designed to make sure that: 
+- HTTPS is required for all requests.
+- All HTTP requests are redirected to HTTPS.
+
+**Note:** 
+The Alliance Business platform should not listen on HTTP and will close the connection with status code 400 (Bad Request) and not serve the request.
+
