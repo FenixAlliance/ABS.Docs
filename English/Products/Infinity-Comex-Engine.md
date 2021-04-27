@@ -18,3 +18,5 @@ The Infinity Comex Engine is built on top of the Logistics module of the Allianc
 
 - ## Everything you need to build your brand and expose your business online.
 
+Besides the fact that Infinity Comex Stores are fully customizable/white-label Customer-Facing solutions (which means your customers won't even know we're there), hundreds of external integrations allow users to connect and configure their favorite channels and applications through standard authentication protocols exposed by third-party developers.
+
