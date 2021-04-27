@@ -1,3 +1,8 @@
-node_modules
 *.ps1
 _book
+AppData/
+node_modules
+appsettings.json
+appsettings.Development.json
+suitesettings.json
+suitesettings.Development.json
