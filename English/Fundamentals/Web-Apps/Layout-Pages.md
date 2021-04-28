@@ -1,12 +1,16 @@
+# Layout Pages on the Alliance Business Suite
+
 Pages and views frequently share visual and programmatic elements. This article demonstrates how to:
 
-Use common layouts.
-Share directives.
-Run common code before rendering pages or views.
-This document discusses layouts for the two different approaches to ASP.NET Core MVC: Razor Pages and controllers with views. For this topic, the differences are minimal:
+- Use common layouts.
+- Share directives.
+- Run common code before rendering pages or views.
 
-Razor Pages are in the Pages folder.
-Controllers with views uses a Views folder for views.
+This document discusses layouts for the two different approaches to building Alliance Business Suite Apps: Razor Pages and controllers with views. For this topic, the differences are minimal:
+
+Razor Pages are database records according to the Alliance Business Model Schema.
+Controllers with views are sets of precompiled code living on the Alliance Business Model.
+
 ## What is a Layout
 Most web apps have a common layout that provides the user with a consistent experience as they navigate from page to page. The layout typically includes common user interface elements such as the app header, navigation or menu elements, and footer.
 
@@ -18,9 +22,7 @@ Common HTML structures such as scripts and stylesheets are also frequently used 
 
 Common HTML structures such as scripts and stylesheets are also frequently used by many pages within an app. All of these shared elements may be defined in a layout file, which can then be referenced by any view used within the app. Layouts reduce duplicate code in views.
 
-By convention, the default layout for an ASP.NET Core app is named _MainLayout. The layout files for new ASP.NET Core projects created with the templates are:
-
-
+By convention, the default layout for an Alliance Business Suite app is named MainLayout.
 
 The layout defines a top-level template for views in the app. Apps don't require a layout. Apps can define more than one layout, with different views specifying different layouts.
 
