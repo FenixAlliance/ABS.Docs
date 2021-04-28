@@ -46,6 +46,28 @@ Rendered output:
 <p>Item SKU: <strong>RIGHTSMANAGEMENT</strong>.</p>
 <p>Item SKU: <strong>MCOPSTNC</strong>.</p>
 ```
+You can also supply an inline Razor template as an argument to a method. In the following example, the Repeat method receives a Razor template. The method uses the template to produce HTML content with repeats of items supplied from a list:
+``` cshtml
+@using Microsoft.AspNetCore.Html
+
+@functions {
+    public static IHtmlContent Repeat(IEnumerable<dynamic> items, int times,
+        Func<dynamic, IHtmlContent> template)
+    {
+        var html = new HtmlContentBuilder();
+
+        foreach (var item in items)
+        {
+            for (var i = 0; i < times; i++)
+            {
+                html.AppendHtml(template(item));
+            }
+        }
+
+        return html;
+    }
+}
+```
 
 ## Razor reserved keywords
 ### Razor keywords
