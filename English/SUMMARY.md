@@ -23,7 +23,8 @@
 
 * [Products Overview](Products.md)
 * [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
-  * [Alliance Business Cloud](Products/Alliance-Business-Cloud/)
+  * [Alliance Business Cloud](Products/Alliance-Business-Cloud/Hosting-Features.md)
+  * [Alliance Business Cloud](Products/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
 * [Alliance Business Model](Products/Alliance-Business-Model.md)
   * [Extensibility](Products/Alliance-Business-Model/Extensibility.md)
