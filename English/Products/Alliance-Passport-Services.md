@@ -1,7 +1,7 @@
 ---
 description: >-
-  Welcome to the open-source documentation on your Alliance ID Account.
-  Please review this README file to understand how you can get the most out of your AID credential.
+  Welcome to the open-source documentation on the Alliance Passport Services Layer.
+  Please review this README file to understand how you can get the most out of your Account Holder Credentials.
 ---
 
 ## How to get started?
