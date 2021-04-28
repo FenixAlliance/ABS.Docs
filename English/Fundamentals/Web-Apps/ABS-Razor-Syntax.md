@@ -34,11 +34,9 @@ Implicit Razor expressions start with @ followed by C# code:
 
 With the exception of the C# await keyword, implicit expressions must not contain spaces. If the C# statement has a clear ending, spaces can be intermingled:
 
- ```html
+ ``` html
 <p>@await DoSomething("hello", "world")</p>
 ```
-
-
 
 ## Templated Razor delegates
 
@@ -49,7 +47,7 @@ Razor templates allow you to define a UI snippet with the following format:
 ```
 The following example illustrates how to specify a templated Razor delegate as a Func<T,TResult>. The dynamic type is specified for the parameter of the method that the delegate encapsulates. An object type is specified as the return value of the delegate. The template is used with a List<T> of Pet that has a Name property.
 
-```
+``` csharp
 @using FenixAlliance.ABM.Models.Logistics.Stock.Item
 @{
     Func<dynamic, object> itemTemplate = @<p>Item SKU: <strong>@item.SKU</strong>.</p>;
