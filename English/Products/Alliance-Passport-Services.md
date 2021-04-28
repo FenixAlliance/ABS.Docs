@@ -17,7 +17,6 @@ Authentication is a process in which a user provides credentials that are then c
 
 Another way to think of authentication is to consider it as a way to enter a space, such as a server, database, app, or resource, while authorization is which actions the user can perform to which objects inside that space (server, database, or app).
 
-
 ## Common Vulnerabilities in software
 The Alliance Business Suite contains features that help you secure your apps and prevent security breaches. The following list briefly exposes the techniques used to avoid the most common security vulnerabilities in web apps:
 
