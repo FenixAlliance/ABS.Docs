@@ -52,9 +52,9 @@ The following code shows the layout file for a template created a project with a
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a href="/Index">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                    <li><a href="/Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
