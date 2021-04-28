@@ -24,9 +24,9 @@ The following example illustrates how to specify a templated Razor delegate as a
 
     var items = new List<Item>
     {
-        new Item { SKU = "Rin Tin Tin" },
-        new Item { SKU = "Mr. Bigglesworth" },
-        new Item { SKU = "K-9" }
+        new Item { SKU = "AAD_BASIC" },
+        new Item { SKU = "RIGHTSMANAGEMENT" },
+        new Item { SKU = "MCOPSTNC" }
     };
 }
 ```
@@ -37,6 +37,14 @@ The template is rendered with items supplied by a foreach statement:
 {
     @itemTemplate(item)
 }
+```
+
+Rendered output:
+
+``` html
+<p>Item SKU: <strong>AAD_BASIC</strong>.</p>
+<p>Item SKU: <strong>RIGHTSMANAGEMENT</strong>.</p>
+<p>Item SKU: <strong>MCOPSTNC</strong>.</p>
 ```
 
 ## Razor reserved keywords
