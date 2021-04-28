@@ -25,6 +25,8 @@
 * [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
 * [Alliance Business Model](Products/Alliance-Business-Model.md)
   * [Extensibility](Products/Alliance-Business-Model/Extensibility.md)
+* [Alliance Passport Services](Products/Alliance-Passport-Services.md)
+  * [Extensibility](Products/Alliance-Business-Model/Extensibility.md)
 * [Alliance Business Platform](Products/Alliance-Business-Platform.md)
   * [Identity & Access Management](Products/Alliance-Business-Platform/IAM.md)
   * [Application Programming Interfaces](Products/Alliance-Business-Platform/APIs.md)
