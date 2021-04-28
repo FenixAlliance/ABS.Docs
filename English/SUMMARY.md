@@ -8,7 +8,7 @@
 
 * [Outlook](About.md)
 * [Overview](Overview.md)
-* [What's New?](What's-New?.md)
+* [What's New?](Changelog.md)
 * [Fundamentals](Fundamentals.md)
 * [Web Apps](Fundamentals.md)
    * [Razor Syntax](Web-Apps/Razor-Syntax.md)
