@@ -68,6 +68,30 @@ You can also supply an inline Razor template as an argument to a method. In the 
     }
 }
 ```
+Using the list of items from the prior example, the Repeat method is called with:
+- List<T> of Pets.
+- Number of times to repeat each item.
+- Inline template to use for the list items of an unordered list.
+``` cshtml
+<ul>
+    @Repeat(items, 3, @<li>@item.SKU</li>)
+</ul>
+```
+Rendered output:
+
+``` html
+<p>Item SKU: <strong>AAD_BASIC</strong>.</p>
+<p>Item SKU: <strong>AAD_BASIC</strong>.</p>
+<p>Item SKU: <strong>AAD_BASIC</strong>.</p>
+<p>Item SKU: <strong>RIGHTSMANAGEMENT</strong>.</p>
+<p>Item SKU: <strong>RIGHTSMANAGEMENT</strong>.</p>
+<p>Item SKU: <strong>RIGHTSMANAGEMENT</strong>.</p>
+<p>Item SKU: <strong>MCOPSTNC</strong>.</p>
+<p>Item SKU: <strong>MCOPSTNC</strong>.</p>
+<p>Item SKU: <strong>MCOPSTNC</strong>.</p>
+```
+
+
 
 ## Razor reserved keywords
 ### Razor keywords
