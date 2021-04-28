@@ -1,6 +1,8 @@
 # Tutorial: Get started with the Alliance Business Suite
 This tutorial shows how to create and run your first Alliance Business Suite instance.
 
+[[_TOC_]]
+
 You'll learn how to:
 
 - [✔] Create a web app project.
@@ -15,9 +17,11 @@ In the end, you'll have a working Alliance Business Suite instance running on yo
 - .NET Core 6.0 SDK or later
 - MySQL Server 8.0 or later
 
-### Easy Install
+## Installation
 
+### Easy Install
 The Easy Way: As a Docker Container.
+
 ```powershell
 docker pull FenixAlliance.ABS:latest
 ```
@@ -84,3 +88,10 @@ namespace FenixAlliance.ABS
     }
 }
 ```
+
+## Trust the HTTPS development certificate:
+
+![cert.png](/.attachments/cert-55b026f6-2aae-45a7-837b-491015fb5dca.png)
+
+Select Yes if you agree to trust the development certificate.
+
