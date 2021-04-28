@@ -8,6 +8,38 @@ Razor supports C# and uses the @ symbol to transition from HTML to C#. Razor eva
 
 When an @ symbol is followed by a Razor reserved keyword, it transitions into Razor-specific markup. Otherwise, it transitions into plain C#.
 
+To escape an @ symbol in Razor markup, use a second @ symbol:
+
+ ```html
+<p>@@Username</p>
+```
+
+The code is rendered in HTML with a single @ symbol:
+
+ ```html
+<p>@Username</p>
+```
+HTML attributes and content containing email addresses don't treat the @ symbol as a transition character. The email addresses in the following example are untouched by Razor parsing:
+
+ ```html
+<a href="mailto:Support@contoso.com">Support@contoso.com</a>
+```
+# Implicit Razor expressions
+Implicit Razor expressions start with @ followed by C# code:
+
+ ```html
+<p>@DateTime.Now</p>
+<p>@DateTime.IsLeapYear(2016)</p>
+```
+
+With the exception of the C# await keyword, implicit expressions must not contain spaces. If the C# statement has a clear ending, spaces can be intermingled:
+
+ ```html
+<p>@await DoSomething("hello", "world")</p>
+```
+
+
+
 ## Templated Razor delegates
 
 Razor templates allow you to define a UI snippet with the following format:
@@ -69,7 +101,7 @@ You can also supply an inline Razor template as an argument to a method. In the 
 }
 ```
 Using the list of items from the prior example, the Repeat method is called with:
-- List<T> of Pets.
+- List<T> of Items.
 - Number of times to repeat each item.
 - Inline template to use for the list items of an unordered list.
 ``` cshtml
