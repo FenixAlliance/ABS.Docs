@@ -23,6 +23,8 @@
 
 * [Products Overview](Products.md)
 * [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
+  * [Alliance Business Cloud](Products/Alliance-Business-Cloud/)
+
 * [Alliance Business Model](Products/Alliance-Business-Model.md)
   * [Extensibility](Products/Alliance-Business-Model/Extensibility.md)
 * [Alliance Passport Services](Products/Alliance-Passport-Services.md)
