@@ -21,7 +21,7 @@ In the end, you'll have a working Alliance Business Suite instance running on yo
 
 The Easy Way: As a Docker Container.
 ```powershell
-docker pull FenixAlliance.ABS.Portal:latest
+docker pull FenixAlliance.ABS:latest
 ```
 
 ### Conventional Install
