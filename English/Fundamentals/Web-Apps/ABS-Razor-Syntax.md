@@ -37,10 +37,57 @@ With the exception of the C# await keyword, implicit expressions must not contai
  ``` html
 <p>@await DoSomething("hello", "world")</p>
 ```
+Implicit expressions cannot contain C# generics, as the characters inside the brackets (<>) are interpreted as an HTML tag. The following code is **not** valid:
+``` html
+<p>@GenericMethod<int>()</p>
+```
+The preceding code generates a compiler error similar to one of the following:
 
+- The "int" element wasn't closed. All elements must be either self-closing or have a matching end-tag.
+- Cannot convert method group 'GenericMethod' to non-delegate type 'object'. Did you intend to invoke the method?`
+
+Generic method calls must be wrapped in an explicit Razor expression or a Razor code block.
 ## Templated Razor delegates
 
 Razor templates allow you to define a UI snippet with the following format:
+## Explicit Razor expressions
+
+Explicit Razor expressions consist of an @ symbol with balanced parenthesis. To render last week's time, the following Razor markup is used:
+```
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+```
+Any content within the @() parenthesis is evaluated and rendered to the output.
+
+Implicit expressions, described in the previous section, generally can't contain spaces. In the following code, one week isn't subtracted from the current time:
+
+```
+<p>Last week: @DateTime.Now - TimeSpan.FromDays(7)</p>
+```
+The code renders the following HTML:
+
+``` html
+<p>Last week: 7/7/2016 4:39:52 PM - TimeSpan.FromDays(7)</p>
+```
+Explicit expressions can be used to concatenate text with an expression result:
+
+``` cshtml
+@{
+    var joe = new Person("Joe", 33);
+}
+
+<p>Age@(joe.Age)</p>
+```
+
+Without the explicit expression, `<p>Age@joe.Age</p>` is treated as an email address, and `<p>Age@joe.Age</p>` is rendered. When written as an explicit expression, <p>Age33</p> is rendered.
+
+Explicit expressions can be used to render output from generic methods in .cshtml files. The following markup shows how to correct the error shown earlier caused by the brackets of a C# generic. The code is written as an explicit expression:
+
+
+``` cshtml
+<p>@(GenericMethod<int>())</p>
+```
+
+## Templated Razor delegates
 
 ``` html
 @<tag>...</tag>
