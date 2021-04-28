@@ -86,6 +86,15 @@ To have apps enforce this pattern, wrap the DistributedSessionStore and Distribu
 ## Session options
 To override session defaults, visit your Portal Administration Dashboard.
 
+## Query strings
+
+A limited amount of data can be passed from one request to another by adding it to the new request's query string. This is useful for capturing the state in a persistent manner that allows links with the embedded states to be shared through email or social networks. Because URL query strings are public, never use query strings for sensitive data.
+
+In addition to unintended sharing, including data in query strings can expose the app to Cross-Site Request Forgery (CSRF) attacks. Any preserved session state must protect against CSRF attacks. For more information, see Prevent Cross-Site Request Forgery (XSRF/CSRF) attacks in the Alliance Business Suite.
+
+## Hidden fields
+Data can be saved in hidden form fields and posted back on the next request. This is common in multi-page forms. Because the client can potentially tamper with the data, the app must always revalidate the data stored in hidden fields.
+
 ## HttpContext.Items
 The `HttpContext.Items` collection is used to store data while processing a single request. The collection's contents are discarded after a request is processed. The Items collection is often used to allow components or middleware to communicate when they operate at different points in time during a request and have no direct way to pass parameters.
 
