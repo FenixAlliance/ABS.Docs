@@ -73,7 +73,7 @@ The following code shows the layout file for a template created a project with a
         @Body
         <hr />
         <footer>
-            <p>&copy; 2018 - WebApplication1</p>
+            <p>&copy; 2020 - WebApplication1</p>
         </footer>
     </div>
 
