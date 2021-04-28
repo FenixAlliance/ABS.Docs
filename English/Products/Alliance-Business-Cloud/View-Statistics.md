@@ -9,7 +9,6 @@ If you have several subscriptions associated with your account, select the requi
 The following information is presented in charts:
 
 Disk space used by the following files and directories in the subscription:
-
 - Websites
 - Mail accounts
 - Databases
@@ -43,3 +42,5 @@ Remember that your subscription can be suspended automatically if you overuse di
 - Remove unnecessary databases. See the **Website Databases** section for more information.
 
 The Disk space usage by services chart displays how much space is taken up by website content, emails, backups, logs, and databases. It makes sense to pay attention to the services that use the most disk space. If none of the steps above helped, contact your provider to increase the amount of disk space available to your subscription.
+
+![view-statistics.png](/.attachments/view-statistics-471543ad-9c84-4ec8-9d06-a1e29778bd42.png)
