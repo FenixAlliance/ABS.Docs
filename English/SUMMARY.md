@@ -13,6 +13,9 @@
 * [Web Apps](Fundamentals.md)
    * [Razor Syntax](Web-Apps/Razor-Syntax.md)
    * [Web Pages](Web-Apps/Web-Pages.md)
+   * [Layouts](Web-Apps/Layout-Pages.md)
+   * [View Components](Web-Apps/View-Components.md)
+   * [Sessions and State](Web-Apps/Session-and-state-management.md)
 
 ## Products
 
