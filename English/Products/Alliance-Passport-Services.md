@@ -24,6 +24,7 @@ The Alliance Business Suite contains features that help you secure your apps and
 - SQL injection attacks
 - Cross-Site Request Forgery (XSRF/CSRF) attacks
 - Open redirect attacks
+
 There are more vulnerabilities that you should be aware of. For more information, see the other articles in the Security and Identity section of the table of contents.
 
 
