@@ -15,8 +15,6 @@ In the end, you'll have a working Alliance Business Suite instance running on yo
 - .NET Core 6.0 SDK or later
 - MySQL Server 8.0 or later
 
-
-
 ### Easy Install
 
 The Easy Way: As a Docker Container.
