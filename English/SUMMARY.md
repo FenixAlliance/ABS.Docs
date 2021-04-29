@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Spanish Docs](https://docs.fenixalliance.com.co)
-* [Service Status](https://fenixalliance.com.co/healthchecks-ui)
+* [Spanish Docs](https://docs.absuite.net/spanish)
+
 
 ## About
 
