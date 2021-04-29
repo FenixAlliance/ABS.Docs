@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [Spanish Docs](https://docs.absuite.net/spanish)
+* [Spanish Docs](https://docs.absuite.net/reference/v1.1.4)
 
 
 ## About
