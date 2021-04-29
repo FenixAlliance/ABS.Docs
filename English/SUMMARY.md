@@ -16,16 +16,16 @@
    * [Layouts](Web-Apps/Layout-Pages.md)
    * [View Components](Web-Apps/View-Components.md)
    * [Sessions and State](Web-Apps/Session-and-state-management.md)
-
 * [Data Access](Data-Access.md)
+  * [Data Repositories](Data-Access/Data-Repositories.md)
 
 ## Products
 
 * [Products Overview](Products.md)
 * [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
+  * [View Statistics](Products/Alliance-Business-Cloud/View-Statistics.md)
   * [Hosting-Features](Products/Alliance-Business-Cloud/Hosting-Features.md)
   * [Allocated and Consumed Resources](Products/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
-
 * [Alliance Business Model](Products/Alliance-Business-Model.md)
   * [Extensibility](Products/Alliance-Business-Model/Extensibility.md)
 * [Alliance Passport Services](Products/Alliance-Passport-Services.md)
