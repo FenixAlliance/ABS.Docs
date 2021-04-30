@@ -48,12 +48,12 @@ A person or application that uses the ABS Account Holder entity, like the root H
 An Account Holder is a person or application that can make a request for an action or operation on an ABM resource. The principal is authenticated as the ABS account root user or an IAM entity to make requests to any Alliance Business Platform API. As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (holders and roles). You can also support federated users or programmatic access to allow an application to access your ABS instance.
 
 
-Authentication
+## Authentication
 A principal must be authenticated (signed in to the Alliance Business Suite) using their credentials to send a request to any Alliance Business Platform API. Some services, such as ABS Portals, ICX Stores, and ABS Workplace, allow a few requests from anonymous users. However, they are the exception to the rule.
 
 To authenticate from the console as a root user, you must sign in with your email address and password. As an IAM user, you can set up multi-factor authentication through an authenticator app such as Google Authenticator, Microsoft Authenticator, or really any MFA TOTP (Time-based One-time Password Algorithm) application. To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You might also be required to provide additional security information. For example, Fenix Alliance recommends that you use multi-factor authentication (MFA) to increase the security of your account. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see IAM Identity Holders and IAM Security Roles.
 
-Authorization
+## Authorization
 You must also be authorized (allowed) to complete your request. During authorization, the APS Engine uses values from the request context to check for policies that apply to the request. It then uses the policies to determine whether to allow or deny the request. Most policies are stored in the ABS as ABM Records and specify the permissions for principal entities. There are several types of policies that can affect whether a request is authorized. To provide your users with permissions to access any layer of the Alliance Business Suite, you need only identity-based ABM records. Resource-based policies are popular for granting cross-account access. The other policy types are advanced features and should be used carefully.
 
 The APS Engine checks each policy that applies to the context of any given request. If a single permissions policy is missing, a denied action will be returned, APS denies the entire request and stops evaluating. This is called an explicit deny. Because requests are denied by default, APS authorizes your request only if every part of your request is allowed by the applicable permissions policies. The evaluation logic for a request within a single account follows these general rules:
