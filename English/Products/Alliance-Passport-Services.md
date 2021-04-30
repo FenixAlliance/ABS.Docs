@@ -56,17 +56,17 @@ To authenticate from the console as a root user, you must sign in with your emai
 Authorization
 You must also be authorized (allowed) to complete your request. During authorization, the APS Engine uses values from the request context to check for policies that apply to the request. It then uses the policies to determine whether to allow or deny the request. Most policies are stored in the ABS as ABM Records and specify the permissions for principal entities. There are several types of policies that can affect whether a request is authorized. To provide your users with permissions to access any layer of the Alliance Business Suite, you need only identity-based ABM records. Resource-based policies are popular for granting cross-account access. The other policy types are advanced features and should be used carefully.
 
-The APS Engine checks each policy that applies to the context of your request. If a single permissions policy includes a denied action, AWS denies the entire request and stops evaluating. This is called an explicit deny. Because requests are denied by default, AWS authorizes your request only if every part of your request is allowed by the applicable permissions policies. The evaluation logic for a request within a single account follows these general rules:
+The APS Engine checks each policy that applies to the context of any given request. If a single permissions policy is missing, a denied action will be returned, APS denies the entire request and stops evaluating. This is called an explicit deny. Because requests are denied by default, APS authorizes your request only if every part of your request is allowed by the applicable permissions policies. The evaluation logic for a request within a single account follows these general rules:
 
-By default, all requests are denied. (In general, requests made using the AWS account root user credentials for resources in the account are always allowed.)
+- By default, all requests are denied. (In general, requests made using the ABS root user credentials for resources in the account are always allowed.)
 
-An explicit allow in any permissions policy (identity-based or resource-based) overrides this default.
+- An explicit allow in any permissions policy (identity-based or resource-based) overrides this default.
 
-The existence of an Organizations SCP, IAM permissions boundary, or a session policy overrides the allow. If one or more of these policy types exists, they must all allow the request. Otherwise, it is implicitly denied.
+- The existence of an Organizations' SCP, IAM permissions boundary, or a session policy overrides the allow. If one or more of these policy types exists, they must all allow the request. Otherwise, it is implicitly denied.
 
-An explicit deny in any policy overrides any allows.
+- An explicit deny in any policy overrides any allows.
 
-To learn more about how all types of policies are evaluated, see Policy evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource and the IAM entity that you use to make the request must have an identity-based policy that allows the request.
+To learn more about how all types of policies are evaluated, see Policy evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource, and the IAM entity that you use to make the request must have an identity-based policy that allows the request.
 
 # Resources
 After the Alliance Business Platform approves the operations in your request, it can be performed on the related resources within your account. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the BusinessPermission tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for the ABS Resources.
