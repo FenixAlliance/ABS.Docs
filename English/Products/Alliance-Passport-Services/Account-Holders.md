@@ -2,7 +2,9 @@
 
 An Account Holder is a CredentialsPrincipal for the APS Engine. It represents a human user identified by a username/password. (Unless using some kind of federated identity service like Azure Active Directory, Google, Facebook, Microsoft Identity, etc...)
 
-The "Credentials" aspect of APS Identity and Access Management (IAM) helps you with the question "Who is that user?", often referred to as authentication. Instead of sharing your root user credentials with others, you can create individual Account Holders within your instance that correspond to users in your organization. Account Holders are not unrelated accounts; they are users within your root Business Tenant. Each user can have their own password for access to the AWS Management Console. You can also create an individual access key for each user so that the user can make programmatic requests to work with resources in your account. 
+The "Credentials" aspect of APS Identity and Access Management (IAM) helps you with the question "Who is that user?", often referred to as authentication. Instead of sharing your root user credentials with others, you can create individual Account Holders within your instance that correspond to users in your organization. 
+
+
 
 In the following figure, the user's Sebastien, Fernando, Camila, Alejandro, Ana, and Julianna have been added to a single ABS Instance. Each Account Holder will have their own credentials.
 
@@ -11,13 +13,16 @@ When you create an ABS Instance, you create an APS Account Holder root identity,
 
 When you use your root user credentials, you have complete, unrestricted access to all resources in your ABS instance, including access to your billing and licensing information and the ability to change your password and set multi-factor authentication. This level of access is necessary when you first set up your account. However, **we recommend that you don't use root user credentials for everyday access**. We especially recommend that you do not share your root user credentials with anyone because doing so gives them unrestricted access to your instance. Only service control policies (SCPs) in tenants can restrict the permissions that are granted to the root user.
 
+We recommend that you create an Account Holder for yourself and then assign yourself administrative permissions for your account. You can then sign in as the new user to add more users and transact over resources as needed.
+
 The following sections explain how you can use APS to create and manage user identity and permissions to provide secure, limited access to your ABS instance, both for yourself and for others who need to work with your ABS instance.
 
 # Create an Account Holder
 
-
-## Creating your Account through a local account.
+## Creating an Account through a local account.
 ------------------------------ ----------------------
+Account Holders are not unrelated accounts; they are users within your portals. Each user can have their own password for access to the AWS Management Console. You can also create an individual access key for each user so that the user can make programmatic requests to work with resources in your account. 
+
 We want to give you options. If you don't want to use or you don't have any social media account, you can go old style and create your Alliance ID Account through your Email address. This will mean that you will need to verify that email address through a code. This will also enable a password for your account, so you will need to provide a strong password to continue with your sign-up process.
 
 ![When creating a local account, you will be asked to verify your email address through a code.](/.attachments/image-79a1abf3-4957-4c4f-aae8-5df764ebcc72.png)
