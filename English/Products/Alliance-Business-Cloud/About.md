@@ -22,7 +22,6 @@ Taking your business online through the Alliance Business Cloud has the followin
 - Get's you up and running in no time.
 - (New) Free SSL Certificates (Let's Encrypt)
 
-
 There are a number of ways you can quickly get your company on the Alliance Business Cloud. The Alliance Business Suite can then get your web presence up and running. The Alliance Business Suite may be as simple as a contacts page, or as complex as a large company website with access to an eCommerce+CMS+ERP system on steroids and with superpowers. Getting your business online is as easy as following these three steps:
 
 - Register a domain name.
@@ -35,3 +34,7 @@ These steps are explained in more detail below.
 ## Registering a Domain Name
 Think of the domain name as your business digital address. Your customers will use it to find you online, so make sure that it is a good one. The best domain names are short, easy to type, and easy to remember. An example of a domain name is www.example.com. Registering a domain name can be done through one of the many organizations called domain registrars. Your hosting provider will usually be able to assist you in registering a domain name as well. Web hosting services are often bundled with domain name registration offers and vice versa.
 
+## Get your free ABS license from https://fenix-alliance.com/licensing.
+
+
+## Create your ABC Subscription and set your credentials.
