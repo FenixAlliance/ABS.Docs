@@ -39,13 +39,25 @@ If the users in your organization already have a way to be authenticated, such a
 
 **Federation is particularly useful in these cases:**
 
-**Your users already have identities in a corporate directory**: If your corporate directory is compatible with Security Assertion Markup Language 2.0 (SAML 2.0), you can configure your corporate directory to provide single-sign-on (SSO) access to the APS Engine for your users. For more information, see Common scenarios for temporary credentials.
+**Your users already have identities in a corporate directory**: If your corporate directory is compatible with Security Assertion Markup Language 2.0 (SAML 2.0), you can configure your corporate directory to provide single-sign-on (SSO) access to the APS Engine for your users. For more information, refer to Common scenarios for temporary credentials.
 
 If your corporate directory is not compatible with SAML 2.0, you can create an identity broker extension to provide single-sign-on (SSO) access to the APS Engine for your users. For more information, see Enabling custom identity broker access into an ABS Instance.
 
 If your corporate directory is Microsoft Active Directory, you can use Azure Active Directory to establish trust between your corporate directory and your ABS instance.
 
-**Your users already have Internet identities**: If you are creating a mobile app or web-based app that can let users identify themselves through an Internet identity provider like Login with Amazon, Facebook, Google, or any OpenID Connect (OIDC) compatible identity provider, the app can use federation to access AWS. For more information, see About web identity federation.
+**Your users already have Internet identities**: If you are creating a mobile app or web-based app that can let users identify themselves through an Internet identity provider like Login with Amazon, Facebook, Google, or any OpenID Connect (OIDC) compatible identity provider, the app can use federation to access ABS resources. For more information, see About web identity federation.
+
+## Enabling supported identity providers
+
+To enable an external identity provider into your Alliance Business Suite instance you'll need to use the following topics to configure your instance to use the respective providers:
+
+![image.png](/.attachments/image-34197a3a-8c2d-4234-88c4-f882cb4ed7ba.png)
+
+### Optionally set password
+When you register with an external login provider, you don't have a password registered with the app. This alleviates you from creating and remembering a password for the site, but it also makes you dependent on the external login provider. If the external login provider is unavailable, you won't be able to sign in to the website.
+
+To create a password and sign in using your email that you set during the sign-in process with external providers:
+Select the Hello <email alias> link at the top-right corner to navigate to the Manage view.
 
 
 ### Creating your Alliance ID through an identity provider: \(e.g. Amazon, Facebook, LinkedIn, Google...\)
