@@ -68,6 +68,20 @@ The APS Engine checks each policy that applies to the context of any given reque
 
 To learn more about how all types of policies are evaluated, please refer to Authorization evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource, and the IAM entity that you use to make the request must have an identity-based policy that allows the request.
 
+
+## Security Permissions
+After your request has been authenticated and authorized, AWS approves the actions or operations in your request. Operations are defined by service and include things that you can do to a resource, such as viewing, creating, editing, and deleting that resource. For example, APS supports approximately 40 actions for a user resource, including the following actions:
+
+- CreateUser
+
+- DeleteUser
+
+- GetUser
+
+- UpdateUser
+
+To allow an **Identity Holder** to perform an operation, you must include the necessary actions in a policy that applies to the principal or the affected resource. To see a list of actions, resource types, and condition keys supported by each service, refer to Actions, Resources, and Permissions for ABS Services.
+
 # Resources
 After the Alliance Business Platform approves the operations in your request, it can be performed on the related resources within your account. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the BusinessPermission tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for the ABS Resources.
 
