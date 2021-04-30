@@ -37,7 +37,7 @@ A view component defines its logic in an `InvokeAsync` method that returns a `Ta
 The framework handles invoking a synchronous `Invoke` method if you don't need to perform asynchronous work. The following method creates a synchronous Invoke view component:
 
 ``` csharp
-public class PriorityList : DynamicComponentBase
+public class Template : DynamicComponentBase
 {
     public dynamic Invoke(int maxPriority, bool isDone)
     {
