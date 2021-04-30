@@ -30,8 +30,12 @@ A view component defines its logic in an `InvokeAsync` method that returns a `Ta
 - Define an `InvokeAsync` method that returns a `Task<IViewComponentResult>` or a synchronous Invoke method that returns an `IViewComponentResult`.
 - Typically initializes a model and passes it to a view by calling the ViewComponent View method.
 - Parameters come from the calling method, not HTTP. There's no model binding.
-- Are not reachable directly as an HTTP endpoint. They're invoked from your code (usually in a view). A view component never handles a request.
+- Are not reachable directly as an HTTP endpoint. They're invoked from your code (usually in view). A view component never handles a request.
 - Are overloaded on the signature rather than any details from the current HTTP request.
+
+## View search path
+The Alliance Business Suite searches for ViewComponents using the Alliance Business Model Schema. It will use case insensitive search by `Name` and `Id` for the ViewComponent.
+If the View Component is not rendered, no errors will be thrown, 
 
 ## Perform synchronous work
 The framework handles invoking a synchronous `Invoke` method if you don't need to perform asynchronous work. The following method creates a synchronous Invoke view component:
@@ -70,7 +74,10 @@ A view component class:
 To use a component inside a Page, template, or another component, call `ViewService.InvokeAsync` from anywhere in your view:
 
 ``` csharp
-@await Component.InvokeAsync("MyComponentNameOrId", Model)
+@await ViewService.InvokeAsync("Component Name or Id", {Anonymous Type Containing Parameters}, (optional) recompile = false)
+```
+``` csharp
+@await ViewService.InvokeAsync("Component Name or Id", new { maxPriority = 1, isDone = false  })
 ```
 
 
