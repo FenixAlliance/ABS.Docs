@@ -27,11 +27,11 @@ A view component class can be created on your ABS Instance administration dashbo
 ## View component methods
 A view component defines its logic in an `InvokeAsync` method that returns a `Task<IViewComponentResult>` or in a synchronous Invoke method that returns an `IViewComponentResult`. Parameters come directly from the invocation of the view component, not from model binding. A view component never directly handles a request. Typically, a view component initializes a model and passes it to it's corresponding view by calling the View method. In summary, view component methods:
 
-Define an InvokeAsync method that returns a Task<IViewComponentResult> or a synchronous Invoke method that returns an IViewComponentResult.
-Typically initializes a model and passes it to a view by calling the ViewComponent View method.
-Parameters come from the calling method, not HTTP. There's no model binding.
-Are not reachable directly as an HTTP endpoint. They're invoked from your code (usually in a view). A view component never handles a request.
-Are overloaded on the signature rather than any details from the current HTTP request.
+- Define an `InvokeAsync` method that returns a `Task<IViewComponentResult>` or a synchronous Invoke method that returns an `IViewComponentResult`.
+- Typically initializes a model and passes it to a view by calling the ViewComponent View method.
+- Parameters come from the calling method, not HTTP. There's no model binding.
+- Are not reachable directly as an HTTP endpoint. They're invoked from your code (usually in a view). A view component never handles a request.
+- Are overloaded on the signature rather than any details from the current HTTP request.
 
 ## Perform synchronous work
 The framework handles invoking a synchronous `Invoke` method if you don't need to perform asynchronous work. The following method creates a synchronous Invoke view component:
@@ -42,7 +42,7 @@ public class PriorityList : DynamicComponentBase
     public dynamic Invoke(int maxPriority, bool isDone)
     {
         var items = new List<string> { $"maxPriority: {maxPriority}", $"isDone: {isDone}" };
-        return View(items);
+        return items;
     }
 }
 ```
