@@ -21,7 +21,10 @@ The following sections explain how you can use APS to create and manage user ide
 
 ## Creating an Account through a local account.
 ------------------------------ ----------------------
-Account Holders are not unrelated accounts; they are users within your portals. Each user can have their own password for access to the ABS Management Portal. You can also create an individual access key for each user so that the user can make programmatic requests to work with resources in your account. 
+Account Holders are not unrelated accounts; they are users within your ABS Portals. By default, ABS Portals are configured to allow Guest Users and Customer Users. These Guest Users are allowed with a limited set of permissions, like `store_read`, `cart_view`, `cart_update`, while Customer Accounts are allowed for more extensive permissions such as `account_read`, `account_delete`, `account_update`, `wallet_read`, and others.
+
+
+Each user can have their own password for access to the ABS. You can also create an individual access key for each user so that the user can make programmatic requests to work with resources in your account. 
 
 We want to give you options. If you don't want to use or you don't have any social media account, you can go old style and create your Alliance ID Account through your Email address. This will mean that you will need to verify that email address through a code. This will also enable a password for your account, so you will need to provide a strong password to continue with your sign-up process.
 
