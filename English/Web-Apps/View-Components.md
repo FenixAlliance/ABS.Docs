@@ -38,7 +38,6 @@ public class PriorityList : ViewComponent
 }
 ```
 
-
 A view component class:
 
 - Fully supports constructor dependency injection
