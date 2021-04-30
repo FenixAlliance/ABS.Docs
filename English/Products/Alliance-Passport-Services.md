@@ -17,12 +17,28 @@ Authentication is a process in which a user provides credentials that are then c
 
 Another way to think of authentication is to consider it as a way to enter a space, such as a server, database, app, or resource, while authorization is which actions the user can perform to which objects inside that space (server, database, or app).
 
-## Common Vulnerabilities in software
-The Alliance Business Suite contains features that help you secure your apps and prevent security breaches. The following list briefly exposes the techniques used to avoid the most common security vulnerabilities in web apps:
+## Understanding how APS works
+Before you create users, you should understand how APS+IAM works. 
 
-- Cross-Site Scripting (XSS) attacks
-- SQL injection attacks
-- Cross-Site Request Forgery (XSRF/CSRF) attacks
-- Open redirect attacks
+**Alliance Passport Services** (commonly known as "**APS**") is an Identity Framework that provides the infrastructure necessary to control authentication and authorization for the Alliance Business Suite. 
 
-There are more vulnerabilities that you should be aware of. For more information, see the other articles in the Security and Identity section of the table of contents.
+The **Identity and Access Management** Module ("**IAM**") is an extension built on top of the Alliance Passport Services Framework to allow users and applications to connect to certain Alliance Business Suite instances.
+
+The IAM infrastructure includes the following elements:
+
+
+## Common Terms
+Learn more about APS + IAM terms.
+
+**Resources**
+The AccountHolder, SecurityGroup, SecurityRole, BusinessPermission, and IdentityProvider objects are stored in ABM. As with other ABM entities, you can add, edit, and remove resources from IAM.
+
+**Identities**
+The IAM resource objects are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
+
+**Entities**
+The IAM resource objects that APS uses for authentication. These include AccountHolders, federated users, and assumed IAM roles.
+
+**Holders**
+A person or application that uses the ABS Account Holder entity, like the root Holder, an IAM user, or an IAM Application to sign in and make requests to the Alliance Business Platform's APIs.
+
