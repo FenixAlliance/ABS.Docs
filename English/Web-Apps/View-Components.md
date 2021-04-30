@@ -35,7 +35,8 @@ A view component defines its logic in an `InvokeAsync` method that returns a `Ta
 
 ## View search path
 The Alliance Business Suite searches for ViewComponents using the Alliance Business Model Schema. It will use case insensitive search by `Name` and `Id` for the ViewComponent.
-If the View Component is not rendered, no errors will be thrown, 
+
+Note: If the View Component is not rendered, no errors will be thrown and only an empty markup string will be rendered.
 
 ## Perform synchronous work
 The framework handles invoking a synchronous `Invoke` method if you don't need to perform asynchronous work. The following method creates a synchronous Invoke view component:
