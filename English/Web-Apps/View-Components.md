@@ -26,6 +26,7 @@ A view component class can be created on your ABS Instance administration dashbo
 
 ## Perform synchronous work
 The framework handles invoking a synchronous `Invoke` method if you don't need to perform asynchronous work. The following method creates a synchronous Invoke view component:
+
 ``` csharp
 public class PriorityList : ViewComponent
 {
