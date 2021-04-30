@@ -31,7 +31,7 @@
 * [Alliance Passport Services](Products/Alliance-Passport-Services.md)
   * [Account Holders](Products/Alliance-Passport-Services/Account-Holders.md)
   * [Business Tenants](Products/Alliance-Passport-Services/Business-Tenants.md)
-  * [Identity & Access Management](Products/Alliance-Passport-Services/IAM.md)
+  * [Identity & Access Management](Products/Alliance-Passport-Services/Identity-and-Access-Manager.md)
 * [Alliance Business Platform](Products/Alliance-Business-Platform.md)
   * [Application Programming Interfaces](Products/Alliance-Business-Platform/APIs.md)
     * [REST API](Products/Alliance-Business-Platform/APIs/REST-API.md)
