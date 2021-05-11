@@ -33,7 +33,7 @@ Localizable/Localized Strings are retrieved and formatted if you need to insert 
 @localizedString 
 ```
 
-To create a Lozalizable Resource:
+To create a Localizable Resource:
 1. Go to your Suite Admin Center, 
 1. Select Internationalization > Strings from the left-hand menu.
 1. Select your base language and target language.
