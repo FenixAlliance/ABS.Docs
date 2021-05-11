@@ -13,13 +13,15 @@ App localization involves the following:
 ## Make the app's content localizable
 The ABS Razor Engine was architected to improve productivity when developing localized apps. `DynamicComponentBase` uses the ResourceManager and ResourceReader to provide culture-specific resources at run time. The interface has an easy-to-use method and an IEnumerable for returning localized strings. `DynamicComponentBase` retrieves the portal default language from the suite configuration file and then loads localized resources from the Alliance Business Model provider. You can develop an app targeted for localization right out of the box by adding LocalizationStrings and LocalizedStrings through the portal admin center. The code below shows how to wrap the string "About Title" for localization.
 
-``` csharp
+``` razor
 @{ 
     var localizedString = _("Hello World!");
 }
 @localizedString 
 ```
-
+``` razor
+@_("Hello World!")
+```
 ## Creating Localizable/Localized Strings
 The Alliance Business Suite offers a convenient way to create localizable resources like strings or HTML fragments.
 Localizable/Localized Strings are retrieved and formatted if you need to insert the value of an object, variable, or expression into the localized resource. For example, you can insert the value of a Decimal value into a paragraph to display it to the user as a single string:
