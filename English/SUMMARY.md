@@ -28,6 +28,7 @@
 * [Data Access](Data-Access.md)
   * [Data Repositories](Data-Access/Data-Repositories.md)
 * [Internationalization](Internationalization.md)
+  * [Localization Strings](Internationalization/Localization-Strings.md)
 
 
 ## Products
