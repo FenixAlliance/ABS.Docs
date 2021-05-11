@@ -27,6 +27,8 @@
    * [Sessions and State](Web-Apps/Session-and-state-management.md)
 * [Data Access](Data-Access.md)
   * [Data Repositories](Data-Access/Data-Repositories.md)
+* [Internationalization](Internationalization.md)
+
 
 ## Products
 
