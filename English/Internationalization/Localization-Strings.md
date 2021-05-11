@@ -24,7 +24,7 @@ The ABS Razor Engine was architected to improve productivity when developing loc
 The Alliance Business Suite offers a convenient way to create localizable resources like strings or HTML fragments.
 Localizable/Localized Strings are retrieved and formatted if you need to insert the value of an object, variable, or expression into the localized resource. For example, you can insert the value of a Decimal value into a paragraph to display it to the user as a single string:
 
-``` csharp
+``` razor
 @{
     var pricePerOunce = 17.36m;
     var localizedString = _("The current price is {0} per ounce.", pricePerOunce); 
