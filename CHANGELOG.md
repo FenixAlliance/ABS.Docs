@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] View Components
 - [ABS] Blog Post Editor
 - [ABS] Drag 'n Drop Live Editor. (Preview)
-- [ABS] SPA Support for Angular and React+Redux
+- [ABS] Support for Angular and React+Redux SPAs
 
 ### Changed
 - [ABS] Fix http context access on IIS making installation process fail.
