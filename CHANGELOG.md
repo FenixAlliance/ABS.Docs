@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Drag 'n Drop Live Editor. (Preview)
 - [ABS] Support for Angular and React+Redux SPAs
 - [ABS] Invoice Outliner
+- [ABS] Invoice Manager
 - [ABM] Marketing Module Models
 - [ABS] Project Service Models
 - [ABM] LMS Service Models
