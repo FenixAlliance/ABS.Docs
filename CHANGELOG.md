@@ -59,11 +59,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABP] Fix error while previewing files on File System Explorer.
 - [ICX] Fix error where new users got a 500 when visiting the store.
 - [ICX] Update Swiper to the latest version.
-- [ABS] Monaco editor now lives inside the project instead as an node module.
+- [ABS] Monaco editor now lives inside the project instead of as a node module.
 - [ICX] ICX Static Files audit, bundling & minification.
 - [ICX] Fix UI error on cart record addition/deletion.
-- [APS] Fix Auth Error: when users not belong to any tenant, they used to got a E500 on nested File Retrieval.
-- [ABM] Model Modification to support db-stored precompiled views.
+- [APS] Fix Auth Error: when users do not belong to any tenant, they used to get an E500 on nested File Retrieval.
+- [ABM] Model Modification to support DB-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
 ## [1.1.4] - 2021-04-13
