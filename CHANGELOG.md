@@ -13,11 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Support for Angular and React+Redux SPAs
 
 ### Changed
-- [ABS] Fix http context access on IIS making installation process fail.
-- [ABS] Fix http context access on IIS when trying to create a new view.
-- [ABS] Fix http context access on IIS when trying to edit a new view.
-- [ABS] Fix http context access on IIS when trying to create a new post.
-- [ABS] Fix http context access on IIS when trying to edit a new post.
+- [ABS] Fix HTTP context access on IIS making the installation process fail.
+- [ABS] Fix HTTP context access on IIS when trying to create a new view.
+- [ABS] Fix HTTP context access on IIS when trying to edit a new view.
+- [ABS] Fix HTTP context access on IIS when trying to create a new post.
+- [ABS] Fix HTTP context access on IIS when trying to edit a new post.
 
 ## [1.1.5] - 2021-04-21
 ### Added
