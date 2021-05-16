@@ -8,13 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Log Viewer
 - [ABS] Template Views
 - [ABS] View Components
+- [ABS] Blog Post Editor
 - [ABS] Drag 'n Drop Live Editor. (Preview)
+- [ABS] SPA Support for Angular and React+Redux
+
 ### Changed
 - [ABS] Fix http context access on IIS making installation process fail.
 - [ABS] Fix http context access on IIS when trying to create a new view.
 - [ABS] Fix http context access on IIS when trying to edit a new view.
 - [ABS] Fix http context access on IIS when trying to create a new post.
 - [ABS] Fix http context access on IIS when trying to edit a new post.
+
 ## [1.1.5] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
