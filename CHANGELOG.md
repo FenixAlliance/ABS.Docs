@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Blog Post Editor
 - [ABS] Drag 'n Drop Live Editor. (Preview)
 - [ABS] Support for Angular and React+Redux SPAs
+- [ABS] Invoice Outliner
+- [ABM] Marketing Module Models
+- [ABS] Project Service Models
+- [ABM] LMS Service Models
 
 ### Changed
 - [ABS] Fix HTTP context access on IIS making the installation process fail.
@@ -18,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix HTTP context access on IIS when trying to edit a new view.
 - [ABS] Fix HTTP context access on IIS when trying to create a new post.
 - [ABS] Fix HTTP context access on IIS when trying to edit a new post.
+- [ABS] Fiscalization document Models
+- [ABM] Web Content Records now share a single base class
 
 ## [1.1.5] - 2021-04-21
 ### Added
