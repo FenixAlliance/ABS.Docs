@@ -91,7 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [UI] Dynamic Top Bar content
 - [UI] Logo size customization options
 - [UI] Footer Dynamic Content
-- [UI] Footer/Header Synamic styling
+- [UI] Footer/Header Dynamic styling
 
 
 ## [1.1.3] - 2021-04-09
@@ -138,7 +138,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Admin Dashboard Initials
 - Added support for SixLabors.ImageSharp.Web
 - Forex service data is now scraped by Fenix Alliance.
-- Data Services are not coded to a replaceable interface implementation.
+- Data Services are not coded to replaceable interface implementation.
 - ABS.Hub project now contains everything we need to create a new ABS Instance.
 - Added support for IdentityServer4 as a replacement for Alliance Passport Services.
 - ACL.Licensing is now a part of the Alliance Business Suite.
@@ -148,7 +148,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Extracts interface for ACL configuration Types
 - ACS is now ABP.BotEngine
-- Plugin Manager is now losely coupled to IPluginManager
+- Plugin Manager is now loosely coupled to IPluginManager
 - Adds File Manager and FileSystem Service
 - Adds antivirus scanning extension for FileSystem Service (Windows Defender)
 - AccountHolder is now the standard identity class.
@@ -179,7 +179,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial Portal Admin Blazor Application at route /admin.
 
 ### Changed
-- Standarize namespace at v1.1.0
+- Standardize namespace at v1.1.0
 
 ### Removed
 
@@ -189,7 +189,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Authentication / User Management / Profile Management
 - Authorization / Roles Management / Granular Permissions
 - Blazor Support
-- Cross Platform Database Support ( MySQL, MSSQL )
+- Cross-Platform Database Support ( MySQL, MSSQL )
 - Dynamic CSS/Lazy Loading
 - Dynamic Page Compositing Model / Site & Page Management
 - Dynamic Routing
