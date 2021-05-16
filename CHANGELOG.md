@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix page tree navigation on the live editor.
 
 
-## [1.1.5] - 2021-04-21
+## [1.1.5.x] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
@@ -68,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Model Modification to support DB-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
-## [1.1.4] - 2021-04-13
+## [1.1.4.x] - 2021-04-13
 ### Added
 - [ABS] Extension Updates Page
 - [ABS] Razor Templating Engine
@@ -96,7 +96,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [UI] Footer/Header Dynamic styling
 
 
-## [1.1.3] - 2021-04-09
+## [1.1.3.x] - 2021-04-09
 ### Added
 - [ACL] Radzen.Blazor is now a project dependency. 
 - [ACL] RabbitMQ.Client is now a project dependency. 
@@ -126,7 +126,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABP] Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
 
 
-## [1.1.2] - 2021-02-23
+## [1.1.2.x] - 2021-02-23
 ### Added
 - Adds ABP Proxy
 - Missing ACL configuration Types
@@ -161,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Data Helpers marked for deprecation.
 - ABS.Nucleus was deprecated and is no longer a part of this project.
 
-## [1.1.1] - 2021-01-20
+## [1.1.1.x] - 2021-01-20
 ### Added
 - Adds ABP Proxy
 - Adds Infinity Comex Support
@@ -175,7 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 
-## [1.1.0] - 2021-01-12
+## [1.1.0.x] - 2021-01-12
 ### Added
 - Nuget Packages @1.1.0
 - Initial Portal Admin Blazor Application at route /admin.
@@ -185,7 +185,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [1.0.0] - 2020-12-31
+## [1.0.0.x] - 2020-12-31
 
 ### Added
 - Authentication / User Management / Profile Management
