@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] LMS Service Models
 - [ABS] Add support for Bootstrap CSS
 - [ABS] Add support for Foundation CSS
-- [ABS] Adds support for Fluent and Fluid UI.
+- [ABS] Adds support for Fabric JS and Fluent UI.
 - [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
 
 ### Changed
