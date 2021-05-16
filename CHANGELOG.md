@@ -20,7 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Add support for Foundation CSS
 - [ABS] Adds support for Fabric JS and Fluent UI.
 - [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
-- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Tempalting Engine
+- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Templating Engine
+- [ABS] Adds Localization String Manager. Initial Localization Capabilities.
 
 ### Changed
 - [ABS] Fix HTTP context access on IIS making the installation process fail.
@@ -29,6 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix HTTP context access on IIS when trying to create a new post.
 - [ABS] Fix HTTP context access on IIS when trying to edit a new post.
 - [ABM] Fiscalization document Models
+- [ABM] Project Service document Models
+- [ABM] Pricing engine Models
+- [ABM] Workflow engine Models
 - [ABM] Web Content Records now share a single base class
 - [ABM] ItemPriceList is now a PriceListRecord.
 - [ABS] Fix error when referencing scripts into a Web Content being malformed by templating engine.
