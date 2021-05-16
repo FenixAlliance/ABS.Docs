@@ -12,8 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Blog Post Editor
 - [ABS] Drag 'n Drop Live Editor. (Preview)
 - [ABS] Support for Angular and React+Redux SPAs
-- [ABS] Initial Web Content (Editable Pages, Components, Templates)
-- [ABS] Internal Web Content (Sys locked Pages, Components, Templates)
+- [ABS] Initial Web Content (Editable Pages, Components & Templates)
+- [ABS] Internal Web Content (Sys locked Pages, Components & Templates)
 - [ABS] Invoice Outliner
 - [ABS] Invoice Manager
 - [ABM] Marketing Module Models
