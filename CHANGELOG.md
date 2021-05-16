@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Marketing Module Models
 - [ABS] Project Service Models
 - [ABM] LMS Service Models
+- [ABS] Add support for Bootstrap CSS
+- [ABS] Add support for Foundation CSS
+- [ABS] Adds support for Fluent and Fluid UI.
+- [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
 
 ### Changed
 - [ABS] Fix HTTP context access on IIS making the installation process fail.
@@ -24,6 +28,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix HTTP context access on IIS when trying to edit a new post.
 - [ABM] Fiscalization document Models
 - [ABM] Web Content Records now share a single base class
+- [ABM] ItemPriceList is now a PriceListRecord.
+- [ABS] Fix error when referencing scripts into a Web Content being malformed by templating engine.
+
 
 ## [1.1.5] - 2021-04-21
 ### Added
