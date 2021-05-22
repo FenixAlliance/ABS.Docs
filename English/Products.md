@@ -12,7 +12,7 @@ For us, is all about productivity and how to help you push forward your vision t
 ---
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
   <a href="https://docs.fenixalliance.com.co" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
