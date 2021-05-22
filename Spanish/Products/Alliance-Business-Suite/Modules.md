@@ -1,8 +1,0 @@
-# Descripción:
-
-# Pricing:
-
-# Requisitos:
-
-# Bugs:
-

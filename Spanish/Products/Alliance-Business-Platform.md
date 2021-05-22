@@ -1,2 +1,0 @@
-The **Alliance Business Platform** provides a unified programmability model that you can use to build apps for organizations and consumers that interact with the data of millions of users. You can use the Alliance Business Platform APIs to access data in your Alliance ID account and your enrolled Alliance ID for Business Tenants; This includes Alliance Business Suite services, ComputeWorks Hosting & Enterprise Cloud services, Alliance ID Pocket services, Infinity Comex data, and more. Explore our documentation to learn more about how to use Fenix Alliance's ABP APIs.
-
