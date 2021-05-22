@@ -1,6 +1,6 @@
 If you've ever had to bring data from multiple systems and applications together, you know what an expensive and time-consuming task that can be. Without being able to share and understand the same data easily, each application or data integration project requires a custom implementation.
 
-The Alliance Business Model simplifies this process by providing a common data model that includes entities that represent commonly used business concepts and activities, such as Contact and Account, to simplify the creation, aggregation, and analysis of data.
+The Alliance Business Model simplifies this process by providing a common data model that includes entities that represent commonly used business concepts and activities, such as **Contact**, **Invoice**, and **Account**, to simplify the creation, aggregation, and analysis of data.
 
 Why use the Alliance Business Model?
 
