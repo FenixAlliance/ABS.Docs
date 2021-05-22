@@ -30,7 +30,7 @@ Anyone can build on and extend ABM definitions to capture additional business-sp
 
 ## [Alliance Business Platform](Products/Alliance-Business-Platform.md)
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
   <a href="https://docs.fenixalliance.com.co" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
@@ -46,7 +46,7 @@ Anyone can build on and extend The Alliance Business Platform through ASP.NET + 
 ## [Alliance Business Studio](Products/Alliance-Business-Studio.md)
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
   <a href="https://docs.fenixalliance.com.co" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
@@ -55,7 +55,7 @@ Anyone can build on and extend The Alliance Business Platform through ASP.NET + 
   </a>
 </p>
 
-The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. Is allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
+The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
 
 Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
 ## [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
