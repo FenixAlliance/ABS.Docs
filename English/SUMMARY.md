@@ -22,7 +22,7 @@
 * [Web Development](Web-Development.md)
    * [Web Pages](Web-Development/Razor-Pages.md)
      * [Razor Syntax](Web-Development/Razor-Pages/Razor-Syntax.md)
-   * [Client Side-Apps](Web-Development/Client%2DSide-Apps.md)
+   * [Client Side-Apps](Web-Development/ClientSide-Apps.md)
    * [Layouts](Web-Development/Layout.md)
    * [View Components](Web-Development/View-Components.md)
    * [Sessions and State](Web-Development/Session-and-state-management.md)
