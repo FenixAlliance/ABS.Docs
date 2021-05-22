@@ -2,20 +2,17 @@ If you've ever had to bring data from multiple systems and applications together
 
 The Alliance Business Model simplifies this process by providing a common data model that includes entities that represent commonly used business concepts and activities, such as **Contact**, **Invoice**, and **Account**, to simplify the creation, aggregation, and analysis of data.
 
-Why use the Alliance Business Model?
+## Why use the Alliance Business Model?
 
 Commonly, businesses have more than one application to cover specific business operations such as eCommerce, Accounting, Sales, Marketing, CRM, and more. These are a lot of applications and they consume time and money, but that's not it! they all have different representations for the Contact Entity. This can be frustrating when trying to integrate these applications together to produce better and automated outcomes. To solve this issue, you can build those apps on top of a standardized data schema, allowing you to share the same entities across applications. Of course, your application might have different data requirements between them, so you can extend the predefined schemas and even create new schemas!
 
 One cool thing about this is that when it comes the time to create a new business application, your data schemas will be ready to provide the required data infrastructure for your application and share this data with every other application.
 
-Common Data Model simplifies data management and app development by unifying data into a known form and applying structural and semantic consistency across multiple apps and deployments. To summarize the benefits:
-
-- Structural and semantic consistency across applications and deployments.
-
-- Simplified integration and disambiguation of data that's collected from processes, digital interactions, product telemetry, people interactions, and so on.
+Alliance Business Model simplifies data management and app development by unifying data into a known form and applying structural and semantic consistency across multiple apps and deployments. To summarize the benefits:
 
 - A unified shape, where data integrations can combine existing enterprise data with other sources and use that data holistically to develop apps or derive insights.
-
+- Structural and semantic consistency across applications and deployments.
+- Simplified integration and disambiguation of data that's collected from processes, digital interactions, product telemetry, people interactions, and so on.
 - The ability to extend the Alliance Business Model schema standard entities to tailor the model to your organization. This is enabled thanks to both the **ABM Mongo Interop Service** and the **ABS Virtual Entities** functionalities.
 
 ## Alliance Business Model in action
