@@ -10,7 +10,9 @@ The Alliance Business Platform provides an essential framework for building a ba
 
 To create a Module for the Alliance Business Suite, you'll need to create a new Razor Class Library with DotNet. Then add a reference to the `FenixAlliance.ABP.SDK` Nuget package to your project and implement the `IModule` interface.
 
-This will give you access to the entire dependency tree of the Alliance Business Suite, which includes things like Internal Services, 
+This will give you access to the entire dependency tree of the Alliance Business Suite, which includes things like Internal Services, Database Access, and Initialization Middleware Entrypoints (to register your own custom services or InternalServices implementations). From there, is just like developing any other ASP.NET Class Library, but without having to worry about things like StartUp processes or complex application dependency wiring.
+
+
 
 # What Can Modules Do?
 Modules make it easy to convert a basic Alliance Business Suite instance into a fully functioning online storefront, a membership site, a blog, or a website capable of handling the complex professional needs of a multinational corporation. Generally, Modules can add essential functions that are useful for any Alliance Business Suite instance, as well as features for specific needs.
@@ -23,6 +25,12 @@ Modules can enhance your Alliance Business Suite instance by:
 - Streamlining your workflow. Modules can help optimize your site for searchability, add server-side logic and API endpoints.
 - **Improving the site’s appearance.** Modules can add designer fonts, galleries, sliders, and media players to your site. Some themes require certain Modules to perform properly.
 - **Adding needed features for your site’s goals.** Modules can add features like product pages and shopping carts to eCommerce sites, landing pages, paywalls, and a long list of other features to support the site’s intended purpose.
+
+# Best practices for ABS Module Development
+
+- To reduce possible incompatibilities, it is recommended to create all your functionality inside an ASP.NET Area named after your Module. This will reduce the possibility to collide with other module namespaces and routes.  
+- Whenever possible, use the default provided service interfaces under the `FenixAlliance.ABM.Data.Interfaces.Services` namespace.
+- If you need to add a custom implementation for any service, it is recommended not to do so and instead create a new service; but in cases when there is no other choice, please consider inheriting from the Internal implementation and overriding the required virtual methods.
 
 # Security Considerations
 
