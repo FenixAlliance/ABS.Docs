@@ -12,6 +12,8 @@ To create a Module for the Alliance Business Suite, you'll need to create a new 
 
 This will give you access to the entire dependency tree of the Alliance Business Suite, which includes things like Internal Services, Database Access, and Initialization Middleware Entrypoints (to register your own custom services or InternalServices implementations). From there, is just like developing any other ASP.NET Class Library, but without having to worry about things like StartUp processes or complex application dependency wiring.
 
+Once your Module is ready for production, you can build it as a Nuget Package and install it into any ABS instance by uploading the .nupkg file to the Modules folder on the Root content path of your ABS instance or by uploading it to the [ABS Public Modules Gallery](https://gallery.absuite.net) and install it through your Admin Portal..
+
 
 
 # What Can Modules Do?
