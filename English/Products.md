@@ -41,7 +41,7 @@ The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0
 
 Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
 
-## [Alliance Business Studio](Products/Alliance-Business-Studio.md)
+## [Alliance Business Studio](/English/Products/Alliance-Business-Studio.md)
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
