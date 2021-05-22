@@ -68,3 +68,6 @@
 ## Security
 
 * [Data Protection](Security/Data-Protection.md)
+
+## Security
+* [THIRD PARTY NOTICES](/THIRD_PARTY_NOTICES.md)
