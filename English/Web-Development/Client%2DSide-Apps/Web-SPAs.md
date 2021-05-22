@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-The Alliance Business Suite contains a simple, yet powerful engine for enabling seamless Single Page Application development using Angular, React, or React+Redux.
+The Alliance Business Suite contains a simple, yet powerful engine for enabling seamless Client-Side Single Page Application development using Angular, React, or React+Redux.
 
 The SPA Service provides a convenient template to act as a starting point for Client-Side Applications using Angular and the Angular CLI to implement a rich, client-side user interface (UI) while still taking advantage of the tremendous power of the Alliance Business Suite without the hustle of creating and connecting an independent application.
 
