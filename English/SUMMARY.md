@@ -69,5 +69,5 @@
 
 * [Data Protection](Security/Data-Protection.md)
 
-## Security
+## Credits
 * [THIRD PARTY NOTICES](/THIRD_PARTY_NOTICES.md)
