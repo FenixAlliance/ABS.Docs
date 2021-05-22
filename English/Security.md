@@ -1,4 +1,11 @@
 # Security Features
+If you own an Alliance Business Suite-powered infrastructure or are considering using the Alliance Business Suite as your CMS/CRM/ERP (or any other), you may be concerned about potential Alliance Business Suite security issues. In this post, we’ll outline a few of the most common ABS security vulnerabilities, along with steps you can take to secure and protect your WordPress site.
+
+
+## Is the Alliance Business Suite Secure?
+The answer to the question “is the Alliance Business Suite secure?” is it depends. The Alliance Business Suite itself is very secure as long as security best practices are followed.
+
+
 
 ### Encryption at rest <a id="encryption-at-rest"></a>
 
