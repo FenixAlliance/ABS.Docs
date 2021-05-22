@@ -1,3 +1,4 @@
+# Accessing data from the Alliance Business Model engine.
 If you've ever had to bring data from multiple systems and applications together, you know what an expensive and time-consuming task that can be. Without being able to share and understand the same data easily, each application or data integration project requires a custom implementation.
 
 The Alliance Business Model simplifies this process by providing a common data model that includes entities that represent commonly used business concepts and activities, such as **Contact**, **Invoice**, and **Account**, to simplify the creation, aggregation, and analysis of data.
@@ -21,3 +22,12 @@ The Alliance Business Model is influenced by data schemas that are present in bo
 Businesses, institutions, Partners, and independent software vendors (ISVs) use the Alliance Business Model to extend and interoperate with any given Alliance Business Suite instance.
 
 Organizations from industries such as manufacturing, government, and education are working closely with Fenix Alliance Group to extend the Alliance Business Model to their specific business scenarios, and the dynamic ABM Engine allows seamless data integration even when schemas are not exactly the same.  This allows customers from an unlimited range of industries to leverage the benefit of the Alliance Business Model's standard entities and extend to their specific verticals so that industry solutions can interoperate more easily.
+
+```csharp
+// Get all the contacts from the configured ABM Provider.
+var contacts = await DataContext.Contact.Where(c => c.ID == ).ToListAsync();
+
+foreach(var contact in contacts){
+    Console.WriteLine(contact.ID);
+}
+```
