@@ -6,14 +6,12 @@ The Alliance Business Suite was architected as a modular, unopinionated
 For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together. 
 
 
-## [Alliance Business Model](Products/Alliance-Business-Model.md)
-
-## Alliance Business Model (ABM) Schema
+## [Alliance Business Model](/English/Products/Alliance-Business-Model)
 ---
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
+  <a href="https://docs.absuite.net" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
   <a href="http://absuite.net/eula" target="_blank">
@@ -25,7 +23,7 @@ The Alliance Business Model is a declarative specification and definition of sta
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
-## [Alliance Passport Services](Products/Alliance-Passport-Services.md)
+## [Alliance Passport Services](Alliance-Passport-Services.md)
 
 
 ## [Alliance Business Platform](Products/Alliance-Business-Platform.md)
