@@ -40,7 +40,14 @@ To enable Git Management for your SPA application, head to your application page
 
 ![image.png](/.attachments/image-3d421c5b-f19d-43a9-958a-b1aefae7840f.png)
 # Install npm packages
+To install third-party npm packages, use a command prompt on the application page and run the following command:
 
+`
+spa -id  packages install --save <package_name>
+`
+or just add it to your package.json and request the application to execute the publish script, (which will execute `npm install` first) by clicking on the Re-Publish Files button.
+
+![image.png](/.attachments/image-a501d1ed-0f21-4c50-9f14-b535cbb58c2d.png)
 # Publish and deploy
 In development, ABS SPAs run in a mode optimized for developer convenience. For example, JavaScript bundles include source maps (so that when debugging, you can see your original TypeScript code). The app watches for TypeScript, HTML, and CSS file changes on the SPA Root Files Path and automatically recompiles and reloads when it sees those files change. 
 
@@ -55,15 +62,11 @@ There's a drawback to this default setup. Each time you modify your C# code and 
 
 ![image.png](/.attachments/image-34da8472-569f-46a2-a82f-787c07f51b56.png)
 
+Provide a URL for the running ABS SPA and the Alliance Business Suite will establish a proxy To the SPA Development Server.
+
 # Current limitations
 
 The React project template isn't meant for server-side rendering (SSR). For SSR with React and Node.js, consider [Next.js](https://github.com/zeit/next.js/) or [Razzle](https://github.com/jaredpalmer/razzle).
-
-
-
-
-
-
 
 
 
