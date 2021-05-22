@@ -12,7 +12,7 @@ All files sent to our applications are automatically encrypted with a 256-bit Ad
 
 ### Encryption in transit <a id="encryption-in-transit"></a>
 
-We keep your data secure by enabling _transport-level security_ between our applications and the client. We ALWAYS use _HTTPS_ to secure communication over the public internet. When you call the REST APIs to access objects in storage accounts or our databases, we enforce the use of HTTPS by requiring secure transfer and connections that use HTTP will be refused and redirected.
+We keep your data secure by enabling _transport-level security_ between our applications and the client. We ALWAYS use _HTTPS_ to secure communication over the public internet. When you call the REST APIs to access objects in storage accounts or our databases, we enforce the use of HTTPS by requiring secure transfer, and connections that use HTTP will be refused and redirected.
 
 ### CORS support <a id="cors-support"></a>
 
