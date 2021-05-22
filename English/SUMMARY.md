@@ -70,4 +70,4 @@
 * [Data Protection](Security/Data-Protection.md)
 
 ## Credits
-* [THIRD PARTY NOTICES](/THIRD_PARTY_NOTICES.md)
+* [Third-Party Notices](/THIRD_PARTY_NOTICES.md)
