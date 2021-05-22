@@ -59,4 +59,9 @@ The Alliance Business Studio is the Graphical Administration Engine for the Alli
 
 Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
 ## [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
+Alliance Business Cloud Overview
+The Alliance Business Cloud is an HTTP-based service for hosting Alliance Business Suite Instances and other kinds of applications. These can be developed in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows-based environments.
 
+The Alliance Business Cloud not only adds the power of Microsoft Azure to your Alliance Business Suite instance, such as security, load balancing, autoscaling, and automated management features; You can also take advantages of its DevOps capabilities, such as continuous deployment from Azure DevOps, GitHub, Docker Hub, and other sources, package management, staging environments, custom domain, and free/paid TLS/SSL certificates.
+
+With Alliance Business Cloud, you pay for the compute resources you use. The compute resources you use are determined by the Service plan that you run your Alliance Business Suite instance on.
