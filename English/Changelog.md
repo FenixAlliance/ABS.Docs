@@ -3,19 +3,47 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-## [1.1.6.x] - 2021-04-22
+
+## [1.1.6.x] - 2021-05-22
 ### Added
 - [ABS] Log Viewer
 - [ABS] Template Views
 - [ABS] View Components
+- [ABS] Blog Post Editor
 - [ABS] Drag 'n Drop Live Editor. (Preview)
+- [ABS] Support for Angular and React+Redux SPAs
+- [ABS] Initial Web Content (Editable Pages, Components & Templates)
+- [ABS] Internal Web Content (Sys locked Pages, Components & Templates)
+- [ABS] Frontend Admin Bar
+- [ABS] Invoice Outliner
+- [ABS] Invoice Manager
+- [ABM] Marketing Module Models
+- [ABS] Project Service Models
+- [ABM] LMS Service Models
+- [ABS] Add support for Bootstrap CSS
+- [ABS] Add support for Foundation CSS
+- [ABS] Adds support for Fabric JS and Fluent UI.
+- [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
+- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Templating Engine
+- [ABS] Adds Localization String Manager. Initial Localization Capabilities.
+
 ### Changed
-- [ABS] Fix http context access on IIS making installation process fail.
-- [ABS] Fix http context access on IIS when trying to create a new view.
-- [ABS] Fix http context access on IIS when trying to edit a new view.
-- [ABS] Fix http context access on IIS when trying to create a new post.
-- [ABS] Fix http context access on IIS when trying to edit a new post.
-## [1.1.5] - 2021-04-21
+- [ABS] Fix HTTP context access on IIS making the installation process fail.
+- [ABS] Fix HTTP context access on IIS when trying to create a new view.
+- [ABS] Fix HTTP context access on IIS when trying to edit a new view.
+- [ABS] Fix HTTP context access on IIS when trying to create a new post.
+- [ABS] Fix HTTP context access on IIS when trying to edit a new post.
+- [ABM] Fiscalization document Models
+- [ABM] Project Service document Models
+- [ABM] Pricing engine Models
+- [ABM] Workflow engine Models
+- [ABM] Web Content Records now share a single base class
+- [ABM] ItemPriceList is now a PriceListRecord.
+- [ABS] Fix error when referencing scripts into a Web Content being malformed by templating engine.
+- [ABS] Fix page tree navigation on the live editor.
+
+
+## [1.1.5.x] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
@@ -41,7 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Model Modification to support DB-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
-## [1.1.4] - 2021-04-13
+## [1.1.4.x] - 2021-04-13
 ### Added
 - [ABS] Extension Updates Page
 - [ABS] Razor Templating Engine
@@ -66,10 +94,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [UI] Dynamic Top Bar content
 - [UI] Logo size customization options
 - [UI] Footer Dynamic Content
-- [UI] Footer/Header Synamic styling
+- [UI] Footer/Header Dynamic styling
 
 
-## [1.1.3] - 2021-04-09
+## [1.1.3.x] - 2021-04-09
 ### Added
 - [ACL] Radzen.Blazor is now a project dependency. 
 - [ACL] RabbitMQ.Client is now a project dependency. 
@@ -99,7 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABP] Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
 
 
-## [1.1.2] - 2021-02-23
+## [1.1.2.x] - 2021-02-23
 ### Added
 - Adds ABP Proxy
 - Missing ACL configuration Types
@@ -134,7 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Data Helpers marked for deprecation.
 - ABS.Nucleus was deprecated and is no longer a part of this project.
 
-## [1.1.1] - 2021-01-20
+## [1.1.1.x] - 2021-01-20
 ### Added
 - Adds ABP Proxy
 - Adds Infinity Comex Support
@@ -148,7 +176,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 
-## [1.1.0] - 2021-01-12
+## [1.1.0.x] - 2021-01-12
 ### Added
 - Nuget Packages @1.1.0
 - Initial Portal Admin Blazor Application at route /admin.
@@ -158,7 +186,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [1.0.0] - 2020-12-31
+## [1.0.0.x] - 2020-12-31
 
 ### Added
 - Authentication / User Management / Profile Management
