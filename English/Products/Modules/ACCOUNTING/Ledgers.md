@@ -33,14 +33,14 @@ The next step in the accounting cycle is to create a trial balance. The informat
 The journal and ledger both play an important role in the accounting process. The business transactions are primarily recorded in the journal and thereafter posted into the ledger under respective heads. While many financial transactions are posted in both the journal and ledger, there are significant differences in the purpose and function of each of these accounting books.
 
 MEANING
-The financial transactions are summarized and recorded as per the double entry system in a journal. It’s also known as the primary book of accounting or the book of original entry.
+The financial transactions are summarized and recorded as per the double-entry system in a journal. It’s also known as the primary book of accounting or the book of original entry.
 
 The ledger, on the other hand, is known as the principal book of accounting. It records the information from the journal in the “T” format. It is used to create the trial balance which is also the source of the financial statements such as the income statement and the balance sheet
 
 RECORDING TRANSACTIONS
 The process of recording transactions in a journal is called journalizing while the process of transferring the entries from the journal to the ledger is known as posting.
 
-The transactions in a journal are recorded in a chronological order making it easy to identify the transactions are associated with a given business day, week, or another billing period. By contrast, the arrangement of entries within a ledger has more to do with grouping like transactions together into specific accounts for purposes of assessing the data for internal financial and accounting purposes.
+The transactions in a journal are recorded in chronological order making it easy to identify the transactions are associated with a given business day, week, or another billing period. By contrast, the arrangement of entries within a ledger has more to do with grouping like transactions together into specific accounts for purposes of assessing the data for internal financial and accounting purposes.
 
 FORMAT
 The format of a journal is simple. It includes the transaction date, particulars of the transaction, folio number, debit amount and credit amount. There is no scope for balancing in a journal.
