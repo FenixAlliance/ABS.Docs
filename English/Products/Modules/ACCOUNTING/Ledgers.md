@@ -22,7 +22,7 @@ The Alliance Business Suite Accounting Module exposes a general ledger to each b
 Ledgers break up the financial information from the journals into specific accounts such as Cash, Accounts Receivable, and Sales, on their own sheets. This allows you to see the details of all your transactions.
 
 Make a ledger for each account. For example, a cash account ledger will contain all the cash transactions of your business. For unusual or odd expenses, make a general ledger account
-Make columns on the far left of the page for the date, journal number and description
+Make columns on the far left of the page for the date, journal number, and description
 Make columns on the left side for debit, credit, and balance. Debit refers to the money you receive while credit refers to the money that you paid or owe. Balance is the difference between the debit and credit
 Enter the information from the journals into related accounts. Place related debits and credits side by side. Calculate the balance you’ve earned or owe
 Record and make changes to the transactions as they occur. If you’ve made a journal entry, post it to the ledger immediately
@@ -32,18 +32,18 @@ The next step in the accounting cycle is to create a trial balance. The informat
 # What’s the Difference Between a Journal and a Ledger?
 The journal and ledger both play an important role in the accounting process. The business transactions are primarily recorded in the journal and thereafter posted into the ledger under respective heads. While many financial transactions are posted in both the journal and ledger, there are significant differences in the purpose and function of each of these accounting books.
 
-MEANING
+## MEANING
 The financial transactions are summarized and recorded as per the double-entry system in a journal. It’s also known as the primary book of accounting or the book of original entry.
 
 The ledger, on the other hand, is known as the principal book of accounting. It records the information from the journal in the “T” format. It is used to create the trial balance which is also the source of the financial statements such as the income statement and the balance sheet
 
-RECORDING TRANSACTIONS
+## RECORDING TRANSACTIONS
 The process of recording transactions in a journal is called journalizing while the process of transferring the entries from the journal to the ledger is known as posting.
 
 The transactions in a journal are recorded in chronological order making it easy to identify the transactions are associated with a given business day, week, or another billing period. By contrast, the arrangement of entries within a ledger has more to do with grouping like transactions together into specific accounts for purposes of assessing the data for internal financial and accounting purposes.
 
-FORMAT
-The format of a journal is simple. It includes the transaction date, particulars of the transaction, folio number, debit amount and credit amount. There is no scope for balancing in a journal.
+## FORMAT
+The format of a journal is simple. It includes the transaction date, particulars of the transaction, folio number, debit amount, and credit amount. There is no scope for balancing in a journal.
 
 The format of a journal:
 
