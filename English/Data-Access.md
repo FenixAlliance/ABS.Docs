@@ -25,7 +25,7 @@ Organizations from industries such as manufacturing, government, and education a
 
 ```csharp
 // Get all the contacts from the configured ABM Provider.
-var contacts = await DataContext.Contact.Where(c => c.ID == ).ToListAsync();
+var contacts = await DataContext.Contact.ToListAsync();
 
 foreach(var contact in contacts){
     Console.WriteLine(contact.ID);
