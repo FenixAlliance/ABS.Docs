@@ -4,10 +4,10 @@ An Account Holder is a CredentialsPrincipal for the APS Engine. It represents a 
 
 The "Credentials" aspect of APS Identity and Access Management (IAM) helps you with the question "Who is that user?", often referred to as authentication. Instead of sharing your root user credentials with others, you can create individual Account Holders within your instance that correspond to users in your organization. 
 
-In the following figure, the user's Sebastien, Fernando, Camila, Alejandro, Ana, and Julianna have been added to a single ABS Instance. Each Account Holder will have their own credentials.
+In the following figure, the users Sebastien, Fernando, Camila, Alejandro, Ana, and Julianna have been added to a single ABS Instance. Each Account Holder will have their own credentials.
 
 ## First-time access only: Your root user credentials
-When you create an ABS Instance, you create an APS Account Holder root identity, which you use to sign in to the instance. You can sign in to the ABS Studio and the ABS Portal Admin using this root user identity; that is, the email address and password that you provided when creating the instance. This combination of your email address and password is also called your root user credentials.
+When you create an ABS Instance, you create an APS Account Holder root identity, which you will use to sign in to the instance. You can sign in to the ABS Studio and the ABS Portal Admin using this root user identity; that is, the email address and password that you provided when installing the instance. This combination of your email address and password is also called your root user credentials.
 
 When you use your root user credentials, you have complete, unrestricted access to all resources in your ABS instance, including access to your billing and licensing information and the ability to change your password and set multi-factor authentication. This level of access is necessary when you first set up your account. However, **we recommend that you don't use root user credentials for everyday access**. We especially recommend that you do not share your root user credentials with anyone because doing so gives them unrestricted access to your instance. Only service control policies (SCPs) in tenants can restrict the permissions that are granted to the root user.
 
