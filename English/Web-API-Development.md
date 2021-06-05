@@ -132,8 +132,9 @@ namespace FenixAlliance.Areas.Licensing.Controllers
 
 To install a custom controller you just need to build the Razor Class Library containing your custom Controllers as a NuGet Package and then upload it into your Alliance Business Suite instance. 
 
-If your RCL depends on other Nuget Packages, those will need to be copied into the NuGet Package for your custom functionality to work.
-To do this, you can extract the .nupkg file using something like 7-Zip (NuGet Packages are just Zipped files with a different extension), and then copy every non-ABS Dll required for your CRL to work properly. Then, re-compress the files, and change the re-compressed file extension to .nupkg to be uploaded into your Alliance Business Suite Instance as a Module. 
+If your RCL depends on other Nuget Packages, those DLLs will need to be copied into your Module's NuGet Package for your custom functionality to work.
+
+To do this, you can extract the .nupkg file using something like 7-Zip (NuGet Packages are just Zipped files with a different extension), and then copy into the lib/ folder every non-ABS Dll required for your RCL to work properly. Then, re-compress the files, and change the re-compressed file extension to .nupkg to be uploaded into your Alliance Business Suite Instance as a Module. 
 
 To install a module into your Alliance Business Suite:
 
