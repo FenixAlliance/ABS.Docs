@@ -127,7 +127,6 @@ namespace FenixAlliance.Areas.Licensing.Controllers
 
 ```
 
-Of course, a controller
 
 ## Installing a Custom Controller
 
