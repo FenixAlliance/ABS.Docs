@@ -1,3 +1,5 @@
+# Modules for the Alliance Business Suite
+
 The Alliance Business Suite is a modular application platform. This means that you can create custom functionalities in the form of modules and add them to your ABS instance.
 
 Modules are pieces of software that are designed to perform a specific set of functions or add a specific kind of feature, to any Alliance Business Suite instance. ABS Modules work only with self-hosted ABS instances. Hosted versions such as absuite.net typically offer theme options for customizing portals, but it isn’t possible to install plugins freely to customize portals on this platform.
