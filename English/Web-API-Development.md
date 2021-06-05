@@ -33,7 +33,7 @@ public class LicensesController : ControllerBase {
 
 The previous controller will be available at `/api/v2/licenses` and the Get method can be invoked by making an HTTP GET request to `/api/v2/licenses/validate/{LicenseID}`
 
-Also, it is worth pointing out that the Alliance Business Suite DOES have support for the MVC Pattern, you should not create a web API controller by deriving from the `Controller` class. `Controller` derives from `ControllerBase` and adds support for views, so it's for handling web pages, not web API requests. There's an exception to this rule: if you plan to use the same controller for both views and web APIs, derive it from `Controller`."
+Also, it is worth pointing out that the Alliance Business Suite DOES have support for the MVC Pattern, so you should not create a web API controller by deriving from the `Controller` class. `Controller` derives from `ControllerBase` and adds support for views, so it's for handling web pages, not web API requests. There's an exception to this rule: if you plan to use the same controller for both views and web APIs, derive it from `Controller`."
 
 
 In essence, creating an Alliance Business Suite compatible Controller is just as straightforward as creating a .NET API Controller with a few additions:
