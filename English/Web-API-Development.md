@@ -134,7 +134,7 @@ To install a custom controller you just need to build the Razor Class Library co
 
 If your RCL depends on other Nuget Packages, those DLLs will need to be copied into your Module's NuGet Package for your custom functionality to work.
 
-To do this, you can extract the .nupkg file using something like 7-Zip (NuGet Packages are just Zipped files with a different extension), and then copy into the lib/ folder every non-ABS Dll required for your RCL to work properly. Then, re-compress the files, and change the re-compressed file extension to .nupkg to be uploaded into your Alliance Business Suite Instance as a Module. 
+To do this, you can extract the .nupkg file using something like 7-Zip (NuGet Packages are just Zipped files with a different extension), and then copy into the lib/ folder every non-ABS Dll required for your RCL to work properly. Then, re-compress the files, and change the re-compressed file extension to .nupkg to be uploaded into your Alliance Business Suite Instance as a Module. (The actual path of the dlls into the lib folder makes no difference whatsoever on the discovery process, so feel free to set up your own structure.)
 
 To install a module into your Alliance Business Suite:
 
