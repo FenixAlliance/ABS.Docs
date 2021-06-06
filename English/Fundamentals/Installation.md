@@ -140,4 +140,6 @@ On this wizard, you'll be prompted with a few configuration steps:
 
 Fill in the required information on each step and click on "Install". This will create the ABM Scheme to the Database, seed data such as countries, currencies, states, cities, timezones, the selected COA, and other important, standardized data. The creation and seeding process might take up to 5 minutes, depending on your connection and system's specifications.
 
+![Seeding Process](/.attachments/image-9a7225cf-ba75-4625-ba1c-64a0289c4755.png)
+
 Let the application finish this process, reload the page & log in with the Root Account credentials defined in previous steps.
