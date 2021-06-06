@@ -13,7 +13,7 @@ Once your localizable strings have been placed in code using the String Localize
 
 ## Implement a strategy to select the language/culture for each request
 
-Localization is already set up using the ACL. Additional supported languages, as well as the primary content language for each portal can be selected on each's portal configuration manager.
+Localization is already set up using the ACL. Additional supported languages, as well as the primary content language for each portal, can be selected on each's portal configuration manager.
 
 ### QueryStringRequestCultureProvider
 Portals can use a query string to set the Culture Info. For apps that use the cookie or Accept-Language header approach, adding a query string to the URL is useful for debugging and testing code. By default, the QueryStringRequestCultureProvider is registered as the first localization provider in the RequestCultureProvider list. You pass the query string parameters culture and UI-culture. The following example sets the specific culture (language and region) to Spanish/Mexico:
