@@ -138,6 +138,6 @@ On this wizard, you'll be prompted with a few configuration steps:
 
 ![Root Account Credentials](/.attachments/image-331f6185-4104-4ac6-ac37-d66477a6275b.png)
 
-Fill in the required information on each step and click on "Install". This will create the ABM Scheme to the Database, seed data such as countries, currencies, states, cities, timezones, the selected COA, and other important, standardized data. The creation and seeding process found to take up to 5 minutes, depending on your connection and system's specifications.
+Fill in the required information on each step and click on "Install". This will create the ABM Scheme to the Database, seed data such as countries, currencies, states, cities, timezones, the selected COA, and other important, standardized data. The creation and seeding process might take up to 5 minutes, depending on your connection and system's specifications.
 
-Once finished with this process, reload the page & log in with the Root Account credentials defined in previous steps.
+Let the application finish this process, reload the page & log in with the Root Account credentials defined in previous steps.
