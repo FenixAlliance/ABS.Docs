@@ -120,7 +120,7 @@ On this wizard, you'll be prompted with a few configuration steps:
 
 **1. Primary Database Options**
 
-![Primary Database Options](/.attachments/image-4bdfa57a-0f6f-4f78-944b-105e1f18beeb.png)
+![Primary Database Options](/.attachments/image-1225dbea-223d-42dd-ac65-cd6cd3c6305a.png)
 
 **2. Business Tenant Basic Information**
 
