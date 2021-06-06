@@ -8,7 +8,18 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
 
 1. Buy a license (or get a community license for free), or sign up for a free 30-day trial license. 
 1. Install the Alliance Business Suite.
-1. Start building
+1. Start building.
+
+## Alliance Business Suite components
+
+### Alliance Core Libraries
+### Alliance Business Model
+### Alliance Passport Services
+### Alliance Business Platform
+### Alliance Business Studio
+### Alliance Business Cloud
+
+
 
 ## About licensing
 
@@ -22,11 +33,12 @@ In a nutshell, You’ll only pay for core licensing fees if you use the ABS on b
 ### **Just add code**:
 Ready to code online development platform with a code editor and advanced site preview with support for dynamic sites.
 
-
-# Who’s the Alliance Business Suite for?
+## Who’s the Alliance Business Suite for?
 - ## Business owners
 - ## Developers
 - ## Content Managers
 - ## Digital Agencies
 - ## Financial Businesses
 - ## Education Institutions
+
+
