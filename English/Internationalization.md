@@ -11,6 +11,30 @@ The Alliance Business Suite was architected to allow customers to obtain this fu
 
 Once your localizable strings have been placed in code using the String Localizer function. you can [create localization resources using your instance's admin portal](Internationalization/Localization-Strings).
 
+## Implement a strategy to select the language/culture for each request
+
+Localization is already set up using the ACL. Additional supported languages, as well as the primary content language for each portal can be selected on each's portal configuration manager.
+
+### QueryStringRequestCultureProvider
+Portals can use a query string to set the Culture Info. For apps that use the cookie or Accept-Language header approach, adding a query string to the URL is useful for debugging and testing code. By default, the QueryStringRequestCultureProvider is registered as the first localization provider in the RequestCultureProvider list. You pass the query string parameters culture and UI-culture. The following example sets the specific culture (language and region) to Spanish/Mexico:
+
+```
+http://yourdomain/?culture=es-MX&ui-culture=es-MX
+```
+If you only pass in one of the two (culture or ui-culture), the query string provider will set both values using the one you passed in. For example, setting just the culture will set both the Culture and the UICulture:
+
+```
+http://localhost:5000/?culture=es-MX
+```
+
+## CookieRequestCultureProvider
+Production apps will often provide a mechanism to set the culture with the ASP.NET Core culture cookie. Use the MakeCookieValue method to create a cookie.
+
+The CookieRequestCultureProvider DefaultCookieName returns the default cookie name used to track the user's preferred culture information. The default cookie name is .AspNetCore.Culture.
+
+The cookie format is c=%LANGCODE%|uic=%LANGCODE%, where c is Culture and uic is UICulture, for example:
+
+
 
 ``` csharp
 @{
