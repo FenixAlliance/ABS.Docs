@@ -10,7 +10,7 @@
 * [Outlook](About.md)
 * [Overview](Overview.md)
 * [Overview](Overview.md)
-* [Getting Started](Get-started).md)
+* [Getting Started](Get-started)
 * [Fundamentals](Fundamentals.md)
   * [Installation](Fundamentals/Installation.md)
   * [Configuration](Fundamentals/Configuration.md)
