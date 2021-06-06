@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Spanish Docs](https://docs.absuite.net/spanish)
 * [API Reference](References)
   * [1.1.4](https://docs.absuite.net/reference/1.1.4)
   * [1.1.7](https://docs.absuite.net/reference/1.1.7)
