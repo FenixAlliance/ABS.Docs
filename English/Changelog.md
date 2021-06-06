@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.6.x] - 2021-05-22
+## [1.2] - 2021-07-12
+
+## [1.1.9] - 2021-06-30
+
+## [1.1.8] - 2021-06-18
+
+## [1.1.7] - 2021-06-06
 ### Added
 - [ABS] Log Viewer
 - [ABS] Template Views
@@ -43,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix page tree navigation on the live editor.
 
 
-## [1.1.5.x] - 2021-04-21
+## [1.1.6] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
