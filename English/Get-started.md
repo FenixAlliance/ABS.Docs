@@ -17,6 +17,7 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
 - ### [Alliance Business Platform](Products/Alliance-Business-Platform)
 - ### [Alliance Business Studio](Products/Alliance-Business-Studio)
 - ### [Alliance Business Cloud](Products/Alliance-Business-Cloud)
+- ### [Infinity Comex Engine](Products/Infinity-Comex-Engine)
 
 ## About licensing
 
