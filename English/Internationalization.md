@@ -11,6 +11,60 @@ The Alliance Business Suite was architected to allow customers to obtain this fu
 
 Once your localizable strings have been placed in code using the String Localizer function. you can [create localization resources using your instance's admin portal](Internationalization/Localization-Strings).
 
+
+``` csharp
+@{
+	var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+	var cultureItems = RequestLocalizationOptions.Value.SupportedUICultures
+		.Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+		.ToList();
+	var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+<li class="nav-item dropdown">
+	<a class="nav-link   dropdown-toggle" href="#" id="SelectLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		@requestCulture.RequestCulture.Culture.TwoLetterISOLanguageName - <script>document.write(CartCurrencyCode);</script>
+	</a>
+
+	<div class="dropdown-menu" aria-labelledby="SelectLang">
+		<h6 class="dropdown-header">
+			<b>  <i class="fas fa-globe-americas"></i>&nbsp;  @_("Current currency"): </b>
+			<b id="CurrencyTip">
+				<script>document.write(CartCurrencyCode);</script>
+			</b>
+		</h6>
+		<div class="dropdown-divider"></div>
+		<a href="/Currencies/Index" class="dropdown-item">
+		<i class="fas fa-dollar-sign"></i>&nbsp; @_("Change currency")
+		</a>
+		<!-- Language -->
+		<h6 class="dropdown-header">
+			<b>  <i class="fas fa-globe-americas"></i>&nbsp;  @_("Current Language"): </b>
+			<b id="CurrencyTip">
+				@requestCulture.RequestCulture.Culture.TwoLetterISOLanguageName
+			</b>
+		</h6>
+				<div class="dropdown-divider"></div>
+
+		@foreach (var item in cultureItems)
+		{
+			var value = @item.Value;
+			<a href="#" onclick="SelectLang('@(value.Replace(" ", ""))')" class="dropdown-item">
+				<i class="fas fa-language"></i>&nbsp; @item.Text
+			</a>
+		}
+	</div>
+	<script>
+		//Select Language
+		function SelectLang(value) {
+			cookie = "c=" + value.trim() + "|uic=" + value.trim();
+			Cookies.set('.AspNetCore.Culture', cookie);
+			window.location.reload();
+		}
+	</script>
+</li>
+```
+
 ## Globalization and localization terms
 The process of localizing your portals also requires a basic understanding of relevant character sets commonly used in modern software development and an understanding of the issues associated with them. Although all computers store text as numbers (1's and 0's), different systems store the same text using different numbers. The localization process refers to translating the portal user interface (UI) for a specific culture/locale.
 
