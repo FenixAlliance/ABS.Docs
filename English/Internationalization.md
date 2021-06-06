@@ -27,13 +27,42 @@ If you only pass in one of the two (culture or ui-culture), the query string pro
 http://localhost:5000/?culture=es-MX
 ```
 
-## CookieRequestCultureProvider
+### CookieRequestCultureProvider
 Production apps will often provide a mechanism to set the culture with the ASP.NET Core culture cookie. Use the MakeCookieValue method to create a cookie.
 
 The CookieRequestCultureProvider DefaultCookieName returns the default cookie name used to track the user's preferred culture information. The default cookie name is .AspNetCore.Culture.
 
 The cookie format is c=%LANGCODE%|uic=%LANGCODE%, where c is Culture and uic is UICulture, for example:
+```
+c=en-UK|uic=en-US
+```
+If you only specify one of culture info and UI culture, the specified culture will be used for both culture info and UI culture.
 
+### The Accept-Language HTTP header
+
+The Accept-Language header is settable in most browsers and was originally intended to specify the user's language. This setting indicates what the browser has been set to send or has inherited from the underlying operating system. The Accept-Language HTTP header from a browser request isn't an infallible way to detect the user's preferred language (see Setting language preferences in a browser). A production app should include a way for a user to customize their choice of culture.
+
+#### Set the Accept-Language HTTP header in IE
+
+1. From the gear icon, tap Internet Options.
+
+1. Tap Languages.
+
+1. Internet Options
+
+1. Tap Set Language Preferences.
+
+1. Tap Add a language.
+
+1. Add the language.
+
+1. Tap the language, then tap Move Up.
+
+## Set the culture programmatically
+
+You can easily create a component to allow your users to select their preferred culture from the list of supported cultures:
+
+This sample, present on the Header Component for the [Turing Theme](https://github.com/FenixAlliance/ABS.Portal.Themes.Turing) shows you how to do so:
 
 
 ``` csharp
@@ -46,30 +75,15 @@ The cookie format is c=%LANGCODE%|uic=%LANGCODE%, where c is Culture and uic is 
 }
 
 <li class="nav-item dropdown">
-	<a class="nav-link   dropdown-toggle" href="#" id="SelectLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		@requestCulture.RequestCulture.Culture.TwoLetterISOLanguageName - <script>document.write(CartCurrencyCode);</script>
-	</a>
-
 	<div class="dropdown-menu" aria-labelledby="SelectLang">
-		<h6 class="dropdown-header">
-			<b>  <i class="fas fa-globe-americas"></i>&nbsp;  @_("Current currency"): </b>
-			<b id="CurrencyTip">
-				<script>document.write(CartCurrencyCode);</script>
-			</b>
-		</h6>
-		<div class="dropdown-divider"></div>
-		<a href="/Currencies/Index" class="dropdown-item">
-		<i class="fas fa-dollar-sign"></i>&nbsp; @_("Change currency")
-		</a>
-		<!-- Language -->
+		<!-- Current Language -->
 		<h6 class="dropdown-header">
 			<b>  <i class="fas fa-globe-americas"></i>&nbsp;  @_("Current Language"): </b>
 			<b id="CurrencyTip">
 				@requestCulture.RequestCulture.Culture.TwoLetterISOLanguageName
 			</b>
 		</h6>
-				<div class="dropdown-divider"></div>
-
+		<div class="dropdown-divider"></div>
 		@foreach (var item in cultureItems)
 		{
 			var value = @item.Value;
@@ -78,6 +92,7 @@ The cookie format is c=%LANGCODE%|uic=%LANGCODE%, where c is Culture and uic is 
 			</a>
 		}
 	</div>
+
 	<script>
 		//Select Language
 		function SelectLang(value) {
