@@ -165,8 +165,6 @@ The content template used when a single post from a custom post type is queried.
 - **Single{ContentType}.cshtml**:
 The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". Page.cshtml is used if the query template for the custom post type is not present.
 
-
-
 - **Category.cshtml**:
 The category template. Used when a category is queried.
 
