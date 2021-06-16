@@ -13,7 +13,7 @@ The **ABS Theming Engine** is built on top of the **ABS Razor Templating Engine*
 
 - Use a powerful component architecture to avoid code repetition and improve maintainability
 - Provide alternative templates for fixed platform functionalities such as the Store & Dashboard.
-- Themes can be updated through a mirror.
+- Themes can be updated through a mirror URL (which can perform things like license validation and much more).
 
 ## Benefits
 
