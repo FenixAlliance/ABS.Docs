@@ -66,3 +66,7 @@ In addition to your theme, the theme.json file provides details about the Theme 
     "Description": "Default theme for the Alliance Business Suite Portal."
 }
 ```
+
+NB: The name used for the Author is suggested to be the same as the Theme Author's github.com username, in which case it should start with an "@", although it can be the author's real or business name as well.
+
+
