@@ -48,14 +48,21 @@ Therefore, a Child Theme is just a subset of the parent's files which overrides 
 
 ## Theme Configuration File
 
+In addition to your theme, the theme.json file provides details about the Theme in the form of a JSON Object. The file MUST exist and provide details about the Theme in a specific format. No two Themes are allowed to have the same details listed in the properties, as this will lead to problems in the Theme selection process. If you make your own Theme by copying an existing one, make sure you change this information first.
+
+
 ``` json
 {
     "ID": "Turing",
     "Name": "Turing",
+    "Domain": "Turing",
+    "License": "GNU General Public License v2 or later",
+    "LicenseUrl": "http://www.gnu.org/licenses/gpl-2.0.html",
     "AuthorName": "Fenix Alliance Inc.",
     "AuthorUrl": "https://fenix-alliance.com",
+    "ThemeUrl": "https://fenix-alliance.com",
     "Version": "0.0.1",
-    "Tags": "0.0.1",
+    "Tags": "mega-menu, translation-ready",
     "Description": "Default theme for the Alliance Business Suite Portal."
 }
 ```
