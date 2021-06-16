@@ -27,6 +27,7 @@
      * [Razor Syntax](Web-Development/Razor-Pages/Razor-Syntax.md)
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
    * [Layouts](Web-Development/Layout.md)
+   * [Theming](Web-Development/Theming.md)
    * [View Components](Web-Development/View-Components.md)
    * [Sessions and State](Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
