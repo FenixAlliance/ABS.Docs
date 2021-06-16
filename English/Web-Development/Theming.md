@@ -61,7 +61,7 @@ At the very minimum, an Alliance Business Suite Theme consists of two files:
 - theme.json
 - /Public/style.css
 
-Both of these files go into the Theme directory. The Index.cshtml template file is very flexible. It can be used to include all references to the header, sidebar, footer, content, categories, archives, search, error, and any other page created in the Alliance Business Suite.
+Both of these files go into the Theme directory. The Index.cshtml template file is very flexible. It can be used to include all references to the header, sidebar, footer, content, categories, archives, search, error, and any other pages created in the Alliance Business Suite.
 
 Or, it can be divided into modular template files, each one taking on part of the workload. If you do not provide other template files, WordPress may have default files or functions to perform their jobs. For example, if you do not provide a SearchForm.cshtml template file, the Alliance Business Suite has a default function to display the search form.
 
