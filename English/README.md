@@ -260,7 +260,7 @@ V.1.5.0 ( release in 2021 S2 )
 V.1.2.5 ( release in 2021 S1 )
 - [ ] Improved JavaScript reference support
 - [ ] Studio Static Localization
-- [ ] Live Web Designer Integration
+- [x] Live Web Designer Integration
 - [ ] Dynamic ABM Entity Extensions
 - [x] Dynamic Entity Views
 - [x] Content Live Builder
