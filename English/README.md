@@ -258,7 +258,9 @@ V.1.5.0 ( release in 2021 S2 )
 - [ ] ACS Modularization
 
 V.1.2.5 ( release in 2021 S1 )
+
 - [x] Virtual SPA Support (Angular/React)
+- [x] Razor Templating Engine
 - [ ] Studio Static Localization
 - [x] Live Web Designer Integration
 - [x] Dynamic Entity Views
