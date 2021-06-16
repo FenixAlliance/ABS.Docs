@@ -92,13 +92,13 @@ In addition to your theme, the theme.json file provides details about the Theme 
     "ID": "Turing",
     "Name": "Turing",
     "Domain": "Turing",
-    "License": "GNU General Public License v2 or later",
-    "LicenseUrl": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "Version": "0.0.1",
     "AuthorName": "Fenix Alliance Inc.",
     "AuthorUrl": "https://fenix-alliance.com",
     "ThemeUrl": "https://fenix-alliance.com",
-    "Version": "0.0.1",
     "Tags": "mega-menu, translation-ready",
+    "License": "GNU General Public License v2 or later",
+    "LicenseUrl": "http://www.gnu.org/licenses/gpl-2.0.html",
     "Description": "Default theme for the Alliance Business Suite Portal."
 }
 ```
