@@ -37,3 +37,23 @@ If you set a portal-related page as the home page by ticking the "Is Home Page" 
 
 The above is a legacy method for Home page discovery. To improve consistency across portals, we've implemented a new method to select the Home Page on the Portal's Options Manager. To use the new method, head to your Instance's administration portal and over General Settings, select the page you would like to render at the root of each portal.
 
+
+## Client-Side UI Frameworks
+
+The Alliance Business Suite is configured to allow customers to use, right out of the box, several UI Frameworks such as:
+
+- [x] [Bootstrap](https://getbootstrap.com/)
+- [x] [Foundation](https://get.foundation/)
+- [x] [Bulma](https://bulma.io/)
+- [x] [Fast](https://www.fast.design/)
+- [x] [Fabric](https://developer.microsoft.com/en-us/fabric-js) (deprecated) 
+- [x] [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/)
+- [x] [Tailwind CSS](https://tailwindcss.com/)
+- [x] [Materialize CSS](https://materializecss.com/)
+- [x] [Semantic UI](https://semantic-ui.com/)
+
+These frameworks can be enabled or disabled on a template basis to allow customers to create and combine unique experiences with the tools they already use and love.
+
+
+ 
+ 
