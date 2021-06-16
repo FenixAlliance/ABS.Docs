@@ -20,7 +20,7 @@ The **ABS Theming Engine** is built on top of the **ABS Razor Templating Engine*
 - Themes can keep your Business Logic separated from your UI.
 - Themes are easily portable to other Alliance Business Suite instances.
 - Themes can be enabled on many portals running on the same instance.
-- Theme files can be overridden by child theme files and Dynamic Web Content.
+- Theme files can be overridden by [child theme files](#Child-Themes) and Dynamic Web Content (pulled from the database).
 
 ## Anatomy of a Theme
 
