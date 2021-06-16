@@ -58,9 +58,46 @@ Themes contain a specific folder structure used to override the content defaults
 ```
 
 At the very minimum, an Alliance Business Suite Theme consists of two files:
-
+- theme.json
 - /Public/style.css
-- /Templates/index.cshtml
+
+Both of these files go into the Theme directory. The index.php template file is very flexible. It can be used to include all references to the header, sidebar, footer, content, categories, archives, search, error, and any other page created in WordPress.
+
+Or, it can be divided into modular template files, each one taking on part of the workload. If you do not provide other template files, WordPress may have default files or functions to perform their jobs. For example, if you do not provide a searchform.php template file, WordPress has a default function to display the search form.
+
+Typical template files include:
+
+Footer.cshtml
+Header.cshtml
+Sidebar.cshtml
+SearchForm.cshtml
+
+
+
+Using these template files you can put template tags within the index.php master file to include these other files where you want them to appear in the final generated page.
+
+- To include the body, use `@Body`.
+- To include the header, use `@await ViewService.InvokeAsync("Header")`.
+- To include the sidebar, use `@await ViewService.InvokeAsync("Sidebar")`.
+- To include the footer, use `@await ViewService.InvokeAsync("Footer")`.
+- To include the search bar, use `@await ViewService.InvokeAsync("Search")`.
+
+
+Here is an example of a basic Template File:
+
+```
+@{Name = "Turing Main Template";}
+
+@await ViewService.InvokeAsync("Header")
+@Body
+@await ViewService.InvokeAsync("Footer")
+
+```
+
+The default files for some template functions may be deprecated or not present, and you should provide these files in your theme. As of version 3.0, the deprecated default files are located in wp-includes/theme-compat. For example, you should provide header.php for the function get_header() to work safely, and comments.php for the function comments_template().
+
+For more on how these various Templates work and how to generate different information within them, read the Templates documentation.
+
 
 ## Theme Configuration File
 
@@ -101,34 +138,34 @@ Template files should exist inside the Templates folder on your theme.
 - **style.css**:
 The main stylesheet. This must be included with your Theme, and it must contain the information header for your Theme.
 
-- **rtl.css**:
+- **RTL.css**:
 The rtl stylesheet. This will be included automatically if the website's text direction is right-to-left. This can be generated using the RTLer plugin.
 
 - **E404.cshtml**:
 The 404 Not Found template. Used when the ABS cannot find a post or page that matches the query.
 
-- **index.cshtml**:
+- **Index.cshtml**:
 The main template. If your Theme provides its own templates, index.php must be present.
 
-- **comments.cshtml**:
+- **Comments.cshtml**:
 The comments template.
 
-- **front-page.cshtml**:
+- **FrontPage.cshtml**:
 The front page template.
 
-- **home.cshtml**:
+- **Home.cshtml**:
 The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
 
-- **single.cshtml**:
+- **Single.cshtml**:
 The single post template. Used when a single post is queried. For this and all other query templates, index.php is used if the query template is not present.
 
-- **single-{post-type}.cshtml**:
+- **Single{PostType}.cshtml**:
 The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". index.cshtml is used if the query template for the custom post type is not present.
 
-- **page.cshtml**:
+- **Page.cshtml**:
 The page template. Used when an individual Page is queried.
 
-- **category.cshtml**:
+- **Category.cshtml**:
 The category template. Used when a category is queried.
 
 - **tag.cshtml**:
