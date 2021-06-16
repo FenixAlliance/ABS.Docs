@@ -46,6 +46,17 @@ Therefore, a Child Theme is just a subset of the parent's files which overrides 
 - save on development time as you are not reinventing the wheel; and
 - are a great way to start learning about theme development.
 
+## The anatomy of a Theme
+
+Themes contain a specific folder structure used to override the content defaults
+
+```
+- /Pages/
+- /Components/
+- /Public/
+- /Templates/
+```
+
 ## Theme Configuration File
 
 In addition to your theme, the theme.json file provides details about the Theme in the form of a JSON Object. The file MUST exist and provide details about the Theme in a specific format. No two Themes are allowed to have the same details listed in the properties, as this will lead to problems in the Theme selection process. If you make your own Theme by copying an existing one, make sure you change this information first.
@@ -69,4 +80,71 @@ In addition to your theme, the theme.json file provides details about the Theme 
 
 NB: The name used for the Author is suggested to be the same as the Theme Author's github.com username, in which case it should start with an "@", although it can be the author's real or business name as well.
 
+## Template Files
+
+Templates are ABS Razor source files used to generate the pages requested by visitors and are output as HTML. Template files are made up of HTML, C# and are rendered through ABS Templating Engine.
+
+The Alliance Business Suite defines several template files that control the look and feel of certain parts of each portal.
+
+Templates are rendered based upon the Web Component Hierarchy, which depends on the files that are present on the portal's enabled theme.
+
+
+## Template  
+
+- **style.css**:
+The main stylesheet. This must be included with your Theme, and it must contain the information header for your Theme.
+
+- **rtl.css**:
+The rtl stylesheet. This will be included automatically if the website's text direction is right-to-left. This can be generated using the RTLer plugin.
+
+- **E404.cshtml**:
+The 404 Not Found template. Used when the ABS cannot find a post or page that matches the query.
+
+- **index.cshtml**:
+The main template. If your Theme provides its own templates, index.php must be present.
+
+- **comments.cshtml**:
+The comments template.
+
+- **front-page.cshtml**:
+The front page template.
+
+- **home.cshtml**:
+The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
+
+- **single.cshtml**:
+The single post template. Used when a single post is queried. For this and all other query templates, index.php is used if the query template is not present.
+
+- **single-{post-type}.cshtml**:
+The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". index.cshtml is used if the query template for the custom post type is not present.
+
+- **page.cshtml**:
+The page template. Used when an individual Page is queried.
+
+- **category.cshtml**:
+The category template. Used when a category is queried.
+
+- **tag.cshtml**:
+The tag template. Used when a tag is queried.
+
+- **taxonomy.cshtml**:
+The term template. Used when a term in a custom taxonomy is queried.
+
+- **author.cshtml**:
+The author template. Used when an author is queried.
+
+- **date.cshtml**:
+The date/time template. Used when a date or time is queried. Year, month, day, hour, minute, second.
+
+- **archive.cshtml**:
+The archive template. Used when a category, author, or date is queried. Note that this template will be overridden by category.cshtml, author.cshtml, and date.cshtml for their respective query types.
+
+- **search.cshtml**:
+The search results template. Used when a search is performed.
+
+- **attachment.cshtml**:
+Attachment template. Used when viewing a single attachment.
+
+- **image.cshtml**:
+Image attachment template. Used when viewing a single image attachment. If not present, attachment.php will be used.
 
