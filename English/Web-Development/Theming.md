@@ -58,9 +58,7 @@ Themes contain a specific folder structure used to override the content defaults
 ```
 
 
-
-
-Using these template files you can put template tags within the index.php master file to include these other files where you want them to appear in the final generated page.
+Using these template files you can poll dynamic web content within the Main.cshtml master file to include these other files where you want them to appear in the final generated page.
 
 - To include the body, use `@Body`.
 - To include the header, use `@await ViewService.InvokeAsync("Header")`.
@@ -125,32 +123,32 @@ Both of these files go into the Theme directory. The Main.cshtml template file i
 
 Or, it can be divided into several template files, each one taking on part of the workload. If you do not provide other template files, the Alliance Business Suite may have default files or functions to perform their jobs. For example, if you do not provide a SearchForm.cshtml template file, the Alliance Business Suite has a default View Component to display the search form.
 
-Typical template files include:
-
-Footer.cshtml
-Header.cshtml
-Sidebar.cshtml
-SearchForm.cshtml
 
 ## Core Templates
 
-- **E404.cshtml**:
-The 404 Not Found template. Used when the ABS cannot find a post or page that matches the query.
 
-- **Index.cshtml**:
-The main template. If your Theme provides its own templates, index.php must be present.
 
-- **Comments.cshtml**:
-The comments template.
+- **Main.cshtml**:
+The main template. If your Theme provides its own template, Main.cshtml must be present.
 
-- **FrontPage.cshtml**:
-The front page template.
+- **Blog.cshtml**:
+The Blog template.
+
+- **Forum.cshtml**:
+The Forum template.
+
+- **Store.cshtml**:
+The Store template.
+
+
+## Core Pages
+
 
 - **Home.cshtml**:
 The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
 
 - **Single.cshtml**:
-The single post template. Used when a single post is queried. For this and all other query templates, index.php is used if the query template is not present.
+The single post template. Used when a single post is queried. For this and all other query templates, Main.cshtml is used if the query template is not present.
 
 - **Single{ContentType}.cshtml**:
 The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". index.cshtml is used if the query template for the custom post type is not present.
@@ -161,16 +159,22 @@ The page template. Used when an individual Page is queried.
 - **Category.cshtml**:
 The category template. Used when a category is queried.
 
-- **tag.cshtml**:
+- **Tag.cshtml**:
 The tag template. Used when a tag is queried.
 
-- **taxonomy.cshtml**:
-The term template. Used when a term in a custom taxonomy is queried.
+- **Cart.cshtml**:
+The cart page template. Used when a cart is queried.
 
-- **author.cshtml**:
-The author template. Used when an author is queried.
+- **Account.cshtml**:
+The account page template. Used on the User Profile Page.
 
-- **date.cshtml**:
+- **Taxonomy.cshtml**:
+The taxonomy template. Used when a taxonomy is queried.
+
+- **SocialProfile.cshtml**:
+The Social Profile template page. Used when a social profile is queried.
+
+- **Date.cshtml**:
 The date/time template. Used when a date or time is queried. Year, month, day, hour, minute, second.
 
 - **archive.cshtml**:
@@ -185,3 +189,22 @@ Attachment template. Used when viewing a single attachment.
 - **image.cshtml**:
 Image attachment template. Used when viewing a single image attachment. If not present, attachment.php will be used.
 
+- **E404.cshtml**:
+The 404 Not Found template. Used when the ABS cannot find a post or page that matches the query.
+
+- **E401.cshtml**:
+The 404 Not Authorized template. Used when the ABS cannot allow a user to query some endpoint.
+
+- **E500.cshtml**:
+The 500 Error template. Used when the ABS cannot perform some action due to some internal error.
+
+## Core Components
+
+- **Head.cshtml**:
+The head component.
+
+- **Footer.cshtml**:
+The footer component.
+
+- **Header.cshtml**:
+The header component.
