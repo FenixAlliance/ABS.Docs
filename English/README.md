@@ -258,7 +258,7 @@ V.1.5.0 ( release in 2021 S2 )
 - [ ] ACS Modularization
 
 V.1.2.5 ( release in 2021 S1 )
-- [ ] Improved JavaScript reference support
+- [x] Virtual SPA Support (Angular/React)
 - [ ] Studio Static Localization
 - [x] Live Web Designer Integration
 - [x] Dynamic Entity Views
@@ -324,19 +324,17 @@ V.1.0.0 ( released in Dec 31, 2020 )
 
 Constant Consideration
 
-- [ ] Code Annotations
-- [ ] A11y Improvements
-- [ ] i18n Improvements
-- [ ] UI/UX Improvements 
-- [ ] Security Improvements
-- [ ] SOLID Code Improvements
-- [ ] Performance Improvements 
-- [ ] Bug fixes & Dependency Management
-- [ ] Generic Integrations Improvements
-- [ ] Developer Productivity Improvements
-- [ ] ABM Entity Set Extensions
-- [ ] Site Configuration Migrations
-- [ ] Developer productivity enhancements
+- ✅ Code Annotations
+- ✅ A11y Improvements
+- ✅ i18n Improvements
+- ✅ UI/UX Improvements 
+- ✅ Security Improvements
+- ✅ SOLID Code Improvements
+- ✅ Performance Improvements 
+- ✅ Extensibility Improvements 
+- ✅ Bug fixes & Dependency Management
+- ✅ Generic Integrations Improvements
+- ✅ Developer productivity enhancements
 
 
 # Release Announcements
