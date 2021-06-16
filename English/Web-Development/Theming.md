@@ -95,7 +95,7 @@ Here is an example of a basic Template File:
 ```
 
 
-For more on how these various Templates work and how to generate different information within themes, read the [Templates documentation](/English/Web-Development/Layout).
+For more on how these various Templates work and how to generate different information within themes, read the [Templates documentation](/English/Web-Development/Layout.md).
 
 
 ## Theme Configuration File
