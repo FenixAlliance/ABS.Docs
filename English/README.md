@@ -1,6 +1,6 @@
 ---
 description: >-
-  Welcome to the open-source documentation of Fenix Alliance's Applications.
+  Welcome to the open-source documentation for the Alliance Business Suite.
   Please review this README file to understand how you can assist in contributing to the documentation.
 ---
 # Alliance Business Suite
