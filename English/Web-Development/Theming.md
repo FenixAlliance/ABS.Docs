@@ -126,8 +126,6 @@ Or, it can be divided into several template files, each one taking on part of th
 
 ## Core Templates
 
-
-
 - **Main.cshtml**:
 The main template. If your Theme provides its own template, Main.cshtml must be present.
 
