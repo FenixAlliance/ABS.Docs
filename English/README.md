@@ -244,15 +244,12 @@ There is a separate [Documentation repository](https://github.com/fenixalliance/
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
 
-V.2.0.0 ( release in 2021 T4 )
-- [ ] Migration to .NET 6
-
-V.1.7.5 ( release in 2021 T3 )
+V.1.7.5 ( release in 2022 S1 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
 - [ ] PowerShell SDK 
 
-V.1.5.0 ( release in 2021 T2 )
+V.1.5.0 ( release in 2021 S2 )
 - [ ] gRPC Modularization
 - [ ] Reporting Dashboard
 - [ ] Dynamic Dashboards
@@ -260,30 +257,24 @@ V.1.5.0 ( release in 2021 T2 )
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
 
-V.1.2.5 ( release in 2021 T1 )
-- [ ] Static Localization ( ie. labels, help text, etc.. )
-- [ ] ARIA Tags Integration for Studio
-- [ ] ComputeWorks Cloud Platform Integration
+V.1.2.5 ( release in 2021 S1 )
 - [ ] Improved JavaScript reference support
-- [ ] Performance optimizations (Constant)
-- [ ] Developer productivity enhancements
-- [ ] Complete Static Localization of Studio
+- [ ] Studio Static Localization
 - [ ] Live Web Designer Integration
 - [ ] Dynamic ABM Entity Extensions
 - [x] Dynamic Entity Views
-- [ ] Live Form Builder
-- [ ] Virtual Entity Data Providers
+- [x] Content Live Builder
 - [ ] Virtual Entity Data Sources
-- [ ] Custom Controller Definitions
+- [x] Custom Controller Definitions
 - [x] Portal Settings Manager UI
 - [ ] Custom Macro Definitions
-- [ ] Custom Setting Definitions
+- [x] Custom Option Definitions
 - [ ] Custom Portal Profile Definitions
-- [ ] Custom Service Endpoint Definitions
-- [ ] Custom Web Portal Resources
-- [ ] Module Manager Dashboard
-    - [ ] Trusted Publisher Rules
-    - [ ] Module Assembly Manager
+- [x] Custom Service Endpoint Definitions
+- [x] Custom Web Portal Resources
+- [x] Module Manager Dashboard
+    - [x] Trusted Publisher Rules
+    - [x] Module Assembly Manager
     - [x] Managed Module Support
     - [x] Unmanaged Module Support
 - [ ] Identity Server Integration (Local accounts)
@@ -337,15 +328,17 @@ Constant Consideration
 - [ ] Code Annotations
 - [ ] A11y Improvements
 - [ ] i18n Improvements
-- [ ] UI/UX Improvements
-- [ ] SOLID Code Improvements
+- [ ] UI/UX Improvements 
 - [ ] Security Improvements
-- [ ] Performance Improvements
+- [ ] SOLID Code Improvements
+- [ ] Performance Improvements 
 - [ ] Bug fixes & Dependency Management
 - [ ] Generic Integrations Improvements
 - [ ] Developer Productivity Improvements
 - [ ] ABM Entity Set Extensions
 - [ ] Site Configuration Migrations
+- [ ] Developer productivity enhancements
+
 
 # Release Announcements
 
