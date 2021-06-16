@@ -1,8 +1,9 @@
 ---
 description: >-
   Welcome to the open-source documentation for the Alliance Business Suite.
-  Please review this README file to understand how you can assist in contributing to the documentation.
+  Please review this README file to understand how you can assist in contributing to the project.
 ---
+
 # Alliance Business Suite
 ![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
 <p>
