@@ -140,6 +140,9 @@ The Forum template.
 - **Store.cshtml**:
 The Store template.
 
+- **Dashboard.cshtml**:
+The Dashboard template.
+
 
 ## Core Pages
 
@@ -165,7 +168,10 @@ The tag template. Used when a tag is queried.
 - **Cart.cshtml**:
 The cart page template. Used when a cart is queried.
 
-- **Account.cshtml**:
+- **Currencies.cshtml**:
+The currency selector page template. Used to change the default currency is queried.
+
+- **User.cshtml**:
 The account page template. Used on the User Profile Page.
 
 - **Taxonomy.cshtml**:
@@ -177,16 +183,16 @@ The Social Profile template page. Used when a social profile is queried.
 - **Date.cshtml**:
 The date/time template. Used when a date or time is queried. Year, month, day, hour, minute, second.
 
-- **archive.cshtml**:
+- **Archive.cshtml**:
 The archive template. Used when a category, author, or date is queried. Note that this template will be overridden by category.cshtml, author.cshtml, and date.cshtml for their respective query types.
 
-- **search.cshtml**:
+- **Search.cshtml**:
 The search results template. Used when a search is performed.
 
-- **attachment.cshtml**:
+- **Attachment.cshtml**:
 Attachment template. Used when viewing a single attachment.
 
-- **image.cshtml**:
+- **Image.cshtml**:
 Image attachment template. Used when viewing a single image attachment. If not present, attachment.php will be used.
 
 - **E404.cshtml**:
