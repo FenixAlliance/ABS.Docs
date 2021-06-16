@@ -239,7 +239,7 @@ Anyone can build on and extend The Alliance Business Studio to capture additiona
 - If you are getting started with Alliance Business Suite, a [series of videos](https://www.youtube.com/playlist?list=PLGYfOT42OgSZdmYctCWeiRkPfGVQbCRWM) are available which explain how to install the product, interact with the user interface, and develop custom modules.
 
 # Documentation
-There is a separate [Documentation repository](https://github.com/fenixalliance/ABS.Docs.en-us), which contains various types of documentation for the Alliance Business Suite, including the C# API documentation for every library, which are is auto-generated using Doxify. The contents of the repository are published to Github Pages and are available at [https://docs.fenix-alliance.com](https://docs.fenix-alliance.com/)
+There is a separate [Documentation repository](https://github.com/fenixalliance/ABS.Docs.en-us), which contains various types of documentation for the Alliance Business Suite, including the C# API documentation for every library. The contents of the repository are available at [https://docs.absuite.net](https://docs.absuite.net)
 
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
