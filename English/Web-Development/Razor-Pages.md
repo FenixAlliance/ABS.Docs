@@ -54,6 +54,5 @@ The Alliance Business Suite is configured to allow customers to use, right out o
 
 These frameworks can be enabled or disabled on a template basis to allow customers to create and combine unique experiences with the tools they already use and love.
 
-
  
  
