@@ -332,7 +332,7 @@ Constant Consideration
 - ✅ SOLID Code Improvements
 - ✅ Performance Improvements 
 - ✅ Extensibility Improvements 
-- ✅ Bug fixes & Dependency Management
+- ✅ Bug fixes & core Dependency Management
 - ✅ Generic Integrations Improvements
 - ✅ Developer productivity enhancements
 
