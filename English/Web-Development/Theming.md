@@ -57,6 +57,11 @@ Themes contain a specific folder structure used to override the content defaults
 - /Templates/
 ```
 
+At the very minimum, an Alliance Business Suite Theme consists of two files:
+
+- /Public/style.css
+- /Templates/index.cshtml
+
 ## Theme Configuration File
 
 In addition to your theme, the theme.json file provides details about the Theme in the form of a JSON Object. The file MUST exist and provide details about the Theme in a specific format. No two Themes are allowed to have the same details listed in the properties, as this will lead to problems in the Theme selection process. If you make your own Theme by copying an existing one, make sure you change this information first.
@@ -87,6 +92,8 @@ Templates are ABS Razor source files used to generate the pages requested by vis
 The Alliance Business Suite defines several template files that control the look and feel of certain parts of each portal.
 
 Templates are rendered based upon the Web Component Hierarchy, which depends on the files that are present on the portal's enabled theme.
+
+Template files should exist inside the Templates folder on your theme.
 
 
 ## Template  
