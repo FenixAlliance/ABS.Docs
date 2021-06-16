@@ -177,6 +177,12 @@ The currency selector page template. Used to change the default currency is quer
 - **User.cshtml**:
 The account page template. Used on the User Profile Page.
 
+- **Login.cshtml**:
+The login page template. Used on the User Login Page.
+
+- **Register.cshtml**:
+The register page template. Used on the User Registration Page.
+
 - **Taxonomy.cshtml**:
 The taxonomy template. Used when a taxonomy is queried.
 
@@ -187,7 +193,7 @@ The Social Profile template page. Used when a social profile is queried.
 The date/time template. Used when a date or time is queried. Year, month, day, hour, minute, second.
 
 - **Archive.cshtml**:
-The archive template. Used when a category, author, or date is queried. Note that this template will be overridden by category.cshtml, author.cshtml, and date.cshtml for their respective query types.
+The archive template. Used when a category, author, or date is queried. Note that this template will be overridden by Category.cshtml, SocialProfile.cshtml, and Date.cshtml for their respective query types.
 
 - **Search.cshtml**:
 The search results template. Used when a search is performed.
