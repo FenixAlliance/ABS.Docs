@@ -94,9 +94,8 @@ Here is an example of a basic Template File:
 
 ```
 
-The default files for some template functions may be deprecated or not present, and you should provide these files in your theme. As of version 3.0, the deprecated default files are located in wp-includes/theme-compat. For example, you should provide header.php for the function get_header() to work safely, and comments.php for the function comments_template().
 
-For more on how these various Templates work and how to generate different information within them, read the Templates documentation.
+For more on how these various Templates work and how to generate different information within themes, read the [Templates documentation](/English/Web-Development/Layout).
 
 
 ## Theme Configuration File
