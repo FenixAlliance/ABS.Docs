@@ -156,8 +156,11 @@ The home page template, which is the front page by default. If you use a static 
 - **StoreHome.cshtml**:
 The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
 
+- **{ContentType}.cshtml**:
+The content template used when a single post from a custom post type is queried. For example, Course.cshtml used for displaying posts from the custom post type named "Course". Archive.cshtml is used if the query template for the custom post type is not present.
+
 - **Single{ContentType}.cshtml**:
-The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". Main.cshtml is used if the query template for the custom post type is not present.
+The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". Page.cshtml is used if the query template for the custom post type is not present.
 
 - **Page.cshtml**:
 The page template. Used when an individual Page is queried.
@@ -167,9 +170,6 @@ The category template. Used when a category is queried.
 
 - **Tag.cshtml**:
 The tag template. Used when a tag is queried.
-
-- **Cart.cshtml**:
-The cart page template. Used when a cart is queried.
 
 - **Currencies.cshtml**:
 The currency selector page template. Used to change the default currency is queried.
