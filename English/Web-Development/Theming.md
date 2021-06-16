@@ -156,12 +156,8 @@ The home page template, which is the front page by default. If you use a static 
 - **StoreHome.cshtml**:
 The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
 
-
-- **SinglePost.cshtml**:
-The single post template. Used when a single post is queried. For this and all other query templates, Main.cshtml is used if the query template is not present.
-
 - **Single{ContentType}.cshtml**:
-The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". index.cshtml is used if the query template for the custom post type is not present.
+The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". Main.cshtml is used if the query template for the custom post type is not present.
 
 - **Page.cshtml**:
 The page template. Used when an individual Page is queried.
