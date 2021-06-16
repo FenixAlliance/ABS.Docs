@@ -48,4 +48,14 @@ Therefore, a Child Theme is just a subset of the parent's files which overrides 
 
 ## Theme Configuration File
 
-
+``` json
+{
+    "ID": "Turing",
+    "Name": "Turing",
+    "AuthorName": "Fenix Alliance Inc.",
+    "AuthorUrl": "https://fenix-alliance.com",
+    "Version": "0.0.1",
+    "Tags": "0.0.1",
+    "Description": "Default theme for the Alliance Business Suite Portal."
+}
+```
