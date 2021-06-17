@@ -240,9 +240,9 @@ V.1.0.0 ( released in Dec 31, 2020 )
 - [x] REST API with Swagger Support
 - [x] Scheduled Flows ( Background Processing )
 - [x] Scheduled Jobs ( Background Processing )
-- [x] Seamless Upgrade Experience
-- [x] Slack integration (OAuth)
-- [x] Support For Additional Authentication Providers (OAuth)
+- ✅ Seamless Upgrade Experience
+- ✅ Slack integration (OAuth)
+- ✅ Support For Additional Authentication Providers (OAuth)
 
 Constant Consideration
 
