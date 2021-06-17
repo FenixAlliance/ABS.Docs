@@ -179,25 +179,25 @@ V.1.5.0 ( release in 2021 S2 )
 
 V.1.2.5 ( release in 2021 S1 )
 
-- [x] Virtual SPA Support (Angular/React)
-- [x] Razor Templating Engine
+- ✅ Virtual SPA Support (Angular/React)
+- ✅ Razor Templating Engine
 - [ ] Studio Static Localization
-- [x] Live Web Designer Integration
-- [x] Dynamic Entity Views
-- [x] Content Live Builder
+- ✅ Live Web Designer Integration
+- ✅ Dynamic Entity Views
+- ✅ Content Live Builder
 - [ ] Virtual Entity Data Sources
-- [x] Custom Controller Definitions
-- [x] Portal Settings Manager UI
+- ✅ Custom Controller Definitions
+- ✅ Portal Settings Manager UI
 - [ ] Custom Macro Definitions
-- [x] Custom Option Definitions
+- ✅ Custom Option Definitions
 - [ ] Custom Portal Profile Definitions
-- [x] Custom Service Endpoint Definitions
-- [x] Custom Web Portal Resources
-- [x] Module Manager Dashboard
-    - [x] Trusted Publisher Rules
-    - [x] Module Assembly Manager
-    - [x] Managed Module Support
-    - [x] Unmanaged Module Support
+- ✅ Custom Service Endpoint Definitions
+- ✅ Custom Web Portal Resources
+- ✅ Module Manager Dashboard
+    - ✅ Trusted Publisher Rules
+    - ✅ Module Assembly Manager
+    - ✅ Managed Module Support
+    - ✅ Unmanaged Module Support
 - [ ] Identity Server Integration (Local accounts)
 - [ ] Template Definitions
     - [ ] Agreement Template Definitions
@@ -207,39 +207,39 @@ V.1.2.5 ( release in 2021 S1 )
     - [ ] Article Template Definitions
 
 V.1.0.0 ( released in Dec 31, 2020 )
-- [x] Authentication / User Management / Profile Management
-- [x] Authorization / Roles Management / Granular Permissions
-- [x] Blazor Support
-- [x] Cross Platform Database Support ( MySQL, MSSQL )
-- [x] Dynamic CSS/Lazy Loading
-- [x] Dynamic Page Compositing Model / Site & Page Management
-- [x] Dynamic Routing
-- [x] Dynamic Swagger Specs
-- [x] EF Core Migrations for Database Installation / Upgrade
-- [x] Enabled for Infinity Comex (eCommerce Extension)
-- [x] Event Logging / Audit Trail
-- [x] Extensibility via Custom Modules
-- [x] Extensibility via Custom Themes
-- [x] Folder / File Management (Azure Storage, File System)
-- [x] GraphQl API with Voyager, GraphiQl y GraphQl Playground
-- [x] Headless API with Swagger Support
-- [x] HealthCheck Rules with UI Support
-- [x] i18n Enabled (Based on GeoAPI and Custom Settings)
-- [x] Improved JavaScript reference support
-- [x] In-App CLI (Studio Commander)
-- [x] Infinity Comex Support (ABS' eCommerce Engine)
-- [x] JavaScript Lazy Loading
-- [x] Modular Architecture
-- [x] Multi-Currency Support
-- [x] Multi-Portal ( Monolith & Microservice Distributed )
-- [x] Multi-Tenant ( Shared Database & Isolated Database )
-- [x] Notifications / Email Delivery
-- [x] Notifications / SMTP Delivery
-- [x] Progressive Web Application Support
-- [x] Recycle Bin
-- [x] REST API with Swagger Support
-- [x] Scheduled Flows ( Background Processing )
-- [x] Scheduled Jobs ( Background Processing )
+- ✅ Authentication / User Management / Profile Management
+- ✅ Authorization / Roles Management / Granular Permissions
+- ✅ Blazor Support
+- ✅ Cross-Platform Database Support ( MySQL, MSSQL )
+- ✅ Dynamic CSS/Lazy Loading
+- ✅ Dynamic Page Compositing Model / Site & Page Management
+- ✅ Dynamic Routing
+- ✅ Dynamic Swagger Specs
+- ✅ EF Core Migrations for Database Installation / Upgrade
+- ✅ Enabled for Infinity Comex (eCommerce Extension)
+- ✅ Event Logging / Audit Trail
+- ✅ Extensibility via Custom Modules
+- ✅ Extensibility via Custom Themes
+- ✅ Folder / File Management (Azure Storage, File System)
+- ✅ GraphQl API with Voyager, GraphiQl y GraphQl Playground
+- ✅ Headless API with Swagger Support
+- ✅ HealthCheck Rules with UI Support
+- ✅ i18n Enabled (Based on GeoAPI and Custom Settings)
+- ✅ Improved JavaScript reference support
+- ✅ In-App CLI (Studio Commander)
+- ✅ Infinity Comex Support (ABS' eCommerce Engine)
+- ✅ JavaScript Lazy Loading
+- ✅ Modular Architecture
+- ✅ Multi-Currency Support
+- ✅ Multi-Portal ( Monolith & Microservice Distributed )
+- ✅ Multi-Tenant ( Shared Database & Isolated Database )
+- ✅ Notifications / Email Delivery
+- ✅ Notifications / SMTP Delivery
+- ✅ Progressive Web Application Support
+- ✅ Recycle Bin
+- ✅ REST API with Swagger Support
+- ✅ Scheduled Flows ( Background Processing )
+- ✅ Scheduled Jobs ( Background Processing )
 - ✅ Seamless Upgrade Experience
 - ✅ Slack integration (OAuth)
 - ✅ Support For Additional Authentication Providers (OAuth)
