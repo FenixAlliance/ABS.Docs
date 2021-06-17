@@ -178,26 +178,10 @@ V.1.5.0 ( release in 2021 S2 )
 - [ ] ACS Modularization
 
 V.1.2.5 ( release in 2021 S1 )
-
-- ✅ Virtual SPA Support (Angular/React)
-- ✅ Razor Templating Engine
-- [ ] Studio Static Localization
-- ✅ Live Web Designer Integration
-- ✅ Dynamic Entity Views
-- ✅ Content Live Builder
-- [ ] Virtual Entity Data Sources
-- ✅ Custom Controller Definitions
-- ✅ Portal Settings Manager UI
 - [ ] Custom Macro Definitions
-- ✅ Custom Option Definitions
+- [ ] Virtual Entity Data Sources
+- [ ] Studio Static Localization
 - [ ] Custom Portal Profile Definitions
-- ✅ Custom Service Endpoint Definitions
-- ✅ Custom Web Portal Resources
-- ✅ Module Manager Dashboard
-    - ✅ Trusted Publisher Rules
-    - ✅ Module Assembly Manager
-    - ✅ Managed Module Support
-    - ✅ Unmanaged Module Support
 - [ ] Identity Server Integration (Local accounts)
 - [ ] Template Definitions
     - [ ] Agreement Template Definitions
@@ -205,6 +189,21 @@ V.1.2.5 ( release in 2021 S1 )
     - [ ] Email Signature Template Definitions
     - [ ] Document Template Definitions
     - [ ] Article Template Definitions
+- ✅ Virtual SPA Support (Angular/React)
+- ✅ Razor Templating Engine
+- ✅ Live Web Designer Integration
+- ✅ Dynamic Entity Views
+- ✅ Content Live Builder
+- ✅ Custom Controller Definitions
+- ✅ Portal Settings Manager UI
+- ✅ Custom Option Definitions
+- ✅ Custom Service Endpoint Definitions
+- ✅ Custom Web Portal Resources
+- ✅ Module Manager Dashboard
+    - ✅ Trusted Publisher Rules
+    - ✅ Module Assembly Manager
+    - ✅ Managed Module Support
+    - ✅ Unmanaged Module Support
 
 V.1.0.0 ( released in Dec 31, 2020 )
 - ✅ Authentication / User Management / Profile Management
