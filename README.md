@@ -1,8 +1,14 @@
+---
+description: >-
+  Welcome to the open-source documentation for the Alliance Business Suite.
+  Please review this README file to understand how you can assist in contributing to the project.
+---
+
 # Alliance Business Suite
 ![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
 <p>
   <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://docs.fenixalliance.com.co" target="_blank">
+  <a href="https://docs.absuite.net" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
   <a href="http://absuite.net/eula" target="_blank">
@@ -19,11 +25,11 @@ The Alliance Business Suite is a set of intelligent, extensible, multi-tenant bu
 
 The Alliance Business Suite gives users a Full-Stack, Modular Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
-Both client and server code is written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through ASP.NET Core, an open-source and cross-platform web UI framework for building web apps using .NET and C# with or without the use of JavaScript.
+Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through ASP.NET Core, an open-source and cross-platform web UI framework for building web apps using .NET and C# with or without the use of JavaScript.
 
 ABS Apps are composed of reusable web UI components implemented using C#, HTML, and CSS. 
 
-## About the Alliance Business Creed
+## About the Alliance Creed
 
 We're designed to succeed when you and your business succeed; that's why we're committed to helping as many people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
 
@@ -48,7 +54,7 @@ Connectors are always free and you can find them on your ABS Extensions page, an
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
 ### User Guide
-- [ABS Documentation](https://docs.fenixalliance.com.co)
+- [ABS Documentation](https://docs.absuite.net)
 
 <br >
 
@@ -138,7 +144,7 @@ namespace FenixAlliance.ABS
   <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ABM.Hub/workflows/.NET/badge.svg">
 </p>
 
-The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
+The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services) and interactions with vendors, workers, and customers activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
@@ -179,11 +185,11 @@ Anyone can build on and extend The Alliance Business Platform through ASP.NET + 
 
 The Alliance Business Portal is a Content Management System built on top of the Alliance Business Platform. It leverages .NET 5.0 with the best of Blazor, Razor Pages, MVC, REST, GRPC, GraphQl, and the tremendous power of the Alliance Business Model Schema (AMB). The Alliance Business Portal is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. 
 
-It allows you to build ABP Single Page apps that can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints.  ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard GrPC, HTTP, and GraphQL request through the various Alliance Business Platform Endpoints.
+It allows you to build ABP Single Page apps that can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints.  ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard GrPC, HTTP, and GraphQL requests through the various Alliance Business Platform Endpoints.
 
 With ABS Portals, users can create external-facing websites that allow employees, customers, partners, and others outside their organizations to sign in with a wide variety of identities, create and view data in the Alliance Business Model, or browse content anonymously. 
 
-These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Developers can reuse page designs through templates, add forms and views to display key data from the Alliance Business Model, and publish it to users.
+These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Developers can reuse page designs through templates, add forms and views to display key data from the Alliance Business Model and publish it to users.
 
 Anyone can build on and extend the Alliance Business Portal to capture additional business-specific scenarios.
 
@@ -202,7 +208,7 @@ Anyone can build on and extend the Alliance Business Portal to capture additiona
   <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
 </p>
 
-The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. Is allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
+The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
 
 Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
 
@@ -233,20 +239,17 @@ Anyone can build on and extend The Alliance Business Studio to capture additiona
 - If you are getting started with Alliance Business Suite, a [series of videos](https://www.youtube.com/playlist?list=PLGYfOT42OgSZdmYctCWeiRkPfGVQbCRWM) are available which explain how to install the product, interact with the user interface, and develop custom modules.
 
 # Documentation
-There is a separate [Documentation repository](https://github.com/fenixalliance/ABS.Docs.en-us) which contains a variety of types of documentation for the Alliance Business Suite, including the C# API documentation for every library, which are is auto-generated using Doxify. The contents of the repository are published to Github Pages and are available at [https://docs.fenix-alliance.com](https://docs.fenix-alliance.com/)
+There is a separate [Documentation repository](https://github.com/fenixalliance/ABS.Docs.en-us), which contains various types of documentation for the Alliance Business Suite, including the C# API documentation for every library. The contents of the repository are available at [https://docs.absuite.net](https://docs.absuite.net)
 
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
 
-V.2.0.0 ( release in 2021 T4 )
-- [ ] Migration to .NET 6
-
-V.1.7.5 ( release in 2021 T3 )
+V.1.7.5 ( release in 2022 S1 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
 - [ ] PowerShell SDK 
 
-V.1.5.0 ( release in 2021 T2 )
+V.1.5.0 ( release in 2021 S2 )
 - [ ] gRPC Modularization
 - [ ] Reporting Dashboard
 - [ ] Dynamic Dashboards
@@ -254,30 +257,25 @@ V.1.5.0 ( release in 2021 T2 )
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
 
-V.1.2.5 ( release in 2021 T1 )
-- [ ] Static Localization ( ie. labels, help text, etc.. )
-- [ ] ARIA Tags Integration for Studio
-- [ ] ComputeWorks Cloud Platform Integration
-- [ ] Improved JavaScript reference support
-- [ ] Performance optimizations (Constant)
-- [ ] Developer productivity enhancements
-- [ ] Complete Static Localization of Studio
-- [ ] Live Web Designer Integration
-- [ ] Dynamic ABM Entity Extensions
+V.1.2.5 ( release in 2021 S1 )
+
+- [x] Virtual SPA Support (Angular/React)
+- [x] Razor Templating Engine
+- [ ] Studio Static Localization
+- [x] Live Web Designer Integration
 - [x] Dynamic Entity Views
-- [ ] Live Form Builder
-- [ ] Virtual Entity Data Providers
+- [x] Content Live Builder
 - [ ] Virtual Entity Data Sources
-- [ ] Custom Controller Definitions
+- [x] Custom Controller Definitions
 - [x] Portal Settings Manager UI
 - [ ] Custom Macro Definitions
-- [ ] Custom Setting Definitions
+- [x] Custom Option Definitions
 - [ ] Custom Portal Profile Definitions
-- [ ] Custom Service Endpoint Definitions
-- [ ] Custom Web Portal Resources
-- [ ] Module Manager Dashboard
-    - [ ] Trusted Publisher Rules
-    - [ ] Module Assembly Manager
+- [x] Custom Service Endpoint Definitions
+- [x] Custom Web Portal Resources
+- [x] Module Manager Dashboard
+    - [x] Trusted Publisher Rules
+    - [x] Module Assembly Manager
     - [x] Managed Module Support
     - [x] Unmanaged Module Support
 - [ ] Identity Server Integration (Local accounts)
@@ -328,18 +326,18 @@ V.1.0.0 ( released in Dec 31, 2020 )
 
 Constant Consideration
 
-- [ ] Code Annotations
-- [ ] A11y Improvements
-- [ ] i18n Improvements
-- [ ] UI/UX Improvements
-- [ ] SOLID Code Improvements
-- [ ] Security Improvements
-- [ ] Performance Improvements
-- [ ] Bug fixes & Dependency Management
-- [ ] Generic Integrations Improvements
-- [ ] Developer Productivity Improvements
-- [ ] ABM Entity Set Extensions
-- [ ] Site Configuration Migrations
+- ✅ Code Annotations
+- ✅ A11y Improvements
+- ✅ i18n Improvements
+- ✅ UI/UX Improvements 
+- ✅ Security Improvements
+- ✅ SOLID Code Improvements
+- ✅ Performance Improvements 
+- ✅ Extensibility Improvements 
+- ✅ Generic Integrations Improvements
+- ✅ Developer productivity enhancements
+- ✅ Bug fixes & core Dependency Management
+
 
 # Release Announcements
 
@@ -441,9 +439,9 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 # Legal Notices
 
-Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code (in binary or source format) in this repository under the [ABS EULA](http://absuite.net/eula).
+Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
 
-Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
+Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be trademarks or registered trademarks of Fenix Alliance Inc. in the United States/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 
 Privacy information can be found at https://fenix-alliance.com/legal/policies/privacypolicy
 
