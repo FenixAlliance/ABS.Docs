@@ -162,9 +162,7 @@ The home page template, which is the store front page by default. If you use a s
 - **{PluralizedEntityType}.cshtml**:
 The content template used when the records from any given Entity type are queried. For example, Courses.cshtml used for displaying posts from the Entity named "Course". Archive.cshtml is used if the query template for the custom post type is not present.
 
-- **Single{EntityType}.cshtml**:
-
-The single post template used when a single post from a custom post type is queried. For example, SingleItemCategory.cshtml used for displaying single records from the "ItemCategory" Entity. Single.cshtml is used if the query template for the custom post type is not present.
+- **Single{EntityType}.cshtml**: The single post template used when a single post from a custom post type is queried. For example, SingleItemCategory.cshtml used for displaying single records from the "ItemCategory" Entity. Single.cshtml is used if the query template for the custom post type is not present.
 
 - **Category.cshtml**:
 The category template. Used when a category is queried.
