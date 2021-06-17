@@ -162,7 +162,7 @@ namespace FenixAlliance.ABS
 
 
 # Roadmap
-This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
+This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
 V.1.7.5 ( release in 2022 S1 )
 - [ ] UBL 2.1 Support
