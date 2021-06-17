@@ -157,13 +157,14 @@ The home page template, which is the front page by default. If you use a static 
 The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
 
 - **StoreHome.cshtml**:
-The home page template, which is the front page by default. If you use a static front page this is the template for the page with the latest posts.
+The home page template, which is the store front page by default. If you use a static store front page this is the template for the page with the latest posts.
 
-- **{ContentType}.cshtml**:
-The content template used when a single post from a custom post type is queried. For example, Course.cshtml used for displaying posts from the custom post type named "Course". Archive.cshtml is used if the query template for the custom post type is not present.
+- **{PluralizedEntityType}.cshtml**:
+The content template used when a single post from a custom post type is queried. For example, Courses.cshtml used for displaying posts from the custom post type named "Course". Archive.cshtml is used if the query template for the custom post type is not present.
 
-- **Single{ContentType}.cshtml**:
-The single post template used when a single post from a custom post type is queried. For example, single-book.cshtml used for displaying single posts from the custom post type named "book". Page.cshtml is used if the query template for the custom post type is not present.
+- **Single{EntityType}.cshtml**:
+
+The single post template used when a single post from a custom post type is queried. For example, SingleItemCategory.cshtml used for displaying single posts from the "ItemCategory" Entity. Single.cshtml is used if the query template for the custom post type is not present.
 
 - **Category.cshtml**:
 The category template. Used when a category is queried.
@@ -223,3 +224,9 @@ The footer component.
 
 - **Header.cshtml**:
 The header component.
+
+- **StoreFooter.cshtml**:
+The store footer component.
+
+- **StoreHeader.cshtml**:
+The store  header component.
