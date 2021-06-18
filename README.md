@@ -246,7 +246,7 @@ V.1.0.0 ( released in Dec 31, 2020 )
 - ✅ Slack integration (OAuth)
 - ✅ Support For Additional Authentication Providers (OAuth)
 
-Constant Consideration
+Constant Considerations
 
 - ✅ Code Annotations
 - ✅ A11y Improvements
