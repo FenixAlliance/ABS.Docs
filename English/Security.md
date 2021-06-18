@@ -74,7 +74,7 @@ HTML
 
 ```html
 <h1>Congratulations! You're a Winner!</h1>
-<form action="http://your-abs-instance.com/api/v2/account/wallet" method="post">
+<form action="https://your-abs-instance.com/api/v2/insecure-banking-module/wallet" method="post">
     <input type="hidden" name="Transaction" value="withdraw">
     <input type="hidden" name="Amount" value="1000000">
     <input type="submit" value="Click to collect your prize!">
@@ -83,9 +83,9 @@ HTML
 
 Notice that the form's action posts to your Alliance Business Suite instance, not to the malicious site. This is the "cross-site" part of CSRF.
 
-The user selects the submit button. The browser makes the request and automatically includes the authentication cookie for the requested domain, www.good-banking-site.com.
+The user selects the submit button. The browser makes the request and automatically includes the authentication cookie for the requested domain, `your-abs-instance.com`.
 
-The request runs on the www.good-banking-site.com server with the user's authentication context and can perform any action that an authenticated user is allowed to perform.
+Without CSFR protection, the request runs on the `your-abs-instance.com` server with the user's cookie authentication context and can perform any action that an authenticated user is allowed to perform.
 
 In addition to the scenario where the user selects the button to submit the form, the malicious site could:
 
@@ -95,7 +95,7 @@ In addition to the scenario where the user selects the button to submit the form
 
 These alternative scenarios don't require any action or input from the user other than initially visiting the malicious site.
 
-Using HTTPS doesn't prevent a CSRF attack. The malicious site can send an https://your-abs-instance.com/ request just as easily as it can send an insecure request.
+Using HTTPS doesn't prevent a CSRF attacks. The malicious site can send an https://your-abs-instance.com/ request just as easily as it can send an insecure request.
 
 Some attacks target endpoints that respond to GET requests, in which case an image tag can be used to perform the action. This form of attack is common on forum sites that permit images but block JavaScript. Apps that change state on GET requests, where variables or resources are altered, are vulnerable to malicious attacks. GET requests that change state are insecure. A best practice is to never change state on a GET request.
 
