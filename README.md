@@ -274,7 +274,7 @@ Constant Considerations
 
 # Release Announcements
 
-[Alliance Business Suite v1.2.5](https://absuite.net/Blog/announcing-1-25-for-net-5)
+[Alliance Business Suite v1.2](https://absuite.net/Blog/Posts/abs_v1.2)
 
 # Example Screenshots
 
