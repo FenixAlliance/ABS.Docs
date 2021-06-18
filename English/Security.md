@@ -134,7 +134,7 @@ Although `portal1.my-abs-instance.net` and `portal2.my-abs-instance.net` are dif
 
 Attacks that exploit trusted cookies between portals hosted on the same Alliance Business Suite instance can be prevented by not sharing domains. When each instance is hosted on its own domain, there is no implicit cookie trust relationship to exploit.
 
-### Require antiforgery validation
+### Require antiforgery validation (Modules only)
 `ValidateAntiForgeryToken` is an action filter that can be applied to individual actions, and controllers. Requests made to actions that have this filter applied are blocked unless the request includes a valid antiforgery token.
 
 ```csharp
