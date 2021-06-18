@@ -210,8 +210,8 @@ V.1.2.5 ( release in 2021 S1 )
     - ✅ Google Identity Integration
     - ✅ Azure AD Identity Integration
     - ✅ Azure AD B2C Identity Integration
-    - ✅ Okta Identity Integration
-    - ✅ AWS Cognito Identity Integration
+    - ✅ Okta Identity Integration (Preview)
+    - ✅ AWS Cognito Identity Integration 
     - ✅ Default Identity Management
 - ✅ Module Manager Dashboard
     - ✅ Trusted Publisher Rules
