@@ -180,7 +180,7 @@ V.1.3 ( release in 2021 S2 )
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
 
-V.1.2 ( release: July 12 2021 )
+V.1.2 ( release: July 12, 2021 )
 - [ ] Custom Macro Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
