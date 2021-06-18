@@ -57,7 +57,7 @@ Although no API can prevent a client from sending sensitive data on the first re
 **Note:** 
 The Alliance Business platform should not listen on HTTP and will close the connection with status code 400 (Bad Request) and not serve the request.
 
-## Prevent Cross-Site Request Forgery (XSRF/CSRF) attacks in the Alliance Business Suite.
+## Preventing Cross-Site Request Forgery (XSRF/CSRF) attacks.
 
 Cross-site request forgery (also known as XSRF or CSRF) is an attack against web-hosted apps whereby a malicious web app can influence the interaction between a client browser and a web app that trusts that browser. These attacks are possible because web browsers send some types of authentication tokens automatically with every request to a website. This form of exploit is also known as a one-click attack or session riding because the attack takes advantage of the user's previously authenticated session.
 
@@ -113,3 +113,92 @@ Users can guard against CSRF vulnerabilities by taking precautions:
 - Sign off of web apps when finished using them.
 - Clear browser cookies periodically.
 - However, CSRF vulnerabilities are fundamentally a problem with the web app, not the end user.
+
+
+```html
+<form action="/api/v2/secure-banking-module/wallet" method="post">
+    @Html.AntiForgeryToken()
+</form>
+```
+In each of the preceding cases, ASP.NET Core adds a hidden form field similar to the following:
+
+```html
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8NrAkS ... s2-m9Yw">
+```
+
+
+### Multiple apps hosted at one domain
+Shared hosting environments are vulnerable to session hijacking, login CSRF, and other attacks.
+
+Although `portal1.my-abs-instance.net` and `portal2.my-abs-instance.net` are different hosts, there's an implicit trust relationship between hosts under the `*.my-abs-instance.net` domain. This implicit trust relationship **allows potentially untrusted hosts to affect each other's cookies** (the same-origin policies that govern AJAX requests don't necessarily apply to HTTP cookies).
+
+Attacks that exploit trusted cookies between portals hosted on the same Alliance Business Suite instance can be prevented by not sharing domains. When each instance is hosted on its own domain, there is no implicit cookie trust relationship to exploit.
+
+### Require antiforgery validation
+`ValidateAntiForgeryToken` is an action filter that can be applied to individual actions, and controllers. Requests made to actions that have this filter applied are blocked unless the request includes a valid antiforgery token.
+
+```csharp
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> RemoveLogin(RemoveLoginViewModel account)
+{
+    ManageMessageId? message = ManageMessageId.Error;
+    var user = await GetCurrentUserAsync();
+
+    if (user != null)
+    {
+        var result = 
+            await _userManager.RemoveLoginAsync(
+                user, account.LoginProvider, account.ProviderKey);
+
+        if (result.Succeeded)
+        {
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            message = ManageMessageId.RemoveLoginSuccess;
+        }
+    }
+
+    return RedirectToAction(nameof(ManageLogins), new { Message = message });
+}
+```
+### Refresh tokens after authentication
+### Using JavaScript with AntiForgeryTokens
+
+When you use JavaScript into Dynamic Pages, Components, Templates or any other kind of WebContent, you will be able to access the AntyForgeryToken in several ways. Here's one of them:
+
+
+```javascript
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+var csrfToken = getCookie("CSRF-TOKEN");
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+    if (xhttp.readyState === XMLHttpRequest.DONE) {
+        if (xhttp.status === 204) {
+            alert('Todo item is created successfully.');
+        } else {
+            alert('There was an error processing the AJAX request.');
+        }
+    }
+};
+xhttp.open('POST', '/api/items', true);
+xhttp.setRequestHeader("Content-type", "application/json");
+xhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+xhttp.send(JSON.stringify({ "name": "Learn C#" }));
+
+```
