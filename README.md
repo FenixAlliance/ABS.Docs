@@ -185,7 +185,6 @@ V.1.2.5 ( release in 2021 S1 )
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
 - [ ] Custom Portal Profile Definitions
-- [ ] Identity Server Integration (Local accounts)
 - [ ] Template Definitions
     - [ ] Agreement Template Definitions
     - [ ] Email Template Definitions
@@ -202,6 +201,18 @@ V.1.2.5 ( release in 2021 S1 )
 - ✅ Custom Option Definitions
 - ✅ Custom Service Endpoint Definitions
 - ✅ Custom Web Portal Resources
+- ✅ Alliance Passport Services (Auth Engine)
+    - ✅ TOTP MFA Enabled
+    - ✅ Local Account Support
+    - ✅ Microsoft Identity Integration
+    - ✅ Twitter Identity Integration
+    - ✅ Facebook Identity Integration
+    - ✅ Google Identity Integration
+    - ✅ Azure AD Identity Integration
+    - ✅ Azure AD B2C Identity Integration
+    - ✅ Okta Identity Integration
+    - ✅ AWS Cognito Identity Integration
+    - ✅ Default Identity Management
 - ✅ Module Manager Dashboard
     - ✅ Trusted Publisher Rules
     - ✅ Module Assembly Manager
