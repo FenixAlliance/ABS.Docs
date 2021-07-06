@@ -18,9 +18,9 @@
 
 Welcome to the Alliance Business Suite!
 
-The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart their business through the acceleration of several core aspects of any given business.
+The Alliance Business Suite is a set of intelligent, extensible, multi-tenant applications built to enable users to jumpstart their business through the acceleration of several core aspects of any given business.
 
-The Alliance Business Suite gives users a Full-Stack, Modular Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
+The Alliance Business Suite gives users a Modular, Full-Stack, Low-Code Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
 Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through ASP.NET Core, an open-source and cross-platform web UI framework for building web apps using .NET and C# with or without the use of JavaScript.
 
