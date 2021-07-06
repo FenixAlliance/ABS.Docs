@@ -23,6 +23,7 @@
   * [Routing](Fundamentals/Routing.md)
   * [Static Files](Fundamentals/Static-Files.md)
 * [Web Development](Web-Development.md)
+   * [Web Portals](Web-Development/Web-Portals.md)
    * [Web Pages](Web-Development/Razor-Pages.md)
      * [Razor Syntax](Web-Development/Razor-Pages/Razor-Syntax.md)
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
