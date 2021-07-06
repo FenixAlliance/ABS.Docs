@@ -1,9 +1,3 @@
----
-description: >-
-  Welcome to the open-source documentation for the Alliance Business Suite.
-  Please review this README file to understand how you can assist in contributing to the project.
----
-
 # Alliance Business Suite
 ![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
 
@@ -179,18 +173,19 @@ V.1.3 ( release in 2021 S2 )
 - [ ] Granular Property Set Access
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
-
-V.1.2 ( release: July 12, 2021 )
 - [ ] Custom Macro Definitions
 - [ ] Virtual Entity Data Sources
+
+V.1.2 ( release: July 12, 2021 )
 - [ ] Studio Static Localization
-- [ ] Custom Portal Profile Definitions
 - [ ] Template Definitions
     - [ ] Agreement Template Definitions
     - [ ] Email Template Definitions
     - [ ] Email Signature Template Definitions
     - [ ] Document Template Definitions
     - [ ] Article Template Definitions
+- ✅ Custom Options Manager
+- ✅ Custom Portal Option Definitions
 - ✅ Virtual SPA Support (Angular/React)
 - ✅ Razor Templating Engine
 - ✅ Live Web Designer Integration
