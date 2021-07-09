@@ -1,4 +1,4 @@
-# Working with Users in the Alliance Business Suite
+# Working with Business Users in the Alliance Business Suite
 
 The Alliance Business Suite includes a powerful Identity and Access Management engine called Alliance Passport System ("APS"). The APS's main function is to provide fine-grained access management over ABS resources. Using APS, you can segregate duties within your business and grant only the amount of access to users that they need to perform their jobs.
 
