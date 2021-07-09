@@ -8,7 +8,7 @@
 
 The Alliance Business Suite is designed to be as easy to use as it can be by abstracting complexity through a clean UI and multiple navigation features designed to take you where you need to perform.
 
-Once installed, your instance will be functional, but not quite yet ready for a production environment. For this Reason, new instances are created with a Not Operational Status. This Status means that even new users can be created and pretty much every functionality will work right out of the box, several unconfigured functionalities won't be available until proper setup.
+Once installed, your instance will be functional, but not quite yet ready for production. For this reason, new instances are created with a Not Operational Status. This Status means that even new users can be created and pretty much every functionality will work right out of the box, several unconfigured functionalities won't be available until proper setup.
 
 In order to get your instance to an Operational State, you should first configure for the first time the Alliance Passport Service, perform some internal configurations, and properly set up your Root Web Portal. 
 
