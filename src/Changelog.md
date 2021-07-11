@@ -5,10 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.2] - 2021-07-12
+
 ### Added
 
+- [ABS] Studio: Storage Calculator Widget
+- [ABS] Studio: Improved ABS Terminal UI
+- [ABS] Studio: Quick Record Panels
+- [ABS] Studio: Multi Portal Static Files Manager
 - [ABS] Live Editor: ABS Razor CodeMarkers (Alerts, Errors & Hints highlighting)
-- [ABS] Live Editor: Improved Web Content diagnostics.
+- [ABS] CQRS Pattern implementation, reducing complexity for Modules Development.
 - [ABS] Live Editor: Tidy-HTML Formatting Option (Experimental)
 
 ### Changed
@@ -20,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Improved Security Permissions Management workflow.
 - [ABS] Improved Users Management workflow.
 - [ABS] Improved Business Profile Record Management workflow.
+- [ABS] Live Editor: Improved Web Content diagnostics.
 
 ## [1.1.9] - 2021-06-30
 ### Added
