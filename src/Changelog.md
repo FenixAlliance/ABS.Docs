@@ -5,10 +5,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.2] - 2021-07-12
+### Added
+
+- [ABS] Live Editor: ABS Razor CodeMarkers (Alerts, Errors & Hints highlighting)
+- [ABS] Live Editor: Improved Web Content diagnostics.
+- [ABS] Live Editor: Tidy-HTML Formatting Option (Experimental)
+
+### Changed
+
+- [ABS] StudioContext is now more secure and efficient when managing Studio Access.
+- [ABS] BuilderContext now derives from StudioContext to get all its goodness.
+- [ABS] Improved Portal Resolution Workflow.
 
 ## [1.1.9] - 2021-06-30
+### Added
+
+- [ABS] Live Email Templates Editor
+- [ABS] Static Files Manager Modal
+- [ABS] Portals Network Manager
+- [ABS] Tenant Dashboard
+- [ABS] Force GC option
+- [ABS] BuilderContext Service 
+- [ABS] Tenant Profile Editor
 
 ## [1.1.8] - 2021-06-18
+### Added
+
+- [ABS] Live Components Editor
+- [ABS] Live Templates Editor
+
 
 ## [1.1.7] - 2021-06-06
 ### Added
@@ -16,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Template Views
 - [ABS] View Components
 - [ABS] Blog Post Editor
-- [ABS] Drag 'n Drop Live Editor. (Preview)
+- [ABS] Live Pages Editor. (Preview)
 - [ABS] Support for Angular and React+Redux SPAs
 - [ABS] Initial Web Content (Editable Pages, Components & Templates)
 - [ABS] Internal Web Content (Sys locked Pages, Components & Templates)
@@ -75,6 +100,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Model Modification to support DB-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
+
 ## [1.1.4.x] - 2021-04-13
 ### Added
 - [ABS] Extension Updates Page
