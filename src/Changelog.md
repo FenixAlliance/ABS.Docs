@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] StudioContext is now more secure and efficient when managing Studio Access.
 - [ABS] BuilderContext now derives from StudioContext to get all its goodness.
 - [ABS] Improved Portal Resolution Workflow.
+- [ABS] Improved Security Roles Management workflow.
+- [ABS] Improved Security Permissions Management workflow.
+- [ABS] Improved Users Management workflow.
+- [ABS] Improved Business Profile Record Management workflow.
 
 ## [1.1.9] - 2021-06-30
 ### Added
