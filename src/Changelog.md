@@ -8,64 +8,86 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [ABS] Studio: Storage Calculator Widget
-- [ABS] Studio: Improved ABS Terminal UI
-- [ABS] Studio: Quick Record Panels
-- [ABS] Studio: Multi Portal Static Files Manager
-- [ABS] Live Editor: ABS Razor CodeMarkers (Alerts, Errors & Hints highlighting)
-- [ABS] CQRS Pattern implementation, reducing complexity for Modules Development.
-- [ABS] Live Editor: Tidy-HTML Formatting Option (Experimental)
+- [ABS] Portals: Theme Updater.
+- [ABS] Portals: Centralized Portal Manager.
+- [ABS] Portals: Core Template (Turing).
+- [ABS] ICX: Templating Capabilities.
+- [ABS] ICX: Courses Commerce Capabilities.
+- [ABS] Logistics: Stock Items Manager.
+- [ABS] Logistics: Warehouses Manager.
+- [ABS] Logistics: Warehouses Manager.
+- [ABS] Sales Companion: Deal Units Manager.
+- [ABS] Sales Companion: Sales Invoices Manager.
+- [ABS] Contact Sight: Individuals Manager.
+- [ABS] Contact Sight: Organizations Manager.
+- [ABS] Contact Sight: Activity Feed (beta).
+- [ABS] Social Networks: Social Pofile Feed (beta).
+- [ABS] Education: Courses Manager.
+- [ABS] Studio: Contextual Command Bar.
+- [ABS] Studio: Primary Entities Outlook Cards (Tenant Scoped).
+- [ABS] Studio: Local Storage Calculator Widget.
+- [ABS] Studio: Improved ABS Terminal UI.
+- [ABS] Studio: Quick Record Panels.
+- [ABS] Studio: Multi Portal Static Files Manager.
+- [ABS] Live Editor: ABS Razor CodeMarkers (Alerts, Errors & Hints highlighting).
+- [ABS] Patterns: CQRS Initial implementation, reducing complexity for Modules Development.
+- [ABS] Portals: Live Editor: Tidy-HTML Formatting Option (Experimental).
 
 ### Changed
 
 - [ABS] StudioContext is now more secure and efficient when managing Studio Access.
 - [ABS] BuilderContext now derives from StudioContext to get all its goodness.
+- [ABS] Improved Record Ownership.
+- [ABS] Improved Portal Theme Resolution.
+- [ABS] Improved Users Management workflow.
 - [ABS] Improved Portal Resolution Workflow.
 - [ABS] Improved Security Roles Management workflow.
 - [ABS] Improved Security Permissions Management workflow.
-- [ABS] Improved Users Management workflow.
 - [ABS] Improved Business Profile Record Management workflow.
 - [ABS] Live Editor: Improved Web Content diagnostics.
+
+### Removed
+- [ABS] Individual Portal Manager
 
 ## [1.1.9] - 2021-06-30
 ### Added
 
-- [ABS] Live Email Templates Editor
-- [ABS] Static Files Manager Modal
-- [ABS] Portals Network Manager
-- [ABS] Tenant Dashboard
-- [ABS] Force GC option
-- [ABS] BuilderContext Service 
-- [ABS] Tenant Profile Editor
+- [ABS] Live Email Templates Editor.
+- [ABS] Static Files Manager Modal.
+- [ABS] Portals Network Manager.
+- [ABS] Tenant Dashboard.
+- [ABS] Force GC option.
+- [ABS] BuilderContext Service.
+- [ABS] Tenant Profile Editor.
 
 ## [1.1.8] - 2021-06-18
 ### Added
 
-- [ABS] Live Components Editor
-- [ABS] Live Templates Editor
+- [ABS] Live Components Editor.
+- [ABS] Live Templates Editor.
 
 
 ## [1.1.7] - 2021-06-06
 ### Added
-- [ABS] Log Viewer
-- [ABS] Template Views
-- [ABS] View Components
-- [ABS] Blog Post Editor
+- [ABS] Log Viewer.
+- [ABS] Template Views.
+- [ABS] View Components.
+- [ABS] Blog Post Editor.
 - [ABS] Live Pages Editor. (Preview)
-- [ABS] Support for Angular and React+Redux SPAs
-- [ABS] Initial Web Content (Editable Pages, Components & Templates)
-- [ABS] Internal Web Content (Sys locked Pages, Components & Templates)
-- [ABS] Frontend Admin Bar
-- [ABS] Invoice Outliner
-- [ABS] Invoice Manager
-- [ABM] Marketing Module Models
-- [ABS] Project Service Models
-- [ABM] LMS Service Models
-- [ABS] Add support for Bootstrap CSS
-- [ABS] Add support for Foundation CSS
+- [ABS] Support for Angular and React+Redux SPAs.
+- [ABS] Initial Web Content. (Editable Pages, Components & Templates)
+- [ABS] Internal Web Content. (Sys locked Pages, Components & Templates)
+- [ABS] Frontend Admin Bar.
+- [ABS] Invoice Outliner.
+- [ABS] Invoice Manager.
+- [ABM] Marketing Module Models.
+- [ABS] Project Service Models.
+- [ABM] LMS Service Models.
+- [ABS] Add support for Bootstrap CSS.
+- [ABS] Add support for Foundation CSS.
 - [ABS] Adds support for Fabric JS and Fluent UI.
-- [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
-- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Templating Engine
+- [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU).
+- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Templating Engine.
 - [ABS] Adds Localization String Manager. Initial Localization Capabilities.
 
 ### Changed
@@ -74,11 +96,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix HTTP context access on IIS when trying to edit a new view.
 - [ABS] Fix HTTP context access on IIS when trying to create a new post.
 - [ABS] Fix HTTP context access on IIS when trying to edit a new post.
-- [ABM] Fiscalization document Models
-- [ABM] Project Service document Models
-- [ABM] Pricing engine Models
-- [ABM] Workflow engine Models
-- [ABM] Web Content Records now share a single base class
+- [ABM] Fiscalization document Models.
+- [ABM] Project Service document Models.
+- [ABM] Pricing engine Models.
+- [ABM] Workflow engine Models.
+- [ABM] Web Content Records now share a single base class.
 - [ABM] ItemPriceList is now a PriceListRecord.
 - [ABS] Fix error when referencing scripts into a Web Content being malformed by templating engine.
 - [ABS] Fix page tree navigation on the live editor.
@@ -113,30 +135,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.4.x] - 2021-04-13
 ### Added
-- [ABS] Extension Updates Page
-- [ABS] Razor Templating Engine
-- [APS] Google Authentication
-- [APS] Facebook Authentication
-- [APS] Microsoft Authentication
-- [APS] Twitter Authentication
-- [APS] LinkedIn Authentication
-- [APS] Instagram Authentication
-- [APS] Github Authentication
-- [SEO] Zift 123 Analytics Script Integration
-- [SEO] Facebook Pixel Integration
-- [SEO] Facebook Chat Widget Integration
-- [SEO] Google Analytics integration
-- [SEO] Google Merchant Center integration
-- [SEO] Google Verification Code Integration
-- [SEO] Google Tag Manager Integration
-- [SEO] Bing Verification code integration
-- [SEO] Pinterest verification code integration 
-- [SEO] Dynamic Structured Metadata
-- [UI] Adds Off-Canvas Cart Slider
-- [UI] Dynamic Top Bar content
-- [UI] Logo size customization options
-- [UI] Footer Dynamic Content
-- [UI] Footer/Header Dynamic styling
+- [ABS] Extension Updates Page.
+- [ABS] Razor Templating Engine.
+- [APS] Google Authentication.
+- [APS] Facebook Authentication.
+- [APS] Microsoft Authentication.
+- [APS] Twitter Authentication.
+- [APS] LinkedIn Authentication.
+- [APS] Instagram Authentication.
+- [APS] Github Authentication.
+- [SEO] Zift 123 Analytics Script Integration.
+- [SEO] Facebook Pixel Integration.
+- [SEO] Facebook Chat Widget Integration.
+- [SEO] Google Analytics integration.
+- [SEO] Google Merchant Center integration.
+- [SEO] Google Verification Code Integration.
+- [SEO] Google Tag Manager Integration.
+- [SEO] Bing Verification code integration.
+- [SEO] Pinterest verification code integration.
+- [SEO] Dynamic Structured Metadata.
+- [UI] Adds Off-Canvas Cart Slider.
+- [UI] Dynamic Top Bar content.
+- [UI] Logo size customization options.
+- [UI] Footer Dynamic Content.
+- [UI] Footer/Header Dynamic styling.
 
 
 ## [1.1.3.x] - 2021-04-09
@@ -171,17 +193,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.2.x] - 2021-02-23
 ### Added
-- Adds ABP Proxy
-- Missing ACL configuration Types
-- ABS Extensions Gallery
-- ABS Extensions Installer
-- ABS Web Installer
-- ABS Admin Portal
-- Dynamic Web Page/Post creation
-- Assembly Explorer
-- Roles and Permissions Explorer
-- Admin Dashboard Initials
-- Added support for SixLabors.ImageSharp.Web
+- Adds ABP Proxy.
+- Missing ACL configuration Types.
+- ABS Extensions Gallery.
+- ABS Extensions Installer.
+- ABS Web Installer.
+- ABS Admin Portal.
+- Dynamic Web Page/Post creation.
+- Assembly Explorer.
+- Roles and Permissions Explorer.
+- Admin Dashboard Initials.
+- Added support for SixLabors.ImageSharp.Web.
 - Forex service data is now scraped by Fenix Alliance.
 - Data Services are not coded to replaceable interface implementation.
 - ABS.Hub project now contains everything we need to create a new ABS Instance.
@@ -191,11 +213,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Extracts interface for ACL configuration Types
-- ACS is now ABP.BotEngine
-- Plugin Manager is now loosely coupled to IPluginManager
-- Adds File Manager and FileSystem Service
-- Adds antivirus scanning extension for FileSystem Service (Windows Defender)
+- Extracts interface for ACL configuration Types.
+- ACS is now ABP.BotEngine.
+- Plugin Manager is now loosely coupled to IPluginManager.
+- Adds File Manager and FileSystem Service.
+- Adds antivirus scanning extension for FileSystem Service. (Windows Defender)
 - AccountHolder is now the standard identity class.
 - Fix minor UI glitches and broken links.
 - Fix several bugs on application startup and related extensions.
@@ -206,27 +228,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.1.x] - 2021-01-20
 ### Added
-- Adds ABP Proxy
-- Adds Infinity Comex Support
-- Missing ACL configuration Types
+- Adds ABP Proxy.
+- Adds Infinity Comex Support.
+- Missing ACL configuration Types.
 
 ### Changed
-- Fix Namespaces
-- ABS.Portal.Paperbits is now ABS.Portal.Editor
-- Adds ABS.Portal.UI Components (20+ View Components)
+- Fix Namespaces.
+- ABS.Portal.Paperbits is now ABS.Portal.Editor.
+- Adds ABS.Portal.UI Components. (20+ View Components)
 
 ### Removed
 
 
 ## [1.1.0.x] - 2021-01-12
 ### Added
-- Nuget Packages @1.1.0
+- Initial Nuget Packages Upload. 
 - Initial Portal Admin Blazor Application at route /admin.
 
 ### Changed
-- Standardize namespace at v1.1.0
-
-### Removed
+- Standardize namespace. 
 
 ## [1.0.0.x] - 2020-12-31
 
@@ -236,34 +256,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Blazor Support
 - Cross-Platform Database Support ( MySQL, MSSQL )
 - Dynamic CSS/Lazy Loading
-- Dynamic Page Compositing Model / Site & Page Management
-- Dynamic Routing
-- Dynamic Swagger Specs
-- EF Core Migrations for Database Installation / Upgrade
-- Enabled for Infinity Comex (eCommerce Extension)
-- Event Logging / Audit Trail
-- Extensibility via Custom Modules
-- Extensibility via Custom Themes
-- Folder / File Management (Azure Storage, File System)
-- GraphQl API with Voyager, GraphiQl y GraphQl Playground
-- Headless API with Swagger Support
-- HealthCheck Rules with UI Support
-- i18n Enabled (Based on GeoAPI and Custom Settings)
-- Improved JavaScript reference support
-- In-App CLI (Studio Commander)
-- Infinity Comex Support (ABS eCommerce Engine)
-- JavaScript Lazy Loading
-- Modular Architecture
-- Multi-Currency Support
-- Multi-Portal ( Monolith & Micro-Service Distributed )
-- Multi-Tenant ( Shared Database & Isolated Database )
-- Notifications / Email Delivery
-- Notifications / SMTP Delivery
-- Progressive Web Application Support
-- Recycle Bin
-- REST API with Swagger Support
-- Scheduled Flows ( Background Processing )
-- Scheduled Jobs ( Background Processing )
-- Seamless Upgrade Experience
-- Slack integration (OAuth)
-- Support For Additional Authentication Providers (OAuth)
+- Dynamic Page Compositing Model / Site & Page Management.
+- Dynamic Routing.
+- Dynamic Swagger Specs.
+- EF Core Migrations for Database Installation / Upgrade.
+- Enabled for Infinity Comex. (eCommerce Extension)
+- Event Logging / Audit Trail.
+- Extensibility via Custom Modules.
+- Extensibility via Custom Themes.
+- Folder / File Management. (Azure Storage, File System)
+- GraphQl API with Voyager, GraphiQl y GraphQl Playground.
+- Headless API with Swagger Support.
+- HealthCheck Rules with UI Support.
+- i18n Enabled. (Based on GeoAPI and Custom Settings)
+- Improved JavaScript reference support.
+- In-App CLI. (Studio Commander)
+- Infinity Comex Support. (ABS eCommerce Engine)
+- JavaScript Lazy Loading.
+- Modular Architecture.
+- Multi-Currency Support.
+- Multi-Portal. ( Monolith & Micro-Service Distributed )
+- Multi-Tenant. ( Shared Database & Isolated Database )
+- Notifications / Email Delivery.
+- Notifications / SMTP Delivery.
+- Progressive Web Application Support.
+- Recycle Bin.
+- REST API with Swagger Support.
+- Scheduled Flows. ( Background Processing )
+- Scheduled Jobs. ( Background Processing )
+- Seamless Upgrade Experience.
+- Slack integration. (OAuth)
+- Support For Additional Authentication Providers. (OAuth)
