@@ -2,5 +2,5 @@
 authors = ["Daniel Lozano"]
 language = "en"
 multilingual = false
-src = "src"
+src = "."
 title = "Alliance Business Suite Documentation"
