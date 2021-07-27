@@ -59,7 +59,7 @@ Keeping backups and knowing the state of your Alliance Business Suite instance a
 
 ## Trusted Sources
 
-Do not get plugins/themes from untrusted sources. Restrict yourself to the WordPress.org repository or well-known companies. Trying to get plugins/themes from the outside may lead to issues.
+Do not get plugins/themes from untrusted sources. Restrict yourself to the Alliance Business Suite Gallery repository or well-known companies. Trying to get modules/themes from the outside may lead to issues.
 
 
 
