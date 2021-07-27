@@ -7,14 +7,14 @@ Specify delegate event handlers in Razor component markup with @on{DOM EVENT}="{
 
 For event handling:
 
-- Asynchronous delegate event handlers that return a Task are supported.
-- Delegate event handlers automatically trigger a UI render, so there's no need to manually call StateHasChanged.
+- Asynchronous delegate event handlers that return a `Task` are supported.
+- Delegate event handlers automatically trigger a UI render, so there's no need to manually call `StateHasChanged`.
 - Exceptions are logged.
 
 The following code:
 
-- Calls the UpdateHeading method when the button is selected in the UI.
-- Calls the CheckChanged method when the checkbox is changed in the UI.
+- Calls the `UpdateHeading` method when the button is selected in the UI.
+- Calls the `CheckChanged` method when the checkbox is changed in the UI.
 
 ``` razor
 <h1>@currentHeading</h1>
@@ -53,7 +53,7 @@ The following code:
 }
 ```
 
-In the following example, UpdateHeading:
+In the following example, `UpdateHeading`:
 
 - Is called asynchronously when the button is selected.
 - Waits two seconds before updating the heading.
@@ -86,7 +86,7 @@ In the following example, UpdateHeading:
 
 # Event Arguments
 
-For events that support an event argument type, specifying an event parameter in the event method definition is only necessary if the event type is used in the method. In the following example, MouseEventArgs is used in the ReportPointerLocation method to set message text that reports the mouse coordinates when the user selects a button in the UI.
+For events that support an event argument type, specifying an event parameter in the event method definition is only necessary if the event type is used in the method. In the following example, `MouseEventArgs` is used in the `ReportPointerLocation` method to set message text that reports the mouse coordinates when the user selects a button in the UI.
 
 ``` razor
 
@@ -113,10 +113,11 @@ For events that support an event argument type, specifying an event parameter in
 
 ```
 
-Supported EventArgs are shown in the following table.
+Supported `EventArgs` are shown in the following table.
 
 # Lambda expressions
 Lambda expressions are supported as the delegate event handler.
+
 ``` razor
 
 @page "/Pages/EventHandlerExample4"
@@ -137,8 +138,8 @@ Lambda expressions are supported as the delegate event handler.
 
 It's often convenient to close over additional values using C# method parameters, such as when iterating over a set of elements. The following example creates three buttons, each of which calls UpdateHeading and passes the following data:
 
-An event argument (MouseEventArgs) in e.
-The button number in buttonNumber.
+- An event argument (`MouseEventArgs`) in e.
+- The button number in buttonNumber.
 
 ``` razor
 
@@ -169,9 +170,9 @@ The button number in buttonNumber.
 ```
 
 # EventCallback
-A common scenario with nested components executes a parent component's method when a child component event occurs. An onclick event occurring in the child component is a common use case. To expose events across components, use an EventCallback. A parent component can assign a callback method to a child component's EventCallback.
+A common scenario with nested components executes a parent component's method when a child component event occurs. An onclick event occurring in the child component is a common use case. To expose events across components, use an `EventCallback`. A parent component can assign a callback method to a child component's EventCallback.
 
-The following Child component demonstrates how a button's onclick handler is set up to receive an EventCallback delegate from the sample's ParentComponent. The EventCallback is typed with MouseEventArgs, which is appropriate for an onclick event from a peripheral device.
+The following Child component demonstrates how a button's onclick handler is set up to receive an EventCallback delegate from the sample's ParentComponent. The `EventCallback` is typed with `MouseEventArgs`, which is appropriate for an onclick event from a peripheral device.
 
 ```
 <p>
@@ -216,11 +217,12 @@ The Parent component sets the child's EventCallback<TValue> (OnClickCallback) to
 ```
 When the button is selected in the ChildComponent:
 
-- The Parent component's ShowMessage method is called. the message is updated and displayed in the Parent component.
+- The Parent component's `ShowMessage` method is called. the message is updated and displayed in the Parent component.
 
-- A call to StateHasChanged isn't required in the callback's method (ShowMessage). StateHasChanged is called automatically to rerender the Parent component, just as child events trigger component rerendering in event handlers that execute within the child. For more information, see ASP.NET Core Blazor component rendering.
+- A call to `StateHasChanged` isn't required in the callback's method (`ShowMessage`). `StateHasChanged` is called automatically to rerender the Parent component, just as child events trigger component rerendering in event handlers that execute within the child. 
 
-EventCallback and EventCallback<TValue> permit asynchronous delegates. EventCallback is weakly typed and allows passing any type of argument in InvokeAsync(Object). EventCallback<TValue> is strongly typed and requires passing a T argument in InvokeAsync(T) that's assignable to TValue.
+
+`EventCallback` and `EventCallback<TValue>` permit asynchronous delegates. `EventCallback` is weakly typed and allows passing any type of argument in `InvokeAsync(Object)`. `EventCallback<TValue>` is strongly typed and requires passing a `T` argument in `InvokeAsync(T)` that's assignable to `TValue`.
 
 ``` razor
 <ChildComponent 
@@ -234,15 +236,15 @@ Invoke an EventCallback or EventCallback<TValue> with InvokeAsync and await the 
 await OnClickCallback.InvokeAsync(arg);
 ```
 
-Use EventCallback and EventCallback<TValue> for event handling and binding component parameters.
+Use `EventCallback` and `EventCallback<TValue>` for event handling and binding component parameters.
 
-Prefer the strongly typed EventCallback<TValue> over EventCallback. EventCallback<TValue> provides enhanced error feedback to users of the component. Similar to other UI event handlers, specifying the event parameter is optional. Use EventCallback when there's no value passed to the callback.
+Prefer the strongly typed `EventCallback<TValue>` over `EventCallback`. `EventCallback<TValue>` provides enhanced error feedback to users of the component. Similar to other UI event handlers, specifying the event parameter is optional. Use `EventCallback` when there's no value passed to the callback.
 
 # Prevent default actions
 
-Use the @on{DOM EVENT}:preventDefault directive attribute to prevent the default action for an event, where the {DOM EVENT} placeholder is a Document Object Model (DOM) event.
+Use the `@on{DOM EVENT}:preventDefault` directive attribute to prevent the default action for an event, where the `{DOM EVENT}` placeholder is a [Document Object Model (DOM) event](https://developer.mozilla.org/en-US/docs/Web/Events).
 
-When a key is selected on an input device and the element focus is on a text box, a browser normally displays the key's character in the text box. In the following example, the default behavior is prevented by specifying the @onkeydown:preventDefault directive attribute. When the focus is on the <input> element, the counter increments with the key sequence Shift++. The + character isn't assigned to the <input> element's value. For more information on keydown, see MDN Web Docs: Document: keydown event.
+When a key is selected on an input device and the element focus is on a text box, a browser normally displays the key's character in the text box. In the following example, the default behavior is prevented by specifying the `@onkeydown:preventDefault` directive attribute. When the focus is on the `<input>` element, the counter increments with the key sequence `Shift` + `+`. The + character isn't assigned to the `<input>` element's value. For more information on keydown, see MDN Web Docs: Document: keydown event.
 
 ``` razor
 <p>
@@ -261,7 +263,7 @@ When a key is selected on an input device and the element focus is on a text box
     }
 }
 ```
-Specifying the @on{DOM EVENT}:preventDefault attribute without a value is equivalent to @on{DOM EVENT}:preventDefault="true".
+Specifying the `@on{DOM EVENT}:preventDefault` attribute without a value is equivalent to `@on{DOM EVENT}:preventDefault="true"`.
 
 An expression is also a permitted value of the attribute. In the following example, shouldPreventDefault is a bool field set to either true or false:
 
@@ -278,9 +280,11 @@ An expression is also a permitted value of the attribute. In the following examp
 
 # Stop event propagation
 
-Use the @on{DOM EVENT}:stopPropagation directive attribute to stop event propagation, where the {DOM EVENT} placeholder is a Document Object Model (DOM) event.
+Use the `@on{DOM EVENT}:stopPropagation` directive attribute to stop event propagation, where the `{DOM EVENT}` placeholder is a [Document Object Model (DOM) event](https://developer.mozilla.org/docs/Web/Events).
 
-In the following example, selecting the checkbox prevents click events from the second child <div> from propagating to the parent <div>. Since propagated click events normally fire the OnSelectParentDiv method, selecting the second child <div> results in the parent div message appearing unless the checkbox is selected.
+In the following example, selecting the checkbox prevents click events from the second child `<div>` from propagating to the parent `<div>`. 
+
+Since propagated click events normally fire the `OnSelectParentDiv` method, selecting the second child `<div>` results in the parent `<div>`message appearing unless the checkbox is selected.
 
 ```
 @page "/Pages/EventHandlerExample7"
@@ -321,7 +325,7 @@ In the following example, selecting the checkbox prevents click events from the 
 
 # Focus an element
 
-Call FocusAsync on an element reference to focus an element in code. In the following example, select the button to focus the <input> element.
+Call FocusAsync on an element reference to focus an element in code. In the following example, select the button to focus the `<input>` element.
 
 ```
 razor
