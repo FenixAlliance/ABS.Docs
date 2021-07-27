@@ -163,30 +163,31 @@ namespace FenixAlliance.ABS
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
-V.1.4 ( release in 2022 S1 )
+V.1.4 LTS ( release in 2022 S1 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
 - [ ] PowerShell SDK 
 
-V.1.3 ( release in 2021 S2 )
+V.1.3 ( release: July 12, 2022 )
+- [ ] .NET 6.0 Stable Release
 - [ ] Template Definitions
-    - [ ] Agreement Template Definitions
-    - ✅ Email Template Definitions
-    - [ ] Email Signature Template Definitions
-    - [ ] Document Template Definitions
-    - [ ] Article Template Definitions
+- [ ] Agreement Template Definitions
+- [ ] Email Signature Template Definitions
+- [ ] Document Template Definitions
+- [ ] Article Template Definitions
 - [ ] gRPC Modularization
 - [ ] Reporting Dashboard
 - [ ] Dynamic Dashboards
-- [ ] Granular Property Set Access
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
-- [ ] Custom Macro Definitions
+- [ ] Granular Property Set Access
+- [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
+- ✅ Email Template Definitions
 - ✅ Blazor Support (Experimental)
 
-V.1.2 ( release: July 12, 2021 )
+V.1.2 LTS ( release: July 12, 2021 )
 
 - ✅ Custom Options Manager
 - ✅ Custom Portal Option Definitions
