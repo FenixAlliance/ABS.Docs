@@ -24,7 +24,7 @@
    * [Web Pages](Web-Development/Web-Pages.md)
      * [Razor Pages](Web-Development/Web-Pages/Razor-Pages.md)
        * [Razor Syntax](Web-Development/Web-Pages/Razor-Pages/Razor-Syntax.md)
-     * [Blazor Pages](Web-Development/Web-Pages/Razor-Pages.md)
+     * [Blazor Pages](Web-Development/Web-Pages/Blazor-Pages.md)
        * [Data Binding](Web-Development/Web-Pages/Blazor-Pages/Data-Binding.md)
        * [Event Handling](Web-Development/Web-Pages/Blazor-Pages/Event-Handling.md)
        * [Forms and Validation](Web-Development/Web-Pages/Blazor-Pages/Forms-and-validation.md)
