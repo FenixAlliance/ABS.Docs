@@ -219,7 +219,7 @@ V.1.2 LTS ( release: July 12, 2021 )
     - ✅ Managed Module Support
     - ✅ Unmanaged Module Support
 
-V.1.0.0 ( released in Dec 31, 2020 )
+V.1.1 ( release: July 12, 2020 )
 - ✅ Authentication / User Management / Profile Management
 - ✅ Authorization / Roles Management / Granular Permissions
 - ✅ Blazor Support
