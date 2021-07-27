@@ -27,6 +27,7 @@
      * [Blazor Pages](Web-Development/Web-Pages/Razor-Pages.md)
        * [Data Binding](Web-Development/Web-Pages/Blazor-Pages/Data-Binding.md)
        * [Event Handling](Web-Development/Web-Pages/Blazor-Pages/Event-Handling.md)
+       * [Forms and Validation](Web-Development/Web-Pages/Blazor-Pages/Forms-and-validation.md)
    * [Web Themes](Web-Development/Web-Themes.md)
    * [Web Templates](Web-Development/Web-Templates.md)
    * [Web Components](Web-Development/Web-Components.md)
