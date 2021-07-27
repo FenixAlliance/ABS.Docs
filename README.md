@@ -2,7 +2,7 @@
 ![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
 
 <p>
-  <a href="https://docs.absuite.net/reference/1.1.7/" target="_blank">
+  <a href="https://docs.absuite.net/reference/1.2.0/" target="_blank">
      <img alt="Version" src="https://img.shields.io/badge/Version-1.1.7-blue.svg?cacheSeconds=2592000" />
   </a>
   <a href="https://docs.absuite.net" target="_blank">
