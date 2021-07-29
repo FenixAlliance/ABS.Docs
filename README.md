@@ -22,10 +22,9 @@ The Alliance Business Suite is a set of intelligent, extensible, multi-tenant ap
 
 The Alliance Business Suite gives users a Modular, Full-Stack, Low-Code Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
-Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through ASP.NET Core, an open-source and cross-platform web UI framework for building web apps using .NET and C# with or without the use of JavaScript.
+Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through .NET, an open-source and cross-platform framework for building web-mobile apps using C#, with or without the use of JavaScript.
 
 The power of the Alliance Business Suite can be leveraged from small personal blogs,  eCommerce platforms, and professional portfolios to the infrastructure of large corporations.
-
 
 
 ## About the Alliance Creed
@@ -44,9 +43,10 @@ So far, we've created a few extensions and connectors for the Alliance Business 
 
 Connectors are always free and you can find them on your ABS Extensions page, and some of our extensions have free tiers. You will get the Alliance Business Suite Community Edition, for free, with the following Modules:
 
-- ABS ContactSight. (CRM)
-- ABS Content Portals (CMS)
+- ABS Contact Sight. (CRM)
+- ABS Media Portals. (CMS)
 - ABS Accounting. (AMS)
+- ABS Learning. (LMS)
 - ABS Social Networks. (Intranet Social Network)
 - ABS IAM (Identity and Access Management)
 - Infinity Comex (eCommerce Engine)
@@ -184,6 +184,18 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
+- [ ] ML-Based Spam Detection Engine
+- [ ] ML-Based Search Results Ranking Engine
+- [ ] ML-Based Natural Language Processing Engine
+- [ ] ML-Based Fraud Detection Engine (Anomaly Detection), (Binary Classification)
+- [ ] ML-Based Price Prediction Engine
+- [ ] ML-Based Sales Spike Detection Engine (Anomaly Detection)
+- [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
+- [ ] ML-Based Sentiment Analysis Engine
+- [ ] ML-Based Customer Segregation Engine (Clustering)
+- [ ] ML-Based eCommerce Recommendation Engine
+- ✅ ML-Based Language Detection Engine
+- ✅ Fluid Support (Experimental)
 - ✅ Email Template Definitions
 - ✅ Blazor Support (Experimental)
 
