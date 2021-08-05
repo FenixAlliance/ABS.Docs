@@ -1,8 +1,2 @@
 # Descripción:
 
-# Pricing:
-
-# Requisitos:
-
-# Bugs:
-
