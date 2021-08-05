@@ -65,13 +65,10 @@
       * [.NET SDK](Components/Alliance-Business-Platform/SDKs/SDK-Nuget-Package.md)
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
+  * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
   * [Infinity Comex Engine](Components/Infinity-Comex-Engine.md)
     * [Carts](Components/Infinity-Comex-Engine/Carts.md)
-  * [Mobile & Desktop Clients](Components/Mobile-&-Desktop-Apps.md)
-    * [AID Pocket](Components/Mobile-&-Desktop-Apps/AID-Pocket.md)
-    * [ABS Pocket](Components/Mobile-&-Desktop-Apps/ABS-Pocket.md)
-    * [ABS POS](Components/Mobile-&-Desktop-Apps/ABS-POS.md)
-    * [iCx Mobile](Components/Mobile-&-Desktop-Apps/iCx-Mobile.md)
+
 
 ## Security
 
