@@ -31,16 +31,16 @@ One of the main goals of the Workflow Designer Module is to **enable workflows i
 
 I've always liked Windows Workflow Foundation, but unfortunately [development appears to have halted](https://forums.dotnetfoundation.org/t/what-is-the-roadmap-of-workflow-foundation/3066). Here are a few reasons to prefer the  Workflow Designer Module:
 
-- The Workflow Designer Module intrinsically supports triggering events that starts new workflows and resume halted workflow instances in an easy-to-use manner. E.g. `workflow host.TriggerWorkflowAsync("HttpRequestTrigger");"` will start and resume all workflows that either start with or are halted on the `HttpRequestTrigger`.
+- The Workflow Designer Module intrinsically supports triggering events that start new workflows and resume halted workflow instances in an easy-to-use manner. E.g. `workflow host.TriggerWorkflowAsync("HttpRequestTrigger");"` will start and resume all workflows that either start with or are halted on the `HttpRequestTrigger`.
 
-- The Workflow Designer Module has an In-Studio (web-based) workflow designer and a REST-based API to manage everything you can manage trough the Web Workflow Designer.
+- The Workflow Designer Module has an In-Studio (web-based) workflow designer and a REST-based API to manage everything you can manage through the Web Workflow Designer.
 
 ### ABS | Workflow Designer vs. Orchard Workflows?
 
-Both [Orchard](http://docs.orchardproject.net/en/latest/Documentation/Workflows/) and [Orchard Core](https://orchardcore.readthedocs.io/en/dev/docs/reference/modules/Workflows/) ship with a powerful workflows module, and both are awesome. In fact, the Workflow Designer Module was inspired from Orchard Core's Workflows module. 
+Both [Orchard](http://docs.orchardproject.net/en/latest/Documentation/Workflows/) and [Orchard Core](https://orchardcore.readthedocs.io/en/dev/docs/reference/modules/Workflows/) ship with a powerful workflows module, and both are awesome. In fact, the Workflow Designer Module was inspired by Orchard Core's Workflows module. 
 
 Although Workflow Designer uses a similar model, here are some differences:
 
-- The Workflow Designer Module is completely decoupled from web and relies on the Alliance Business Platform, whereas Orchard Core Workflows is coupled to not only the web, but also the Orchard Core Framework itself.
+- The Workflow Designer Module is completely decoupled from the web and relies on the Alliance Business Platform, whereas Orchard Core Workflows is coupled not only to the Orchard Core Framework but to the web itself.
 - The Workflow Designer Module is being built without taking a dependency on any Orchard Core packages.
 
