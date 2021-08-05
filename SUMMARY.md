@@ -66,8 +66,7 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
-  * [Infinity Comex Engine](Components/Infinity-Comex-Engine.md)
-    * [Carts](Components/Infinity-Comex-Engine/Carts.md)
+
 
 
 ## Security
