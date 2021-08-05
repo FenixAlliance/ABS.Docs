@@ -1,5 +1,5 @@
 
-# Contact Sight Module
+# Contact Sight Module (CRM)
 
 Welcome to the **Alliance Business Suite | Contact Sight Module** Documentation. These articles will enable you to work with the module to get the most out of your Alliance Business Suite instance. 
 
@@ -19,5 +19,4 @@ Although these are the typical uses of Individuals and Organizations, different 
 This common root between individuals and organizations allows you to set the related contact on any record, to either an individual or an organization contact record.
 
 **Contact Profile Records**: Contact Profiles are records designed to isolate contact capabilities that could be used by other modules. For example, a Student Profile will allow a Contact to own course enrollments, grades, homework deliveries, completion certificates, and everything that's related to this type of profile. Likewise, Supplier Profiles will allow Contact Records to have work orders and purchase requests/invoices, and so on.
-
 

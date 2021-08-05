@@ -10,3 +10,4 @@ You can test the WOPI Proof of Concept by following [this link](https://fenixall
 
 ## Beta Preview
 You can test the WOPI Proof of Concept by accessing [your Holder Storage](https://fenixalliance.com.co/Suite/Me/Tools/Storage) and uploading either an Excel, Word or PowerPoint File and then trying to open it.
+
