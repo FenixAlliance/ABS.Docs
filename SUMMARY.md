@@ -35,7 +35,6 @@
    * [Sessions and State](Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
 * [Data Access](Data-Access.md)
-  * [Data Repositories](Data-Access/Data-Repositories.md)
 * [Modules and Integrations](Modules.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
