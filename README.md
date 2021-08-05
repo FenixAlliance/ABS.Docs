@@ -184,8 +184,8 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
-- [ ] Real-Time In-Studio Chat Manager
-- [ ] Real-Time In-Portal Chat Widget
+- [ ] In-Studio Real-Time Chat Manager
+- [ ] In-Portal Real-Time Chat Widget
 - [ ] Code Editor: Razor Syntax Highlighting 
 - [ ] ML-Based Spam Detection Engine
 - [ ] ML-Based Search Results Ranking Engine
