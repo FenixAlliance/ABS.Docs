@@ -184,6 +184,9 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
+- [ ] Real-Time In-Studio Chat Manager
+- [ ] Real-Time In-Portal Chat Widget
+- [ ] Code Editor: Razor Syntax Highlighting 
 - [ ] ML-Based Spam Detection Engine
 - [ ] ML-Based Search Results Ranking Engine
 - [ ] ML-Based Natural Language Processing Engine
@@ -194,6 +197,9 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
 - [ ] ML-Based eCommerce Recommendation Engine
+- ✅ Code Editor: Diagnostics Highlighting
+- ✅ Workflow Manager Engine (Experimental)
+- ✅ ML-Based Language Detection Engine
 - ✅ ML-Based Language Detection Engine
 - ✅ Fluid Support (Experimental)
 - ✅ Email Template Definitions
@@ -278,9 +284,11 @@ Constant Considerations
 - ✅ Security Improvements
 - ✅ SOLID Code Improvements
 - ✅ Performance Improvements 
+- ✅ Scalability Improvements 
 - ✅ Extensibility Improvements 
 - ✅ Generic Integrations Improvements
 - ✅ Developer productivity enhancements
+- ✅ Separation of Concerns Improvements 
 - ✅ Bug fixes & core Dependency Management
 
 
