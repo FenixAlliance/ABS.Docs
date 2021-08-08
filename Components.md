@@ -6,7 +6,7 @@ The Alliance Business Suite was architected as a modular, unopinionated
 For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together. 
 
 
-## [Alliance Business Model](/English/Products/Alliance-Business-Model)
+## [Alliance Business Model](/Components)/Alliance-Business-Model)
 ---
 
 
@@ -14,16 +14,16 @@ The Alliance Business Model is a declarative specification and definition of sta
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
-## [Alliance Passport Services](/English/Products/Alliance-Passport-Services)
+## [Alliance Passport Services](/Components/Alliance-Passport-Services)
 
 
-## [Alliance Business Platform](Products/Alliance-Business-Platform.md)
+## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
 The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of REST, SignalR, GraphQl y gRPCto transact with the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
 
 Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
 
-## [Alliance Business Studio](/English/Products/Alliance-Business-Studio.md)
+## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
 
 
 
@@ -32,7 +32,7 @@ The Alliance Business Studio is the Graphical Administration Engine for the Alli
 Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
 
 
-## [Alliance Business Cloud](Products/Alliance-Business-Cloud.md)
+## [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
 Alliance Business Cloud Overview
 The Alliance Business Cloud is an HTTP-based service for hosting Alliance Business Suite Instances and other kinds of applications. These can be developed in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows-based environments.
 
