@@ -36,6 +36,8 @@
 * [Web API Development](Web-API-Development.md)
 * [Data Access](Data-Access.md)
 * [Modules and Integrations](Modules.md)
+    * [Create a Moule](/Modules/Create-a-Module.md)
+    * [Installing Modules](/Modules/Installing-a-Module.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
 
