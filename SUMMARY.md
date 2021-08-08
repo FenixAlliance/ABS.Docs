@@ -70,7 +70,7 @@
 
 ## Security
 
-* [Data Protection](Security/Data-Protection.md)
+* [Overview](Security.md)
 
 ## Credits
 * [License](License.md)
