@@ -6,8 +6,8 @@ To help businesses across the world to harness this promise, we've created a dig
 
 The Alliance Business Suite lets you build outstanding and secure web and mobile apps. This is what you need to get started:
 
-1. Buy a license (or get a community license for free), or sign up for a free 30-day trial license. 
-1. Install the Alliance Business Suite.
+1. Buy a license (or sign up for a free 30-day trial license), or get a community license for free. 
+1. [Install the Alliance Business Suite](/Fundamentals/Installation.md).
 1. Start building your business.
 
 ## Alliance Business Suite components
