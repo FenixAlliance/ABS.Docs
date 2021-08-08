@@ -28,15 +28,3 @@ The Community Edition License is not a demo license. You’ll get access to the 
 In a nutshell, You’ll only pay for core licensing fees if you use the ABS on behalf of an Enterprise, who’s an organization and its affiliates who collectively have either (a) more than 250 PCs or users or (b) more than one million U.S. dollars (or the equivalent in other currencies) in annual revenues.
 
 
-### **Just add code**:
-Ready to code online development platform with a code editor and advanced site preview with support for dynamic sites.
-
-## Who’s the Alliance Business Suite for?
-- ## Business owners
-- ## Developers
-- ## Content Managers
-- ## Digital Agencies
-- ## Financial Businesses
-- ## Education Institutions
-
-
