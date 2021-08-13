@@ -7,14 +7,10 @@ The following browsers are supported:
 - Apple Safari 11
 - Internet Explorer 11
 
-## Recommended Windows Server Hardware (Minimum)
+## Recommended Server Hardware (Minimum)
 - Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
 - 16GB Memory (8GB Memory)
-- 40GB free hard disk space (10GB free hard disk)
-- Recommended SQL Server Hardware (Minimum)
-- Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
-- 16GB Memory (4GB Memory)
-- Hard Disk: SSD Recommended
+- 40GB free hard disk space (10GB free hard disk) SSD Recommended
 
 ## Supported Operating Systems
 The following operating systems are supported with the recommendation that the latest Windows updates are applied.
@@ -30,21 +26,11 @@ The following SQL Server Editions are supported with the recommendation that the
 - SQL Server 2016	
 - Azure SQL Service	
 
-Supported SQL Server Reporting Services (SSRS)
-The following SQL Server Reporting Services are supported with the recommendation that the latest Windows updates are applied.
-
-- Microsoft SQL Server 2014 Enterprise x64
-- Microsoft SQL Server 2014 Business Intelligence x64
-- Microsoft SQL Server 2014 Standard x64
-- Microsoft SQL Server 2012 Enterprise x64 SP1
-- Microsoft SQL Server 2012 Business Intelligence x64 SP1
-- Microsoft SQL Server 2012 Standard x64 SP1
-
-##Internet Information Services (IIS)
+## Internet Information Services (IIS)
 - IIS 10, Windows Server 2016
 - IIS 10.0, Windows 10 & Windows Server 2019
 
-## Required Software Components
+## Optional Software Components
 - SQL – SQL Word Breakers
 - SQL – SQL Server Agent Service
 - SQL – Server Full-Text Indexing
