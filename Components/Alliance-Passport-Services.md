@@ -10,10 +10,10 @@ The Alliance Business Suite enables developers and non-developers alike to easil
 Learn more about APS + IAM terms.
 
 - **Resources**
-The SecurityGroup, SecurityRole, BusinessPermission, and IdentityProvider objects are stored in ABM. As with other ABM entities, you can add, edit, and remove resources from IAM.
+The SecurityGroup, SecurityRole, BusinessPermission, and IdentityProvider objects are stored in ABM. As with other ABM entities, you can add, edit, and remove IAM-related records.
 
 - **Identities**
-They refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
+Identities refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
 
 - **Identity Entities**
 The IAM resource objects that APS uses for authentication. These include AccountHolders, federated users, and assumed IAM roles (like when an application created by an AccountHolder tries to access resources through one of the API endpoints).
