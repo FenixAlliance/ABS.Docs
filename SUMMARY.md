@@ -1,11 +1,6 @@
-# Table of contents
 
-* [Overview](README.md)
+* [Home](README.md)
 * [API Reference](References.md)
-
-
-## About
-
 * [Outlook](About.md)
 * [Overview](Overview.md)
 * [Getting Started](Get-started.md)
