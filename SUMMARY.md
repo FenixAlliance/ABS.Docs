@@ -1,11 +1,5 @@
-# Table of contents
-
-* [Overview](README.md)
+* [Home](README.md)
 * [API Reference](References.md)
-
-
-## About
-
 * [Outlook](About.md)
 * [Overview](Overview.md)
 * [Getting Started](Get-started.md)
@@ -41,9 +35,6 @@
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
 
-
-## Components
-
 * [Components](Components.md)
   * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
     * [About](Components/Alliance-Business-Cloud/About.md)
@@ -69,10 +60,6 @@
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
 
 
-
-## Security
-
 * [Overview](Security.md)
 
-## Credits
 * [License](License.md)
