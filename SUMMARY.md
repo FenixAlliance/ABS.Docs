@@ -1,6 +1,11 @@
+# Table of contents
 
-* [Home](README.md)
+* [Overview](README.md)
 * [API Reference](References.md)
+
+
+## About
+
 * [Outlook](About.md)
 * [Overview](Overview.md)
 * [Getting Started](Get-started.md)
@@ -23,11 +28,11 @@
        * [Data Binding](Web-Development/Web-Pages/Blazor-Pages/Data-Binding.md)
        * [Event Handling](Web-Development/Web-Pages/Blazor-Pages/Event-Handling.md)
        * [Forms and Validation](Web-Development/Web-Pages/Blazor-Pages/Forms-and-validation.md)
-   * [Web Themes](/Web-Development/Web-Themes.md)
+   * [Web Themes](Web-Development/Web-Themes.md)
    * [Web Templates](Web-Development/Web-Templates.md)
    * [Web Components](Web-Development/Web-Components.md)
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
-   * [Sessions and State](/Web-Development/Session-and-state-management.md)
+   * [Sessions and State](Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
 * [Data Access](Data-Access.md)
 * [Modules and Integrations](Modules.md)
@@ -35,10 +40,14 @@
     * [Installing Modules](/Modules/Installing-a-Module.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
-* [Components](/Components.md)
+
+
+## Components
+
+* [Components](Components.md)
   * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
     * [About](Components/Alliance-Business-Cloud/About.md)
-    * [View Statistics](/Components/Alliance-Business-Cloud/View-Statistics.md)
+    * [View Statistics](Components/Alliance-Business-Cloud/View-Statistics.md)
     * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
   * [Alliance Business Model](Components/Alliance-Business-Model.md)
@@ -58,6 +67,12 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
-* [Security](Security.md)
 
+
+
+## Security
+
+* [Overview](Security.md)
+
+## Credits
 * [License](License.md)
