@@ -27,7 +27,7 @@
    * [Web Templates](Web-Development/Web-Templates.md)
    * [Web Components](Web-Development/Web-Components.md)
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
-   * [Sessions and State](Web-Development/Session-and-state-management.md)
+   * [Sessions and State](/Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
 * [Data Access](Data-Access.md)
 * [Modules and Integrations](Modules.md)
