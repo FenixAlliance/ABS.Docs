@@ -2,9 +2,10 @@
 authors = ["Daniel Lozano"]
 language = "en"
 multilingual = false
-src = "."
+src = "./"
 title = "Alliance Business Suite Documentation"
 description = "The Ultimate Business Development Platform"
+
 [output.html.search]
 enable = true
 
