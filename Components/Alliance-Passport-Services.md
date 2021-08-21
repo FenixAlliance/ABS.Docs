@@ -15,7 +15,7 @@ A person or application that uses an Identity. Although  `AccountHolder` is the 
 
 ## Managing Identity
 
-With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information.
+With the Alliance Business Suite, you can easily manage Authentication and Authorization flows.
 
 ## Understanding how APS works
 Before you create Account Holders or Business Tenants, you should understand how APS enables IAM workflows. 
