@@ -12,7 +12,7 @@ Once installed, your instance will be functional, but not quite yet ready for pr
 In order to get your instance to an Operational State, you should first configure for the first time the Alliance Passport Service, perform some internal configurations, and properly set up your Root Web Portal. 
 
 ## Configuring your instance
-One of the most important files in your Alliance Business Suite instance is the suitesettings.json file. This file is located in the root of your instance's file directory and contains your website’s base configuration details, such as database connection information.
+One of the most important files in your Alliance Business Suite instance is the suitesettings.json file. This file is located in the root of your instance's file directory and contains your website’s base configuration details, such as database-connection information.
 
 When you first download the Alliance Business Suite, this file does not exist, as it will be created during the initial setup process.
 
