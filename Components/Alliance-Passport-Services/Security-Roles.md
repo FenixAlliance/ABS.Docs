@@ -18,4 +18,5 @@ In [Alliance Passport Services ](/Components/Alliance-Passport-Services.md), eve
 The set of default permissions received depends on whether the user is a native member of the tenant (member user) or if the user is unrelated to the acting tenant or brought over from another tenant as a guest (guest user). 
 
 - Member Account Holders can register applications, manage their own profile photo and mobile phone number, change their own password, and invite guests.
+
 - Guest users have restricted directory permissions. They can manage their own profile, change their own password and retrieve some information about other users, products, groups, and apps, however, they cannot read Alliance Business Model records. For example, guest users cannot enumerate the list of all users, groups and other directory objects. Guests can be added to administrator roles, which grant them full read and write permissions contained in the role. Guests can also invite other guests.
