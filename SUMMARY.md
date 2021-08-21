@@ -1,5 +1,11 @@
-* [Home](README.md)
+# Table of contents
+
+* [Overview](README.md)
 * [API Reference](References.md)
+
+
+## About
+
 * [Outlook](About.md)
 * [Overview](Overview.md)
 * [Getting Started](Get-started.md)
@@ -30,10 +36,12 @@
 * [Web API Development](Web-API-Development.md)
 * [Data Access](Data-Access.md)
 * [Modules and Integrations](Modules.md)
-    * [Create a Moule](/Modules/Create-a-Module.md)
-    * [Installing Modules](/Modules/Installing-a-Module.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
+
+
+## Components
+
 * [Components](Components.md)
   * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
     * [About](Components/Alliance-Business-Cloud/About.md)
@@ -57,5 +65,12 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
+
+
+
+## Security
+
 * [Overview](Security.md)
+
+## Credits
 * [License](License.md)
