@@ -79,7 +79,7 @@
 
 ## Security
 
-* [Overview](Security.md)
+* [Security](Security.md)
 
 ## Credits
 * [License](License.md)
