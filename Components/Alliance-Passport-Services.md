@@ -29,7 +29,7 @@ Before you create Account Holders or Business Tenants, you should understand how
 
 **Alliance Passport Services** (commonly known as "**APS**") is an Identity Engine that provides the infrastructure necessary to control authentication and authorization for the Alliance Business Suite. 
 
-The **Identity and Access Management** Module ("**IAM**") is an extension built on top of the Alliance Passport Services Framework to allow users and applications to connect to certain Alliance Business Suite instances.
+The [**Identity and Access Management** Module ("**IAM**")](/Components/Modules/IAM.md) is an extension built on top of the Alliance Passport Services Framework to allow users and applications to connect to certain Alliance Business Suite instances.
 
 ## [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md)
 
