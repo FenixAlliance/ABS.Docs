@@ -48,6 +48,7 @@ The best way to manage the Alliance Business Suite Update Flow is to clone the A
 1. Navigate to the Publish Directory, make sure is empty, and open a CLI into it.
 1. Run the following command: `git clone https://github.com/fenixalliance/abs.bin .`
     - If you're unable to deploy directly to the IIS site folder on the IIS server, pick your desired ring from the Releases Repo and clone on removable media and physically move them to the IIS site folder on the server, which is the site's Physical path in IIS Manager. Move the contents of the cloned repository to the IIS site folder on the server, which is the site's Physical path in IIS Manager.
+    - If you're unable to use git, you'll face additional considerations regarding the Update Process. 
 1. Restart the IIS Site.
 
 ### Browse the website
