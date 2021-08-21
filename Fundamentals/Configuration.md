@@ -20,7 +20,7 @@ Although you can manually provide a suitesettings.json file for your instance (b
 
 Once this installation process has been completed, multiple instances can retrieve their configuration files through the ABS Management API from the root instance, and thus sharing the data layer, allowing customers to scale both the data and application layer independently, depending on their specific requirements.
 
-Each Alliance Business Suite instance contains its own administrator portal. Instances are bounded each a Business Tenant's Primary [Web Portal](/English/Web-Development/Web-Portals.md)'s configuration.
+Each Alliance Business Suite instance contains its own administrator portal. Instances are bounded each a Business Tenant's Primary [Web Portal](/Web-Development/Web-Portals.md)'s configuration.
 
 The first towards configuring your Root Web Portal is to finish creating information for your Business Tenant. The amount of configuration required will depend on the number of Modules included in your instance. 
 
