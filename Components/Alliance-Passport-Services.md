@@ -6,7 +6,7 @@ The Alliance Business Suite enables developers and non-developers alike to easil
 ## Common Terms
 Learn more about APS + IAM terms.
 
-- **Permission Sets**: refer to the  ABM record objects that are used to grant access to resources. You can attach Permission Sets to Identities. These include `BusinessPermission`, `BusinessProfile`, `SecurityGroup`, and `SecurityRole`.
+- **Permission Sets**: refer to the  ABM record objects that are used to grant access to resources. You can attach Permission Sets to Identities. These include `BusinessProfileRecord`, `BusinessPermission`, `SecurityGroup`, and `SecurityRole`.
 
 - **Identities**: The ABM record objects that APS uses to authenticate and group. These include `AccountHolder`, `BusinessTenant`, `BusinessApplication` and `BusinessDomain`.
 
