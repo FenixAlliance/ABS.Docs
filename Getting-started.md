@@ -12,11 +12,9 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
    -  Sign up for a free 30-day trial license
    -  Get a community license for free. 
 
-
 1. [Install the Alliance Business Suite](/Fundamentals/Installation.md).
-   -  [Requirements](/Requirements.md)
+   -  [System Requirements](/Requirements.md)
    -  [Alliance Business Cloud](https://fenix-alliance.com/cloud)
-
 1. [Start building your business](/Fundamentals.md).
 
 ## Alliance Business Suite components
