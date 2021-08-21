@@ -2,7 +2,7 @@
 
 Internet Information Services (IIS) is a flexible, secure and manageable Web Server for hosting web apps, including ASP.NET Core.
 
-# Supported platforms
+## Supported platforms
 The following operating systems are supported:
 
 - Windows 10 or later
@@ -47,6 +47,8 @@ The best way to manage the Alliance Business Suite Update Flow is to clone the A
 
 1. Navigate to the Publish Directory, make sure is empty, and open a CLI into it.
 1. Run the following command: `git clone https://github.com/fenixalliance/abs.bin .`
+    - If you're unable to deploy directly to the IIS site folder on the IIS server, pick your desired ring from the Releases Repo and clone on removable media and physically move them to the IIS site folder on the server, which is the site's Physical path in IIS Manager. Move the contents of the cloned repository to the IIS site folder on the server, which is the site's Physical path in IIS Manager.
+1. Restart the IIS Site.
 
 ### Browse the website
 The app is accessible in a browser after it receives the first request. Make a request to the app at the endpoint binding that you established in IIS Manager for the site.
