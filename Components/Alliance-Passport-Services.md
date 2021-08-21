@@ -15,9 +15,7 @@ A person or application that uses an Identity. Although  `AccountHolder` is the 
 
 ## Managing Identity
 
-### Identity Providers: 
 
-Although but you can use third-party identity services such as Facebook, Twitter, and LinkedIn, or even enterprise services such as  Azure AD, Azure AD B2C, AWS Cognito (preview), Okta (preview), and many more, the Alliance Business Suite provides many tools and libraries to secure your apps including built-in identity providers, TOTP MFA (Time-based One-time Password Algorithm Multi-Factor Authentication) support.
 
 With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information.
 
@@ -61,6 +59,10 @@ When a user authenticates into an Alliance Business Suite instance using their u
 When a user is authenticated, they're issued a token (not an anti-forgery token). The token contains user information in the form of claims or a reference token that points the app to the user state maintained in the app. When a user attempts to access a resource requiring authentication, the token is sent to the app with an additional authorization header in form of a "Bearer token". 
 
 "Bearer tokens" make the app stateless. In each subsequent request, the token is passed in the request for server-side validation. This token isn't encrypted; it's encoded. On the server, the token is decoded to access its information. To send the token on subsequent requests, the token is saved in the browser's local storage. This design prevents CSRF vulnerability as the token is stored in the browser's local storage. CSRF is a concern when the token is stored in a cookie.
+
+### Identity Providers: 
+
+Although but you can use third-party identity services such as Facebook, Twitter, and LinkedIn, or even enterprise services such as  Azure AD, Azure AD B2C, AWS Cognito (preview), Okta (preview), and many more, the Alliance Business Suite provides many tools and libraries to secure your apps including built-in identity providers, TOTP MFA (Time-based One-time Password Algorithm Multi-Factor Authentication) support.
 
 ## Authorization Fundamentals
 Users must also be authorized (allowed) to complete any request. During authorization, the APS Engine uses values from the request context to check for policies that apply to the request. It then uses the policies to determine whether to allow or deny the request. Most policies are stored in the ABS as ABM Records and specify the permissions for principal entities. There are several types of policies that can affect whether a request is authorized. To provide your users with permissions to access any layer of the Alliance Business Suite, you need only identity-based ABM records. Resource-based policies are popular for granting cross-account access. The other policy types are advanced features and should be used carefully.
