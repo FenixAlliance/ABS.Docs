@@ -41,13 +41,17 @@ The Alliance Business Suite lets you build interactive web UIs using C# instead 
 
 ## Liquid Engine (Experimental)
 
-Fluid is an open-source .NET template engine based on the Liquid template language. It's a secure template language that is also very accessible for non-programmer audiences.
+
+The Alliance Business Suite supports Liquid template language, which is a secure template language that is also very accessible for non-programmer audiences.
+
 
 ## HTML Engine
 
-
+In cases where customers decide to use plain HTML5, the Alliance Business Suite contains the ability to bypass all Content Engines and render HTML fragments whenever they are called. This is also the most efficient type of Web Content.
 
 ## Markdown Engine
+
+The last Content Engine, and therefore the least privileged, is the Markdown Engine, which is a lightweight markup language for creating formatted plain-text using an embedded markdown-text editor.
 
 
 
