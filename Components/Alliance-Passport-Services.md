@@ -15,8 +15,6 @@ A person or application that uses an Identity. Although  `AccountHolder` is the 
 
 ## Managing Identity
 
-
-
 With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information.
 
 ## Authentication vs. Authorization
