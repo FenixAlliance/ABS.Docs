@@ -31,7 +31,7 @@ Before you create Account Holders or Business Tenants, you should understand how
 
 The **Identity and Access Management** Module ("**IAM**") is an extension built on top of the Alliance Passport Services Framework to allow users and applications to connect to certain Alliance Business Suite instances.
 
-## Account Holder
+## [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md)
 
 An Account Holder is a person or application that can make a request for an action or operation on an ABM resource. The principal is authenticated as the ABS account root user or an IAM entity to make requests to any Alliance Business Platform API. As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (holders and roles). You can also support federated users or programmatic access to allow an application to access your ABS instance.
 
