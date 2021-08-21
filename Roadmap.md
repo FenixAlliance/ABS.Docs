@@ -4,10 +4,11 @@ This project is a work in progress and the schedule for implementing enhancement
 V.1.3 ( release: July 12, 2023 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
-- [ ] PowerShell SDK 
 
 V.1.3 ( release: July 12, 2022 )
-- [ ] .NET 6.0 Stable Release
+- [ ] .NET SDK
+- [ ] PowerShell SDK 
+- [ ] .NET 6.0 LTS Update
 - [ ] Template Definitions
 - [ ] Agreement Template Definitions
 - [ ] Email Signature Template Definitions
@@ -22,8 +23,8 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
-- [ ] In-Studio Real-Time Chat Manager
-- [ ] In-Portal Real-Time Chat Widget
+- [ ] In-Studio Live Chat Manager
+- [ ] In-Portal Live Chat Widget
 - [ ] Code Editor: Razor Syntax Highlighting 
 - [ ] ML-Based Spam Detection Engine
 - [ ] ML-Based Search Results Ranking Engine
