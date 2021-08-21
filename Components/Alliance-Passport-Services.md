@@ -17,17 +17,19 @@ A person or application that uses an Identity. Although  `AccountHolder` is the 
 
 With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information.
 
-## Authentication vs. Authorization
-Authentication is a process in which a user provides credentials that are then compared to those stored by an operating system, database, app, or resource. If they match, users are authenticated successfully, and can then perform actions that they're authorized for, during an authorization process. The authorization refers to the process that determines what a user is allowed to do.
-
-Another way to think of authentication is to consider it as a way to enter a space, such as a server, database, app, or resource, while authorization is which actions the user can perform to which objects inside that space (server, database, or app).
-
 ## Understanding how APS works
 Before you create Account Holders or Business Tenants, you should understand how APS enables IAM workflows. 
 
 **Alliance Passport Services** (commonly known as "**APS**") is an Identity Engine that provides the infrastructure necessary to control authentication and authorization for the Alliance Business Suite. 
 
 The [**Identity and Access Management** Module ("**IAM**")](/Components/Modules/IAM.md) is an extension built on top of the Alliance Passport Services Framework to allow users and applications to connect to certain Alliance Business Suite instances.
+
+
+## Authentication vs. Authorization
+Authentication is a process in which a user provides credentials that are then compared to those stored by an operating system, database, app, or resource. If they match, users are authenticated successfully, and can then perform actions that they're authorized for, during an authorization process. The authorization refers to the process that determines what a user is allowed to do.
+
+Another way to think of authentication is to consider it as a way to enter a space, such as a server, database, app, or resource, while authorization is which actions the user can perform to which objects inside that space (server, database, or app).
+
 
 ## [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md)
 
