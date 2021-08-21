@@ -34,7 +34,6 @@
     * [Installing Modules](/Modules/Installing-a-Module.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
-
 * [Components](Components.md)
   * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
     * [About](Components/Alliance-Business-Cloud/About.md)
@@ -58,8 +57,5 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
-
-
 * [Overview](Security.md)
-
 * [License](License.md)
