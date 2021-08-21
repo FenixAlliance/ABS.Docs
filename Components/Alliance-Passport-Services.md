@@ -3,15 +3,10 @@
 
 The Alliance Business Suite enables developers and non-developers alike to easily configure and manage security. The Alliance Passport Services Engine contains features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
 
-
 ## Common Terms
 Learn more about APS + IAM terms.
 
-- **Resources**
-The SecurityGroup, SecurityRole, BusinessPermission, and IdentityProvider objects are stored in ABM. As with other ABM entities, you can add, edit, and remove IAM-related records.
-
-- **Identities**
-Identities refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
+- **Permission Sets**: refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
 
 - **Identity Entities**
 The IAM resource objects that APS uses for authentication. These include AccountHolders, federated users, and assumed IAM roles (like when an application created by an AccountHolder tries to access resources through one of the API endpoints).
