@@ -6,18 +6,19 @@ The Alliance Business Suite enables developers and non-developers alike to easil
 ## Common Terms
 Learn more about APS + IAM terms.
 
-- **Permission Sets**: refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include BusinessProfileRecords, SecurityGroups, and SecurityRoles.
+- **Permission Sets**: refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include `BusinessProfileRecord`, `SecurityGroup`, and `SecurityRole`.
 
-- **Identity Entities**
-The IAM resource objects that APS uses for authentication. These include AccountHolders, federated users, and assumed IAM roles (like when an application created by an AccountHolder tries to access resources through one of the API endpoints).
+- **Identities**
+
+The IAM resource objects that APS uses for authentication. These include Account Holders, Business Tenants, guest users.
 
 - **Identity Holders**
-A person or application that uses the ABS Account Holder entity, like the root Holder, an IAM user, or an IAM Application to sign in and make requests to the Alliance Business Platform's APIs.
+A person or application that uses an Identity, Account Holders, a , or an IAM Application to sign in and make requests to the Alliance Business Platform's APIs.
 
 
 ## Alliance Business Suite security features
 
-Although but you can use third-party identity services such as Facebook, Twitter, and LinkedIn, or even enterprise services such as  Azure AD, Azure AD B2C, AWS Cognito (preview), Okta (preview) and many more, the Alliance Business Suite provides many tools and libraries to secure your apps including built-in identity providers, TOTP MFA (Time-based One-time Password Algorithm Multi Factor Authentication) support.
+Although but you can use third-party identity services such as Facebook, Twitter, and LinkedIn, or even enterprise services such as  Azure AD, Azure AD B2C, AWS Cognito (preview), Okta (preview), and many more, the Alliance Business Suite provides many tools and libraries to secure your apps including built-in identity providers, TOTP MFA (Time-based One-time Password Algorithm Multi-Factor Authentication) support.
 
 With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information without having to expose it.
 
@@ -44,23 +45,23 @@ The Alliance Business Suite uses two primary middlewares for authentication. A C
 An [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md) must be authenticated (signed in to the Alliance Business Suite) using their credentials to send a request to any [Alliance Business Platform](/Components/Alliance-Business-Platform.md) API. Some modules, such as [Media Portals](/Components/Modules/CMS.md), ICX Stores, and ABS Workplace, allow a few requests from anonymous users. However, they are the exception to the rule.
 
 ### Root Users
-To authenticate from the root user, you must sign in with your email address and password you provided when installing the instance. As any other regular IAM user, root users can set up multi-factor authentication through an authenticator app such as Google Authenticator, Microsoft Authenticator, or really any MFA TOTP (Time-based One-time Password Algorithm) application.
+To authenticate from the root user, you must sign in with the email address and password you provided when installing the instance. As any other regular IAM user, root users can set up multi-factor authentication through an authenticator app such as Google Authenticator, Microsoft Authenticator, or really any MFA TOTP (Time-based One-time Password Algorithm) application.
 
 ### API Users
 
-To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You can get these keys by installing and navigating to the ABS Self integration. 
+To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You can get these keys by installing and navigating to the ABS Self-integration. 
 
 Users might also be required to provide additional security information. For example, Fenix Alliance recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](/Components/Alliance-Passport-Services/Account-Holders) and [APS Security Roles](/Components/Alliance-Passport-Services/Security-Roles).
 
 ### Cookie-based authentication
 
-When a user authenticates into an Alliance Business Suite instance using their username and password (or any other authentication provider, for that matter), they're issued a cookie, containing an authentication token that can be used for authentication and authorization. The token is stored in the browser as a cookie that accompanies every request the client makes to the application. Generating and validating this cookie is performed by the APS Cookie Authentication Middleware. The middleware serializes a user principal into an encrypted cookie. On subsequent requests, the middleware validates the cookie, recreates the principal, and assigns the principal to the User property present on controllers, views, components and more.
+When a user authenticates into an Alliance Business Suite instance using their username and password (or any other authentication provider, for that matter), they're issued a cookie, containing an authentication token that can be used for authentication and authorization. The token is stored in the browser as a cookie that accompanies every request the client makes to the application. Generating and validating this cookie is performed by the APS Cookie Authentication Middleware. The middleware serializes a user principal into an encrypted cookie. On subsequent requests, the middleware validates the cookie, recreates the principal, and assigns the principal to the User property present on controllers, views, components, and more.
 
 ### Token-based authentication
 
-When a user is authenticated, they're issued a token (not an antiforgery token). The token contains user information in the form of claims or a reference token that points the app to user state maintained in the app. When a user attempts to access a resource requiring authentication, the token is sent to the app with an additional authorization header in form of a "Bearer token". 
+When a user is authenticated, they're issued a token (not an anti-forgery token). The token contains user information in the form of claims or a reference token that points the app to the user state maintained in the app. When a user attempts to access a resource requiring authentication, the token is sent to the app with an additional authorization header in form of a "Bearer token". 
 
-"Bearer tokens" makes the app stateless. In each subsequent request, the token is passed in the request for server-side validation. This token isn't encrypted; it's encoded. On the server, the token is decoded to access its information. To send the token on subsequent requests, the token is saved in the browser's local storage. This design prevents CSRF vulnerability as the token is stored in the browser's local storage. CSRF is a concern when the token is stored in a cookie.
+"Bearer tokens" make the app stateless. In each subsequent request, the token is passed in the request for server-side validation. This token isn't encrypted; it's encoded. On the server, the token is decoded to access its information. To send the token on subsequent requests, the token is saved in the browser's local storage. This design prevents CSRF vulnerability as the token is stored in the browser's local storage. CSRF is a concern when the token is stored in a cookie.
 
 ## Authorization Fundamentals
 Users must also be authorized (allowed) to complete any request. During authorization, the APS Engine uses values from the request context to check for policies that apply to the request. It then uses the policies to determine whether to allow or deny the request. Most policies are stored in the ABS as ABM Records and specify the permissions for principal entities. There are several types of policies that can affect whether a request is authorized. To provide your users with permissions to access any layer of the Alliance Business Suite, you need only identity-based ABM records. Resource-based policies are popular for granting cross-account access. The other policy types are advanced features and should be used carefully.
@@ -89,7 +90,7 @@ After your request has been authenticated and authorized, the Alliance Passport 
 To allow an **Identity Holder** to perform an operation, you must include the necessary actions in a policy that applies to the principal or the affected resource. To see a list of actions, resource types, and condition keys supported by each service, refer to Actions, Resources, and Permissions for ABS Services.
 
 # Resources
-After the Alliance Poassport Service Engine approves the operations in your request, it can be performed on the related resources within your account. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the `BusinessPermission` tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for Alliance Business Suite Resources.
+After the Alliance Passport Service Engine approves the operations in your request, it can be performed on the related resources within your account. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the `BusinessPermission` tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for Alliance Business Suite Resources.
 
 
 
