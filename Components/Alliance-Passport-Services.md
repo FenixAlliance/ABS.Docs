@@ -6,21 +6,20 @@ The Alliance Business Suite enables developers and non-developers alike to easil
 ## Common Terms
 Learn more about APS + IAM terms.
 
-- **Permission Sets**: refer to the IAM resource objects that are used to identify and group. You can attach a SecurityRole or a BusinessPermission to an IAM identity. These include `BusinessProfileRecord`, `SecurityGroup`, and `SecurityRole`.
+- **Permission Sets**: refer to the  ABM record objects that are used to grant access to resources. You can attach Permission Sets to Identities. These include `BusinessPermission`, `SecurityGroup`, and `SecurityRole`.
 
-- **Identities**
+- **Identities**: The ABM record objects that APS uses to authenticate and group. These include `AccountHolder`, `BusinessTenant`, `BusinessApplication` and `BusinessDomain`.
 
-The IAM resource objects that APS uses for authentication. These include Account Holders, Business Tenants, guest users.
-
-- **Identity Holders**
-A person or application that uses an Identity, Account Holders, a , or an IAM Application to sign in and make requests to the Alliance Business Platform's APIs.
-
+- **Users**
+A person or application that uses an Identity, `AccountHolder` is the most common type of Identity, although `BusinessApplication` can also be used to sign in and make requests to the Alliance Business Platform's APIs within the scope of a `BusinessTenant`.
 
 ## Alliance Business Suite security features
 
+### Identity Providers: 
+
 Although but you can use third-party identity services such as Facebook, Twitter, and LinkedIn, or even enterprise services such as  Azure AD, Azure AD B2C, AWS Cognito (preview), Okta (preview), and many more, the Alliance Business Suite provides many tools and libraries to secure your apps including built-in identity providers, TOTP MFA (Time-based One-time Password Algorithm Multi-Factor Authentication) support.
 
-With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information without having to expose it.
+With the Alliance Business Suite, you can easily manage app secrets, which are a way to store and use confidential information.
 
 ## Authentication vs. Authorization
 Authentication is a process in which a user provides credentials that are then compared to those stored by an operating system, database, app, or resource. If they match, users are authenticated successfully, and can then perform actions that they're authorized for, during an authorization process. The authorization refers to the process that determines what a user is allowed to do.
