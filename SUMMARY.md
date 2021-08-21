@@ -50,21 +50,30 @@
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
   * [Alliance Business Model](Components/Alliance-Business-Model.md)
     * [Extensibility](Components/Alliance-Business-Model/Extensibility.md)
-  * [Alliance Passport Services](Components/Alliance-Passport-Service.md)
-    * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
-    * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
-    * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
+
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
+
     * [Application Programming Interfaces](Components/Alliance-Business-Platform/APIs.md)
+
       * [REST API](Components/Alliance-Business-Platform/APIs/REST-API.md)
       * [GraphQl API](Components/Alliance-Business-Platform/APIs/GraphQl-API.md)
       * [GRPC API](Components/Alliance-Business-Platform/APIs/GRPC-API.md)
       * [ABS TermX](Components/Alliance-Business-Platform/APIs/ABS-Tx.md)
+
     * [Software Development Kits](Components/Alliance-Business-Platform/SDKs.md)
+
       * [.NET SDK](Components/Alliance-Business-Platform/SDKs/SDK-Nuget-Package.md)
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
+
+  * [Alliance Passport Service](Components/Alliance-Passport-Service.md)
+
+    * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
+    * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
+    * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
+
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
+  * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
 
 
 
