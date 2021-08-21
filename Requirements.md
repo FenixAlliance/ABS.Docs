@@ -16,7 +16,8 @@ The following browsers are supported:
 The following operating systems are supported with the recommendation that the latest Windows updates are applied.
 
 - Windows Server 2012 R2 x64 Datacenter / Standard
-- Windows Server 2012 x64 Datacenter / Standard
+- Windows Server 2016 x64 Datacenter w/ Containers
+- Windows Server 2016 x64 Datacenter w/ Containers
 
 ## Supported SQL Server Editions
 The following SQL Server Editions are supported with the recommendation that the latest Windows updates are applied.
