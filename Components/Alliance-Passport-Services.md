@@ -80,7 +80,7 @@ The APS Engine checks each policy that applies to the context of any given reque
 To learn more about how all types of policies are evaluated, please refer to Authorization evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource, and the Identity Entity that you use to make the request must have an identity-based policy that allows the request.
 
 
-### Security Permissions
+### [Security Permissions](/Components/Alliance-Passport-Services/Business-Permissions.md)
 After your request has been authenticated and authorized, the Alliance Passport Service approves the actions or operations in your request. Operations are defined by service and include things that you can do to a resource, such as reading, creating, editing, and deleting that resource. For example, APS supports approximately 40 actions for a user resource, including the following actions:
 
 - CreateUser
