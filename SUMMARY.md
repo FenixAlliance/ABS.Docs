@@ -8,7 +8,7 @@
 
 * [Outlook](About.md)
 * [Requirements](/Requirements.md)
-* [Getting Started](Get-started.md)
+* [Getting Started](Getting-started.md)
 * [Fundamentals](Fundamentals.md)
   * [Installation](Fundamentals/Installation.md)
   * [Configuration](Fundamentals/Configuration.md)
