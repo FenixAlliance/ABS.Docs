@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Alliance Passport Services Overview
 ## How to get started?
 
