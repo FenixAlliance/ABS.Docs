@@ -13,3 +13,8 @@ For these scenarios, you assign them a Security Role that provides the permissio
 
 In [Alliance Passport Services ](/Components/Alliance-Passport-Services.md), every Account Holder is granted a set of default permissions. An Account Holder’s access consists of the type of user, their role assignments, and their ownership of individual records. This article describes those default permissions and contains a comparison of the member and guest user defaults. The default user permissions can be changed only in user settings in [Alliance Business Studio](/Components/Alliance-Business-Studio.md).
 
+## Member and Guest Account Holders
+
+The set of default permissions received depends on whether the user is a native member of the tenant (member user) or if the user is unrelated to the acting tenant or brought over from another tenant as a guest (guest user). 
+
+
