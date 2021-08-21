@@ -5,10 +5,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.2] - 2021-07-12
+### Added
+- [ABS] View Rendering Cache
+- [ABS] AppDomain Assembly Scoping
 
 ## [1.1.9] - 2021-06-30
+### Added
+- [ABS] Theme Precompilation
 
 ## [1.1.8] - 2021-06-18
+
+### Added
+- [ABS] Workflows Capability
+
 
 ## [1.1.7] - 2021-06-06
 ### Added
