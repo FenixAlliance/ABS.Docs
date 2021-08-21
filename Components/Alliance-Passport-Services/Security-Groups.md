@@ -2,7 +2,7 @@
 
 There are two forms of common security identities in Alliance Passport Services: Account Holders and Business Tenants. These accounts represent an entity (a person or an organization). 
 
-User accounts can also be used as dedicated service accounts for some applications. Security groups are used to collect user accounts, service accounts, and other groups into manageable units.
+Account Holders can also be used as dedicated service accounts for some applications. Security groups are used to collect user accounts, service accounts, and other groups into manageable units.
 
 Security groups can provide an efficient way to assign access to resources on your Alliance Business Suite. By using security groups, you can:
 
