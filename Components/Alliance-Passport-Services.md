@@ -13,7 +13,7 @@ Learn more about APS + IAM terms.
 - **Users**
 A person or application that uses an Identity. Although  `AccountHolder` is the most common type of Identity, `BusinessApplication` can also be used to sign in and make requests to the Alliance Business Platform's APIs within the scope of a `BusinessTenant` or a `BusinessDomain`.
 
-## Alliance Business Suite security features
+## Managing Identity
 
 ### Identity Providers: 
 
