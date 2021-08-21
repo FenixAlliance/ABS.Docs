@@ -14,8 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2] - 2021-07-12
 ### Added
 - [ABS] Razor Templating Engine
-- [ABS] Custom Options Manager
-- [ABS] Portal Option Manager UI
+- [ABS] Custom Options Manager (API)
+- [ABS] Portal Option Manager (UI)
 - [ABS] Custom Portal Option Definitions
 - [ABS] Virtual SPA Support (Angular/React)
 - [ABS] Custom Service Endpoint Definitions
