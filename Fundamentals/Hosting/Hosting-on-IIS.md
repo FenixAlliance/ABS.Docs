@@ -38,4 +38,15 @@ For more detailed instructions on how to install the ASP.NET Core Module, or ins
 
 **Warning**
 
-Top-level wildcard bindings (http://*:80/ and http://+:80) should not be used. Top-level wildcard bindings can open up your app to security vulnerabilities. This applies to both strong and weak wildcards. Use explicit hostnames rather than wildcards. Subdomain wildcard binding (for example, *.mysub.com) doesn't have this security risk if you control the entire parent domain (as opposed to *.com, which is vulnerable). See rfc7230 section-5.4 for more information.
+Top-level wildcard bindings (http://*:80/ and http://+:80) should not be used. Top-level wildcard bindings can open up your app to security vulnerabilities. This applies to both strong and weak wildcards. Use explicit hostnames rather than wildcards. Subdomain wildcard binding (for example, *.mysub.com) doesn't have this security risk if you control the entire parent domain (as opposed to *.com, which is vulnerable). 
+
+
+### Clone the Alliance Business Suite Distributable
+
+The best way to manage the Alliance Business Suite Update Flow is to clone the Alliance Business Suite to the publish directory using Git.
+
+1. Navigate to the Publish Directory, make sure is empty, and open a CLI into it.
+1. Run the following command: `git clone https://github.com/fenixalliance/abs.bin .`
+
+### Browse the website
+The app is accessible in a browser after it receives the first request. Make a request to the app at the endpoint binding that you established in IIS Manager for the site.
