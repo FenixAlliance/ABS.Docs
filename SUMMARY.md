@@ -7,7 +7,7 @@
 ## About
 
 * [Outlook](About.md)
-* [Requirements](/Requirements.md)
+* [Requirements](Requirements.md)
 * [Getting Started](Getting-started.md)
 * [Fundamentals](Fundamentals.md)
   * [Installation](Fundamentals/Installation.md)
