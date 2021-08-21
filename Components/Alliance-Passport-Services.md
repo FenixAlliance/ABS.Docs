@@ -31,9 +31,11 @@ Authentication is a process in which a user provides credentials that are then c
 Another way to think of authentication is to consider it as a way to enter a space, such as a server, database, app, or resource, while authorization is which actions the user can perform to which objects inside that space (server, database, or app).
 
 
-## [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md)
+## Users
 
-An Account Holder is a person or application that can make a request for an action or operation on an ABM resource. The principal is authenticated as the ABS account root user or an IAM entity to make requests to any Alliance Business Platform API. As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (holders and roles). You can also support federated users or programmatic access to allow an application to access your ABS instance.
+A User is a person or application that can make a request for an action or operation on an ABM resource. The User is authenticated as a Security Identity to make requests to allowed resources through the Alliance Business Platform set of APIs.
+
+**Note:** As a best practice, do not use your root user credentials for your daily work. Instead, create an additional Account Holder with a more limited Permission Set. You can also support federated users or programmatic access by allowing a Business Application to access your ABS instance.
 
 ## Authentication fundamentals
 
