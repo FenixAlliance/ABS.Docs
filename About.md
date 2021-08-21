@@ -8,7 +8,7 @@ We decided to create our own platform, knowing this could potentially cost way t
 
 We started to build an enterprise LOB solution out of our own business applications to help businesses to address several key aspects of their day-to-day operations.
 
-Built on top of the [Alliance Business Platform](/Components/Alliance-Business-Platform.md), the [Alliance Business Suite](/Get-started.md) provides customers with a simple, easy-to-use suite of modern business applications built to help you achieve operational excellence through extensibility and automation, driving improvements in data integrity and enabling faster, better decision making, and more effective actions.
+Built on top of the [Alliance Business Platform](/Components/Alliance-Business-Platform.md), the [Alliance Business Suite](/Getting-started.md) provides customers with a simple, easy-to-use suite of modern business applications built to help you achieve operational excellence through extensibility and automation, driving improvements in data integrity and enabling faster, better decision making, and more effective actions.
 
 # About Fenix Alliance
 
