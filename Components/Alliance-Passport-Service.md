@@ -6,7 +6,7 @@ The Alliance Business Suite contains a powerful and extensible Authentication an
 
 ## How to get started?
 
-The Alliance Passport Service enables developers and non-developers alike to easily configure and manage security. The Alliance Passport Service Engine contains features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
+The Alliance Passport Service enables developers and non-developers alike to easily configure and manage identity scenarios. The Alliance Passport Service Engine contains features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
 
 ## Common Terms
 Learn more about APS + IAM terms.
