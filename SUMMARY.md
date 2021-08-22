@@ -19,6 +19,8 @@
   * [Logging](Fundamentals/Logging.md)
   * [Routing](Fundamentals/Routing.md)
   * [Static Files](Fundamentals/Static-Files.md)
+  * [Data Access](Fundamentals/Data-Access.md)
+
 * [Web Development](Web-Development.md)
    * [Web Portals](Web-Development/Web-Portals.md)
    * [Web Pages](Web-Development/Web-Pages.md)
@@ -34,7 +36,6 @@
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
    * [Sessions and State](Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
-* [Data Access](Data-Access.md)
 * [Modules and Integrations](Modules.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
