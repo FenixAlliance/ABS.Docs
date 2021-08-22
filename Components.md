@@ -4,7 +4,6 @@
 
 The Alliance Business Suite was architected as a modular Application Framework. This means that components are able to work without their higher-level components. The lowest Component is the Alliance Core Libraries Component and the highest Component is the Alliance Business Studio Component.
 
-For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together. 
 
 ![ABS Components.jpg](/.attachments/ABS%20Components-7ac6c5e0-f6cb-42b2-be6b-9219a6ec14e5.jpg)
 
@@ -12,7 +11,9 @@ For a more detailed architecture overview, please refer to [Advanced Topics](/Ad
 
 ## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
 
-The Alliance Core Libraries contains the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies are 
+The Alliance Core Libraries contains the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies, which are dependencies outside the `FenixAlliance.*` namespace are referred to by the `FenixAlliance.ACL.Deps` Package, which is the base ACL Package and, therefore, it could be referred to as the Core Package.
+
+
 
 ## [Alliance Business Model](/Components/Alliance-Business-Model.md)
 
