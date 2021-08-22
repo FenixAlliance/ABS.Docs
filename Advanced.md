@@ -6,15 +6,16 @@ Components can be provisioned as Standalone Applications or used and stand-alone
 
 Components rely on their Service Predecessor through abstractions, allowing customers to override almost every functionality through custom implementations.
 
+![DependencyTree.1.2.0.jpg](/.attachments/DependencyTree.1.2.0-3235684e-1b84-410b-8cae-f6b01f809c4e.jpg)
 
-Note: Because other services on the Alliance Business Suite instance can rely on default implementations performing some work, it is imperative for customers that bring their own implementations to make sure the implementations follow the required criteria.
+Note: Because other services on the Alliance Business Suite instance might rely on default implementations performing some work, it is imperative for customers that bring their own implementations to make sure the implementations stay compliant with the required implementation specification.
 
 ## Understanding external dependencies
 
 External dependencies required by the Alliance Business Suite are bounded to the Alliance Core Libraries Component, which means that they are available to every dependant Component due to .NET's Waterfall Dependency Resolution mechanism.
 
-This means that WebContents can make use of already present libraries such as Radzen Blazor, MudBlazor, Newtonsoft.Json and many more. For a more detailed list of dependencies, please visit Core Dependencies.
+This means that [Web Contents](/Web-Development.md) can make use of already present libraries such as Radzen Blazor, MudBlazor, Newtonsoft.Json, and many more. For a more detailed list of dependencies, please visit Core Dependencies.
 
-![DependencyTree.1.2.0.jpg](/.attachments/DependencyTree.1.2.0-3235684e-1b84-410b-8cae-f6b01f809c4e.jpg)
+
 
 
