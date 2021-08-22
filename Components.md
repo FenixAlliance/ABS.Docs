@@ -5,8 +5,7 @@
 The Alliance Business Suite was architected as a modular, unopinionated
 For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together. 
 
-![DotNetAppsInfrastructure.png](/.attachments/DotNetAppsInfrastructure-cc8de442-9e8b-47ad-b654-28d9132f600c.png)
-
+![ABS Components.jpg](/.attachments/ABS%20Components-7ac6c5e0-f6cb-42b2-be6b-9219a6ec14e5.jpg)
 
 ## [Alliance Business Model](/Components/Alliance-Business-Model.md)
 
