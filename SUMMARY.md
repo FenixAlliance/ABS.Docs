@@ -46,6 +46,14 @@
 
   * [Alliance Business Model](Components/Alliance-Business-Model.md)
     * [Extensibility](Components/Alliance-Business-Model/Extensibility.md)
+  * [Alliance Passport Service](Components/Alliance-Passport-Service.md)
+
+    * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
+    * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
+    * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
+    * [Security Roles](/Components/Alliance-Passport-Service/Security-Roles.md)
+    * [Security Groups](/Components/Alliance-Passport-Service/Security-Groups.md)
+    * [Business Permissions](/Components/Alliance-Passport-Service/Business-PErmissions.md)
 
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
@@ -62,11 +70,7 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
 
-  * [Alliance Passport Service](Components/Alliance-Passport-Service.md)
 
-    * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
-    * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
-    * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
 
   * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
