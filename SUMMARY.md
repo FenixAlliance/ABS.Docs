@@ -85,5 +85,9 @@
 
 * [Security](Security.md)
 
+## Advanced
+
+* [Advanced](Advanced.md)
+
 ## Credits
 * [License](License.md)
