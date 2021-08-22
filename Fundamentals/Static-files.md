@@ -12,6 +12,8 @@ By leveraging the ABP-FS APIs, customers and developers can upload files scoped 
 
 ## Public Files.
 
+### Scoped Public Files
+
 The ABP-FS allows customers to upload public files within the scope of a [Web Portal](/Web-Development/Web-Portals.md). These files are exposed through the `/Public/{PortalID}` endpoint available to every portal.
 
 ### Unscoped Public Files
