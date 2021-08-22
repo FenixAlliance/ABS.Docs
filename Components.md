@@ -7,8 +7,6 @@ For us, is all about productivity and how to help you push forward your vision t
 
 
 ## [Alliance Business Model](/Components/Alliance-Business-Model.md)
----
-
 
 The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
 
@@ -36,7 +34,7 @@ Anyone can build on and extend The Alliance Business Studio to capture additiona
 
 
 ## [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
-Alliance Business Cloud Overview
+
 The Alliance Business Cloud is an HTTP-based service for hosting Alliance Business Suite Instances and other kinds of applications. These can be developed in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows-based environments.
 
 The Alliance Business Cloud not only adds the power of Microsoft Azure to your Alliance Business Suite instance, such as security, load balancing, autoscaling, and automated management features; You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps, GitHub, Docker Hub, and other sources, package management, staging environments, custom domain, and free/paid TLS/SSL certificates.
