@@ -43,11 +43,7 @@
 ## Components
 
 * [Components](Components.md)
-  * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
-    * [About](Components/Alliance-Business-Cloud/About.md)
-    * [View Statistics](Components/Alliance-Business-Cloud/View-Statistics.md)
-    * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
-    * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
+
   * [Alliance Business Model](Components/Alliance-Business-Model.md)
     * [Extensibility](Components/Alliance-Business-Model/Extensibility.md)
 
@@ -72,9 +68,13 @@
     * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
     * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
 
-  * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
   * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
-
+  * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
+  * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
+    * [About](Components/Alliance-Business-Cloud/About.md)
+    * [View Statistics](Components/Alliance-Business-Cloud/View-Statistics.md)
+    * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
+    * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
 ## Security
 
