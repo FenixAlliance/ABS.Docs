@@ -51,9 +51,9 @@
     * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
     * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
     * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
-    * [Security Roles](/Components/Alliance-Passport-Service/Security-Roles.md)
-    * [Security Groups](/Components/Alliance-Passport-Service/Security-Groups.md)
-    * [Business Permissions](/Components/Alliance-Passport-Service/Business-PErmissions.md)
+    * [Security Roles](Components/Alliance-Passport-Service/Security-Roles.md)
+    * [Security Groups](Components/Alliance-Passport-Service/Security-Groups.md)
+    * [Business Permissions](Components/Alliance-Passport-Service/Business-PErmissions.md)
 
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
