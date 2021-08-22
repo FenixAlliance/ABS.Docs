@@ -6,7 +6,7 @@ The Alliance Business Suite was architected as a modular, unopinionated
 For us, is all about productivity and how to help you push forward your vision through technology. To reach beyond expectations together. 
 
 
-## [Alliance Business Model](/Components/Alliance-Business-Model)
+## [Alliance Business Model](/Components/Alliance-Business-Model.md)
 ---
 
 
@@ -14,7 +14,7 @@ The Alliance Business Model is a declarative specification and definition of sta
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
-## [Alliance Passport Services](/Components/Alliance-Passport-Services)
+## [Alliance Passport Services](/Components/Alliance-Passport-Service.md)
 
 
 ## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
