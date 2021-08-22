@@ -2,9 +2,7 @@
 
 This topic provides information about where you can download the developer tools, assemblies, and code samples that are shipped as part of the Software Development Kit (SDK) for the Alliance Business Suite.
 
-
-
-# SDK assemblies
+## SDK assemblies
 The SDK assemblies are available as NuGet packages that you can directly use in your Visual Studio projects. For information about using a NuGet package in Visual Studio, see [Install and use a package in Visual Studio](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 
 
