@@ -16,6 +16,11 @@ Anyone can build on and extend ABM definitions to capture additional business-sp
 
 ## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
 
+The Alliance Passport Service enables developers and non-developers alike 
+The Alliance Passport Service is an Authentication/Authorization Engine designed to enable customers to easily configure and manage businesses identity scenarios by assigning (or connecting) a digital identity to their contacts, whether they are customers, employees, partners, guests, and more. 
+
+It also provides common features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
+
 
 ## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
@@ -24,8 +29,6 @@ The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0
 Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
 
 ## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
-
-
 
 The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
 
