@@ -14,7 +14,7 @@ The Alliance Business Model is a declarative specification and definition of sta
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
-## [Alliance Passport Services](/Components/Alliance-Passport-Service.md)
+## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
 
 
 ## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
