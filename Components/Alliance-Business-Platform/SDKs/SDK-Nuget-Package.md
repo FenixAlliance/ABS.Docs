@@ -18,3 +18,18 @@ The following SDK assemblies are available:
 | FenixAllaince.APS.SDK | FenixAllaince.APS.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.APS.SDK/](https://www.nuget.org/packages/FenixAlliance.APS.SDK/) |
 | FenixAllaince.ABM.SDK | FenixAllaince.ABM.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABM.SDK/](https://www.nuget.org/packages/FenixAlliance.ABM.SDK/) |
 
+
+## Using the Alliance Business Suite SDK.
+
+The Alliance Business Suite SDK provides several interfaces and default implementations designed to speed up business application development. By leveraging the SDK, developers can create outstanding personalized experiences for their customers, employees, providers, and more.
+
+Although it is possible to combine programming models, the first step towards developing Alliance Business Suite Applications/Extensions is to decide the Programming Model to use.
+
+**Note**: Alliance business Suite Applications/Extensions can be created using .NET or Node.js. This article focuses on the ABS SDK for .NET. As of version 1.2.x, the ABS SDK for Node.js hasn't been published, and requests have to be performed against the Alliance Business Platform Web APIs.
+
+By using .NET and Visual Studio and the ABS SDK for .NET, developers can easily create extensions either by using ASP.NET MVC or Blazor to cover specific business needs while leveraging the power of C# and the Alliance Business Suite.
+
+Customers can also use the Alliance Business Suite to override the default Interface Implementations present on every Alliance Business Suite instance. To do so, just implement the desired interface and register it as a Service Override on the `ConfigureServices` method present on the `IModule` Interface.
+
+
+ 
