@@ -1,8 +1,5 @@
 # Tutorial: Get started with the Alliance Business Suite
 
-[[_TOC_]]
-
-
 This tutorial shows how to create and run your first Alliance Business Suite instance.
 
 You'll learn how to:
