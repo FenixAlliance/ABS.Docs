@@ -56,7 +56,7 @@ To authenticate from the root user, you must sign in with the email address and 
 
 To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You can get these keys by installing and navigating to the ABS Self-integration. 
 
-Users might also be required to provide additional security information. For example, Fenix Alliance recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](/Components/Alliance-Passport-Services/Account-Holders) and [APS Security Roles](/Components/Alliance-Passport-Services/Security-Roles).
+Users might also be required to provide additional security information. For example, Fenix Alliance recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](/Components/Alliance-Passport-Service/Account-Holders) and [APS Security Roles](/Components/Alliance-Passport-Service/Security-Roles).
 
 
 ### Authentication Middleware
@@ -93,7 +93,7 @@ The APS Engine checks each policy that applies to the context of any given reque
 To learn more about how all types of policies are evaluated, please refer to Authorization evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource, and the Identity Entity that you use to make the request must have an identity-based policy that allows the request.
 
 
-### [Security Permissions](/Components/Alliance-Passport-Services/Business-Permissions.md)
+### [Security Permissions](/Components/Alliance-Passport-Service/Business-Permissions.md)
 
 After your request has been authenticated and authorized, the Alliance Passport Service approves the actions or operations in your request. Operations are defined by service and include things that you can do to a resource, such as reading, creating, editing, and deleting that resource. For example, APS supports approximately 40 actions for a user resource, including the following actions:
 
