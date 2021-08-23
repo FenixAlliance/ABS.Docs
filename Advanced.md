@@ -8,7 +8,7 @@ Components rely on their Service Predecessor through abstractions, allowing cust
 
 ![DependencyTree.1.2.0.jpg](/.attachments/DependencyTree.1.2.0-3235684e-1b84-410b-8cae-f6b01f809c4e.jpg)
 
-Note: Because other services on the Alliance Business Suite instance might rely on default implementations performing some work, it is imperative for customers that bring their own implementations to make sure their implementations stay compliant with each specification.
+Note: Because other services on the Alliance Business Suite instance might rely on default implementations performing some work, it is imperative for customers who bring their own implementations to make sure their implementations stay compliant with each specification.
 
 ## Understanding external dependencies
 
