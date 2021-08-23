@@ -41,7 +41,7 @@ Another way to think of authentication is to consider it as a way to enter a spa
 ## Authentication fundamentals
 
 
-An [Account Holder](/Components/Alliance-Passport-Services/Account-Holders.md) must be authenticated (signed in to the Alliance Business Suite) using their credentials to send a request to any [Alliance Business Platform](/Components/Alliance-Business-Platform.md) API. Some modules, such as [Media Portals](/Components/Modules/CMS.md), ICX Stores, and ABS Workplace, allow a few requests from anonymous users. However, they are the exception to the rule.
+An [Account Holder](/Components/Alliance-Passport-Service/Account-Holders.md) must be authenticated (signed in to the Alliance Business Suite) using their credentials to send a request to any [Alliance Business Platform](/Components/Alliance-Business-Platform.md) API. Some modules, such as [Media Portals](/Components/Modules/CMS.md), ICX Stores, and ABS Workplace, allow a few requests from anonymous users. However, they are the exception to the rule.
 
 ### Users
 
