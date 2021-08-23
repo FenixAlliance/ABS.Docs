@@ -45,6 +45,7 @@
 
 * [Components](Components.md)
 
+  * [Alliance Core Libraries](Components/Alliance-Core-Libraries.md)
   * [Alliance Business Model](Components/Alliance-Business-Model.md)
     * [Extensibility](Components/Alliance-Business-Model/Extensibility.md)
   * [Alliance Passport Service](Components/Alliance-Passport-Service.md)
