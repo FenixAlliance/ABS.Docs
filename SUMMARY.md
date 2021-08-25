@@ -84,6 +84,7 @@
   * [Official Modules](Components/Modules.md)
     * [Contact Sight](Components/Modules/CRM.md)
     * [Media Portals](Components/Modules/CMS.md)
+    * [eCommerce](Components/Modules/ECOMMERCE.md)
     * [Accounting Manager](Components/Modules/Accounting.md)
         * [Ledgers](Components/Modules/Accounting/Ledgers.md)
     * [Identity & Access Management](Components/Modules/IAM.md)
