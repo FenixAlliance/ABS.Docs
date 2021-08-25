@@ -96,4 +96,5 @@
 * [Advanced](Advanced.md)
 
 ## Credits
+* [Third Party Notices](/THIRD_PARTY_NOTICES.md)
 * [License](License.md)
