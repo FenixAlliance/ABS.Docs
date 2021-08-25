@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [Roadmap](Roadmap.md)
 * [API Reference](References.md)
 
 
