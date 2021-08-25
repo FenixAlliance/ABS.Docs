@@ -4,7 +4,7 @@ Welcome to the Alliance Business Suite documentation! We are on the mission to c
 
 We believe that knowing your customers and your business enables you to personalize each experience and optimizes efficiencies so you can earn customers for life.
 
-This documentation is constantly being developed and adapted to the latest version of the Alliance Business Suite and its goal is to provide an extensive guide for technical and non-technical audiences alike. At a very high level, this documentation provides guides on how to perform common tasks within the Alliance Business Suite, but it also digs deeper, sometimes, into technical aspects; but don't worry, we'll let you know the technical difficulty at the beginning of every guide.
+This documentation is constantly being developed and adapted to the latest version of the Alliance Business Suite and its goal is to provide an extensive guide for technical and non-technical audiences alike. At a very high level, this documentation provides guides on how to perform common tasks within the Alliance Business Suite, but it also digs deeper, sometimes, into technical details; but don't worry, we'll let you know the technical difficulty at the beginning of every guide.
 
 Some guides contained in this documentation require special [Business Permissions](/Components/Alliance-Passport-Service/Business-Permissions.md) or installable software. Requirements, if any, will be highlighted at the beginning of each guide.
 
