@@ -1,17 +1,14 @@
-# Introduction
+# About this Documentation
 
-Welcome to the Alliance Business Suite! We are delighted to offer you a suite of capabilities to ensure your business can exceed customer's expectations through next-generation experiences. We believe that knowing your customers and your business enables you to personalize each experience and optimizes efficiencies so you can earn customers for life.
+Welcome to the Alliance Business Suite documentation! We are on the mission to create the Ultimate Business Development Platform to provide you an unprecedented suite of capabilities to ensure your business can exceed customer's expectations through next-generation experiences. 
 
-The problem arose when we were trying to build our own business. There are a ton of solutions out there to help businesses manage their operations, but they are often expensive, complex, decentralized; or worst yet, their extensibility capabilities are, sometimes, close to non-existent.
+We believe that knowing your customers and your business enables you to personalize each experience and optimizes efficiencies so you can earn customers for life.
 
-We decided to create our own platform, knowing this could potentially cost way too much more than just paying for an existent solution, but we had something else in mind: if we could add value to our business and gain a competitive advantage through these tools, chances are you can too! 
+This documentation is constantly being developed and adapted to the latest version of the Alliance Business Suite and its goal is to provide an extensive guide for technical and non-technical audiences alike. At a very high level, this documentation provides guides on how to perform common tasks within the Alliance Business Suite, but it also digs deeper, sometimes, into technical aspects; but don't worry, we'll let you know the technical difficulty at the beginning of every guide.
 
-We started to build an enterprise LOB solution out of our own business applications to help businesses to address several key aspects of their day-to-day operations.
+Some guides contained in this documentation require special [Business Permissions](/Components/Alliance-Passport-Service/Business-Permissions.md) or installable software. Requirements, if any, will be highlighted at the beginning of each guide.
 
-Built on top of the [Alliance Business Platform](/Components/Alliance-Business-Platform.md), the [Alliance Business Suite](/Getting-started.md) provides customers with a simple, easy-to-use suite of modern business applications built to help you achieve operational excellence through extensibility and automation, driving improvements in data integrity and enabling faster, better decision making, and more effective actions.
+Some parts of this documentation are still being developed and changes are made to it every day, so please feel free to request further explanation or provide feedback about features you would like us to explain in more detail.
 
-# About Fenix Alliance
 
-## At Fenix Alliance, we are deeply committed to helping everyone around us to reach beyond expectations. 
 
-By delivering great experiences, smart solutions, and the flexibility your business needs, we are constantly pushing towards building close relationships with our clients and their businesses to better serve their needs.
