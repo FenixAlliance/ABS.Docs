@@ -18,7 +18,7 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
 
 1. [Start building your business](/Fundamentals.md).
 
-## Alliance Business Suite components
+## [Alliance Business Suite components](/Components.md)
 
 - ### [Alliance Core Libraries (ACL)](/Components/Alliance-Core-Libraries.md)
 - ### [Alliance Business Model (ABM)](/Components/Alliance-Business-Model.md)
