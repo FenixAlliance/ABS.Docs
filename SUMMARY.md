@@ -36,7 +36,7 @@
    * [Client Side-Apps](Web-Development/Client-Side-Apps.md)
    * [Sessions and State](Web-Development/Session-and-state-management.md)
 * [Web API Development](Web-API-Development.md)
-* [Themes and Modules](Themes-&-Modules.md)
+* [Module Development](Module-Development.md)
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
 
