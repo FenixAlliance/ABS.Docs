@@ -1,6 +1,4 @@
-
 # Alliance Business Model (ABM) Schema
----
 
 In a nutshell, the Alliance Business Model serves as the main dynamic data layer for the entire Alliance Business Suite.
 
