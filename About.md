@@ -42,6 +42,12 @@ If we determine that the issue is a duplicate of another, we will label it with 
 ## Answered questions
 If we determine that the issue is a question and have posted an answer, we will label it with the Resolution: Answered label. The issue will be automatically closed in 1 day of inactivity.
 
-Locking closed issues
+## Locking closed issues
 After an issue has been closed and had no activity for 30 days it will be automatically locked as resolved. This is done in order to reduce confusion as to where to post new comments. If you are still encountering the problem reported in an issue, or have a related question or bug report, feel free to open a new issue and link to the original (now locked) issue!
 
+## Reporting a Vulnerability
+
+Security issues and bugs should be reported privately to Fenix Alliance either by emailing support@fenix-alliance.com or via the portal at https://fenix-alliance.com.
+You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. 
+
+Please do not open issues for anything you think might have a security implication.
