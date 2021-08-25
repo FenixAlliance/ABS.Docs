@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Overview](README.md)
+* [About](About.md)
 * [Roadmap](Roadmap.md)
-* [Outlook](About.md)
 * [API Reference](References.md)
 
 ## About
@@ -99,5 +99,6 @@
 * [Advanced](Advanced.md)
 
 ## Credits
+* [Code of Conduct](CODE_OF_CONDUCT.md)
 * [Third Party Notices](Third-Party-Notices.md)
 * [License](License.md)
