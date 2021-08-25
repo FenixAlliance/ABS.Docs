@@ -14,4 +14,4 @@ To allow an **Identity** to perform an operation, you must include the necessary
 
 Business Permissions can be assigned to any APS Identity either as a single permission or through a role that contains the specified permission.
 
-Business Permissions can be granted through the [Alliance Business Studio](/Components/Alliance-Business-Studio.md) on the Network Manager section.
+Business Permissions can be granted through the [Alliance Business Studio](/Components/Alliance-Business-Studio.md) on the [Security Trail](/Components/Modules/SECURITY.md) Module.
