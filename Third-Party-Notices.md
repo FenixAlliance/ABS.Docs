@@ -1,4 +1,5 @@
 # Third Party Notices
+Third-party notices are provided solely for your information and include the original copyright and license which Fenix Alliance received with the third-party software. While Fenix Alliance is not the original author of the third-party materials, Fenix Alliance licenses these third-party materials to you under the terms set forth in the [EULA agreement](/License.md), except that components licensed under open source licenses requiring that such components remain under their original licenses, such as the GNU General Public License (GPL) or the GNU Lesser General Public License (LGPL), are being made available to you by Fenix Alliance under their original licensing terms. Fenix Alliance reserves all rights not expressly granted herein, whether by implication, estoppel, or otherwise.
 
 |Id|LicenseUrl|
 |--- |--- |
