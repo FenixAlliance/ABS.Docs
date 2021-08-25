@@ -72,9 +72,9 @@
       * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
       * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
 
-
-
   * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
+      * [Layout](Components/Alliance-Business-Studio/Layout.md)
+
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
   * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
     * [About](Components/Alliance-Business-Cloud/About.md)
