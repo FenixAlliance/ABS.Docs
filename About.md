@@ -28,18 +28,18 @@ In general, we recommend you open a new issue if you have a bug, feature request
 
 In general, we don't mind getting duplicate issues. It's easier for us to close duplicate issues than to discuss multiple root causes on a single issue! We may close your issue as a duplicate if we determine it has the same root cause as another. Don't worry! It's not a waste of our time!
 
-Needs Author Feedback
+## Needs Author Feedback
 If a contributor reviews an issue and determines that more information is needed from the author, they will post a comment requesting that information and apply the Needs: Author Feedback label. This label indicates that the author needs to post a response in order for us to continue investigating the issue.
 
 If the author does not post a response within 7 days, the issue will be automatically closed. If the author responds within 7 days after the issue is closed, the issue will be automatically re-opened. We recognize that you may not be able to respond immediately to our requests, we're happy to hear from you whenever you're able to provide the new information.
 
-PR: pending author input
+## PR: pending author input
 Similar to the Needs Author Feedback process above, PRs also require author input from time to time. When a member of our team asks for some follow-up changes from the author, we mark these PRs with pr: pending author input label. After doing so, we expect the author to respond within 14 days. If the author does not post a response or updates the PR within 14 days, the issue will be automatically closed. If the author responds within 7 days after the issue is closed, the issue will be automatically re-opened. We recognize that you may not be able to respond immediately to our requests, we're happy to hear from you whenever you're able to provide the new information.
 
-Duplicate issues
+## Duplicate issues
 If we determine that the issue is a duplicate of another, we will label it with the Resolution: Duplicate label. The issue will be automatically closed in 1 day of inactivity.
 
-Answered questions
+## Answered questions
 If we determine that the issue is a question and have posted an answer, we will label it with the Resolution: Answered label. The issue will be automatically closed in 1 day of inactivity.
 
 Locking closed issues
