@@ -1,4 +1,4 @@
-# Workflow Designer Module (CRM)
+# Workflow Designer Module
 
 Welcome to the **Alliance Business Suite | Workflow Designer Module** Documentation. 
 
