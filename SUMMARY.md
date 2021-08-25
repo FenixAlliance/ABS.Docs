@@ -82,10 +82,9 @@
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
   * [Official Modules](Components/Modules.md)
-
+    * [Contact Sight](Components/Modules/CRM.md)
+    * [Accounting Manager](Components/Modules/Accounting.md)
     * [Identity & Access Management](Components/Modules/IAM.md)
-    * [Contact Sight](Components/Modules/CRM.md)
-    * [Contact Sight](Components/Modules/CRM.md)
     * [Workflows Studio](Components/Modules/Workflows.md)
 
 ## Security
