@@ -103,5 +103,5 @@
 * [Changelog](Changelog.md)
 * [Contributing](Contributing.md)
 * [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Third Party Notices](Third-Party-Notices.md)
+* [Third Party Notices](THIRD_PARTY_NOTICES.md)
 * [License](License.md)
