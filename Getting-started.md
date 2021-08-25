@@ -17,14 +17,9 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
    -  [System Requirements](/Requirements.md)
    -  [Alliance Business Cloud](https://fenix-alliance.com/cloud)
 
-1. [Start building your business](/Fundamentals.md).
+1. Start building your business
+   - [Fundamentals](/Fundamentals.md)
+   - [Components](/Components.md)
 
-## [Alliance Business Suite components](/Components.md)
 
-- ### [Alliance Core Libraries (ACL)](/Components/Alliance-Core-Libraries.md)
-- ### [Alliance Business Model (ABM)](/Components/Alliance-Business-Model.md)
-- ### [Alliance Passport Services (APS)](/Components/Alliance-Passport-Service.md)
-- ### [Alliance Business Platform (ABP)](/Components/Alliance-Business-Platform.md)
-- ### [Alliance Business Studio (ABS)](/Components/Alliance-Business-Studio.md)
-- ### [Alliance Business Cloud (ABC)](/Components/Alliance-Business-Cloud.md)
 
