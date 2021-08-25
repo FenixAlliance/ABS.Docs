@@ -103,10 +103,10 @@ After your request has been authenticated and authorized, the Alliance Passport 
 - Delete
 
 
-To allow an **Identity** to perform an operation, you must include the necessary actions in a role and then assign the Identity the Role that grants action access to the affected resource type. 
+To allow an **Identity** to perform an operation, you must include the necessary actions in a role and then assign to the Identity the Role that grants action access to the affected resource type. 
 
 # Resources
-After the Alliance Passport Service Engine approves the operations in your request, it can be performed on the related resources within your account. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the `BusinessPermission` tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for Alliance Business Suite Resources.
+After the Alliance Passport Service Engine approves the operations in your request, it can be performed on the related ABM Records within the Alliance Business Model. A resource is an object that exists within an Alliance Business Suite instance. Examples include a Financial Account Record in the ABM, an IAM user, and a Storage File. The service defines a set of actions that can be performed on each resource through its exposed API Methods through either the REST Application Programming Interface or a GUI, like the Alliance Business Studio or a Portal. If you create a request to perform an unrelated action on a resource, that request is denied. For example, if you request to delete an IAM role but provide an IAM group resource, the request fails. Please refer to the `BusinessPermission` tables that identify which resources are affected by an action, see Actions, Resources, and Business Permissions for Alliance Business Suite Resources.
 
 
 
