@@ -84,6 +84,7 @@
   * [Official Modules](Components/Modules.md)
 
     * [Identity & Access Management](Components/Modules/IAM.md)
+    * [Workflows Studio](Components/Modules/Workflows.md)
 
 ## Security
 
