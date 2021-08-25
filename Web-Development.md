@@ -1,9 +1,5 @@
 # Introduction to Razor Templating Engine
 
-[[_TOC_]]
-
-By [Daniel Lozano](https://twitter.com/DLozanoNavas)
-
 Portal Pages can make coding page-focused scenarios easier and more productive than using controllers and views.
 
 This document provides an introduction to the Alliance Business Suite - Razor Templating Engine
