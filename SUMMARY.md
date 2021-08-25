@@ -81,7 +81,7 @@
     * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
-  * [Core Modules](Components/Modules.md)
+  * [Official Modules](Components/Modules.md)
 
     * [Identity & Access Management](Components/Modules/IAM.md)
 
