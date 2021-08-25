@@ -2,12 +2,12 @@
 
 * [Overview](README.md)
 * [Roadmap](Roadmap.md)
+* [Outlook](About.md)
 * [API Reference](References.md)
 
 
 ## About
 
-* [Outlook](About.md)
 * [Requirements](Requirements.md)
 * [Getting Started](Getting-started.md)
 * [Fundamentals](Fundamentals.md)
