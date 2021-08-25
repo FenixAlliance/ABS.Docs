@@ -1,11 +1,7 @@
-# Table of contents
-
 * [Overview](README.md)
 * [About](About.md)
 * [Roadmap](Roadmap.md)
 * [API Reference](References.md)
-
-## About
 
 * [Requirements](Requirements.md)
 * [Getting Started](Getting-started.md)
@@ -40,8 +36,6 @@
 * [Internationalization](Internationalization.md)
   * [Localization Strings](Internationalization/Localization-Strings.md)
 
-
-## Components
 
 * [Components](Components.md)
 
@@ -91,17 +85,11 @@
     * [Identity & Access Management](Components/Modules/IAM.md)
     * [Workflows Studio](Components/Modules/Workflows.md)
 
-## Security
 
 * [Security](Security.md)
-
-## Advanced
-
 * [Advanced](Advanced.md)
-
-## Credits
-* [Contributing](Contributing.md)
 * [Changelog](Changelog.md)
+* [Contributing](Contributing.md)
 * [Code of Conduct](CODE_OF_CONDUCT.md)
 * [Third Party Notices](Third-Party-Notices.md)
 * [License](License.md)
