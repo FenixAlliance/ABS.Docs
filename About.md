@@ -10,7 +10,7 @@ Some guides contained in this documentation require special [Business Permission
 
 Some parts of this documentation are still being developed and changes are made to it every day, so please feel free to request further explanation or provide feedback about features you would like us to explain in more detail.
 
-# Contributing to the Alliance Business Suite and/or it's documentation
+# Contributing to the Alliance Business Suite and/or its documentation
 
 Woohoo! You've decided to contribute? That's amazing! We want to make contributions to the Alliance Business Suite as easy and frictionless as we can. Contributing requires a GitHub account. If you don't have an account, follow the instructions for the [GitHub account setup](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account). 
 
