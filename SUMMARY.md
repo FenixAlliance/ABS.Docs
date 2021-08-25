@@ -99,6 +99,7 @@
 * [Advanced](Advanced.md)
 
 ## Credits
+* [Changelog](Changelog.md)
 * [Code of Conduct](CODE_OF_CONDUCT.md)
 * [Third Party Notices](Third-Party-Notices.md)
 * [License](License.md)
