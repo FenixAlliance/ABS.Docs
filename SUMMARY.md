@@ -83,6 +83,7 @@
 
   * [Official Modules](Components/Modules.md)
     * [Contact Sight](Components/Modules/CRM.md)
+    * [Media Portals](Components/Modules/CMS.md)
     * [Accounting Manager](Components/Modules/Accounting.md)
     * [Identity & Access Management](Components/Modules/IAM.md)
     * [Workflows Studio](Components/Modules/Workflows.md)
