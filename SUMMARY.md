@@ -83,7 +83,7 @@
 
   * [Core Modules](Components/Modules.md)
 
-    * [Identity & Access Management](Components/Alliance-Passport-Service/Identity-and-Access-Manager.md)
+    * [Identity & Access Management](Components/Modules/IAM.md)
 
 ## Security
 
