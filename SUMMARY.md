@@ -5,7 +5,6 @@
 * [Outlook](About.md)
 * [API Reference](References.md)
 
-
 ## About
 
 * [Requirements](Requirements.md)
