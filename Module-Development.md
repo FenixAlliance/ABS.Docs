@@ -1,4 +1,4 @@
-# Modules for the Alliance Business Suite
+# Developing Modules for the Alliance Business Suite
 
 The Alliance Business Suite is a modular application platform. This means that you can create custom functionalities in the form of modules and add them to your ABS instance.
 
