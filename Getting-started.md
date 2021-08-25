@@ -20,10 +20,10 @@ The Alliance Business Suite lets you build outstanding and secure web and mobile
 
 ## Alliance Business Suite components
 
-- ### [Alliance Business Model (ABM)](/Products/Alliance-Business-Model.html)
-- ### [Alliance Passport Services (APS)](/Products/Alliance-Passport-Services.html)
-- ### [Alliance Business Platform (ABP)](/Products/Alliance-Business-Platform.html)
-- ### [Alliance Business Studio (ABS)](/Products/Alliance-Business-Studio.html)
-- ### [Alliance Business Cloud (ABC)](/Products/Alliance-Business-Cloud.html)
-- ### [Infinity Comex Engine (ICX)](/Products/Infinity-Comex-Engine.html)
+- ### [Alliance Core Libraries (ACL)](/Components/Alliance-Core-Libraries.md)
+- ### [Alliance Business Model (ABM)](/Components/Alliance-Business-Model.md)
+- ### [Alliance Passport Services (APS)](/Components/Alliance-Passport-Service.md)
+- ### [Alliance Business Platform (ABP)](/Components/Alliance-Business-Platform.md)
+- ### [Alliance Business Studio (ABS)](/Components/Alliance-Business-Studio.md)
+- ### [Alliance Business Cloud (ABC)](/Components/Alliance-Business-Cloud.md)
 
