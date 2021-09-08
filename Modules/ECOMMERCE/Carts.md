@@ -1,11 +1,10 @@
----
-description: >-
-  Carts are a core part of our application. Carts allow guests, users, and businesses to navigate and customize our offers for their specific needs and preferences through Cart Registrations.
----
-
 # Carts
 
-Carts define the currency and localization for the entire interface. This means that it will control the display currency for things like offers pricing, CRM and accounting suite records, and personalize our offers based on your country.
+Carts are a core part of our application. Carts allow guests, users, and businesses to navigate and customize our offers for their specific needs and preferences through Cart Registrations.
+
+## Overview
+
+Carts define the currency and localization for the entire interface. This means that it will control the display currency for things like offers pricing, CRM, and accounting suite records, and personalize our offers based on your country.
 
 Keep in mind that currency exchange rates are only for display purposes and you will be able to select the base price for every "**Price Input**". This will allow us to make conversions based on current and historical exchange rates, depending on the record type.
 
@@ -15,7 +14,7 @@ Adding products from Infinity Comex to your cart is as easy as clicking a button
 
 ## Services in your cart.
 
-When you register a service to your cart, it will be linked to your account through a **Service Cart Registration**. Service cart registrations let you pick from a set of available options like Project Management Methodology, Frontend Stacks, Framework, Programming Language \(Based on the selected Framework\), Operating System and more.
+When you register a service to your cart, it will be linked to your account through a **Service Cart Registration**. Service cart registrations let you pick from a set of available options like Project Management Methodology, Frontend Stacks, Framework, Programming Language \(Based on the selected Framework\), Operating System, and more.
 
 ## Cloud Resources in your cart.
 
@@ -47,7 +46,7 @@ Yes, after a few months we finally found the answer. Sadly, Mike is on vacation 
 
 ## Registrations Timespan Policy
 
-When you add a product, a service or a managed cloud resource to your cart, it will create a **Cart Registration**. These registrations will be available for you to customize your order preferences and place orders or provisioning requests in just a click. Cart registrations for your Alliance ID Tenant Cart won't be deleted until the first day of each month. 
+When you add a product, a service, or a managed cloud resource to your cart, it will create a **Cart Registration**. These registrations will be available for you to customize your order preferences and place orders or provisioning requests with just a click. Cart registrations for your Alliance ID Tenant Cart won't be deleted until the first day of each month. 
 
 
 # Business Carts
