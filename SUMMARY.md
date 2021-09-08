@@ -85,7 +85,7 @@
 * [Official Modules](Modules.md)
   * [Contact Sight](Modules/CRM.md)
   * [Media Portals](Modules/CMS.md)
-  * [Logistics](Modules/Logistics.md)
+  * [Logistics](Modules/LOGISTICS.md)
   * [eCommerce](Modules/ECOMMERCE.md)
       * [Carts](Modules/ECOMMERCE/Carts.md)
       * [Wishlists](Modules/ECOMMERCE/Wishlists.md)
