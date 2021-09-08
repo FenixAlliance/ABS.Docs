@@ -1,4 +1,4 @@
-# Welcome to the Infinity Comex Engine Documentation
+# Welcome to the iCommerce Engine Documentation
 
 Infinity Comex Engine builds on top of the proven Alliance Business Suite Retail capabilities to help businesses to deliver a comprehensive omnichannel solution that unifies back-office, in-store, call center, and digital experiences. Infinity Comex Engine enables you to build brand loyalty through a white-labeled store built to deliver personalized customer engagements, increase revenue, boost employee productivity, optimize operations to reduce costs, and drive supply chain efficiencies, ultimately delivering better business outcomes.
 
