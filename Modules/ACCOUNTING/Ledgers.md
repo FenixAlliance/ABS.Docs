@@ -14,7 +14,7 @@ Transactions are recorded throughout the year by debiting and crediting accounts
 
 The ledger account may be in the form of a written record if accounting is done by hand or in the form of electronic records when accounting software packages are used.
 
-# How to create a Ledger?
+# How to write to a Ledger?
 The Alliance Business Suite Accounting Module uses the double-entry bookkeeping method. So writing to a ledger means recording transactions into it. Each transaction is recorded into at least two ledger accounts. The entries have debit as well as credit transactions and are posted in two columns. 
 
 The Alliance Business Suite Accounting Module exposes a general ledger to each business tenant in the system. This ledger employs the double-entry bookkeeping method, which means that each financial transaction affects at least two general ledger accounts and each entry has a debit and a credit transaction. Double-entry transactions are posted in two columns, with debit postings on the left and credit entries on the right, **and the total of all debit and credit entries must balance** before recording the transaction.
