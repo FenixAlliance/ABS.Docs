@@ -10,9 +10,9 @@ The Alliance Business Suite and the infinity Comex engine are meant to be togeth
 
 - **Everything you need to protect your customers and your business.**
 
-The [Alliance Business Platform](/Products/Alliance-Business-Platform)'s and [Alliance Passport Services](/Products/Alliance-Passport-Services)' security features and standards are deeply integrated into the Infinity Comex Engine. Authentication and Authorization flows are defined at a platform level by configuring (or extending) the [APS Engine](/Products/Alliance-Passport-Services). Then, also at a platform level, security features like HTTPS enforcement, Encryption, HSTS, CORS, and others can be enabled, disabled, or configured through the Alliance Business Suite - Admin Portal. Also, EU General Data Protection Regulation (GDPR) support is enabled for both ABP and ICX Engines.
+The [Alliance Business Platform](/Components/Alliance-Business-Platform.md)'s and [Alliance Passport Services](/Components/Alliance-Passport-Service.md)' security features and standards are deeply integrated into the Infinity Comex Engine. Authentication and Authorization flows are defined at a platform level by configuring (or extending) the [APS Engine](/Components/Alliance-Passport-Service.md). Then, also at a platform level, security features like HTTPS enforcement, Encryption, HSTS, CORS, and others can be enabled, disabled, or configured through the Alliance Business Suite - Admin Portal. Also, EU General Data Protection Regulation (GDPR) support is enabled for both ABP and ICX Engines.
 
-To learn more about Data Protection across the Alliance Business Suite, please visit [this link](/Security/Data-Protection).
+To learn more about Data Protection across the Alliance Business Suite, please visit [this link](/Security.md).
 
 - **Everything you need to streamline your logistics and operations.**
 
