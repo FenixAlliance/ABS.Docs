@@ -1,4 +1,3 @@
-ASSETS
 IAM
 ABS-%7C-ContactSight-(CRM)
 ABS-%7C-Content-Portals-(CMS)
@@ -14,6 +13,7 @@ FHIR
 BOTS
 EAMS
 HRMS
+ASSETS
 CLOUD
 SOCIAL
 CRYPTO
