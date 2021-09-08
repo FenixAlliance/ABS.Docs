@@ -41,7 +41,7 @@ The format of a journal is simple. It includes the transaction date, particulars
 The format of a journal:
 
 | Date | Particulars | L.F. | Debit | Credit |
-|--|--|--|--|--|
+|------|-------------|------|-------|--------|
 | Transaction date |Account title and details  | Ledger folio number  | Amt. | Amt. |
 
 
