@@ -52,7 +52,7 @@ The format of a ledger:
 
 
 | Date |Particulars  | Folio Number | Amount | Date | Particulars | Folio Number | Amount |
-|--|--|--|--|--|--|--|--|
+|------|-------------|--------------|--------|------|-------------|--------------|--------|
 | Transaction date | Account name |  | Amt.  |  Transaction date|Account name  |  |Amt.  |
 
 Unlike a journal, some ledger accounts start with an opening balance that is the closing balance of the previous year. Also, in the end, the ledger amounts should be balanced.
