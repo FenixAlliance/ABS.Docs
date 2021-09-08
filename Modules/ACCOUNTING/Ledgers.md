@@ -21,13 +21,6 @@ The Alliance Business Suite Accounting Module exposes a general ledger to each b
 
 Ledgers break up the financial information from the journals into specific accounts such as Cash, Accounts Receivable, and Sales, on their own sheets. This allows you to see the details of all your transactions.
 
-Make a ledger for each account. For example, a cash account ledger will contain all the cash transactions of your business. For unusual or odd expenses, make a general ledger account
-Make columns on the far left of the page for the date, journal number, and description
-Make columns on the left side for debit, credit, and balance. Debit refers to the money you receive while credit refers to the money that you paid or owe. Balance is the difference between the debit and credit
-Enter the information from the journals into related accounts. Place related debits and credits side by side. Calculate the balance you’ve earned or owe
-Record and make changes to the transactions as they occur. If you’ve made a journal entry, post it to the ledger immediately
-Combine the different accounts to make a full ledger. The front page includes the chart of accounts, listing each account in the ledger and its number
-The next step in the accounting cycle is to create a trial balance. The information in the ledger accounts is summed up into account level totals in the trial balance report. The trial balance totals are matched and used to compile financial statements.
 
 # What’s the Difference Between a Journal and a Ledger?
 The journal and ledger both play an important role in the accounting process. The business transactions are primarily recorded in the journal and thereafter posted into the ledger under respective heads. While many financial transactions are posted in both the journal and ledger, there are significant differences in the purpose and function of each of these accounting books.
