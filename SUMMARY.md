@@ -85,6 +85,7 @@
 * [Official Modules](Modules.md)
   * [Accounting](Modules/Accounting.md)
       * [Ledgers](Modules/Accounting/Ledgers.md)
+  * [Assets Manager](Modules/Assets.md)
   * [Contact Sight](Modules/CRM.md)
   * [eCommerce](Modules/ECOMMERCE.md)
       * [Carts](Modules/ECOMMERCE/Carts.md)
