@@ -82,14 +82,17 @@
     * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
-  * [Official Modules](Components/Modules.md)
-    * [Contact Sight](Components/Modules/CRM.md)
-    * [Media Portals](Components/Modules/CMS.md)
-    * [eCommerce](Components/Modules/ECOMMERCE.md)
-    * [Accounting Manager](Components/Modules/Accounting.md)
-        * [Ledgers](Components/Modules/Accounting/Ledgers.md)
-    * [Identity & Access Management](Components/Modules/IAM.md)
-    * [Workflows Studio](Components/Modules/Workflows.md)
+  * [Official Modules](Modules.md)
+    * [Contact Sight](Modules/CRM.md)
+    * [Media Portals](Modules/CMS.md)
+    * [eCommerce](Modules/ECOMMERCE.md)
+        * [Carts](Modules/ECOMMERCE/Carts.md)
+        * [Carts](Modules/ECOMMERCE/Carts.md)
+
+    * [Accounting Manager](Modules/Accounting.md)
+        * [Ledgers](Modules/Accounting/Ledgers.md)
+    * [Identity & Access Management](Modules/IAM.md)
+    * [Workflows Studio](Modules/Workflows.md)
 
 ## Security
 
