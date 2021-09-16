@@ -102,7 +102,7 @@
       * [Shipping](Modules/ECOMMERCE/Shipping.md)
   * [Logistics](Modules/LOGISTICS.md)
     * [Stock Items](Modules/LOGISTICS/Stock-Items.md)
-* [Media Portals](Modules/CMS.md)
+  * [Media Portals](Modules/CMS.md)
   * [Workflows Studio](Modules/Workflows.md)
 
 ## Security
