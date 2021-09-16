@@ -31,7 +31,7 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
-- [ ] ML-Based eCommerce Recommendation Engine
+- ✅ ML-Based eCommerce Recommendation Engine
 - ✅ Template Definitions
 - ✅ ML-Based Spam Detection Engine
 - ✅ In-Studio Live Chat Manager
