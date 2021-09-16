@@ -1,6 +1,6 @@
 # Creating a Module
 
-To create a Module for the Alliance Business Suite you just need to build a Razor Class Library containing your custom Controllers, pages, components and views. as a NuGet Package and then upload it into your Alliance Business Suite instance. 
+To create a Module for the Alliance Business Suite you just need to build a Razor Class Library containing your custom Controllers, pages, components, and views. as a NuGet Package and then upload it into your Alliance Business Suite instance. 
 
 If your RCL depends on other Nuget Packages, those DLLs will need to be copied into your Module's NuGet Package for your custom functionality to work.
 
