@@ -100,7 +100,8 @@
       * [Shipping](Modules/ECOMMERCE/Shipping.md)
   * [Identity & Access Management](Modules/IAM.md)
   * [Logistics](Modules/LOGISTICS.md)
-  * [Media Portals](Modules/CMS.md)
+        * [Shipping](Modules/LOGISTICS/.md)
+* [Media Portals](Modules/CMS.md)
   * [Workflows Studio](Modules/Workflows.md)
 
 ## Security
