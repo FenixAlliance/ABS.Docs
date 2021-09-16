@@ -39,7 +39,6 @@ V.1.3 ( release: July 12, 2022 )
 - ✅ Workflow Manager Engine (Experimental)
 - ✅ Workflow Visual Designer (Experimental)
 - ✅ ML-Based Language Detection Engine
-- ✅ ML-Based Language Detection Engine
 - ✅ Fluid Support (Experimental)
 - ✅ Email Template Definitions
 - ✅ Blazor Support (Experimental)
