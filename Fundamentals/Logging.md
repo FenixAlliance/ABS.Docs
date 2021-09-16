@@ -8,7 +8,7 @@ using Serilog;
 var position = new { Latitude = 25, Longitude = 134 };
 var elapsedMs = 34;
 
-log.Information("Processed {@Position} in {Elapsed:000} ms.", position, elapsedMs);
+Log.Information("Processed {@Position} in {Elapsed:000} ms.", position, elapsedMs);
 
 ```
 
@@ -24,3 +24,7 @@ The :000 segment following Elapsed is a standard .NET format string that affects
 ```
 09:14:22 [Information] Processed { Latitude: 25, Longitude: 134 } in 034 ms.
 ```
+
+Through the Alliance Business Studio, customers are able to manage these logs without the need to access the server directly.
+
+To manage logs for your Alliance Business Suite instance, navigate to the `/Studio/Network/Logs` route on any configured [Web Portal](/Web-Development/Web-Portals.md).
