@@ -98,7 +98,7 @@
       * [Subscriptions](Modules/ECOMMERCE/Subscriptions.md)
       * [Payments](Modules/ECOMMERCE/Payments.md)
       * [Shipping](Modules/ECOMMERCE/Shipping.md)
-  * [Identity & Access Management](Modules/IAM.md)
+  * [IAM](Modules/IAM.md)
   * [Logistics](Modules/LOGISTICS.md)
     * [Stock Items](Modules/LOGISTICS/Stock-Items.md)
 * [Media Portals](Modules/CMS.md)
