@@ -31,7 +31,7 @@ The options table has a similar structure to the three metadata tables. It has t
 
 ## Option Types.
 
-GenericOptins have different types (also called scopes). As of v1.2.0, the following types are available:
+GenericOptins have different types (also called scopes). As of v1.3.0, the following types are available:
 
 - **AccountHolderOption**: An option that's bound to an account holder and, optionally, to a Web Portal.
 - **BusinessOption**: An option that's bound to a Business Tenant and, optionally, to a Web Portal.
