@@ -84,8 +84,10 @@
     * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
 * [Official Modules](Modules.md)
+  * [IAM](Modules/IAM.md)
   * [Accounting](Modules/Accounting.md)
       * [Ledgers](Modules/Accounting/Ledgers.md)
+      * [Ledgers](Modules/Accounting/Accounts.md)
   * [Assets Manager](Modules/Assets.md)
   * [Contact Sight](Modules/CRM.md)
   * [eCommerce](Modules/ECOMMERCE.md)
@@ -98,7 +100,6 @@
       * [Subscriptions](Modules/ECOMMERCE/Subscriptions.md)
       * [Payments](Modules/ECOMMERCE/Payments.md)
       * [Shipping](Modules/ECOMMERCE/Shipping.md)
-  * [IAM](Modules/IAM.md)
   * [Logistics](Modules/LOGISTICS.md)
     * [Stock Items](Modules/LOGISTICS/Stock-Items.md)
 * [Media Portals](Modules/CMS.md)
