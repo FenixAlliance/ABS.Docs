@@ -1,12 +1,9 @@
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
-V.1.3 ( release: July 12, 2023 )
-- [ ] UBL 2.1 Support
-- [ ] Process Canvas.
 
 V.1.3 ( release: July 12, 2022 )
-- [ ] .NET SDK
+- [ ] Node.js SDK 
 - [ ] PowerShell SDK 
 - [ ] .NET 6.0 LTS Update
 - [ ] Template Definitions
@@ -19,6 +16,8 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Dynamic Dashboards
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
+- [ ] UBL 2.1 Support
+- [ ] Process Canvas.
 - [ ] Granular Property Set Access
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
@@ -38,11 +37,14 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] ML-Based eCommerce Recommendation Engine
 - ✅ Code Editor: Diagnostics Highlighting
 - ✅ Workflow Manager Engine (Experimental)
+- ✅ Workflow Visual Designer (Experimental)
 - ✅ ML-Based Language Detection Engine
 - ✅ ML-Based Language Detection Engine
 - ✅ Fluid Support (Experimental)
 - ✅ Email Template Definitions
 - ✅ Blazor Support (Experimental)
+- ✅ Options & Settings API
+- ✅ .NET SDK
 
 V.1.2 LTS ( release: July 12, 2021 )
 
