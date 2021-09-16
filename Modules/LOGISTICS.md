@@ -10,5 +10,9 @@ The key to an efficient and profitable business is total visibility into the inv
 
 ## Shipping Management
 
+We are making it easier than ever before to sell physical products by offering integrations and extensibility capabilities to connect your favorite shipping carriers, showing live rates, or adding custom solutions.
+
 
 ## eCommerce Extension
+The iCommerce Module builds on top of the Logistics Module to enable customers to centrally manage their e-commerce stores using the tremendous capabilities of the Logistics Module.
+
