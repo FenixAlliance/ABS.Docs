@@ -24,13 +24,13 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] In-Portal Live Chat Widget
 - [ ] Code Editor: Razor Syntax Highlighting 
 - [ ] ML-Based Search Results Ranking Engine
-- [ ] ML-Based Natural Language Processing Engine
 - [ ] ML-Based Fraud Detection Engine (Anomaly Detection), (Binary Classification)
 - [ ] ML-Based Price Prediction Engine
 - [ ] ML-Based Sales Spike Detection Engine (Anomaly Detection)
 - [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
+- ✅ ML-Based Natural Language Processing Engine
 - ✅ ML-Based eCommerce Recommendation Engine
 - ✅ Template Definitions
 - ✅ ML-Based Spam Detection Engine
