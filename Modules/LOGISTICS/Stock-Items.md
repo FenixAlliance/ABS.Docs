@@ -45,7 +45,8 @@ Stock Items are identified, at the lowest level, by a Globally Unique Identifier
 | MPN | Manufacturer Part Number. It is a unique number that is issued by manufacturers to identify individual products.  |
 | Supplier Code | Supplier Code represents the Primary Supplier Code used to correlate each Stock Item with the Primary Supplier Standard. |
 
-
+### Filtering
+The Stock Items Grid contains powerful filtering capabilities. 
 
 ### Barcoding
 
@@ -54,6 +55,18 @@ The Stock Items Manager contains Barcoding Capabilities, meaning you can generat
 To create or update a barcode, use the Stock Item Management Form and click on the "Scan Barcode" button. This will ask you permission to use your device's camera to start scanning. Once a valid barcode is recognized, the system will automatically fill out the proper fields on the Stock Item Management Form. 
 
 Barcoding in the Logistics module enables other Modules such as Sales, Accounting, POS, and even custom modules to filter out Stock Items using either a desktop or a smartphone camera.
+
+
+## Bulk Actions
+
+The  Stock Items Management View allows customers to perform bulk actions on Stock Items, such as adding or removing pricing policies (discounts, surcharges, price adjustments), Taxes, Relations, and more.
+
+To perform a bulk action, select the Stock Items you want to update by ticking the checkbox on the left side of each Stock Item. You can check and filter stock items without losing your current selection state. Then click on the "Bulk Actions" button. 
+
+A Modal Prompt will appear. Select the bulk action you want to perform, configure your action and click on the Execute Button. 
+
+Bulk actions are blazing fast (executed in the order of seconds for hundreds of records), but performing bulk actions on thousands of records can take a little while.
+
 
 
 
