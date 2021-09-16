@@ -6,7 +6,6 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Node.js SDK 
 - [ ] PowerShell SDK 
 - [ ] .NET 6.0 LTS Update
-- [ ] Template Definitions
 - [ ] Agreement Template Definitions
 - [ ] Email Signature Template Definitions
 - [ ] Document Template Definitions
@@ -22,10 +21,8 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
 - [ ] Studio Static Localization
-- [ ] In-Studio Live Chat Manager
 - [ ] In-Portal Live Chat Widget
 - [ ] Code Editor: Razor Syntax Highlighting 
-- [ ] ML-Based Spam Detection Engine
 - [ ] ML-Based Search Results Ranking Engine
 - [ ] ML-Based Natural Language Processing Engine
 - [ ] ML-Based Fraud Detection Engine (Anomaly Detection), (Binary Classification)
@@ -35,6 +32,9 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
 - [ ] ML-Based eCommerce Recommendation Engine
+- ✅ Template Definitions
+- ✅ ML-Based Spam Detection Engine
+- ✅ In-Studio Live Chat Manager
 - ✅ Code Editor: Diagnostics Highlighting
 - ✅ Workflow Manager Engine (Experimental)
 - ✅ Workflow Visual Designer (Experimental)
