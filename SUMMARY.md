@@ -104,6 +104,9 @@
     * [Stock Items](Modules/LOGISTICS/Stock-Items.md)
   * [Media Portals](Modules/CMS.md)
   * [Workflows Studio](Modules/Workflows.md)
+* [Official Integrations](Integrations.md)
+  * [Facebook](Integrations/Facebook.md)
+    * [Commerce](Integrations/Facebook/Commerce.md)
 
 ## Security
 
