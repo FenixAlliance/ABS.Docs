@@ -6,6 +6,11 @@ To configure this capability, you will need to set up any new feed, and once a f
 
 Although feeds are multi-currency, they display the base amount without shipment nor tax data, but we're currently working on multi-country feeds. 🥳
 
+
+The data endpoint to point Google Merchant Center to can be constructed using the following route:
+
+ `https://your-portal-domain.com/api/v2/Integrations/Google/Merchant/Catalog?CurrencyID=USD`
+
 # Configuring survey opt-in 
 
 To set up the Google Merchant Survey Opt-In, all you need to do is to plug your Google Merchant ID into the integration configuration page.
