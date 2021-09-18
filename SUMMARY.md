@@ -87,6 +87,7 @@
   * [IAM](Modules/IAM.md)
   * [Accounting](Modules/Accounting.md)
       * [Accounts](Modules/Accounting/Accounts.md)
+      * [Billing](Modules/Accounting/Billing.md)
       * [Ledgers](Modules/Accounting/Ledgers.md)
   * [Assets Manager](Modules/Assets.md)
   * [Contact Sight](Modules/CRM.md)
