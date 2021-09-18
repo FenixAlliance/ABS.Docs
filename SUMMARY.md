@@ -105,6 +105,9 @@
   * [Media Portals](Modules/CMS.md)
   * [Workflows Studio](Modules/Workflows.md)
 * [Official Integrations](Integrations.md)
+  * [ePayco](Integrations/ePayco.md)
+  * [Stripe](Integrations/Stripe.md)
+
   * [Facebook](Integrations/Facebook.md)
     * [Commerce](Integrations/Facebook/Commerce.md)
 
