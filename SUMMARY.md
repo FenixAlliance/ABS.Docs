@@ -111,6 +111,8 @@
   * [Google](Integrations/Google.md)
     * [Merchant](Integrations/Google/Merchant.md)
     * [My Business](Integrations/Google/My-Business.md)
+  * [MercadoLibre](Integrations/Mercado-Libre.md)
+
   * [Stripe](Integrations/Stripe.md)
 
 ## Security
