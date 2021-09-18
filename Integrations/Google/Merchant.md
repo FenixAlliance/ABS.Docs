@@ -13,3 +13,5 @@ The data endpoint to point Google Merchant Center to can be constructed using th
 # Configuring survey opt-in 
 
 To set up the Google Merchant Survey Opt-In, all you need to do is to plug your Google Merchant ID into the integration configuration page.
+
+To set up your Merchant ID, navigate to the Studio on any Web Portal, head to Integration > Google > Merchant and place your Google Merchant ID on the form field, then save changes.
