@@ -5,6 +5,7 @@ The Alliance Business Suite's Google Merchant Integration can help you upload yo
 To configure this capability, you will need to set up any new feed, and once a feed is registered, it will be updated on a regular basis without having to register it again.
 
 Although feeds are multi-currency, they display the base amount without shipment nor tax data, but we're currently working on multi-country feeds. 🥳
+
 The data endpoint to point Google Merchant Center to can be constructed using the following route:
 
  `https://your-portal-domain.com/api/v2/Integrations/Google/Merchant/Catalog?CurrencyID=USD`
