@@ -110,7 +110,6 @@
     * [Commerce](Integrations/Facebook/Commerce.md)
   * [Google](Integrations/Google.md)
     * [Merchant](Integrations/Google/Merchant.md)
-
   * [Stripe](Integrations/Stripe.md)
 
 ## Security
