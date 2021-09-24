@@ -5,7 +5,7 @@ By leveraging industry-leading APIs from vendors like MasterCard, Visa, and seve
 We are deeply committed to your privacy. At Fenix Alliance, we do not store credit cards. We encrypt and mask every single bit, even while at rest in the cloud. we ask for authorization before every data transfer and take other extreme measures so that our customers can rest at ease knowing that they are always in control of their data. *
 
 ## Test Credit Cards
-### Aceptada
+### Accepted
 
 ```
 Franchise: Visa
