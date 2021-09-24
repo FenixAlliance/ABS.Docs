@@ -1,8 +1,22 @@
 # Welcome to the Alliance Pay Platform Documentation
 
-By leveraging industry-leading APIs from vendors like MasterCard, Visa, and several payment gateways, Alliance Pay Platform provides multi-channel global payment processing services, advanced fraud prevention, and risk management solutions to every merchant's store.
+By leveraging industry-leading APIs from vendors like MasterCard, Visa, and several payment gateways, Alliance Pay Platform provides multi-channel global payment processing services, advanced fraud prevention, and risk management solutions.
 
-We are deeply committed to your privacy. At Fenix Alliance, we do not store credit cards. We encrypt and mask every single bit, even while at rest in the cloud. we ask for authorization before every data transfer and take other extreme measures so that our customers can rest at ease knowing that they are always in control of their data. *
+## Features
+
+- **Instant activation**: our clients can make transactions in 2 minutes. It also allows for fully online incorporation with minimal documentation.
+- **Easy integration**: through SDKs for several languages, integrate, and start using Alliance Payment Platform in less than an hour.
+- **API Driven**: Build your business at scale with our full API-based automation that requires no manual intervention.
+- **Multiple payment methods**: we have at your disposal more than 22 payment methods available. And others will constantly be added.
+- **The best support**: it is based on tickets, telephone and chat, which are always available to help you solve each step you take.
+- **Admin Dashboard** - Refers to real-time data and information in your Alliance Payment Platform dashboard to make informed business decisions.
+- **Secure**: based on compliant standard PCI DSS Level 1 transactional processing services.
+
+## Prerequisites
+
+**To Pay:** To pay an order using the Alliance Pay Platform, navigate to your Dashboard > Orders, select the order you want to confirm.
+
+**To receive payments:** To receive payments, you must create a Cloud Business Tenant using the Merchant Center. 
 
 ## Test Credit Cards
 ### Accepted
