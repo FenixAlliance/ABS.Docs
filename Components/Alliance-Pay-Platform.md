@@ -85,8 +85,6 @@ Response: Transaction pending for validation
 
 With our extensive experience in payment processing, collection solves the main needs of your company when you need to receive payments on the issuance of invoices or provision of services. To learn more about these features visit the page fenix-alliance.com/pay/portals
 
-
-Collection portal allows small or large companies to control the payments of their invoices or receive collections in a simplified way through different options and rules.
-
+Collection portals are white-labeled web applications that allow small or large companies to control the payments of their invoices or receive collections in a simplified way through different options and rules.
 
 Below you can learn how to manage the collection portal and get the most out of its functionalities
