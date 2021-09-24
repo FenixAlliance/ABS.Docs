@@ -4,46 +4,46 @@
 ### Aceptada
 
 ```
-Franquicia: Visa
-Número: 4575623182290326
-Fecha Expiración: 12/2025
+Franchise: Visa
+Number: 4575623182290326
+Expiration: 12/2025
 CVV: 123
-Estado: Aceptada
-Response: Aceptada
+Status: Accepted
+Response: Accepted
 ```
 
 
-### Fondos insuficientes
+### Insufficient Funds
 
 ```
-Franquicia: Visa
-Número: 4151611527583283
-Fecha Expiración: 12/2025
+Franchise: Visa
+Number: 4151611527583283
+Expiration: 12/2025
 CVV: 123
-Estado: Rechazada
-Response: Fondos insuficientes
+Status: Declined
+Response: Insufficient Funds
 ```
 
 
-### Fallida
+### Failed
 
 ```
-Franquicia: Mastercard
-Número: 5170394490379427
-Fecha Expiración: 12/2025
+Franchise: Mastercard
+Number: 5170394490379427
+Expiration: 12/2025
 CVV: 123
-Estado: Fallida
-Response: Error de comunicación con el centro de autorizaciones
+Status: Failed
+Response: Communication error with the authorization center
 ```
 
 
 ### Pendiente
 
 ```
-Franquicia: American Express
-Número: 373118856457642
-Fecha Expiración: 12/2025
+Franchise: American Express
+Number: 373118856457642
+Expiration: 12/2025
 CVV: 123
 Estado: Pendiente
-Response: Transacción pendiente por validación
+Response: Transaction pending for validation
 ```
