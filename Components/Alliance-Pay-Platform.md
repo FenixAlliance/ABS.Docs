@@ -1,6 +1,10 @@
-# Medios de pruebas
+# Welcome to the Alliance Pay Platform Documentation
 
-## Tarjetas de Crédito de Pruebas
+By leveraging industry-leading APIs from vendors like MasterCard, Visa, and several payment gateways, Alliance Pay Platform provides multi-channel global payment processing services, advanced fraud prevention, and risk management solutions to every merchant's store.
+
+We are deeply committed to your privacy. At Fenix Alliance, we do not add external publicity to our website. We encrypt and mask every single bit, even while at rest in the cloud. we ask for authorization before every data transfer and take other extreme measures so that our customers can rest at ease knowing that they are always in control of their data. *
+
+## Test Credit Cards
 ### Aceptada
 
 ```
