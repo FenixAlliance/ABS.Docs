@@ -58,6 +58,7 @@
     * [Security Groups](Components/Alliance-Passport-Service/Security-Groups.md)
     * [Business Permissions](Components/Alliance-Passport-Service/Business-PErmissions.md)
 
+  * [Alliance Pay Platform](Components/Alliance-Pay-Platform.md)
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
     * [Application Programming Interfaces](Components/Alliance-Business-Platform/APIs.md)
