@@ -14,9 +14,21 @@ By leveraging industry-leading APIs from vendors like MasterCard, Visa, and seve
 
 ## Prerequisites
 
-**To Pay:** To pay an order using the Alliance Pay Platform, navigate to your Dashboard > Orders, select the order you want to confirm.
+**To receive payments:** To receive payments, you must create a Cloud Business Tenant using the [Merchant Center](https://fenix-alliance.com/merchant). Once created, you'll be able to use the platform in development mode.
 
-**To receive payments:** To receive payments, you must create a Cloud Business Tenant using the Merchant Center. 
+## Tutorial
+
+#**To Pay an order:** 
+- **If the order hasn't been confirmed**: To pay an order using the Alliance Pay Platform you must confirm it first, either through the REST order confirmation endpoint or the Collection Portal.
+
+To confirm an order using the Collection Portal, navigate to your Dashboard > Orders, select the order you want to confirm, and click on "Generate Invoice".
+
+**To Pay an invoice:** 
+
+- **Once an I**: To pay an order using the Alliance Pay Platform you must confirm it first, either through the order confirmation endpoint or the Collection Portal.
+
+
+
 
 ## Test Credit Cards
 ### Accepted
