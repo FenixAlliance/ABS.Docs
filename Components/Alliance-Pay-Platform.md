@@ -89,7 +89,15 @@ Below you can learn how to manage the collection portal and get the most out of 
 
 ### Managing Collection Portals:
 
-Collections Portals are an opt-in service for the Alliance Pay Platform. 
+Collections Portals are an opt-in service for the Alliance Pay Platform. Among other functionalities, Collextion Portals allow you to:
+
+- Multiple payment methods
+- Multiple pay currencies
+- Personalization of the website of payments or collections
+- Build and download detailed reports
+- Help or information text
+- Payment confirmation URL
+- Consultation of records online
 
 
 ## Franchises
