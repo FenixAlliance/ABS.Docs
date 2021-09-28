@@ -4,11 +4,11 @@ By leveraging industry-leading APIs from vendors like MasterCard, Visa, and seve
 
 ## Features
 
-- **Instant activation**: our clients can make transactions in 2 minutes. It also allows for fully online incorporation with minimal documentation.
+- **Instant activation**: our clients can make transactions in minutes. It also allows for fully online incorporation with minimal documentation.
 - **Easy integration**: through SDKs for several languages, integrate, and start using Alliance Payment Platform in less than an hour.
 - **API Driven**: Build your business at scale with our full API-based automation that requires no manual intervention.
 - **Multiple payment methods**: we have at your disposal more than 22 payment methods available. And others will constantly be added.
-- **The best support**: it is based on tickets, telephone and chat, which are always available to help you solve each step you take.
+- **The best support**: it is based on tickets, telephone, and chat, which are always available to help you solve each step you take.
 - **Admin Dashboard** - Refers to real-time data and information in your Alliance Payment Platform dashboard to make informed business decisions.
 - **Secure**: based on compliant standard PCI DSS Level 1 transactional processing services.
 
@@ -18,9 +18,9 @@ By leveraging industry-leading APIs from vendors like MasterCard, Visa, and seve
 
 ## Tutorial
 
-#**To Pay an order:** 
+###**To Pay an order:** 
 
-Orders allow customers to create recurring payments for customers using the 
+Orders allow customers to create recurring payments for customers using pre-built templated orders (also called "proforma invoices").
 
 - **If the order hasn't been confirmed**: To pay an order using the Alliance Pay Platform you must confirm it first, either through the REST order confirmation endpoint or the Collection Portal.
 
@@ -28,9 +28,7 @@ Orders allow customers to create recurring payments for customers using the
 
 **To pay an invoice:** 
 
-- **Pay using credit card**: To pay an invoice using the Alliance Pay Platform you can use one of many payment processing methods, such as, either through the order confirmation endpoint or the Collection Portal.
-
-
+- **Pay using credit card**: To pay an invoice using the Alliance Pay Platform you can use one of many payment processing methods, such as, either through the REST API endpoint or the Collection Portal.
 
 
 ## Test Credit Cards
