@@ -85,4 +85,26 @@ With our extensive experience in payment processing, collection solves the main 
 
 Collection portals are white-labeled web applications that allow small or large companies to control the payments of their invoices or receive collections in a simplified way through different options and rules.
 
-Below you can learn how to manage the collection portal and get the most out of its functionalities
+Below you can learn how to manage the collection portal and get the most out of its functionalities:
+
+### Managing Collection Portals:
+
+Collections Portals are an opt-in service for the Alliance Pay Platform. 
+
+
+## Franchises
+
+|Code|Description|
+|--- |--- |
+|AM|Amex|
+|BA|Baloto|
+|CR|Credencial|
+|DC|Diners Club|
+|EF|Efecty|
+|GA|Gana|
+|PR|Punto Red|
+|RS|Red Servi|
+|MC|Mastercard|
+|PSE|PSE|
+|SP|SafetyPay|
+|VS|Visa|
