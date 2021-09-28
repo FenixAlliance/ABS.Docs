@@ -68,7 +68,7 @@ Response: Communication error with the authorization center
 ```
 
 
-### Pendiente
+### Pending
 
 ```
 Franchise: American Express
