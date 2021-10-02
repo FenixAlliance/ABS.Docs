@@ -58,7 +58,6 @@
     * [Security Groups](Components/Alliance-Passport-Service/Security-Groups.md)
     * [Business Permissions](Components/Alliance-Passport-Service/Business-PErmissions.md)
 
-  * [Alliance Pay Platform](Components/Alliance-Pay-Platform.md)
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
     * [Application Programming Interfaces](Components/Alliance-Business-Platform/APIs.md)
@@ -78,11 +77,6 @@
       * [Layout](Components/Alliance-Business-Studio/Layout.md)
 
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
-  * [Alliance Business Cloud](Components/Alliance-Business-Cloud.md)
-    * [About](Components/Alliance-Business-Cloud/About.md)
-    * [View Statistics](Components/Alliance-Business-Cloud/View-Statistics.md)
-    * [Hosting-Features](Components/Alliance-Business-Cloud/Hosting-Features.md)
-    * [Allocated and Consumed Resources](Components/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
 
 * [Official Modules](Modules.md)
   * [IAM](Modules/IAM.md)
@@ -128,6 +122,13 @@
 ## Advanced
 
 * [Advanced](Advanced.md)
+* [Online Services](Online-Services.md)
+  * [Alliance Business Cloud](Online-Services/Alliance-Business-Cloud.md)
+    * [About](Online-Services/Alliance-Business-Cloud/About.md)
+    * [View Statistics](Online-Services/Alliance-Business-Cloud/View-Statistics.md)
+    * [Hosting-Features](Online-Services/Alliance-Business-Cloud/Hosting-Features.md)
+    * [Allocated and Consumed Resources](Online-Services/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
+  * [Alliance Pay Platform](Online-Services/Alliance-Pay-Platform.md)
 
 ## Credits
 * [Changelog](Changelog.md)
