@@ -16,8 +16,9 @@ To authenticate with the Alliance Passport Service IAM endpoint, you must first 
 
 For a service that will call AOS under its own identity, you need to register your app for the Web platform and copy the following values:
 
-The Application ID is assigned by the Alliance Developer Center portal.
-- A Client (application) Secret, either a password or a public/private key pair (certificate).
+- The Application Identifier assigned by the Alliance Developer Center portal.
+- The Public Key assigned by the Alliance Developer Center portal.
+- The Private Key assigned by the Alliance Developer Center portal.
 - A Redirect URL for your service to receive token responses.
 - A Redirect URL for your service to receive admin consent responses if your app implements functionality that requires administrator consent.
 
