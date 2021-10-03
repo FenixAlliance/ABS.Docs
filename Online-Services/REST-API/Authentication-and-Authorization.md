@@ -69,8 +69,8 @@ client_id=535fb089-9ff3-47b6-9bfb-4f1264799865
 | Parameter	 |  Condition	| Description |
 |--|--|--|
 | client_id | Required | The Application Public Key that the Alliance Developer Center portal assigned when you registered your app. |
-| client_secret | Required | The Application Private Key that you generated for your app in the app registration portal. Ensure that it is URL encoded. ​|
-| grant_type | Required| Must be client_credentials.|
+| client_secret | Required | The Application Private Key that you generated for your app in the Alliance Developer Center portal.  ​|
+| grant_type | Required| Must be client_credentials. |
 | requested_scopes |  Required | The value passed for the scope parameter in this request should be the resource identifier (Permission ID) of the resource you want to work with. For APS IAM, the value default informs the APS endpoint that of all the application permissions you have configured for your app in the app registration portal, although it is highly recommended that you should issue a token for the ones associated with the resource you want to use.|
 | requested_enrollment |  optional | The Business Profile Record ID  that you want to request permission from. This must be a GUID. |
 
