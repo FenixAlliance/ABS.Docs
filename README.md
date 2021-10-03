@@ -1,5 +1,5 @@
 # Alliance Business Suite
-![Alliance Business Suite](https://absuite.net/wp-content/uploads/sites/13/2020/03/Logo.Blue_.NoBG_.h40.png "Alliance Business Suite")
+![Alliance Business Suite](https://fenixalliance.com.co/ui/images/branding/logo.png "Alliance Business Suite")
 
 <p>
   <a href="https://docs.absuite.net/reference/1.2.0/" target="_blank">
