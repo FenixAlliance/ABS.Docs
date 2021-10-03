@@ -1,4 +1,3 @@
-# Alliance Business Suite
 ![Alliance Business Suite](https://fenixalliance.com.co/ui/images/branding/logo.png "Alliance Business Suite")
 
 <p>
@@ -16,7 +15,7 @@
   </a>
 </p>
 
-Welcome to the Alliance Business Suite!
+# Welcome to the Alliance Business Suite Documentation!
 
 The Alliance Business Suite is a set of intelligent, extensible, multi-tenant applications built to enable users to jumpstart their business through the acceleration of several core aspects of any given business.
 
