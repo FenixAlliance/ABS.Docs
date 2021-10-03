@@ -128,6 +128,8 @@
 * [Online Services](Online-Services.md)
   * [AOS REST API](Online-Services/REST-API.md)
     * [Authentication and Authorization](Online-Services/REST-API/Authentication-and-Authorization.md)
+  * [AOS GraphQl API](Online-Services/GraphQl-API.md)
+
   * [Alliance Business Cloud](Online-Services/Alliance-Business-Cloud.md)
     * [About](Online-Services/Alliance-Business-Cloud/About.md)
     * [View Statistics](Online-Services/Alliance-Business-Cloud/View-Statistics.md)
