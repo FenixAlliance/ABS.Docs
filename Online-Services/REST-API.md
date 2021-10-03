@@ -1,6 +1,6 @@
 # Welcome to the Alliance Online Services REST API reference documentation.
 
-Apart from the traditional Web Portals, the AOS REST APIs expose a set of Representational State Transfer (REST) APIs are service endpoints that support sets of HTTP operations (methods), which provide create, retrieve, update, or delete access to the service's resources. This section will walk you through:
+Apart from the traditional Web Portals, the AOS APIs expose a set of Representational State Transfer (REST) service endpoints that support sets of HTTP operations (methods), which provide create, retrieve, update, or delete access to the service's resources. This section will walk you through:
 
 - How to call Alliance Online Services REST APIs with Postman
 - How to register your client application with Alliance Passport Services ("APS") to secure your REST requests.
