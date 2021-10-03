@@ -1,3 +1,5 @@
+# Welcome to the Alliance Online Services GraphQl API reference documentation.
+
 GraphQL was developed by Facebook to facilitate the consultation of information, for example, a mobile application usually contains less information than a web application, so instead of creating 2 services, a service is created to bring only the information that is needed.
 
 The structure of GraphQL is made up of 3 parts
