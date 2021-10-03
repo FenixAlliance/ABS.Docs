@@ -15,7 +15,7 @@ The following video will show you how to quickly authenticate with the AOS REST 
 
 ### Register your client application with APS
 
-Most AOS REST API enpoint sets require your client code to authenticate with valid credentials before you can call the service's API. Authentication is coordinated between the various actors by APS and provides your client with an access token as proof of the authentication. The token is then sent to the AOS service in the HTTP Authorization header of subsequent REST API requests. The token's claims also provide information to the service, allowing it to validate the client and perform any required authorization.
+Most AOS REST API endpoint sets require your client code to authenticate with valid credentials before you can call the service's API. Authentication is coordinated between the various actors by APS and provides your client with an access token as proof of the authentication. The token is then sent to the AOS service in the HTTP Authorization header of subsequent REST API requests. The token's claims also provide information to the service, allowing it to validate the client and perform any required authorization.
 
 If you are using a REST API that does not use integrated APS authentication, or you've already registered your client, skip to the Create the request section.
 
