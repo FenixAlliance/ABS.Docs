@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 # Welcome to the Alliance Online Services REST API reference documentation.
 
 Apart from the traditional Web Portals, the AOS REST APIs expose a set of Representational State Transfer (REST) APIs are service endpoints that support sets of HTTP operations (methods), which provide create, retrieve, update, or delete access to the service's resources. This section will walk you through:
@@ -13,13 +15,13 @@ The following video will show you how to quickly authenticate with the AOS REST 
 
 ## How to Authenticate and Authorize requests to the AOS Rest API.
 
-## Register your client application with APS
+### Register your client application with APS
 
 Most AOS REST API enpoint sets require your client code to authenticate with valid credentials before you can call the service's API. Authentication is coordinated between the various actors by APS and provides your client with an access token as proof of the authentication. The token is then sent to the AOS service in the HTTP Authorization header of subsequent REST API requests. The token's claims also provide information to the service, allowing it to validate the client and perform any required authorization.
 
 If you are using a REST API that does not use integrated APS authentication, or you've already registered your client, skip to the Create the request section.
 
-### Prerequisites
+#### Prerequisites
 Your client application must make its identity configuration known to APS before run-time by registering it in an Online Business Tenant. Before you register your client with APS, consider the following prerequisites:
 
 - If you do not have an Online Business Tenant yet, see Set up an Online Business Tenant.
@@ -32,7 +34,7 @@ Your client application must make its identity configuration known to APS before
 
 You are now ready to register your client application with APS.
 
-### Client registration
+#### Client registration
 
 To register a client that accesses an AOS REST API, see Use the Alliance Developer Center portal to create an application that can access resources. The article (also available in PowerShell and CLI versions for automating registration) shows you how to:
 
@@ -65,7 +67,7 @@ The platform- and language-specific Authentication Libraries, which are beyond t
 
 The two APS endpoints that you use to authenticate your client and acquire an access token are referred to as the OAuth2 /authorize and /token endpoints. How you use them depends on your application's registration and the type of OAuth2 authorization grant flow you need to support your application at run-time. For the purposes of this article, we assume that your client uses one of the following authorization grant flows: authorization code or client_credentials. To acquire an access token used in the remaining sections, follow the instructions for the flow that best matches your scenario.
 
-### Authorization code grant (interactive clients)
+##### Authorization code grant (interactive clients)
 
 This grant is used by both web and native clients, requiring credentials from a signed-in user in order to delegate resource access to the client application. It uses the /authorize endpoint to obtain an authorization code (in response to user sign-in/consent), followed by the /token endpoint to exchange the authorization code for an access token.
 
@@ -85,28 +87,28 @@ code: This query parameter contains the authorization code that you obtained in 
 
 client_secret: You need this parameter only if your client is configured as a web application. This is the same secret/key value that you generated earlier, in client registration.
 
-### Client credentials grant (non-interactive clients)
+##### Client credentials grant (non-interactive clients)
 This grant is used only by web clients, allowing the application to access resources directly (no user delegation) using the client's credentials, which are provided at registration time. The grant is typically used by non-interactive clients (no UI) that run as a service or daemon. It requires only the /token endpoint to acquire an access token.
 
 The client/resource interactions for this grant are similar to step 2 of the authorization code grant. For details on the format of the HTTPS POST request to the /token endpoint and request/response examples, see the "Get a token" section in the [Authentication and Authorization and the OAuth 2.0 client credentials flow](/Online-Services/REST-API/Authentication-and-Authorization.md) section.
 
-### Assemble the request message
+#### Assemble the request message
 
 Most programming languages or frameworks and scripting environments make it easy to assemble and send the request message. They typically provide a web/HTTP class or API that abstracts the creation or formatting of the request, making it easier to write the client code. For brevity, and because most of the task is handled for you, this section covers only the important elements of the request.
 
-### Request URI
+##### Request URI
 Because sensitive information is being transmitted and received, **all REST requests to any AOS Service Endpoint requires the HTTPS** protocol for the URI scheme, giving the request and response a secure channel. The information (that is, the APS authorization code, access/bearer token, and sensitive request/response data) is encrypted by a lower transport layer, ensuring the privacy of the messages.
 
 The remainder of your service's request URI (the host, resource path, and any required query-string parameters) are determined by its related REST API specification. For a more detailed reference on each AOS REST Endpoint, please refer to the [AOS REST API Interactive Documentation](https://fenix-alliance.com/api/v2/documentation).
 
-### Request header
+##### Request header
 The request URI is bundled in the request message header, along with any additional fields required by your service's REST API specification and the HTTP specification. Your request might require the following common header fields:
 
 - `Authorization`: Contains the OAuth2 bearer token to secure the request, as acquired earlier from APS.
 - `Content-Type`: Typically set to "application/json" (name/value pairs in JSON format), and specifies the MIME type of the request body.
 - `Host`: The domain name or IP address of the server where the REST service endpoint is hosted.
 
-### Request body
+##### Request body
 As mentioned earlier, the request message body is optional, depending on the specific operation you're requesting and its parameter requirements. If it's required, the API specification for the service you are requesting also specifies the encoding and format.
 
 The request body is separated from the header by an empty line, formatted in accordance with the Content-Type header field. An example of an "application/json" formatted body would appear as follows:
