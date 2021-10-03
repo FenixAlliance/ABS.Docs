@@ -125,6 +125,7 @@
 ## Online Services
 
 * [Online Services](Online-Services.md)
+
   * [AOS REST API](Online-Services/REST-API.md)
     * [Authentication and Authorization](Online-Services/REST-API/Authentication-and-Authorization.md)
 
@@ -136,6 +137,8 @@
     * [Hosting-Features](Online-Services/Alliance-Business-Cloud/Hosting-Features.md)
     * [Allocated and Consumed Resources](Online-Services/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
   * [Alliance Pay Platform](Online-Services/Alliance-Pay-Platform.md)
+  * [Infinity Comex Marketplace](Online-Services/Infinity-Comex-Marketplace.md)
+
   * [Terms and Conditions](Online-Services/Terms-and-Conditions.md)
 
 ## Credits
