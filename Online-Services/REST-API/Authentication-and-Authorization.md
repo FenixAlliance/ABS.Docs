@@ -7,7 +7,6 @@ The basic steps required to configure a service and get a token from the Allianc
 
 1. Register your app.
 1. Configure permissions for AOS on your app.
-1. Get administrator consent (if required).
 1. Get an access token.
 1. Use the access token to call Alliance Online Services.
 
@@ -37,7 +36,7 @@ The following screenshot shows the Select Permissions page for application permi
 ![image.png](/.attachments/image-c521f27a-288a-4920-8edd-767deddbd62f.png)
 **Note**: We recommend that you configure the least privileged set of permissions required by your app. This provides a much more comfortable experience for administrators than having to consent to a long list of permissions.
 
-### 4. Get an access token
+### 3. Get an access token
 In the OAuth 2.0 client credentials grant flow, you use the Application Public Key and Application Secret values that you saved when you registered your app to request an access token directly from the APS /token endpoint.
 
 You specify the pre-configured permissions bypassing the permission ids as a comma-separated list as the value for the `requested_scopes` parameter in the token request. See the scope parameter description in the token request below for details.
@@ -91,11 +90,11 @@ A successful response looks like this:
 | Parameter	 | Description |
 |--|--|
 | access_token	 | The requested access token. Your app can use this token in calls to AOS.|
-| token_type	 | Indicates the token type value. The only type that APS supports is bearer.  |
+| token_type	 | Indicates the token type value. The only type that APS supports is Bearer.  |
 | expires_in	 | How long the access token is valid (in seconds).​|
 
 
-### 5. Use the access token to call Alliance Online Services
+### 4. Use the access token to call Alliance Online Services
 After you have an access token, you can use it to call any AOS Web API by including it in the Authorization header of a request. The following request gets the profile of a specific user. Your app must have the User.Read.All permission to call this API.
 
 
