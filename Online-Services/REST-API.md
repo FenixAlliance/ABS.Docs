@@ -168,7 +168,7 @@ And you should receive a response body that contains a list of subscriptions and
 
 
 
-```
+```json
 [
     {
         "id":"d0928ef4-84b0-4710-9a8e-e34c82ccc917",
@@ -192,7 +192,7 @@ Content-Type: application/json;
 And you should receive a response body that confirms the content of your newly added resource group encoded in JSON format, similar to:
 
  
-```
+```json
 {
     "id":"123cc9dd-09c9-47de-9f2b-2517adfcfd44",
     "name":"ExampleResourceGroup",
