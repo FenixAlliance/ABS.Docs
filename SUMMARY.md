@@ -21,7 +21,6 @@
   * [Routing](Fundamentals/Routing.md)
   * [Static Files](Fundamentals/Static-Files.md)
   * [Data Access](Fundamentals/Data-Access.md)
-
 * [Web Development](Web-Development.md)
    * [Web Portals](Web-Development/Web-Portals.md)
    * [Web Pages](Web-Development/Web-Pages.md)
@@ -128,6 +127,7 @@
 * [Online Services](Online-Services.md)
   * [AOS REST API](Online-Services/REST-API.md)
     * [Authentication and Authorization](Online-Services/REST-API/Authentication-and-Authorization.md)
+
   * [AOS GraphQl API](Online-Services/GraphQl-API.md)
 
   * [Alliance Business Cloud](Online-Services/Alliance-Business-Cloud.md)
