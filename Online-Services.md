@@ -16,17 +16,7 @@ Fenix Alliance exposes a wide set of APIs for interoperability with Online Servi
 By using standard HTTP Requests customers can perform requests to a wide variety of service endpoints designed to follow the Open API Standard. By default, the Platform generates and exposes Swagger JSON in version 3.0 of the specification—officially called the OpenAPI Specification.
 
 #### GraphQl API
-GraphQL was developed by Facebook to facilitate the consultation of information, for example, a mobile application usually contains less information than a web application, so instead of creating 2 services, a service is created to bring only the information that is needed.
 
-The structure of GraphQL is made up of 3 parts
-- Operation
-- Table and/or data
-- Table fields
-
-GraphQL is based on sending requests through queries, there are 3 types:
-1. Query: To consult the information
-1. Mutation: To modify information (create, delete, modify)
-1. Subscription: For WebSockets (with WebSockets you can for example receive notifications when an event occurs)
 
 ### Alliance Business Cloud
 ### Alliance Pricing Center
