@@ -68,11 +68,11 @@ client_id=535fb089-9ff3-47b6-9bfb-4f1264799865
 
 | Parameter	 |  Condition	| Description |
 |--|--|--|
-| tenant |  Required	| The directory tenant that you want to request permission from. This can be in GUID or friendly name format. |
-| client_id | Required | The Application ID that the Azure app registration portal assigned when you registered your app. |
-|client_secret	 | Required	|The Application Secret that you generated for your app in the app registration portal. Ensure that it is URL encoded. ​|
-| grant_type	|  required| Must be client_credentials.|
-| scope	|  Required | The value passed for the scope parameter in this request should be the resource identifier (Permission ID) of the resource you want to work with. For APS IAM, the value default informs the APS endpoint that of all the application permissions you have configured for your app in the app registration portal, although it is highly recommended that you should issue a token for the ones associated with the resource you want to use.|
+| client_id | Required | The Application Public Key that the Alliance Developer Center portal assigned when you registered your app. |
+| client_secret | Required | The Application Secret that you generated for your app in the app registration portal. Ensure that it is URL encoded. ​|
+| grant_type | Required| Must be client_credentials.|
+| requested_scopes |  Required | The value passed for the scope parameter in this request should be the resource identifier (Permission ID) of the resource you want to work with. For APS IAM, the value default informs the APS endpoint that of all the application permissions you have configured for your app in the app registration portal, although it is highly recommended that you should issue a token for the ones associated with the resource you want to use.|
+| requested_enrollment |  optional | The Business Profile Record ID  that you want to request permission from. This must be a GUID. |
 
 
 Token response
