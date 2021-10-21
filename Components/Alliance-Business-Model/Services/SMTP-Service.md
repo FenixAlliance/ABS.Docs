@@ -1,0 +1,13 @@
+# Welcome to the Alliance Business Platform - Server Mail Transfer Protocol ("SMTP") Service
+
+## Introduction
+
+The main goal of this service is to provide the Alliance Business Suite with robust, fully-featured, and RFC-compliant SMTP, POP3, and IMAP client implementations.
+
+All of the other .NET IMAP client implementations that I could find suffer from major architectural problems such as ignoring unexpected untagged responses, assuming that literal string tokens will never be used for anything other than message bodies (when in fact they could be used for pretty much any string token in a response), assuming that the way to find the end of a message body in a FETCH response is by scanning for ") UID", and not properly handling mailbox names with international characters to simply name a few.
+
+IMAP requires a LOT of time spent laboriously reading and re-reading the IMAP specifications (as well as the MIME specifications) to understand all of the subtleties of the protocol and most (all?) of the other Open Source .NET IMAP libraries, at least, were written by developers that only cared enough that it worked for their simple needs. There's nothing necessarily wrong with doing that, but the web is full of half-working, non-RFC-compliant IMAP implementations out there that it was finally time for a carefully designed and implemented IMAP client library to be written.
+
+For POP3, libraries such as OpenPOP.NET are actually fairly decent, although the MIME parser is far too strict - throwing exceptions any time it encounters a Content-Type or Content-Disposition parameter that it doesn't already know about, which, if you read over the mailing list, is a problem that OpenPOP.NET users are constantly running into. MailKit's Pop3Client, of course, doesn't have this problem. It also parses messages directly from the socket instead of downloading the message into a large string buffer before parsing it, so you'll probably find that not only is MailKit faster (MailKit's MIME parser, MimeKit, parses messages from disk 25x faster than OpenPOP.NET's parser), but also uses far less memory.
+
+For SMTP, most developers use System.Net.Mail.SmtpClient which suits their needs more or less satisfactorily and so is probably not high on their list of needs. However, the SmtpClient implementation included with MailKit is a much better option if cross-platform support is needed or if the developer wants to be able to save and re-load MIME messages before sending them via SMTP. MailKit's SmtpClient also supports PIPELINING which should improve the performance of sending messages (although might not be very noticeable).
