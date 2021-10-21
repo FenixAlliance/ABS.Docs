@@ -887,7 +887,7 @@ Run it locally to analyze the time it takes to execute specific templates.
 Fluid is faster and allocates less memory than all other well-known .NET Liquid parsers.
 For parsing, Fluid is 30% faster than Scriban, allocating 3 times less memory.
 For rendering, Fluid is slightly faster than Handlebars, 3 times faster than Scriban, but is allocating a few times less memory.
-Compared to DotLiquid, Fluid renders 10 times faster, and allocates 40 times less memory.
+Compared to DotLiquid, Fluid renders 10 times faster and allocates 40 times less memory.
 
 ```
 BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
