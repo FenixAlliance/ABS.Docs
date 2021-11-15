@@ -40,16 +40,16 @@ Once registered, the app communicates with the Alliance Passport Service by send
 
 
 |Service Provider| Endpoints |
-|--|--|
-| APS Online | https://fenix-alliance.com/connect/authorize <br> https://fenix-alliance.com/connect/token |
-| ABS Server | https://{server-endpoint}/connect/authorize <br> https://{server-endpoint}/connect/token  |
+|----------------|-----------|
+| ABS Online     | https://fenix-alliance.com/connect/authorize <br> https://fenix-alliance.com/connect/token |
+| ABS Server     | https://{server-endpoint}/connect/authorize <br> https://{server-endpoint}/connect/token   |
 
 
 
 # Tokens
-OAuth 2.0 and OpenID Connect make extensive use of bearer tokens, generally represented as JWTs (JSON Web Tokens). A bearer token is a lightweight security token that grants the "bearer" access to a protected resource. In this sense, the "bearer" is anyone that gets a copy of the token. Though a party must first authenticate with the Alliance Passport Service to receive the bearer token, if the required steps are not taken to secure the token in transmission and storage, it can be intercepted and used by an unintended party.
+OAuth 2.0 and OpenID Connect make extensive use of bearer tokens, generally represented as JWTs (JSON Web Tokens). A bearer token is a lightweight security token that grants the "bearer" access to a protected resource. In this sense, the "bearer" is **anyone that gets a copy of the token**. Though a party must first authenticate with the Alliance Passport Service to receive the bearer token, if the required steps are not taken to secure the token in transmission and storage, it can be intercepted and used by an unintended party.
 
-While some security tokens have a built-in mechanism for preventing unauthorized parties from using them, bearer tokens do not have this mechanism and must be transported in a secure channel such as transport layer security (HTTPS). If a bearer token is transmitted in the clear, a malicious party can use a man-in-the-middle attack to acquire the token and use it for unauthorized access to a protected resource. 
+While some security tokens have a built-in mechanism for preventing unauthorized parties from using them, bearer tokens do not have this mechanism and must be transported in a secure channel such as transport layer security (HTTPS). If a bearer token is transmitted over plain HTTP, a malicious party can use a man-in-the-middle attack to acquire the token and use it for unauthorized access to a protected resource. 
 
 The same security principles apply when storing or caching bearer tokens for later use. Always ensure that your app transmits and stores bearer tokens in a secure manner. For more security considerations on bearer tokens, see [RFC 6750 Section 5](https://datatracker.ietf.org/doc/html/rfc6750).
 
