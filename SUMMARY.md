@@ -56,6 +56,7 @@
     * [Security Roles](Components/Alliance-Passport-Service/Security-Roles.md)
     * [Security Groups](Components/Alliance-Passport-Service/Security-Groups.md)
     * [Business Permissions](Components/Alliance-Passport-Service/Business-PErmissions.md)
+    * [Connect Protocols](/Components/Alliance-Passport-Service/Connect-protocols.md)
 
   * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
