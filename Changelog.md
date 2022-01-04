@@ -18,18 +18,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] In-Studio JobBoard.
 - [ABS] Lead Form Component.
 - [ABS] Newsletter Form Component.
+- [ABS] Create Business Modal Form.
+- [ABS] Email Template Editor Pages.
+- [ABS] Token Management Options Page.
+- [ABS] Stock Items Categorizer.
 - [APS] EN-US, ES-CO Localizations.
 - [APS] Account Mgmt. Email Alerts.
-- [ABS] Email Template Editor Pages.
+- [APS] Google ReCaptcha Service.
+- [APS] Certificates Manager Service.
+- [APS] OAuth & IODC Service Support.
 - [ABS] Social Feeds & Post Reactions Bar.
 - [ABS] PortalContext Country Selector Form.
 - [ABS] PortalContext Currency Selector Form.
 - [ABS] PortalContext Language Selector Form.
-- [ABS] Monaco Content Editor Component for WebContent.
-- [ABM] IPortalContext Interface and default implementation (PortalContext)
-- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
-- [ABM] IStorageService Interface & implementation (FileSystemStorageService, AzureStorageStorageService, AwsS3StorageService)
+- [ABS] Monaco Editor Component for WebContent.
 - [ABM] AccountHolder Birthday & Gender Properties
+- [ABM] IPortalContext Interface and default implementation (PortalContext Class)
+- [ABM] ISocialDataService Interface and default implementation (SocialDataService Class)
+- [ABM] IAssembliesService Interface and default implementation (AssembliesService Class)
+- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService Class)
+- [ABM] IStorageService Interface & implementation (FileSystemStorageService, AzureStorageStorageService & AwsS3StorageService Classes)
 
 ### Changed
 - [ACL] Updated Dependencies to the latest version
@@ -47,11 +55,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix Invoice Outliner Glitch.
 - [ABS] Fix Web Installer Versioning Glitch.
 - [ABS] Fix FHIR Server Pooling Glitch.
+- [ABS] Fix Portal Domain Bindings.
+- [ABS] Fix Network Dashboard Deadlock on IP Verification.
 
 ## [1.3.0] - 2021-07-12
 
 ### Added
-- [ABM] Oracle Database Provider
+- [ABM] Oracle Database Provider.
 - [ABM] IOptionsService Interface and default implementation (OptionsService)
 
 ### Changed
