@@ -9,19 +9,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [ACL] .NET 6.0 Support
+- [ACL] .NET 6.0 Support.
+- [ABS] In-Studio Wallet.
+- [ABS] In-Studio Academy.
+- [ABS] Lead Form Component.
+- [ABS] Newsletter Form Component.
+- [APS] EN-US, ES-CO Localizations.
+- [ABS] Email Template Editor Pages.
+- [ABS] Social Feeds & Post Reactions Bar.
 - [ABS] Monaco Content Editor Component for WebContent.
-- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
 - [ABM] IPortalContext Interface and default implementation (PortalContext)
+- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
 
 ### Changed
 - [ACL] Updated Dependencies to the latest version
+- [ABM] Improved Queries
+- [ABM] Improved Memory Allocation
+- [ABS] Studio Dashboard Icons.
 
 ### Removed
 - [ACL] Remove deprecated dependencies
 
 ### Fixed
-- [ICX] Duplicated Recently Viewed Product Records
+- [ABS] Portal & Tenant Selector.
+- [ICX] Duplicated Recently Viewed Product Records.
+- [ABS] Fix Invoice Outliner Glitch.
 
 ## [1.3.0] - 2021-07-12
 
@@ -30,10 +42,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] IOptionsService Interface and default implementation (OptionsService)
 
 ### Changed
-- [ACL] Updated Dependencies to the latest version
+- [ACL] Updated Dependencies to the latest version.
 
 ### Removed
-- [ACL] Remove deprecated dependencies
+- [ACL] Remove deprecated dependencies.
 
 ### Fixed
 - [ABS] Fix Workflows Data Provider (LiteSQL)
