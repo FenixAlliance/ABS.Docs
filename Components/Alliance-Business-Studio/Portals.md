@@ -34,17 +34,9 @@ File `Layout.razor`:
 @inherits LayoutComponentBase
 <CascadingValue Value="this">
 
-    @if (PortalContextis not null && !PortalContext.Busy)
+    @if (PortalContextis not null && PortalContext.Ready)
     {
-        <PortalCommandBarComponent PortalContext="PortalContext"></PortalCommandBarComponent>
-        <HeaderComponent></HeaderComponent>
-
         @Body
-
-        <FooterComponent></FooterComponent>
-
-        <RadzenDialog />
-        <RadzenNotification />
     }
 
 </CascadingValue>
@@ -67,26 +59,12 @@ File `Layout.razor`:
     {
         if (firstRender)
         {
-            var lDotNetReference = DotNetObjectReference.Create(this);
-            await JS.InvokeVoidAsync("blazorUtils.setLayout", lDotNetReference);
-        }
-        await JS.InvokeVoidAsync("interop.init");
-    }
 
+        }
+    }
 
     public async Task RefreshLayout(string BusinessID)
     {
-        PortalContext.Layout = this;
-
-        if (BusinessID is not null)
-        {
-            await PortalContext.Init((await authenticationStateTask).User, NavManager, BusinessID);
-        }
-        else
-        {
-            await PortalContext.Flush();
-        }
-
         this.StateHasChanged();
     }
 
