@@ -75,6 +75,7 @@
 
   * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
       * [Layout](Components/Alliance-Business-Studio/Layout.md)
+      * [Portals](Components/Alliance-Business-Studio/Portals.md)
 
   * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
 
