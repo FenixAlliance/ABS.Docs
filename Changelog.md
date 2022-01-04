@@ -5,7 +5,42 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [1.2.1] - 2021-07-12
+## [1..0] - 2022-01-12
+
+### Added
+
+- [ACL] .NET 6.0 Support
+- [ABS] Monaco Content Editor Component for WebContent.
+- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
+- [ABM] IPortalContext Interface and default implementation (PortalContext)
+
+### Changed
+- [ACL] Updated Dependencies to the latest version
+
+### Removed
+- [ACL] Remove deprecated dependencies
+
+### Fixed
+- [ICX] Duplicated Recently Viewed Product Records
+
+## [1.3.0] - 2021-07-12
+
+### Added
+- [ABM] Oracle Database Provider
+- [ABM] IOptionsService Interface and default implementation (OptionsService)
+
+### Changed
+- [ACL] Updated Dependencies to the latest version
+
+### Removed
+- [ACL] Remove deprecated dependencies
+
+### Fixed
+- [ABS] Fix Workflows Data Provider (LiteSQL)
+- [ABM] Entities Disambiguation
+
+
+## [1.2.1] - 2021-07-13 
 ### Added
 - [ABS] View Rendering Cache
 - [ABS] AppDomain Assembly Scoping
