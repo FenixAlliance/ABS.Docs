@@ -10,11 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - [ACL] .NET 6.0 Support.
+- [ABS] In-Studio Cart.
 - [ABS] In-Studio Wallet.
 - [ABS] In-Studio Academy.
+- [ABS] In-Studio Networks.
+- [ABS] In-Studio JobBoard.
 - [ABS] Lead Form Component.
 - [ABS] Newsletter Form Component.
 - [APS] EN-US, ES-CO Localizations.
+- [APS] Account Mgmt. Email Alerts.
 - [ABS] Email Template Editor Pages.
 - [ABS] Social Feeds & Post Reactions Bar.
 - [ABS] PortalContext Country Selector Form.
