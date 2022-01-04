@@ -17,9 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [APS] EN-US, ES-CO Localizations.
 - [ABS] Email Template Editor Pages.
 - [ABS] Social Feeds & Post Reactions Bar.
+- [ABS] PortalContext Country Selector Form.
+- [ABS] PortalContext Currency Selector Form.
+- [ABS] PortalContext Language Selector Form.
 - [ABS] Monaco Content Editor Component for WebContent.
 - [ABM] IPortalContext Interface and default implementation (PortalContext)
 - [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
+- [ABM] AccountHolder Birthday & Gender Properties
 
 ### Changed
 - [ACL] Updated Dependencies to the latest version
