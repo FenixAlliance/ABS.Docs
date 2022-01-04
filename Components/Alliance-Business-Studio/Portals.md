@@ -48,6 +48,7 @@ File `Layout.razor`:
     }
 
 </CascadingValue>
+
 @code {
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
