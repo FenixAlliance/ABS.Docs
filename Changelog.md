@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [ACL] .NET 6.0 Support.
 - [ABS] In-Studio Cart.
+- [ABS] In-Studio Store.
 - [ABS] In-Studio Wallet.
 - [ABS] In-Studio Academy.
 - [ABS] In-Studio Networks.
@@ -27,11 +28,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Monaco Content Editor Component for WebContent.
 - [ABM] IPortalContext Interface and default implementation (PortalContext)
 - [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService)
+- [ABM] IStorageService Interface & implementation (FileSystemStorageService, AzureStorageStorageService, AwsS3StorageService)
 - [ABM] AccountHolder Birthday & Gender Properties
 
 ### Changed
 - [ACL] Updated Dependencies to the latest version
 - [ABM] Improved Queries
+- [ABM] Improved MarketplaceData
 - [ABM] Improved Memory Allocation
 - [ABS] Studio Dashboard Icons.
 
@@ -42,6 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Portal & Tenant Selector.
 - [ICX] Duplicated Recently Viewed Product Records.
 - [ABS] Fix Invoice Outliner Glitch.
+- [ABS] Fix Web Installer Versioning Glitch.
+- [ABS] Fix FHIR Server Pooling Glitch.
 
 ## [1.3.0] - 2021-07-12
 
