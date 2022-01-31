@@ -87,6 +87,8 @@ It is calculated by the following Formula:
 
 **Surcharges Amount**: S
 
+**Profit Amount**: P
+
 **Total Taxes Amount**: TT
 
 **Total Withholding Taxes Amount**: TWT
@@ -101,6 +103,6 @@ It is calculated by the following Formula:
 
 **Total Shipping Tax Amount**: ST
 
-**Total Amount**: (Da - D) + S + (TT - TWT) + (SC + ST) + TRfC + TRtC
+**Total Amount**: (Da - D) + S + P + (TT - TWT) + (SC + ST) + TRfC + TRtC
 
 
