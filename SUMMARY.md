@@ -82,6 +82,9 @@
 ## Services
 
 * [Services](Services.md)
+  * [Multi-Tenancy Service](Services/Tenants-Service.md)
+  * [Multi-Currency Service](Services/Forex-Service.md)
+  * [Pricing Service](Services/Pricing-Service.md)
 
 ## Modules
 
