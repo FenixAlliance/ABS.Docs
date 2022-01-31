@@ -1,2 +1,2 @@
-# Multi-Tenancy Functionality
+# Multi-Tenancy Service
 The Alliance Business Suite isolates into business tenants a set of functionalities such as data access, web portals scoping, record scoping, user enrollment, among others, to allow several businesses to live into the same Alliance Business Suite server. These capabilities also enable customers to create multi-business experiences such as marketplaces, social networks, and more!
