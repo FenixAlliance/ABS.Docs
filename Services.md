@@ -1,6 +1,6 @@
 # General Services Overview
 
-The Alliance Business Suite provides a wide set of functionalities specially designed to provide our customers with enterprise-class capabilities for common business processes in small and mid-sized companies across industries, enabling them to manage more complex processes, such as assembly, manufacturing, service, and warehouse management.
+The Alliance Business Suite provides a wide set of functionalities wrapped as services specially designed to provide our customers with enterprise-class capabilities for common business processes in small and mid-sized companies across industries, enabling them to manage more complex processes, such as assembly, manufacturing, service, and warehouse management.
 
 ## Multi-Tenancy Functionality
 
