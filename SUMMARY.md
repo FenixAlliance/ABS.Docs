@@ -84,7 +84,7 @@
   * [Accounting](Modules/Accounting.md)
       * [Accounts](Modules/Accounting/Accounts.md)
       * [Billing](Modules/Accounting/Billing.md)
-        * [Billing Records](Modules/ACCOUNTING/Billing/Billing-Item-Records.md)
+        * [Billing Records](Modules/ACCOUNTING/Billing/Billing-Records.md)
         * [Billing Item Records](Modules/ACCOUNTING/Billing/Billing-Item-Records.md)
       * [Ledgers](Modules/Accounting/Ledgers.md)
   * [Assets Manager](Modules/Assets.md)
