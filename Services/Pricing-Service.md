@@ -16,7 +16,7 @@ The Alliance Business Model provides a convenient structure to help businesses t
 
 ## Pricing Amounts
 
-- ### Total Detail Amount (TD)
+- ### Total Detail Amount 
 Calculated Item Price without Discounts, Surcharges nor Policies. Identical to Regular Price.
 
 - ### Total Discounts Amount (
