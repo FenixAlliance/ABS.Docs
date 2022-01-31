@@ -2,7 +2,7 @@
 
 Billing Records are designed to allow businesses to better manage their billing process by helping them to easily manage their billing process.
 
-A Billing Item Record represents a line item on a Billing Record, such as a single entry on a quote, order or invoice. This means it connects one Item to a Billing Record.
+A Billing Item Record represents a line item on a Billing Record, such as a single entry on a quote, order, or invoice. This means it connects one Item to a Billing Record.
 
 ## Types of Billing Item Records
 
