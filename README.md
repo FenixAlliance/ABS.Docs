@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://docs.absuite.net/reference/1.4.0/" target="_blank">
-     <img alt="Version" src="https://img.shields.io/badge/Version-1.2.0-blue.svg?cacheSeconds=2592000" />
+     <img alt="Version" src="https://img.shields.io/badge/Version-1.4.0-blue.svg?cacheSeconds=2592000" />
   </a>
   <a href="https://docs.absuite.net" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
