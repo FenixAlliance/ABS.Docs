@@ -103,6 +103,6 @@ It is calculated by the following Formula:
 
 **Total Shipping Tax Amount**: ST
 
-**Total Amount**: (Da - D) + S + P + (TT - TWT) + (SC + ST) + TRfC + TRtC
+**Total Amount**: (Da - D) + S + P + (TT - TWT) + (SC + ST) + TRfC + TRtC + TTWC
 
 
