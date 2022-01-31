@@ -27,4 +27,4 @@ Billing Item Records are also used to calculate critical values of each Billing 
 
 Calculations can be overridden by providing a custom value using your preferred currency. To do this, you will need to select "Custom" on the Price Calculation Method of each Billing Item Record in order to provide your custom values.
 
-When overriding calculations, you are responsible for the whole price calculation process, meaning you will have full control on the amounts that will produce the final Billing Record's Total Amount.
+When overriding calculations, you are responsible for the whole price calculation process, meaning you will have full control over the amounts that will produce the final Billing Record's Total Amount.
