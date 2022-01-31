@@ -58,7 +58,7 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 # Getting Started
 
-- Install **[.NET 5 SDK (v5.0.100)](https://dotnet.microsoft.com/download/dotnet/5.0)**.
+- Install **[.NET 6 SDK (v6.0.100)](https://dotnet.microsoft.com/download/dotnet/6.0)**.
    
 - Install the latest edition (v16.8 or higher) of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) (Community, Professional, or Enterprise Editions) with the **ASP.NET and web development** workload enabled. Alliance Business Suite works with ALL editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
 
@@ -78,7 +78,7 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 **Video Series**
 
-- If you are getting started with Alliance Business Suite, a [series of videos](https://www.youtube.com/playlist?list=PLGYfOT42OgSZdmYctCWeiRkPfGVQbCRWM) are available which explain how to install the product, interact with the user interface, and develop custom modules.
+- If you are getting started with Alliance Business Suite, a [series of videos](https://www.youtube.com/playlist?list=PLGYfOT42OgSZdmYctCWeiRkPfGVQbCRWM) are available that explain how to install the product, interact with the user interface, and develop custom modules.
 
 ## Documentation
 There is a separate [Documentation repository](https://dev.azure.com/fenixalliance/ABS.Docs), which contains various types of documentation for the Alliance Business Suite, including the C# API documentation for every class on every library. The contents of the repository are available at [https://docs.absuite.net](https://docs.absuite.net) as interactive documentation.
