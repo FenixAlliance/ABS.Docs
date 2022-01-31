@@ -81,7 +81,7 @@ Calculated Total Price Amount (Revenue)
 It is calculated by the following Formula:
 
 
-**Detail Amount **: Da
+**Detail Amount**: Da
 
 **Discounts Amount**: D
 
