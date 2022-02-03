@@ -12,7 +12,7 @@ Built-in to the Alliance Business Platform is the ability to connect your busine
 - Parity management API.
 - Quorum integration.
 - Besu integration.
-- Simplified smart contract interaction for deployment, function calling, transaction and event filtering and decoding of topics.
+- Simplified smart contract interaction for deployment, function calling, transaction, and event filtering and decoding of topics.
 - Blockchain processing.
 - ABI to .Net type encoding and decoding, including attribute-based for complex object deserialisation (nethereum-abi-encoding.md).
 - Rules engine.
@@ -28,7 +28,13 @@ Built-in to the Alliance Business Platform is the ability to connect your busine
 The following features are to be expected in the near future:
 
 - [ ] ABS SDK Support.
+- [ ] Smart Contract Management Pages.
 - [ ] Unity 3D Integration (ABS SDK).
+
+## Working with Smart Contract Support
+
+We are currently working to provide a complete Smart Contract management experience for the Alliance Business Suite.
+As of now, Smart Contracts should be created and deployed outside the Alliance Business Suite, and then imported as a Contract Address to be exposed to the BlockChains Service.
 
 
 ## Working with NFT Support
@@ -41,7 +47,9 @@ The ERC-721 is the most common NFT standard. If your Smart Contract implements c
 
 These methods are specified in the EIP-721. Open-sourced projects like OpenZeppelin have simplified the development process by implementing the most common ERC standards as a reusable library.
 
-### What is minting an NFT?
+### Minting NFTs
+"Minting an NFT" is the act of publishing a unique instance of your ERC721 token on the blockchain. 
+
 By minting an NFT, you publish a unique token on a blockchain. This token is an instance of your Smart Contract.
 
 Each token has a unique token URI, which contains metadata of your asset in a JSON file that conforms to a certain schema. The metadata is where you store information about your NFT, such as name, image, description, and other attributes.
@@ -76,12 +84,15 @@ The second method is to use IPFS. And the third way is to simply have your API r
 
 The Alliance Business Suite can use a combination of these methods when creating NFTs, preventing actors to temper the underlying JSON file.
 
+
+
+
 ### How to View the NFT in your Metamask Wallet
 
 You need to start by downloading the mobile version of Metamask. Then, log into your account.
 
-Your Wallet Account should be connected to MetaMask to view your NFTs, and the network should point to your Alliance Business Suite.
+Your Wallet Account should be connected to MetaMask to view your NFTs, and the network should point to the main network configured on your Alliance Business Suite's settings.
 
-You should see an NFTs tab along with an add NFT button. Click on the button and enter the address of your Smart Contract along with the ids that you have minted. If you have followed the tutorial, you should start with an id of 1.
+You should see an NFTs tab along with an add NFT button. Click on the button and enter the address of your Smart Contract along with the ids that you have minted.
 
 <IMG  src="https://www.freecodecamp.org/news/content/images/2021/10/IMG_0376.jpeg"  alt="IMG_0376"/>
