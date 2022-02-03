@@ -20,5 +20,11 @@ Contact Wallets are Regular Wallet Accounts that instead of being related to an 
 
 This might seem odd, given that to either a B2B or a B2C Scenario, only two types of wallets are required: A Business-Related Wallet and a Customer-Related Wallet. So, what's the purpose of Contact Wallets? 
 
+Like Social Profiles, Contact Wallets are designed to Allow Customers to create their own multi-tenant business applications through the Wallet services on top of the Alliance Business Suite, simplifying the process of creating Financial Applications ready for Web 3.0.
+
+
+
+
+
 
 
