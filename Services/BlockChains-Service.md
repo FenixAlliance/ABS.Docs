@@ -18,7 +18,6 @@ Built-in to the Alliance Business Platform is the ability to connect your busine
 - Rules engine.
 - HD Wallet integration.
 - Transaction, RLP, and message signing, verification, and recovery of accounts.
-- 
 - Integrated TestRPC testing to simplify TDD and BDD (Specflow) development.
 - Key storage using Web3 storage standard, compatible with Geth and Parity.
 - Simplified account life cycle for both managed by a third-party client (personal) or stand-alone (signed transactions).
