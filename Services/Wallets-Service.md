@@ -31,7 +31,7 @@ Like Social Profiles, Contact Wallets are designed to Allow Customers to create 
 
 ## Understanding CryptoWallets
 
-Each Waller Account is assigned by the Alliance Business platform with an Ethereum Address. This Ethereum Address uniquely identifies a Wallet Account across any ABS BlockChain. This enables customers to create services such as crypto-currencies and exchanges, NFT marketplaces, apps (distributed/decentralized applications), and even their own  Web 3.0 & metaverse-enabled experiences.
+CryptoWallets is the name of the functionality that allows each Wallet Account to interact with any number of BlockChains. Each Waller Account is assigned by the Alliance Business platform with an Ethereum Address. This Ethereum Address uniquely identifies a Wallet Account across any ABS BlockChain. This enables customers to create services such as crypto-currencies and exchanges, NFT marketplaces, apps (distributed/decentralized applications), and even their own  Web 3.0 & metaverse-enabled experiences.
 
 ## Connecting a Wallet to MetaMask
 
@@ -40,6 +40,10 @@ Through the Alliance Business Studio, Wallet Owners can connect their Wallet Acc
 Copy your Wallet's Private Key and paste it into Metamask, or scan the QR Code using MetaMask Mobile.
 
 Once your Wallet Identifier has been linked to MetaMask, click on the "Finish Connection" button to finalize the synchronization.
+
+
+
+
 
 
 ## Troubleshooting Wallets
