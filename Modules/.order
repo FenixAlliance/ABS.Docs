@@ -2,6 +2,7 @@ IAM
 ABS-%7C-ContactSight-(CRM)
 ABS-%7C-Content-Portals-(CMS)
 ABS-%7C-Learning-(LMS)
+Assets-Manager
 Contact-Sight
 Content-Portals
 iCommerce
@@ -16,7 +17,6 @@ FHIR
 BOTS
 EAMS
 HRMS
-Assets-Manager
 CLOUD
 SOCIAL
 CRYPTO
