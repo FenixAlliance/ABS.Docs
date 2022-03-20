@@ -34,7 +34,7 @@ Sales Records can also be bound to a specific Account Holder/Business Tenant (or
 For example, if you assign an Account Holder to an Order, that Account Holder will be able to log in to the platform and find that order onto their billing section (if using Alliance Business Studio), generate an invoice to pay, and pay that Invoice using any of your configured Payment Integrations.
 
 
-#Understanding Multi-Currency Support for Sales Records 
+## Understanding Multi-Currency Support for Sales Records 
 Sales Hub support's Alliance Business Model's multi-currency specification, meaning that you can manage Sales Records with live & historical multi-currency capabilities.
 
 When adding an amount into Sales Hub, you will be asked to select the currency on which amounts are being provided. This allows Sales Hub to not only present you and your user's information on their favorite currency but also allows your business to manage multi-currency accounting & operations without complications.
