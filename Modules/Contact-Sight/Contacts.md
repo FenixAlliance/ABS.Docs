@@ -1,5 +1,5 @@
 # Managing Contact Records on Alliance Business Suite Contact Sight
-Contact records store much of the information that your business collects from its customers. 
+Contact records store much of the information that your business collects from its customers. Contacts are one of the main records on the Alliance Business Model as they relate to pretty much every other record on the Database Schema, Contacts are required to create records such as Entitlements, Quotes, Orders, Invoices, Payments, Support Tickets and more. 
 
 ## Contact Types
 There are two types of Contacts.  
@@ -19,5 +19,3 @@ To edit a Contact, navigate to Contact Sight Module on the Alliance Business Stu
 To Delete a Contact, navigate to the contact you wish to delete and open it on the Contact Edition View. Under the Actions Bar, click on delete and confirm your intention by typing the contact's email. Contact Deletion requires special permissions to execute. Deleted contacts will remain hidden, but available for up to 30 days (depending on your Contact Deletion Policy) before permanent and unrecoverable deletion.
 
 NOTE: Deleting Contacts will delete all their related data, like files, profiles, tasks, schedules, and more. Contacts with related Orders, Invoices, and Payments can't be deleted.
-
-
