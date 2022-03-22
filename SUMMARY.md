@@ -94,8 +94,7 @@
   * [IAM](Modules/IAM.md)
   * [Accounting](Modules/Accounting.md)
       * [Accounts](Modules/Accounting/Accounts.md)
-         * [Accounting Entries](Modules/Accounting/Accounting-Entries.md)
-
+         * [Accounting Records](Modules/Accounting/Accounts/Accounting-Records.md)
       * [Billing](Modules/Accounting/Billing.md)
         * [Billing Records](Modules/ACCOUNTING/Billing/Billing-Records.md)
            * [Orders](Modules/ACCOUNTING/Billing/Billing-Records/Orders.md)
