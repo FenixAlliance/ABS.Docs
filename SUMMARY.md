@@ -116,6 +116,9 @@
       * [Shipping](Modules/ECOMMERCE/Shipping.md)
   * [Logistics](Modules/LOGISTICS.md)
     * [Stock Items](Modules/LOGISTICS/Stock-Items.md)
+  * [Sales Hub](Modules/Sales-Hub.md)
+    * [Sales Flows](/Modules/Sales-Hub/Sales-Flows.md)
+    * [Sales Records](/Modules/Sales-Hub/Sales-.md)
   * [Media Portals](Modules/CMS.md)
   * [Workflows Studio](Modules/Workflows.md)
 
