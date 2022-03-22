@@ -23,10 +23,9 @@ To add an invoice Line, click on the Add Invoice Line button on your Invoice Out
 By default, you will only have to select the Stock Item you want to sell and introduce a quantity. The Accounting Engine will automatically calculate the total amounts depending on the Invoice's Price List (if any) for the invoice line, but total control over these values is made possible through Custom Calculations.
 
 ### Customizing Invoice Line Calculations
-By default, when you add a new Invoice Line to an Invoice, automatic calculations are made based on the selected Stock Item and the Invoice's Price List. However, you can switch to custom calculations to control the values that contribute to the Total Line's Amount.
+By default, when you add a new Invoice Line to an Invoice, automatic calculations are made based on the selected Stock Item and the Invoice's Price List. However, you can switch to custom calculations to control the values that contribute to the Total Line's Amount. To learn more about price calculations, refer to [Billing Item Records](/Modules/Accounting/Billing/Billing-Item-Records.md)
 
-### Adding Tax Policies to Invoice Lines
-To add a Tax Policy to a Line, the new Policy needs to exist the Accounting Manager. Once it exists, it will be available to be selected when you click on the "Add Tax" button on the Line Outliner Form.
+
 
 Once you add the tax policy, it will be automatically calculated having as tax base the current Line's Tax Base Amount.
 
