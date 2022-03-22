@@ -1,5 +1,5 @@
 # What Is a Ledger Account?
-The accounting ledger contains a listing of all general accounts in the accounting system’s chart of accounts.
+The ledger account contains a listing of  business transaction records. It is a separate record a [ledger](/Modules/Accounting/Ledgers.md) that is assigned to a specific asset, liability, equity item, revenue type, or expense type.
 
 Here are the primary general ledger accounts:
 
@@ -10,9 +10,7 @@ Here are the primary general ledger accounts:
 - Expense accounts
 - Revenue and loss accounts
 
-Transactions are recorded throughout the year by debiting and crediting accounts in the ledger. The transactions are caused by normal business activities such as billing customers or through adjusting entries.
-
-The ledger account may be in the form of a written record if accounting is done by hand or in the form of electronic records when accounting software packages are used.
+Transactions are recorded throughout the year by debiting and crediting ledger accounts. The transactions are caused by normal business activities such as billing customers or through adjusting entries.
 
 # How to write to a Ledger?
 The Alliance Business Suite Accounting Module uses the double-entry bookkeeping method. So writing to a ledger means recording transactions into it. Each transaction is recorded into at least two ledger accounts. The entries have debit as well as credit transactions and are posted in two columns. 
