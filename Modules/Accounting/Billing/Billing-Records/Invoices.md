@@ -25,10 +25,6 @@ By default, you will only have to select the Stock Item you want to sell and int
 ### Customizing Invoice Line Calculations
 By default, when you add a new Invoice Line to an Invoice, automatic calculations are made based on the selected Stock Item and the Invoice's Price List. However, you can switch to custom calculations to control the values that contribute to the Total Line's Amount. To learn more about price calculations, refer to [Billing Item Records](/Modules/Accounting/Billing/Billing-Item-Records.md)
 
-
-
-Once you add the tax policy, it will be automatically calculated having as tax base the current Line's Tax Base Amount.
-
 ### Understanding Tax Calculations
 Applied Tax Policies contribute to the Total Amount of each Line by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Line, it will increase the Tax Amount by 19& of the Tax Base, therefore increasing the Total Amount for that Line. 
 
