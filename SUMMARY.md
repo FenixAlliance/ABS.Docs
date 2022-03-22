@@ -101,7 +101,7 @@
            * [Payments](Modules/ACCOUNTING/Billing/Billing-Records/Payments.md)
         * [Billing Item Records](Modules/ACCOUNTING/Billing/Billing-Item-Records.md)
       * [Ledgers](Modules/Accounting/Ledgers.md)
-  * [Assets Manager](Modules/Assets.md)
+  * [Assets Manager](Modules/Assets-Manager.md)
   * [Contact Sight](Modules/CRM.md)
   * [eCommerce](Modules/ECOMMERCE.md)
       * [Carts](Modules/ECOMMERCE/Carts.md)
