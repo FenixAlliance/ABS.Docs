@@ -104,7 +104,7 @@
       * [Ledgers](Modules/Accounting/Ledgers.md)
   * [Assets Manager](Modules/Assets-Manager.md)
   * [Contact Sight](Modules/CRM.md)
-    * [Contact Records](Modules/CRM/Contact-Records.md)
+    * [Contacts](Modules/CRM/Contacts.md)
     * [Contact Profiles](Modules/CRM/Contact-Profiles.md)
     * [Contact Relations](Modules/CRM/Contact-Relations.md)
   * [eCommerce](Modules/ECOMMERCE.md)
