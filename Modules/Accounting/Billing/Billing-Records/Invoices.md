@@ -72,7 +72,7 @@ Once your invoice is closed, you can collect payment for your invoice using any 
 Once your invoice is marked as closed, a new option to send an email containing a representation for your invoice will become visible. To send an email, simply click on that button, enter an email and click send.
  
 ## Reporting Invoices to Fiscal Authorities
-In some cases, Invoices need to be reported to their respective fiscal identities, either in a statement or through a digital service. Althoush Accounting Manager itself does not contain the capabilities to automatically report Invoices to their Fiscal Authority, several integrations have been created to do so with fiscal entities from several countries such as Colombia, Costa Rica, México & more.
+In some cases, Invoices need to be reported to their respective fiscal identities, either in a statement or through a digital service. Althousg Accounting Manager itself does not contain the capabilities to automatically report Invoices to their Fiscal Authority, several integrations have been created to do so with fiscal entities from several countries such as Colombia, Costa Rica, México & more.
 
 ## Adjusting Forex Rates for Invoices
-Forex Rates serve to calculate the Foreign Exchange Conversion over which a particular invoice was outlined, when it was outlined. If the currency in which either an Invoice or an Invoice Line was created us equal to USD, the Forex Rate will be 1.0. Otherwise, it will contain the total amount (in the selected currency) needed to exchange 1 USD as of the time of the Invoice.
+Forex Rates serve to calculate the Foreign Exchange Conversion over which a particular invoice was outlined, when it was outlined. If the currency in which either an Invoice or an Invoice Line was created us equal to USD, the Forex Rate will be 1.0. Otherwise, it will contain the total amount (in the selected currency) needed to exchange 1 USD as of the Invoice's Date.
