@@ -13,3 +13,5 @@ You can create a new deal unit using several ways.
 
 ## Adding Stock Items to Deal Units
 When you add a Stock Item to a Deal Unit, you are creating a new Billing Item Record. See Managing [Billing Item Records](/Modules/Accounting/Billing/Billing-Item-Records.md).
+
+##
