@@ -43,7 +43,6 @@ The format of a journal:
 | Transaction date | Account title and details  | Ledger folio number  | Amt. | Amt. |
 
 
-
 The ledger uses the “T” format where the date, particulars, and amount are recorded on each side.
 
 The format of a ledger:
