@@ -17,7 +17,7 @@ When you select an Individual as the Owner for an Invoice, you will be able to s
 
 
 ### Adding Invoice Lines
-One of our goals is to make it as easy and intuitive as possible to outline Invoices, Debit Notes, Credit Notes.
+One of our goals is to make it as easy and intuitive as possible to outline Invoices, Debit Notes & Credit Notes.
 To add an invoice Line, click on the Add Invoice Line button on your Invoice Outliner & fill out the form.
 
 By default, you will only have to select the Stock Item you want to sell and introduce a quantity. The Accounting Engine will automatically calculate the total amounts depending on the Invoice's Price List (if any) for the invoice line, but total control over these values is made possible through Custom Calculations.
@@ -39,29 +39,40 @@ The equation is the following:
 
 - **Tax Base** (Auto calculated): Represents the Base Amount for Tax Calculations. Tax Base Calculation depends on Total Detail minus Total Discounts + Total Surcharges.
 
-- **Tax Amount** (Auto calculated): Tax Amounts can be automatically calculated by adding Tax Policies to every Line. Tax Policies can be added from the selected Stock Item, or manually added to a Line.
-Tax Policies contribute to the Total Amount by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Line, it will add a 19& of the Tax Base to the Tax Amount, therefore to the Total Amount for that Line. 
+- **Tax Amount** (Auto calculated): Tax Amounts can be automatically calculated by adding Tax Policies to every Line. Tax Policies can be synced from the selected Stock Item, or manually added to a Line.
 
 - **Global Discounts**: Global Discounts are discounts made outside the scope of the Taxable values. Those discounts are suitable for operational discounts such as Tax Discounts (for whatever reason).
 
 - **Global Surcharges**: Global Surcharges are surcharges made outside the scope of the Taxable values. Those surcharges are suitable for operational surcharges such as shipping costs or payment processing fees which need to be covered but outside your fiscal domain.
-- **Total Amount** (Auto Calculated): The total Amount for the Line. Is calculated by Adding the Tax Amount to the Tax Base, the applying Global Discounts/Surcharge.
+- **Total Amount** (Auto Calculated): The total Amount for the Line. Is calculated by Adding the Tax Amount to the Tax Base, then applying Global Discounts/Surcharge.
 
 ### Adding Tax Policies to Invoice Lines
+To add a Tax Policy to a Line, the new Policy needs to exist the Accounting Manager. Once it exists, it will be available to be selected when you click on the "Add Tax" button on the Line Outliner Form.
+
+Once you add the tax policy, it will be automatically calculated having as tax base the current Line's Tax Base Amount.
 
 ### Understanding Tax Calculations
+Applied Tax Policies contribute to the Total Amount of each Line by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Line, it will increase the Tax Amount by 19& of the Tax Base, therefore increasing the Total Amount for that Line. 
 
 ## Updating Invoices
+Updating Invoices is as simple as creating them. If an invoice is marked as a draft (hasn't been closed, signed, or reported) every change is allowed (including changing its owner, date, Forex Rate, and more). Nevertheless, once that invoice is no longer a draft, the Accounting Manager won't allow updates or recalculations. Reopening an Invoice requires Global Administrator Privileges.
 
-## Closing & Signing Invoices
+## Closing Invoices
+Once your invoice is perfectly outlined, you will be able to close it. Closed Invoices become permanent, unmutable records. Once you have closed your Invoice, you can export it to multiple formats like JSON, XML, PDF, HTML, UML. Closed Invoices also become available to its Related Identities via the Studio & APIs. 
 
 ## Deleting Invoices
-
+To delete an invoice, head to the Invoice Details Page and select Delete from the Actions Bar. Only Draft Invoices can be deleted.
 
 ## Getting Payments for Invoices
 
+Once your invoice is closed, you can collect payment for your invoice using any of the Alliance Business Suite's integrations for Payment Gateways.
 
+
+## Send an Invoice through Email
+Once your invoice is marked as closed, a new option to send an email containing a representation for your invoice will become visible. To send an email, simply click on that button, enter an email and click send.
+ 
 ## Reporting Invoices to Fiscal Authorities
-
+In some cases, Invoices need to be reported to their respective fiscal identities, either in a statement or through a digital service. Althoush Accounting Manager itself does not contain the capabilities to automatically report Invoices to their Fiscal Authority, several integrations have been created to do so with fiscal entities from several countries such as Colombia, Costa Rica, México & more.
 
 ## Adjusting Forex Rates for Invoices
+Forex Rates serve to calculate the Foreign Exchange Conversion over which a particular invoice was outlined, when it was outlined. If the currency in which either an Invoice or an Invoice Line was created us equal to USD, the Forex Rate will be 1.0. Otherwise, it will contain the total amount (in the selected currency) needed to exchange 1 USD as of the time of the Invoice.
