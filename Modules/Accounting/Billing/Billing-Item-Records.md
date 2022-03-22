@@ -50,3 +50,11 @@ The equation is the following:
 
 - **Global Surcharges**: Global Surcharges are surcharges made outside the scope of the Taxable values. Those surcharges are suitable for operational surcharges such as shipping costs or payment processing fees which need to be covered but outside your fiscal domain.
 - **Total Amount** (Auto Calculated): The total Amount for the Line. Is calculated by Adding the Tax Amount to the Tax Base, then applying Global Discounts/Surcharge.
+
+### Adding Tax Policies to Billing Item Records
+To add a Tax Policy to a Billing Item Record, the new Policy needs to exist the Accounting Manager. Once it exists, it will be available to be selected when you click on the "Add Tax" button on the Line Outliner Form.
+
+Once you add the tax policy, it will be automatically calculated having as tax base the current Billing Item Records' Tax Base Amount.
+
+### Understanding Tax Calculations
+Applied Tax Policies contribute to the Total Amount of each Billing Item Record by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Billing Item Record, it will increase the Tax Amount by 19& of the Tax Base, therefore increasing the Total Amount for that Billing Item Records. 
