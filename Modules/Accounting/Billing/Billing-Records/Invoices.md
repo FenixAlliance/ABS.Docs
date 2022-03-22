@@ -17,8 +17,35 @@ When you select an Individual as the Owner for an Invoice, you will be able to s
 
 
 ### Adding Invoice Lines
+One of our goals is to make it as easy and intuitive as possible to outline Invoices, Debit Notes, Credit Notes.
+To add an invoice Line, click on the Add Invoice Line button on your Invoice Outliner & fill out the form.
+
+By default, you will only have to select the Stock Item you want to sell and introduce a quantity. The Accounting Engine will automatically calculate the total amounts depending on the Invoice's Price List (if any) for the invoice line, but total control over these values is made possible through Custom Calculations.
 
 ### Customizing Invoice Line Calculations
+By default, when you add a new Invoice Line to an Invoice, automatic calculations are made based on the selected Stock Item and the Invoice's Price List. However, you can switch to custom calculations to control the values that contribute to the Total Line's Amount.
+
+As every Item Billing Record (the base record for Invoice Lines, Order Lines, Quote Lines, and more). Calculations are made using a segregated approach where several values come into play.
+
+The equation is the following:
+- **Currency**: The Currency in which you are entering custom values.
+- **Forex Rate**: The total amount used for conversion between the currency you're entering values and United States Dollars. You can enter a custom value or auto-calculate using the Historical Exchange Feature.
+- **Base Amount**: It represents the base price for a single product unit, without profit, discounts, surcharges, or taxes.
+- **Total Profit**: The Total Profit Amount for a single product unit.
+- **Total Detail** (Auto calculated): Total Amount over which Discounts will be calculated.
+
+- **Total Discounts**: Total Discounts for a single product unit.
+- **Total Surcharges**: Total Discounts for a single product unit.
+
+- **Tax Base** (Auto calculated): Represents the Base Amount for Tax Calculations. Tax Base Calculation depends on Total Detail minus Total Discounts + Total Surcharges.
+
+- **Tax Amount** (Auto calculated): Tax Amounts can be automatically calculated by adding Tax Policies to every Line. Tax Policies can be added from the selected Stock Item, or manually added to a Line.
+Tax Policies contribute to the Total Amount by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Line, it will add a 19& of the Tax Base to the Tax Amount, therefore to the Total Amount for that Line. 
+
+- **Global Discounts**: Global Discounts are discounts made outside the scope of the Taxable values. Those discounts are suitable for operational discounts such as Tax Discounts (for whatever reason).
+
+- **Global Surcharges**: Global Surcharges are surcharges made outside the scope of the Taxable values. Those surcharges are suitable for operational surcharges such as shipping costs or payment processing fees which need to be covered but outside your fiscal domain.
+- **Total Amount** (Auto Calculated): The total Amount for the Line. Is calculated by Adding the Tax Amount to the Tax Base, the applying Global Discounts/Surcharge.
 
 ### Adding Tax Policies to Invoice Lines
 
