@@ -334,7 +334,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Extensibility via Custom Modules
 - Extensibility via Custom Themes
 - Folder / File Management (Azure Storage, File System)
-- GraphQl API with Voyager, GraphiQl y GraphQl Playground
+- graphql API with Voyager, GraphiQl y GraphQl Playground
 - Headless API with Swagger Support
 - HealthCheck Rules with UI Support
 - i18n Enabled (Based on GeoAPI and Custom Settings)
