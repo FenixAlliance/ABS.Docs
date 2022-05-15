@@ -26,12 +26,29 @@ The Alliance Business Suite provides customers with a Modular, Full-Stack, Low-C
 The Alliance Business Suite is composed of four major components designed to separate different functionalities into layers; these layers are:
 
 ## Alliance Core Libraries
-## Alliance Business Model
-## Alliance Passport Service
-## Alliance Business Platform
-## Alliance Business Studio
 
 
+## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
+
+The Alliance Passport Service enables developers and non-developers alike 
+The Alliance Passport Service is an Authentication/Authorization Engine designed to enable customers to easily configure and manage businesses identity scenarios by assigning (or connecting) a digital identity to their contacts, whether they are customers, employees, partners, guests, and more. 
+
+It also provides common features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
+
+
+## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
+
+The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of REST, SignalR, GraphQl y gRPCto transact with the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
+
+Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
+
+## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
+
+The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
+
+Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
+
+## How to build applications on top of the Alliance Business Suite?
 
 Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through .NET, an open-source and cross-platform framework for building web-mobile apps using C#, with or without the use of JavaScript.
 
