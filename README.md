@@ -25,7 +25,17 @@ The Alliance Business Suite provides customers with a Modular, Full-Stack, Low-C
 
 The Alliance Business Suite is composed of four major components designed to separate different functionalities into layers; these layers are:
 
-## Alliance Core Libraries
+## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
+
+The Alliance Core Libraries contains the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies, which are dependencies outside the `FenixAlliance.*` namespace are referred to by the `FenixAlliance.ACL.Deps` Package, which is the base ACL Package and, therefore, it could be referred to as the Core Package.
+
+For more information on the dependency tree, design overview and external dependencies, please refer to [Advanced Topics](/Advanced.md).
+
+## [Alliance Business Model](/Components/Alliance-Business-Model.md)
+
+The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
+
+Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
 
 ## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
