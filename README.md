@@ -50,13 +50,13 @@ It also provides common features for managing authentication, authorization, dat
 
 The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of REST, SignalR, GraphQl y gRPCto transact with the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
 
-Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
+You can easily build on, and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Web Stack Framework), to capture additional business-specific scenarios.
 
 ## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
 
 The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, and reports, customize and extend the system, and much more.
 
-Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
+You can build on top of, and extend The Alliance Business Studio to capture additional business-specific scenarios.
 
 ## How to build applications on top of the Alliance Business Suite?
 
