@@ -17,7 +17,7 @@
 
 # Welcome to the Alliance Business Suite Documentation!
 
-The Alliance Business Suite is being built to aughment businesses across industries all over the world through a low-code, and fully customizable business development platform.
+The Alliance Business Suite is being built to augment businesses across industries all over the world through a low-code, and fully customizable business development platform.
 
 At a very high level, the Alliance Business Suite is a set of powerful, extensible, multi-tenant applications built to enable businesses to jumpstart their digitalization process through the acceleration of several core aspects of any given business.
 
@@ -27,13 +27,13 @@ The Alliance Business Suite is composed of four major components designed to sep
 
 ## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
 
-The Alliance Core Libraries contains the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies, which are dependencies outside the `FenixAlliance.*` namespace are referred to by the `FenixAlliance.ACL.Deps` Package, which is the base ACL Package and, therefore, it could be referred to as the Core Package.
+The Alliance Core Libraries contain the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies, which are dependencies outside the `FenixAlliance.*` namespace is referred to by the `FenixAlliance.ACL.Deps` Package, which is the base ACL Package and, therefore, it could be referred to as the Core Package.
 
-For more information on the dependency tree, design overview and external dependencies, please refer to [Advanced Topics](/Advanced.md).
+For more information on the dependency tree, design overview, and external dependencies, please refer to [Advanced Topics](/Advanced.md).
 
 ## [Alliance Business Model](/Components/Alliance-Business-Model.md)
 
-The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
+The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Accounts, Business Units, cases, Contact, Leads, Opportunity, and Items (Products/Services) and interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
@@ -41,7 +41,7 @@ Anyone can build on and extend ABM definitions to capture additional business-sp
 ## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
 
 The Alliance Passport Service enables developers and non-developers alike 
-The Alliance Passport Service is an Authentication/Authorization Engine designed to enable customers to easily configure and manage businesses identity scenarios by assigning (or connecting) a digital identity to their contacts, whether they are customers, employees, partners, guests, and more. 
+The Alliance Passport Service is an Authentication/Authorization Engine designed to enable customers to easily configure and manage business identity scenarios by assigning (or connecting) a digital identity to their contacts, whether they are customers, employees, partners, guests, and more. 
 
 It also provides common features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
 
@@ -54,22 +54,22 @@ Anyone can build on and extend The Alliance Business Platform through ASP.NET + 
 
 ## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
 
-The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, reports, customize and extend the system, and much more.
+The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, and reports, customize and extend the system, and much more.
 
 Anyone can build on and extend The Alliance Business Studio to capture additional business-specific scenarios.
 
 ## How to build applications on top of the Alliance Business Suite?
 
-Both client and server code are written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through .NET, an open-source and cross-platform framework for building web-mobile apps using C#, with or without the use of JavaScript.
+Client and server code are written in C#, allowing users to extend the product with their code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through .NET, an open-source and cross-platform framework for building web-mobile apps using C#, with or without the use of JavaScript.
 
 The power of the Alliance Business Suite can be leveraged from small personal blogs,  eCommerce platforms, and professional portfolios to the infrastructure of large corporations.
 
 
 ## About the Alliance Creed
 
-We're designed to succeed when you and your business succeed; that's why we're committed to helping as many people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
+We're designed to succeed when you and your business succeed; that's why we're committed to helping as many people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds of success through the right tools and support on the path to digitalization.
 
-The fact is, since our inception, we've steered towards creating a culture designed to reach beyond expectations together by building an organization whose success strategy is to help others to succeed.
+Since our inception, we've steered towards creating a culture designed to reach beyond expectations together by building an organization whose success strategy is to help others succeed.
 
 ### Well then. What do I get?
 
@@ -128,16 +128,16 @@ There is a separate [Documentation repository](https://dev.azure.com/fenixallian
 
 The Easy Way: As a Docker Container.
 
-```powershell
+```PowerShell
 docker pull FenixAlliance.ABS:latest
 ```
 
 ### Conventional Install
 
-```powershell
+```PowerShell
 git clone https://github.com/FenixAlliance/ABS.Bin
 ```
-```powershell
+```PowerShell
 cd ABS.Bin
 ```
 ```sh
@@ -211,7 +211,7 @@ namespace FenixAlliance.ABS
 ![image.png](/.attachments/image-8bae0adf-518b-4e17-adfe-05bdc9f31fc1.png)
 
 ## ABS Extensions:
-The ABS is absolutely modular. Whether you need to add pages, products, or posts with no code at all (using the ABS Web Designer), modify the style or layout, or add your own Types, Controllers, Pages, Views, Components, or Tag Helpers
+The ABS is modular. Whether you need to add pages, products, or posts with no code at all (using the ABS Web Designer), modify the style or layout, or add your Types, Controllers, Pages, Views, Components, or Tag Helpers
 
 ![ABS Extensions](https://github.com/fenixalliance/abs.docs/blob/master/.attachments/YLVYb8WhDf.gif?raw=true "ABS Extensions")
 
@@ -283,14 +283,14 @@ Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We h
 
 Your access to and use of the Alliance Business Suite's source code is governed by the Fenix Alliance's [End User License Agreement "EULA"](http://absuite.net/eula). If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
 
-We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the develop branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Fenix Alliance coding standards. All contributions are governed by the terms of the EULA.
+We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the development branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Fenix Alliance coding standards. All contributions are governed by the terms of the EULA.
 
 
 **A note about your account and the privacy of your information.**
 
 The Alliance Passport Services engine is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, but you can also integrate your own.
 
-We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
+We think that it's also worth pointing out that we DO NOT store any identifying information in our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
 
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
@@ -298,7 +298,7 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
 
-Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be trademarks or registered trademarks of Fenix Alliance Inc. in the United States/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
+Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance products and services referenced in the documentation may be trademarks or registered trademarks of Fenix Alliance Inc. in the United States/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 
 Privacy information can be found at https://fenix-alliance.com/legal/policies/privacypolicy
 
