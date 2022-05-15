@@ -26,15 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Templating Engine now relies on default service implementations on the Alliance Business Model.
 - [ABS] PortalContext is now optimized to use DataServices.
 - [ABS] StudioContext is now more efficient through PortalContext Optimization.
-- [ABS] Studio.Core now contains the layout, components, and utilities for the ABS Studio.
-- [ABS] Academy Portal is now an independent dll compatible with Studio.Core.
-- [ABS] Admin Portal is now an independent dll compatible with Studio.Core.
-- [ABS] Wallet Portal is now an independent dll compatible with Studio.Core.
-- [ABS] Holders Portal is now an independent dll compatible with Studio.Core.
-- [ABS] Tenants Portal is now an independent dll compatible with Studio.Core.
-- [ABS] Social Network is now an independent dll compatible with Studio.Core.
-- [ABS] Support Portal is now an independent dll ccompatible with Studio.Core.
-- [ABS] Developer Portal is now an independent dll compatible with Studio.Core.
+- [ABS] `Studio.Core` now contains the layout, components, and utilities for the ABS Studio.
+- [ABS] Academy Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Admin Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Wallet Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Holders Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Tenants Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Social Network is now an independent dll compatible with `Studio.Core.`
+- [ABS] Support Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Developer Portal is now an independent dll compatible with `Studio.Core`.
 
 ### Removed
 - [ABM] I 
