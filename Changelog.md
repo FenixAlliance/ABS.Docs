@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - [ABS] Fixed Workflows Studio Designer not displaying on production.
-- [ABM] Improve IPricingService implementations to always use the latest data to perform generic/extensible price calculations.
+- [ABM] Improve IPricingService implementations to always use the latest data to perform generic/historical/extensible/customizable multi-currency amount calculations.
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
