@@ -8,9 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.1] - 2022-05-12
 
 ### Added
+- [ABM] ICmsDataService.
+- [ABM] ICrmDataService.
+- [ABM] ISocialDataService.
+- [ABM] IMarketplaceDataService.
+- [ABM] ISecurityDataService.
+- [ABM] IGlobalDataService.
+- [ABM] IForexDataService.
+- [ABS] CodeEditorComponent with Monaco Editor.
+
 ### Fixed
+- [ABS] Fixed Workflows Studio Designer not displaying on production.
+
 ### Changed
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Templating Engine now relies on interface services on the Alliance Business Model.
+- [ABS] Templating Engine now relies on default service implementations on the Alliance Business Model.
+- [ABS] PortalContext is now optimized to use DataServices.
+- [ABS] StudioContext is now more efficient through PortalContext Optimization.
+- [ABS] Academy is now an independent dll.
+- [ABS] Admin is now an independent dll.
+- [ABS] Wallet is now an independent dll.
+- [ABS] Holders Manager is now an independent dll.
+- [ABS] Tenants Manager is now an independent dll.
+- [ABS] Social Network is now an independent dll.
+
 ### Removed
+- [ABM] I 
 
 ## [1.4.0] - 2022-01-12
 
