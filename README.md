@@ -19,7 +19,7 @@
 
 The Alliance Business Suite is being built to aughment businesses across industries all over the world through a low-code, and fully customizable business development platform.
 
-At a very high level, the Alliance Business Suite is a set of intelligent, extensible, multi-tenant applications built to enable users to jumpstart their business through the acceleration of several core aspects of any given business across industries and countries.
+At a very high level, the Alliance Business Suite is a set of powerful, extensible, multi-tenant applications built to enable businesses to jumpstart their digitalization process through the acceleration of several core aspects of any given business.
 
 The Alliance Business Suite gives users a Modular, Full-Stack, Low-Code Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
