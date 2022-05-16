@@ -292,14 +292,6 @@ Your access to and use of the Alliance Business Suite's source code is governed 
 We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the development branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Fenix Alliance coding standards. All contributions are governed by the terms of the EULA.
 
 
-**A note about your account and the privacy of your information.**
-
-The Alliance Passport Services engine is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, but you can also integrate your own.
-
-We think that it's also worth pointing out that we DO NOT store any identifying information in our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
-
-To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
-
 # Legal Notices
 
 Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code or binary form Fenix Alliance through the [ABS EULA](http://absuite.net/eula).
