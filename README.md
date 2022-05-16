@@ -63,26 +63,6 @@ Client and server code are written in C#, allowing users to extend the product w
 
 The power of the Alliance Business Suite can be leveraged from small personal blogs, eCommerce platforms, and professional portfolios to the infrastructure of large corporations.
 
-### Well then. What do I get?
-
-We are creating our applications in such a form that they deliver as much value to your business and cause as we can. They work primarily as an interface for users to manage their services, products, and cloud resources. But the truth is that isn't limited to just that.
-
-Our applications are being developed to give you access to every functionality that we implement for our business, to power your business and vision as well. This is because if we can add value to our business and gain a competitive advantage through these tools, chances are you can too!
-
-So far, we've created a few extensions and connectors for the Alliance Business Suite, but you can extend it too! Some of these extensions are open source, so feel free to check their code for extension reference.
-
-Connectors are always free and you can find them on your ABS Extensions page, and some of our extensions have free tiers. You will get the Alliance Business Suite Community Edition, for free, with the following Modules:
-
-- ABS Contact Sight. (CRM)
-- ABS Media Portals. (CMS)
-- ABS Accounting. (AMS)
-- ABS Learning. (LMS)
-- ABS Social Networks. (Intranet Social Network)
-- ABS IAM (Identity and Access Management)
-- Infinity Comex (eCommerce Engine)
-
-To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
-
 ### User Guide
 - [Documentation](https://docs.absuite.net)
 - [Roadmap](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)
