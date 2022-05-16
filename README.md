@@ -151,18 +151,18 @@ dotnet FenixAlliance.ABS.Studio.dll
 
 ### As application dependency
 
-- Add the Alliance Business Suite Nuget Feed.
+- #### Add the Alliance Business Suite Nuget Feed.
 ``` PowerShell
 dotnet nuget add source https://nuget.absuite.net/nuget -n absuite.net
 ```
 
-- Add the NuGet package
+- #### Add the NuGet package
 
 ```sh
 dotnet add package FenixAlliance.ABS.Hub --version latest
 ```
 
-## Register Services and Configuration
+- #### Register Services and Configuration
 
 ```cs
 using FenixAlliance.ABS.Hub.Extensions;
