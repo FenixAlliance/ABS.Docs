@@ -149,7 +149,7 @@ or
 dotnet FenixAlliance.ABS.Studio.dll
 ```
 
-### As application dependency
+### Installing as an application dependency
 
 - #### Add the Alliance Business Suite Nuget Feed.
 ``` PowerShell
