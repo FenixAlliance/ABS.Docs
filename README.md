@@ -95,7 +95,10 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 - [Roadmap](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)
 
 # Getting Started
-
+- Add the Alliance Business Suite Nuget Feed.
+``` powershell
+dotnet nuget add source https://nuget.absuite.net/nuget -n absuite.net
+```
 - Install **[.NET 6 SDK (v6.0.*)](https://dotnet.microsoft.com/download/dotnet/6.0)**.
    
 - Install the latest edition (v16.8 or higher) of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) (Community, Professional, or Enterprise Editions) with the **ASP.NET and web development** workload enabled. Alliance Business Suite works with ALL editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
