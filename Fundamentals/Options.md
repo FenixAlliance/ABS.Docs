@@ -2,9 +2,9 @@
 
 ## The GenericOption Table
 
-To maximize your ability to extend the Alliance Business Suite, we've created the GenericOptions table, which is a table containing a few columns to store optional and configuration data for external applications without the need to modify nor extend the Alliance Business Model Schema, not to bring another data persistence mechanism.
+To maximize your ability to extend the Alliance Business Suite, we've created the a generic data persistance mechanism, which is a table containing a few columns to store optional and configuration data for external applications without the need to modify nor extend the Alliance Business Model Schema, not to bring another data persistence mechanism.
 
-The options table stores a different kind of data from the other tables: instead of storing data about your Web Portal's content, it stores data about the Web Portal itself. Data is written to the options table using the **Options API**, both of which consist of a set of functions used to add, update and delete data from this table. 
+The options table stores data as encrypted JSON data. Data is written to the options table using the **Options API**, both of which consist of a set of functions used to add, update and delete data from this table. 
 
 ## The Options API
 
