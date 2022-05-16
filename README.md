@@ -61,14 +61,7 @@ You can build on top of, and extend The Alliance Business Studio to capture addi
 
 Client and server code are written in C#, allowing users to extend the product with their code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through .NET, an open-source and cross-platform framework for building web-mobile apps using C#, with or without the use of JavaScript.
 
-The power of the Alliance Business Suite can be leveraged from small personal blogs,  eCommerce platforms, and professional portfolios to the infrastructure of large corporations.
-
-
-## About the Alliance Creed
-
-We're designed to succeed when you and your business succeed; that's why we're committed to helping as many people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds of success through the right tools and support on the path to digitalization.
-
-Since our inception, we've steered towards creating a culture designed to reach beyond expectations together by building an organization whose success strategy is to help others succeed.
+The power of the Alliance Business Suite can be leveraged from small personal blogs, eCommerce platforms, and professional portfolios to the infrastructure of large corporations.
 
 ### Well then. What do I get?
 
