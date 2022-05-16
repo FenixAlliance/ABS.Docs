@@ -23,7 +23,7 @@ At a very high level, the Alliance Business Suite is a set of powerful, extensib
 
 The Alliance Business Suite provides customers with a Full-Stack, Low-Code, Modular, and Multi-Tenant Business Application Framework built on top of the [Alliance Business Platform](https://absuite.net/Suite/Platform). 
 
-The Alliance Business Suite relies on [five major components](Components.md) designed to separate different functionalities into layers; these components are:
+The Alliance Business Suite relies on [five major components](/Components.md) designed to separate different functionalities into layers; these components are:
 
 - ## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
 
