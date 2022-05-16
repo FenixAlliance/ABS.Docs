@@ -182,9 +182,6 @@ using FenixAlliance.ABS.Hub.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
 builder.Services.AddAllianceBusinessSuite(builder.Configuration, builder.Environment);
 
 var app = builder.Build();
@@ -192,7 +189,6 @@ var app = builder.Build();
 app.UseAllianceBusinessSuite(builder.Configuration, builder.Environment);
 
 app.Run();
-
 ```
 
 
