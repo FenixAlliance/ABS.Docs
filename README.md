@@ -21,37 +21,37 @@ Aiming to help organizations reach beyond expectations, the Alliance Business Su
 
 At a very high level, the Alliance Business Suite is a set of powerful, extensible, multi-tenant applications built to enable businesses to jumpstart their digitalization process through powerful business applications built to cover the core processes of any given business.
 
-The Alliance Business Suite provides customers with a Modular, Full-Stack, Low-Code Application Framework built on top of the [Alliance Business Platform](https://absuite.net/Suite/Platform). 
+The Alliance Business Suite provides customers with a Full-Stack, Low-Code, Modular, and Multi-Tenant Business Application Framework built on top of the [Alliance Business Platform](https://absuite.net/Suite/Platform). 
 
-The Alliance Business Suite is composed of four major components designed to separate different functionalities into layers; these layers are:
+The Alliance Business Suite relies on five major components designed to separate different functionalities into layers; these layers are:
 
-## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
+- ## [Alliance Core Libraries](/Components/Alliance-Core-Libraries.md)
 
 The Alliance Core Libraries contain the core abstractions and default implementations required by the Alliance Business Model and dependent components. It is also the external dependency source for the entire Alliance Business Suite, which means that external dependencies, which are dependencies outside the `FenixAlliance.*` namespace, are referenced by the `FenixAlliance.ACL.Deps` Package, which is the base ACL Package and, therefore, it could be referred to as the Core Package.
 
 For more information on the dependency tree, design overview, and external dependencies, please refer to [Advanced Topics](/Advanced.md).
 
-## [Alliance Business Model](/Components/Alliance-Business-Model.md)
+- ## [Alliance Business Model](/Components/Alliance-Business-Model.md)
 
 The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Accounts, Business Units, cases, Contact, Leads, Opportunity, and Items (Products/Services) and interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
 
 Anyone can build on and extend ABM definitions to capture additional business-specific scenarios.
 
 
-## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
+- ## [Alliance Passport Service](/Components/Alliance-Passport-Service.md)
 
 The Alliance Passport Service enables developers and non-developers alike 
 The Alliance Passport Service is an Authentication/Authorization Engine designed to enable customers to easily configure and manage business identity scenarios by assigning (or connecting) a digital identity to their contacts, whether they are customers, employees, partners, guests, and more. 
 
 It also provides common features for managing authentication, authorization, data protection, HTTPS enforcement, app secrets, XSRF/CSRF prevention, and CORS management. These security features allow you to build robust, yet secure Alliance Business Suite apps.
 
-## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
+- ## [Alliance Business Platform](Components/Alliance-Business-Platform.md)
 
 The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of REST, SignalR, GraphQl y gRPCto transact with the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
 
 You can easily build on, and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Web Stack Framework), to capture additional business-specific scenarios.
 
-## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
+- ## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
 
 The Alliance Business Studio is the Graphical Administration Engine for the Alliance Business Suite. It allows users to manage their implementations, transact data through the Alliance Business Platform, generate and consume views, and reports, customize and extend the system, and much more.
 
