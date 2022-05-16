@@ -155,7 +155,8 @@ dotnet FenixAlliance.ABS.Studio.dll
 ``` PowerShell
 dotnet nuget add source https://nuget.absuite.net/nuget -n absuite.net
 ```
-Add the NuGet package
+
+- Add the NuGet package
 
 ```sh
 dotnet add package FenixAlliance.ABS.Hub --version latest
