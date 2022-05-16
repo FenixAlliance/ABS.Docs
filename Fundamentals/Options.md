@@ -39,7 +39,5 @@ GenericOptins have different types (also called scopes). As of v1.3.0, the follo
 
 
 ### Aditional considerations
-
-
 One of the important things to understand about the GenericOption table is the autoload field. This contains a boolean value (yes or a no). This essentially controls whether or not it is loaded on cached memory by the `OptionsService.LoadOptions()` function. Autoloaded data is data that is loaded on every page of your Alliance Business Suite instance. Just like we showed you how to disable certain scripts from loading sitewide, the same idea applies here. The autoload attribute is set to “yes” by default for developers, but not every option should be loaded on every page.
 
