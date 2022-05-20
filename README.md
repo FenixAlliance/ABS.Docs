@@ -129,10 +129,11 @@ dotnet FenixAlliance.ABS.Studio.dll
 dotnet nuget add source https://nuget.absuite.net/nuget -n absuite.net
 ```
 
-- #### Add the NuGet package
+- #### Add the NuGet packages
 
 ```sh
 dotnet add package FenixAlliance.ABS.Hub --version latest
+dotnet add package FenixAlliance.ABS.Assets --version latest
 ```
 
 - #### Register Services and Configuration on .NET 5.0
