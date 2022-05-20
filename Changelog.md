@@ -9,9 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - [ABM] Squash migrations for MySQL.
 - [ABP] Update Service Registration Lifetime.
-- [ABM] Use new scoped for Scoped Services over Singlentons.
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Improve Academy Pages to use new methods on IAcademyService.
+- [ABM] Use new scoped for Scoped Services used over Singlenton Services.
 - [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implemeation.
 - [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implemeation.
 - [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implemeation.
