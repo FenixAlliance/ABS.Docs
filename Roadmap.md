@@ -2,7 +2,7 @@
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
 
-V.1.5 LTS ( release: July 12, 2022 )
+Proposed:
 - [ ] Node.js SDK 
 - [ ] PowerShell SDK 
 - [ ] Agreement Template Definitions
@@ -27,6 +27,10 @@ V.1.5 LTS ( release: July 12, 2022 )
 - [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
+
+V.1.5 LTS ( release: July 12, 2022 )
+- ✅ New IServicesService interface & Default Implementation
+- ✅ New IService interface & Default Implementation
 
 V.1.4 ( release: May 12, 2022 )
 - ✅ .NET 6.0 LTS Update
