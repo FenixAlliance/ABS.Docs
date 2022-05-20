@@ -2,10 +2,9 @@
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
 
-V.1.3 ( release: July 12, 2022 )
+V.1.5 LTS ( release: July 12, 2022 )
 - [ ] Node.js SDK 
 - [ ] PowerShell SDK 
-- [ ] .NET 6.0 LTS Update
 - [ ] Agreement Template Definitions
 - [ ] Email Signature Template Definitions
 - [ ] Document Template Definitions
@@ -20,9 +19,7 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] Granular Property Set Access
 - [ ] Custom Includes Definitions
 - [ ] Virtual Entity Data Sources
-- [ ] Studio Static Localization
 - [ ] In-Portal Live Chat Widget
-- [ ] Code Editor: Razor Syntax Highlighting 
 - [ ] ML-Based Search Results Ranking Engine
 - [ ] ML-Based Fraud Detection Engine (Anomaly Detection), (Binary Classification)
 - [ ] ML-Based Price Prediction Engine
@@ -30,6 +27,14 @@ V.1.3 ( release: July 12, 2022 )
 - [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
+
+V.1.4 ( release: May 12, 2022 )
+- ✅ .NET 6.0 LTS Update
+- ✅ Studio Layout Localization
+- ✅ Code Editor: Razor Syntax Highlighting 
+
+V.1.3 ( release: July 12, 2022 )
+
 - ✅ ML-Based Natural Language Processing Engine
 - ✅ ML-Based eCommerce Recommendation Engine
 - ✅ Template Definitions
