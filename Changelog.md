@@ -27,14 +27,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Refactor Static Assets to improve package installation time.
 
 
-## [1.5.1] - 2022-05-15
+## [1.5.1] - 2022-05-14
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Umprove UI Rendering Proccess.
 
 
-## [1.5.0] - 2022-05-15
+## [1.5.0] - 2022-05-13
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
