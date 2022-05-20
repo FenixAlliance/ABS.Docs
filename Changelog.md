@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.5.4] - 2022-05-19
 
 ### Changed
+
 - [ABM] Squash migrations for MySQL.
 - [ABP] Update Service Registration Lifetime.
 - [ACL] Update dependencies to the latest stable versions.
