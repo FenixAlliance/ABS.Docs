@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implemeation.
 - [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implemeation.
 
+
+### Fixed
+
+- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get overrided with null.
+
+
 ## [1.5.3] - 2022-05-15
 
 ### Changed
