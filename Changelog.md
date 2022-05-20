@@ -4,19 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.5.4] - 2022-05-15
+## [1.5.4] - 2022-05-19
 
 ### Changed
-- [ABP] Update Service Registration Lifetime.
 - [ABM] Squash migrations for MySQL.
-- [ABS] Umprove UI Rendering Proccess.
-
+- [ABP] Update Service Registration Lifetime.
+- [ABM] Use new scoped for Scoped Services over Singlentons.
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Improve Academy Pages to use new methods on IAcademyService.
+- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implemeation.
 
 ## [1.5.3] - 2022-05-15
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Umprove UI Rendering Proccess.
+- [ABS] Refactor Static Assets to improve package installation time.
 
 
 ## [1.5.1] - 2022-05-15
