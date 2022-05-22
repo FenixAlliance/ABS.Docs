@@ -115,11 +115,11 @@ git clone https://github.com/FenixAlliance/ABS.Bin
 cd ABS.Bin
 ```
 ```sh
-./FenixAlliance.ABS.Studio.exe
+./FenixAlliance.ABS.Web.exe
 ```
 or
 ```sh
-dotnet FenixAlliance.ABS.Studio.dll
+dotnet FenixAlliance.ABS.Web.dll
 ```
 
 ### Installing as an application dependency
