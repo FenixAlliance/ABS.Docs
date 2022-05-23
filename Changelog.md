@@ -9,8 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - [ABP] Improved ServiceLifetyme consistency across default service implementations.
-- [ABS] Improved Studio Rendering Proccess.
-- [ABS] Improved 
+- [ABS] Improved Studio Rendering Process.
+
+### Changed
+
+- [ABS] IAcademyDataService and AcademyDataService are now ILmsDataService and LmsDataService respectively.
 
 ## [1.5.4] - 2022-05-19
 
@@ -32,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get overrided with null.
+- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get override with null.
 
 
 ## [1.5.3] - 2022-05-15
@@ -46,14 +49,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Umprove UI Rendering Proccess.
+- [ABS] Improve UI Rendering Process.
 
 
 ## [1.5.0] - 2022-05-13
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Umprove UI Rendering Proccess.
+- [ABS] Improve UI Rendering Process.
 
 
 ## [1.4.1] - 2022-05-12
