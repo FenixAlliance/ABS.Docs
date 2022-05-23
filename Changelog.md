@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- [ACL] Update dependencies to the latest stable versions.
 - [ABS] IAcademyDataService and AcademyDataService are now ILmsDataService and LmsDataService respectively.
 
 ## [1.5.4] - 2022-05-19
