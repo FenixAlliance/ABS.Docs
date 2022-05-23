@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.5] - 2022-05-22
 
+### Added
+- [ACL] Brazorize Library Dependency.
+
 ### Fixed
 
 - [ABP] Improved ServiceLifetime consistency across default service implementations.
