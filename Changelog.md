@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.5] - 2022-05-22
+
+### Fixed
+
+- [ABP] Improved ServiceLifetyme consistency across default service implementations.
+- [ABS] Improved Studio Rendering Proccess.
+- [ABS] Improved 
+
 ## [1.5.4] - 2022-05-19
 
 ### Changed
@@ -12,14 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABP] Update Service Registration Lifetime.
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Improve Academy Pages to use new methods on IAcademyService.
-- [ABM] Use new scoped for Scoped Services used over Singlenton Services.
-- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Use new scoped for Scoped Services used over Singleton Services.
+- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implementation.
 
 
 ### Fixed
