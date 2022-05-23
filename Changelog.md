@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- [ABP] Improved ServiceLifetyme consistency across default service implementations.
+- [ABP] Improved ServiceLifetime consistency across default service implementations.
 - [ABS] Improved Studio Rendering Process.
 
 ### Changed
