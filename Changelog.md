@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.5.6] - 2022-05-23
 
 ### Fixed
-
 - [ABS] Fix error on Studio Modules Loading Process. More assemblies than necessary used to be passed to the router.
 
 ## [1.5.5] - 2022-05-22
