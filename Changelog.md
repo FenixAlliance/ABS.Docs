@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - [ABS] Fix error on Studio Modules Loading Process. More assemblies than necessary used to be passed to the router.
+- [ABM] Adds additional properties to Alliance Business Model for Job Board Applications.
+- [ABM] Adds V1.5.6 ABM Migration for MySQL, MS SQL, and Oracle Data Providers.
 
 ## [1.5.5] - 2022-05-22
 
