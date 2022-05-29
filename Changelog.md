@@ -14,12 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - [ABM] IContactService's default implementation is now using ICrmDataService.
-- [ABM] IContactService's default implementation is now using per-operation Data Context instances.
 
 ## [1.5.8] - 2022-05-26
 
 ### Added
-- [ABS] ContactSyncronizationStrategy on PortalContext.
+- [ABM] IContactService's default implementation is now using per-operation Data Context instances.
 
 ## [1.5.7 - 2022-05-25
 ### Added
