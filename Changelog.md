@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.7.2] - 2022-06-04
 
 ### Added
-- [ABM] IWebUIService and default implementation (`WebUIService`).
-- [ABM] IDateTimeService and default implementation (`DateTimeService`).
+- [ABM] `IWebUIService` and default implementation (`WebUIService`).
+- [ABM] `IDateTimeService` and default implementation (`DateTimeService`).
 
 ### Changed
 - [ABS] Register Fluent UI & Fast Design Layout Contexts.
