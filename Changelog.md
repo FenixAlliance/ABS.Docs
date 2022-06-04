@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.0] - 2022-06-04
+
+### Added
+- [ABS] Studio Static Asset Bundles
+
+### Changed
+- [ABS] Improve Country Flag Rendering.
+- [ABS] Improve Country Flag Rendering.
+- [ABS] Improve Studio Rendering Proccess.
+- [ABM] Improve Curriculum Relations.
+- [ACL] Update dependencies to the latest stable versions.
+
 ## [1.6.0] - 2022-05-28
 
 ### Added
