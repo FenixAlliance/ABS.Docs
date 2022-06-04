@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - [ABS] Improve Country Flag Rendering.
 - [ABS] Improve Country Flag Rendering.
-- [ABS] Improve Studio Rendering Proccess.
+- [ABS] Improve Studio Rendering Process.
 - [ABM] Improve Curriculum Relations.
 - [ACL] Update dependencies to the latest stable versions.
 
