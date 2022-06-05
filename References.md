@@ -2,8 +2,10 @@
 
 
 
-* [Version 1.1.4](https://docs.absuite.net/reference/1.1.4)
-* [Version 1.1.5](https://docs.absuite.net/reference/1.1.5)
-* [Version 1.1.6](https://docs.absuite.net/reference/1.1.6)
-* [Version 1.1.7](https://docs.absuite.net/reference/1.1.7)
-* [Current: Version (1.2.0)](https://docs.absuite.net/reference/html)
+* [Version 1.1.0](https://docs.absuite.net/reference/1.1.0)
+* [Version 1.2.0](https://docs.absuite.net/reference/1.2.0)
+* [Version 1.3.0](https://docs.absuite.net/reference/1.3.0)
+* [Version 1.4.0](https://docs.absuite.net/reference/1.4.0)
+* [Version 1.5.0](https://docs.absuite.net/reference/1.5.0)
+* [Version 1.6.0](https://docs.absuite.net/reference/1.5.0)
+* [Current: Version (1.7.0)](https://docs.absuite.net/reference/html)
