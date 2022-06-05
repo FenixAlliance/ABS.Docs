@@ -2,7 +2,7 @@
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
 
-Proposed:
+## Proposed:
 - [ ] Node.js SDK 
 - [ ] PowerShell SDK 
 - [ ] Agreement Template Definitions
@@ -28,17 +28,20 @@ Proposed:
 - [ ] ML-Based Sentiment Analysis Engine
 - [ ] ML-Based Customer Segregation Engine (Clustering)
 
-V.1.5 LTS ( release: July 12, 2022 )
-- ✅ New IServicesService interface & Default Implementation
-- ✅ New IService interface & Default Implementation
+## Planned:
+- [ ] Node Package for Static Assets distribution & version management
+- [ ] New IService interface & Default Implementation as an optional base for Service Interfaces.
 
-V.1.4 ( release: May 12, 2022 )
+## Achieved:
+- ✅ MudBlazor Integration is now available for Studio Modules
+- ✅ Fluent UI Integration is now available for Studio Modules
+- ✅ FAST Design Integration is now available for Studio Modules
+- ✅ New IDateTimeService interface & Default Implementation for Date/Time Localization.
+- ✅ New IServicesService interface & Default Implementation for service resolution helpers through DI.
+- ✅ New IService interface & Default Implementation as an optional base for Service Interfaces.
 - ✅ .NET 6.0 LTS Update
 - ✅ Studio Layout Localization
 - ✅ Code Editor: Razor Syntax Highlighting 
-
-V.1.3 ( release: July 12, 2022 )
-
 - ✅ ML-Based Natural Language Processing Engine
 - ✅ ML-Based eCommerce Recommendation Engine
 - ✅ Template Definitions
@@ -53,9 +56,6 @@ V.1.3 ( release: July 12, 2022 )
 - ✅ Blazor Support (Experimental)
 - ✅ Options & Settings API
 - ✅ .NET SDK
-
-V.1.2 LTS ( release: July 12, 2021 )
-
 - ✅ Custom Options Manager
 - ✅ Custom Portal Option Definitions
 - ✅ Virtual SPA Support (Angular/React)
@@ -85,8 +85,6 @@ V.1.2 LTS ( release: July 12, 2021 )
     - ✅ Module Assembly Manager
     - ✅ Managed Module Support
     - ✅ Unmanaged Module Support
-
-V.1.1 ( release: July 12, 2020 )
 - ✅ Authentication / User Management / Profile Management
 - ✅ Authorization / Roles Management / Granular Permissions
 - ✅ Blazor Support
