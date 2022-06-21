@@ -166,6 +166,8 @@
     * [Allocated and Consumed Resources](Online-Services/Alliance-Business-Cloud/Allocated-and-Consumed-Resources.md)
   * [Alliance Pay Platform](Online-Services/Alliance-Pay-Platform.md)
   * [Infinity Comex Marketplace](Online-Services/Infinity-Comex-Marketplace.md)
+    * [Refunds Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Refunds,-partial-refunds,-and-restocking-fees.md)
+    * [Refunds Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Return-Policy.md)
 
   * [Terms and Conditions](Online-Services/Terms-and-Conditions.md)
 
