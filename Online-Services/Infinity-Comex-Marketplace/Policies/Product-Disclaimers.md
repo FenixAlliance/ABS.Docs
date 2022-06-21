@@ -56,7 +56,7 @@ Before purchasing this product, please be sure that you (or the person you are b
 
 To receive an authorized serial number, you must provide proof that you are an eligible user of Adobe Student and Teacher Edition Software Product as follows:
 
--   1.    Students Students must provide a photocopy of a valid, current student ID that includes your name, date, and a photo of yourself. If you do not have such an ID, you must instead provide a photocopy of a valid photo ID and one of the following items:
+- Students Students must provide a photocopy of a valid, current student ID that includes your name, date, and a photo of yourself. If you do not have such an ID, you must instead provide a photocopy of a valid photo ID and one of the following items:
 
     -   Official, current non-photo student ID with name and date
 
@@ -70,7 +70,7 @@ To receive an authorized serial number, you must provide proof that you are an e
 
     Students who are under the age of 18 and do not have a valid photo ID may provide an official letter from their eligible educational institution stating their name and current enrollment status.
 
--   2. Teachers, Faculty and Staff Teachers, faculty and staff must provide a photocopy of a valid current school ID that includes your name, date, and a photo. If such end users do not have such an ID, the end user must instead provide a photocopy of a valid photo ID and one of the following items:
+- Teachers, Faculty and Staff Teachers, faculty and staff must provide a photocopy of a valid current school ID that includes your name, date, and a photo. If such end users do not have such an ID, the end user must instead provide a photocopy of a valid photo ID and one of the following items:
 
     -   Faculty or staff paycheck stub
 
