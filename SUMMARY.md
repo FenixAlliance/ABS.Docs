@@ -167,7 +167,7 @@
   * [Alliance Pay Platform](Online-Services/Alliance-Pay-Platform.md)
   * [Infinity Comex Marketplace](Online-Services/Infinity-Comex-Marketplace.md)
     * [Refunds Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Refunds-Policy.md)
-    * [Returns Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Return-Policy.md)
+    * [Returns Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Returns-Policy.md)
     * [Product Disclaimers](Online-Services/Infinity-Comex-Marketplace/Policies/Product-Disclaimers.md)
     * [Price Matcing Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Price-Matching.md)
     * [Promo Codes](Online-Services/Infinity-Comex-Marketplace/Pricing-&-Promos.md)
