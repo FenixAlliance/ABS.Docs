@@ -169,6 +169,7 @@
     * [Refunds Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Refunds,-partial-refunds,-and-restocking-fees.md)
     * [Returns Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Return-Policy.md)
     * [Price Matcing Policy](Online-Services/Infinity-Comex-Marketplace/Policies/Price-Matching.md)
+    * [Promo Codes](Online-Services/Infinity-Comex-Marketplace/Pricing-&-Promos.md)
 
   * [Terms and Conditions](Online-Services/Terms-and-Conditions.md)
 
