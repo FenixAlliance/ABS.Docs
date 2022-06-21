@@ -1,4 +1,3 @@
-
 # Return Policy
 
 This Return Policy only applies to products that are listed on any website or mobile application owned or operated by Fenix Alliance S.A.S (the "Site") as "Sold and Shipped by Infinity Comex".
