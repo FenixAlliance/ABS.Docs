@@ -39,6 +39,23 @@ The Alliance Business Platform REST API has been decoupled into modular, consuma
 
 The [ABP REST API Browser](https://absuite.net/api/v2/documentation) – is a tool to allow internal and external developers to get the most out of the REST APIs from Fenix Alliance. If you have any feedback, create a new issue in the FenixAlliance/feedback repo on GitHub.
 
+## OData Support
+OData (Open Data Protocol) is an ISO/IEC approved, OASIS standard that defines a set of best practices for building and consuming REST APIs. It enables creation of REST-based services which allow resources identified using Uniform Resource Locators (URLs) and defined in a data model, to be published and edited by Web clients using simple HTTP messages.
+
+OData is fully integrated ont the Alliance Business Platform to help developers to focus on business logic without worrying about the various API approaches to define request and response headers, status codes, HTTP methods, URL conventions, media types, payload formats, query options, etc. It provides guidance for tracking changes, defining functions/actions for reusable procedures, and sending asynchronous/batch requests.
+
+### About the OData Protocol
+The OData Protocol is an application-level protocol for interacting with data via RESTful interfaces. It supports the description of data models, editing and querying of data according to those models. REST APIs that are based on OData are easy to discover and consume due to the OData metadata, a machine-readable description of the data model which renders in a human readable format and enables the creation of powerful generic client proxies and tools.
+
+OData improves semantic interoperability between systems and follows these design principles:
+
+- Follow REST principles.
+- Keep it simple. Address the common cases and provide extensibility where necessary.
+- Build incrementally. A very basic, compliant service should be easy to build, with additional work necessary only to support additional capabilities.
+- Extensibility is important. Services should be able to support extended functionality without breaking clients unaware of those extensions.
+- Prefer mechanisms that work on a variety of data sources. In particular, do not assume a relational data model.
+
+The OData Protocol is different from other REST-based web service approaches in that it provides a uniform way to describe both the data and the data model. This improves semantic interoperability between systems and allows an ecosystem to emerge. It follows these design principles:
 
 ## Common use cases 
 
@@ -65,6 +82,8 @@ A number of these services are designed to enable rich scenarios around Alliance
 
 1. Run a report on an organization Anna belongs to and identify the group with the most communication among group members.
 1. Run a report on the amounts of unpaid invoices, filtering through data using OData (Open Data Protocol).
+
+
 
 ## Other API versions
 
