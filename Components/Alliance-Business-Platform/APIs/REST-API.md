@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-API sets on the <a href="https://fenixalliance.com.co/api/v2/documentation/index.html" target="_blank">ABS v2.0 endpoint</a>
+API sets on the <a href="https://absuite.net/api/v2/documentation/index.html" target="_blank">ABS REST endpoint v2.0</a>
  are in general availability \(GA\) status, and have gone through a review-and-feedback process with customers to meet practical, production needs. Updates to APIs on this endpoint are additive in nature and do not break existing app scenarios.
 
 
