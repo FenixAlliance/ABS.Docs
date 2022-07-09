@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.8.x] - 2022-07-04
 
 ### Added
-- [ABS] Dark Theme Support.
+- [ABS] Dark Theme Support for Studio.
 - [ABM] `ICookiesService` and default implementation (`CookiesService`).
 - [ABM] `IDataProtectionService` and default implementation (`DataProtectionService`).
 - [ABM] `IBrowserStorageService` and default implementation (`BrowserStorageService`).
 
 ### Changed
-- [ABS] Improve Menus & Mobile Layout.
+- [ABS] Improve Studio Menus & Mobile Layout.
 
 ## [1.7.2] - 2022-06-04
 
