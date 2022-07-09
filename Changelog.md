@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Update Studio Base Theme for V2.
 - [ABS] Improve Studio Menus & Mobile Layout.
 
+### Fixed
+- [APS] NullRedException on SecurityDataService due to DI misconfiguration.
+
 ## [1.7.2] - 2022-06-04
 
 ### Added
