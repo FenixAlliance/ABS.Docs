@@ -36,44 +36,14 @@ The Alliance Business Platform REST API has been decoupled into modular, consuma
 - ### Auth Set
 - ### Holders Set
 - ### Tenants Set
-- ### GEN Set
-- ### CMS Set
-- ### CMR Set
-- ### LMS Set
-- ### QMS Set
-- ### PMS Set
-- ### CSP Set
-- ### BIM Set
-- ### SAR Set
-- ### FIHR Set
-- ### DIAN Set
-- ### EAMS Set
-- ### HRMS Set
-- ### Stock Set
-- ### Store Set
-- ### Social Set
-- ### Billing Set
-- ### Selling Set
-- ### Services Set
-- ### Shipping Set
-- ### Helpdesk Set
-- ### Analytics Set
-- ### Workplace Set
-- ### Marketing Set
-- ### Accounting Set
-- ### Procurement Set
-- ### Sustainability Set
-- ### Subscriptions Set
-- ### Manufacturing Set
+- ### Global Data Set
 
-
-The [ABP REST API Browser](https://fenixalliance.com.co/api/v2/documentation) – is a tool to allow internal and external developers to get the most out of the REST APIs from Fenix Alliance. If you have any feedback, create a new issue in the FenixAlliance/feedback repo on GitHub.
-
+The [ABP REST API Browser](https://absuite.net/api/v2/documentation) – is a tool to allow internal and external developers to get the most out of the REST APIs from Fenix Alliance. If you have any feedback, create a new issue in the FenixAlliance/feedback repo on GitHub.
 
 
 ## Common use cases 
 
-The power of the Alliance ID API lies in easy navigation of entities and relationships across different services exposed on a single Microsoft Graph REST endpoint.
+The power of the Alliance Business Platform REST API Engine lies in being able to easily extend the Alliance Business Suite across different business-cases through services exposed on several REST endpoints.
 
 A number of these services are designed to enable rich scenarios around Alliance ID Tenants and around Business Contexts.
 
@@ -95,9 +65,7 @@ A number of these services are designed to enable rich scenarios around Alliance
 ### Business use cases in v2.0
 
 1. Run a report on an organization Anna belongs to and identify the group with the most communication among group members.
-
-
-
+1. Run a report on the amounts of unpaid invoices, filtering through data using OData (Open Data Protocol).
 
 ## Other API versions
 
