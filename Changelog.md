@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - [ABS] Dark Theme Support for Studio.
+- [ABP] OData Support for REST Endpoints.
 - [ABM] `ICookiesService` and default implementation (`CookiesService`).
 - [ABM] `IDataProtectionService` and default implementation (`DataProtectionService`).
 - [ABM] `IBrowserStorageService` and default implementation (`BrowserStorageService`).
