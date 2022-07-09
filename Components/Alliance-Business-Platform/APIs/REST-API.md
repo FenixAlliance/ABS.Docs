@@ -6,7 +6,6 @@ API sets on the <a href="https://absuite.net/api/v2/documentation/index.html" ta
  are in general availability \(GA\) status, and have gone through a review-and-feedback process with customers to meet practical, production needs. Updates to APIs on this endpoint are additive in nature and do not break existing app scenarios.
 
 
-
 Representational State Transfer (REST) APIs are service endpoints that support sets of HTTP operations (methods), which provide create, retrieve, update, or delete access to the service's resources. This section will give you an overall overview of processes like:
 
 - How to call ABP REST APIs with Postman, CURL and the Powershell SDK.
