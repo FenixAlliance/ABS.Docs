@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] `IBrowserStorageService` and default implementation (`BrowserStorageService`).
 
 ### Changed
+- [ABS] Update Studio Base Theme for V2.
 - [ABS] Improve Studio Menus & Mobile Layout.
 
 ## [1.7.2] - 2022-06-04
