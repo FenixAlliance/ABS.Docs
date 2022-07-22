@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - [ABS] In-Studio Module Management Engine.
+- [ABS] Business Enrollments Management Engine.
 - [ABS] Business Applications Management Engine.
 - [ABS] Business Security Roles Management Engine.
 - [ABS] Business Security Permissions Management Engine.
