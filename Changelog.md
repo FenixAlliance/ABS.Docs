@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2022-07-20
 
 ### Added
+- [ABS] In-Studio Module Management Engine.
 - [ABS] Business Applications Management Engine.
 - [ABS] Business Security Roles Management Engine.
 - [ABS] Business Security Permissions Management Engine.
@@ -15,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - [ABM] COA importing capabilities on Accounting Service.
+- [ABS] Error when navigating to the Fiscal Authorities page.
+- [ABS] Error when navigating to new created Organization (Contact) details page.
+
+### Changed
+- [ABS] Update Studio Base Theme for V2.
 
 ## [1.9.0] - 2022-07-20
 
