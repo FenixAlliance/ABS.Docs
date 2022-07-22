@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2022-07-20
+
+### Added
+- [ABS] Business Applications Management Engine.
+- [ABS] Business Security Roles Management Engine.
+- [ABS] Business Security Permissions Management Engine.
+- [ABM] `ISubscriptionsService` unimplemented method implementations.
+- [ABM] `ILicensingService` and default implementation (`LicensingService`).
+
+### Fixed
+- [ABM] COA importing capabilities on Accounting Service.
+
+## [1.9.0] - 2022-07-20
+
+### Fixed
+- [ABS] UI Improvements for UI & Core Components.
+- [ABS] Contextual Menu showing when no business is selected.
+- [ABP] Improve DI Tree for most services.
+
 ## [1.8.0] - 2022-07-04
 
 ### Added
