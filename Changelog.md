@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ACL] Adds de-DE Translations.
 - [ACL] Adds it-IT Translations.
 - [ACL] Adds fr-FR Translations.
+- [ABS] In-Studio UI Improvements.
 - [ABS] In-Studio Module Management Engine.
 - [ABS] Business Enrollments Management Engine.
 - [ABS] Business Applications Management Engine.
