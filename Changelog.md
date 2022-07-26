@@ -4,16 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2022-07-23
+## [2.0.0] - 2022-07-26
 
 ### Added
+- [ACL] Adds pt-PT Translations.
+- [ACL] Adds pt-BR Translations.
+- [ACL] Adds de-DE Translations.
+- [ACL] Adds it-IT Translations.
+- [ACL] Adds fr-FR Translations.
 - [ABS] In-Studio Module Management Engine.
 - [ABS] Business Enrollments Management Engine.
 - [ABS] Business Applications Management Engine.
 - [ABS] Business Security Roles Management Engine.
 - [ABS] Business Security Permissions Management Engine.
-- [ABM] `ISubscriptionsService` unimplemented method implementations.
 - [ABM] `ILicensingService` and default implementation (`LicensingService`).
+- [ABM] `ISubscriptionsService` and default implementation (`LicensingService`).
+- [ABM] `ISecurityCertificatesService` and default implementation  (`SecurityCertificatesService`).
+
 
 ### Fixed
 - [ABM] COA importing capabilities on Accounting Service.
