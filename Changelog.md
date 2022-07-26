@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ACL] Adds `de-DE` Translations.
 - [ACL] Adds `it-IT` Translations.
 - [ACL] Adds `fr-FR` Translations.
-- [ACL] Enables Licensing Engine.
+- [ACL] Enables Licensing Engine (ABS Now requires a license).
 
 ### Fixed
 - [ABM] COA importing capabilities on Accounting Service.
