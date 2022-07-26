@@ -7,11 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2022-07-26
 
 ### Added
-- [ACL] Adds pt-PT Translations.
-- [ACL] Adds pt-BR Translations.
-- [ACL] Adds de-DE Translations.
-- [ACL] Adds it-IT Translations.
-- [ACL] Adds fr-FR Translations.
+
 - [ABS] In-Studio UI Improvements.
 - [ABS] In-Studio Module Management Engine.
 - [ABS] Business Enrollments Management Engine.
@@ -21,15 +17,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] `ILicensingService` and default implementation (`LicensingService`).
 - [ABM] `ISubscriptionsService` and default implementation (`LicensingService`).
 - [ABM] `ISecurityCertificatesService` and default implementation  (`SecurityCertificatesService`).
-
+- [ACL] Adds `pt-PT` Translations.
+- [ACL] Adds `pt-BR` Translations.
+- [ACL] Adds `de-DE` Translations.
+- [ACL] Adds `it-IT` Translations.
+- [ACL] Adds `fr-FR` Translations.
 
 ### Fixed
 - [ABM] COA importing capabilities on Accounting Service.
 - [ABS] Error when navigating to the Fiscal Authorities page.
+- [ABS] Virtualize License Types List on Licenses Modal Form.
+- [ABS] Virtualize Subscription Plans List on Subscriptions Modal Form.
 - [ABS] Error when navigating to new created Organization (Contact) details page.
 
 ### Changed
 - [ABS] Update Studio Base Theme for V2.
+- [ABM] Improve `SecurityHelpers` class.
 
 ## [1.9.0] - 2022-07-20
 
