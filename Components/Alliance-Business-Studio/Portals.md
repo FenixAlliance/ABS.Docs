@@ -52,7 +52,7 @@ File `Layout.razor`:
         var User = (await authenticationStateTask).User;
 
         await PortalContext.Init(User, NavManager, JS);
-        this.StateHasChanged();
+        StateHasChanged();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -65,13 +65,13 @@ File `Layout.razor`:
 
     public async Task RefreshLayout(string BusinessID)
     {
-        this.StateHasChanged();
+        StateHasChanged();
     }
 
 
     public async Task CallStateHasChanged()
     {
-        this.StateHasChanged();
+        StateHasChanged();
     }
 
 }

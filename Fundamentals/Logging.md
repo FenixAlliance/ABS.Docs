@@ -27,4 +27,4 @@ The :000 segment following Elapsed is a standard .NET format string that affects
 
 Through the Alliance Business Studio, customers are able to manage these logs without the need to access the server directly.
 
-To manage logs for your Alliance Business Suite instance, navigate to the `/Studio/Network/Logs` route on any configured [Web Portal](/Web-Development/Web-Portals.md).
+To manage logs for your Alliance Business Suite instance, navigate to the `/Studio/Admin/Logs` route on any configured [Web Portal](/Web-Development/Web-Portals.md).
