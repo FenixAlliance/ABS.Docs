@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2022-07-26
+## [2.0.0] LTS - 2022-08-11
 
 ### Added
 
@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Business Applications Management Engine.
 - [ABS] Business Security Roles Management Engine.
 - [ABS] Business Security Permissions Management Engine.
+- [ABS] Business Security Certificates Management Engine.
 - [ABM] `ILicensingService` and default implementation (`LicensingService`).
 - [ABM] `ISubscriptionsService` and default implementation (`LicensingService`).
 - [ABM] `ISecurityCertificatesService` and default implementation  (`SecurityCertificatesService`).
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - [ABS] Update Studio Base Theme for V2.
 - [ABM] Improve `SecurityHelpers` class.
+- [ABM] Improve overall performance & memory consumption.
 
 ## [1.9.0] - 2022-07-20
 
