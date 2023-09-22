@@ -93,7 +93,7 @@ In addition to your theme, the theme.json file provides details about the Theme 
     "Name": "Turing",
     "Domain": "Turing",
     "Version": "0.0.1",
-    "AuthorName": "Fenix Alliance Inc.",
+    "AuthorName": "Alliance Business Holdings Inc.",
     "AuthorUrl": "https://fenix-alliance.com",
     "ThemeUrl": "https://fenix-alliance.com",
     "Tags": "mega-menu, translation-ready",

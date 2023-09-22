@@ -4,7 +4,7 @@ If you are purchasing any of the following products, please see below for import
 
 ## Open Box Product
 
-Open Box merchandise are products that have been purchased and delivered to other customers, and then returned to Fenix Alliance S.A.S. Open Box products are sold considerably under cost. Fenix Alliance tests Open Box products for basic functionality only. Due to the varying quality of products returned to Fenix Alliance, Fenix Alliance makes every attempt to supply the original accessories for Open Box products. However, regardless of what the product description says, Fenix Alliance only guarantees that you will receive the product itself, accessories may or may not be included. Bear in mind that your open box product may not contain cables, adaptors, manuals, CDs, drivers, fans, etc. Additionally, the product may exhibit cosmetic imperfections as a result of its having been previously opened. Fenix Alliance will not send you any missing accessory, even if the accessory is required in order to properly make use of all the product's advertised functions. While Fenix Alliance does not like to discourage sales, please purchase open box products only if you know how to deal with potential missing accessories.
+Open Box merchandise are products that have been purchased and delivered to other customers, and then returned to Alliance Business Holdings S.A.S. Open Box products are sold considerably under cost. Alliance Business Holdings tests Open Box products for basic functionality only. Due to the varying quality of products returned to Alliance Business Holdings, Alliance Business Holdings makes every attempt to supply the original accessories for Open Box products. However, regardless of what the product description says, Alliance Business Holdings only guarantees that you will receive the product itself, accessories may or may not be included. Bear in mind that your open box product may not contain cables, adaptors, manuals, CDs, drivers, fans, etc. Additionally, the product may exhibit cosmetic imperfections as a result of its having been previously opened. Alliance Business Holdings will not send you any missing accessory, even if the accessory is required in order to properly make use of all the product's advertised functions. While Alliance Business Holdings does not like to discourage sales, please purchase open box products only if you know how to deal with potential missing accessories.
 
 ## Final Sales Product
 
@@ -16,31 +16,31 @@ Proof of Purchase will be required in order to file a claim. Failure to provide 
 
 ## Downloadable Software
 
-Fenix Alliance Downloadable Software Policy:
+Alliance Business Holdings Downloadable Software Policy:
 
 -   All sales of Downloadable Software applications are final.
 
--   Fenix Alliance doesn't accept returns of downloadable software.
+-   Alliance Business Holdings doesn't accept returns of downloadable software.
 
 -   Please verify purchase quantity before proceeding.
 
-Software may require you to use a computer or other device meeting minimum system requirements, and you are responsible for ensuring that your computer or device meets Software system requirements prior to purchase. Generally, Software system requirements are available on or from product detail pages. Once you have purchased a downloadable product, we encourage you to download it, if applicable, and to access it promptly to ensure that you have received it. You are responsible for downloading and confirming your ability to access software within thirty (30) days after purchase and bear all risk of loss thereafter, including any loss due to a computer or hard drive crashes. We will usually continue to make purchased software available in the Fenix Alliance Order History Page for additional activations or copies even after this thirty (30) day period, but we may, from time to time, remove without notice because of the Software provider's licensing restrictions or for other reasons. Fenix Alliance will not be liable to you if any Software is removed from the Fenix Alliance Order History Page or otherwise becomes unavailable for additional activation or copies. If you are unable to successfully download or access an Application after having reviewed our online help resources, please contact Fenix Alliance customer service.
+Software may require you to use a computer or other device meeting minimum system requirements, and you are responsible for ensuring that your computer or device meets Software system requirements prior to purchase. Generally, Software system requirements are available on or from product detail pages. Once you have purchased a downloadable product, we encourage you to download it, if applicable, and to access it promptly to ensure that you have received it. You are responsible for downloading and confirming your ability to access software within thirty (30) days after purchase and bear all risk of loss thereafter, including any loss due to a computer or hard drive crashes. We will usually continue to make purchased software available in the Alliance Business Holdings Order History Page for additional activations or copies even after this thirty (30) day period, but we may, from time to time, remove without notice because of the Software provider's licensing restrictions or for other reasons. Alliance Business Holdings will not be liable to you if any Software is removed from the Alliance Business Holdings Order History Page or otherwise becomes unavailable for additional activation or copies. If you are unable to successfully download or access an Application after having reviewed our online help resources, please contact Alliance Business Holdings customer service.
 
 ## Digital Deliver Product
 
-Fenix Alliance Digital e-Gift Card/Credit Policy:
+Alliance Business Holdings Digital e-Gift Card/Credit Policy:
 
 -   All sales of Digital Gift Card/Credit are final.
 
--   Fenix Alliance doesn't accept returns of Digital Gift Card/Credit.
+-   Alliance Business Holdings doesn't accept returns of Digital Gift Card/Credit.
 
 -   Please verify purchase quantity before proceeding.
 
-All sales of Digital E-Gift Card/Credit are final. We do not accept returns of Digital E-Gift Card/Credit. Once you have purchased a Digital E-Gift Card/Credit/Voucher, we encourage you to save the email. Fenix Alliance will not be liable to you for any stolen or misplaced codes. Codes are usually delivered in minutes or, at most, within 48 hours depending on additional order validation required by Fenix Alliance or your Credit Card company. If you are unable to successfully receive your code, please contact Fenix Alliance customer service.
+All sales of Digital E-Gift Card/Credit are final. We do not accept returns of Digital E-Gift Card/Credit. Once you have purchased a Digital E-Gift Card/Credit/Voucher, we encourage you to save the email. Alliance Business Holdings will not be liable to you for any stolen or misplaced codes. Codes are usually delivered in minutes or, at most, within 48 hours depending on additional order validation required by Alliance Business Holdings or your Credit Card company. If you are unable to successfully receive your code, please contact Alliance Business Holdings customer service.
 
 ## Cell Phone
 
-Please read the product description carefully for all cell phones. Some mobile phones sold by Fenix Alliance that are listed as "Unlocked" may have previously been carrier-specific phones that could still have carrier software, small scratches or carrier badging. By acknowledging this disclaimer, and agreeing to accept the unlocked product, you are acknowledging that you understand this phone may have been unsealed for the purposes of performing this unlock procedure. Mobile phones that are carrier specific are only compatible with the service provider that is listed. No-Contract/Prepaid mobile phones are only compatible with the carrier that is listed. Some No-Contract/Prepaid mobile phones include service airtime. No-Contract/Prepaid service airtime is non-refundable.
+Please read the product description carefully for all cell phones. Some mobile phones sold by Alliance Business Holdings that are listed as "Unlocked" may have previously been carrier-specific phones that could still have carrier software, small scratches or carrier badging. By acknowledging this disclaimer, and agreeing to accept the unlocked product, you are acknowledging that you understand this phone may have been unsealed for the purposes of performing this unlock procedure. Mobile phones that are carrier specific are only compatible with the service provider that is listed. No-Contract/Prepaid mobile phones are only compatible with the carrier that is listed. Some No-Contract/Prepaid mobile phones include service airtime. No-Contract/Prepaid service airtime is non-refundable.
 
 ## Adobe Student Edition Software
 

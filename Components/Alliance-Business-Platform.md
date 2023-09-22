@@ -10,7 +10,7 @@ It allows you to build spectacular single-page apps using .NET and C# with or wi
 
 The **Alliance Business Platform** provides a unified programmability model that you can use to build apps for organizations and consumers that interact with the data on the Alliance Business Model. 
 
-You can use the Alliance Business Platform APIs to access data stored on your Alliance Business Model, scoped to any given Business Tenants; Explore our documentation to learn more about how to use Fenix Alliance's ABP APIs.
+You can use the Alliance Business Platform APIs to access data stored on your Alliance Business Model, scoped to any given Business Tenants; Explore our documentation to learn more about how to use Alliance Business Holdings's ABP APIs.
 
 Anyone can build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Framework), to capture additional business-specific scenarios.
 

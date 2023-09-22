@@ -56,7 +56,7 @@ To authenticate from the root user, you must sign in with the email address and 
 
 To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You can get these keys by installing and navigating to the ABS Self-integration. 
 
-Users might also be required to provide additional security information. For example, Fenix Alliance recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](/Components/Alliance-Passport-Service/Account-Holders) and [APS Security Roles](/Components/Alliance-Passport-Service/Security-Roles).
+Users might also be required to provide additional security information. For example, Alliance Business Holdings recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](/Components/Alliance-Passport-Service/Account-Holders) and [APS Security Roles](/Components/Alliance-Passport-Service/Security-Roles).
 
 
 ### Authentication Middleware

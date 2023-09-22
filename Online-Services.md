@@ -1,15 +1,15 @@
-# Fenix Alliance Online Services Overview
+# Alliance Business Holdings Online Services Overview
 
-Fenix Alliance offers a set of cloud-based services designed to help customers to exceed expectations on their needs for security, reliability, and time-to-market. The Services provided by Fenix Alliance are constantly evolving and the form and nature of such Services (as well as the terms and conditions inherent in each of them) may change from time to time.
+Alliance Business Holdings offers a set of cloud-based services designed to help customers to exceed expectations on their needs for security, reliability, and time-to-market. The Services provided by Alliance Business Holdings are constantly evolving and the form and nature of such Services (as well as the terms and conditions inherent in each of them) may change from time to time.
 
-This section contains detailed service descriptions, information on how to access the Fenix Alliance Online Services,  as well as guides, terms and conditions, and relevant related information.
+This section contains detailed service descriptions, information on how to access the Alliance Business Holdings Online Services,  as well as guides, terms and conditions, and relevant related information.
 
 ## Online Services Descriptions:
 To get started, see the following service descriptions:
 
 ### APIs
 
-Fenix Alliance exposes a wide set of APIs for interoperability with Online Services. These APIs are divided into Service Endpoint Sets and can be used to create, read, update or delete information from an Online Business Tenant.
+Alliance Business Holdings exposes a wide set of APIs for interoperability with Online Services. These APIs are divided into Service Endpoint Sets and can be used to create, read, update or delete information from an Online Business Tenant.
 
 #### REST API
 

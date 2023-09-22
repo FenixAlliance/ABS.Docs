@@ -36,7 +36,7 @@ After an issue has been closed and had no activity for 30 days it will be automa
 
 ## Reporting a Vulnerability
 
-Security issues and bugs should be reported privately to Fenix Alliance either by emailing support@fenix-alliance.com or via the portal at https://fenix-alliance.com.
+Security issues and bugs should be reported privately to Alliance Business Holdings either by emailing support@fenix-alliance.com or via the portal at https://fenix-alliance.com.
 You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. 
 
 Please do not open issues for anything you think might have a security implication.

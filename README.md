@@ -261,18 +261,18 @@ Give this project a ⭐️ if this project helped you!
 
 ## Author
 
-👤 **Fenix Alliance Inc.**
+👤 **Alliance Business Holdings Inc.**
 
 - Website: https://fenix-alliance.com
 - Twitter: [@fenixalliance](https://twitter.com/fenixalliance)
 - Github: [@fenixalliance](https://github.com/fenixalliance)
-- LinkedIn: <a href="https://www.linkedin.com/company/FenixAlliance/" target="_blank">Fenix Alliance on LinkedIn</a>
+- LinkedIn: <a href="https://www.linkedin.com/company/FenixAlliance/" target="_blank">Alliance Business Holdings on LinkedIn</a>
 
 ## Logo and Trademark
 
-The brand name Alliance Business Suite and its logos are trademarks of Fenix Alliance S.A.S in Colombia and Fenix Alliance Inc in other countries ("Fenix Alliance").
+The brand name Alliance Business Suite and its logos are trademarks of Alliance Business Holdings S.A.S in Colombia and Alliance Business Holdings Inc in other countries ("Alliance Business Holdings").
 
-Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
+Alliance Business Holdings owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
 
 - We’d like to make it easy for anyone to use the ABS name or logo for community-oriented efforts that help spread and improve ABS.
 - We’d like to make it clear how ABS-related businesses and projects can (and cannot) use the ABS name and logo.
@@ -281,20 +281,20 @@ Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We h
 
 ## Licensing and Contributions
 
-Your access to and use of the Alliance Business Suite's source code is governed by the Fenix Alliance's [End User License Agreement "EULA"](http://absuite.net/eula). If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
+Your access to and use of the Alliance Business Suite's source code is governed by the Alliance Business Holdings's [End User License Agreement "EULA"](http://absuite.net/eula). If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
 
-We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the development branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Fenix Alliance coding standards. All contributions are governed by the terms of the EULA.
+We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the development branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Alliance Business Holdings coding standards. All contributions are governed by the terms of the EULA.
 
 
 # Legal Notices
 
-Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code or binary form Fenix Alliance through the [ABS EULA](http://absuite.net/eula).
+Alliance Business Holdings and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code or binary form Alliance Business Holdings through the [ABS EULA](http://absuite.net/eula).
 
-Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance products and services referenced in the documentation may be trademarks or registered trademarks of Fenix Alliance Inc. in the United States/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
+Alliance Business Holdings, Alliance Business Suite, Infinity Comex, and/or other Alliance Business Holdings products and services referenced in the documentation may be trademarks or registered trademarks of Alliance Business Holdings Inc. in the United States/or other countries. The licenses for this project do not grant you rights to use any of Alliance Business Holdings's names, logos, or trademarks. Alliance Business Holdings's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 
 Privacy information can be found at https://fenix-alliance.com/legal/policies/privacypolicy
 
-Fenix Alliance and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel, or otherwise.
+Alliance Business Holdings and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel, or otherwise.
 
 
 <a href="https://www.producthunt.com/posts/alliance-business-suite?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-alliance-business-suite" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=300812&theme=dark" alt="Alliance Business Suite - Low-Code Next-Generation Business Development Platform. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
