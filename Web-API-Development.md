@@ -101,9 +101,9 @@ namespace FenixAlliance.Areas.Licensing.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Holder), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ResponseStatus), StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<APIResponse>> GetMe()
+        public async Task<ActionResult<ApiResponse>> GetMe()
         {
-            var apiResponse = JsonConvert.DeserializeObject<APIResponse>(
+            var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(
                 JsonConvert.SerializeObject(
                     await AuthService.BindApiBaseResponse(
                         DataContext,

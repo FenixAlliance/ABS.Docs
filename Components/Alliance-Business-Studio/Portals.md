@@ -63,16 +63,7 @@ File `Layout.razor`:
         }
     }
 
-    public async Task RefreshLayout(string BusinessID)
-    {
-        StateHasChanged();
-    }
 
-
-    public async Task CallStateHasChanged()
-    {
-        StateHasChanged();
-    }
 
 }
 ```
