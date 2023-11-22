@@ -11,10 +11,10 @@ The following SDK assemblies are available:
 
 | Package Name |  Top Assembly | Package Location  |
 |--------------|-------------|-------------------|
-| FenixAllaince.ABS.SDK | FenixAllaince.ABS.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABS.SDK/](https://www.nuget.org/packages/FenixAlliance.ABS.SDK/) |
-| FenixAllaince.ABP.SDK | FenixAllaince.ABP.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABP.SDK/](https://www.nuget.org/packages/FenixAlliance.ABP.SDK/) |
-| FenixAllaince.APS.SDK | FenixAllaince.APS.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.APS.SDK/](https://www.nuget.org/packages/FenixAlliance.APS.SDK/) |
-| FenixAllaince.ABM.SDK | FenixAllaince.ABM.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABM.SDK/](https://www.nuget.org/packages/FenixAlliance.ABM.SDK/) |
+| FenixAlliance.ABS.SDK | FenixAlliance.ABS.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABS.SDK/](https://www.nuget.org/packages/FenixAlliance.ABS.SDK/) |
+| FenixAlliance.ABP.SDK | FenixAlliance.ABP.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABP.SDK/](https://www.nuget.org/packages/FenixAlliance.ABP.SDK/) |
+| FenixAlliance.APS.SDK | FenixAlliance.APS.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.APS.SDK/](https://www.nuget.org/packages/FenixAlliance.APS.SDK/) |
+| FenixAlliance.ABM.SDK | FenixAlliance.ABM.SDK.dll | [https://www.nuget.org/packages/FenixAlliance.ABM.SDK/](https://www.nuget.org/packages/FenixAlliance.ABM.SDK/) |
 
 
 ## Using the Alliance Business Suite SDK.
