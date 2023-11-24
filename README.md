@@ -1,4 +1,4 @@
-![Alliance Business Suite](https://fenixalliance.com.co/_content/FenixAlliance.ABS.Assets/images/branding/logo.png "Alliance Business Suite")
+![Alliance Business Suite](https://cdn.absuite.net/_content/FenixAlliance.ABS.Assets/images/Branding/Logo.png "Alliance Business Suite")
 
 <p>
   <a href="https://docs.absuite.net/reference/1.4.0/" target="_blank">
