@@ -59,7 +59,7 @@ This project is a work in progress and the schedule for implementing enhancement
 - ✅ Custom Options Manager
 - ✅ Custom Portal Option Definitions
 - ✅ Virtual SPA Support (Angular/React)
-- ✅ Razor Templating Engine
+- ✅ Razor Theming Engine
 - ✅ Live Web Designer Integration
 - ✅ Dynamic Entity Views
 - ✅ Content Live Builder

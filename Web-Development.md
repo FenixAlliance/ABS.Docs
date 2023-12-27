@@ -1,8 +1,8 @@
-# Introduction to Razor Templating Engine
+# Introduction to Razor Theming Engine
 
 Portal Pages can make coding page-focused scenarios easier and more productive than using controllers and views.
 
-This document provides an introduction to the Alliance Business Suite - Razor Templating Engine
+This document provides an introduction to the Alliance Business Suite - Razor Theming Engine
 
 #Rendering HTML
 The default Razor language is HTML. Rendering HTML from Razor markup is no different than rendering HTML from an HTML file. HTML markup in .cshtml Razor files is rendered by the server unchanged.

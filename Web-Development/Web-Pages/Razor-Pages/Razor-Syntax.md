@@ -136,7 +136,7 @@ The code renders the following HTML:
 <p>Hate cannot drive out hate, only love can do that. - Martin Luther King, Jr.</p>
 ```
 
-In code blocks, declare local functions with markup to serve as templating methods:
+In code blocks, declare local functions with markup to serve as Theming methods:
 
 ``` cshtml
 @{
@@ -448,7 +448,7 @@ public class _Views_Home_Test_cshtml : RazorPage<dynamic>
 }
 ```
 
-@functions methods serve as templating methods when they have markup:
+@functions methods serve as Theming methods when they have markup:
 
 ``` cshtml
 

@@ -193,8 +193,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Templating Engine now relies on interface services on the Alliance Business Model.
-- [ABS] Templating Engine now relies on default service implementations on the Alliance Business Model.
+- [ABS] Theming Engine now relies on interface services on the Alliance Business Model.
+- [ABS] Theming Engine now relies on default service implementations on the Alliance Business Model.
 - [ABS] PortalContext is now optimized to use DataServices.
 - [ABS] StudioContext is now more efficient through PortalContext Optimization.
 - [ABS] `Studio.Core` now contains the layout, components, and utilities for the ABS Studio.
@@ -288,7 +288,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2] - 2021-07-12
 ### Added
-- [ABS] Razor Templating Engine
+- [ABS] Razor Theming Engine
 - [ABS] Custom Options Manager (API)
 - [ABS] Portal Option Manager (UI)
 - [ABS] Custom Portal Option Definitions
@@ -325,7 +325,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Add support for Foundation CSS
 - [ABS] Adds support for Fabric JS and Fluent UI.
 - [ABS] Ensure non-existence of viral licensed libraries. (e.g GNU)
-- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Templating Engine
+- [ABS] Adds IViewBuffer, Resx, and Model Resolver to Theming Engine
 - [ABS] Adds Localization String Manager. Initial Localization Capabilities.
 
 ### Changed
@@ -340,7 +340,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Workflow engine Models
 - [ABM] Web Content Records now share a single base class
 - [ABM] ItemPriceList is now a PriceListRecord.
-- [ABS] Fix error when referencing scripts into a Web Content being malformed by templating engine.
+- [ABS] Fix error when referencing scripts into a Web Content being malformed by Theming engine.
 - [ABS] Fix page tree navigation on the live editor.
 
 
@@ -374,7 +374,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.4.x] - 2021-04-13
 ### Added
 - [ABS] Extension Updates Page
-- [ABS] Razor Templating Engine
+- [ABS] Razor Theming Engine
 - [APS] Google Authentication
 - [APS] Facebook Authentication
 - [APS] Microsoft Authentication

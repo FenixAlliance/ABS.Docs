@@ -169,7 +169,7 @@ For more information on the dependency tree, design overview, and external depen
 |QRCoder|1.4.1|
 |RabbitMQ.Client|6.2.2|
 |Radzen.Blazor|3.9.2|
-|Razor.Templating.Core|1.5.0|
+|Razor.Theming.Core|1.5.0|
 |RazorLight|1.1.0|
 |ReactiveUI.Blazor|15.1.1|
 |reCAPTCHA.AspNetCore|3.0.10|

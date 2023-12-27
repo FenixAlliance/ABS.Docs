@@ -107,8 +107,8 @@ The following example starts Blazor when the document is ready:
 ```
 #### Initializing Blazor at the Page/Component level:
 
-To enable Blazor for a page or component, you just need to select .razor as the Code Type for any WebPage/WebComponent. If .razor Code Type is selected, the Templating Engine will compile that Web Content as a Blazor Component, enabling syntaxis and diagnostics.
+To enable Blazor for a page or component, you just need to select .razor as the Code Type for any WebPage/WebComponent. If .razor Code Type is selected, the Theming Engine will compile that Web Content as a Blazor Component, enabling syntaxis and diagnostics.
 
 ## Difference between ABS Blazor Pages and ABS Blazor Components.
 
-At a fundamental level, pages and components differ in that pages contain the @page directive. The Templating Engine will enforce this directive on WebPages marked as .razor Code Type and disallow components containing this directive. 
+At a fundamental level, pages and components differ in that pages contain the @page directive. The Theming Engine will enforce this directive on WebPages marked as .razor Code Type and disallow components containing this directive. 

@@ -9,7 +9,7 @@ We're building the theme engine to allow customers to create themes for their ow
 
 ## Capabilities
 
-The **ABS Theming Engine** is built on top of the **ABS Razor Templating Engine**, which allows themes to use a combination of C# + HTML, CSS, and JavaScript to build amazing experiences.
+The **ABS Theming Engine** is built on top of the **ABS Razor Theming Engine**, which allows themes to use a combination of C# + HTML, CSS, and JavaScript to build amazing experiences.
 
 - Use a powerful component architecture to avoid code repetition and improve maintainability
 - Provide alternative templates for fixed platform functionalities such as the Store & Dashboard.
@@ -107,7 +107,7 @@ NB: The name used for the Author is suggested to be the same as the Theme Author
 
 ## Template Files
 
-Templates are ABS Razor source files used to generate the pages requested by visitors and are output as HTML. Template files are made up of HTML, C# and are rendered through ABS Templating Engine.
+Templates are ABS Razor source files used to generate the pages requested by visitors and are output as HTML. Template files are made up of HTML, C# and are rendered through ABS Theming Engine.
 
 The Alliance Business Suite defines several template files that control the look and feel of certain parts of each portal.
 

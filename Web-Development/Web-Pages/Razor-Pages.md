@@ -1,7 +1,7 @@
 # Razor Pages Introduction
 
 
-Pages are very important components for the Alliance Business Suite. They allow customers to implement unique, visually outstanding web pages by using a templating engine that's based on .NET's Razor Syntax.
+Pages are very important components for the Alliance Business Suite. They allow customers to implement unique, visually outstanding web pages by using a Theming engine that's based on .NET's Razor Syntax.
 
 Pages in the Alliance Business Suite can be added through the Admin Portal of your ABS instance and live edited through the ABS Web Builder.
 
