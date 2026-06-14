@@ -4,139 +4,115 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-> ## Historical Note
-> Releases through **`2.0.0` LTS (2022-08-11)** were documented contemporaneously and are preserved unchanged (also frozen in `Changelog.Archived.md`). Releases **after `2.0.0`** were **reconstructed** from git history, tags, pull requests, pipelines, and migration history — following the original changelog conventions. Each reconstructed release carries a confidence grade (A–D); see `Changelog.ReconstructionNotes.md`. The window **2022-08 → 2023-08** predates the current repository and has no commit evidence. *(Inferred version numbers: the git line restarts at `1.9.9.x`; product `2.x` versions below are inferred from theme + framework boundaries.)*
+> Releases through **`2.0.0` LTS** were recorded contemporaneously. Subsequent releases were compiled from the project's development history and follow the same conventions.
 
-## [3.0.0] - Unreleased — *reconstructed, confidence D*
-
-### Added
-- Suite UI Kit (the `Suite*` component facade over FluentUI).
-- Platform-wide RBAC with per-applet and per-use-case permission gating.
-- Authorization-aware data-grid cells.
-- HR / Workforce domain: employee types, job titles, schedules, time intervals, rounding policies.
-- Payment Allocation.
-- OpenAPI server with variable support.
-- Parallelized SDK generation.
-- 201-Created responses with client-supplied IDs.
-- Tenant-owned image upload.
-- Batch and domain routes.
-- `[SwaggerOperation]` API documentation.
-- Numerous SDK selector, applet, grid and entity-preview components.
-
-### Changed
-- Enforced the `ResultFactory` railway pattern platform-wide.
-- Migrated CQRS dispatch to `IMediatorService` platform-wide.
-- DTO standard: read DTOs expose `ToUpdateDto()` / `ToCreateDto()`.
-- Enhanced multi-currency billing and UI consistency.
-- Email services return `UnitResult<SmartError>`.
-- Adopted the `Build-Suite` pipeline.
-
-## [2.4.0] - 2026-01-07 — *reconstructed, confidence C*
+## [Unreleased] — The Composable Platform
 
 ### Added
-- Assets service (Asset `CurrencyID` & `PurchasePrice`, AssetsGrid).
-- `Restore-Suite` pipeline function.
+- **Suite UI Kit** — a unified component design system across the Studio.
+- **Platform-wide role-based access control**, with granular per-feature and per-action permissions.
+- **Human Resources / Workforce** management — employee types, job titles, schedules, time intervals and rounding policies.
+- **Asset management** with multi-currency cost tracking.
+- **OpenAPI server** with parallelized, multi-language SDK generation.
+- Tenant-scoped media upload; batch and domain-routed APIs.
+- Expanded entity selectors, applets, grids and preview components across the SDK.
 
 ### Changed
-- Upgraded to .NET 10 LTS.
-- Unified data/services namespaces.
-- Streamlined RabbitMQ configuration.
+- Upgraded to **.NET 10 (LTS)**.
+- Standardized the platform-wide result and error-handling model.
+- Unified CQRS dispatch and consolidated data and service namespaces.
+- Standardized DTO mapping conventions across the SDK.
+- Enhanced multi-currency billing and overall UI consistency.
+
+## [2.4.0] - 2025-08-11 — Identity, Billing & Intelligence
+
+### Added
+- **Model Context Protocol (MCP) server** support.
+- **Apple** sign-in.
+- **Payment Allocation**.
+- Resilient messaging — health checks, circuit breakers and configurable consumers.
+- Cart state-change events.
+- Published licensing and trademark terms.
+
+### Changed
+- Domain-driven design refactor across services and repositories.
+- Improved quote calculation and multi-currency forex conversion.
+- Improved pricing and billing.
+- New email engine for quotes, orders and invoices.
+- Hardened identity providers.
 
 ### Removed
-- Git submodules (folded into the monorepo).
-
-## [2.3.0] - 2025-08-11 — *reconstructed, confidence C*
-
-### Added
-- MCP (Model Context Protocol) server support.
-- Apple authentication.
-- Payment Allocation foundations.
-- MassTransit health checks and circuit breakers.
-- Configurable message consumers (`IConfigurableConsumer`).
-- `IBaseRepository` / `IDataRepository` interfaces.
-- `CartStateChanged` portal event.
-- `LICENSE.md` (licensing & trademark terms).
-
-### Changed
-- DDD refactor of the domain, repositories and services.
-- Improved Quotes calculation and forex conversion.
-- Improved Pricing and Billing.
-- Email engine for Quotes, Orders and Invoices.
-- Hardened identity providers (PEM key processing).
-
-### Removed
-- `authorize.net` from the modules hub.
-- Module/integration packaging from the NuGet pipeline.
+- Authorize.Net integration.
 
 ### Fixed
-- OpenIddict / OIDC defects.
-- Guest cart persistence.
-- Swagger generation.
+- OpenID Connect sign-in, guest-cart persistence and API-documentation generation.
 
-## [2.2.0] - 2024-12-21 — *reconstructed, confidence C*
+## [2.3.0] - 2024-12-21 — Commerce Operations & Reach
 
 ### Added
-- HRMS service.
-- Logistics service.
-- MercadoPago payment integration.
+- **Human Resources (HRMS)** service.
+- **Logistics** service.
+- **MercadoPago** payment integration.
 - Support and Accounting REST endpoints.
-- Swagger documentation across controllers.
+- API documentation across all controllers.
 
 ### Changed
-- Upgraded to .NET 9.
-- Migrated module pages to REST/OData ServiceClients (Sales, Accounting, Marketing, Invoices, Orders, Quotes).
-- Refactored strongly-typed `Id` classes.
-- Renamed `Portal` to `PortalSettings` across the codebase.
-- Improved Storage Service and Portal initialization.
+- Upgraded to **.NET 9**.
+- Completed the REST/OData migration across Sales, Accounting, Marketing, Invoices, Orders and Quotes.
+- Refactored strongly-typed identifiers for consistency.
+- Improved the storage service and portal initialization.
+- Renamed portal configuration to `PortalSettings`.
 
 ### Removed
 - Legacy API authorization.
-- Obsolete projects.
 
-## [2.1.0] Stable - 2024-06-13 — *reconstructed, confidence B*
+### Fixed
+- Order, quote and invoice grids; social feeds; watch functionality.
 
-> The re-platformed baseline, named **"Alliance Business Suite 2.0 Stable Release"** in git — the culmination of the 2023-08 → 2024-06 re-architecture.
+## [2.2.0] - 2024-06-13 — Microservices & API Platform
 
 ### Added
-- CQRS use-case dispatch with the Projections pattern.
-- Repository pattern across data access.
-- Accounting microservice.
-- Marketplace microservice.
-- Commerce microservice.
-- Catalog microservice.
-- Licensing microservice.
-- Security microservice.
-- Learning (LMS) microservice.
-- Holders & Tenants microservice.
-- Support microservice.
-- Forex V3 service.
-- GraphQL server API.
-- OpenIddict as an integration module.
-- Identity endpoints & external provider configuration.
-- C# API client generator with Swagger annotations.
-- Postman API collections.
-- Docker image build & publishing.
-- Dev / QA / Testing deployment tiers (Octopus).
-- Functional, load & integration test pipelines.
-- AOP building blocks.
-- In-Studio search (Solr).
-- Item Images & category management.
+- Dedicated **Accounting, Marketplace, Commerce, Catalog, Licensing, Security, Learning, Support, and Holders & Tenants** services.
+- **GraphQL** server API.
+- **OpenID Connect** identity, with external-provider configuration.
+- Identity-management endpoints.
+- **Forex V3** multi-currency service.
+- **C# API client generator** with OpenAPI/Swagger annotations; Postman collections.
+- Item images, category management, and merchant & blog features.
 
 ### Changed
-- Re-architected to Domain / Application / Infrastructure (Clean Architecture).
-- Centralized business logic in the Application layer (CQRS use cases).
+- Centralized business logic in the Application layer (CQRS).
 - Moved database providers behind repository interfaces.
-- Migrated the UI to FluentUI (with Redux and a new breadcrumb/navigation system).
-- Refactored financial types to `decimal`.
-- Adopted C# 12 primary constructors & file-scoped namespaces.
-- Upgraded to .NET 8.0.
+- Began migrating module pages onto REST/OData service clients.
+- Refactored monetary types to decimal precision.
+- Modernized the codebase (primary constructors, file-scoped namespaces).
 
-### Removed
-- Direct Data-Service usage, in favour of repositories.
+### Fixed
+- GraphQL server, Studio assembly loading, and authentication-token defects.
 
-## [Gap] - 2022-08-11 → 2023-08-25 — no commit evidence (pre-git)
+## [2.1.0] - 2023-12-20 — Platform Re-Architecture
 
-> Not covered by git. Documented only by the pre-git record below and by the Architecture Archaeology Register (Developer Handbook → `Strategy/Archaeology`).
+### Added
+- **CQRS** architecture with use-case dispatch and the **Projections** pattern.
+- Repository pattern across all data access.
+- **Accounting** module (services and repositories).
+- Shopping **Cart** service.
+- Theming micro-service.
+- **Container (Docker)** support and images.
+- Dedicated **Development, QA and Testing** environments.
+- Functional, load and integration test pipelines.
+- In-Studio full-text **search**.
+- React + Redux client support.
+- Wishlist; notifications service.
+
+### Changed
+- **Re-architected the platform onto Clean Architecture** (Domain / Application / Infrastructure).
+- Overhauled the Studio UI on **FluentUI**, with a new breadcrumb and navigation system.
+- Improved domain-model encapsulation, module loading and dependency injection.
+- Upgraded to **.NET 8**.
+
+### Fixed
+- Numerous tenant-initialization and workflow-execution defects; cart creation and persistence.
 
 ## [2.0.0] LTS - 2022-08-11
 

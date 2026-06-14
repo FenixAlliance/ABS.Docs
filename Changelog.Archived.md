@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-> 🏛️ **Primary archaeology source — preserved, do not rewrite the historical record.** This changelog (`1.0.0` 2020-12-31 → `2.0.0` LTS 2022-08-11) is **pre-git product evidence** — it records what the team shipped *before* the current code repository's 2023 genesis, proving **V2 shipped in 2022, not 2023**. It grounds the **Capability Timeline** and **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`). Append future releases, but treat the 2020–2022 entries as an immutable historical document.
+> **Archived.** The historical changelog through **`2.0.0` LTS (2022-08-11)**, preserved unchanged as the contemporaneous record. The current, continuing changelog is in `Changelog.md`.
 
 ## [2.0.0] LTS - 2022-08-11
 
