@@ -1,5 +1,9 @@
 # About this Documentation
 
+> 🏛️ **Archaeology — Status: Constitutional.** *Founder-authored (~2021), audited 2026 against the current platform.*
+> The framing of ABS as *"an unprecedented suite of **capabilities**"* shows the capability worldview was present **at origin** — the **constitutional finding** feeding the Capability Model and Constitution v1.1. *(Contribution via GitHub, below, is superseded — source and issues live in Azure DevOps.)*
+> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+
 Welcome to the Alliance Business Suite documentation! We are on the mission to create the Ultimate Business Development Platform to provide you an unprecedented suite of capabilities to ensure your business can exceed customer's expectations through next-generation experiences. 
 
 We believe that knowing your customers and your business enables you to personalize each experience and optimizes efficiencies so you can earn customers for life.

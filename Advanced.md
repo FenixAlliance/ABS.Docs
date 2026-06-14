@@ -1,5 +1,9 @@
 # Understanding the Alliance Business Suite dependency tree
 
+> 🏛️ **Archaeology — Status: Evolved.** *~2021, audited 2026.*
+> The *principle* — strict layering, components usable as app-or-library, override-via-abstraction — still holds. But the **tiers evolved into Clean Architecture**: **ABM → ABS.Domain**, **ABP → ABS.Infrastructure**, business logic centralized in the new **ABS.Application** (CQRS use cases), and DB providers became **implementation details behind repository interfaces**. This page describes the *original* dependency tree, not the current one.
+> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+
 The Alliance Business Suite is designed as a set of Application Layers dependant upon their service predecessor. Each Layer constitutes a [Component](/Components.md) for the Alliance Business Suite. 
 
 Components can be provisioned as Standalone Applications or used as stand-alone libraries. This means that it is possible to bring the Alliance Business Platform (`FenixAlliance.ABP.*`) into a new/existing application without having to include any dependency from the Alliance Business Studio (`FenixAlliance.ABS.*`). The same is true for the Alliance Business Model (`FenixAlliance.ABM.*`), which can be included without any reference to the Alliance Business Platform namespace (`FenixAlliance.ABP.*`).

@@ -1,5 +1,9 @@
 # Alliance Business Holdings Online Services Overview
 
+> 🏛️ **Archaeology — Status: Constitutional (implementation Evolved).** *~2021, audited 2026.*
+> The "Centers" listed here (Pricing / Merchant / Developer / Partner / Support, Business Network, Pay, Infinity Comex Marketplace, Learn Academy) became today's **Corporate Portals** (`Portals.Hub` routes). The online-services / portal ecosystem was first-class from the start.
+> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+
 Alliance Business Holdings offers a set of cloud-based services designed to help customers to exceed expectations on their needs for security, reliability, and time-to-market. The Services provided by Alliance Business Holdings are constantly evolving and the form and nature of such Services (as well as the terms and conditions inherent in each of them) may change from time to time.
 
 This section contains detailed service descriptions, information on how to access the Alliance Business Holdings Online Services,  as well as guides, terms and conditions, and relevant related information.

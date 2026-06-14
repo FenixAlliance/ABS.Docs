@@ -1,4 +1,9 @@
 # Roadmap
+
+> 🏛️ **Archaeology — Status: mixed — Prophetic (UBL) · Constitutional (multi-tenancy) · Superseded (UI libraries).** *A ~2021 roadmap (.NET 6 era), audited 2026.*
+> **Prophetic / validated:** UBL 2.1, multi-tenancy, Alliance Passport, the .NET/Node SDKs — all envisioned here and built since. **Superseded:** MudBlazor / FAST Design / Radzen and "Virtual SPA (Angular/React)" → today's **Blazor Server + FluentUI** behind the Suite facade. Items listed here as flat "features" (Identity, Workflow, the ML engines) are **platform capabilities** today.
+> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
 
 

@@ -1,5 +1,9 @@
 # Developing Modules for the Alliance Business Suite
 
+> 🏛️ **Archaeology — Status: Constitutional (dual-deployment) · Evolved (module mechanics).** *~2021, audited 2026.*
+> The **self-hosted (full modules) vs hosted/ABS Online (themes, no free plugins)** distinction and the **module = Razor Class Library → `.nupkg` → public Gallery** model are live today — see the **Distribution & Deployment Model** spec and the Marketplace "ABS Gallery". *(Evolved: the `FenixAlliance.ABP.SDK` reference and `FenixAlliance.ABM.Data.Interfaces.Services` services shifted as ABP→ABS.Infrastructure and service access moved behind repository interfaces.)*
+> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+
 The Alliance Business Suite is a modular application platform. This means that you can create custom functionalities in the form of modules and add them to your ABS instance.
 
 Modules are pieces of software that are designed to perform a specific set of functions or add a specific kind of feature, to any Alliance Business Suite instance. ABS Modules work only with self-hosted ABS instances. Hosted versions such as absuite.net typically offer theme options for customizing portals, but it isn’t possible to install plugins freely to customize portals on this platform.
