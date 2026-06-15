@@ -17,11 +17,11 @@ Alliance Business Model simplifies data management and app development by unifyi
 - The ability to extend the Alliance Business Model schema standard entities to tailor the model to your organization. This is enabled thanks to both the **ABM Mongo Interop Service** and the **ABS Virtual Entities** functionalities.
 
 ## Alliance Business Model in action
-The Alliance Business Model is influenced by data schemas that are present in both UBL Schema and Common Data Model, covering a range of business areas. If you are a customer or a partner of Alliance Business Holdings, you are already using the Alliance Business Model.
+The Alliance Business Model is influenced by data schemas that are present in both UBL Schema and Common Data Model, covering a range of business areas. If you are a customer or a partner of Alliance Business Systems, you are already using the Alliance Business Model.
 
 Businesses, institutions, Partners, and independent software vendors (ISVs) use the Alliance Business Model to extend and interoperate with any given Alliance Business Suite instance.
 
-Organizations from industries such as manufacturing, government, and education are working closely with Alliance Business Holdings to extend the Alliance Business Model to their specific business scenarios, and the dynamic ABM Engine allows seamless data integration even when schemas are not exactly the same.  This allows customers from an unlimited range of industries to leverage the benefit of the Alliance Business Model's standard entities and extend to their specific verticals so that industry solutions can interoperate more easily.
+Organizations from industries such as manufacturing, government, and education are working closely with Alliance Business Systems to extend the Alliance Business Model to their specific business scenarios, and the dynamic ABM Engine allows seamless data integration even when schemas are not exactly the same.  This allows customers from an unlimited range of industries to leverage the benefit of the Alliance Business Model's standard entities and extend to their specific verticals so that industry solutions can interoperate more easily.
 
 ```csharp
 // Get all the contacts from the configured ABM Provider.

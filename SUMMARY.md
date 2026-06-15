@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [About](About.md)
+* [The Platform](The-Platform.md)
 * [Roadmap](Roadmap.md)
 * [API Reference](References.md)
 

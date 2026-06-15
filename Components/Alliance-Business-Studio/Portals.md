@@ -14,7 +14,7 @@ A Portal is just a .NET Razor Class Library containing the views and services re
 
 This makes it possible to control a network of portals (MultiPortal Network) under a single Alliance Business Studio dashboard. You can manage everything including the number of sites, businesses, users, features, themes, and more. It is possible to manage hundreds, thousands, and (theoretically) millions of sites that extend or modify the behavior of any Component, Module, or Integration. 
 
-The best example of a MultiPortal Alliance Business Suite Network is fenix-alliance.com, which hosts Alliance Business Holdings's services such as [Alliance Pay Platform](https://fenix-alliance.com/Pay), [Infinity Comex](https://infinitycomex.com/marketplace), Propietarios.net, [Alliance Business Cloud](https://fenix-alliance.com/cloud), and many more.
+The best example of a MultiPortal Alliance Business Suite Network is fenix-alliance.com, which hosts Alliance Business Systems's services such as [Alliance Pay Platform](https://fenix-alliance.com/Pay), [Infinity Comex](https://infinitycomex.com/marketplace), Propietarios.net, [Alliance Business Cloud](https://fenix-alliance.com/cloud), and many more.
 
 Portals can start taking advantage of the Alliance Business Suite components just by injecting and initializing an instance of the IPortalContext interface. This interface contains an abstraction for several methods user Authentication/Authorization, Business Tenant Routing, Forex Services, eCommerce & Wallet Management, as well as Social Profile Data for internal B2B, B2C, C2C networks.
 

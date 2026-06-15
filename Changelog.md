@@ -10,36 +10,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Suite UI Kit** — a unified component design system across the Studio.
-- **Platform-wide role-based access control**, with granular per-feature and per-action permissions.
+- **Platform-wide role-based access control**, with per-feature and per-action permissions.
 - **Human Resources / Workforce** management — employee types, job titles, schedules, time intervals and rounding policies.
-- **Asset management** with multi-currency cost tracking.
 - **OpenAPI server** with parallelized, multi-language SDK generation.
 - Tenant-scoped media upload; batch and domain-routed APIs.
 - Expanded entity selectors, applets, grids and preview components across the SDK.
 
 ### Changed
-- Upgraded to **.NET 10 (LTS)**.
 - Standardized the platform-wide result and error-handling model.
-- Unified CQRS dispatch and consolidated data and service namespaces.
+- Unified CQRS dispatch behind a single mediator.
 - Standardized DTO mapping conventions across the SDK.
 - Enhanced multi-currency billing and overall UI consistency.
 
-## [2.4.0] - 2025-08-11 — Identity, Billing & Intelligence
+## [2.8.0] - 2026-01-07 — .NET 10 LTS & Asset Management
 
 ### Added
-- **Model Context Protocol (MCP) server** support.
-- **Apple** sign-in.
+- **Asset management** with multi-currency cost tracking.
+- Operations tooling for instance backup and restore.
+
+### Changed
+- Upgraded to **.NET 10 (LTS)**.
+- Unified data and service namespaces.
+- Streamlined messaging configuration.
+
+## [2.7.0] - 2025-11-10 — Domain Model, Messaging & Payments
+
+### Added
 - **Payment Allocation**.
 - Resilient messaging — health checks, circuit breakers and configurable consumers.
-- Cart state-change events.
 - Published licensing and trademark terms.
 
 ### Changed
 - Domain-driven design refactor across services and repositories.
+
+### Security
+- Hardened identity-provider key handling.
+
+### Removed
+- Module and integration packaging from the SDK distribution pipeline.
+
+## [2.6.0] - 2025-05-26 — Billing, Pricing, Email & MCP
+
+### Added
+- **Model Context Protocol (MCP) server** support.
+- **Apple** sign-in.
+- A new **email engine** for quotes, orders and invoices.
+- Cart state-change events.
+
+### Changed
 - Improved quote calculation and multi-currency forex conversion.
 - Improved pricing and billing.
-- New email engine for quotes, orders and invoices.
-- Hardened identity providers.
 
 ### Removed
 - Authorize.Net integration.
@@ -47,72 +67,86 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - OpenID Connect sign-in, guest-cart persistence and API-documentation generation.
 
-## [2.3.0] - 2024-12-21 — Commerce Operations & Reach
+## [2.5.0] - 2024-12-21 — Platform Hardening & .NET 9
 
 ### Added
-- **Human Resources (HRMS)** service.
-- **Logistics** service.
 - **MercadoPago** payment integration.
-- Support and Accounting REST endpoints.
 - API documentation across all controllers.
 
 ### Changed
 - Upgraded to **.NET 9**.
-- Completed the REST/OData migration across Sales, Accounting, Marketing, Invoices, Orders and Quotes.
-- Refactored strongly-typed identifiers for consistency.
-- Improved the storage service and portal initialization.
 - Renamed portal configuration to `PortalSettings`.
+- Improved the storage service and portal initialization.
 
 ### Removed
-- Legacy API authorization.
+- Legacy API authorization; obsolete projects.
 
 ### Fixed
-- Order, quote and invoice grids; social feeds; watch functionality.
+- Portal context when no tenant is selected; logging and error handling.
 
-## [2.2.0] - 2024-06-13 — Microservices & API Platform
+## [2.4.0] - 2024-08-23 — REST/OData Migration & New Verticals
 
 ### Added
-- Dedicated **Accounting, Marketplace, Commerce, Catalog, Licensing, Security, Learning, Support, and Holders & Tenants** services.
-- **GraphQL** server API.
-- **OpenID Connect** identity, with external-provider configuration.
-- Identity-management endpoints.
-- **Forex V3** multi-currency service.
-- **C# API client generator** with OpenAPI/Swagger annotations; Postman collections.
+- **Human Resources (HRMS)** service; **Logistics** service.
+- Support and Accounting REST endpoints.
+
+### Changed
+- Migrated module pages onto REST/OData service clients (Sales, Accounting, Marketing, Invoices, Orders, Quotes).
+- Strengthened the OData engine; refactored strongly-typed identifiers.
+- Refactored monetary types to decimal precision.
+- Improved invoice, order and quote grids.
+
+### Fixed
+- Cart-management, data-grid and request-header defects.
+
+## [2.3.0] - 2024-06-13 — Microservices & SDK Platform
+
+### Added
+- **Commerce, Catalog, Licensing and Learning** services; the **Forex V3** multi-currency service.
+- A **C# API client generator** with OpenAPI/Swagger annotations; Postman collections.
 - Item images, category management, and merchant & blog features.
 
 ### Changed
 - Centralized business logic in the Application layer (CQRS).
 - Moved database providers behind repository interfaces.
-- Began migrating module pages onto REST/OData service clients.
-- Refactored monetary types to decimal precision.
 - Modernized the codebase (primary constructors, file-scoped namespaces).
 
 ### Fixed
-- GraphQL server, Studio assembly loading, and authentication-token defects.
+- Catalog, cart and tenant-validation defects.
+
+## [2.2.0] - 2024-02-22 — Services & Identity
+
+### Added
+- **Marketplace** and **Accounting** services.
+- **OpenID Connect** identity with external-provider configuration; identity-management endpoints.
+- **GraphQL** server API.
+- Postman collections and an OpenAPI server option.
+
+### Changed
+- Improved the Holders & Tenants and Security services, and the role/permission system.
+- Pipeline reporting and developer tooling.
+
+### Fixed
+- GraphQL server, Studio assembly loading and authentication-token defects.
 
 ## [2.1.0] - 2023-12-20 — Platform Re-Architecture
 
 ### Added
 - **CQRS** architecture with use-case dispatch and the **Projections** pattern.
 - Repository pattern across all data access.
-- **Accounting** module (services and repositories).
-- Shopping **Cart** service.
-- Theming micro-service.
-- **Container (Docker)** support and images.
+- **Accounting** module; shopping **Cart** service; theming micro-service.
+- **Container (Docker)** support and images; load-test pipeline.
 - Dedicated **Development, QA and Testing** environments.
-- Functional, load and integration test pipelines.
-- In-Studio full-text **search**.
-- React + Redux client support.
-- Wishlist; notifications service.
+- In-Studio full-text **search**; React + Redux client support.
 
 ### Changed
-- **Re-architected the platform onto Clean Architecture** (Domain / Application / Infrastructure).
+- **Re-architected the platform onto Clean Architecture**.
 - Overhauled the Studio UI on **FluentUI**, with a new breadcrumb and navigation system.
-- Improved domain-model encapsulation, module loading and dependency injection.
 - Upgraded to **.NET 8**.
+- Improved the domain model, module loading and dependency injection.
 
 ### Fixed
-- Numerous tenant-initialization and workflow-execution defects; cart creation and persistence.
+- Tenant-initialization and workflow-execution defects; cart creation and persistence.
 
 ## [2.0.0] LTS - 2022-08-11
 
@@ -552,7 +586,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Roles and Permissions Explorer
 - Admin Dashboard Initials
 - Added support for SixLabors.ImageSharp.Web
-- Forex service data is now scraped by Alliance Business Holdings.
+- Forex service data is now scraped by Alliance Business Systems.
 - Data Services are not coded to replaceable interface implementation.
 - ABS.Hub project now contains everything we need to create a new ABS Instance.
 - Added support for IdentityServer4 as a replacement for Alliance Passport Services.

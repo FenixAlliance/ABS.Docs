@@ -11,10 +11,14 @@
             "id": "754702419a6b68f0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "License.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "License"
             }
           }
         ]
@@ -177,5 +181,32 @@
     }
   },
   "active": "754702419a6b68f0",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Migration.md",
+    "Module-Development.md",
+    "Modules.md",
+    "Online-Services.md",
+    "Performance.md",
+    "README.md.tmp.523036.047bd92c2160",
+    "The-Platform.md.tmp.523036.7363d25d4eab",
+    "SUMMARY.md.tmp.523036.c5c6c6a739da",
+    "The-Platform.md",
+    "The-Platform.md.tmp.523036.707840579aa1",
+    "Changelog.md.tmp.523036.5c0ed6511a37",
+    "README.md.tmp.523036.ff9397007b97",
+    "README.md",
+    "Requirements.md.tmp.523036.d4da9cef030c",
+    "Changelog.md",
+    "README.md.tmp.523036.dd512f8f13a9",
+    "Changelog.Archived.md.tmp.523036.b1366361a648",
+    "Changelog.md.tmp.523036.c2c0f0df3ddb",
+    "Changelog.ReconstructionNotes.md",
+    "Changelog.Archived.md",
+    "CODE_OF_CONDUCT.md",
+    "Fundamentals/Data-Access.md",
+    "Fundamentals/Configuration.md",
+    "Fundamentals/Hosting/Hosting-on-IIS.md",
+    "Fundamentals/Hosting/Hosting-on-ABS-Cloud.md",
+    "Internationalization/Localization-Strings.md"
+  ]
 }

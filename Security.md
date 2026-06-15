@@ -6,7 +6,7 @@
 
 If you own an Alliance Business Suite-powered infrastructure or are considering using the Alliance Business Suite as your CMS/CRM/ERP (or any other), you may be concerned about potential Alliance Business Suite security issues. In this post, we’ll outline a few of the most common ABS security vulnerabilities, along with steps you can take to secure and protect your Alliance Business Suite instance.
 
-At Alliance Business Holdings, we are committed to helping our customers meet their privacy and personal data requirements, as well as General Data Protection Regulation (GDPR). On this page, you will find information and resources to help you understand how the Alliance Business Suite supports protecting and enabling the privacy rights of individuals, and how we provide the information and tools that our customers need in order to define and support their specific obligations. You can read more about the Alliance Business Holdings commitment to security at the Alliance Business Holdings Trust Center.
+At Alliance Business Systems, we are committed to helping our customers meet their privacy and personal data requirements, as well as General Data Protection Regulation (GDPR). On this page, you will find information and resources to help you understand how the Alliance Business Suite supports protecting and enabling the privacy rights of individuals, and how we provide the information and tools that our customers need in order to define and support their specific obligations. You can read more about the Alliance Business Systems commitment to security at the Alliance Business Systems Trust Center.
 
 
 ## Is the Alliance Business Suite Secure?
@@ -43,10 +43,10 @@ To find detailed information about privacy and personal data for the Alliance Bu
 ## Data subject requests
 The General Data Protection Regulation (GDPR) is fundamentally about protecting and enabling the privacy rights of individuals. The General Data Protection Regulation (GDPR) took effect on 25 May 2018. For information about the challenges and opportunities that GDPR brings for organizations in the context of their business applications, whether there are any specific risks and measures to be taken in the GDPR context, and any potential impact on how business applications need to be used.
 
-The GDPR grants individuals (or data subjects) certain rights in connection with the processing of their personal data. These rights include the right to correct inaccurate data, erase their data or restrict its processing, receive their data, and fulfill a request to transmit their data to another controller. The resources in this section will help Alliance Business Suite customers respond to data subject requests (DSRs).To find information about what the GDPR requires of controllers (you) and processors (Alliance Business Holdings) when you respond to DSRs, and how Alliance Business Holdings enables you to do so, see DSRs on the Service Trust Portal.
+The GDPR grants individuals (or data subjects) certain rights in connection with the processing of their personal data. These rights include the right to correct inaccurate data, erase their data or restrict its processing, receive their data, and fulfill a request to transmit their data to another controller. The resources in this section will help Alliance Business Suite customers respond to data subject requests (DSRs).To find information about what the GDPR requires of controllers (you) and processors (Alliance Business Systems) when you respond to DSRs, and how Alliance Business Systems enables you to do so, see DSRs on the Service Trust Portal.
 
 ## Compliance Manager
-**Alliance Business Suite - Compliance Manager** is a modular cloud service solution that is designed to help organizations meet complex compliance obligations like the GDPR. It does real-time risk assessment that reflects your compliance posture against data protection regulations when you use Alliance Business Holdings's cloud services. It also provides recommended actions and step-by-step guidance.
+**Alliance Business Suite - Compliance Manager** is a modular cloud service solution that is designed to help organizations meet complex compliance obligations like the GDPR. It does real-time risk assessment that reflects your compliance posture against data protection regulations when you use Alliance Business Systems's cloud services. It also provides recommended actions and step-by-step guidance.
 
 ## HTTPS Enforcement in the Alliance Business Suite.
 
@@ -205,7 +205,7 @@ xhttp.send(JSON.stringify({ "name": "Learn C#" }));
 
 ## Reporting a Vulnerability
 
-Security issues and bugs should be reported privately to Alliance Business Holdings either by emailing support@fenix-alliance.com or via the portal at https://fenix-alliance.com.
+Security issues and bugs should be reported privately to Alliance Business Systems either by emailing support@fenix-alliance.com or via the portal at https://fenix-alliance.com.
 You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. 
 
 Please do not open issues for anything you think might have a security implication.

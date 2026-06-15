@@ -11,7 +11,7 @@ If you use the return online portal found [here](https://secure.newegg.com/Guest
 
 -   Unopened items returned in the original condition as shipped
 
--   Wrong item shipped or item does not match what was shown on the Alliance Business Holdings S.A.S website
+-   Wrong item shipped or item does not match what was shown on the Alliance Business Systems S.A.S website
 
 ### You receive
 
@@ -30,7 +30,7 @@ You may receive a partial refund to the original form of payment* for the items 
 
 85% of the item's purchase price
 
-You may receive a partial refund to the original form of payment* for the items listed below. Returns for these reasons will require Alliance Business Holdings's Customer Service assistance.
+You may receive a partial refund to the original form of payment* for the items listed below. Returns for these reasons will require Alliance Business Systems's Customer Service assistance.
 
 ### You return
 -   Non-defective items that are returned unopened and beyond the return policy period
@@ -42,7 +42,7 @@ You may receive a partial refund to the original form of payment* for the items 
 Returns received in any of the following conditions may be rejected or may receive a partial refund.
 ### You return
 
--   Items not in original condition, damaged, missing accessories, retail box, UPC code or showing obvious misuse not due to Alliance Business Holdings S.A.S error
+-   Items not in original condition, damaged, missing accessories, retail box, UPC code or showing obvious misuse not due to Alliance Business Systems S.A.S error
 
 -   Physical user damage
 ### You receive
@@ -59,7 +59,7 @@ Opened, non-defective notebook and desktop PCs, tablets and TVs in original cond
 
 ### You return
 
-Opened physical software, DVDs, games with plastic wrap removed and ALL downloadable software not due to a Alliance Business Holdings S.A.S' error
+Opened physical software, DVDs, games with plastic wrap removed and ALL downloadable software not due to a Alliance Business Systems S.A.S' error
 
 ### You receive
 
@@ -69,8 +69,8 @@ Please note:
 
 -   Marketplace items from 3rd-party sellers follow the individual seller's return policy. See Marketplace FAQs [here](https://kb.newegg.com/article-categories/marketplace/) for more information.
 
--   Alliance Business Holdings S.A.S items purchased as gifts are refunded as store credit only.
+-   Alliance Business Systems S.A.S items purchased as gifts are refunded as store credit only.
 
 -   Non-returnable purchases include digital content, prepaid cards, gift packaging, memberships, completed services, consumable items (e.g., batteries, ink and 3D printer filament), and items that are user damaged, unsanitary or missing major contents.
 
--   If an unopened item purchased from Alliance Business Holdings S.A.S Global is returned, a restocking fee will be applied.
+-   If an unopened item purchased from Alliance Business Systems S.A.S Global is returned, a restocking fee will be applied.

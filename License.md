@@ -9,9 +9,9 @@ In a nutshell, You’ll only pay for core licensing fees if you use the ABS on b
 
 ## Logo and Trademark
 
-The brand name Alliance Business Suite and its logos are trademarks of Alliance Business Holdings S.A.S in Colombia and Alliance Business Holdings Inc in other countries ("Alliance Business Holdings").
+The brand name Alliance Business Suite and its logos are trademarks of Alliance Business Systems S.A.S in Colombia and Alliance Business Systems Inc in other countries ("Alliance Business Systems").
 
-Alliance Business Holdings owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
+Alliance Business Systems owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
 
 - We’d like to make it easy for anyone to use the ABS name or logo for community-oriented efforts that help spread and improve ABS.
 - We’d like to make it clear how ABS-related businesses and projects can (and cannot) use the ABS name and logo.
@@ -20,9 +20,9 @@ Alliance Business Holdings owns and oversees the trademarks for the ABS name and
 
 ## Licensing and Contributions
 
-Your access to and use of the Alliance Business Suite's source code is governed by the Alliance Business Holdings's [End User License Agreement "EULA"](http://absuite.net/eula). If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
+Your access to and use of the Alliance Business Suite's source code is governed by the Alliance Business Systems's [End User License Agreement "EULA"](http://absuite.net/eula). If you don't agree to those terms, as amended from time to time, you are not permitted to access or use the Alliance Business Suite.
 
-We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the develop branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Alliance Business Holdings coding standards. All contributions are governed by the terms of the EULA.
+We welcome any contributions to the Alliance Business Suite development through pull requests on GitHub. Most of our active development is in the develop branch, so we prefer to take pull requests there (particularly for new features). We try to make sure that all new code adheres to the Alliance Business Systems coding standards. All contributions are governed by the terms of the EULA.
 
 
 **A note about your account and the privacy of your information.**

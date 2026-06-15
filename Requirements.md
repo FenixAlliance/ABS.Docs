@@ -1,37 +1,43 @@
-
 # System requirements
-The following browsers are supported:
 
-- Google Chrome
-- Microsoft Edge (supported on Windows 10)
-- Apple Safari 11
-- Internet Explorer 11
+The Alliance Business Suite is a cross-platform **.NET 10** application. You can run it in a container, self-host it on Linux, Windows, or macOS, or use the fully-hosted **ABS Online**. Requirements depend mostly on how you run it and your workload.
 
-## Recommended Server Hardware (Minimum)
-- Quad-core x64 2 GHz CPU or higher (x64 compatible dual-core 1.5 GHz processor)
-- 16GB Memory (8GB Memory)
-- 40GB free hard disk space (10GB free hard disk) SSD Recommended
+## Browsers
 
-## Supported Operating Systems
-The following operating systems are supported with the recommendation that the latest Windows updates are applied.
+ABS Studio is a modern Blazor application and works on current, evergreen browsers (WebSocket support required):
 
-- Windows Server 2012 R2 x64 Datacenter / Standard
-- Windows Server 2016 x64 Datacenter w/ Containers
-- Windows Server 2016 x64 Datacenter w/ Containers
+- Google Chrome and other Chromium-based browsers
+- Microsoft Edge
+- Apple Safari
+- Mozilla Firefox
 
-## Supported SQL Server Editions
-The following SQL Server Editions are supported with the recommendation that the latest Windows updates are applied.
+Always-up-to-date (evergreen) versions are recommended.
 
-- SQL Server 2019
-- SQL Server 2017	
-- SQL Server 2016	
-- Azure SQL Service	
+## Runtime & hosting
 
-## Internet Information Services (IIS)
-- IIS 10, Windows Server 2016
-- IIS 10.0, Windows 10 & Windows Server 2019
+- **Runtime:** .NET 10 (LTS) — cross-platform (Linux, Windows, macOS).
+- **Containers:** a container runtime (Docker / OCI). The published images are the simplest way to run a production instance.
+- **Hosting targets:** anything that runs a .NET 10 app or a Linux container — Azure Container Apps, Kubernetes, a Docker host, or a traditional Linux/Windows server. (IIS hosting is still possible on Windows but is no longer the primary model.)
+- **Messaging (optional):** RabbitMQ, for cross-service integration events in distributed deployments.
 
-## Optional Software Components
-- SQL – SQL Word Breakers
-- SQL – SQL Server Agent Service
-- SQL – Server Full-Text Indexing
+## Databases
+
+Choose one relational provider for the platform's data; ABS ships Entity Framework Core providers and migration tooling for:
+
+- Microsoft SQL Server (and Azure SQL)
+- PostgreSQL
+- MySQL / MariaDB
+- Oracle Database
+- SQLite (recommended for local development and small instances)
+
+A document store (MongoDB) is used by specific subsystems such as the workflow engine.
+
+## Hardware guidance
+
+Sizing depends on tenants, modules in use, and load. As a practical starting point for a small-to-medium instance:
+
+- **CPU:** 2–4 cores (x64 or ARM64)
+- **Memory:** 8–16 GB
+- **Disk:** 20 GB+ free, SSD recommended (plus capacity for your data and uploads)
+
+Scale up, or scale out across multiple container replicas, as your tenants and traffic grow. For the hosted option, capacity is managed for you — see [Hosting](/Fundamentals/Hosting.md) and [Online Services](/Online-Services.md).

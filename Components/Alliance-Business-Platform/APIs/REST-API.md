@@ -37,7 +37,7 @@ The Alliance Business Platform REST API has been decoupled into modular, consuma
 - ### Tenants Set
 - ### Global Data Set
 
-The [ABP REST API Browser](https://absuite.net/api/v2/documentation) – is a tool to allow internal and external developers to get the most out of the REST APIs from Alliance Business Holdings. If you have any feedback, create a new issue in the FenixAlliance/feedback repo on GitHub.
+The [ABP REST API Browser](https://absuite.net/api/v2/documentation) – is a tool to allow internal and external developers to get the most out of the REST APIs from Alliance Business Systems. If you have any feedback, create a new issue in the FenixAlliance/feedback repo on GitHub.
 
 ## OData Support
 OData (Open Data Protocol) is an ISO/IEC approved, OASIS standard that defines a set of best practices for building and consuming REST APIs. It enables creation of REST-based services which allow resources identified using Uniform Resource Locators (URLs) and defined in a data model, to be published and edited by Web clients using simple HTTP messages.
@@ -95,5 +95,5 @@ Find more information about versioning and support.
 
 Are there additional APIs or features you'd like to see in the AiD API? Post new feature requests on UserVoice.
 
-Have feedback for existing Alliance Business Holdings API Endpoints? Connect with us on [Github](https://github.com/fenixalliance).
+Have feedback for existing Alliance Business Systems API Endpoints? Connect with us on [Github](https://github.com/fenixalliance).
 

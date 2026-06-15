@@ -444,7 +444,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Roles and Permissions Explorer
 - Admin Dashboard Initials
 - Added support for SixLabors.ImageSharp.Web
-- Forex service data is now scraped by Alliance Business Holdings.
+- Forex service data is now scraped by Alliance Business Systems.
 - Data Services are not coded to replaceable interface implementation.
 - ABS.Hub project now contains everything we need to create a new ABS Instance.
 - Added support for IdentityServer4 as a replacement for Alliance Passport Services.
