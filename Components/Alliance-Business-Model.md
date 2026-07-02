@@ -1,40 +1,35 @@
-# Alliance Business Model (ABM) Schema
+# The Business Language
 
-In a nutshell, the Alliance Business Model serves as the main dynamic data layer for the entire Alliance Business Suite.
+*Expressed through the **Alliance Business Model (ABM)**.*
 
-The Alliance Business Model is a declarative schema definition of standard entities representing commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data. 
+Accounting, CRM, Commerce, HR, Logistics, Workflow, Marketplace, and Analytics all coexist in ABS for one reason: they speak the same **canonical business language**. That shared vocabulary is the Alliance Business Model — the platform's most important foundation, and the reason the suite behaves like one product rather than a bundle of apps.
 
-The Alliance Business Model provides well-defined, modular, and extensible business entities such as Account, Deal Unit, Case, Contact, Lead, Opportunity, and Product, as well as interactions with suppliers, employees, and customers, such as activities and service level agreements. 
+## Why it exists
 
+Most software locks each function into its own data model, so your CRM and your accounting system never quite agree on what a "Contact" or an "Order" is. ABS takes the opposite path: **one declarative model of standard business entities** that every capability builds on. Define a concept once, and every module speaks it. This is the *platform, not application* and *capabilities, not features* doctrines made concrete.
 
+## What it is
 
-# Configurations
-When installing the Alliance Business Suite on a given server, you'll be required to provide the Connection Strings to the Database that will host the Alliance Business Model Schema.
+A declarative model of the standard entities and relationships of a business — Account, Business Unit, Contact, Lead, Opportunity, Case, Item (product or service), Deal Unit — together with the interactions among suppliers, employees, and customers (activities, agreements, service levels). It is **modular, multi-tenant, and extensible**, and it spans domains from accounting and HR to learning and logistics. Explore the full entity reference in the [API reference](https://docs.absuite.net/reference/).
 
-You can change several configurations using these connections strings too, for example, increase/decrease certain default values or even to point to another database (when migrating, for example) and, Although **not recommended**, you can even change the Database Engine that's providing SQL services to your running instance.
+## How it works
 
+- **Records.** Business data is stored as [records](/Components/Alliance-Business-Model/Records.md) — structured, relational data **scoped to a tenant**, composed of one or more related entities.
+- **Your database, your choice.** The model runs on the major relational engines — **SQL Server, PostgreSQL, MySQL/MariaDB, and Oracle** — selected during [installation](/Fundamentals/Installation.md); ABS ships and applies the schema migrations for you.
+- **Two ways in.** Reach the model through the [platform APIs](/Components/Alliance-Business-Platform.md) (REST, GraphQL, gRPC) or the [.NET SDK](/Components/Alliance-Business-Platform/SDKs.md).
 
-# Providers
+## How to extend it
 
-The Alliance Business Model was designed to work with several SQL Database providers such as Oracle SQL, Microsoft SQL Server, MySQL, MariaDB, PostgreSQL.
+The model is **yours to extend** — add entities and attributes to capture business-specific scenarios through your own [modules](/Module-Development.md), no fork required. ABS follows **additive versioning**, so extending the model never breaks what already depends on it.
 
-The SQL engine that your Alliance Business Suite's instance is going to use can be selected on the [installation process](/Fundamentals/Installation.md).
+## How it integrates
 
+Because the business language is canonical and shared, integrations map an external system to *one* vocabulary instead of to each module separately — and standards-based exchange (such as UBL e-invoicing) builds on the very same model. See [Integrations](/Integrations.md).
 
-# Extensions
+## Lineage
 
-We're currently working to let anyone extend the Alliance Business Model definitions to capture additional business-specific scenarios.
+Originally introduced as the **Alliance Business Model** in 2020 — the canonical, declarative data layer of the Suite — the business language is today realized as the platform's **domain model**, with the relational providers supplying persistence. The namespaces evolved across generations; the concept — *one shared business language* — has held since the very first release.
 
-As of 1.2.0, Custom engines can be supported by generating the appropriate migrations required for the [Alliance Business platform](/Components/Alliance-Business-Platform.md) in order to work properly.
-
-When building custom engines, you'll be required to manage these migrations yourself, which is kind of a pain, so we're experimenting on in-Database-Database Engine as well as NoSQL interoperability to allow customers to easily extend the Alliance Business Model Schema Specification. Also, we're working on providing Per-Record SQL File-Databases with Distributed File System Support.
-
-We're also currently working on providing even more convenient interfaces for customers extending the Alliance Business Model procedurally or through the [Alliance Business Studio](/Components/Alliance-Business-Studio.md).
-
-
-# Entities
-
-Use the [Alliance Business Suite's API reference](https://docs.absuite.net/reference/html/) to explore and learn about all the available [Alliance Business Model entity definitions](https://docs.absuite.net/reference/html/d6/d73/namespace_fenix_alliance_1_1_a_b_m_1_1_models.html), their attributes, and purposes. These entities span several business domains and describe data in different applications and solutions. For example, you can find entity definitions related to Accounting, Learning, Human Resources, and more.
-
-We also maintain a Visual Reference Diagram on GitHub to allow customers to easily identify entities on the Alliance Business Model.
-
+---
+<!-- nav -->
+*Up: [Components](/Components.md) · [The Platform](/The-Platform.md)*

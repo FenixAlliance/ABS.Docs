@@ -29,30 +29,30 @@ A handful of principles have held across every generation of the product. They a
 
 ## The capabilities
 
-ABS is organized around **business capabilities** — the things your organization actually needs to do:
+ABS is organized around **business capabilities** — the things your organization actually needs to do, and what you actually adopt:
 
 | | |
 |---|---|
-| **Identity** | authentication, authorization, federation, governance |
+| **Identity & Trust** | authentication, authorization, federation, SSO, governance |
 | **Commerce** | catalogs, pricing, orders, payments, marketplace |
 | **Finance** | accounting, billing, fiscalization, tax, treasury |
 | **Operations** | projects, assets, logistics, workflow, automation |
-| **Customer** | CRM, support, marketing, communications, experience |
 | **Workforce** | HR, learning, certifications, collaboration |
-| **Data & Intelligence** | analytics, reporting, AI, knowledge, decision support |
+| **Customer Experience** | CRM, support, marketing, communications |
+| **Intelligence** | analytics, reporting, AI, knowledge, decision support |
 | **Platform & Development** | modules, SDKs, APIs, integrations, dev tools, marketplace |
 
-These capabilities coexist because they all speak the same canonical business language — see **[Components](/Components.md)**.
+These capabilities coexist because they all speak the same canonical business language. **Solutions** package them for an industry or use-case; **modules** implement them. See **[Components](/Components.md)**.
 
-## The five pillars
+## Platform foundations
 
-Underneath those capabilities, ABS rests on five pillars — the building blocks it was designed around, evolved but intact across the years:
+Those capabilities aren't loosely-coupled apps — they cohere because they rest on five **platform foundations**: enduring concepts that have held through every generation, even as their implementation matured. You don't adopt these directly; they're *why the platform works as one*:
 
-- **[Alliance Core Libraries (ACL)](/Components/Alliance-Core-Libraries.md)** — the **shared kernel**: the platform's common language and stable foundations — the abstractions, contracts, and standards every part depends on.
-- **[Alliance Business Model (ABM)](/Components/Alliance-Business-Model.md)** — the **canonical business language**: the shared, extensible model of standard business entities that lets every capability coexist.
-- **[Alliance Passport Service (APS)](/Components/Alliance-Passport-Service.md)** — the **trust layer**: identity, permissions, authorization, federation, security, governance.
-- **[Alliance Business Platform (ABP)](/Components/Alliance-Business-Platform.md)** — the **integration layer**: connectivity over REST, GraphQL, gRPC, MCP, SignalR, events, and SDKs.
-- **[Alliance Business Studio](/Components/Alliance-Business-Studio.md)** — the **operational cockpit**: where organizations shape ABS to fit their reality.
+- **The Shared Kernel** — the platform's common language and stable foundations: the abstractions, contracts, and standards every part depends on. *([Alliance Core Libraries / ACL](/Components/Alliance-Core-Libraries.md).)*
+- **The Business Language** — the canonical, shared model of business entities that lets every capability coexist. *([Alliance Business Model / ABM](/Components/Alliance-Business-Model.md).)*
+- **Trust** — identity, permissions, authorization, federation, security, and governance. *([Alliance Passport Service / APS](/Components/Alliance-Passport-Service.md).)*
+- **Integration** — connectivity over REST, GraphQL, gRPC, MCP, SignalR, events, and SDKs. *([Alliance Business Platform / ABP](/Components/Alliance-Business-Platform.md).)*
+- **Operations** — the cockpit where organizations shape ABS to fit their reality. *([Alliance Business Studio](/Components/Alliance-Business-Studio.md).)*
 
 ## Built to be yours
 
