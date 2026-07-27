@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] — The Composable Platform
 
 ### Added
+- **AI agents as workflow steps** — invoke a governed AI agent from inside a [workflow](~/Modules/WORKFLOWS.md): hand it a question or a task, let it run to an answer, and use the result in later steps. The agent runs under the workflow's own identity, is permission-checked, and leaves a durable audit record.
 - **Suite UI Kit** — a unified component design system across the Studio.
 - **Platform-wide role-based access control**, with per-feature and per-action permissions.
 - **Human Resources / Workforce** management — employee types, job titles, schedules, time intervals and rounding policies.
