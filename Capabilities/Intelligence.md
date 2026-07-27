@@ -9,8 +9,13 @@ Intelligence is how ABS helps you understand and act on your own data. Because e
 - **Report and analyze** — governed BI with curated datasets and a self-serve explorer.
 - **Explore your data** — ask questions across finance, commerce, operations, and more, all from one model.
 - **Put AI to work** — an assistant (Andy) that answers questions and helps users get things done in context.
+- **Let the assistant act safely** — beyond answering, Andy can use approved tools to look things up and complete tasks, always within the same permissions, tenant boundaries, and audit trail as the person it is helping.
 - **Configure AI agents** — manage cognitive agents, skills, and the models behind them.
 - **Build bots** — design conversational bots for support, sales, and automation.
+
+## Governed by design
+
+AI in ABS operates under the same governance as the rest of the platform. An assistant only ever sees and does what the current user is allowed to — every tool it uses is permission-checked, scoped to your tenant, and recorded — so putting AI to work never widens who can see or change what. You decide which models, skills, and tools each agent may use, and read-only actions come first, with anything more sensitive gated for review.
 
 ## Modules that deliver it
 
