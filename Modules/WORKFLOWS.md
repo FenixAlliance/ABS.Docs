@@ -1,46 +1,30 @@
-# Workflow Designer Module
+# Workflows Studio
 
-Welcome to the **Alliance Business Suite | Workflow Designer Module** Documentation. 
+*Automate the work — model any business process as a governed, visual workflow that runs itself, safely.*
 
-These articles will enable you to work with the module to get the most out of your Alliance Business Suite instance. 
+Workflows Studio is the Suite's visual automation engine. You draw a process once on a drag-and-drop canvas, and it runs inside your Alliance Business Suite — on the same business model, identity, and security as the rest of your data. Every step is a real, governed Suite operation; every run is permission-checked, tenant-scoped, and audited. There is no separate automation server to license or operate, and no scripting language to learn.
 
-The Alliance Business Suite | Workflow Designer is a workflows manager that enables workflow execution in any Alliance Business Suite instance. Workflows, business processes, and enterprise orchestrations can be defined by using code or the visual workflow designer, to integrate your Alliance Business Suite and your data on the Alliance Business Model across cloud and on-premises systems.
+## What you can do
 
-## Features
+- **Design visually.** Build a workflow by dragging nodes onto a canvas and wiring them together, and configure each step right on the node — no code, and no forms buried in side panels.
+- **Compose real capabilities.** Each action node runs a genuine governed Suite operation — read a tenant wallet, fetch an invoice, look up a contact, place an order — chosen from a curated catalog. A node can never do more than the identity running the workflow is allowed to do.
+- **Add logic and control.** Branch on conditions, run branches in parallel and join them back together, loop over a collection or while a condition holds, and catch failures with bounded retries — all configured visually.
+- **Flow data between steps.** Connect one step's output to a later step's input by drawing it on the canvas. A guided binder does the mapping and validates it before you publish — there are no expressions to hand-write.
+- **Test before you ship.** Run a draft and watch each node light up live — running, succeeded, failed, or skipped — with the values every step produced, so you can see exactly what a workflow does before it goes live.
+- **Track every run.** The Executions view lists each run with its status, when it started, who or what started it, and the detail behind any fault.
+- **Run unattended.** Publish a workflow and let it run with no person in the loop — under a dedicated, least-privilege application identity, never a borrowed user account — so background automation stays governed and fully audited.
+- **Version safely.** A published workflow is immutable; editing it opens a new draft version, so a running process never changes underneath you.
 
-- Create workflows using the **Workflow Builder API**.
-- Create & manage workflows **visually** using the Alliance Business Studio Dashboard SPA.
-- Design **long-running** workflows.
-- REST **API Endpoints** to manage and integrate with Elsa from external applications.
-- Create higher-level activities using the **Composite Activity API**.
-- **Rich set of activities** such as SetVariable, For, ForEach, ParallelForEach, Fork, Join, HttpEndpoint, SendHttpRequest, SendEmail, MessageReceived, and much more.
-- Create **custom activities**.
-- **Workflow Expressions** allow you to configure activity properties with expressions that are evaluated at runtime. Supported syntaxes are JavaScript and Liquid.
+## Governed by design
 
-## Why Workflow Designer?
+Workflows Studio is part of the Suite, not a bolt-on, so it inherits the platform's governance end to end:
 
-One of the main goals of the Workflow Designer Module is to **enable workflows in any Alliance Business Suite instance** with **minimum effort** and **maximum extensibility**. This means that your Alliance Business Suite is workflow-capable right out of the box.
+- **Every step is permission-checked.** A workflow acts with the permissions of the identity that runs it, and each capability re-checks its own permission at run time. A step the runner isn't allowed to perform **fails closed** — it is never silently skipped or quietly escalated.
+- **Tenant-scoped throughout.** A workflow only ever sees and touches its own tenant's data.
+- **Structured logic, not scripting.** Conditions, loops, and data mapping are safe, validated configuration — not an embedded scripting language. That keeps workflows portable, reviewable, and free of the security and maintenance burden of hand-written code.
+- **Audited end to end.** Every run records the real actor — including automated runs, which record the application identity and, when a person set them in motion, on whose behalf.
+- **Automation has its own identity.** Unattended workflows run as a governed application principal with its own least-privilege permissions — so a background process is fully accountable and never impersonates a person.
 
-### Azure Logic Apps vs ABS | Workflow Designer?
+## Where it fits
 
-- As powerful and as complete as Azure Logic Apps are, it's available only as a managed service in Azure. The Alliance Business Suite, on the other hand, allows you to host it not only on Azure but on any cloud provider that supports .NET Core. And of course, you can host it on-premises.
-
-- Although you can implement long-running workflows with Logic Apps, you would typically do so by splitting your workflow with multiple Logic Apps where one workflow invokes the other. This can make the logic flow a bit hard to follow. with ABS | Workflow Designer, you simply add triggers anywhere in the workflow, making it easier to have a complete view of your application logic. And if you want, you can still invoke other workflows from one workflow.
-
-### ABS | Workflow Designer vs. Windows Workflow Foundation?
-
-I've always liked Windows Workflow Foundation, but unfortunately [development appears to have halted](https://forums.dotnetfoundation.org/t/what-is-the-roadmap-of-workflow-foundation/3066). Here are a few reasons to prefer the  Workflow Designer Module:
-
-- The Workflow Designer Module intrinsically supports triggering events that start new workflows and resume halted workflow instances in an easy-to-use manner. E.g. `workflow host.TriggerWorkflowAsync("HttpRequestTrigger");"` will start and resume all workflows that either start with or are halted on the `HttpRequestTrigger`.
-
-- The Workflow Designer Module has an In-Studio (web-based) workflow designer and a REST-based API to manage everything you can manage through the Web Workflow Designer.
-
-### ABS | Workflow Designer vs. Orchard Workflows?
-
-Both [Orchard](http://docs.orchardproject.net/en/latest/Documentation/Workflows/) and [Orchard Core](https://orchardcore.readthedocs.io/en/dev/docs/reference/modules/Workflows/) ship with a powerful workflows module, and both are awesome. In fact, the Workflow Designer Module was inspired by Orchard Core's Workflows module. 
-
-Although Workflow Designer uses a similar model, here are some differences:
-
-- The Workflow Designer Module is completely decoupled from the web and relies on the Alliance Business Platform, whereas Orchard Core Workflows is coupled not only to the Orchard Core Framework but to the web itself.
-- The Workflow Designer Module is being built without taking a dependency on any Orchard Core packages.
-
+Workflows Studio delivers the **automation** thread of the [Operations](~/Capabilities/Operations.md) and [Platform & Development](~/Capabilities/Platform-and-Development.md) capabilities, and runs on the [Alliance Business Platform](~/Capabilities/Alliance-Business-Platform.md). The operations you compose into a workflow are contributed by the other capabilities you've enabled — [Finance](~/Capabilities/Finance.md), [Commerce](~/Capabilities/Commerce.md), [Intelligence](~/Capabilities/Intelligence.md), and more — so a workflow is simply your business, wired together and set to run.
