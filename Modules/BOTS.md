@@ -31,3 +31,7 @@ Monitor and improve bot performance. ABS Bot Composer lets you keep an eye on ho
 ## Analytics page
 
 Better together. ABS Bot Composer works hand-in-hand with other Alliance Business Suite Modules to provide a holistic view of your customer service operations. You can use Customer Hub, Analytic Insights and Bot Composer together to determine which topics are trending or consuming support resources, and then easily automate them.
+
+## Governed agent invocation
+
+Beyond live conversations, your bots and cognitive agents can be **invoked as governed steps** inside workflows and automations. When a process calls an agent, the agent runs under a governed application identity **on behalf of** the person who started the process — never with more access than they have — and every run is permission-checked, scoped to your tenant, and recorded as a durable, auditable record of who ran it, what it did, which tools it used, and how it ended. This lets you place an agent inside a business process — triaging a request, drafting a reply, looking something up — with the same trust boundary as a person doing it by hand.
