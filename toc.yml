@@ -1,0 +1,15 @@
+### YamlMime:TableOfContent
+- name: Home
+  href: index.md
+- name: Get started
+  href: get-started/The-Platform.md
+- name: Capabilities
+  href: Capabilities/index.md
+- name: Modules
+  href: Modules/index.md
+- name: Services
+  href: Services/index.md
+- name: Online services
+  href: Online-Services/index.md
+- name: Reference
+  href: reference/References.md

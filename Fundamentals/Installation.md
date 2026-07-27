@@ -101,7 +101,7 @@ namespace FenixAlliance.ABS
 
 3. **Trust the HTTPS development certificate**:
 
-![cert.png](/.attachments/cert-55b026f6-2aae-45a7-837b-491015fb5dca.png)
+![cert.png](~/.attachments/cert-55b026f6-2aae-45a7-837b-491015fb5dca.png)
 
 Select Yes if you agree to trust the development certificate.
 
@@ -117,26 +117,26 @@ On this wizard, you'll be prompted with a few configuration steps:
 
 **1. Primary Database Options**
 
-![Primary Database Options](/.attachments/image-1225dbea-223d-42dd-ac65-cd6cd3c6305a.png)
+![Primary Database Options](~/.attachments/image-1225dbea-223d-42dd-ac65-cd6cd3c6305a.png)
 
 **2. Business Tenant Basic Information**
 
-![Business Tenant Basic Information](/.attachments/image-c187a4ce-806b-43bd-a9f4-78537123f237.png)
+![Business Tenant Basic Information](~/.attachments/image-c187a4ce-806b-43bd-a9f4-78537123f237.png)
 
 **3. Primary Portal Basic Information**
 
-![Primary Portal Basic Information](/.attachments/image-f629e01c-1650-432b-bf92-389c31f8a960.png)
+![Primary Portal Basic Information](~/.attachments/image-f629e01c-1650-432b-bf92-389c31f8a960.png)
 
 **4. Identity Provider Options**
 
-![Identity Provider Options](/.attachments/image-b29e9ac0-67d6-497d-8e13-75904b9a00c9.png)
+![Identity Provider Options](~/.attachments/image-b29e9ac0-67d6-497d-8e13-75904b9a00c9.png)
 
 **5. Root Account Credentials**
 
-![Root Account Credentials](/.attachments/image-331f6185-4104-4ac6-ac37-d66477a6275b.png)
+![Root Account Credentials](~/.attachments/image-331f6185-4104-4ac6-ac37-d66477a6275b.png)
 
 Fill in the required information on each step and click on "Install". This will create the ABM Scheme to the Database, seed data such as countries, currencies, states, cities, timezones, the selected COA, and other important, standardized data. The creation and seeding process might take up to 5 minutes, depending on your connection and system's specifications.
 
-![Seeding Process](/.attachments/image-9a7225cf-ba75-4625-ba1c-64a0289c4755.png)
+![Seeding Process](~/.attachments/image-9a7225cf-ba75-4625-ba1c-64a0289c4755.png)
 
 Let the application finish this process, reload the page & log in with the Root Account credentials defined in previous steps.

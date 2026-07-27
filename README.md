@@ -33,19 +33,19 @@ The ideas ABS was founded on have held across every generation of the product:
 
 ABS is organized into the same conceptual building blocks it was designed around — evolved, but intact, across successive generations:
 
-- **[Alliance Core Libraries (ACL)](/Components/Alliance-Core-Libraries.md)** — the **shared kernel**: the common language and stable foundations — abstractions, contracts, and standards — that everything else builds on.
-- **[Alliance Business Model (ABM)](/Components/Alliance-Business-Model.md)** — the **canonical, declarative model** of standard business entities (Accounts, Business Units, Contacts, Leads, Opportunities, Items, and more): multi-tenant by design, and extensible by anyone to capture business-specific scenarios.
-- **[Alliance Passport Service (APS)](/Components/Alliance-Passport-Service.md)** — originally introduced as the identity engine of ABS; today it powers authentication, authorization, federated sign-in, MFA, and identity lifecycle for every contact — customer, employee, partner, or guest — alongside data protection, HTTPS enforcement, secrets, CSRF/XSRF, and CORS.
-- **[Alliance Business Platform (ABP)](/Components/Alliance-Business-Platform.md)** — the multi-protocol API surface (REST, GraphQL, gRPC, MCP, and SignalR) for transacting with the model from any client, in any language.
-- **[Alliance Business Studio](/Components/Alliance-Business-Studio.md)** — the graphical administration experience and application core, where you manage your implementation, transact data, generate views and reports, and customize and extend the system.
+- **[Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md)** — the **shared kernel**: the common language and stable foundations — abstractions, contracts, and standards — that everything else builds on.
+- **[Alliance Business Model (ABM)](~/Capabilities/Alliance-Business-Model.md)** — the **canonical, declarative model** of standard business entities (Accounts, Business Units, Contacts, Leads, Opportunities, Items, and more): multi-tenant by design, and extensible by anyone to capture business-specific scenarios.
+- **[Alliance Passport Service (APS)](~/Capabilities/Alliance-Passport-Service.md)** — originally introduced as the identity engine of ABS; today it powers authentication, authorization, federated sign-in, MFA, and identity lifecycle for every contact — customer, employee, partner, or guest — alongside data protection, HTTPS enforcement, secrets, CSRF/XSRF, and CORS.
+- **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — the multi-protocol API surface (REST, GraphQL, gRPC, MCP, and SignalR) for transacting with the model from any client, in any language.
+- **[Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md)** — the graphical administration experience and application core, where you manage your implementation, transact data, generate views and reports, and customize and extend the system.
 
-See **[Advanced](/Advanced.md)** for the dependency tree and design overview.
+See **[Advanced](~/reference/Advanced.md)** for the dependency tree and design overview.
 
 ## How you build on ABS
 
 You extend ABS in C# by writing **modules** — self-contained feature libraries (Blazor components, pages, APIs, background work) that the platform loads into any instance. Build on next-generation .NET (Blazor, SignalR, Razor, MVC), with or without JavaScript, and reach the platform's data and services through the ABP APIs.
 
-Start with **[Getting Started](/Getting-started.md)**, the **[Fundamentals](/Fundamentals.md)**, and **[Module Development](/Module-Development.md)**.
+Start with **[Getting Started](~/get-started/Getting-started.md)**, the **[Fundamentals](~/get-started/Fundamentals.md)**, and **[Module Development](~/get-started/Module-Development.md)**.
 
 ## Running ABS
 
@@ -63,7 +63,7 @@ docker pull fenixalliance/absuite-platform:latest
 docker run -p 8080:8080 fenixalliance/absuite-platform:latest
 ```
 
-Open the provided URL and complete the installation wizard. See **[Hosting](/Fundamentals/Hosting.md)** for production options.
+Open the provided URL and complete the installation wizard. See **[Hosting](~/Fundamentals/Hosting.md)** for production options.
 
 ### Quick start (as a dependency, .NET 10)
 
@@ -81,7 +81,7 @@ app.UseAllianceBusinessSuite(builder.Configuration, builder.Environment);
 app.Run();
 ```
 
-The exact packages and current versions are listed in the **[SDK reference](/Components/Alliance-Business-Platform/SDKs.md)**.
+The exact packages and current versions are listed in the **[SDK reference](~/Capabilities/Alliance-Business-Platform/SDKs.md)**.
 
 ## Versioning
 
@@ -104,7 +104,7 @@ Beyond modules, ABS includes a low-code surface so you can do a lot with little 
 
 ## Licensing & contributions
 
-Your access to and use of the ABS source and binaries is governed by the **[Alliance Business Systems EULA](https://absuite.net/eula)**. Documentation in this repository is licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)**. Contributions are welcome under the terms of the EULA — see **[Contributing](/Contributing.md)** and the **[Code of Conduct](/CODE_OF_CONDUCT.md)**.
+Your access to and use of the ABS source and binaries is governed by the **[Alliance Business Systems EULA](https://absuite.net/eula)**. Documentation in this repository is licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)**. Contributions are welcome under the terms of the EULA — see **[Contributing](~/reference/Contributing.md)** and the **[Code of Conduct](~/reference/CODE_OF_CONDUCT.md)**.
 
 ## Trademarks
 

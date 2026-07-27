@@ -4,7 +4,7 @@ The ABP **Identity and Access Manager** (IAM) enables you to manage access to Bu
 
 IAM is a feature of the **Alliance Passport Service** offered at no additional charge. You will be charged only for use of other ABS services consumed by your users or ABP Services consumed by your applications.
 
-To get started using IAM you will need to have administrator access over a Business Tenant. If you have already registered a Business Tenant, go to the [Alliance Business Studio](/Components/Alliance-Business-Studio.md) and get started with these **IAM Best Practices**. 
+To get started using IAM you will need to have administrator access over a Business Tenant. If you have already registered a Business Tenant, go to the [Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md) and get started with these **IAM Best Practices**. 
 
 ABP IAM has a list of best practices to help Alliance ID Holders to manage access to Business Tenant resources.
 
@@ -22,7 +22,7 @@ ABP IAM has a list of best practices to help Alliance ID Holders to manage acces
 
 ## Use cases
 
-### Fine-grained access control to [ABP](/Components/Alliance-Business-Platform.md) resources
+### Fine-grained access control to [ABP](~/Capabilities/Alliance-Business-Platform.md) resources
 
 IAM enables your users to control access to ABP service APIs and to specific resources. IAM also enables you to add specific conditions such as time of day to control how a user can use ABP, their originating IP address, whether they are using SSL, or whether they have authenticated with a multi-factor authentication device.
 

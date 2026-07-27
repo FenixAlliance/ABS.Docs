@@ -16,7 +16,7 @@ To create a new Client-Side application for the Alliance Business Suite, head ov
 
 There, fill out the form, select a name for your application and mark your new application as a Single Page Application. There, you will be prompted with additional required properties for your application.
 
-![image.png](/.attachments/image-a34b452c-027b-4da7-ac6b-ed0ad52751d3.png)
+![image.png](~/.attachments/image-a34b452c-027b-4da7-ac6b-ed0ad52751d3.png)
 You can customize things like:
 - The Application Name
 - The NPM Publish Script
@@ -38,7 +38,7 @@ This is why the Alliance Business Suite allows customers to connect a public/pri
 
 To enable Git Management for your SPA application, head to your application page and Enable Git Repo Management. Provide a Git Repo URL and a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) if the repo is private.
 
-![image.png](/.attachments/image-3d421c5b-f19d-43a9-958a-b1aefae7840f.png)
+![image.png](~/.attachments/image-3d421c5b-f19d-43a9-958a-b1aefae7840f.png)
 # Install npm packages
 To install third-party npm packages, use a command prompt on the application page and run the following command:
 
@@ -47,7 +47,7 @@ spa -id  packages install --save <package_name>
 `
 or just add it to your package.json and request the application to execute the publish script, (which will execute `npm install` first) by clicking on the Re-Publish Files button.
 
-![image.png](/.attachments/image-a501d1ed-0f21-4c50-9f14-b535cbb58c2d.png)
+![image.png](~/.attachments/image-a501d1ed-0f21-4c50-9f14-b535cbb58c2d.png)
 # Publish and deploy
 In development, ABS SPAs run in a mode optimized for developer convenience. For example, JavaScript bundles include source maps (so that when debugging, you can see your original TypeScript code). The app watches for TypeScript, HTML, and CSS file changes on the SPA Root Files Path and automatically recompiles and reloads when it sees those files change. 
 
@@ -60,7 +60,7 @@ The project is configured to start its own instance of the SPA in the background
 
 There's a drawback to this default setup. Each time you modify your C# code and your Alliance Business Suite instance needs to restart, the SPA server restarts. Around 10 seconds is required to start back up. If you're making frequent updates to your Alliance Business Suite instance (Like installing new applications or modules) and don't want to wait for each SPA process to restart, run the Angular CLI server externally, independently of the ASP.NET Core process. To do so:
 
-![image.png](/.attachments/image-34da8472-569f-46a2-a82f-787c07f51b56.png)
+![image.png](~/.attachments/image-34da8472-569f-46a2-a82f-787c07f51b56.png)
 
 Provide a URL for the running ABS SPA and the Alliance Business Suite will establish a proxy To the SPA Development Server.
 

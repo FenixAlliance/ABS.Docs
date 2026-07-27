@@ -13,4 +13,4 @@ The key to an efficient and profitable business is total visibility into the inv
 We are making it easier than ever before to sell physical products by offering integrations and extensibility capabilities to connect your favorite shipping carriers, showing live rates, or adding custom solutions.
 
 # Logistics API
-Through the Logistics Module API, developers can create custom solutions that extend its capabilities. Our goal is to create secure CRUD RESTfull Endpoints for almost every possible Record Type on the Logistics section of the [Alliance Business Model](/Components/Alliance-Business-Model.md).
+Through the Logistics Module API, developers can create custom solutions that extend its capabilities. Our goal is to create secure CRUD RESTfull Endpoints for almost every possible Record Type on the Logistics section of the [Alliance Business Model](~/Capabilities/Alliance-Business-Model.md).

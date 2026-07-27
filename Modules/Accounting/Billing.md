@@ -12,4 +12,4 @@ The Alliance Business Suite | Accounting Module contains several tools built to 
 
 Note: Deal Units belong to the Sales Scope and can be managed on the Sales Manager Module.
 
-![SalesPlusBilling.jpg](/.attachments/SalesPlusBilling-80726e20-c056-4854-9974-c871df306eba.jpg)
+![SalesPlusBilling.jpg](~/.attachments/SalesPlusBilling-80726e20-c056-4854-9974-c871df306eba.jpg)

@@ -18,7 +18,7 @@ Stock Items can be created from the Stock Items Manager View. To do so, clock on
 
 At the very least, Stock Items require a Title as well as a Stock Keeping Unit ("SKU").
 
-![qp9IJQI6Gy.gif](/.attachments/qp9IJQI6Gy-1f8a54a0-ed7f-4e61-980e-58f46e3773a2.gif)
+![qp9IJQI6Gy.gif](~/.attachments/qp9IJQI6Gy-1f8a54a0-ed7f-4e61-980e-58f46e3773a2.gif)
 
 ### Updating Stock Items
 
@@ -35,7 +35,7 @@ Stock Items are identified, at the lowest level, by a Globally Unique Identifier
 |Field | Description  |
 |--|--|
 | Barcode | UPN, EAN or ISBN Barcode |
-| SKU  | Stock Keeping unit represents the code for a distinct type of item for sale. It must be unique for each [Business Tenant](/Components/Alliance-Passport-Service/Business-Tenants.md)  |
+| SKU  | Stock Keeping unit represents the code for a distinct type of item for sale. It must be unique for each [Business Tenant](~/Capabilities/Alliance-Passport-Service/Business-Tenants.md)  |
 | ISBN | (ISBN-10 or ISBN-13) International Standard Book Number (ISBN)  |
 | UPC  | Universal Product Code consists of 12 numeric digits that are uniquely assigned to each trade item.  |
 | EAN| International Article Number (also known as European Article Number or EAN) consists of a thirteen-digit code. |

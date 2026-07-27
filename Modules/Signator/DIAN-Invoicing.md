@@ -43,4 +43,4 @@ Este proyecto utiliza las siguientes librerías:
 
 ## Licencia
 
-Revisar detalles en el archivo [LICENCE](/English/About/Legal/Terms-and-conditions).
+Revisar detalles en el archivo [LICENCE](~/reference/License.md).

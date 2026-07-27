@@ -1,16 +1,16 @@
 # Table of contents
 
 * [Overview](README.md)
-* [About](About.md)
-* [The Platform](The-Platform.md)
-* [Roadmap](Roadmap.md)
-* [API Reference](References.md)
+* [About](~/get-started/About.md)
+* [The Platform](~/get-started/The-Platform.md)
+* [Roadmap](~/get-started/Roadmap.md)
+* [API Reference](~/reference/References.md)
 
 ## About
 
 * [Requirements](Requirements.md)
 * [Getting Started](Getting-started.md)
-* [Fundamentals](Fundamentals.md)
+* [Fundamentals](~/get-started/Fundamentals.md)
   * [Installation](Fundamentals/Installation.md)
   * [Configuration](Fundamentals/Configuration.md)
   * [Options](Fundamentals/Options.md)
@@ -22,7 +22,7 @@
   * [Routing](Fundamentals/Routing.md)
   * [Static Files](Fundamentals/Static-Files.md)
   * [Data Access](Fundamentals/Data-Access.md)
-* [Web Development](Web-Development.md)
+* [Web Development](~/get-started/Web-Development.md)
    * [Web Portals](Web-Development/Web-Portals.md)
    * [Web Pages](Web-Development/Web-Pages.md)
      * [Razor Pages](Web-Development/Web-Pages/Razor-Pages.md)
@@ -44,45 +44,45 @@
 
 ## Components
 
-* [Components](Components.md)
+* [Components](~/Capabilities/index.md)
 
-  * [Alliance Core Libraries](Components/Alliance-Core-Libraries.md)
-  * [Alliance Business Model](Components/Alliance-Business-Model.md)
-    * [Records](Components/Alliance-Business-Model/Records.md)
-    * [Extensibility](Components/Alliance-Business-Model/Extensibility.md)
-  * [Alliance Passport Service](Components/Alliance-Passport-Service.md)
+  * [Alliance Core Libraries](Capabilities/Alliance-Core-Libraries.md)
+  * [Alliance Business Model](Capabilities/Alliance-Business-Model.md)
+    * [Records](Capabilities/Alliance-Business-Model/Records.md)
+    * [Extensibility](Capabilities/Alliance-Business-Model/Extensibility.md)
+  * [Alliance Passport Service](Capabilities/Alliance-Passport-Service.md)
 
-    * [Account Holders](Components/Alliance-Passport-Service/Account-Holders.md)
-    * [Business Tenants](Components/Alliance-Passport-Service/Business-Tenants.md)
-    * [Security Roles](Components/Alliance-Passport-Service/Security-Roles.md)
-    * [Security Groups](Components/Alliance-Passport-Service/Security-Groups.md)
-    * [Business Permissions](Components/Alliance-Passport-Service/Business-PErmissions.md)
-    * [Connect Protocols](Components/Alliance-Passport-Service/Connect-protocols.md)
+    * [Account Holders](Capabilities/Alliance-Passport-Service/Account-Holders.md)
+    * [Business Tenants](Capabilities/Alliance-Passport-Service/Business-Tenants.md)
+    * [Security Roles](Capabilities/Alliance-Passport-Service/Security-Roles.md)
+    * [Security Groups](Capabilities/Alliance-Passport-Service/Security-Groups.md)
+    * [Business Permissions](Capabilities/Alliance-Passport-Service/Business-PErmissions.md)
+    * [Connect Protocols](Capabilities/Alliance-Passport-Service/Connect-protocols.md)
 
-  * [Alliance Business Platform](Components/Alliance-Business-Platform.md)
+  * [Alliance Business Platform](Capabilities/Alliance-Business-Platform.md)
 
-    * [Application Programming Interfaces](Components/Alliance-Business-Platform/APIs.md)
+    * [Application Programming Interfaces](Capabilities/Alliance-Business-Platform/APIs.md)
 
-      * [REST API](Components/Alliance-Business-Platform/APIs/REST-API.md)
-      * [GraphQl API](Components/Alliance-Business-Platform/APIs/GraphQl-API.md)
-      * [GRPC API](Components/Alliance-Business-Platform/APIs/GRPC-API.md)
-      * [ABS TermX](Components/Alliance-Business-Platform/APIs/ABS-Tx.md)
+      * [REST API](Capabilities/Alliance-Business-Platform/APIs/REST-API.md)
+      * [GraphQl API](Capabilities/Alliance-Business-Platform/APIs/GraphQl-API.md)
+      * [GRPC API](Capabilities/Alliance-Business-Platform/APIs/GRPC-API.md)
+      * [ABS TermX](Capabilities/Alliance-Business-Platform/APIs/ABS-Tx.md)
 
-    * [Software Development Kits](Components/Alliance-Business-Platform/SDKs.md)
+    * [Software Development Kits](Capabilities/Alliance-Business-Platform/SDKs.md)
 
-      * [.NET SDK](Components/Alliance-Business-Platform/SDKs/SDK-Nuget-Package.md)
-      * [.NET DTOs Library](Components/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
-      * [PowerShell CLI](Components/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
+      * [.NET SDK](Capabilities/Alliance-Business-Platform/SDKs/SDK-Nuget-Package.md)
+      * [.NET DTOs Library](Capabilities/Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md)
+      * [PowerShell CLI](Capabilities/Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md)
 
-  * [Alliance Business Studio](Components/Alliance-Business-Studio.md)
-      * [Layout](Components/Alliance-Business-Studio/Layout.md)
-      * [Portals](Components/Alliance-Business-Studio/Portals.md)
+  * [Alliance Business Studio](Capabilities/Alliance-Business-Studio.md)
+      * [Layout](Capabilities/Alliance-Business-Studio/Layout.md)
+      * [Portals](Capabilities/Alliance-Business-Studio/Portals.md)
 
-  * [Alliance Business Pocket](Components/Alliance-Business-Pocket.md)
+  * [Alliance Business Pocket](Capabilities/Alliance-Business-Pocket.md)
 
 ## Services
 
-* [Services](Services.md)
+* [Services](~/Services/index.md)
   * [BlockChains Service](Services/BlockChains-Service.md)
   * [Multi-Tenancy Service](Services/Tenants-Service.md)
   * [Multi-Currency Service](Services/Forex-Service.md)
@@ -91,7 +91,7 @@
 
 ## Modules
 
-* [Official Modules](Modules.md)
+* [Official Modules](~/Modules/index.md)
   * [IAM](Modules/IAM.md)
   * [Accounting](Modules/Accounting.md)
       * [Accounts](Modules/Accounting/Accounts.md)
@@ -130,7 +130,7 @@
   * [Workflows Studio](Modules/Workflows.md)
 
 
-* [Official Integrations](Integrations.md)
+* [Official Integrations](~/Modules/Integrations.md)
   * [ABS Self](Integrations/Self.md)
   * [Authorize.net](Integrations/Authorize.Net.md)
   * [ePayco](Integrations/ePayco.md)
@@ -145,15 +145,15 @@
 
 ## Security
 
-* [Security](Security.md)
+* [Security](~/reference/Security.md)
 
 ## Advanced
 
-* [Advanced](Advanced.md)
+* [Advanced](~/reference/Advanced.md)
 
 ## Online Services
 
-* [Online Services](Online-Services.md)
+* [Online Services](~/Online-Services/index.md)
 
   * [AOS REST API](Online-Services/REST-API.md)
     * [Authentication and Authorization](Online-Services/REST-API/Authentication-and-Authorization.md)
@@ -176,8 +176,8 @@
   * [Terms and Conditions](Online-Services/Terms-and-Conditions.md)
 
 ## Credits
-* [Changelog](Changelog.md)
-* [Contributing](Contributing.md)
-* [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Third Party Notices](THIRD_PARTY_NOTICES.md)
-* [License](License.md)
+* [Changelog](~/reference/Changelog.md)
+* [Contributing](~/reference/Contributing.md)
+* [Code of Conduct](~/reference/CODE_OF_CONDUCT.md)
+* [Third Party Notices](~/reference/THIRD_PARTY_NOTICES.md)
+* [License](~/reference/License.md)

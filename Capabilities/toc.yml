@@ -1,0 +1,94 @@
+### YamlMime:TableOfContent
+- name: "Overview"
+  href: index.md
+- name: "Capabilities"
+  items:
+  - name: "Identity & Access"
+    href: Identity-and-Access.md
+  - name: "Trust & Compliance"
+    href: Trust-and-Compliance.md
+  - name: "Finance"
+    href: Finance.md
+  - name: "Commerce"
+    href: Commerce.md
+  - name: "Operations"
+    href: Operations.md
+  - name: "Workforce"
+    href: Workforce.md
+  - name: "Customer Experience"
+    href: Customer-Experience.md
+  - name: "Intelligence"
+    href: Intelligence.md
+  - name: "Platform & Development"
+    href: Platform-and-Development.md
+- name: "Platform foundations"
+  items:
+  - name: "Alliance Core Libraries"
+    href: Alliance-Core-Libraries.md
+  - name: "Alliance Business Model"
+    href: Alliance-Business-Model.md
+    items:
+    - name: "Records"
+      href: Alliance-Business-Model/Records.md
+    - name: "Data context"
+      href: Alliance-Business-Model/DataContext.md
+    - name: "Services"
+      href: Alliance-Business-Model/Services.md
+    - name: "Extensibility"
+      href: Alliance-Business-Model/Extensibility.md
+  - name: "Alliance Passport Service"
+    href: Alliance-Passport-Service.md
+    items:
+    - name: "Account Holders"
+      href: Alliance-Passport-Service/Account-Holders.md
+    - name: "Business Users"
+      href: Alliance-Passport-Service/Business-Users.md
+    - name: "Business Tenants"
+      href: Alliance-Passport-Service/Business-Tenants.md
+    - name: "Security Roles"
+      href: Alliance-Passport-Service/Security-Roles.md
+    - name: "Security Groups"
+      href: Alliance-Passport-Service/Security-Groups.md
+    - name: "Business Permissions"
+      href: Alliance-Passport-Service/Business-Permissions.md
+    - name: "Connect Protocols"
+      href: Alliance-Passport-Service/Connect-protocols.md
+  - name: "Alliance Business Platform"
+    href: Alliance-Business-Platform.md
+    items:
+    - name: "APIs"
+      href: Alliance-Business-Platform/APIs.md
+      items:
+      - name: "REST API"
+        href: Alliance-Business-Platform/APIs/REST-API.md
+      - name: "GraphQL API"
+        href: Alliance-Business-Platform/APIs/GraphQl-API.md
+      - name: "gRPC API"
+        href: Alliance-Business-Platform/APIs/GRPC-API.md
+      - name: "ABS TermX"
+        href: Alliance-Business-Platform/APIs/ABS-Tx.md
+    - name: "SDKs"
+      href: Alliance-Business-Platform/SDKs.md
+      items:
+      - name: ".NET SDK"
+        href: Alliance-Business-Platform/SDKs/SDK-Nuget-Package.md
+      - name: ".NET DTOs library"
+        href: Alliance-Business-Platform/SDKs/DTOs-Nuget-Package.md
+      - name: "PowerShell CLI"
+        href: Alliance-Business-Platform/SDKs/PowerShell-CLI-Module.md
+  - name: "Alliance Business Studio"
+    href: Alliance-Business-Studio.md
+    items:
+    - name: "Layout"
+      href: Alliance-Business-Studio/Layout.md
+    - name: "Portals"
+      href: Alliance-Business-Studio/Portals.md
+  - name: "Alliance Business Pocket"
+    href: Alliance-Business-Pocket.md
+    items:
+    - name: "Android"
+      href: Alliance-Business-Pocket/Android.md
+    - name: "iOS"
+      href: Alliance-Business-Pocket/iOS.md
+    - name: "UWP"
+      href: Alliance-Business-Pocket/UWP.md

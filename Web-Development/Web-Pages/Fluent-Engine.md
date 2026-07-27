@@ -16,7 +16,7 @@ Fluid Content Authoring Engine is a template engine based on the Liquid template
 
 ## Contents
 - [Features](#features)
-- [Using Fluid in your project](#using-fluid-in-your-project)
+- [Using Fluid in your project](#using-fluid-in-your-alliance-business-suite)
 - [Allow-listing object members](#allow-listing-object-members)
 - [Execution limits](#execution-limits)
 - [Converting CLR types](#converting-clr-types)
@@ -28,7 +28,6 @@ Fluid Content Authoring Engine is a template engine based on the Liquid template
 - [Whitespace control](#whitespace-control)
 - [Custom filters](#custom-filters)
 - [Performance](#performance)
-- [Used by](#used-by)
 
 <br>
 

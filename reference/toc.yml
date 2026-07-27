@@ -1,0 +1,17 @@
+### YamlMime:TableOfContent
+- name: API reference
+  href: References.md
+- name: Security
+  href: Security.md
+- name: Advanced
+  href: Advanced.md
+- name: Changelog
+  href: Changelog.md
+- name: Contributing
+  href: Contributing.md
+- name: Code of conduct
+  href: CODE_OF_CONDUCT.md
+- name: Third-party notices
+  href: THIRD_PARTY_NOTICES.md
+- name: License
+  href: License.md

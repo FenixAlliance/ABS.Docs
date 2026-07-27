@@ -88,7 +88,7 @@ client_secret: You need this parameter only if your client is configured as a we
 ##### Client credentials grant (non-interactive clients)
 This grant is used only by web clients, allowing the application to access resources directly (no user delegation) using the client's credentials, which are provided at registration time. The grant is typically used by non-interactive clients (no UI) that run as a service or daemon. It requires only the /token endpoint to acquire an access token.
 
-The client/resource interactions for this grant are similar to step 2 of the authorization code grant. For details on the format of the HTTPS POST request to the /token endpoint and request/response examples, see the "Get a token" section in the [Authentication and Authorization and the OAuth 2.0 client credentials flow](/Online-Services/REST-API/Authentication-and-Authorization.md) section.
+The client/resource interactions for this grant are similar to step 2 of the authorization code grant. For details on the format of the HTTPS POST request to the /token endpoint and request/response examples, see the "Get a token" section in the [Authentication and Authorization and the OAuth 2.0 client credentials flow](~/Online-Services/REST-API/Authentication-and-Authorization.md) section.
 
 #### Assemble the request message
 

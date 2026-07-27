@@ -42,7 +42,7 @@ To create a Localization Resource:
 1. Create or select a new Localization String by selecting the base language variation, providing a Base Value, and optionally leaving a comment for future reference.
 1. With your Localization String selected, refer to the Translations panel and there create a new translation by selecting the target language variation, providing a Target Value, and optionally leaving a comment for future reference.
 
-![image.png](/.attachments/image-02d6fb47-7959-4295-817f-992c045afffb.png)
+![image.png](~/.attachments/image-02d6fb47-7959-4295-817f-992c045afffb.png)
 
 
 

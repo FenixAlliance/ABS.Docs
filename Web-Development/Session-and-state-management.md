@@ -10,7 +10,7 @@ State for the Alliance Business Suite can be stored using several approaches. Ea
 | ---------------- | ----------------- |
 | [Cookies](#cookies) | HTTP cookies. May include data stored using server-side app code. |
 | [Session state](#session-state) | HTTP cookies and server-side app code |
-| [TempData](#tempdata) | HTTP cookies or session state |
+| TempData | HTTP cookies or session state |
 | [Query strings](#query-strings) | HTTP query strings |
 | [Hidden fields](#hidden-fields) | HTTP form fields |
 | [HttpContext.Items](#httpcontextitems) | Server-side app code |

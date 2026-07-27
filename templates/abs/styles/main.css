@@ -1,0 +1,20 @@
+/* ===== ABS brand overrides for the SingulinkFX template ===== */
+
+/* Accent — ABS brand blue. (Kept readable on the dark sidebar;
+   the deep brand navy #002050 fails contrast as a link color.) */
+:root,
+[data-theme='dark'] {
+  --link-color: #35bbee;
+  --link-hover-color: #5fd2ff;
+  --sidebar-active-item-color: #2b8fe0;
+}
+[data-theme='light'] {
+  --link-color: #0b62c4;
+  --link-hover-color: #094f9e;
+  --sidebar-active-item-color: #0b62c4;
+}
+
+/* Brand lockup — square ABS icon + wordmark at the sidebar top.
+   SingulinkFX renders the logo as img.logomark inside a.brand. */
+a.brand .logomark { height: 30px; width: auto; }
+a.brand .brand-title { font-weight: 600; }

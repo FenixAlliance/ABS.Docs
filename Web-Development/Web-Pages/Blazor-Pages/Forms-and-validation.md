@@ -50,7 +50,7 @@ In the preceding component:
    - If the `<input>` form field contains more than ten characters when the Submit button is selected, an error appears in the validation summary ("Name is too long.") and `HandleValidSubmit` is not called.
    - If the `<input>` form field contains a valid value when the Submit button is selected, HandleValidSubmit is called.
 
-†The `DataAnnotationsValidator` component is covered in the Validator component section. ‡The ValidationSummary component is covered in the Validation Summary and Validation Message components section. For more information on property binding, see [data binding](/Web-Development/Web-Pages/Blazor-Pages/Data-binding.md).
+†The `DataAnnotationsValidator` component is covered in the Validator component section. ‡The ValidationSummary component is covered in the Validation Summary and Validation Message components section. For more information on property binding, see [data binding](~/Web-Development/Web-Pages/Blazor-Pages/Data-binding.md).
 
 
 

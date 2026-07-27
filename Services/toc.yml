@@ -1,0 +1,14 @@
+### YamlMime:TableOfContent
+- name: "Services"
+  href: index.md
+  items:
+  - name: "BlockChains Service"
+    href: BlockChains-Service.md
+  - name: "Multi-Tenancy Service"
+    href: Tenants-Service.md
+  - name: "Multi-Currency Service"
+    href: Forex-Service.md
+  - name: "Pricing Service"
+    href: Pricing-Service.md
+  - name: "Wallets Service"
+    href: Wallets-Service.md

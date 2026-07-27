@@ -1,15 +1,15 @@
 # Working with Web Pages
 
-Web pages are meant to represent content located at a particular URL, scoped to a [Web Portal](/Web-Development/Web-Portals.md) (and therefore to a [Business Tenant](/Components/Alliance-Passport-Services/Business-Tenants.md)), and is based on one of the core tables of the Alliance Business Model Schema. 
+Web pages are meant to represent content located at a particular URL, scoped to a [Web Portal](~/Web-Development/Web-Portals.md) (and therefore to a [Business Tenant](~/Capabilities/Alliance-Passport-Service/Business-Tenants.md)), and is based on one of the core tables of the Alliance Business Model Schema. 
 
 Web Pages are related through parent and child relationships to other web pages, this structure forms the hierarchy of a website, and therefore, its site map is automatically generated.
 
 Web pages also form the basis for including other, specialized table types in the portal site map – web files, shortcuts, forums, advanced forms, and blogs are all situated in the portal site map through – and thus derive their URLs from – a relationship to a parent web page.
 
 ## Manage web pages
-Web pages can be created, edited, and deleted from the [Alliance Business Platform REST API](/Components/Alliance-Business-Platform/APIs/REST-API). However, the Media Portals Module provides advanced customization that can be performed from the Alliance Business Studio.
+Web pages can be created, edited, and deleted from the [Alliance Business Platform REST API](~/Capabilities/Alliance-Business-Platform/APIs/REST-API.md). However, the Media Portals Module provides advanced customization that can be performed from the Alliance Business Studio.
 
-- Open the [Alliance Business Studio](/Components/Alliance-Business-Studio.md).
+- Open the [Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md).
 
 - Go to Modules > Media Portals > Web Pages.
    - To edit an existing web page using the standard editor, select the "**Edit**" option below the web page name.

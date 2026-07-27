@@ -12,7 +12,7 @@ To make it easier for developers to create custom configurations, we've created 
 
 As the GenericOption table stores data which is related to the setup and administration of the site as a whole, access to it is restricted. The Alliance Business Studio gives users the ability to modify the value of each configuration given the proper permissions to do so.
 
-To be able to amend settings and options, users will need to have the manage_options [Business Permission](/Components/Alliance-Passport-Service/Business-Permissions.md). The only default user role with this capability is the root role. 
+To be able to amend settings and options, users will need to have the manage_options [Business Permission](~/Capabilities/Alliance-Passport-Service/Business-Permissions.md). The only default user role with this capability is the root role. 
 
 This means that if you need to add options that other user roles have access to, you'll have to assign the manage_options capability to them. This carries risks, so only do it if you're sure!
 

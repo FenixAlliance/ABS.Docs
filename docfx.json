@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md", "**/*.yml"],
+        "exclude": [
+          "book/**",
+          "mdbook/**",
+          "_site/**",
+          ".attachments/**",
+          ".obsidian/**",
+          "SUMMARY.md",
+          "README.md",
+          "**/node_modules/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          ".attachments/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.jpeg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": ["book/**", "mdbook/**", "_site/**"]
+      }
+    ],
+    "output": "_site",
+    "template": ["default", "templates/singulinkfx", "templates/abs"],
+    "globalMetadata": {
+      "_appName": "Alliance Business Suite",
+      "_appTitle": "Alliance Business Suite Documentation",
+      "_appLogoPath": "Icon.png",
+      "_appFaviconPath": "Icon.png",
+      "_appFooter": "Alliance Business Suite · Documentation",
+      "_enableSearch": true,
+      "_disableContribution": true,
+      "_disableAffix": false
+    }
+  }
+}

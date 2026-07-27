@@ -33,7 +33,7 @@ By default, application permissions always require administrator consent. An adm
 To configure application permissions for your app in the Alliance Developer Center portal: under an application's API permissions page, choose "Add permission", then choose the permissions your app requires under Application permissions.
 
 The following screenshot shows the Select Permissions page for application permissions.
-![image.png](/.attachments/image-c521f27a-288a-4920-8edd-767deddbd62f.png)
+![image.png](~/.attachments/image-c521f27a-288a-4920-8edd-767deddbd62f.png)
 **Note**: We recommend that you configure the least privileged set of permissions required by your app. This provides a much more comfortable experience for administrators than having to consent to a long list of permissions.
 
 ### 3. Get an access token

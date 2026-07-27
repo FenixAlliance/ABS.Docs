@@ -18,7 +18,7 @@ Most web apps have a common layout that provides the user with a consistent expe
 
 Common HTML structures such as scripts and stylesheets are also frequently used by many pages within an app. All of these shared elements may be defined in a layout file, which can then be referenced by any view used within the app. Layouts reduce duplicate code in views.
 
-![page-layout.png](/.attachments/page-layout-77319443-a670-444d-89e1-dbdd90bf224d.png)
+![page-layout.png](~/.attachments/page-layout-77319443-a670-444d-89e1-dbdd90bf224d.png)
 
 Common HTML structures such as scripts and stylesheets are also frequently used by many pages within an app. All of these shared elements may be defined in a layout file, which can then be referenced by any view used within the app. Layouts reduce duplicate code in views.
 
@@ -92,4 +92,4 @@ The following code shows the layout file for a template created a project with a
 
 Razor views have a Layout property. Individual views specify a layout by setting this property:
 
-![LayoutOptionShowcase.png](/.attachments/LayoutOptionShowcase-221b9d1c-a6fd-4a59-94f9-15d8b39e4c29.png)
+![LayoutOptionShowcase.png](~/.attachments/LayoutOptionShowcase-221b9d1c-a6fd-4a59-94f9-15d8b39e4c29.png)

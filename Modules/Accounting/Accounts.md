@@ -1,5 +1,5 @@
 # What Is a Ledger Account?
-The ledger account contains a listing of  business transaction records. It is a separate record a [ledger](/Modules/Accounting/Ledgers.md) that is assigned to a specific asset, liability, equity item, revenue type, or expense type.
+The ledger account contains a listing of  business transaction records. It is a separate record a [ledger](~/Modules/Accounting/Ledgers.md) that is assigned to a specific asset, liability, equity item, revenue type, or expense type.
 
 Here are the primary general ledger accounts:
 
