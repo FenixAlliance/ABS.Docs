@@ -83,5 +83,10 @@
     href: CMS.md
   - name: "Workflows Studio"
     href: WORKFLOWS.md
+  - name: "Signator"
+    href: Signator.md
+    items:
+    - name: "DIAN Invoicing"
+      href: Signator/DIAN-Invoicing.md
 - name: "Official Integrations"
   href: Integrations.md
