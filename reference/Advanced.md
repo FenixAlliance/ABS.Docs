@@ -16,9 +16,9 @@ Note: Because other services on the Alliance Business Suite instance might rely 
 
 ## Understanding external dependencies
 
-External dependencies required by the Alliance Business Suite are bounded to the Alliance Core Libraries Component, which means that they are available to every dependant Component due to .NET's Waterfall Dependency Resolution mechanism.
+External dependencies required by the Alliance Business Suite are managed centrally through `Directory.Packages.props`, which pins one version of every third-party package for the whole platform. Components receive them through normal transitive dependency resolution.
 
-This means that [Web Contents](~/get-started/Web-Development.md) can make use of already present libraries such as Radzen Blazor, MudBlazor, Newtonsoft.Json, and many more. For a more detailed list of dependencies, please refer to the [Core Dependencies](~/Capabilities/Alliance-Core-Libraries.md).
+Older documentation describes these dependencies as being bounded to the Alliance Core Libraries component and surfaced through a `FenixAlliance.ACL.Deps` base package. That is no longer accurate: ACL has been retired, and no `ACL.Deps` package exists. See [Alliance Core Libraries](~/Capabilities/Alliance-Core-Libraries.md) for what replaced it.
 
 
 

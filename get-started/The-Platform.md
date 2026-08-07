@@ -25,7 +25,7 @@ A handful of principles have held across every generation of the product. They a
 - **Multi-tenant by design.** Isolation between tenants is foundational, never retrofitted.
 - **Extensibility through modules.** Customize and extend without ever forking the platform.
 - **Yours to run.** Hosted, self-hosted, hybrid, or embedded in your own app — every model is first-class.
-- **Open through standards.** REST, GraphQL, gRPC, OAuth/OIDC, UBL, PEPPOL, MCP — ABS joins ecosystems rather than building silos.
+- **Open through standards.** REST, GraphQL, OAuth/OIDC, UBL, PEPPOL, MCP — ABS joins ecosystems rather than building silos.
 
 ## The capabilities
 
@@ -49,10 +49,10 @@ These capabilities coexist because they all speak the same canonical business la
 
 Those capabilities aren't loosely-coupled apps — they cohere because they rest on five **platform foundations**: enduring concepts that have held through every generation, even as their implementation matured. You don't adopt these directly; they're *why the platform works as one*:
 
-- **The Shared Kernel** — the platform's common language and stable foundations: the abstractions, contracts, and standards every part depends on. *([Alliance Core Libraries / ACL](~/Capabilities/Alliance-Core-Libraries.md).)*
+- **The Shared Kernel** — the platform's common language and stable foundations: the abstractions, contracts, and standards every part depends on. *(`ABS.Sernel` and the `ABS.*.SDK` projects; formerly the now-retired [Alliance Core Libraries / ACL](~/Capabilities/Alliance-Core-Libraries.md).)*
 - **The Business Language** — the canonical, shared model of business entities that lets every capability coexist. *([Alliance Business Model / ABM](~/Capabilities/Alliance-Business-Model.md).)*
 - **Trust** — identity, permissions, authorization, federation, security, and governance. *([Alliance Passport Service / APS](~/Capabilities/Alliance-Passport-Service.md).)*
-- **Integration** — connectivity over REST, GraphQL, gRPC, MCP, SignalR, events, and SDKs. *([Alliance Business Platform / ABP](~/Capabilities/Alliance-Business-Platform.md).)*
+- **Integration** — connectivity over REST, GraphQL, MCP, SignalR, events, and SDKs. *([Alliance Business Platform / ABP](~/Capabilities/Alliance-Business-Platform.md).)*
 - **Operations** — the cockpit where organizations shape ABS to fit their reality. *([Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md).)*
 
 ## Built to be yours

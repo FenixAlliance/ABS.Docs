@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Getting-started.md",
+                "file": "reference/Changelog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Getting-started"
+              "title": "Changelog"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -171,6 +173,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "vault-2-book:Obsidian 2 Book: Generate a book from a specified folder": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -182,6 +185,9 @@
   },
   "active": "754702419a6b68f0",
   "lastOpenFiles": [
+    "reference/Changelog.md.tmp.181888.43eabcfb3d48",
+    "reference/toc.yml.tmp.181888.2dcae64c82c4",
+    "reference/Documentation-Currency.md",
     "Fundamentals/Configuration.md",
     "Fundamentals/Hosting/Hosting-on-IIS.md",
     "Fundamentals/Hosting/Hosting-on-ABS-Cloud.md",
@@ -206,8 +212,6 @@
     "Components/Alliance-Business-Studio/Credits.md",
     "Components/Alliance-Business-Pocket/UWP.md",
     "Components/Alliance-Business-Pocket/iOS.md",
-    "Components/Alliance-Business-Pocket/Android.md",
-    "Components/Alliance-Business-Model/Services.md",
     "Components/Alliance-Business-Model.md.tmp.523036.e997db3deffe",
     "Components.md.tmp.523036.f3327e5750cd",
     "The-Platform.md.tmp.523036.310ea3486bfd",
@@ -216,7 +220,6 @@
     "README.md.tmp.523036.047bd92c2160",
     "The-Platform.md.tmp.523036.7363d25d4eab",
     "SUMMARY.md.tmp.523036.c5c6c6a739da",
-    "The-Platform.md.tmp.523036.707840579aa1",
-    "Changelog.md.tmp.523036.5c0ed6511a37"
+    "The-Platform.md.tmp.523036.707840579aa1"
   ]
 }

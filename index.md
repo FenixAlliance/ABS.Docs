@@ -4,7 +4,7 @@
 
 The **Alliance Business Suite (ABS)** is a low-code, modular, multi-tenant platform for running a business. It covers the core processes every organization depends on — accounting, billing, commerce, logistics, CRM, workforce, content, and identity — as a suite of **capabilities** you can run, host, extend, and build on.
 
-ABS was conceived as a **platform, not an application** — something you build *with*, not just something you use. It runs cross-platform on **.NET 10**, ships as container images and packages, and exposes everything over **REST, GraphQL, gRPC, and MCP**, so you can work with it from any language or build entirely new experiences on top of it.
+ABS was conceived as a **platform, not an application** — something you build *with*, not just something you use. It runs cross-platform on **.NET 10**, ships as container images and packages, and exposes everything over **REST, GraphQL, and MCP**, so you can work with it from any language or build entirely new experiences on top of it.
 
 > Power that scales from a single storefront to the operations of a large enterprise.
 
@@ -14,7 +14,7 @@ ABS was conceived as a **platform, not an application** — something you build 
 - **[Getting started](~/get-started/Getting-started.md)** — install and run your first instance.
 - **[Capabilities](~/Capabilities/index.md)** — the business capabilities the platform provides, from identity to finance to commerce.
 - **[Modules](~/Modules/index.md)** — the features you turn on: accounting, CRM, commerce, logistics, workflows, and more.
-- **[Web API development](~/get-started/Web-API-Development.md)** — build on the platform's REST, GraphQL, gRPC, and MCP APIs.
+- **[Web API development](~/get-started/Web-API-Development.md)** — build on the platform's REST, GraphQL, and MCP APIs.
 
 ## What ABS believes
 

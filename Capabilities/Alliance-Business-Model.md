@@ -16,7 +16,7 @@ A declarative model of the standard entities and relationships of a business —
 
 - **Records.** Business data is stored as [records](~/Capabilities/Alliance-Business-Model/Records.md) — structured, relational data **scoped to a tenant**, composed of one or more related entities.
 - **Your database, your choice.** The model runs on the major relational engines — **SQL Server, PostgreSQL, MySQL/MariaDB, and Oracle** — selected during [installation](~/Fundamentals/Installation.md); ABS ships and applies the schema migrations for you.
-- **Two ways in.** Reach the model through the [platform APIs](~/Capabilities/Alliance-Business-Platform.md) (REST, GraphQL, gRPC) or the [.NET SDK](~/Capabilities/Alliance-Business-Platform/SDKs.md).
+- **Two ways in.** Reach the model through the [platform APIs](~/Capabilities/Alliance-Business-Platform.md) (REST, GraphQL, MCP) or the [.NET SDK](~/Capabilities/Alliance-Business-Platform/SDKs.md).
 
 ## How to extend it
 

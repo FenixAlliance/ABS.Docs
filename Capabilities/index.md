@@ -32,10 +32,10 @@ Three ideas keep the whole platform coherent:
 
 The capabilities coexist because they rest on five enduring **platform foundations**. These are the substrate — not something you adopt, but the reason everything works as one product:
 
-- **[Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md)** — the shared kernel: the common abstractions, contracts, and standards everything builds on.
+- **The shared kernel** — the common abstractions, contracts, and standards everything builds on, delivered by `ABS.Sernel` and the `ABS.*.SDK` projects. (This role previously belonged to the now-retired [Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md).)
 - **[Alliance Business Model (ABM)](~/Capabilities/Alliance-Business-Model.md)** — the canonical business language: the shared model of entities that lets every capability coexist.
 - **[Alliance Passport Service (APS)](~/Capabilities/Alliance-Passport-Service.md)** — trust: identity, authorization, federation, security, and governance.
-- **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — integration: the REST, GraphQL, gRPC, MCP, and SignalR surface for every client.
+- **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — integration: storage providers, messaging, and the GraphQL and SignalR surfaces. (REST and MCP are served from ABS itself.)
 - **[Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md)** — operations: the cockpit where you run, shape, and extend your implementation.
 
 The mobile experience lives in **[Alliance Business Pocket](~/Capabilities/Alliance-Business-Pocket.md)**. For the full story, see **[The platform](~/get-started/The-Platform.md)**.

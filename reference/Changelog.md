@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] — The Composable Platform
 
+### Documentation
+
+- **Documentation now ships with the capability, not after it.** A capability is no longer considered finished until the pages describing it are written and published. Documentation is a release condition now, held to the same bar as the code being built and verified — so when something reaches you, the explanation of it reaches you at the same time.
+- **Two audiences, written separately and deliberately.** The same change reads differently depending on how you meet it, so we write it twice:
+  - **If you build on the platform** — API and SDK reference, module and extension guides, and explicit breaking-change notes, kept in step with what the platform actually exposes.
+  - **If you run your business on the platform** — module and capability pages, get-started and how-to content, written in the language of the work rather than the code, so nothing in Studio, Client.Next or Pocket requires reading a developer page to understand.
+- **This changelog is the front door to that evolution.** It is written for the people using the platform, in plain terms: what you can now do that you could not do before, and what to do differently. Start here when you return after a while.
+- **New page:** [How this documentation is kept current](~/reference/Documentation-Currency.md) — the commitment in full, what to trust, and how to tell us where we fall short.
+- **Documentation is written only after a capability is real.** If a page describes something, that thing exists today. Anything planned but not yet built stays on the [roadmap](~/get-started/Roadmap.md), marked as such.
+
 ### Added
 - **AI agents as workflow steps** — invoke a governed AI agent from inside a [workflow](~/Modules/WORKFLOWS.md): hand it a question or a task, let it run to an answer, and use the result in later steps. The agent runs under the workflow's own identity, is permission-checked, and leaves a durable audit record.
 - **Suite UI Kit** — a unified component design system across the Studio.

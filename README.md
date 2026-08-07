@@ -15,7 +15,7 @@ Aiming to help organizations **reach beyond expectations**, the **Alliance Busin
 
 ABS was conceived not as an application, but as a **platform** — a low-code, modular, multi-tenant foundation that lets any organization jump-start its digitalization and shape the software to *its* business, rather than the other way around. It covers the core processes of a business — accounting, billing, commerce, logistics, CRM, HR, content, and identity — as a suite of **capabilities** you can run, host, extend, and build on.
 
-Everything is extensible by design: you add your own functionality as **modules**, written in C#, without forking the platform. Today ABS runs cross-platform on **.NET 10**, ships as container images and packages, and exposes everything over **REST, GraphQL, gRPC, and MCP** — so you can transact with it from any language, or build entirely new experiences on top of it.
+Everything is extensible by design: you add your own functionality as **modules**, written in C#, without forking the platform. Today ABS runs cross-platform on **.NET 10**, ships as container images and packages, and exposes everything over **REST, GraphQL, and MCP** — so you can transact with it from any language, or build entirely new experiences on top of it.
 
 > Power that scales from a single storefront to the operations of a large enterprise.
 
@@ -33,10 +33,10 @@ The ideas ABS was founded on have held across every generation of the product:
 
 ABS is organized into the same conceptual building blocks it was designed around — evolved, but intact, across successive generations:
 
-- **[Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md)** — the **shared kernel**: the common language and stable foundations — abstractions, contracts, and standards — that everything else builds on.
+- **The shared kernel** — the common language and stable foundations (abstractions, contracts, and standards) that everything else builds on, delivered by `ABS.Sernel` and the `ABS.*.SDK` projects. The [Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md) originally held this role and are now retired.
 - **[Alliance Business Model (ABM)](~/Capabilities/Alliance-Business-Model.md)** — the **canonical, declarative model** of standard business entities (Accounts, Business Units, Contacts, Leads, Opportunities, Items, and more): multi-tenant by design, and extensible by anyone to capture business-specific scenarios.
 - **[Alliance Passport Service (APS)](~/Capabilities/Alliance-Passport-Service.md)** — originally introduced as the identity engine of ABS; today it powers authentication, authorization, federated sign-in, MFA, and identity lifecycle for every contact — customer, employee, partner, or guest — alongside data protection, HTTPS enforcement, secrets, CSRF/XSRF, and CORS.
-- **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — the multi-protocol API surface (REST, GraphQL, gRPC, MCP, and SignalR) for transacting with the model from any client, in any language.
+- **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — the integration tier: storage providers, the messaging engine, GraphQL, and SignalR. Together with the REST and MCP surfaces served from ABS, it lets you transact with the model from any client, in any language.
 - **[Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md)** — the graphical administration experience and application core, where you manage your implementation, transact data, generate views and reports, and customize and extend the system.
 
 See **[Advanced](~/reference/Advanced.md)** for the dependency tree and design overview.

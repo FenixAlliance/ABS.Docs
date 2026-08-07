@@ -2,11 +2,11 @@
 ## Alliance Business Platform (ABP) 
 ---
 
-The Alliance Business Platform is a Modular Application Framework built on .NET with the best of REST, SignalR, GraphQl y gRPC capabilities and it's built on top of the the [Alliance Business Model](~/Capabilities/Alliance-Business-Model.md) Schema (ABM). 
+The Alliance Business Platform is a Modular Application Framework built on .NET with the best of REST, SignalR, and GraphQL capabilities, and it's built on top of the [Alliance Business Model](~/Capabilities/Alliance-Business-Model.md) Schema (ABM). 
 
 The Alliance Business Platform is also a Mobile Backend framework for integrating next-generation functionalities into your mobile applications. 
 
-It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
+It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (the Alliance Business Model Schema) using any language through standard requests to the HTTP and GraphQL endpoints. 
 
 The **Alliance Business Platform** provides a unified programmability model that you can use to build apps for organizations and consumers that interact with the data on the Alliance Business Model. 
 
@@ -16,7 +16,7 @@ Anyone can build on and extend The Alliance Business Platform through ASP.NET + 
 
 # Explorers
 
-The Alliance Business Platform integrates a comprehensive API Specification for every HTTP, GrapghQL or gRPC request that's available on every Alliance Business Suite instance. These specifications follow well stablished standards to give customers the flexibility and support required to extend the system with their own custom functionalities to easily build breathtaking business applications.
+The Alliance Business Platform integrates a comprehensive API Specification for every HTTP and GraphQL request that's available on every Alliance Business Suite instance. These specifications follow well established standards to give customers the flexibility and support required to extend the system with their own custom functionalities to easily build breathtaking business applications.
 
 ## API Explorers
 

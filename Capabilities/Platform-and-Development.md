@@ -7,7 +7,7 @@ Platform & Development is the capability that makes every other capability exten
 ## What you can do
 
 - **Build modules** — self-contained C# feature packages (Blazor pages, APIs, background work) the platform hot-loads per tenant. See **[Module development](~/get-started/Module-Development.md)**.
-- **Call the platform** — transact over REST, GraphQL, gRPC, and MCP from any language. See **[Web API development](~/get-started/Web-API-Development.md)**.
+- **Call the platform** — transact over REST, GraphQL, and MCP from any language. See **[Web API development](~/get-started/Web-API-Development.md)**.
 - **Use the SDKs** — published .NET packages and typed API clients to build on ABS from your own app. See the **[Alliance Business Platform](~/Capabilities/Alliance-Business-Platform.md)**.
 - **Integrate** — connect payment providers, marketplaces, and third-party services. See **[Integrations](~/Modules/Integrations.md)**.
 - **Automate** — model processes and approvals with visual [Workflows](~/Modules/WORKFLOWS.md).
@@ -21,4 +21,4 @@ Platform & Development is the capability that makes every other capability exten
 | [CloudHub](~/Modules/CLOUD.md) | Provision and manage cloud resources |
 | [Blockchains](~/Modules/BLOCKCHAINS.md) | Connect chains and wallets, on-chain assets |
 
-Built on the **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** integration foundation and the **[Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md)** shared kernel.
+Built on the **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** integration foundation and the `ABS.Sernel` + `ABS.*.SDK` shared kernel. (The [Alliance Core Libraries (ACL)](~/Capabilities/Alliance-Core-Libraries.md) that previously filled this role are retired.)
