@@ -10,6 +10,7 @@ Intelligence is how ABS helps you understand and act on your own data. Because e
 - **Explore your data** — ask questions across finance, commerce, operations, and more, all from one model.
 - **Put AI to work** — an assistant (Andy) that answers questions and helps users get things done in context.
 - **Let the assistant act safely** — beyond answering, Andy can use approved tools to look things up and complete tasks, always within the same permissions, tenant boundaries, and audit trail as the person it is helping.
+- **Assistants that remember.** An agent can durably remember useful facts about the person it is helping (a stated preference, a detail you shared) and draw on them in later conversations, so people do not have to repeat themselves. What an agent remembers is private to that agent and that person, stays inside your tenant, and is governed like every other AI action. A platform administrator can turn durable memory off for the whole environment.
 - **Run agents as a step in a process** — invoke an AI agent from a workflow or automation, not just from a chat. The agent runs under a governed application identity **on behalf of** the person (or process) that triggered it — within their permissions and your tenant boundary — so an agent can triage a request, draft a response, or look something up as part of how work gets done.
 - **Configure AI agents** — manage cognitive agents, skills, and the models behind them.
 - **Build bots** — design conversational bots for support, sales, and automation.

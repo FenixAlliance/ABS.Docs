@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **AI agents as workflow steps** — invoke a governed AI agent from inside a [workflow](~/Modules/WORKFLOWS.md): hand it a question or a task, let it run to an answer, and use the result in later steps. The agent runs under the workflow's own identity, is permission-checked, and leaves a durable audit record.
+- **Assistants that remember.** An assistant can durably remember useful details about the person it is helping and draw on them in later conversations, so you do not repeat yourself. What it remembers is private to that assistant and that person, stays within your tenant, and is governed like every other AI action. An administrator can turn it off for the whole environment.
 - **Suite UI Kit** — a unified component design system across the Studio.
 - **Platform-wide role-based access control**, with per-feature and per-action permissions.
 - **Human Resources / Workforce** management — employee types, job titles, schedules, time intervals and rounding policies.
