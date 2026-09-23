@@ -32,12 +32,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **OpenAPI server** with parallelized, multi-language SDK generation.
 - Tenant-scoped media upload; batch and domain-routed APIs.
 - Expanded entity selectors, applets, grids and preview components across the SDK.
+- **Signing keys can now be created inside their vault and never leave it.** The platform can mint a key that cannot be exported and link it to its certificate, so signing happens in place.
+- **Signatures and trust records now name both parties.** Who performed the signing and who it was done for are both on the record, across all four signing providers.
+- **Every accounting entry now records who made it and on whose behalf.** When an assistant or an automation posts on behalf of a person, both are recorded, and both are visible when the entry is read back.
+- **Assistants now leave a step-by-step record of what they did.** Each run keeps its own identity and its sequence of steps, so a completed piece of agent work can be read back afterwards.
+- **Work started by a workflow or an assistant runs once, even across interruptions.** If a step pauses for approval or the process restarts, the platform holds a single claim on that work rather than repeating it.
+- **Delivery attempts that never resolved are now reconciled.** A notification whose outcome was never confirmed is swept up and settled, so the delivery record reflects what really happened.
+- **Invoices now show when they expire and the effective rate applied**, computed by the server so every surface shows the same figure, with a matching summary view for payments.
 
 ### Changed
 - Standardized the platform-wide result and error-handling model.
 - Unified CQRS dispatch behind a single mediator.
 - Standardized DTO mapping conventions across the SDK.
 - Enhanced multi-currency billing and overall UI consistency.
+- Setting up a development environment is faster and works on Linux as well as Windows, and the platform's repositories clone over HTTPS without extra credentials.
+
+### Fixed
+
+- **An edit form no longer saves when the record failed to load**, so an interrupted load can never blank out the record behind it.
+- For API users, asking for a record that does not exist now returns not found rather than a server error.
+
+### Security
+
+- Accounts now lock after repeated failed sign-in attempts, on every password sign-in path.
+- Stored payment methods and bank accounts are now scoped to the wallet that owns them.
+- Confidential learning records are confined to the tenant making the request.
+- Approvals now allow one vote per approver at each stage, and an approval is refused if the policy it was granted under changed in the meantime.
+- Requests arriving through a proxy are now trusted only within an explicit boundary.
+- Developer tooling keeps certificate validation on, using the machine's own trusted roots.
 
 ## [2.8.0] - 2026-01-07 — .NET 10 LTS & Asset Management
 
