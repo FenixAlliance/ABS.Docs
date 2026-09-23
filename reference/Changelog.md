@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 > Releases through **`2.0.0` LTS** were recorded contemporaneously. Subsequent releases were compiled from the project's development history and follow the same conventions.
 
+
+### Eras at a glance
+
+- **[The foundation, 1.0.0 to 1.9.0](#100x---2020-12-31)**: a multi-tenant, modular platform takes shape, with portals, web content authoring, workflows and commerce.
+- **[2.0.0 LTS](#200-lts---2022-08-11)**: the first long-term-support release, with Studio management engines and licensing.
+- **[The re-architecture, 2.1.0 to 2.8.0](#210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
+- **[The composable platform](#unreleased--the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships.
+
 ## [Unreleased] — The Composable Platform
 
 ### Documentation
@@ -189,7 +197,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] LTS - 2022-08-11
 
-### Added 
+The first long-term-support release. Studio gained management screens for modules, enrollments, applications, security roles, permissions and certificates, licensing and subscriptions became services in their own right, and the interface was translated into five more languages.
+
+### Added
 
 - [ABS] In-Studio UI Improvements.
 - [ABS] In-Studio Module Management Engine.
@@ -222,12 +232,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.9.0] - 2022-07-20
 
+A polish release for the Studio interface and the way its services are wired together.
+
 ### Fixed
 - [ABS] UI Improvements for UI & Core Components.
 - [ABS] Contextual Menu showing when no business is selected.
 - [ABP] Improve DI Tree for most services.
 
 ## [1.8.0] - 2022-07-04
+
+Studio gained a dark theme, REST endpoints gained OData querying, and the platform added services for cookies, data protection and browser storage.
 
 ### Added
 - [ABS] Dark Theme Support for Studio.
@@ -245,6 +259,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.2] - 2022-06-04
 
+Added web and date services, and registered the Fluent UI layout contexts they depend on.
+
 ### Added
 - [ABM] `IWebUIService` and default implementation (`WebUIService`).
 - [ABM] `IDateTimeService` and default implementation (`DateTimeService`).
@@ -257,10 +273,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.1] - 2022-06-04
 
+Fixed quick panels that could lock up the interface.
+
 ### Fixed
 - [ABS] Quick Panels causing UI deadlocks.
 
 ## [1.7.0] - 2022-06-04
+
+Studio began shipping bundled static assets and rendered more quickly.
 
 ### Added
 - [ABS] Studio Static Asset Bundles
@@ -274,25 +294,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.6.0] - 2022-05-28
 
+The data model gained gigs and gig applications, the groundwork for job board work.
+
 ### Added
 - [ABM] Gig Entity to Database Scheme.
 - [ABM] GigApplication Entity to Database Scheme.
 
 ## [1.5.9] - 2022-05-27
 
+Contact lookups moved onto the CRM data service.
+
 ### Fixed
 - [ABM] IContactService's default implementation is now using ICrmDataService.
 
 ## [1.5.8] - 2022-05-26
 
+Contact operations moved to their own per-operation data contexts.
+
 ### Added
 - [ABM] IContactService's default implementation is now using per-operation Data Context instances.
 
-## [1.5.7 - 2022-05-25
+## [1.5.7] - 2022-05-25
+
+The portal context gained a contact synchronization strategy.
 ### Added
 - [ABS] ContactSyncronizationStrategy on PortalContext.
 
 ## [1.5.6] - 2022-05-23
+
+Fixed Studio module loading, and extended the job board model with migrations for MySQL, SQL Server and Oracle.
 
 ### Fixed
 - [ABS] Fix error on Studio Modules Loading Process. More assemblies than necessary used to be passed to the router.
@@ -300,6 +330,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Adds V1.5.6 ABM Migration for MySQL, MS SQL, and Oracle Data Providers.
 
 ## [1.5.5] - 2022-05-22
+
+Service lifetimes were made consistent, and the academy data service became the LMS data service.
 
 ### Added
 - [ACL] Brazorize Library Dependency.
@@ -315,6 +347,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] IAcademyDataService and AcademyDataService are now ILmsDataService and LmsDataService respectively.
 
 ## [1.5.4] - 2022-05-19
+
+Academy gained student, instructor, enrollment and certificate lookups, and MySQL migrations were squashed.
 
 ### Changed
 
@@ -339,12 +373,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.3] - 2022-05-15
 
+Static assets were reorganised so packages install faster.
+
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Refactor Static Assets to improve package installation time.
 
 
 ## [1.5.1] - 2022-05-14
+
+Interface rendering improvements, with dependencies brought up to date.
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
@@ -353,12 +391,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.0] - 2022-05-13
 
+Interface rendering improvements, with dependencies brought up to date.
+
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Improve UI Rendering Process.
 
 
 ## [1.4.1] - 2022-05-12
+
+Each portal became an independent module on Studio.Core, the theming engine moved onto model services, and a Monaco based code editor arrived.
 
 ### Added
 - [ABM] ICmsDataService.
@@ -394,6 +436,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] I 
 
 ## [1.4.0] - 2022-01-12
+
+A large release. Cart, store, wallet, academy, networks and job board arrived inside Studio, alongside .NET 6 support, storage across the file system, Azure and AWS, and services for sign-in, reCAPTCHA and certificates.
 
 ### Added
 
@@ -448,6 +492,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.0] - 2021-07-12
 
+Added the Oracle database provider and a service for reading and writing options.
+
 ### Added
 - [ABM] Oracle Database Provider.
 - [ABM] IOptionsService Interface and default implementation (OptionsService)
@@ -463,13 +509,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Entities Disambiguation
 
 
-## [1.2.1] - 2021-07-13 
+## [1.2.1] - 2021-07-13
+
+Added a view rendering cache and assembly scoping.
+
+This release carries a date one day later than 1.3.0 below it. Both published dates are preserved as recorded; the order here follows the version number.
 ### Added
 - [ABS] View Rendering Cache
 - [ABS] AppDomain Assembly Scoping
 
 
 ## [1.2] - 2021-07-12
+
+The Razor theming engine arrived, with custom portal options and support for Angular and React single-page applications.
 ### Added
 - [ABS] Razor Theming Engine
 - [ABS] Custom Options Manager (API)
@@ -479,16 +531,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Custom Service Endpoint Definitions
 
 ## [1.1.9] - 2021-06-30
+
+Themes could be precompiled ahead of serving.
 ### Added
 - [ABS] Theme Precompilation
 
 ## [1.1.8] - 2021-06-18
+
+Workflows arrived.
 
 ### Added
 - [ABS] Workflows Capability
 
 
 ## [1.1.7] - 2021-06-06
+
+Web content authoring arrived: editable pages, components and templates, a blog editor, a drag and drop live editor in preview, invoice tools, and the first localization support.
 ### Added
 - [ABS] Log Viewer
 - [ABS] Template Views
@@ -528,6 +586,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [1.1.6] - 2021-04-21
+
+Search engine and analytics integrations arrived, along with view precompilation and dynamic portal metadata.
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
@@ -555,6 +615,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ICX] Taxonomies Creation Controllers/Views.
 
 ## [1.1.4.x] - 2021-04-13
+
+Sign-in through eight external providers, and a wide set of search engine and storefront customizations.
 ### Added
 - [ABS] Extension Updates Page
 - [ABS] Razor Theming Engine
@@ -583,6 +645,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [1.1.3.x] - 2021-04-09
+
+The dependency set the platform is built on was established.
 ### Added
 - [ACL] Radzen.Blazor is now a project dependency. 
 - [ACL] RabbitMQ.Client is now a project dependency. 
@@ -613,6 +677,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [1.1.2.x] - 2021-02-23
+
+The extensions gallery, web installer and admin portal arrived, together with a file manager and antivirus scanning for uploads.
 ### Added
 - Adds ABP Proxy
 - Missing ACL configuration Types
@@ -648,6 +714,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ABS.Nucleus was deprecated and is no longer a part of this project.
 
 ## [1.1.1.x] - 2021-01-20
+
+Infinity Comex support arrived, with the first set of portal interface components.
 ### Added
 - Adds ABP Proxy
 - Adds Infinity Comex Support
@@ -662,6 +730,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [1.1.0.x] - 2021-01-12
+
+The first published packages, and the Blazor admin application at /admin.
 ### Added
 - Nuget Packages @1.1.0
 - Initial Portal Admin Blazor Application at route /admin.
@@ -672,6 +742,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ## [1.0.0.x] - 2020-12-31
+
+The first release. Multi-tenant, multi-portal and modular from the start, with authentication and granular permissions, REST and GraphQL APIs, multi-currency support, storage, notifications and background processing.
 
 ### Added
 - Authentication / User Management / Profile Management
