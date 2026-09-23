@@ -47,6 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Work started by a workflow or an assistant runs once, even across interruptions.** If a step pauses for approval or the process restarts, the platform holds a single claim on that work rather than repeating it.
 - **Delivery attempts that never resolved are now reconciled.** A notification whose outcome was never confirmed is swept up and settled, so the delivery record reflects what really happened.
 - **Invoices now show when they expire and the effective rate applied**, computed by the server so every surface shows the same figure, with a matching summary view for payments.
+- **Apps can now revoke their own sign-in tokens.** A client that signs a person out can tell the platform to retire that session's tokens straight away, rather than waiting for them to expire.
+- **Developers get tenant-scoped entry points for wallet data.** Service clients can now ask for a business or contact wallet's locations, accounts and related records within a named tenant, the same way the Studio screens do.
 
 ### Changed
 - Standardized the platform-wide result and error-handling model.
@@ -54,11 +56,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Standardized DTO mapping conventions across the SDK.
 - Enhanced multi-currency billing and overall UI consistency.
 - Setting up a development environment is faster and works on Linux as well as Windows, and the platform's repositories clone over HTTPS without extra credentials.
+- **Wallet screens for businesses and contacts now read through tenant-scoped calls**, so the records you see are always the ones that belong to the wallet you opened.
+- **A record's type is now fixed once it is created.** Contact, workforce and account relation edit forms show the type for reference but no longer change it, which keeps every record in the lists where you expect to find it.
+- **Payment confirmations now arrive through one processing path**, with automatic recovery for any that are interrupted, so a payment is settled once and settled consistently.
 
 ### Fixed
 
 - **An edit form no longer saves when the record failed to load**, so an interrupted load can never blank out the record behind it.
 - For API users, asking for a record that does not exist now returns not found rather than a server error.
+- **Invoices now carry the right lines and quantities.** Order quantities flow through to invoice lines, and lines from a child order are invoiced once.
+- Sign-in no longer fails with a server error when an account needs to complete a step first; the person is guided to that step instead.
+- **The workflow designer now runs under a strict browser security policy**, so it loads in environments that enforce one.
+- **Health checks now speak up about configuration they cannot find.** Missing module setup, a missing options manifest, and a notification reconciliation sweep that is switched off are all reported as degraded rather than passing quietly.
 
 ### Security
 
@@ -68,6 +77,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Approvals now allow one vote per approver at each stage, and an approval is refused if the policy it was granted under changed in the meantime.
 - Requests arriving through a proxy are now trusted only within an explicit boundary.
 - Developer tooling keeps certificate validation on, using the machine's own trusted roots.
+- **Tenant isolation hardening** across AI agents and skills, the agent runtime, Learning, point of sale and order lines, Social, notifications, CRM contacts, system options, and the order and quote viewers in Studio.
+- **Anonymous endpoints now return only public fields.** The public catalogue, public pricing, the merchant directory and the public course catalogue each show only what a business has chosen to publish.
+- Learning certificates can be read only by the person who holds them.
+- Guest cart merging is confined to the visitor's own cart, and cart data no longer carries the visitor's network address.
+- Approval lists show a summary without the stored ticket details, and a decision is accepted only while the ticket is still at the stage it was made for.
+- Sign-in requires the stronger S256 method for proof-key exchange on every client.
+- Hardened how containers handle configuration secrets at startup.
 
 ## [2.8.0] - 2026-01-07 — .NET 10 LTS & Asset Management
 
