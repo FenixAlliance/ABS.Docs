@@ -7,7 +7,7 @@ Connect your own **Stripe** account to Alliance Business Suite to accept card pa
 - You register your Stripe account and credentials against your tenant.
 - Alliance Business Suite generates a **unique, private webhook URL** for that registration.
 - You add that URL as a webhook endpoint in your Stripe Dashboard.
-- Every event Stripe sends is **cryptographically verified** against your own signing secret and routed to your tenant. An event that fails verification — or that is addressed to the wrong tenant — is rejected and never changes a payment.
+- Every event Stripe sends is **cryptographically verified** against your tenant's own signing secret. An event that fails verification is rejected and never changes a payment.
 
 ## What you need
 
