@@ -16,7 +16,87 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] — The Composable Platform
 
-### Documentation
+### 2026-10-03: on the way in the next release
+
+These changes are complete and verified, and they reach you with the next release.
+
+#### Added
+
+- **Inviting someone no longer fails when the invitation email cannot be sent.** The invitation is kept, and you can resend it once mail is flowing again.
+
+#### Changed
+
+- **Releases are now built, tested, packaged and published by a single pipeline from a single build**, so every package and migration image in a release comes from exactly the same source.
+- The health checks dashboard is switched off for now. The health endpoints, including the database check, keep working as before.
+
+#### Fixed
+
+- **Studio no longer redraws its layout continuously while you are signed in.** Every open Studio tab now does far less work in your browser and on the server.
+- In Pocket, a product's price before discount is now shown correctly.
+
+#### Security
+
+- Invitations are now answered only by the person they were sent to, and managed only by the workspace that sent them.
+- Public blog and web page listings now follow the same publication rules as the pages they belong to.
+
+### 2026-10-02: now in production
+
+Everything below reached production on 2026-10-02.
+
+#### Added
+
+- **Invoices are now issued as a deliberate step.** When you issue an invoice, its prices are frozen and it takes the next number in your own gap-free invoice sequence. Only an issued invoice can be paid.
+- **New businesses start in their own currency.** When a business is created, its currency is set from its country, so a business in Colombia starts in Colombian pesos, and you can change it at any time. Where a country has no single currency, the business starts in US dollars.
+- **Exchange rates tell you when they are out of date**, and missing historical rate sets can be rebuilt from a published rate history.
+- **Colombian electronic invoices issued in another currency now carry the exchange rate to pesos that DIAN requires.** A document whose rate cannot be stated is refused rather than sent incomplete.
+- **With ePayco, you can now refund a collected payment from the platform.** The refund is recorded before ePayco is contacted, so repeating the request never refunds twice. You can also list the bank accounts your own ePayco account pays out to, with account numbers masked.
+- **Assistants and workflows can now search your workspace.** An assistant can draw on what it finds to answer you, through the same permission-checked search you use yourself.
+- **Search stays current while it is rebuilt.** A new search index is checked and switched in automatically, even while your data keeps changing, and the changes you make during a rebuild are not lost.
+- **Overdue approval requests are now escalated or expired on schedule**, and every decision is tied to the evidence it was made on.
+- **Administrators can now see and resolve stuck integration messages** rather than leaving them to retry unseen.
+- You can now rejoin a live communication session after leaving it.
+- **Anonymous traffic can now be rate limited per client address**, with limits you configure. Signed-in use is not limited.
+- Licence verification can now run against a configured trust manifest, and refuses every licence if that manifest is missing or unusable.
+- Email images and styles are now served by your own instance, so emails look the same wherever the platform runs.
+- **For developers:** every API operation has one stable, predictable operation id; the Colombian e-invoicing API now describes its responses in full; OpenAPI snapshots can be compared to catch breaking changes before release; and release versions follow semantic versioning.
+
+#### Changed
+
+- **An invoice always states its currency.** It never falls back to US dollars without saying so.
+- Every automatic journal entry now goes through a single governed posting path.
+- **The point of sale terminal loads through your workspace's own data**, on a reworked point of sale page.
+- Apply voucher in the Studio cart now checks the code against your seller's coupons and tells you plainly whether it applies.
+
+#### Fixed
+
+- **Workflows no longer open a fresh database connection on every background check.** Under load this had been slowing database access for everything else on the instance. Since the fix, database timeouts in production have fallen to zero.
+- Workflows no longer change the database structure when the application starts.
+- A percentage discount is now read as a percentage, so 10 means 10 percent, and it is checked when it is saved.
+- Subscriptions now identify their subscriber from the subscribed contact, and match each payment to its own invoice.
+- An email no longer fails to send when one of its stylesheets cannot be downloaded.
+- Balancing an account whose parent accounts form a loop now returns a clear error naming the loop, so you can correct it, instead of stopping the service.
+- The approver inbox now lists requests in a fixed order.
+- The Studio cart no longer shows raw checkout errors.
+- The JavaScript SDK formats amounts correctly again.
+
+#### Security
+
+- **Tenant isolation hardening** across files and storage, the catalog, payments, accounting, billing, licensing, subscriptions, CRM, marketing, digital assets, learning, content, sales and logistics, social, support, communications and identity.
+- Avatar uploads are type-checked and scanned before they are stored, and uploaded documents are no longer displayed inline on public pages.
+- Only a person can decide an approval. Assistants and automations can request one, never grant it.
+- Workflows refuse to be saved, published or installed with a secret written into them.
+- Logs no longer record identities, network addresses or query strings where they are not needed.
+- The public blog shows only published posts, without management fields or author details.
+
+#### ABS Online
+
+- `www` addresses now redirect to the main address, so every page has one canonical URL.
+- Public catalog, blog, job and course pages show only published content.
+- Invoices and quotes are now shown only to the people they were sent to.
+
+### Earlier in this cycle, through 2026-09-23
+
+#### Documentation
 
 - **Documentation now ships with the capability, not after it.** A capability is no longer considered finished until the pages describing it are written and published. Documentation is a release condition now, held to the same bar as the code being built and verified — so when something reaches you, the explanation of it reaches you at the same time.
 - **Two audiences, written separately and deliberately.** The same change reads differently depending on how you meet it, so we write it twice:
@@ -26,7 +106,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New page:** [How this documentation is kept current](~/reference/Documentation-Currency.md) — the commitment in full, what to trust, and how to tell us where we fall short.
 - **Documentation is written only after a capability is real.** If a page describes something, that thing exists today. Anything planned but not yet built stays on the [roadmap](~/get-started/Roadmap.md), marked as such.
 
-### Added
+#### Added
 
 - **Notifications now decide who to tell before they decide how to send.** When something happens in your workspace, the platform works out who genuinely needs to know, checks that each person is allowed to see what the notification is about, applies their preferences, and only then delivers. Someone who qualifies for several reasons is told once, not once per reason, and the person who caused the event is not notified about their own action.
 - **You can now set notification preferences per category and channel**, and administrators can set what a workspace permits and what its members receive by default. Settings you are not allowed to change are shown locked with the reason, rather than appearing editable and being overruled somewhere you cannot see. Categories such as security and legal notices cannot be switched off.
@@ -50,7 +130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Apps can now revoke their own sign-in tokens.** A client that signs a person out can tell the platform to retire that session's tokens straight away, rather than waiting for them to expire.
 - **Developers get tenant-scoped entry points for wallet data.** Service clients can now ask for a business or contact wallet's locations, accounts and related records within a named tenant, the same way the Studio screens do.
 
-### Changed
+#### Changed
 - Standardized the platform-wide result and error-handling model.
 - Unified CQRS dispatch behind a single mediator.
 - Standardized DTO mapping conventions across the SDK.
@@ -60,7 +140,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **A record's type is now fixed once it is created.** Contact, workforce and account relation edit forms show the type for reference but no longer change it, which keeps every record in the lists where you expect to find it.
 - **Payment confirmations now arrive through one processing path**, with automatic recovery for any that are interrupted, so a payment is settled once and settled consistently.
 
-### Fixed
+#### Fixed
 
 - **An edit form no longer saves when the record failed to load**, so an interrupted load can never blank out the record behind it.
 - For API users, asking for a record that does not exist now returns not found rather than a server error.
@@ -69,7 +149,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **The workflow designer now runs under a strict browser security policy**, so it loads in environments that enforce one.
 - **Health checks now speak up about configuration they cannot find.** Missing module setup, a missing options manifest, and a notification reconciliation sweep that is switched off are all reported as degraded rather than passing quietly.
 
-### Security
+#### Security
 
 - Accounts now lock after repeated failed sign-in attempts, on every password sign-in path.
 - Stored payment methods and bank accounts are now scoped to the wallet that owns them.
