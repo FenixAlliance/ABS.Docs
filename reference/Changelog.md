@@ -18,21 +18,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-These changes are complete and verified, and they reach you with the next release.
+These changes are complete and verified, and they are published as 2.3.1.
+
+### Fixed
+
+- **The Suite home page is now part of the standard platform image**, so every instance serves it.
+- Packages are now built from exactly the build that passed validation.
+
+## [2.3.0] - 2026-10-04
+
+Tagged on 2026-10-04. Its NuGet packages were not published: these changes reach you as packages in 2.3.1, together with the fixes listed under it.
 
 ### Added
 
 - **Inviting someone no longer fails when the invitation email cannot be sent.** The invitation is kept, and you can resend it once mail is flowing again.
+- **AI assistants such as ChatGPT can now connect to your workspace's MCP server.** The server publishes standard OAuth metadata, and the tokens it accepts are issued for that server alone.
+- **The Suite home page now ships with the platform.** It appears only when its interface is fully loaded, never as a blank page.
+- **For operators:** a new version can be staged beside the live one without both running background work. Background work runs only on the instance you choose.
 
 ### Changed
 
 - **Releases are now built, tested, packaged and published by a single pipeline from a single build**, so every package and migration image in a release comes from exactly the same source.
+- **Development and QA environments now run the same way as production**: on Azure Container Apps, with their configuration on a mounted share and their infrastructure defined as code. The release pipeline deploys to each one and then runs its tests against it.
 - The health checks dashboard is switched off for now. The health endpoints, including the database check, keep working as before.
 
 ### Fixed
 
 - **Studio no longer redraws its layout continuously while you are signed in.** Every open Studio tab now does far less work in your browser and on the server.
 - In Pocket, a product's price before discount is now shown correctly.
+- A page that cannot be found now shows a friendly error page instead of a blank one.
+- Installing a new instance no longer fails at startup with an API versioning error.
+- An instance now stops within its shutdown time even while background work is running, and pending messages are still flushed first.
 
 ### Security
 
