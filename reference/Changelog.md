@@ -18,7 +18,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-These changes are complete and verified, and they are published as 2.3.1.
+These changes are complete and verified, and they reach you with the next release.
+
+### Security
+
+- Sign-in tokens for AI connectors are now checked more strictly.
+
+## [2.3.3] - 2026-10-06
+
+The first 2.3 release with its complete set of packages and container images. It reached production on 2026-10-07, and with it every change in 2.3.0, 2.3.1 and 2.3.2.
+
+### Fixed
+
+- The release build now includes the Azure Communication integration, so the platform's container images build in full.
+
+## [2.3.2] - 2026-10-05
+
+Its NuGet packages were published on 2026-10-05. Its container images could not be built, so its fixes reached the images, and production, through 2.3.3.
+
+### Fixed
+
+- **A data list on a page rendered on the server no longer fails.** This fixed the error on the blog posts page.
+- Container images are now built from the compiled release output.
+
+## [2.3.1] - 2026-10-05
+
+Its NuGet packages were published on 2026-10-05, carrying 2.3.0's changes as packages for the first time. Its container images could not be built, so its fixes reached the images, and production, through 2.3.3.
 
 ### Fixed
 
@@ -27,7 +52,7 @@ These changes are complete and verified, and they are published as 2.3.1.
 
 ## [2.3.0] - 2026-10-04
 
-Tagged on 2026-10-04. Its NuGet packages were not published: these changes reach you as packages in 2.3.1, together with the fixes listed under it.
+Tagged on 2026-10-04. Its NuGet packages were not published: these changes reached you as packages in 2.3.1, and in production through 2.3.3 on 2026-10-07.
 
 ### Added
 
