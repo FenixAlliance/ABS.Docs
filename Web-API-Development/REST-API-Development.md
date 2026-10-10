@@ -33,7 +33,7 @@ There are 46 service specifications and roughly 1,400 operations.
 
 ## Authenticate
 
-Three token endpoints exist. Pick by who's calling.
+Pick the sign-in by who's calling. From 2.4 you always sign in with your email address; a username or a generated handle is not accepted.
 
 ### A user signing in
 
@@ -67,11 +67,13 @@ Refresh with `POST /refresh` and `{ "refreshToken": "…" }`.
 
 Lifetimes follow the framework defaults, currently one hour for the access token and fourteen days for the refresh token. We don't override them, so treat those numbers as defaults rather than a contract, and refresh on `401` instead of on a timer.
 
-If the account has two-factor enabled, sign-in returns `401` with `detail` set to `RequiresTwoFactor`. Resend the same request with `twoFactorCode` included.
+If the account has two-factor enabled, sign-in returns `401` with `detail` set to `RequiresTwoFactor`. Resend the same request with `twoFactorCode` included. From 2.4, an account with two-factor enabled can't sign in with its password alone on any path, including Basic authentication.
 
 ### A server with no user
 
-Use client credentials:
+> **From 2.4, machine-to-machine sign-in is turned off.** The client-credentials endpoint `POST /api/v2/OAuth/Token` is off by default, and the platform has no other way yet for a service to sign in without a user. If your integration signs in as a service, contact us before you upgrade.
+
+On 2.3 and earlier, a service uses client credentials:
 
 ```http
 POST /api/v2/OAuth/Token
@@ -96,9 +98,9 @@ You get an RS256 JWT valid for one hour.
 | You are | Use |
 |---|---|
 | A user signing into your own front end | `POST /login` |
-| A backend service acting on its own behalf | `POST /api/v2/OAuth/Token` |
+| A backend service acting on its own behalf | Not available from 2.4 (contact us); `POST /api/v2/OAuth/Token` on 2.3 and earlier |
 
-There's no API key or personal access token scheme. If you want long-lived machine access, create an application and use client credentials.
+There's no API key or personal access token scheme. On 2.3 and earlier, long-lived machine access means an application with client credentials; from 2.4 that is off, as described above.
 
 ## Tell us which tenant
 

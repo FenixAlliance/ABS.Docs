@@ -46,7 +46,7 @@ Refresh it at `POST /refresh` with `{ "refreshToken": "..." }`.
 
 > **Important:** The token from `/login` is opaque. Don't try to decode it, read claims from it, or validate it yourself. Treat it as a string you hold and send back.
 
-For server-to-server work with no user, use client credentials. That flow, its exact field casing, and its limits are covered in [REST](~/Web-API-Development/REST-API-Development.md).
+From 2.4 you sign in with your email address. Server-to-server sign-in with client credentials is turned off from 2.4; on 2.3 and earlier that flow, its exact field casing and its limits are covered in [REST](~/Web-API-Development/REST-API-Development.md).
 
 ## Tell us which tenant
 

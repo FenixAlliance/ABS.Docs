@@ -86,6 +86,9 @@ code: This query parameter contains the authorization code that you obtained in 
 client_secret: You need this parameter only if your client is configured as a web application. This is the same secret/key value that you generated earlier, in client registration.
 
 ##### Client credentials grant (non-interactive clients)
+
+> **From 2.4, machine-to-machine sign-in is turned off.** The client-credentials endpoint `POST /api/v2/OAuth/Token` is off by default, and the platform has no other way yet for a service to sign in without a user. If your integration signs in as a service, contact us before you upgrade. The rest of this section describes 2.3 and earlier.
+
 This grant is used only by web clients, allowing the application to access resources directly (no user delegation) using the client's credentials, which are provided at registration time. The grant is typically used by non-interactive clients (no UI) that run as a service or daemon. It requires only the /token endpoint to acquire an access token.
 
 The client/resource interactions for this grant are similar to step 2 of the authorization code grant. For details on the format of the HTTPS POST request to the /token endpoint and request/response examples, see the "Get a token" section in the [Authentication and Authorization and the OAuth 2.0 client credentials flow](~/Online-Services/REST-API/Authentication-and-Authorization.md) section.

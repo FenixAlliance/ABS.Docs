@@ -11,7 +11,7 @@ APS offers built-in support for all the standard flows defined by the OAuth 2.0 
 - Implicit flow
 - Hybrid flow (which is basically a mix between the first two flows)
 - Resource owner password credentials grant
-- Client credentials grant
+- Client credentials grant (turned off from 2.4)
 
 The information here will be useful if you choose to write your code by directly sending and handling HTTP requests or using a third-party open-source library, rather than using one of our open-source SDKs.
 

@@ -1,5 +1,7 @@
 # Authorizing request against the Alliance Online Services
 
+> **From 2.4, machine-to-machine sign-in is turned off.** The client-credentials endpoint `POST /api/v2/OAuth/Token` is off by default, and the platform has no other way yet for a service to sign in without a user. If your integration signs in as a service, contact us before you upgrade. This page describes the flow as it works on 2.3 and earlier.
+
 Some apps call the Alliance Online Services ("AOS") APIs with their own identity and not on behalf of an Account Holder. In many cases, these are background services or daemons that run on a server without the presence of a signed-in user. An example of such an app might be a contact information updater service that wakes up and runs overnight. In some cases, apps that have a signed-in user present may also need to call the AOS APIs under their own identity. For example, an app may need to use functionality that requires more elevated privileges in an Online Business Tenant than those granted by the signed-in Account Holder.
 
 ## Authentication and authorization steps
