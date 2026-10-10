@@ -20,8 +20,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 These changes are complete and verified, and they reach you with the next release.
 
+### Added
+
+- **Credit and debit notes.** You can issue a credit note or a debit note against an issued invoice. Each note takes the next number in your own note series, a credit note can never exceed what is still creditable on the invoice, and the reduction is posted to your accounts once the invoice is established. Colombian notes carry the reason and the full reference to the original invoice that DIAN requires.
+- **Positions with several holders.** A position can now hold more than one person, up to a capacity you set, and belongs to a department. Each holder's assignment is recorded with its dates, and a position cannot be deleted while someone holds it.
+- **Archive notifications.** In the Tools inbox you can archive and unarchive notifications, one at a time or a whole page, and switch to an Archived view. Archiving is per reader and never deletes anything.
+- **AI advice on approvals, only if you turn it on.** Advice is off by default. An approvals manager opts the workspace in after seeing exactly which provider and model would be used and which approval fields are shared. Any later change to those suspends advice until the workspace confirms again, and opting out hides advice at once.
+- **See what your workspace uses, and what it costs.** A new usage view in Studio shows your workspace's usage and its cost, and administrators can set limits on it.
+
+### Changed
+
+- **Signing in uses your email address.** You sign in with your email; an account that was given a generated handle signs in with its email too. Every email address can belong to only one account.
+- **For developers: the legacy token endpoint is turned off.** `/api/v2/OAuth/Token`, which issued tokens for a client ID and secret, is off by default. There is no replacement for machine-to-machine sign-in in this release, so an integration that depends on it should contact us before upgrading.
+- **Studio has a new look**, built on the latest version of its design system, and its pages now load their data through the platform's API.
+- **Grids now show names instead of raw identifiers**, so a related record reads as its name, not a code.
+- **Every document keeps its own currency.** The platform no longer falls back to US dollars anywhere a document has a currency of its own.
+- The order summary now shows the workspace, the total and the date, and the sales and logistics pages use consistent icons.
+
+### Fixed
+
+- Deleting a record from Studio works again.
+- Every API documentation page renders again.
+- Opening your own cart no longer fails.
+- A message that was processed at the same moment as another is retried rather than set aside as failed.
+- In Studio, the page title sits in the record header, the subheader fits on one line, roles can be revoked from the roles grid again, and amounts no longer clip.
+- Row action menus in grids open again.
+- The Studio onboarding tour no longer leaves the Studio stuck behind its overlay.
+- The administration pages load and save settings correctly, the users list no longer reloads every row, and the server memory gauge no longer slows the server down.
+- The workflow details panel no longer shows a developer note.
+- The page you are on is now announced to screen readers.
+
 ### Security
 
+- Sign-in hardening: an account with two-factor authentication can no longer sign in with its password alone on any path, a wrong password is refused on every path, and repeated failures always lock the account.
+- Orders, invoices, payments and quotes read through a wallet are shown only to the wallet's owner.
+- Contact records never carry the sign-in provider's access token.
 - Sign-in tokens for AI connectors are now checked more strictly.
 
 ## [2.3.3] - 2026-10-06
