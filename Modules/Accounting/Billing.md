@@ -26,7 +26,7 @@ Orders are managed in Sales Hub. See [Orders](~/Modules/Sales-Hub/Sales-Records/
 1. **You create an invoice** in Studio or through the API, or a buyer's checkout creates one for an order. A new invoice starts as a draft that you can still edit.
 2. **The invoice is issued.** You select **Issue** on the invoice, or a buyer's checkout issues it. Issuing gives the invoice its number from your active range, if you use ranges, and makes it a payable amount. From then on its amounts cannot change.
 3. **You share it.** You can preview the issued invoice, send it by email and generate a payment link for it. You can also create the link from **Wallet** > **Invoices**.
-4. **Your customer pays** on your payment provider's own checkout. A live payment marks the invoice as paid.
+4. **Your customer pays** on your payment provider's own checkout. Today payments run in test mode and never mark the invoice as paid. When live payments are available, a live payment marks the invoice as paid.
 5. **You correct it if needed.** An issued invoice is never re-priced. You issue a credit note to reduce what is owed or a debit note to increase it.
 6. **Your books follow.** When **Post journal entries automatically** is turned on in the Accounting settings, the platform posts the journal entry when an invoice is issued, reduced by a credit note or paid. When it is off, nothing posts automatically. See [Accounting](~/Modules/Accounting.md).
 

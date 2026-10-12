@@ -12,7 +12,7 @@ An invoice bills a customer for goods or services in the invoice's own currency,
 |-------|---------------|-----------------|
 | **Draft** | The invoice is being prepared. | Edit everything, add and remove lines, recalculate, issue, delete. |
 | **Issued** | The invoice is final and payable. It has its number, if your workspace uses number ranges. | Edit the description and the dates. Preview it, email it and generate a payment link while it is unpaid. Issue credit and debit notes against it. Its amounts no longer change. |
-| **Paid** | A live payment covered what is owed. | Review the payment on the invoice. |
+| **Paid** | A live payment covered what is owed. Live payments are not available yet, so an invoice is not marked paid by a payment today. | Review the payment on the invoice. |
 
 An issued invoice is never re-priced. If you try to change an amount on it, the change is refused with the message that the invoice has been issued and must be corrected with a credit or debit note.
 
