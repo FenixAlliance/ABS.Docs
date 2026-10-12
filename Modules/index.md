@@ -1,6 +1,6 @@
 # Modules
 
-Modules are how you turn on [capabilities](~/Capabilities/index.md). Each module is a self-contained feature package, with its own screens, menus, and data, that the platform loads into your instance. The instance owner decides which modules are available on the instance, and the modules your plan entitles you to appear in the Studio for your tenant. Tenants do not install modules. Nothing is forked, and new modules arrive without changing the platform.
+Modules are how you turn on [capabilities](~/Capabilities/index.md). Each module is a self-contained feature package, with its own screens, menus, and data, that the platform loads into your instance. On an Alliance Business Suite instance, the instance owner (a root-tenant member) decides which modules are available. Workspaces do not install modules. The modules your plan entitles you to appear in Studio for your workspace. Nothing is forked, and new modules arrive without changing the platform.
 
 ## How modules work
 

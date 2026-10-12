@@ -4,7 +4,7 @@ This page shows where the Alliance Business Suite is heading. Everything below t
 
 ## Now: 2.4, the commercial release
 
-2.4 is in its final release checks. It brings the commercial loop together, with your books kept in your own currency:
+2.4 is in its final release checks. When it ships, it brings the commercial loop together, with your books kept in your own currency:
 
 - Credit and debit notes against your invoices.
 - Every document keeps its own currency, and new workspaces choose theirs, with no fallback to US dollars.
@@ -37,14 +37,13 @@ The full list is in the [changelog](~/reference/Changelog.md).
 - **Payroll.**
 - **More countries.** Tax and invoicing profiles for the United States, then Peru.
 - **Proof of documents.** Prove that a signed contract or an issued electronic invoice has not changed since it was issued. Anyone can check it, outside the platform, through a public verification page.
-- **Learning and content.** Grading and quizzes for courses, comments and scheduling for content, and merging duplicate contacts.
-- **Nucleus.** Working together live in Nucleus Desktop, and the mobile app on the same organization model.
-
-Further out, and only after a legal review in each country: stablecoin payments on invoices, crypto holdings as accounts in your books, and course certificates your learners keep in their own wallet. Blockchain features are off by default, switched on per plan and per workspace, and the platform never holds your private keys.
+- **Learning and content.** Grading and quizzes for courses, and comments and scheduling for content.
+- **Contacts.** Merging duplicate contacts.
+- **The Nucleus apps.** Working together live in Nucleus Desktop, and the mobile app on the same organization model.
 
 ## Long term: the platform's direction (planned)
 
-- **V4: Finance Cloud.** The foundation for businesses that build financial services on the platform: custody, payouts, and moving between currencies and stablecoins through providers you choose, with every outgoing transfer going through an approval and your funds never passing through ours.
+- **V4: Finance Cloud.** The foundation for businesses that build financial services on the platform: custody and payouts through the providers you choose, with every outgoing transfer going through an approval and your funds never passing through ours.
 - **V5: Industry clouds.** Solutions for specific industries, such as shipment events shared between importers, carriers and customs in international trade, loyalty and prepaid credits where regulation allows, and pay-per-use for AI agents. Each is built when customers ask for it.
 
 ## How this roadmap is kept
