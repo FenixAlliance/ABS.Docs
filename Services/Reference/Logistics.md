@@ -9,7 +9,7 @@ The Logistics service lets you run warehouse operations and record how goods tra
 ## What you can do
 
 - **Manage warehouses and stock movements:** keep warehouses, record restocks, pick lists and packing slips with their entries, and keep retain samples.
-- **Issue transport documents:** create airway bills, rail waybills, road waybills and seaway bills, add their lines, and move each one through issue, transit, arrival or delivery, or cancel it.
+- **Issue transport documents:** create airway bills, rail waybills, road waybills and seaway bills, add their lines, and move each one through the steps of its type (such as issue, transit, arrival, delivery or release), or cancel it.
 - **Run your own trucks:** keep trucks and truck drivers, activate or deactivate drivers, and dispatch, depart, arrive, deliver or cancel each trip.
 - **Plan sea voyages:** keep vessels and ports, add port calls to a voyage, and start, complete or cancel it.
 - **Confirm delivery:** record a proof of delivery with its lines, and sign, reject or dispute it.

@@ -4,7 +4,7 @@ Connect your own Mercado Pago account so your customers can pay your invoices th
 
 **Who it is for:** workspace administrators who set up how the business gets paid, and developers who automate payment operations.
 
-**Availability:** in Studio, open your workspace and go to **Integrations** > **MercadoPago**. Creating the payment connection, cancelling and refunding are done through the API. Creating the payment connection needs permission to manage payments.
+**Availability:** Mercado Pago works today in test mode only. Live payments are coming. In Studio, open your workspace and go to **Integrations** > **MercadoPago**. Creating the payment connection, cancelling and refunding are done through the API. Creating the payment connection needs permission to manage payments.
 
 ## What you can do with Mercado Pago
 
@@ -20,19 +20,19 @@ The payer enters card details on Mercado Pago's own checkout. The platform never
 
 From your Mercado Pago developer dashboard, have these ready:
 
-- your public key and access token, from the same mode (test or production) as the connection you plan to create;
+- your test public key and test access token;
 - the secret signature of your notifications (webhooks) configuration.
 
 ## Connect Mercado Pago
 
 1. In Studio, open your workspace and go to **Integrations** > **MercadoPago**.
 2. On the **MercadoPago Options** tab, fill in **Public Key**, **Access Token** and **Webhook Signing Secret**. Optionally, set **Checkout Item Title**, the item name your customer sees on Mercado Pago's checkout.
-3. Turn on **Production** for a live connection, or leave it off for a test connection. Select **Save Changes**.
-4. Create the payment connection with `POST /api/v2/PaymentsService/PaymentProviderRegistrations`. Send the provider code `mercadopago`, the webhook signing secret (the same value you entered in step 2) and the environment, `Test` or `Live`, matching the **Production** switch. The environment has no default; a request without one is refused.
+3. Leave **Production** off, so checkout runs in Mercado Pago's sandbox. Select **Save Changes**.
+4. Create the payment connection with `POST /api/v2/PaymentsService/PaymentProviderRegistrations`. Send the provider code `mercadopago`, the webhook signing secret (the same value you entered in step 2) and the environment `Test`. The environment has no default; a request without one is refused.
 5. The response contains your notification URL. It is shown only once, so copy it now.
 6. In your Mercado Pago developer dashboard, add that URL as the notification URL for payment events.
 
-The connection never stores your public key or access token. They stay on the Mercado Pago Integrations page.
+Your provider keys and signing secret are kept in your workspace's settings for Mercado Pago. The payment connection itself stores no keys.
 
 ### How stored secrets appear
 
@@ -42,13 +42,13 @@ The page never shows a stored secret. Next to **Access Token** and **Webhook Sig
 - To replace it, type the new value.
 - To remove it, select the matching clear option, for example **Clear the stored access token**.
 
-## Test and live
+## Test mode
 
-The **Production** switch decides whether checkout runs in Mercado Pago's sandbox or in production. Keep it in the same mode as the connection: off with a test connection, on with a live connection.
+Mercado Pago works today in test mode only. Use test keys, a test connection and leave **Production** off. Whether checkout runs in Mercado Pago's sandbox follows the **Production** switch on the Mercado Pago Integrations page.
 
-A test payment runs end to end in Mercado Pago's sandbox but never marks an invoice as paid. Only a live payment does.
+A test payment runs end to end in Mercado Pago's sandbox but never marks an invoice as paid.
 
-To change the environment of an existing connection, use `POST /api/v2/PaymentsService/PaymentProviderRegistrations/{registrationId}/Environment`, then set the **Production** switch to match.
+Live payments are coming. When live payments are available, a completed live payment marks the invoice as paid.
 
 ## Cancel or refund a payment
 
@@ -85,4 +85,4 @@ Older Mercado Pago routes for payments, preferences, refunds, cancellations and 
 
 - [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md)
 - [Official integrations](~/Modules/Integrations.md)
-- [Stripe](~/Integrations/Stripe.md), [PayU](~/Integrations/PayU.md) and [ePayco](~/Integrations/ePayco.md)
+- [Stripe](~/Integrations/Stripe.md)

@@ -67,3 +67,4 @@ To replace your Stripe keys or signing secret, create new ones in your Stripe Da
 
 - [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md)
 - [Official integrations](~/Modules/Integrations.md)
+- [Mercado Pago](~/Integrations/Mercado-Pago.md)

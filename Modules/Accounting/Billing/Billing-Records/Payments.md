@@ -10,9 +10,9 @@ Payments record the money your customers pay against your invoices, collected th
 
 You collect payments through your own account with a payment provider. Payments are processed by that provider and the funds settle to your provider account. The platform starts the checkout, receives the provider's confirmation and records the result against your invoice.
 
-Today you can connect Stripe, in test mode. See [Stripe](~/Integrations/Stripe.md). Live payments, and Mercado Pago, PayU and ePayco, are coming.
+Today you can connect Stripe or Mercado Pago, in test mode. See [Stripe](~/Integrations/Stripe.md) and [Mercado Pago](~/Integrations/Mercado-Pago.md). Live payments, and PayU and ePayco, are coming.
 
-To connect Stripe, enter your Stripe test credentials on the Stripe page under your workspace's **Integrations** in Studio. Then create the payment connection through the API (see [For developers](#for-developers)). It returns your notification URL once; add that URL in your Stripe dashboard.
+To connect a provider, enter your test credentials on the provider's page under your workspace's **Integrations** in Studio. Then create the payment connection through the API (see [For developers](#for-developers)). It returns your notification URL once; add that URL in your provider's dashboard. For Mercado Pago, whether checkout runs in Mercado Pago's sandbox follows the **Production** switch on its Integrations page; leave it off.
 
 Today connections run in test mode only. Use it to try the full checkout with your provider's test credentials. A test payment runs end to end but never marks an invoice as paid.
 
@@ -60,6 +60,6 @@ You can also see the payments for one invoice through the API.
 
 - Payments are available under `/api/v2/PaymentsService/Payments`, and an invoice's payments under `/api/v2/InvoicingService/Invoices/{invoiceId}/Payments`.
 - Payment provider connections are managed under `/api/v2/PaymentsService/PaymentProviderRegistrations`, including setting the environment, updating the credential and rotating the notification key. Today only Stripe connections in test mode can be created.
-- A refund is requested with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`. Refunds work for Stripe through the API; Studio has no refund action.
+- A refund is requested with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`. Refunds work for Stripe and Mercado Pago through the API; Studio has no refund action.
 - An operation whose outcome the provider has not confirmed is listed by `GET /api/v2/PaymentsService/ProviderOperations/AwaitingOutcome`, and reconciled with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/ReconcileOutcome`.
 - A payment link is created with `POST /api/v2/PaymentsService/PublicPaymentLinks`, which needs permission to manage payments. The payment page for a link is `/Payments/{token}`. The token is part of the link and is shown only when the link is created.
