@@ -89,7 +89,6 @@ Browse the modules that ship with ABS, grouped by the capability each one delive
 
 ### Intelligence
 - **[Analytics](~/Modules/ANALYTICS.md)**: governed BI, curated datasets, and a self-serve explorer.
-- **[BotMaker](~/Modules/BOTS.md)**: design and manage conversational bots.
 
 ### Platform & Development
 - **[CloudHub](~/Modules/CLOUD.md)**: provision and manage cloud resources.

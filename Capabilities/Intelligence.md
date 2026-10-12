@@ -26,6 +26,5 @@ The same rules hold when an agent runs **unattended** — triggered by a workflo
 | Module | What it does |
 |---|---|
 | [Analytics](~/Modules/ANALYTICS.md) | Governed BI, curated datasets, and a self-serve explorer |
-| [BotMaker](~/Modules/BOTS.md) | Design and manage conversational bots |
 
 The **Andy** assistant and **Cognitive Services** (AI agents and skills) also live in this family. Built on the **[Alliance Business Model (ABM)](~/Capabilities/Alliance-Business-Model.md)** foundation, so intelligence reads from the same trusted data your business runs on.

@@ -40,7 +40,3 @@ Este proyecto utiliza las siguientes librerías:
 - ### Invoice
 - ### Debit note
 - ### Crefit Note
-
-## Licencia
-
-Revisar detalles en el archivo [LICENCE](~/reference/License.md).

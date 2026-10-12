@@ -35,11 +35,9 @@ CryptoWallets is the name of the functionality that allows each Wallet Account t
 
 ## Connecting a Wallet to MetaMask
 
-Through the Alliance Business Studio, Wallet Owners can connect their Wallet Accounts to MetaMask. To do this, head to the wallet configuration and click on the "Connect to MetaMask" button, then open MetaMask on your browser toolbar, click on your avatar and select "Import Account". 
+In Studio, open your wallet settings and select **Connect to MetaMask**, then approve the request in MetaMask.
 
-Copy your Wallet's Private Key and paste it into Metamask, or scan the QR Code using MetaMask Mobile.
-
-Once your Wallet Identifier has been linked to MetaMask, click on the "Finish Connection" button to finalize the synchronization.
+Never copy, export or paste a private key into Studio, MetaMask or any other page. The Alliance Business Suite never asks for your private key.
 
 
 
