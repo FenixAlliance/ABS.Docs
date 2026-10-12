@@ -1,6 +1,6 @@
 # gRPC API
 
-> **Not yet available.** gRPC is planned, not shipped. It appears on the [Roadmap](~/get-started/Roadmap.md) as *gRPC Modularization*.
+> **Not available.** gRPC is not a supported API surface, and it is not on the current [roadmap](~/get-started/Roadmap.md).
 
 The `FenixAlliance.ABP.API.gRPC` project currently contains only the default .NET gRPC template (a sample `Greeter` service). It does **not** expose the Alliance Business Model, and it should not be used or planned against.
 
@@ -13,4 +13,4 @@ The `FenixAlliance.ABP.API.gRPC` project currently contains only the default .NE
 | MCP | Model Context Protocol server, for AI agent clients |
 | SignalR | Real-time push |
 
-If you need a high-performance binary transport today, use REST with the .NET SDK. This page will be updated when gRPC ships.
+If you need a high-performance binary transport today, use REST with the .NET SDK. This page will be updated if gRPC is added.

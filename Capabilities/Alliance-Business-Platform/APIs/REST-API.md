@@ -15,19 +15,6 @@ Representational State Transfer (REST) APIs are service endpoints that support s
 - Overviews of creating and sending a REST request, and handling the response.
 - Additional resources about versioning and support contact information.
 
-## How to call the ABP REST APIs with Postman
-The following video will show you how to quickly authenticate with the [ABP REST API Authentication Endpoints](https://fenixalliance.com.co/api/v2/documentation) via the client id/secret method. We encourage you to continue reading below to learn about what constitutes a REST operation, but if you need to quickly call the APIs, this video is for you.
-
-```javascript
-// TODO: ADD Video explaining Postman process.
-```
-```javascript
-// TODO: ADD Video explaining CURL process.
-```
-```javascript
-// TODO: ADD Video explaining Powershell SDK process.
-```
-
 ## Available Endpoint Sets - REST API Reference Browser 
 
 The Alliance Business Platform REST API has been decoupled into modular, consumable REST Endpoint Sets as follows:

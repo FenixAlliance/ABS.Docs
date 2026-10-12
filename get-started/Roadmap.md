@@ -1,145 +1,53 @@
 # Roadmap
 
-> 🏛️ **Archaeology — Status: mixed — Prophetic (UBL) · Constitutional (multi-tenancy) · Superseded (UI libraries).** *A ~2021 roadmap (.NET 6 era), audited 2026.*
-> **Prophetic / validated:** UBL 2.1, multi-tenancy, Alliance Passport, the .NET/Node SDKs — all envisioned here and built since. **Superseded:** MudBlazor / FAST Design / Radzen and "Virtual SPA (Angular/React)" → today's **Blazor Server + FluentUI** behind the Suite facade. Items listed here as flat "features" (Identity, Workflow, the ML engines) are **platform capabilities** today.
-> Full finding: **Architecture Archaeology Register** (Developer Handbook → `Strategy/Archaeology`).
+This page shows where the Alliance Business Suite is heading. Everything below the current release is **planned**: it is not available yet, and its scope and order can change as we learn from customers. We name releases, not dates. What has already shipped is recorded in the [changelog](~/reference/Changelog.md).
 
-This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist. For a more comprehensive look at our roadmap, please visit our **[Progess Board](https://dev.azure.com/fenixalliance/ABS.Docs/_workitems/recentlyupdated)**.
+## Now: 2.4, the commercial release
 
+2.4 is in its final release checks. It brings the commercial loop together, with your books kept in your own currency:
 
-## Proposed:
-- [ ] Node.js SDK 
-- [ ] PowerShell SDK 
-- [ ] Agreement Template Definitions
-- [ ] Email Signature Template Definitions
-- [ ] Document Template Definitions
-- [ ] Article Template Definitions
-- [ ] gRPC Modularization
-- [ ] Reporting Dashboard
-- [ ] Dynamic Dashboards
-- [ ] gRPC Modularization
-- [ ] ACS Modularization
-- [ ] UBL 2.1 Support
-- [ ] Process Canvas.
-- [ ] Granular Property Set Access
-- [ ] Custom Includes Definitions
-- [ ] Virtual Entity Data Sources
-- [ ] In-Portal Live Chat Widget
-- [ ] ML-Based Search Results Ranking Engine
-- [ ] ML-Based Fraud Detection Engine (Anomaly Detection), (Binary Classification)
-- [ ] ML-Based Price Prediction Engine
-- [ ] ML-Based Sales Spike Detection Engine (Anomaly Detection)
-- [ ] ML-Based Sales Forecasting Engine (Regression), (Time Series)
-- [ ] ML-Based Sentiment Analysis Engine
-- [ ] ML-Based Customer Segregation Engine (Clustering)
+- Credit and debit notes against your invoices.
+- Every document keeps its own currency, and new workspaces choose theirs, with no fallback to US dollars.
+- Order numbers, and orders placed directly from a quote you received.
+- Courses you can sell: buying a course enrolls the buyer.
+- Banners you manage from Studio and place on your site.
+- A usage view that shows what your workspace uses and what it costs.
+- AI advice on approvals, only if you turn it on.
+- Sign-in with your email address, and stronger sign-in protection.
+- A refreshed Studio.
 
-## Planned:
-- [ ] Node Package for Static Assets distribution & version management
-- [ ] New IService interface & Default Implementation as an optional base for Service Interfaces.
+The full list is in the [changelog](~/reference/Changelog.md).
 
-## Achieved:
-- ✅ MudBlazor Integration is now available for Studio Modules
-- ✅ Fluent UI Integration is now available for Studio Modules
-- ✅ FAST Design Integration is now available for Studio Modules
-- ✅ New IDateTimeService interface & Default Implementation for Date/Time Localization.
-- ✅ New IServicesService interface & Default Implementation for service resolution helpers through DI.
-- ✅ New IService interface & Default Implementation as an optional base for Service Interfaces.
-- ✅ .NET 6.0 LTS Update
-- ✅ Studio Layout Localization
-- ✅ Code Editor: Razor Syntax Highlighting 
-- ✅ ML-Based Natural Language Processing Engine
-- ✅ ML-Based eCommerce Recommendation Engine
-- ✅ Template Definitions
-- ✅ ML-Based Spam Detection Engine
-- ✅ In-Studio Live Chat Manager
-- ✅ Code Editor: Diagnostics Highlighting
-- ✅ Workflow Manager Engine (Experimental)
-- ✅ Workflow Visual Designer (Experimental)
-- ✅ ML-Based Language Detection Engine
-- ✅ Fluid Support (Experimental)
-- ✅ Email Template Definitions
-- ✅ Blazor Support (Experimental)
-- ✅ Options & Settings API
-- ✅ .NET SDK
-- ✅ Custom Options Manager
-- ✅ Custom Portal Option Definitions
-- ✅ Virtual SPA Support (Angular/React)
-- ✅ Razor Theming Engine
-- ✅ Live Web Designer Integration
-- ✅ Dynamic Entity Views
-- ✅ Content Live Builder
-- ✅ Custom Controller Definitions
-- ✅ Portal Settings Manager UI
-- ✅ Custom Option Definitions
-- ✅ Custom Service Endpoint Definitions
-- ✅ Custom Web Portal Resources
-- ✅ Alliance Passport Services (Auth Engine)
-    - ✅ TOTP MFA Enabled
-    - ✅ Local Account Support
-    - ✅ Microsoft Identity Integration
-    - ✅ Twitter Identity Integration
-    - ✅ Facebook Identity Integration
-    - ✅ Google Identity Integration
-    - ✅ Azure AD Identity Integration
-    - ✅ Azure AD B2C Identity Integration
-    - ✅ Okta Identity Integration (Preview)
-    - ✅ AWS Cognito Identity Integration 
-    - ✅ Default Identity Management
-- ✅ Module Manager Dashboard
-    - ✅ Trusted Publisher Rules
-    - ✅ Module Assembly Manager
-    - ✅ Managed Module Support
-    - ✅ Unmanaged Module Support
-- ✅ Authentication / User Management / Profile Management
-- ✅ Authorization / Roles Management / Granular Permissions
-- ✅ Blazor Support
-- ✅ Cross-Platform Database Support ( MySQL, MSSQL )
-- ✅ Dynamic CSS/Lazy Loading
-- ✅ Dynamic Page Compositing Model / Site & Page Management
-- ✅ Dynamic Routing
-- ✅ Dynamic Swagger Specs
-- ✅ EF Core Migrations for Database Installation / Upgrade
-- ✅ Enabled for Infinity Comex (eCommerce Extension)
-- ✅ Event Logging / Audit Trail
-- ✅ Extensibility via Custom Modules
-- ✅ Extensibility via Custom Themes
-- ✅ Folder / File Management (Azure Storage, File System)
-- ✅ GraphQl API with Voyager, GraphiQl y GraphQl Playground
-- ✅ Headless API with Swagger Support
-- ✅ HealthCheck Rules with UI Support
-- ✅ i18n Enabled (Based on GeoAPI and Custom Settings)
-- ✅ Improved JavaScript reference support
-- ✅ In-App CLI (Studio Commander)
-- ✅ Infinity Comex Support (ABS' eCommerce Engine)
-- ✅ JavaScript Lazy Loading
-- ✅ Modular Architecture
-- ✅ Multi-Currency Support
-- ✅ Multi-Portal ( Monolith & Microservice Distributed )
-- ✅ Multi-Tenant ( Shared Database & Isolated Database )
-- ✅ Notifications / Email Delivery
-- ✅ Notifications / SMTP Delivery
-- ✅ Progressive Web Application Support
-- ✅ Recycle Bin
-- ✅ REST API with Swagger Support
-- ✅ Scheduled Flows ( Background Processing )
-- ✅ Scheduled Jobs ( Background Processing )
-- ✅ Seamless Upgrade Experience
-- ✅ Slack integration (OAuth)
-- ✅ Support For Additional Authentication Providers (OAuth)
+## Next: 2.5 (planned)
 
-Constant Considerations
+- **Recurring billing.** Subscriptions renew on schedule, with renewal reminders, and recurring payments run through Mercado Pago, Stripe and other payment providers behind one subscription experience.
+- **Usage-based pricing.** Usage beyond your plan's included amounts is measured and billed.
+- **Electronic invoicing in Colombia.** Delivery of electronic invoices to DIAN end to end, once the registration and certification steps with DIAN are complete.
+- **Accounting.** Improved foreign exchange handling, and revenue recognition under IFRS 15.
+- **One checkout.** Marketplace and point-of-sale sales share one checkout path.
+- **The Nucleus apps.** Nucleus Web and Nucleus Desktop, apps on the Alliance Business Suite where your people and your AI agents work together as one organization.
+- **Downloads.** A public downloads page for Nucleus Desktop, starting with Windows, then macOS and Linux.
+- **Content and reach.** Blogs, better email deliverability, and smarter search.
+- **Developers.** SDK 2.5 and a broader integration runtime.
 
-- ✅ Code Annotations
-- ✅ A11y Improvements
-- ✅ i18n Improvements
-- ✅ UI/UX Improvements 
-- ✅ 100% Code Coverage
-- ✅ Security Improvements
-- ✅ SOLID Code Improvements
-- ✅ Performance Improvements 
-- ✅ Scalability Improvements 
-- ✅ Extensibility Improvements 
-- ✅ Generic Integrations Improvements
-- ✅ Developer productivity enhancements
-- ✅ Separation of Concerns Improvements 
-- ✅ Bug fixes & core Dependency Management
+## Later: 2.6 and beyond (planned)
+
+- **Money out.** Payouts, refunds across payment providers, and a credit note and its refund as one action.
+- **Marketplace sellers.** Orders and payouts per seller.
+- **Payroll.**
+- **More countries.** Tax and invoicing profiles for the United States, then Peru.
+- **Proof of documents.** Prove that a signed contract or an issued electronic invoice has not changed since it was issued. Anyone can check it, outside the platform, through a public verification page.
+- **Learning and content.** Grading and quizzes for courses, comments and scheduling for content, and merging duplicate contacts.
+- **Nucleus.** Working together live in Nucleus Desktop, and the mobile app on the same organization model.
+
+Further out, and only after a legal review in each country: stablecoin payments on invoices, crypto holdings as accounts in your books, and course certificates your learners keep in their own wallet. Blockchain features are off by default, switched on per plan and per workspace, and the platform never holds your private keys.
+
+## Long term: the platform's direction (planned)
+
+- **V4: Finance Cloud.** The foundation for businesses that build financial services on the platform: custody, payouts, and moving between currencies and stablecoins through providers you choose, with every outgoing transfer going through an approval and your funds never passing through ours.
+- **V5: Industry clouds.** Solutions for specific industries, such as shipment events shared between importers, carriers and customs in international trade, loyalty and prepaid credits where regulation allows, and pay-per-use for AI agents. Each is built when customers ask for it.
+
+## How this roadmap is kept
+
+- A capability is documented once it is real. Until then it stays here, marked planned.
+- Items move between releases as priorities change. The changelog, not this page, is the record of what shipped.
