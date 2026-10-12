@@ -14,7 +14,7 @@ The Payments service lets you connect your payment provider account, get paid fo
 - **Get paid for an invoice:** create a payment link for one of your invoices, or a payment reference you can print on a document. The payer enters card details on the provider's own checkout. See [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md).
 - **Refund a payment:** return a completed payment through the provider that collected it. Each refund request is sent once. Refunds are available for Stripe and Mercado Pago.
 - **Reconcile outcomes:** list the provider operations whose outcome is not yet confirmed, and ask the provider what became of one.
-- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms. A payment you create here is a record. It does not mark an invoice as paid, and its status is set by the platform, not by the request. A payment can reference only invoices and wallets you own.
+- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms. A payment you create here is a record. It does not mark an invoice as paid, and its status is set by the platform, not by the request. A payment can name only an order your workspace owns, and only an invoice your workspace issued or that was addressed to it.
 
 ## Before you call it
 
