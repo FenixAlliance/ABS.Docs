@@ -1,6 +1,6 @@
 # Installing Modules
 
-On an Alliance Business Suite instance, the instance owner (a root-tenant member) decides which modules are available. Workspaces do not install modules. If your workspace runs on an instance someone else holds, such as ABS Online, ask the instance owner for the modules you need.
+On an Alliance Business Suite instance, the instance owner (a root-tenant member with the owner role) decides which modules each workspace can use, beyond the core set every workspace includes. Workspaces do not install modules. If your workspace runs on an instance someone else holds, such as ABS Online, ask the instance owner for the modules you need.
 
 Alliance Business Suite Modules are .NET Nuget Packages that extend the functionality of the Alliance Business Suite. They can enhance the features of every Alliance Business Suite Component, or add entirely new features to your site. Modules are often developed by third-party organizations.
 
