@@ -1,37 +1,47 @@
 ---
 description: >-
-  To create a new business you will need to be legally authorized to act on the name of that business, as you will need to sign the terms and conditions for our business network on its behalf.
+  Create a workspace for your organization. You become its owner, and its currency, country, language and time zone apply to its records.
 ---
 
-# Business Tenant Accounts
+# Business tenants
 
-Once a user has an Alliance ID account, they will be able to create one or more Business Tenants. There is currently a creation limit of 5 Business Tenants per Alliance ID Holder.
+A workspace holds one organization's records, members and settings. Studio calls a workspace a tenant.
 
-An Alliance ID Holder can request the Alliance support service to raise the tenant quota given the need.
+**Who it is for:** anyone who wants to run an organization on Alliance Business Suite.
 
+**Availability:** any signed-in account can create a workspace, in Studio under **Me** > **Tenants**. What each workspace can use depends on your plan.
 
-# Create a new business account
+## Create a workspace
 
+1. In Studio, open **Me** > **Tenants** and select **Create Business Tenant**.
+2. Under **Basic Information**, enter the **Business Name** and **Legal Name**. You can also enter a **Handler**, the workspace's short unique name, plus an **Email**, **Tax ID**, **DUNS** number and **Website**.
+3. Under **Location**, choose the country and address, then the time zone, language and currency.
+4. Select **Save Changes**. Studio opens your new workspace.
 
- **Prerequisites**: In order for you to follow this tutorial, you need to **make sure you already own an Alliance ID Account**.
+You become the workspace's owner. Your membership holds the Business Owner role, which carries the broadest set of permissions in the workspace.
 
+## The workspace currency
 
-## How to create a business tenant?
+Every workspace has a currency, and its carts and documents use it. The workspace takes its currency in this order:
 
-To [create a business tenant](https://fenixalliance.com.co/Business/MyBusiness/Create), [login to your Alliance ID Account](https://fenixalliance.com.co/Account/SignIn). Make click on your name and select "My Alliance ID Profile" from the dropdown list. This will take you to you [Accounts Principal Page](https://fenixalliance.com.co/ID/Account).
+1. the currency you choose when you create it;
+2. otherwise, the currency of the country you choose, when that country has exactly one currency;
+3. otherwise, the default currency of your instance.
 
-Place your mouse on the right-hand side corner of your screen, over your name and you will see a dropdown list containing your authorized businesses. Then, select "**Create a business**".
+If none of these gives a currency, the workspace is not created and you are asked to choose one.
 
-This step will take you to the Business Creation Form. Fill the form and make sure that you are legally authorized to act on the name of that business, as you will need to provide documentation to support that claim.
+## Rules that apply when you create a workspace
 
-![Business creation form. v1.0.0](~/.attachments/image-82161911-0d3d-4bee-9243-985861717773.png)
+- A handler is unique on the instance. If another workspace already uses the handler you enter, creation is refused and you choose another.
+- Creating a workspace does not wait for a review. It is ready to use as soon as it is saved.
 
-Note that creating a business can sometimes take a few seconds.
+## Work in more than one workspace
 
+Your account can own or belong to several workspaces. **Me** > **Tenants** lists the workspaces you belong to. Each membership has its own roles and permissions, so you can be an administrator in one workspace and a viewer in another.
 
-Once your form has been correctly filled, your business' information will be submitted for review, but your business tenant account will be created successfully and your Alliance ID Holder will be added as the root account for that business.
+To join someone else's workspace, accept their invitation under **Me** > **Invitations**. See [Business users](Business-Users.md).
 
+## Related
 
-You have now successfully created a business tenant account and only your current Alliance ID Account will be able to select it as root.
-
-
+- [Alliance Passport Service](../Alliance-Passport-Service.md)
+- [Security roles](Security-Roles.md)

@@ -1,23 +1,66 @@
-# Security Roles
+---
+description: >-
+  Security roles are named sets of permissions that you grant to workspace members. Use the built-in roles or create your own.
 ---
 
-When an identity is created it may belong to one or more roles. For example, Daniel may belong to the Administrator and User roles, while Ana may only belong to the User role. 
+# Security roles
 
-How these roles are created and managed depends on the backing store of the authorization process. Roles are exposed to the developer through the IsInRole method on the `IAuthService` class.
+A security role is a named set of permissions that you grant to members of a workspace.
 
-You can use roles to delegate access to APS Identities like Account Holders, applications, or services that don't normally have access to your ABS resources. For example, you might want to grant users in your Alliance Business Suite instance access to resources they don't usually have, or grant users in one server instance access to resources in another instance. Or you might want to allow a mobile app to use Alliance Business Suite resources, but not want to embed access keys within the app (where they can be difficult to rotate and where users can potentially extract them). Sometimes you want to give access to users who already have identities defined outside of your server instance, such as in your corporate directory. Or, you might want to grant access to your account to third parties so that they can perform an audit on your resources.
+**Who it is for:** workspace owners and administrators who decide what each member can do.
 
-For these scenarios, you assign them a Security Role that provides the permissions they need. For example, you can assign roles to allow adding or changing users, resetting user passwords, managing user licenses or managing domain names.
+**Availability:** in Studio, under your workspace's **Security** > **Security Roles**. Creating a role requires the Create security roles permission. Changing a role's permissions, or granting a role to a member, requires Manage security roles, and deleting a role requires Delete security roles.
 
-## Default Account Holder permissions
+## How roles work
 
-In [Alliance Passport Services ](~/Capabilities/Alliance-Passport-Service.md), every Account Holder is granted a set of default permissions. An Account Holder’s access consists of the type of user, their role assignments, and their ownership of individual records. This article describes those default permissions and contains a comparison of the member and guest user defaults. The default user permissions can be changed only in user settings in [Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md).
+- A role contains permissions. A member who holds the role can do everything those permissions allow in that workspace.
+- A member can hold several roles. Their access is everything their roles and their direct permissions grant together.
+- Roles only add access. Holding a role never takes away anything another role grants.
+- A role applies only in the workspace where it is granted. The same person can hold different roles in different workspaces.
+- Roles can also be granted to [application identities](../Alliance-Passport-Service.md#application-identities), so automated work gets only the access you choose.
 
-## Member and Guest Account Holders
+## Built-in roles
 
-The set of default permissions received depends on whether the user is a native member of the tenant (member user) or if the user is unrelated to the acting tenant or brought over from another tenant as a guest (guest user). 
+Every workspace includes a catalog of built-in roles. Their names end in **(System)**, and the role details show **Is System Security Role**. You grant built-in roles, but you cannot change their permissions or delete them.
 
-- Member Account Holders can access the [Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md), create and update owned [Alliance Business Model](~/Capabilities/Alliance-Business-Model.md) records, register applications, manage their own profile photo and mobile phone number, change their own password, and invite guests.
+| Group | Roles | Use them for |
+|---|---|---|
+| Owner and administrators | Business Owner, Global Admin, Security Admin | Full or security-wide administration of the workspace. The person who creates a workspace holds Business Owner. |
+| Baseline | Tenant Member | Every person who joins by invitation. It lets them open Studio and use workspace conversations, and nothing more. |
+| Department managers | For example Finance Manager, Sales Manager, HR Manager, Logistics Manager, Marketing Manager, Procurement Manager | Full control of one area of the business. |
+| Department viewers | For example Finance Viewer, Sales Viewer, HR Viewer, Logistics Viewer | Read-only access to one area. |
+| Specialists | For example Accountant, Sales Representative, Cashier, Billing Clerk, Warehouse Operator, Instructor, Recruiter | The tasks of one job. |
+| Portals, stores and support | For example Portal Author, Portal Editor, Store Manager, Store Customer, Support Agent | Access to your portals, stores and support desk. |
 
-- Guest users have restricted permissions. They can manage their own profile, view related records, change their own password and retrieve some information about other users, products, groups, and apps, however, they cannot read Alliance Business Model records. For example, guest users cannot enumerate the list of all users, groups, and other directory objects. Guests can be added to administrator roles, which grant them full read and write permissions contained in the role. Guests can also invite other guests.
+The **Security Roles** page lists the full catalog. Open a role to see the permissions it contains.
 
+## Create a custom role
+
+1. In Studio, open your workspace and go to **Security** > **Security Roles**.
+2. Select **Add Role**.
+3. Enter a **Name** and, optionally, a **Description**.
+4. Select **Create**.
+5. Open the new role from the list and check the permissions it should contain.
+
+A custom role belongs to the workspace that created it. Other workspaces never see it.
+
+## Role details
+
+Open a role from the list to see:
+
+- the permissions the role contains;
+- the application identities that hold it;
+- the members that hold it.
+
+You can delete a custom role from its details page with **Delete**. Built-in roles cannot be deleted.
+
+## Grant a role to a member
+
+You grant roles from the member's membership page. See [Grant roles and permissions to a member](Business-Users.md#grant-roles-and-permissions-to-a-member).
+
+No one can grant a built-in role to their own membership. Every grant and revocation is recorded in the workspace's **Security Logs**.
+
+## Related
+
+- [Business permissions](Business-Permissions.md)
+- [Business users](Business-Users.md)

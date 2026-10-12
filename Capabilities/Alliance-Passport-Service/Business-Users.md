@@ -1,69 +1,72 @@
-# Working with Business Users in the Alliance Business Suite
+---
+description: >-
+  Invite people to a workspace, then grant each member the roles and permissions they need.
+---
 
-The Alliance Business Suite includes a powerful Identity and Access Management engine called Alliance Passport System ("APS"). The APS's main function is to provide fine-grained access management over ABS resources. Using APS, you can segregate duties within your business and grant only the amount of access to users that they need to perform their jobs.
+# Business users
 
-Also, though the APS API is provided with every ABS instance, external applications can retrieve permissions for any given Business User.
+A business user is a person who belongs to a workspace. You invite people by email, and each person who accepts gets a membership that carries their roles and permissions in that workspace.
 
-## Understanding the difference between an Account Holder ("User") and a Business Profile Record ("BPR").
+**Who it is for:** workspace owners and administrators who manage who can do what.
 
-Account Holders are **Identity Users**, which means that an Account Holder is used to authenticate requests to the Alliance Business Platform, either from the Studio, a Portal, or any external application.
+**Availability:** in Studio, in the workspace's **Enrollments** pages. Inviting people requires the Manage tenants permission. Granting roles requires Manage security roles, and granting individual permissions requires Manage security permissions. The Business Owner and Global Admin roles include all three.
 
-Meanwhile, Business Profile Records are **Authorization Users**, meaning that records of such type are **used to grant Security Roles/Permissions to Account Holders over a given Business Tenant**. 
+## Accounts and memberships
 
-This structure is extremely flexible, as it allows users to have a single Identity Account with separate access specifications over different Business Tenants hosted on the same Alliance Business Suite instance.
+An account identifies a person across the whole instance. A membership, shown in Studio as an enrollment, connects that account to one workspace.
 
-Account Holders are created when users (either internal users or external parties) create an account on a Web Portal. By default, Account Holders have no Business Profile Records, which means they can perform no direct actions over any Business Tenant present in the Alliance Business Suite instance.
+- An account with no membership in your workspace can do nothing in it.
+- One account can hold memberships in several workspaces, each with different access.
+- Roles and permissions are granted to the membership, so access in one workspace never carries over to another.
 
-Nevertheless, Account Holders have a limited set of configurable permissions over their owned data, such as those required for GDPR and other regulations around data privacy and ownership. These permissions are sufficient for users to perform actions such as querying their Cart, create and read Orders, change their password, update their profile, enable TOTP MFA, Comment on posts, Follow/Unfollow Business Tenants and/or other Account Holders, and more.
+## Invite a person
 
-## Creating a Business Profile Record.
+1. In Studio, open your workspace and go to its **Create User Enrollment** page. From any member's details page, select **Add new user** to reach it.
+2. Under **Invite a User to** your workspace, type or paste the person's email address.
+3. Select **Create Invitation**. The person receives an email with the invitation.
 
-In order to create a new Business Profile Record, an Account Holder and the Business Tenant over which the Profile will be created should already exist on your Alliance Business Suite instance.
+The page lists **Your Invitations**. To withdraw an invitation that has not been accepted, select **Delete** next to it.
 
-If the Account Holder does not exist, you can create it through the Studio and then send an Account Invitation to any CRM Individual or really, to any external user out there in the wild.
+## Accept an invitation
 
-Once the Account Holder exists, login to the Studio using your Account Holder Credentials. this account should, at the very least, have the `studio_access`, `view_users`, `view_enrollments`,  and the `create_enrollments` permission over the selected Business Tenant to create the Profile Business Record scoped into it.
+1. Sign in, or create an account with the email address the invitation was sent to.
+2. In Studio, open **Me** > **Invitations**.
+3. Under **My Enrollment Invitations**, select **Accept**, or **Decline** if you do not want to join.
 
-Once signed into your desired Business Tenant:
+Only the person the invitation was sent to can accept it. When they accept, they join the workspace with the Tenant Member role, which lets them open Studio and use workspace conversations. Everything else needs a role or permission an administrator grants. The person who sent the invitation receives an email when it is accepted.
 
-1. Head to your tenant's Administrator Dashboard 
-2. Click Users 
-3. View All 
-4. Select the desired Account Holder 
-5. Click on the {Business Name}'s Enrollment Tab  
-6. Click on the "Create Enrollment on {Business Name}" button.
+## Invitations from a verified domain
 
-Once the Business Profile Record gets created, it will be created as a disabled record. This means that even when Account Holders should now be able to see the new Business Profile Record on its profile, they won't yet be able to act as the Business Tenant. 
+When your workspace has a verified email domain, under its **Security** > **Domains**, a person who signs in with an address on that domain receives an invitation to your workspace automatically. They still choose whether to accept it. An unverified domain never produces invitations.
 
-By enabling, disabling an Account Holder's Business Profile Record over a certain Business Tenant, you will ensure that no matter the permissions granted to that user, he/she won't be able to perform any action other than viewing that Business Tenant's Public Profile. This feature is useful to restrict Account Holder Permissions over a Business Tenant in cases where access needs to be restricted, but Business Profile Records need to be preserved. (e.g: When Business Collaborators are on vacation, and over their return access should be restored)
+## Grant roles and permissions to a member
 
-## Granting Security Roles/Permissions to Business Profile Records
+1. In Studio, open your workspace's **Enrollments** page.
+2. Find the member under **User Enrollments** and select **View**.
+3. On **Edit Enrollment**, the **Roles** grid lists the workspace's roles. Check a role to grant it, or clear it to revoke it.
+4. The **Permissions** grid works the same way for individual permissions.
 
-Granting Security Roles is a rather straightforward process once the Business Profile Record exists. To do so, acting as a Business Tenant, Head to a User's Profile on your Business Tenant's Admin Section and click on {Business Nane}'s Enrollment.
+A role is usually the better choice: you maintain the set of permissions once, in the role, and every member who holds it follows. See [Security roles](Security-Roles.md) and [Business permissions](Business-Permissions.md).
 
-There, you will be able to create a Business Profile Record if does not exists for that particular user, and by checking/unchecking Roles and Permissions from their respective grids.
+## Rules that protect access
 
-It is important to note that you will only be able to grant as much as the same level of permissions you're granted over the acting Business Tenant, and for that, you will need to have at the very least the following permissions (or a role that contains them):
+- **You cannot grant built-in access to yourself.** No one can grant a built-in role or permission to their own membership. Another administrator must do it.
+- **Built-in roles stay as they are.** You grant built-in roles, but you cannot change which permissions they contain.
+- **Every change is recorded.** Each role or permission granted to or revoked from a member is written to the workspace's **Security Logs**, with who made the change and when.
+- **A disabled membership cannot act.** The **User Enrollments** list shows which memberships are the owner, an administrator or disabled. A disabled membership keeps its history but cannot act in the workspace.
 
-- 1. To Grant/Revoke Roles:
-    - "create_role_grants" 
-    - "delete_role_grants" 
+## Positions
 
-- 2. To Grant/Revoke Permissions:
-    - "create_permission_grants" 
-    - "delete_permission_grants" 
+Positions describe your organization chart. In Studio they are under your workspace's **Organization** > **Positions**.
 
+- A position belongs to a department and has a capacity, the number of people who can hold it at the same time.
+- Each assignment records when it starts and ends, and ended assignments are kept as history.
+- A position cannot be deleted while someone holds it.
 
+Holding a position grants no permissions. Access always comes from roles and permissions on the membership.
 
+## Related
 
-
-
-
-
-
-
- 
-
-
-
-
+- [Alliance Passport Service](../Alliance-Passport-Service.md)
+- [Business tenants](Business-Tenants.md)
+- [Workforce](../Workforce.md)

@@ -1,73 +1,108 @@
-# OAuth 2.0 and OpenID Connect protocols on the Alliance Passport Service
+---
+description: >-
+  Reference for the OAuth 2.0 and OpenID Connect flows, endpoints, scopes and token lifetimes that apps use to sign people in to Alliance Business Suite.
+---
 
-The Alliance Passport Service implements authentication and authorization with industry-standard protocols such as:
+# Connect protocols
 
-- OpenID Connect (OIDC) 
-- OAuth 2.0.
+Alliance Passport Service is an OAuth 2.0 and OpenID Connect authorization server. Your apps use it to sign people in and to call the platform's APIs on their behalf.
 
-APS offers built-in support for all the standard flows defined by the OAuth 2.0 and OpenID Connect core specifications: 
+**Who it is for:** developers who build web, mobile, desktop, command-line or AI apps that connect to Alliance Business Suite.
 
-- Authorization code flow
-- Implicit flow
-- Hybrid flow (which is basically a mix between the first two flows)
-- Resource owner password credentials grant
-- Client credentials grant (turned off from 2.4)
+**Availability:** every instance. A workspace administrator registers each app in Studio, which requires the Create OAuth applications permission.
 
-The information here will be useful if you choose to write your code by directly sending and handling HTTP requests or using a third-party open-source library, rather than using one of our open-source SDKs.
+## Supported flows
 
-**Note**: While the service is standards-compliant, there can be subtle differences between any two implementations of these protocols. 
+| Flow | Use it for |
+|---|---|
+| Authorization code with PKCE | Web, mobile, desktop and single-page apps where the person signs in through a browser. This is the recommended flow. |
+| Device authorization | Apps on devices without a convenient browser, such as command-line tools. The person approves the sign-in on another device. |
+| Refresh token | Getting a new access token without asking the person to sign in again. Request the `offline_access` scope to receive one. |
 
-# The basics
-In nearly all OAuth 2.0 and OpenID Connect flows, there are four parties involved in the exchange:
+The implicit flow is not offered. The authorization endpoint also accepts the hybrid flow for apps that already depend on it.
 
-- The Authorization Server is the Alliance Passport Service and is responsible for ensuring the user's identity, granting and revoking access to resources, and issuing tokens. The authorization server is also known as the identity provider - it securely handles anything to do with the user's information, their access, and the trust relationships between parties in a flow.
-- The Resource Owner is typically the end-user. It's the party that owns the data and has the power to allow clients to access that data or resource.
-- The OAuth Client is your app, identified by its application ID. The OAuth client is usually the party that the end-user interacts with, and it requests tokens from the authorization server. The client must be granted permission to access the resource by the resource owner.
-- The Resource Server is where the resource or data resides. It trusts the Authorization Server to securely authenticate and authorize the OAuth Client and uses Bearer access tokens to ensure that access to a resource can be granted.
+### Rules every client follows
 
-# App registration
+- **PKCE uses S256 only.** The `plain` method is refused. Public clients, such as mobile and single-page apps, must use PKCE.
+- **Sign-in controls always apply.** The person signs in on the platform's own sign-in page, so two-factor authentication, lockout and external providers work as they do in Studio.
+- **Two-factor accounts need a browser flow.** The password grant has no second-factor step, so it refuses every account with two-factor authentication on, with the same error a wrong password gives. Use the authorization code flow instead.
 
-Every app that wants to connect to the Alliance Passport Service must be registered through the App registrations experience in the Alliance Business Studio before it can sign these users in using OAuth 2.0 or OpenID Connect. The app registration process will collect and assign a few values to your app:
+### Machine-to-machine sign-in
 
-- An Application ID that uniquely identifies your app
-- A Redirect URI (optional) that can be used to direct responses back to your app
-- A few other scenario-specific values.
+From 2.4, machine-to-machine sign-in is turned off. The client-credentials endpoint `POST /api/v2/OAuth/Token` is off by default, and the platform has no other way yet for a service to sign in without a user. If your integration signs in as a service, contact us before you upgrade. See the [changelog](../../reference/Changelog.md).
 
-For more details, learn how to register an app.
+## Endpoints
 
-# Endpoints
-Once registered, the app communicates with the Alliance Passport Service by sending requests to the endpoint:
+Replace `https://<your-instance>` with the address of your Alliance Business Suite instance.
 
+| Endpoint | Address |
+|---|---|
+| Discovery document | `https://<your-instance>/.well-known/openid-configuration` |
+| Authorization | `https://<your-instance>/connect/authorize` |
+| Token | `https://<your-instance>/connect/token` |
+| User information | `https://<your-instance>/connect/userinfo` |
+| Sign-out | `https://<your-instance>/connect/logout` |
+| Device authorization | `https://<your-instance>/connect/device` |
+| Device verification | `https://<your-instance>/connect/verify` |
+| Token revocation | `https://<your-instance>/connect/revoke` |
 
-|Service Provider| Endpoints |
-|----------------|-----------|
-| ABS Online     | https://fenix-alliance.com/connect/authorize <br> https://fenix-alliance.com/connect/token |
-| ABS Server     | https://{server-endpoint}/connect/authorize <br> https://{server-endpoint}/connect/token   |
+Read the discovery document at start-up instead of hard-coding addresses. It lists the endpoints, flows, scopes and signing keys your instance uses.
 
+AI assistants that connect through the Model Context Protocol find the authorization server from `https://<your-instance>/.well-known/oauth-protected-resource/mcp`.
 
+## Scopes
 
-# Tokens
-OAuth 2.0 and OpenID Connect make extensive use of bearer tokens, generally represented as JWTs (JSON Web Tokens). A bearer token is a lightweight security token that grants the "bearer" access to a protected resource. In this sense, the "bearer" is **anyone that gets a copy of the token**. Though a party must first authenticate with the Alliance Passport Service to receive the bearer token, if the required steps are not taken to secure the token in transmission and storage, it can be intercepted and used by an unintended party.
+| Scope | What it gives your app |
+|---|---|
+| `openid` | Signs the person in and returns an ID token. |
+| `profile` | The person's basic profile, such as their name. |
+| `email` | The person's email address. |
+| `roles` | The person's roles. |
+| `offline_access` | A refresh token. |
+| `abs_api` | Access to the platform's APIs. |
 
-While some security tokens have a built-in mechanism for preventing unauthorized parties from using them, bearer tokens do not have this mechanism and must be transported in a secure channel such as transport layer security (HTTPS). If a bearer token is transmitted over plain HTTP, a malicious party can use a man-in-the-middle attack to acquire the token and use it for unauthorized access to a protected resource. 
+An access token is always limited to what the person's membership grants in the workspace you call. A token can narrow that access but never widen it. See [Business permissions](Business-Permissions.md).
 
-The same security principles apply when storing or caching bearer tokens for later use. Always ensure that your app transmits and stores bearer tokens in a secure manner. For more security considerations on bearer tokens, see [RFC 6750 Section 5](https://datatracker.ietf.org/doc/html/rfc6750).
+## Token lifetimes
 
-There are primarily 3 types of tokens used in OAuth 2.0 / OIDC:
+These are the defaults. Your instance administrator can change them.
 
-- Access tokens - tokens that a resource server receives from a client, containing permissions the client has been granted.
-- ID tokens - tokens that a client receives from the authorization server, used to sign in a user and get basic information about them.
-- Refresh tokens - used by a client to get new access and ID tokens over time. These are opaque strings and are only understandable by the authorization server.
+| Token | Default lifetime |
+|---|---|
+| Access token | 60 minutes |
+| ID token | 60 minutes |
+| Refresh token | 14 days |
+| Authorization code | 5 minutes |
+| Device code and user code | 15 minutes |
 
-# External resources
+To end access early, revoke the refresh token at the revocation endpoint. A revoked refresh token is refused when it is presented again.
 
+## Register an app
+
+A workspace administrator registers your app in Studio, in the workspace's Security module, under its OAuth applications. Registration records:
+
+- the **Client ID** that identifies your app, and a **Client Secret** for apps that can keep one confidential;
+- the **Redirect Uris** the authorization server may send the person back to;
+- the **Permissions**, which control the endpoints and flows the app may use;
+- the **Requirements**, such as PKCE;
+- the **Consent Type**, which decides whether the person sees a consent screen.
+
+| Consent type | What the person sees |
+|---|---|
+| Explicit | A consent screen the first time, and again when the app asks for it. |
+| Systematic | A consent screen every time. |
+| Implicit | No consent screen. Use it only for your organization's own apps. |
+| External | No consent screen. An administrator approves the app in advance, and sign-in is refused until they do. |
+
+The workspace's Security module also lists the authorizations people have given to each app.
+
+## Keep tokens safe
+
+Access and refresh tokens are bearer tokens: whoever holds one can use it. Send them only over HTTPS, keep them out of URLs and logs, and store them in the device's secure storage. Treat access tokens as opaque values and do not parse them in your app.
+
+## Related
+
+- [REST API development](../../Web-API-Development/REST-API-Development.md)
+- [Account holders](Account-Holders.md)
 - [OAuth 2.0 specification](https://datatracker.ietf.org/doc/html/rfc6749)
-- [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html)
-
-
-
-
-
-
-
-
+- [OpenID Connect Core specification](https://openid.net/specs/openid-connect-core-1_0.html)

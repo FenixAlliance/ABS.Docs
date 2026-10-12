@@ -1,66 +1,73 @@
-# Introduction to Account Holder Entities
+---
+description: >-
+  Your account is the identity you sign in with. It is identified by your email address and works across Studio, portals and stores on your instance.
+---
 
-An Account Holder is a CredentialsPrincipal for the APS Engine. It represents a human user identified by a username/password. (Unless using some kind of federated identity service like Microsoft Entra ID, Google, Facebook, Microsoft Identity, etc...)
+# Account holders
 
-The "Credentials" aspect of APS Identity and Access Management (IAM) helps you with the question "Who is that user?", often referred to as authentication. Instead of sharing your root user credentials with others, you can create individual Account Holders within your instance that correspond to users in your organization. 
+Your account is the identity you sign in with, identified by your email address.
 
-In the following figure, the users Sebastien, Fernando, Camila, Alejandro, Ana, and Julianna have been added to a single ABS Instance. Each Account Holder will have their own credentials.
+**Who it is for:** everyone who signs in to Alliance Business Suite, from workspace administrators to customers of a store or portal.
 
-## First-time access only: Your root user credentials
-When you create an ABS Instance, you create an APS Account Holder root identity, which you will use to sign in to the instance. You can sign in to the ABS Studio and the ABS Portal Admin using this root user identity; that is, the email address and password that you provided when installing the instance. This combination of your email address and password is also called your root user credentials.
+**Availability:** every instance. The sign-in options you see depend on how your instance administrator has configured it.
 
-When you use your root user credentials, you have complete, unrestricted access to all resources in your ABS instance, including access to your billing and licensing information and the ability to change your password and set multi-factor authentication. This level of access is necessary when you first set up your account. However, **we recommend that you don't use root user credentials for everyday access**. We especially recommend that you do not share your root user credentials with anyone because doing so gives them unrestricted access to your instance.
+## One account per email address
 
-We recommend that you create an Account Holder for yourself and then assign yourself administrative permissions for your account. You can then sign in as the new user to add more users and transact over resources as needed.
+Each email address belongs to exactly one account. You use that email address to sign in, and it cannot be registered a second time, whether through the registration form or through an external sign-in provider.
 
-The following sections explain how you can use APS to create and manage user identity and permissions to provide secure, limited access to your ABS instance, both for yourself and for others who need to work with your ABS instance.
+The same account signs you in to Studio and to the portals and stores that run on your instance. What you can do in a workspace comes from your membership in it, not from the account. See [Business users](Business-Users.md).
 
-# Create an Account Holder
+## Create an account
 
-## Creating an Account through a local account.
------------------------------- ----------------------
-Account Holders are not unrelated records; they are users within your ABS Portals, Contacts within your CRM, Students within your LMS, Account Owners within your Accounting Management Engine, Business Employees within a given Business Tenant, and much more.
+1. On the sign-in page, select **Create an account**.
+2. Enter your first name, last name, display name, work email and a password, then confirm the password.
+3. If someone gave you an invite code, enter it in **Invite code**. It is optional.
+4. Select **Create account**.
+5. Open the confirmation email and follow its link to confirm your email address.
 
-Each Account Holder can have their own password for access to the ABS. 
+By default, you confirm your email address before your first sign-in.
 
-By default, ABS Portals are configured to allow Guest Users and Customer Users. These Guest Users are unauthenticated portal visitors granted with a limited set of permissions, like `store_read`, `cart_view`, `cart_update`, while Customer Accounts are allowed for more extensive permissions such as `account_read`, `account_delete`, `account_update`, `wallet_read`, and others.
+## Sign in
 
-If the Enable New User Option is marked to true, Guest Users can quickly create and manage their Account Holder credentials by themselves. The APS Engine is configured to allow local or federated accounts by enabling and configuring additional identity providers such as Google, Facebook, Microsoft, LinkedIn, Twitter, and more. The sign-in options you see depend on which providers your instance administrator has enabled.
+1. On the sign-in page, enter your **Email** and **Password**.
+2. To stay signed in on this device, select **Keep me signed in on this device**.
+3. Select **Log in**.
+4. If two-factor authentication is on for your account, enter the code from your authenticator app and select **Verify**.
 
+## Sign-in controls
 
-![When creating a local account, you will be asked to verify your email address through a code.](~/.attachments/image-79a1abf3-4957-4c4f-aae8-5df764ebcc72.png)
+These controls apply to every way of signing in, including apps that sign you in through the platform.
 
-The IAM module contains all the access logic to the Alliance ID account, It is composed of roles capable of assuming a certain set of permissions to act on behalf of a Business Tenant.
+- **Two-factor authentication.** When you turn on [two-factor authentication](Account-Holders/Multi%252Dfactor-Authentication.md), a correct password is never enough on its own. Every sign-in also needs a code from your authenticator app or one of your single-use recovery codes.
+- **Lockout.** Repeated failed sign-in attempts lock the account. The sign-in page then shows **Account temporarily locked**, and you can try again after a few minutes.
+- **No account hints.** A wrong email address and a wrong password produce the same message, so the sign-in page never reveals whether an account exists.
 
-![image.png](~/.attachments/image-e958c1ab-1f3e-4219-9b64-36df68784c32.png)
+## Sign in with a link sent to your email
 
-## Federating existing users
-If the users in your organization already have a way to be authenticated, such as by signing in to your corporate network, you don't have to create separate IAM users for them. Instead, you can federate those user identities into the APS Engine.
+If your instance administrator turns it on, the sign-in page shows **Email me a sign-in link**. The link signs you in once and expires after a short time. If your account has two-factor authentication on, you still enter your authenticator code after you open the link.
 
-**Federation is particularly useful in these cases:**
+## Sign in with an external provider
 
-If your corporate directory is Microsoft Active Directory, you can use Microsoft Entra ID to establish trust between your corporate directory and your ABS instance.
+Your instance administrator decides which external sign-in providers appear on the sign-in page. Common choices are Google, Microsoft, Apple, GitHub, LinkedIn and Facebook. Each provider appears as a **Continue with** button.
 
-**Your users already have Internet identities**: If you are creating a mobile app or web-based app that can let users identify themselves through an Internet identity provider like Login with Amazon, Facebook, Google, or any OpenID Connect (OIDC) compatible identity provider, the app can use federation to access ABS resources. For more information, see About web identity federation. The sign-in options you see depend on which providers your instance administrator has enabled.
+When you sign in with a provider for the first time, you confirm the email address the account will use. An external sign-in never creates a second account for an email address that already has one.
 
-## Enabling supported identity providers
+An account created through an external provider has no password. You can add one later from your account settings, so you can still sign in if the provider is unavailable.
 
-To enable an external identity provider into your Alliance Business Suite instance you'll need to use the following topics to configure your instance to use the respective providers:
+## Manage your account
 
-![image.png](~/.attachments/image-34197a3a-8c2d-4234-88c4-f882cb4ed7ba.png)
+Your account settings let you:
 
-### Optionally set password
-When you register with an external login provider, you don't have a password registered with the app. This alleviates you from creating and remembering a password for the site, but it also makes you dependent on the external login provider. If the external login provider is unavailable, you won't be able to sign in to the website.
+- edit your profile, email address and phone number;
+- change or reset your password;
+- turn two-factor authentication on or off and generate new recovery codes;
+- add or remove external sign-ins;
+- sign out.
 
-To create a password and sign in using your email that you set during the sign-in process with external providers:
-Select the Hello <email alias> link at the top-right corner to navigate to the Manage view.
+If you forget your password, see [Password recovery](Account-Holders/Password-Recovery.md).
 
+## Related
 
-### Creating your Alliance ID through an identity provider: \(e.g. Amazon, Facebook, LinkedIn, Google...\)
------------------------------------------------------------- -------------------------------------------
-If you don’t already have an Alliance ID account, you can get it for free by using those accounts that you already own and use \(like your social media accounts\). For this matter, you will need to select the identity provider of your choice when you [create your Account Holder](https://fenixalliance.com.co/Account/SignIn). The sign-in options you see depend on which providers your instance administrator has enabled.
-
-
-You will need to log in to your Alliance ID account through your chosen identity provider to get access to your account and resources.
-
-![Enabled Identity Providers](~/.attachments/image-a85a71aa-0553-47b3-bde4-0f2a7cb8b220.png)
+- [Alliance Passport Service](../Alliance-Passport-Service.md)
+- [Business tenants](Business-Tenants.md)
+- [Connect protocols](Connect-protocols.md)
