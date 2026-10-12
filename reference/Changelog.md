@@ -27,6 +27,10 @@ These changes are complete and verified, and they reach you with the next releas
 - **Archive notifications.** In the Tools inbox you can archive and unarchive notifications, one at a time or a whole page, and switch to an Archived view. Archiving is per reader and never deletes anything.
 - **AI advice on approvals, only if you turn it on.** Advice is off by default. An approvals manager opts the workspace in after seeing exactly which provider and model would be used and which approval fields are shared. Any later change to those suspends advice until the workspace confirms again, and opting out hides advice at once.
 - **See what your workspace uses, and what it costs.** A new usage view in Studio shows your workspace's usage and its cost, and administrators can set limits on it.
+- **Order numbers, and orders from quotes.** Every order gets a number in your own series, for example ORD-000123, that cannot be edited. You can place an order directly from a quote you received while the quote is open and not expired.
+- **Selling courses.** Buying a course enrolls the buyer, a free course goes through a checkout at no cost, and a full refund ends the enrollment. Each enrollment shows as active, completed or revoked.
+- **Banners.** Create banner sets in Studio and place them on your site's pages and posts. A visitor who clicks a banner is taken to its link.
+- **Invoice-number range health.** Your invoice-number ranges show when they are expiring or nearly used up, and your billing administrators are notified when a range is used up.
 
 ### Changed
 
@@ -35,6 +39,8 @@ These changes are complete and verified, and they reach you with the next releas
 - **Studio has a new look**, built on the latest version of its design system, and its pages now load their data through the platform's API.
 - **Grids now show names instead of raw identifiers**, so a related record reads as its name, not a code.
 - **Every document keeps its own currency.** The platform no longer falls back to US dollars anywhere a document has a currency of its own.
+- **New workspaces choose their currency.** When you create a workspace you pick its currency, and its carts and documents use it.
+- **Approvals are always decided by a person.** An approver must be a person, not an automated account, and each approver holds one seat per approval stage.
 - The order summary now shows the workspace, the total and the date, and the sales and logistics pages use consistent icons.
 - **For developers: Mercado Pago card routes.** `PUT /api/v2/Integrations/MercadoPago/Cards/Update` is retired and answers `410 Gone` with a link to its successor, `PUT .../Cards/UpdateByToken`, which updates a saved card from a Mercado Pago card token (`customerId` and `cardId` in the query). `PUT .../Cards/Delete` now takes `customerId` and `cardId` in the query and answers `400` when either is missing.
 - **For developers: retired payment routes.** These routes now answer `410 Gone` with a `Deprecation` header and a `Link` to their successor. None of them reads a request body.
