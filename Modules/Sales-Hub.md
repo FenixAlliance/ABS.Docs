@@ -27,11 +27,14 @@ A typical sale moves from a deal unit to a quote, from the quote to an order, an
 
 ## Price lists
 
-Use a price list to set the price your customers pay for each item. Price lists are created through the API today. To add prices to a price list:
+Use a price list to set the price your customers pay for each item.
 
 1. On the Sales Hub home page, select **Price Lists**.
-2. Open the price list from the grid. Under **Create Price**, choose the **Item**, enter the **Price**, choose its **Currency** and, if you sell the item in units, its **Unit Group** and **Default Unit**.
-3. Select **Save**. The price appears under **Existing Prices**. Repeat for each item.
+2. In the price lists grid, select **Add**. The **Create Price List** page opens with the form in a dialog.
+3. Enter a **Name** and a **Description**, choose a **Currency**, and optionally a **Unit Group** and **Unit**.
+4. Select **Create Price List**. The new price list opens.
+5. Under **Create Price**, choose the **Item**, enter the **Price**, choose its **Currency** and, if you sell the item in units, its **Unit Group** and **Default Unit**.
+6. Select **Save**. The price appears under **Existing Prices**. Repeat for each item.
 
 To change a price, select it under **Existing Prices**, edit it and select **Save**.
 

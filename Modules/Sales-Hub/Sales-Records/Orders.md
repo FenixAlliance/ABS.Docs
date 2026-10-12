@@ -18,7 +18,7 @@ An order reaches your **Orders** in one of three ways:
 
 Every order gets a number in your own series as soon as it is created, for example **ORD-000123**. Your series starts at ORD-000001 and counts up by one for each new order. The number cannot be edited, and an order is never renumbered.
 
-The number appears in the order preview and in your customer's list of orders in their wallet, so you and your customer can refer to the same order by the same number.
+The number appears in your **Orders** grid, in the order preview and in your customer's list of orders in their wallet, so you and your customer can refer to the same order by the same number.
 
 ## Create an order
 
@@ -77,7 +77,7 @@ See [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md) for the
 ## Send or preview an order
 
 - To see the order as your customer sees it, open the actions menu and select **Preview Order**.
-- To email it, select **Send Email**, enter the recipient's **Email**, and select **Submit**.
+- To email it, select **Send Email**, enter the recipient's **Email**, and select **Submit**. The email's link opens the order in the receiving workspace's wallet after sign-in.
 
 ## Close an order
 

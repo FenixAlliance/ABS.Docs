@@ -11,9 +11,9 @@ A quote offers your prices to a customer for a set period, and your customer can
 1. **You create the quote**, add its lines and set how long it is valid.
 2. **You send it** by email, or share it.
 3. **Your customer places the order** from the quote while it is open and not expired. The quote becomes **Accepted**, and the order appears in your **Orders** with the next number in your series.
-4. **You close the quote** when it no longer applies. A closed quote cannot be ordered. You can reopen it to edit it again.
+4. **You close the quote** when it no longer applies. A closed quote cannot be ordered. You can reopen it if you need to.
 
-A quote's status is **Draft**, **New**, **Accepted**, **Declined** or **Expired**. Closing a quote sets its status to **Expired**.
+A quote's status is **Draft**, **New**, **Accepted**, **Declined** or **Expired**.
 
 ## Create a quote
 
@@ -53,7 +53,7 @@ On the quote's page you can:
 2. In the actions menu, select **Send Email**.
 3. Check the email preview, enter the recipient's **Email**, and select **Submit**.
 
-Your customer opens the quote in their workspace: **Wallet**, then **Quotes**.
+The customer receives the quote by email with a link that opens it in their workspace's wallet after sign-in.
 
 To share the quote another way, select **Share Quote**. You can share its link or create a QR code for it.
 
@@ -75,7 +75,7 @@ The order cannot be placed when the quote is closed, has expired, or was already
 1. Open the quote.
 2. In the actions menu, select **Close Quote** and confirm with **Close**.
 
-A closed quote cannot be changed or ordered. To edit a closed quote again, select **Reopen Quote**.
+Closing a quote stops changes and ordering. Select **Reopen Quote** to open it again; your customer can then place the order while it is in date.
 
 ## Delete a quote
 
