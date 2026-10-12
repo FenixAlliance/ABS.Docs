@@ -15,6 +15,7 @@ This page shows where the Alliance Business Suite is heading. Everything below t
 - AI advice on approvals, only if you turn it on.
 - Sign-in with your email address, and stronger sign-in protection.
 - A refreshed Studio.
+- Nucleus Web, the web app where your people and your AI agents work together in your workspace.
 
 The full list is in the [changelog](~/reference/Changelog.md).
 
@@ -25,8 +26,9 @@ The full list is in the [changelog](~/reference/Changelog.md).
 - **Electronic invoicing in Colombia.** Delivery of electronic invoices to DIAN end to end, once the registration and certification steps with DIAN are complete.
 - **Accounting.** Improved foreign exchange handling, and revenue recognition under IFRS 15.
 - **One checkout.** Marketplace and point-of-sale sales share one checkout path.
-- **The Nucleus apps.** Nucleus Web and Nucleus Desktop, apps on the Alliance Business Suite where your people and your AI agents work together as one organization.
+- **Nucleus Desktop.** The desktop app on the Alliance Business Suite, alongside Nucleus Web, where your people and your AI agents work together as one organization.
 - **Downloads.** A public downloads page for Nucleus Desktop, starting with Windows, then macOS and Linux.
+- **Proof of documents.** Prove that a signed contract or an issued electronic invoice has not changed since it was issued. Anyone can check it, outside the platform, through a public verification page.
 - **Content and reach.** Blogs, better email deliverability, and smarter search.
 - **Developers.** SDK 2.5 and a broader integration runtime.
 
@@ -36,10 +38,11 @@ The full list is in the [changelog](~/reference/Changelog.md).
 - **Marketplace sellers.** Orders and payouts per seller.
 - **Payroll.**
 - **More countries.** Tax and invoicing profiles for the United States, then Peru.
-- **Proof of documents.** Prove that a signed contract or an issued electronic invoice has not changed since it was issued. Anyone can check it, outside the platform, through a public verification page.
 - **Learning and content.** Grading and quizzes for courses, and comments and scheduling for content.
 - **Contacts.** Merging duplicate contacts.
-- **The Nucleus apps.** Working together live in Nucleus Desktop, and the mobile app on the same organization model.
+- **The Nucleus apps.** Nucleus Mobile, the phone app with nearly the same features as Nucleus Web and Nucleus Desktop, and working together live in Nucleus Desktop.
+
+Further out, and only after a legal review in each country: stablecoin payments on invoices, crypto holdings as accounts in your books, and course certificates your learners keep in their own wallet. Blockchain features are off by default, switched on per plan and per workspace, and the platform never holds your private keys.
 
 ## Long term: the platform's direction (planned)
 

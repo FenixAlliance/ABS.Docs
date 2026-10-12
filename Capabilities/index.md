@@ -38,4 +38,4 @@ The capabilities coexist because they rest on five enduring **platform foundatio
 - **[Alliance Business Platform (ABP)](~/Capabilities/Alliance-Business-Platform.md)** — integration: storage providers, messaging, and the GraphQL and SignalR surfaces. (REST and MCP are served from ABS itself.)
 - **[Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md)** — operations: the cockpit where you run, shape, and extend your implementation.
 
-The mobile experience lives in **[Alliance Business Pocket](~/Capabilities/Alliance-Business-Pocket.md)**. For the full story, see **[The platform](~/get-started/The-Platform.md)**.
+The mobile app, **[Nucleus Mobile](~/Capabilities/Alliance-Business-Pocket.md)**, is coming. For the full story, see **[The platform](~/get-started/The-Platform.md)**.

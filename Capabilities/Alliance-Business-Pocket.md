@@ -1,8 +1,9 @@
-# Use the Alliance Business Pocket as a Mobile Application Framework (Experimental)
+# Nucleus Mobile
 
-Alliance Business Suite Mobile Apps is a set of client and server libraries aimed to create mobile/desktop applications that integrate to the Alliance Business Suite using Blazor on .NET MAUI.
+Nucleus Mobile is the phone app for the Alliance Business Suite. It is coming: it is not available in app stores yet.
 
-Currently, we support:
+When it ships, Nucleus Mobile brings nearly the same features as Nucleus Web and Nucleus Desktop to your phone, on the same workspace, people and permissions. Your work stays in one business: you can start a task in one app and continue it in another.
 
-- .NET + Blazor on the server-side (for security)
-- .NET MAUI + Blazor Client-side (Access to Native APIs)
+Until then, use Nucleus Web or Studio in your phone's browser.
+
+See the [roadmap](~/get-started/Roadmap.md) for what is planned.

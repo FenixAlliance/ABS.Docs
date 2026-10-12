@@ -27,7 +27,7 @@ You need contracts, not prose. So for you we keep current:
 
 ### If you run your business on the platform
 
-You are working in Studio, in the web app, on Pocket, or another interface. You are not writing code, and you should not need to read any to understand what changed.
+You are working in Studio, in Nucleus Web, Nucleus Desktop or Nucleus Mobile, or another interface. You are not writing code, and you should not need to read any to understand what changed.
 
 You need to know what something does in business terms and where to find it. So for you we keep current:
 

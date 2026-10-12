@@ -86,12 +86,5 @@
       href: Alliance-Business-Studio/Layout.md
     - name: "Portals"
       href: Alliance-Business-Studio/Portals.md
-  - name: "Alliance Business Pocket"
+  - name: "Nucleus Mobile"
     href: Alliance-Business-Pocket.md
-    items:
-    - name: "Android"
-      href: Alliance-Business-Pocket/Android.md
-    - name: "iOS"
-      href: Alliance-Business-Pocket/iOS.md
-    - name: "UWP"
-      href: Alliance-Business-Pocket/UWP.md
