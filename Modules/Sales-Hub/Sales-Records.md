@@ -1,46 +1,46 @@
-# Working with Sales Hub Records on the Alliance Business Suite
+# Sales records
 
-Built on top of the powerful Alliance Business Model capabilities for sales, the Alliance Business Suite - Sales Hub Module is being built to cover every stage of your sales process.
+Sales records are the deal units, quotes and orders that carry a sale from opportunity to invoice.
 
-## Types of Sales Records
-There are three types of sales records across the Alliance Business Model:
+**Who it is for:** sales managers and sellers who need to know which record to use at each step, and how the records connect.
 
-### Deal Units:
+**Availability:** part of Sales Hub in every workspace. Each record type has its own permissions to view, create, update and delete. In Studio, open your workspace, select **Modules**, and open **Sales**.
 
-Deal Units are the first step towards managing your business opportunities since they come to life, to their final state. Deal Units allow you to link several Stock Items from which automatically calculates estimated revenues, profits, taxes, totals, and more.
+## The three sales records
 
-A Deal unit represents a business opportunity, a deal that you want to start tracking. With a Deal Unit, you can forecast sales revenue, set a potential close date, and factor in the sale's probability.
+| Record | Use it to | Main actions |
+|---|---|---|
+| [Deal unit](Sales-Records/Deal-Units.md) | Track an opportunity and its expected value | Add lines, recalculate, place on a flow stage, close as won or lost |
+| [Quote](Sales-Records/Quotes.md) | Offer prices to a customer for a limited time | Add lines, email, share, close and reopen; the customer places the order |
+| [Order](Sales-Records/Orders.md) | Record a confirmed sale and fulfil it | Number, track status, ship, invoice, collect payment |
 
+## How the records connect
 
-### Quotes:
-A Quote, also known as a quotation, is a document issued from a business to a customer outlining the price of a sale before the customer has committed to the purchase.
+A sale usually moves through these steps. You can start at any of them.
 
-Using Sales Hub, you can create Quotes taking as a startup point any deal unit present on your system, or by manually outlining a new custom quote. When creating a quotation from a Deal Unit, the new quote will be assigned to the same Deal Unit's related contacts, the Quote amounts will be set to the same values as the Deal Unit, and each Deal Unit Item Record will be copied to the new Quote.
+1. **Deal unit.** You record the opportunity, the customer and the items you expect to sell.
+2. **Quote.** You create a quote and link it to the deal unit with its **Deal Unit** field. The deal unit's **Quotes** tab lists every quote linked to it.
+3. **Order.** Your customer places the order from the quote they received, or you create the order yourself and link it to the quote with its **Quote** field. The quote's **Orders** tab lists its orders.
+4. **Invoice.** You create an invoice from the order's **Invoices** tab. Your customer pays the invoice through its payment checkout. Payments recorded against the order appear on its **Payments** tab.
 
+When your customer places an order from a quote, the order takes the quote's lines, totals and currency. When you link records yourself, each record keeps its own lines and totals.
 
-### Orders:
-An order is a stated intention, either spoken or written, to engage in a commercial transaction for specific products or services.
+## Customers on sales records
 
-Using Sales Hub, managing orders is not much different from managing Quotes. In fact, Orders can take as a startup point any quotation or deal unit present on the system, or they can be manually outlined.
+Every sales record names its customer through an **Individual**, an **Organization**, or both, chosen from your [contacts](~/Modules/CRM/Contacts.md).
 
+A quote or an order can also name a **Receiver Tenant**: the customer's own workspace on the platform. A record with a receiver appears in that workspace's wallet, where the customer can review it. For quotes, this is how your customer places the order on their side. See [Quotes](Sales-Records/Quotes.md).
 
-# Linking Contacts to Sales Hub Records (Contact-Scoping)
-You can link every Sales Record to any specific Individual/Organization (or both) owned by your acting Business Tenant. This enables Contact-Scoped capabilities such as improved analytics, customer segmentation, opportunity discovery, contact billing & more. 
+## Lines and totals
 
+Each sales record has lines. A line names an item from your catalog, a quantity and an optional description. Prices come from the record's **Price List**, and the record's totals (subtotal, discounts, surcharges, taxes and total) are calculated from its lines. On deal units and quotes, use the recalculate action after you change the price list or the lines.
 
-## Linking Identities to Sales Hub Records (Identity-Scoping)
-Sales Records can also be bound to a specific Account Holder/Business Tenant (or both). When you select an individual or organization on any Sales Record, Sales Hub will search for Identities related to those contacts. When you relate Identities to Sales Records, those records will become available to those users to see and interact with.
+## Currency
 
-For example, if you assign an Account Holder to an Order, that Account Holder will be able to log in to the platform and find that order onto their billing section (if using Alliance Business Studio), generate an invoice to pay, and pay that Invoice using any of your configured Payment Integrations.
+Every sales record keeps its own currency. A record's lines take the record's currency, its totals are calculated in it, and the record's detail page shows its amounts in it. An order placed from a quote keeps the quote's currency.
 
+## Related pages
 
-## Understanding Multi-Currency Support for Sales Records 
-Sales Hub support's Alliance Business Model's multi-currency specification, meaning that you can manage Sales Records with live & historical multi-currency capabilities.
-
-When adding an amount into Sales Hub, you will be asked to select the currency on which amounts are being provided. This allows Sales Hub to not only present you and your user's information on their favorite currency but also allows your business to manage multi-currency accounting & operations without complications.
-
-## Accounting Manager Interoperability
-When you create an order using Sales Hub, you are setting the stage for further Invoice(s) & Payment(s).
-The Alliance Business Model links sales & billing entities through a link between any given order and several Invoices. This means you can create & customize a new invoice taking as a startup point any present Order, and further payment for that Invoice can be requested using any of your configured payment integrations.
-
-When creating Invoices from an Order as a Startup Point, Contact Scoping Records, Identity Scoping Records & Order Item Records will be copied to the new Invoice, and the same process takes place when a new payment for any given Invoice is created or received (trough a Payments Gateway Integration). 
+- [Sales Hub](~/Modules/Sales-Hub.md)
+- [Deal unit flows](Sales-Flows.md)
+- [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md)

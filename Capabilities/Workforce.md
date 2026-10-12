@@ -9,7 +9,7 @@ Workforce is how you manage the people side of the organization: your employees,
 - **Manage employees** — records, org structure, shifts, leave, and appraisals.
 - **Hire**: job offers, applicants and applications, each with a status.
 - **Keep pay records**: salaries, and payroll records by period.
-- **Grow skills** — courses, collections, instructors, and student progress in a built-in LMS.
+- **Grow skills**: courses, collections, instructors and students in the built-in Learning module.
 - **Work together** — shared file and document workspaces, folders, and a file manager.
 
 ## Modules that deliver it

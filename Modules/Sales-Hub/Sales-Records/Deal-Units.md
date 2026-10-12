@@ -1,17 +1,58 @@
-# Managing Deal Units:
+# Deal units
 
-Deal Units are the first step towards managing your business opportunities since they come to life, to their final state. Deal Units allow you to link several Stock Items from which automatically calculates estimated revenues, profits, taxes, totals, and more.
+A deal unit is a sales opportunity you track from the first conversation until you win or lose it.
 
-A Deal unit represents a business opportunity, a deal that you want to start tracking. With a Deal Unit, you can forecast sales revenue, set a potential close date, and factor in the sale's probability.
+**Who it is for:** sellers who work opportunities, and sales managers who review the pipeline.
 
-## How to Create a Deal Unit
-You can create a new deal unit using several ways.
-- From a Cart: You can create a new Deal Unit from an existing Cart. This is useful when you want to start a process of cart abandonment recovery for some carts used in your business applications.
-- From an existing Deal Unit: Using the Sales Hub Module you can create Deal Units by cloning an existing Deal Unit.
-- Using the Outliner: Using the Sales Hub Module you can outline Deal Units directly from the [Alliance Business Studio](~/Capabilities/Alliance-Business-Studio.md). 
+**Availability:** part of Sales Hub in every workspace. Viewing, creating, updating and deleting deal units are granted separately by role. In Studio, open your workspace, select **Modules**, open **Sales**, and select **Deal Units**.
 
+## What a deal unit holds
 
-## Adding Stock Items to Deal Units
-When you add a Stock Item to a Deal Unit, you are creating a new Billing Item Record. See Managing [Billing Item Records](~/Modules/Accounting/Billing/Billing-Item-Records.md).
+- **Title and description** of the opportunity.
+- **Customer:** an **Individual**, an **Organization**, or both, from your contacts.
+- **Flow and stage:** the [deal unit flow](../Sales-Flows.md) it follows and the stage it is at.
+- **Price list:** the prices its lines use.
+- **Lines:** the items you expect to sell, each with a quantity. The deal unit's totals, including taxes, are calculated from its lines.
+- **Quotes** linked to it, and **files** you attach to it.
+- **Status:** open until you close it as won or lost.
 
-##
+## Create a deal unit
+
+1. On the **Deal Units** page, select **Add**.
+2. In **Create Deal Unit**, enter a **Title**.
+3. Choose the **Individual**, the **Organization**, or both.
+4. Optionally choose a **Flow** and a **Flow Stage**, and add a **Description**.
+5. To add the items now, select **Add Line**, choose the **Item** and enter the quantity. Repeat for each item.
+6. Select **Create**.
+
+## Work a deal unit
+
+Open a deal unit from the **Deal Units** grid with **View**.
+
+- **Edit the details.** Change the title, customer, **Price List**, **Flow** or **Flow Stage**, then select **Save Changes**.
+- **Add lines.** On the **Lines** tab, select **Add**, choose the **Item**, enter the **Quantity** and an optional **Description**, and select **Add**. The totals update when lines change.
+- **Recalculate.** After you change the price list, open the actions menu and select **Recalculate Deal Unit**.
+- **See its quotes.** The **Quotes** tab lists every quote linked to this deal unit. To link a quote, choose this deal unit in the quote's **Deal Unit** field.
+- **Attach files.** Use the **Files** tab for proposals, notes and other documents.
+
+## Close a deal unit as won or lost
+
+1. Open the deal unit.
+2. In the actions menu, select **Close Deal Unit**.
+3. Select **Close as Won** or **Close as Lost**.
+
+The platform records the outcome and the date it was won or lost. A closed deal unit cannot be changed: its details, lines and stage stay as they were when you closed it.
+
+## Delete a deal unit
+
+1. Open the deal unit.
+2. In the actions menu, select **Delete Deal Unit** and confirm.
+
+You cannot delete a deal unit that has orders, invoices, payments, shipments or other related records. Deleting cannot be undone.
+
+## Related pages
+
+- [Sales records](../Sales-Records.md)
+- [Quotes](Quotes.md)
+- [Deal unit flows](../Sales-Flows.md)
+- [Sales Hub](~/Modules/Sales-Hub.md)

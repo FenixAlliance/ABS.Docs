@@ -1,52 +1,93 @@
-# Working with Invoices on Accounting Manager.
+# Invoices
 
-When a Contact places an order, you can create an invoice to bill them for the upcoming sale. 
+An invoice bills a customer for goods or services in the invoice's own currency, and becomes a payable amount when it is issued.
 
-## Creating Invoices
-Typically, you convert an order into an invoice; however, you can also create an invoice that does not originate from an order. To create an Invoice, you can either navigate to your sales orders, select an existing Order and create an Invoice from it, or you can also create a new invoice that's not related to any order by navigating to Accounting > Billing > Invoices > Create.
+**Who it is for:** billing administrators and anyone who bills customers from a workspace.
 
-### Assigning Invoices to Contacts
-As an Accounting Record, Invoices can be related to any Individual/Organization (or both) present on your Contact Sight CRM. To assign an Invoice to a Contact, simply select it from the dropdown list when outlining your new invoice.
+**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Invoices**. You need permission to read invoices to see them, to create invoices to add one, and to update invoices to change or issue one. Generating a payment link also needs permission to manage payments.
 
-**Remarks**: By default, every Individual/Organization on your CRM will be available to be selected as the owner for an Invoice; however, when you select an Individual, the Organizations Dropdown List will be filtered to display only those organizations that are somehow related to the selected Individual. Likewise, if you select an Organization first, the Individuals Dropdown List will be filtered to display only those Individuals that are somehow related to the selected Organization.
+## The life of an invoice
 
-### Assigning Invoices to Identities
-You can also decide whether or not to relate an identity to your invoices. Identities such as [Account Holders](~/Capabilities/Alliance-Passport-Service/Account-Holders.md) or [Business Tenants](~/Capabilities/Alliance-Passport-Service/Business-Tenants.md) are users within the Alliance Business Model which can access business applications built with Alliance Business Suite.
+| Stage | What it means | What you can do |
+|-------|---------------|-----------------|
+| **Draft** | The invoice is being prepared. | Edit everything, add and remove lines, recalculate, delete. |
+| **Issued** | The invoice is final and payable. It has its number, if your workspace uses number ranges. | Edit the description and the dates. Issue credit and debit notes against it. Its amounts no longer change. |
+| **Paid** | A live payment covered what is owed. | Review the payment on the invoice. |
 
-When you select an Individual as the Owner for an Invoice, you will be able to select its related Account Holder if you want your invoice to be available through the Studio/API for that particular user. Likewise, when you select an Organization as the owner for your invoice, its related Business Tenant will become available on the Business Dropdown to be selected. (See [Contact Relations](~/Modules/CRM/Contact-Relations.md))
+An issued invoice is never re-priced. If you try to change an amount on it, the change is refused with the message that the invoice has been issued and must be corrected with a credit or debit note.
 
+## Create an invoice
 
-### Adding Invoice Lines
-One of our goals is to make it as easy and intuitive as possible to outline Invoices, Debit Notes & Credit Notes.
-To add an invoice Line, click on the Add Invoice Line button on your Invoice Outliner & fill out the form.
+1. Go to **Invoices** and select **Add**.
+2. In **Create Invoice**, enter a **Title** and choose the customer: an **Individual**, an **Organization** or both. You can link the invoice to an **Order**.
+3. Choose the **Currency**. If you leave it empty, the invoice takes your workspace's currency.
+4. Optionally choose a **Price List**, a **Payment Mode**, a **Payment Due** date, the **Emisor Billing Profile** and **Receiver Billing Profile**, and an **Invoice Enumeration Range**.
+5. Under **Lines**, select **Add Line**, choose the **Item** and enter the **Quantity**. Repeat for each line.
+6. Select **Create**. The invoice is created as a draft.
 
-By default, you will only have to select the Stock Item you want to sell and introduce a quantity. The Accounting Engine will automatically calculate the total amounts depending on the Invoice's Price List (if any) for the invoice line, but total control over these values is made possible through Custom Calculations.
+You can also open the **Create Invoice** page directly from an invoice's details page.
 
-### Customizing Invoice Line Calculations
-By default, when you add a new Invoice Line to an Invoice, automatic calculations are made based on the selected Stock Item and the Invoice's Price List. However, you can switch to custom calculations to control the values that contribute to the Total Line's Amount. To learn more about price calculations, refer to [Billing Item Records](~/Modules/Accounting/Billing/Billing-Item-Records.md)
+To learn how line amounts and taxes are calculated, see [Billing item records](../Billing-Item-Records.md).
 
-### Understanding Tax Calculations
-Applied Tax Policies contribute to the Total Amount of each Line by their respective percentages. e.g If a Tax Policy named VAT with a 19% value is added to a Line, it will increase the Tax Amount by 19& of the Tax Base, therefore increasing the Total Amount for that Line. 
+## Work on a draft invoice
 
-## Updating Invoices
-Updating Invoices is as simple as creating them. If an invoice is marked as a draft (hasn't been closed, signed, or reported) every change is allowed (including changing its owner, date, Forex Rate, and more). Nevertheless, once that invoice is no longer a draft, the Accounting Manager won't allow updates or recalculations. Reopening an Invoice requires Global Administrator Privileges.
+Open the invoice from **Invoices** with **View**. The details page shows the invoice summary, its details, its lines, its adjustments and its references.
 
-## Closing Invoices
-Once your invoice is perfectly outlined, you will be able to close it. Closed Invoices become permanent, unmutable records. Once you have closed your Invoice, you can export it to multiple formats like JSON, XML, PDF, HTML, UML. Closed Invoices also become available to its Related Identities via the Studio & APIs. 
+- Change the details and select **Save Changes**.
+- Add, edit or delete lines in the lines section.
+- From the actions menu, select **Recalculate** to refresh the totals.
+- From the actions menu, select **Delete** to remove a draft you no longer need.
 
-## Deleting Invoices
-To delete an invoice, head to the Invoice Details Page and select Delete from the Actions Bar. Only Draft Invoices can be deleted.
+## Issue an invoice
 
-## Getting Payments for Invoices
+Issuing makes the invoice final and payable. When your workspace uses number ranges, issuing also gives the invoice the next number from its range.
 
-Once your invoice is closed, you can collect payment for your invoice using any of the Alliance Business Suite's integrations for Payment Gateways.
+- **Invoices from checkout** are issued automatically when a buyer checks out an order.
+- **Invoices you create** are issued through the REST API with `POST /api/v2/InvoicingService/Invoices/{invoiceId}/Issue`, or created already issued by sending the status `Signed` when you create them through the API. Issuing an invoice that is already issued succeeds and changes nothing.
 
+Issuing is refused when:
 
-## Send an Invoice through Email
-Once your invoice is marked as closed, a new option to send an email containing a representation for your invoice will become visible. To send an email, simply click on that button, enter an email and click send.
- 
-## Reporting Invoices to Fiscal Authorities
-In some cases, Invoices need to be reported to their fiscal authority, either in a statement or through a digital service. Accounting Manager does not report invoices to a fiscal authority, and electronic submission to tax authorities is not available yet.
+- your workspace has number ranges for invoices but every one of them is expired or used up. Add or extend a range, then issue again;
+- several ranges are active at the same time and the invoice does not name one. Choose the range on the invoice;
+- the invoice has no currency.
 
-## Adjusting Forex Rates for Invoices
-Forex Rates serve to calculate the Foreign Exchange Conversion over which a particular invoice was outlined, when it was outlined. If the currency in which either an Invoice or an Invoice Line was created us equal to USD, the Forex Rate will be 1.0. Otherwise, it will contain the total amount (in the selected currency) needed to exchange 1 USD as of the Invoice's Date.
+A refused issue uses no number, so your numbering has no gaps. See [Invoice-number ranges](../Invoice-Number-Ranges.md).
+
+## Share an invoice and get paid
+
+The actions menu on the invoice's details page offers:
+
+- **Preview**, to see the invoice as your customer sees it.
+- **Send Email**, to preview the invoice email and send it to an address you enter.
+- **Generate Payment Link**, for users who can manage payments, to create a link your customer uses to pay on your payment provider's checkout.
+
+Your customer can pay through the link while the invoice has a balance due and is not paid, closed or on hold. See [Payments](Payments.md) for how the payment link and checkout work.
+
+A closed invoice allows no further changes, cannot be deleted, cannot be paid through a payment link and cannot take a credit or debit note.
+
+## Correct an issued invoice
+
+You never edit the amounts of an issued invoice. Instead, open the invoice and choose from the actions menu:
+
+- **Credit note**, to reduce what is owed, for example for a return, a discount or an annulment.
+- **Debit note**, to increase what is owed, for example for interest or extra charges.
+
+See [Credit and debit notes](../Credit-and-Debit-Notes.md).
+
+## Currency
+
+- Every invoice has its own currency. The invoice is totaled in it, and its details page shows its amounts in it. The platform never falls back to US dollars.
+- An invoice created without a currency takes your workspace's currency. If none can be determined, the invoice is refused.
+- The exchange rates in effect when the invoice is billed are captured with it, so its reporting amounts do not change later.
+
+## Accounting
+
+When **Post journal entries automatically** is turned on in your Accounting settings, the platform posts a journal entry when an invoice is issued and again when it is paid. When the setting is off, nothing posts automatically. See [Accounting](~/Modules/Accounting.md).
+
+## Fiscal authorities
+
+Electronic submission of invoices to a tax authority is not available yet.
+
+## For developers
+
+Invoices are available under `/api/v2/InvoicingService/Invoices`. The API covers listing, reading, creating, updating and deleting invoices, their lines, line taxes, adjustments and references, as well as issuing, credit and debit notes, the creditable amount and the invoice's payments.

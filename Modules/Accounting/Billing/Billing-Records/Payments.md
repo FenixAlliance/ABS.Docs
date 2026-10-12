@@ -1,0 +1,67 @@
+# Payments
+
+Payments record the money your customers pay against your invoices, collected through the payment provider account you connect to your workspace.
+
+**Who it is for:** billing administrators who collect payment for invoices and finance teams who follow up on what has been paid.
+
+**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Payments**. Generating a payment link needs permission to manage payments. Connecting a payment provider is done from your workspace's **Integrations**.
+
+## Payment providers you can connect
+
+You collect payments through your own account with a payment provider. Payments are processed by that provider and the funds settle to your provider account. The platform starts the checkout, receives the provider's confirmation and records the result against your invoice.
+
+You can connect these providers:
+
+- Stripe. See [Stripe](~/Integrations/Stripe.md).
+- Mercado Pago
+- PayU
+- ePayco
+
+To connect one, open your workspace's **Integrations** in Studio, open the provider and enter the credentials from your provider account.
+
+Each connection works in either a test environment or a live environment. Use test mode to try the full checkout with your provider's test credentials. A test payment runs end to end but never marks an invoice as paid. Only a live payment does.
+
+For how connections, credentials and provider notifications work, see [Integrations](~/Modules/Integrations.md).
+
+## Collect payment for an invoice
+
+1. Open the invoice from **Invoices**. The invoice must have a balance due and must not be paid, closed or on hold.
+2. In the actions menu, select **Generate Payment Link**.
+3. Copy the link with the copy button. The dialog shows the link only once, together with its expiry date when it has one. Anyone with the link can pay the invoice.
+4. Send the link to your customer.
+
+To create another link later, select **Generate Payment Link** again. Each time you select it, a new link is created.
+
+## What your customer sees
+
+1. The link opens a payment page that shows who they are paying, the **Amount due**, the due date and the invoice reference.
+2. Under **Payment options**, they choose a **Payment method** and select **Continue to payment**.
+3. They complete the payment on your payment provider's own checkout. Card numbers and security codes are entered there. The platform never accepts raw card numbers or security codes.
+4. They return to a status page that updates by itself. It shows **Payment received** when the payment succeeds, and tells them when the payment was cancelled, did not go through or needs one more step.
+
+If no payment method is available for the invoice yet, the payment page says so. Check that a payment provider is connected to your workspace.
+
+## When a payment arrives
+
+- A live payment that completes is recorded against the invoice and marks the invoice as paid.
+- The platform confirms each provider notification before it changes any payment, and applies each payment once, even if the provider sends the same notification several times.
+- When **Post journal entries automatically** is turned on in your Accounting settings, the platform posts the payment's journal entry. See [Accounting](~/Modules/Accounting.md).
+
+## Review payments
+
+**Payments** lists the payments in your workspace. Select **View** to open a payment. The details page shows:
+
+- the **Timestamp**, **Currency**, **Total Amount**, **Total Taxes** and **Base Amount**;
+- the **Forex Rate** used for reporting;
+- the **Payment Status**, the **Reported Payment Status** from the provider and the provider's reference and authorization codes;
+- whether the payment was made in test mode.
+
+You can also see the payments for one invoice through the API.
+
+## For developers
+
+- Payments are available under `/api/v2/PaymentsService/Payments`, and an invoice's payments under `/api/v2/InvoicingService/Invoices/{invoiceId}/Payments`.
+- Payment provider connections are managed under `/api/v2/PaymentsService/PaymentProviderRegistrations`, including setting the environment, updating the credential and rotating the notification key.
+- A refund is requested with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`.
+- An operation whose outcome the provider has not confirmed is listed by `GET /api/v2/PaymentsService/ProviderOperations/AwaitingOutcome`, and reconciled with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/ReconcileOutcome`.
+- A payment link is created with `POST /api/v2/PaymentsService/PublicPaymentLinks`, which needs permission to manage payments. The payment page for a link is `/Payments/{token}`. The token is part of the link and is shown only when the link is created.
