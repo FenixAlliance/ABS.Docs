@@ -39,6 +39,7 @@ These changes are complete and verified, and they reach you with the next releas
 
 ### Fixed
 
+- **Emails sent in a language other than English, for example those you compose in Studio, are now delivered in that language.** Until this fix they arrived in English.
 - Deleting a record from Studio works again.
 - Every API documentation page renders again.
 - Opening your own cart no longer fails.
