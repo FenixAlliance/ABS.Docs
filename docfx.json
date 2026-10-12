@@ -32,6 +32,7 @@
           "Modules/SECURITY.md",
           "Modules/Signator/DIAN-Invoicing.md",
           "Services/Wallets-Service.md",
+          "tools/**",
           "**/node_modules/**"
         ]
       }
