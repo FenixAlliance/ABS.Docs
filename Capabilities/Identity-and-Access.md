@@ -9,8 +9,8 @@ This is about *access*, not proof. Proving that a document or action is authenti
 ## What you can do
 
 - **Sign people in** with passwords, multi-factor authentication, and federated or social identity providers.
-- **Authorize precisely** with roles, groups, and fine-grained permissions — grant least privilege and share access safely.
-- **Federate with your directory** through OAuth/OIDC and SAML, so existing corporate identities work out of the box.
+- **Authorize precisely** with roles and fine-grained permissions: grant least privilege and share access safely.
+- **Federate with your directory** through OAuth/OIDC, so existing corporate identities work out of the box.
 - **Scope everything to a tenant**, so one identity model cleanly serves many organizations.
 - **Audit access** — keep a trail of who signed in and what they changed.
 
@@ -18,7 +18,7 @@ This is about *access*, not proof. Proving that a document or action is authenti
 
 | Module | What it does |
 |---|---|
-| [IAM](~/Modules/IAM.md) | Users, roles, groups, and central access management |
+| [IAM](~/Modules/IAM.md) | Users, roles, and central access management |
 | [Security](~/Modules/SECURITY.md) | Tenant access, permissions, and security & audit logs |
 
 Built on the **[Alliance Passport Service (APS)](~/Capabilities/Alliance-Passport-Service.md)** foundation. To build on it, see **[Web API development](~/get-started/Web-API-Development.md)**.

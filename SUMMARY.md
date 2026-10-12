@@ -134,7 +134,7 @@
        * [Quotes](Modules/Sales-Hub/Sales-Records/Quotes.md)
        * [Orders](Modules/Sales-Hub/Sales-Records/Orders.md)
   * [Media Portals](Modules/CMS.md)
-  * [Workflows Studio](Modules/Workflows.md)
+  * [Workflows Studio](Modules/WORKFLOWS.md)
 
 
 * [Official Integrations](~/Modules/Integrations.md)

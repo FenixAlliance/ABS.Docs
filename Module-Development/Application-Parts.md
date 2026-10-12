@@ -42,7 +42,7 @@ Anything needing a fully built application belongs in your module's later config
 
 ## Business operations
 
-Declare an operation once and it appears wherever governed operations are offered. As a step in [Workflows Studio](~/Modules/Workflows.md). As a tool an AI agent can call. You write no workflow code and no AI code.
+Declare an operation once and it appears wherever governed operations are offered. As a step in [Workflows Studio](~/Modules/WORKFLOWS.md). As a tool an AI agent can call. You write no workflow code and no AI code.
 
 Declare five things:
 

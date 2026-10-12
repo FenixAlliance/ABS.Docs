@@ -13,7 +13,6 @@ Web pages can be created, edited, and deleted from the [Alliance Business Platfo
 
 - Go to Modules > Media Portals > Web Pages.
    - To edit an existing web page using the standard editor, select the "**Edit**" option below the web page name.
-   - To edit an existing web page using the Visual WYSIWYG editor, select the "**Live Edit**" option below the web page name.
    - To create a new Web Page, click on the Create Button.
 
 - Enter appropriate values in, at least, the required fields.
@@ -23,6 +22,8 @@ Web pages can be created, edited, and deleted from the [Alliance Business Platfo
 # Content Engines
 
 The Alliance Business Suite contains a powerful content engine to provide the level of customizability required to give the highest level of control over every bit that's to be presented to a user on a Web Page. These engines are meant to work with Web Content records and they have several capability sets.
+
+Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
 
 ## Razor Engine:
 The Razor Engine is a derivate from .NET's Server Side Markup Language. Web Content marked as .razor will be compiled and rendered using a Service Abstraction which means that its default can be replaced by a custom implementation.

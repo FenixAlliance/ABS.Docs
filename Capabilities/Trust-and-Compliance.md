@@ -10,7 +10,6 @@ Trust is **not** the same as identity. [Identity & Access](~/Capabilities/Identi
 - **Collect trust evidence** — a tamper-evident record of who signed what, when, and how, kept for non-repudiation.
 - **Let external parties sign** through a dedicated portal, without needing a Studio account.
 - **Keep sealed, append-only records** — once an artifact is sealed it can't be altered, so you can prove it wasn't.
-- **Report on ESG and compliance** — the sustainability and governance metrics your stakeholders ask for.
 
 ## Modules that deliver it
 
@@ -18,6 +17,5 @@ Trust is **not** the same as identity. [Identity & Access](~/Capabilities/Identi
 |---|---|
 | [Signator](~/Modules/Signator.md) | E-signatures, signing requests, certificates, and trust evidence |
 | External Signing Portal | Lets external parties sign without a Studio account |
-| [Sustainability](~/Modules/SUSTAINABILITY.md) | ESG metrics and compliance reporting |
 
 Built on the platform's **Digital Trust & Evidence** capability. It works *with* [Identity & Access](~/Capabilities/Identity-and-Access.md) — identity says who signed, Trust makes the signature provable — but it's a distinct guarantee.

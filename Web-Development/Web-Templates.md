@@ -11,6 +11,8 @@ This document discusses layouts for the two different approaches to building All
 Razor Pages are database records according to the Alliance Business Model Schema.
 Controllers with views are sets of precompiled code living on the Alliance Business Model.
 
+Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
+
 ## What is a Layout
 Most web apps have a common layout that provides the user with a consistent experience as they navigate from page to page. The layout typically includes common user interface elements such as the app header, navigation or menu elements, and footer.
 

@@ -6,7 +6,7 @@ Modules are available via the [Alliance Business Suite Gallery](https://gallery.
 
 ## Security considerations
 
-Although the Modules you find at the Gallery are thoroughly tested and considered safe to use, they are of varying quality and are often works in progress depending on the Module Provider.
+The Modules you find at the Gallery are of varying quality and are often works in progress depending on the Module Provider.
 
 ## Compatibility Considerations
 
@@ -14,27 +14,14 @@ If a Module hasn’t been updated since the most recent update to the targeted A
 
 ## Installing Modules
 
-There are 3 ways to install Alliance Business Suite Modules.
-
-**One-Click Module Install**: Any Module available on the [Alliance Business Suite Gallery](https://gallery.absuite.net/) can be installed via the in-studio Module installer.
-
-**Upload via Alliance Business Studio Network Admin**: You can easily add new Modules by uploading a .nupkg archive of the Module from your local computer.
-
-**Manual Module Installation**: In some cases, you may need to manually upload a module directly to your Alliance Business Suite Server using an SFTP client to the Alliance Business Cloud File Manager.
+To install a module, copy its .nupkg package into the Modules folder of your Alliance Business Suite server. The server loads it the next time it starts.
 
 ## Updating Modules
-Module developers update their Modules occasionally, and those updates will be visible to you on your Modules Page. To find any Modules installed on your Alliance Business Suite instance that need to be updated:
-
-- Navigate to the Alliance Business Studio.
-- Click the "Network Manager" link on the Command Bar.
-- On the Left Menu, navigate to the Modules Page.
-- Look down the grid of installed Modules for any that include a line reading “There is a new version…”
-- Click the “View version…” link in that note to view details about the Module's update.
-- Click the “update now” link to update the Module.
+To update a module, replace its package in the Modules folder with the newer version and restart the server.
 
 # Uninstalling Modules 
 
-Modules have a safe and easy-to-use uninstaller. If that’s unavailable to you for some reason, you can also manually remove them from the Modules folder on your Server instance and we'll use a cached uninstaller whenever we can't find a Module that was previously installed.
+To uninstall a module, remove it from the Modules folder on your server.
 
 
 

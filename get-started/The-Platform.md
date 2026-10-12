@@ -25,7 +25,7 @@ A handful of principles have held across every generation of the product. They a
 - **Multi-tenant by design.** Isolation between tenants is foundational, never retrofitted.
 - **Extensibility through modules.** Customize and extend without ever forking the platform.
 - **Yours to run.** Hosted, self-hosted, hybrid, or embedded in your own app — every model is first-class.
-- **Open through standards.** REST, GraphQL, OAuth/OIDC, UBL, PEPPOL, MCP — ABS joins ecosystems rather than building silos.
+- **Open through standards.** REST, GraphQL, OAuth/OIDC, UBL, MCP: ABS joins ecosystems rather than building silos.
 
 ## The capabilities
 

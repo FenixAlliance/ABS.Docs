@@ -23,6 +23,8 @@ A view component consists of two parts: the class (typically derived from ViewCo
 ## Creating a view component
 A view component class can be created on your ABS Instance administration dashboard, under **Appearance** > **Components**.
 
+Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
+
 
 ## View component methods
 A view component defines its logic in an `InvokeAsync` method that returns a `Task<IViewComponentResult>` or in a synchronous Invoke method that returns an `IViewComponentResult`. Parameters come directly from the invocation of the view component, not from model binding. A view component never directly handles a request. Typically, a view component initializes a model and passes it to it's corresponding view by calling the View method. In summary, view component methods:

@@ -3,11 +3,13 @@
 
 Pages are very important components for the Alliance Business Suite. They allow customers to implement unique, visually outstanding web pages by using a Theming engine that's based on .NET's Razor Syntax.
 
-Pages in the Alliance Business Suite can be added through the Admin Portal of your ABS instance and live edited through the ABS Web Builder.
+Pages in the Alliance Business Suite can be added through the Admin Portal of your ABS instance.
 
 Pages are WebContent Components, which makes them extremely powerful. They are stored in the Alliance Business Model Database provider and C# is server-side evaluated to then render the output as HTML, CSS, and JavaScript.
 
 Although pages can inject services and even interact with the ABM Database Provider through the DataContext instance present at every page, pages can optionally contain a caller method. This method's responsibility is to produce the model that's going to be used to fill the page's Model property, sort of like a controller method passing a Model to a view.
+
+Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
 
 ## Creating a Web Page
 

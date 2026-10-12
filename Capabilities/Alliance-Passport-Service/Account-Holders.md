@@ -9,7 +9,7 @@ In the following figure, the users Sebastien, Fernando, Camila, Alejandro, Ana, 
 ## First-time access only: Your root user credentials
 When you create an ABS Instance, you create an APS Account Holder root identity, which you will use to sign in to the instance. You can sign in to the ABS Studio and the ABS Portal Admin using this root user identity; that is, the email address and password that you provided when installing the instance. This combination of your email address and password is also called your root user credentials.
 
-When you use your root user credentials, you have complete, unrestricted access to all resources in your ABS instance, including access to your billing and licensing information and the ability to change your password and set multi-factor authentication. This level of access is necessary when you first set up your account. However, **we recommend that you don't use root user credentials for everyday access**. We especially recommend that you do not share your root user credentials with anyone because doing so gives them unrestricted access to your instance. Only service control policies (SCPs) in tenants can restrict the permissions that are granted to the root user.
+When you use your root user credentials, you have complete, unrestricted access to all resources in your ABS instance, including access to your billing and licensing information and the ability to change your password and set multi-factor authentication. This level of access is necessary when you first set up your account. However, **we recommend that you don't use root user credentials for everyday access**. We especially recommend that you do not share your root user credentials with anyone because doing so gives them unrestricted access to your instance.
 
 We recommend that you create an Account Holder for yourself and then assign yourself administrative permissions for your account. You can then sign in as the new user to add more users and transact over resources as needed.
 
@@ -21,7 +21,7 @@ The following sections explain how you can use APS to create and manage user ide
 ------------------------------ ----------------------
 Account Holders are not unrelated records; they are users within your ABS Portals, Contacts within your CRM, Students within your LMS, Account Owners within your Accounting Management Engine, Business Employees within a given Business Tenant, and much more.
 
-Each Account Holder can have their own password for access to the ABS. You can also create an individual access key for each user so that the user can make programmatic requests to work with resources in your account. 
+Each Account Holder can have their own password for access to the ABS. 
 
 By default, ABS Portals are configured to allow Guest Users and Customer Users. These Guest Users are unauthenticated portal visitors granted with a limited set of permissions, like `store_read`, `cart_view`, `cart_update`, while Customer Accounts are allowed for more extensive permissions such as `account_read`, `account_delete`, `account_update`, `wallet_read`, and others.
 
@@ -38,10 +38,6 @@ The IAM module contains all the access logic to the Alliance ID account, It is c
 If the users in your organization already have a way to be authenticated, such as by signing in to your corporate network, you don't have to create separate IAM users for them. Instead, you can federate those user identities into the APS Engine.
 
 **Federation is particularly useful in these cases:**
-
-**Your users already have identities in a corporate directory**: If your corporate directory is compatible with Security Assertion Markup Language 2.0 (SAML 2.0), you can configure your corporate directory to provide single-sign-on (SSO) access to the APS Engine for your users. For more information, refer to Common scenarios for temporary credentials.
-
-If your corporate directory is not compatible with SAML 2.0, you can create an identity broker extension to provide single-sign-on (SSO) access to the APS Engine for your users. For more information, see Enabling custom identity broker access into an ABS Instance.
 
 If your corporate directory is Microsoft Active Directory, you can use Azure Active Directory to establish trust between your corporate directory and your ABS instance.
 

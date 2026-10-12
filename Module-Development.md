@@ -30,7 +30,7 @@ Three ideas shape the model:
 | Events | Durable facts other parts of the Suite can react to |
 | Background work | Scheduled or long-running processes |
 
-Business operations give you the most back, and they're the one most people find last. Declare an operation once and it becomes a step in [Workflows Studio](~/Modules/Workflows.md) and a tool your AI agents can call. You write no workflow code and no AI code.
+Business operations give you the most back, and they're the one most people find last. Declare an operation once and it becomes a step in [Workflows Studio](~/Modules/WORKFLOWS.md) and a tool your AI agents can call. You write no workflow code and no AI code.
 
 Events are the second. Your module announces that something happened, and other modules react without your module knowing they exist. Announcing costs nothing if nobody listens, so declare the facts you produce early and let the integrations arrive later.
 

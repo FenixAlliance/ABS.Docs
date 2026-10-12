@@ -28,7 +28,7 @@ Missing a module you expected? It's almost always one of three things. Not in yo
 Modules use different parts of what the platform offers. Yours may contribute:
 
 - **Screens** in the Studio, under your tenant, using the standard navigation and layout
-- **Business operations**, which are governed actions that appear as steps in [Workflows Studio](~/Modules/Workflows.md) and as tools your AI agents can use
+- **Business operations**, which are governed actions that appear as steps in [Workflows Studio](~/Modules/WORKFLOWS.md) and as tools your AI agents can use
 - **Business events**, which are durable announcements your workflows can react to
 - **APIs** for your own systems to call
 - **Background work** such as scheduled processing and reconciliation
@@ -64,7 +64,6 @@ Browse the modules that ship with ABS, grouped by the capability each one delive
 - **[Manufacturing](~/Modules/MANUFACTURING.md)**: production planning, work orders, and workstations.
 - **[Procurement](~/Modules/PROCUREMENT.md)**: purchase requests, suppliers, and requisition-to-order.
 - **[Projects](~/Modules/PMS.md)**: projects, tasks, time tracking, and delivery.
-- **[Quality](~/Modules/QMS.md)**: inspections, checks, and audits.
 - **[Workflows](~/Modules/WORKFLOWS.md)**: visual workflow editor and process automation.
 
 ### Workforce
@@ -85,13 +84,11 @@ Browse the modules that ship with ABS, grouped by the capability each one delive
 
 ### Trust & Compliance
 - **[Signator](~/Modules/Signator.md)**: e-signatures, signing requests, certificates, and trust evidence.
-- **[Sustainability](~/Modules/SUSTAINABILITY.md)**: ESG metrics and compliance reporting.
 
 ### Intelligence
 - **[Analytics](~/Modules/ANALYTICS.md)**: governed BI, curated datasets, and a self-serve explorer.
 
 ### Platform & Development
-- **[CloudHub](~/Modules/CLOUD.md)**: provision and manage cloud resources.
 - **[Blockchains](~/Modules/BLOCKCHAINS.md)**: connect chains and wallets, and on-chain assets.
 
 ## Modules and integrations

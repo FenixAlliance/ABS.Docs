@@ -7,7 +7,6 @@ Workforce is how you manage the people side of the organization: your employees,
 ## What you can do
 
 - **Manage employees** — records, org structure, shifts, leave, and appraisals.
-- **Run payroll** — pay runs tied to the same ledger the rest of Finance uses.
 - **Hire and onboard** — recruitment and hiring pipelines.
 - **Grow skills** — courses, collections, instructors, and student progress in a built-in LMS.
 - **Work together** — shared file and document workspaces, folders, and a file manager.

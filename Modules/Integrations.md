@@ -73,4 +73,4 @@ Anything an official integration does, yours can do too. Integrations are module
 
 ## Where it fits
 
-An integration strengthens whichever [capability](~/Capabilities/index.md) it serves. Payment connectors feed [Finance](~/Capabilities/Finance.md). Marketplaces feed [Commerce](~/Capabilities/Commerce.md). Model providers feed [Intelligence](~/Capabilities/Intelligence.md). All of them run on the [Alliance Business Platform](~/Capabilities/Alliance-Business-Platform.md), and their actions compose into [Workflows Studio](~/Modules/Workflows.md) like any other operation.
+An integration strengthens whichever [capability](~/Capabilities/index.md) it serves. Payment connectors feed [Finance](~/Capabilities/Finance.md). Marketplaces feed [Commerce](~/Capabilities/Commerce.md). Model providers feed [Intelligence](~/Capabilities/Intelligence.md). All of them run on the [Alliance Business Platform](~/Capabilities/Alliance-Business-Platform.md), and their actions compose into [Workflows Studio](~/Modules/WORKFLOWS.md) like any other operation.
