@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Contacts service reference
+# Contacts service
 
+The Contacts service lets you keep your workspace's contact list: the people and organizations you do business with, their email addresses, profiles and relations.
+
+**Who uses it:** developers who connect a CRM, a sign-up form or a customer portal to a workspace.
+
+**Base route:** `/api/v2/CrmService/...`
+
+## What you can do
+
+- **Manage contacts:** create, read, update and delete contacts, list individuals and organizations separately, and read the people and organizations related to each one. See [Contacts](~/Modules/CRM/Contacts.md).
+- **Keep several email addresses per contact:** add, update, verify and remove each address.
+- **Add a person or a company without duplicates:** add a user or another workspace to your contact list, reusing the existing contact when there is one.
+- **Describe your contacts:** maintain contact groups, contact sources, contact profiles, and relations between contacts with your own relation types. See [CRM](~/Modules/CRM.md).
+- **Store your own settings on a contact:** read and write key and value options per contact.
+- **Read what a contact holds with you:** the contact's avatar, cart, wallet and social profile.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `contacts_read`, `contacts_create`, `contacts_update`, `contacts_delete` and `contacts_manage`; `organizations_read` for organization contacts; and the `_read`, `_create`, `_update` and `_delete` permissions of `contact_groups`, `contact_sources`, `contact_profiles`, `contact_relations` and `contact_relation_types`.
+- A signed-in user can add themselves to a workspace's contact list without a workspace permission.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `CrmService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

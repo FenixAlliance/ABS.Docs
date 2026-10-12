@@ -1,6 +1,29 @@
-<!-- generated:start -->
-# Logistics service reference
+# Logistics service
 
+The Logistics service lets you run warehouse operations and record how goods travel by air, rail, road and sea, up to the proof of delivery.
+
+**Who uses it:** developers who connect a warehouse system, a transport management system or a carrier to a workspace.
+
+**Base route:** `/api/v2/LogisticsService/...`
+
+## What you can do
+
+- **Manage warehouses and stock movements:** keep warehouses, record restocks, pick lists and packing slips with their entries, and keep retain samples.
+- **Issue transport documents:** create airway bills, rail waybills, road waybills and seaway bills, add their lines, and move each one through issue, transit, arrival or delivery, or cancel it.
+- **Run your own trucks:** keep trucks and truck drivers, activate or deactivate drivers, and dispatch, depart, arrive, deliver or cancel each trip.
+- **Plan sea voyages:** keep vessels and ports, add port calls to a voyage, and start, complete or cancel it.
+- **Confirm delivery:** record a proof of delivery with its lines, and sign, reject or dispute it.
+- **Keep supplier profiles** for the companies you buy from.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** each resource has its own permissions, such as `warehouses_read`, `item_restocks_create` or `trucks_read`. Status changes such as issue, cancel, sign or dispatch need the resource's `_manage` permission, for example `road_waybills_manage` or `truck_trips_manage`. Retain samples use the `stock_items_*` permissions.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `LogisticsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

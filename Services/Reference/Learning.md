@@ -1,6 +1,32 @@
-<!-- generated:start -->
-# Learning service reference
+# Learning service
 
+The Learning service lets you build and run courses, manage the people who teach and take them, and show learners their own courses and certificates.
+
+**Who uses it:** developers who connect a learning portal, a course catalog or a student app to a workspace.
+
+**Base route:** `/api/v2/LearningService/...`
+
+## What you can do
+
+- **Build courses:** create and update courses and their sections, units, pages, wikis and articles, libraries, handouts, files and assignments. See [Learning](~/Modules/Learning.md) and [Create and publish a course](~/Modules/Learning/Courses.md).
+- **Organize your catalog:** group courses in categories and collections.
+- **Manage people:** keep student and instructor profiles, enroll students, organize them in cohorts, and set up each course team. See [Students, instructors and enrollments](~/Modules/Learning/Students-and-instructors.md).
+- **Publish a course catalog:** read the public courses without signing in, so a website can list what you teach. To charge for a course, see [Sell courses](~/Modules/Learning/Selling-courses.md).
+- **Recognize completion:** design certificate templates and issue completion certificates.
+- **Keep learners informed:** post course updates and run course forums.
+- **Show learners their own work:** list the signed-in user's courses, enrollments and certificates, check whether they are enrolled in a course, and read the assignments of a course they take.
+
+Grading and quizzes are planned; see the [roadmap](~/get-started/Roadmap.md).
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call. The public course calls need neither a token nor a workspace, and the calls under `Me` need only a signed-in user.
+- **Permissions:** `courses_read`, `courses_create`, `courses_update` and `courses_delete`. Where the table shows "Checked by the service", the service decides per record, so a workspace member or a learner enrolled in the course can read it.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `LearningService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

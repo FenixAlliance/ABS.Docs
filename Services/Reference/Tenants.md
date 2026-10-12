@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Tenants service reference
+# Tenants service
 
+The Tenants service lets you create workspaces and manage who belongs to them and how each workspace is organized.
+
+**Who uses it:** workspace owners and administrators, and developers who automate workspace setup or membership.
+
+**Base route:** `/api/v2/TenantsService/...`
+
+## What you can do
+
+- **Create and run workspaces.** Create a workspace as any signed-in user, read and update its details, and set or clear the workspace your account opens by default. See [Business tenants](~/Capabilities/Alliance-Passport-Service/Business-Tenants.md).
+- **Invite people.** Send, resend and withdraw invitations, and list them by state: pending, redeemed or revoked. The person invited accepts or declines with their own account. See [Business users](~/Capabilities/Alliance-Passport-Service/Business-Users.md).
+- **Manage memberships.** List, read, update and remove the memberships (enrollments) in a workspace, and read the permissions, licenses and features each membership holds.
+- **Organize the workspace.** Maintain departments, positions, teams, team records and territories. Record employee memberships, and link teams to contacts and projects.
+- **Describe the organization.** Maintain the workspace's industries, segments, sizes, types and business relationships.
+- **Set up units of measure.** Maintain unit groups and the units inside each group.
+- **Store workspace settings.** Read and write workspace options by ID or by key.
+
+## Before you call it
+
+- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Name the workspace.** Workspace calls take the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant). Creating a workspace and answering an invitation need only a signed-in account.
+- **Hold the permission.** Each call needs the permission shown in the table, for example `tenants_read`, `tenants_update`, `tenants_manage`, `enrollments_read`, `departments_create`, `positions_update`, `teams_read`, `territories_read` or `units_create`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `TenantsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

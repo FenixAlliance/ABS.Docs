@@ -1,6 +1,29 @@
-<!-- generated:start -->
-# System service reference
+# System service
 
+The System service lets you connect your workspace to outside services, manage licenses and tasks, send workspace emails and resolve failed deliveries.
+
+**Who uses it:** workspace owners and administrators, and developers who automate licenses, tasks or integration connections.
+
+**Base route:** `/api/v2/SystemService/...`. Integration connections live under `/api/v2/Integrations/...`, and tasks under `/api/v2/TasksService/...`.
+
+## What you can do
+
+- **Connect integrations.** Start the authorization with a provider, then list your workspace's integration connections or disconnect one. The list never includes credentials, and disconnecting removes the stored credential with the connection. See [Official integrations](~/Modules/Integrations.md#connect-an-integration).
+- **Manage licenses.** List your workspace's licenses with their features, attributes and record quota, redeem a license, and check whether a license key is valid. Checking a key needs no sign-in.
+- **Assign license seats.** Assign a seat of a license to a member, list the assignments, and revoke a seat.
+- **Work with tasks.** Create, update, assign, complete, reopen and delete workspace tasks, and read your task inbox. You can also read your pending tasks across every workspace you belong to. See [Working with tasks](~/Modules/WORKFLOWS.md#working-with-tasks).
+- **Send workspace emails.** Preview an email rendered with your workspace's data, then send it to the recipients you choose.
+- **Resolve failed deliveries.** List the deliveries that failed for your workspace and record a resolution for each. A resolution is recorded separately and does not change the original failure record.
+
+## Before you call it
+
+- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Name the workspace.** Workspace calls take the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant). Your cross-workspace task list needs only a signed-in account.
+- **Hold the permission.** Integration connections need `integrations_read`, `integrations_manage` or `integrations_delete`. Licenses need `licenses_read`, and seat changes need `licenses_manage`. Tasks need `tasks_read`, `tasks_create`, `tasks_update`, `tasks_delete`, `tasks_manage` or `tasks_complete`. Emails need `email_send`. Resolving failed deliveries is for the workspace's business owner.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `SystemService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

@@ -1,6 +1,29 @@
-<!-- generated:start -->
-# Pricing service reference
+# Pricing service
 
+The Pricing service lets you set the prices and discounts of your items, control how amounts are rounded, and calculate an item's price.
+
+**Who uses it:** developers who sync price lists with a workspace, or who show prices in a store front end.
+
+**Base route:** `/api/v2/PricingService/...`
+
+## What you can do
+
+- **Keep price lists:** create price lists and the price of each item in them. See [Price lists](~/Modules/Sales-Hub.md#price-lists).
+- **Keep discount lists:** create discount lists and the discount entries in them.
+- **Keep pricing rules:** create, update and delete the rules that adjust your prices.
+- **Set rounding policies:** create, update and delete the policies that round your amounts.
+- **Calculate an item's price:** get an item's calculated price for a price list, a discount list, a quantity and a currency, and read its final price, total taxes and total savings.
+
+## Before you call it
+
+- **Sign-in:** the four item price reads need no sign-in.
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `pricelists_read`, `pricelists_create`, `pricelists_update` and `pricelists_delete` for price lists and pricing rules; `discounts_read`, `discounts_create`, `discounts_update` and `discounts_delete` for discount lists; `pricing_rules_read`, `pricing_rules_create`, `pricing_rules_update` and `pricing_rules_delete` for rounding policies.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `PricingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

@@ -1,6 +1,31 @@
-<!-- generated:start -->
-# Catalog service reference
+# Catalog service
 
+The Catalog service lets you build and publish the items you sell, with their categories, media, policies and customer feedback.
+
+**Who uses it:** developers who sync a product catalog with a workspace, or who show the catalog in a store front end.
+
+**Base route:** `/api/v2/CatalogService/...`
+
+## What you can do
+
+- **Manage items:** create, update and delete items, update many items in one call, upsert items from rows, and recalculate item prices.
+- **Show your published catalog:** list published items and read one, with no sign-in, and get the lowest and highest item price.
+- **Organize items:** keep categories, brands, tags, families, types and attributes with their options, and map items to Google product categories.
+- **Add media:** attach images and files to an item and set its primary image.
+- **Relate items to policies:** link an item to its refund, return, shipping, tax and warranty policies.
+- **Collect feedback:** record reviews and questions for an item, and list them.
+- **Read merchants:** list merchants and read one by ID.
+
+## Before you call it
+
+- **Sign-in:** reading the published catalog, its categories, policies, reviews and merchants needs no sign-in.
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `stock_items_read`, `stock_items_create`, `stock_items_update` and `stock_items_delete` cover items and every catalog resource.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `CatalogService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

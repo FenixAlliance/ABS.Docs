@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Trust service reference
+# Trust service
 
+The Trust service lets you sign documents, collect signatures from other people, and verify signed documents later.
+
+**Who uses it:** workspace members who sign or send documents for signature, and developers who add signing to their own apps.
+
+**Base route:** `/api/v2/TrustService/...`
+
+## What you can do
+
+- **Sign a document yourself.** Freeze a document's content and quick-sign it, or prepare, freeze and quick-sign it in one call. See [Signator](~/Modules/Signator.md).
+- **Collect signatures.** Open a signing request from a frozen document, or prepare the document and open the request in one call. Add participants, send the request, record a participant's outcome, and expire or void a request you no longer need. Finalize a completed request into a signed artifact.
+- **Verify what was signed.** Verify a signed document's signature, which checks that the signed file is intact and was signed with its embedded certificate. You can also check a stored file against the hash recorded for it.
+- **Manage signing certificates.** Import a PFX or P12 certificate, or generate a signing key that the platform holds for your workspace.
+- **Set up signing profiles.** Create signing profiles and reusable signature marks, and choose which signing provider and which of your certificates each profile signs with.
+- **Check readiness and providers.** Preview whether a document is ready to sign, and list the signing providers your workspace can use.
+- **Review the evidence.** Read signatures, signing participants and signing logs. See [Trust and compliance](~/Capabilities/Trust-and-Compliance.md).
+
+## Before you call it
+
+- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Name the workspace.** Every call takes the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant).
+- **Hold the permission.** Documents and signing requests need `signed_documents_read`, `signed_documents_update` or `signed_documents_manage`, and finalizing a request needs `signed_documents_manage`. Certificates need `signing_certificates_*`, generating a signing key needs `signing_certificates_manage`, profiles need `signing_profiles_*`, signature marks need `signature_representations_*`, and the logs need `signing_logs_read`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `TrustService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

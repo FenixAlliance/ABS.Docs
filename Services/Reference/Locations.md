@@ -1,6 +1,26 @@
-<!-- generated:start -->
-# Locations service reference
+# Locations service
 
+The Locations service lets you keep the addresses your workspace uses, such as sender, return and shipping addresses, and the addresses attached to a wallet.
+
+**Who uses it:** developers who sync addresses with a workspace, or who let customers manage the addresses in their wallet.
+
+**Base route:** `/api/v2/LocationsService/...`
+
+## What you can do
+
+- **Manage workspace locations:** list, count, create, update and delete the locations of your workspace.
+- **Manage wallet locations:** list, count, create, update and delete the locations attached to a wallet.
+- Orders use locations as their billing and shipping addresses. See [Orders](~/Modules/Sales-Hub/Sales-Records/Orders.md).
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `locations_read`, `locations_create`, `locations_update` and `locations_delete`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `LocationsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

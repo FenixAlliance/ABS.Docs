@@ -1,6 +1,28 @@
-<!-- generated:start -->
-# Projects service reference
+# Projects service
 
+The Projects service lets you plan projects, break them into tasks, and record and approve the hours your team works on them.
+
+**Who uses it:** developers who connect project tools, timesheets or client portals to a workspace.
+
+**Base route:** `/api/v2/ProjectsService/...`
+
+## What you can do
+
+- **Plan projects:** create and update projects and split each one into periods. See [Operations](~/Capabilities/Operations.md).
+- **Manage tasks:** create, update and delete tasks, inside a project or across all your projects.
+- **Classify tasks:** keep task categories, and the task types within each category.
+- **Log time:** record time logs, and list them for a project, for the contact responsible for them, or for the contact who created them.
+- **Approve hours:** request approval for logged project hours, change who approves them, and update the approval status.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every call.
+- **Permissions:** `projects_read`, `projects_create`, `projects_update` and `projects_delete` for projects, periods, tasks and task categories and types; `time_logs_read`, `time_logs_create`, `time_logs_update` and `time_logs_delete` for time logs and hours approval.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ProjectsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

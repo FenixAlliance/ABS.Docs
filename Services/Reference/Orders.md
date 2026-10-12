@@ -1,6 +1,29 @@
-<!-- generated:start -->
-# Orders service reference
+# Orders service
 
+The Orders service lets you create and manage the orders your workspace sells, and read the orders it receives from its suppliers.
+
+**Who uses it:** developers who connect order processing, fulfilment or customer portals to a workspace.
+
+**Base route:** `/api/v2/OrdersService/...`
+
+## What you can do
+
+- **Create and update orders:** create an order, add, update or remove its lines, and calculate the totals of the order or a single line. See [Orders](~/Modules/Sales-Hub/Sales-Records/Orders.md).
+- **List your orders** with their count or their extended details.
+- **Turn a cart into an order** by submitting it.
+- **Send an order:** preview the order email and send it to its recipients.
+- **Read the orders addressed to you:** list the orders other workspaces issued to your workspace, or to you personally, with their lines.
+- To get paid for an order, issue an [invoice](~/Modules/Accounting/Billing/Billing-Records/Invoices.md) for it.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `orders_read`, `orders_create`, `orders_update` and `orders_delete`; `carts_create` to submit a cart; `email_send` to preview or send the order email.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `OrdersService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

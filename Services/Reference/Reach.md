@@ -1,6 +1,32 @@
-<!-- generated:start -->
-# Reach service reference
+# Reach service
 
+The Reach service lets you decide who in your workspace is notified about what, and find out why a person was or was not notified.
+
+**Who uses it:** workspace administrators and developers who tune notifications or answer "why did I not get this?" questions.
+
+**Base route:** `/api/v2/ReachService/...`
+
+## What you can do
+
+- **Choose who hears about what:** create notification rules for a category, change who a rule reaches, and enable or disable a rule. See [Notifications](~/Capabilities/Notifications.md).
+- **Set workspace notification settings:** set or withdraw the workspace policy and the workspace default, and list the notification categories.
+- **Let people choose for themselves:** read, set and clear a person's own settings, for one workspace or for all their workspaces at once.
+- **Stop email to an address:** add an address to the suppression list and list the suppressed addresses. A suppressed address receives no email.
+- **Explain a notification:** for one notification, see who it reached and who it did not; for one person, see why they were or were not notified, for one notification or over a time window. You can also list the notifications, decisions and deliveries recorded in your workspace.
+
+The notifications themselves, with read and archive, are in the [Social service](Social.md).
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `notifications_read` to read rules, suppressions, notifications, decisions and deliveries; `notifications_manage` to change rules, policy, defaults and suppressions, and to list everyone's settings. A person's own settings need no permission.
+- Email delivery feedback, such as bounces and complaints, is not connected to a live provider yet, so the suppression list holds the addresses you add.
+- Unsubscribe links for recipients are not available yet.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ReachService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

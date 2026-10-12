@@ -1,6 +1,34 @@
-<!-- generated:start -->
-# Marketing service reference
+# Marketing service
 
+The Marketing service lets you run your workspace's campaigns, email content, newsletters, leads and site banners.
+
+**Who uses it:** developers who connect a website, a lead form or a marketing tool to a workspace.
+
+**Base route:** `/api/v2/MarketingService/...`
+
+## What you can do
+
+- **Run banners on your site:** create banner sets with their creatives, place a set in a placement slot of your pages and posts, and read the daily counts per creative. A visitor who clicks a banner is taken to its link.
+- **Show banners on a site you build:** read the banners for a placement slot and send clicks to the click address. Both work without sign-in.
+- **Plan campaigns:** manage marketing campaigns, marketing areas and marketing lists.
+- **Capture leads:** create and update marketing leads.
+- **Keep email content:** manage email templates, email signatures and email groups.
+- **Manage newsletters:** create newsletters and keep their subscriptions.
+- **Draft social media posts:** keep social media posts and group them into post buckets.
+
+See [Customer experience](~/Capabilities/Customer-Experience.md) for how these fit with contacts and support.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `marketing_banners_read`, `marketing_banners_create`, `marketing_banners_update` and `marketing_banners_delete`; and the `_read`, `_create`, `_update` and `_delete` permissions of `campaigns`, `marketing_areas`, `marketing_lists`, `marketing_leads`, `email_templates`, `email_signatures`, `email_groups`, `newsletters` and `social_posts`.
+- **Email templates and signatures written in code:** content in Razor, C# or CSHtml can be saved only in workspaces an instance administrator enables, and only by their owners and administrators. Everywhere else, set the content type to HTML, Markdown or Markup.
+- Unsubscribe links for recipients are not available yet.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `MarketingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

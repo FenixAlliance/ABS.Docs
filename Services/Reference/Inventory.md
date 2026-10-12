@@ -1,6 +1,8 @@
-<!-- generated:start -->
-# Inventory service reference
+# Inventory service
 
+The Inventory service has no public endpoints in this release, so use the [Logistics service](Logistics.md) to work with warehouses and stock.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `InventoryService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

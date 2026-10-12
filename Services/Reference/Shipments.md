@@ -1,6 +1,29 @@
-<!-- generated:start -->
-# Shipments service reference
+# Shipments service
 
+The Shipments service lets you record shipments and set up how your workspace ships: methods, couriers, classes, zones, regions and labels.
+
+**Who uses it:** developers who connect a shipping platform, a carrier or a fulfilment tool to a workspace.
+
+**Base route:** `/api/v2/ShipmentsService/...`
+
+## What you can do
+
+- **Record shipments** for the goods you send.
+- **Keep bills of lading** with their lines.
+- **Set up shipping:** keep shipping methods, couriers, classes, zones and regions.
+- **Keep shipping labels** for your shipments.
+- **Keep item shipping policies** that set how each item ships.
+- An order shows its shipments in Studio. See [Orders](~/Modules/Sales-Hub/Sales-Records/Orders.md).
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `shipments_read`, `shipments_create`, `shipments_update` and `shipments_delete` cover shipments and the shipping setup. Bills of lading use `bills_of_lading_read`, `bills_of_lading_create`, `bills_of_lading_update` and `bills_of_lading_delete`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ShipmentsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

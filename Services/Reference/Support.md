@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Support service reference
+# Support service
 
+The Support service lets you run customer support for your workspace: tickets and requests, a knowledge base, and returns, refunds, warranties and maintenance visits.
+
+**Who uses it:** developers who connect a help center, a customer portal or a field service tool to a workspace.
+
+**Base route:** `/api/v2/SupportService/...`
+
+## What you can do
+
+- **Handle support tickets:** create tickets and support requests, attach files to a request, and keep the conversations of a ticket and read their messages. See [Customer experience](~/Capabilities/Customer-Experience.md).
+- **Classify tickets:** maintain your own ticket types and priorities.
+- **Publish a knowledge base:** create, update and delete knowledge articles.
+- **Take inquiries:** record inquiry requests from customers.
+- **Handle returns, refunds and warranties:** keep your return, refund and warranty policies, and the return, refund and warranty requests made under them.
+- **Track entitlements and visits:** record the support each customer is entitled to and the maintenance visits you schedule.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `tickets_read`, `tickets_create`, `tickets_update` and `tickets_delete` for tickets, requests, attachments, types and priorities. Each other resource has its own permissions, such as `knowledge_articles_create`, `inquiry_requests_create`, `return_policies_create`, `refund_requests_read`, `warranty_requests_read`, `entitlements_read` and `maintenance_visits_read`, with the matching `_create`, `_update` and `_delete` forms.
+- **Knowledge articles written in code:** content in Razor, C# or CSHtml can be saved only in workspaces an instance administrator enables, and only by their owners and administrators. Everywhere else, set the content type to HTML, Markdown or Markup.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `SupportService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

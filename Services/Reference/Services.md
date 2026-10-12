@@ -1,6 +1,27 @@
-<!-- generated:start -->
-# Services service reference
+# Service management service
 
+The Service management service lets you define the services you deliver and track each service case from request to delivery.
+
+**Who uses it:** developers who connect service desks, field service apps or customer portals to a workspace.
+
+**Base route:** `/api/v2/ServicesService/...`
+
+## What you can do
+
+- **Define your services:** create and update the services you offer, and the service levels of each one.
+- **Agree on service levels:** keep the service level agreements that apply to your cases.
+- **Track service cases:** open a case for a customer with its instructions, work location and promised dates, and classify it with a case type.
+- **Route the work:** keep service queues and place each case in the queue that handles it.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every call.
+- **Permissions:** `services_read`, `services_create`, `services_update` and `services_delete` cover every call in this service.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ServicesService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

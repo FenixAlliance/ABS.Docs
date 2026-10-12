@@ -1,6 +1,27 @@
-<!-- generated:start -->
-# Assets service reference
+# Assets service
 
+The Assets service lets you keep a register of the assets your workspace owns, with their history of transfers, repairs, value changes and depreciation.
+
+**Who uses it:** developers who connect asset tracking, maintenance or fixed asset tools to a workspace.
+
+**Base route:** `/api/v2/AssetsService/...`
+
+## What you can do
+
+- **Keep an asset register:** create, update and delete assets, and organize them by category and type.
+- **Record transfers:** record when an asset moves, and list the transfers of one asset or of the whole workspace.
+- **Record repairs:** keep the repair history of each asset.
+- **Record value changes:** keep the value amendments and the depreciation records of each asset.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every call.
+- **Permissions:** `assets_read`, `assets_create`, `assets_update` and `assets_delete` for assets, categories, types, repairs, value amendments and depreciation records; `asset_transfers_read`, `asset_transfers_create`, `asset_transfers_update` and `asset_transfers_delete` for transfers.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `AssetsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
@@ -18,6 +39,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PUT | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category. |
 | PATCH | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category. |
 | DELETE | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_delete` | Workspace member | Deletes an asset category. |
+| GET | `/api/v2/AssetsService/Assets/Categories` | `assets_read` | Workspace member | Gets all asset categories for a tenant. |
+| POST | `/api/v2/AssetsService/Assets/Categories` | `assets_create` | Workspace member | Creates a new asset category. |
+| GET | `/api/v2/AssetsService/Assets/Categories/count` | `assets_read` | Workspace member | Gets the count of asset categories for a tenant. |
+| GET | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category by ID. |
+| PUT | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category. |
+| PATCH | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category. |
+| DELETE | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_delete` | Workspace member | Deletes an existing asset category. |
 
 ## AssetTransfers
 
@@ -49,13 +77,6 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | --- | --- | --- | --- | --- |
 | GET | `/api/v2/AssetsService/Assets` | `assets_read` | Workspace member | Gets all assets for a tenant. |
 | POST | `/api/v2/AssetsService/Assets` | `assets_create` | Workspace member | Creates a new asset. |
-| GET | `/api/v2/AssetsService/Assets/Categories` | `assets_read` | Workspace member | Gets all asset categories for a tenant. |
-| POST | `/api/v2/AssetsService/Assets/Categories` | `assets_create` | Workspace member | Creates a new asset category. |
-| GET | `/api/v2/AssetsService/Assets/Categories/count` | `assets_read` | Workspace member | Gets the count of asset categories for a tenant. |
-| GET | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category by ID. |
-| PUT | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category. |
-| PATCH | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category. |
-| DELETE | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_delete` | Workspace member | Deletes an existing asset category. |
 | GET | `/api/v2/AssetsService/Assets/count` | `assets_read` | Workspace member | Gets the count of assets for a tenant. |
 | GET | `/api/v2/AssetsService/Assets/{assetId}` | `assets_read` | Workspace member | Gets a specific asset by ID. |
 | PUT | `/api/v2/AssetsService/Assets/{assetId}` | `assets_update` | Workspace member | Updates an existing asset. |

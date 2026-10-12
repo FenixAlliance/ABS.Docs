@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Payments service reference
+# Payments service
 
+The Payments service lets you connect your payment provider account, get paid for your invoices through payment links, refund payments, and keep your payment records.
+
+**Who uses it:** developers who automate how a workspace gets paid, and finance teams who reconcile payments.
+
+**Base route:** `/api/v2/PaymentsService/...`
+
+**Availability:** payments run today in test mode, through Stripe. Live payments and other providers are coming.
+
+## What you can do
+
+- **Connect your payment provider:** create the connection to your own Stripe account, list your connections, update the account ID and enabled capabilities, and rotate the notification URL. See [Stripe](~/Integrations/Stripe.md).
+- **Get paid for an invoice:** create a payment link for one of your invoices, or a payment reference you can print on a document. The payer enters card details on the provider's own checkout. See [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md).
+- **Refund a payment:** return a completed payment through the provider that collected it. Each refund request is sent once.
+- **Reconcile outcomes:** list the provider operations whose outcome is not yet confirmed, and ask the provider what became of one.
+- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `payments_read`, `payments_create`, `payments_update` and `payments_delete` for payment records; `payments_manage` to connect a provider and to create payment links and references; `payment_refunds_create` to refund a payment.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `PaymentsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
@@ -73,7 +97,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/PaymentsService/ProviderOperations/AwaitingOutcome` | `payments_read` | Workspace member | Lists provider instructions whose outcome is not established |
 | GET | `/api/v2/PaymentsService/ProviderOperations/AwaitingOutcome/Count` | `payments_read` | Workspace member | Counts provider instructions whose outcome is not established |
 | POST | `/api/v2/PaymentsService/ProviderOperations/{providerOperationId}/ReconcileOutcome` | `payments_manage` | Workspace member | Asks the rail what became of one instruction |
-| POST | `/api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund` | `RefundPermission` | Workspace member | Refunds one collection through its own rail |
+| POST | `/api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund` | `payment_refunds_create` | Workspace member | Refunds one collection through its own rail |
 
 ## PublicPaymentLinks
 

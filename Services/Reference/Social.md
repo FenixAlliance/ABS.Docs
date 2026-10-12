@@ -1,6 +1,32 @@
-<!-- generated:start -->
-# Social service reference
+# Social service
 
+The Social service lets people follow each other, post, comment and react, talk in conversations, read their notifications, and keep a curriculum.
+
+**Who uses it:** developers who build a community, a member portal or an inbox on top of a workspace.
+
+**Base route:** `/api/v2/SocialService/...`
+
+## What you can do
+
+- **Read notifications:** list and count the notifications of a social profile, mark one read, and archive or unarchive it. See [Notifications](~/Capabilities/Notifications.md).
+- **Follow profiles:** read social profiles, their followers and the profiles they follow, and follow or unfollow a profile.
+- **Post and react:** create posts with attachments and images, comment on them, and react to posts and comments. Read and post in social feeds.
+- **Talk in conversations:** start a conversation or a direct conversation, send, edit and delete messages, and mark a conversation read.
+- **Run groups:** create and manage social groups.
+- **Keep a curriculum:** keep a curriculum with work experience, and maintain the workspace's skill catalog.
+
+Who receives a notification is decided by the rules in the [Reach service](Reach.md).
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Signed-in calls:** posts, feeds, comments, reactions, conversations, follows and your own curriculum need a signed-in user and no workspace permission.
+- **Permissions:** `notifications_create` and `notifications_update` to create a notification or mark it read, and `notifications_read` to archive or unarchive one; `social_groups_create`, `social_groups_update` and `social_groups_delete`; `curriculums_create`, `curriculums_update` and `curriculums_delete` for work experience; `skills_read`, `skills_create`, `skills_update` and `skills_delete`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `SocialService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

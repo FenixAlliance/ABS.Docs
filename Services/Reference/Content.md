@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Content service reference
+# Content service
 
+The Content service lets you build and run your workspace's websites: portals, pages, blog posts, templates, themes, menus, translations and domains.
+
+**Who uses it:** developers who manage a site's content from another tool, or who build a headless site on top of a portal.
+
+**Base route:** `/api/v2/ContentService/...`
+
+## What you can do
+
+- **Manage portals:** create and update portals and their settings. See [Portals](~/Capabilities/Alliance-Business-Studio/Portals.md) and [CMS](~/Modules/CMS.md).
+- **Connect your own domain:** register a domain, verify it, and bind it to a portal.
+- **Publish pages:** create, update and delete web pages, and organize them with categories and tags.
+- **Run a blog:** write blog posts, organize them with categories and tags, and manage comments and replies.
+- **Shape the site:** maintain web templates, web components, web contents, website themes, menus and localization strings.
+- **Read a site without sign-in:** read the current portal and its settings, find a portal by its domain, and read published blog posts with their authors, categories, tags and comments.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `portals_read`, `portals_create`, `portals_update` and `portals_delete` for portals, templates, components, themes, menus and localization strings; `portal_pages_read`, `portal_pages_create`, `portal_pages_update` and `portal_pages_delete` for pages; `portal_posts_read`, `portal_posts_create`, `portal_posts_update` and `portal_posts_delete` for blog posts and web contents; `business_domains_read`, `business_domains_create`, `business_domains_update` and `business_domains_delete` for domains.
+- **Code pages:** pages, posts, templates, components and contents in Razor, C# or CSHtml are available only in workspaces an instance administrator enables, and only their owners and administrators can create or change them. Everywhere else, set the content type to HTML, Markdown or Markup. A content type left empty counts as code.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ContentService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

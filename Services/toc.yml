@@ -2,11 +2,97 @@
 - name: "Services"
   href: index.md
   items:
-  - name: "BlockChains Service"
-    href: BlockChains-Service.md
-  - name: "Multi-Tenancy Service"
-    href: Tenants-Service.md
-  - name: "Multi-Currency Service"
-    href: Forex-Service.md
-  - name: "Pricing Service"
-    href: Pricing-Service.md
+  - name: "Finance"
+    items:
+    - name: "Accounting"
+      href: Reference/Accounting.md
+    - name: "Invoicing"
+      href: Reference/Invoicing.md
+    - name: "Payments"
+      href: Reference/Payments.md
+    - name: "Pricing"
+      href: Reference/Pricing.md
+    - name: "Currencies and exchange rates"
+      href: Reference/Forex.md
+    - name: "Subscriptions"
+      href: Reference/Subscriptions.md
+    - name: "Licensing and usage"
+      href: Reference/Licensing.md
+    - name: "Blockchain records"
+      href: Reference/Blockchains.md
+  - name: "Commerce"
+    items:
+    - name: "Sales"
+      href: Reference/Sales.md
+    - name: "Quotes"
+      href: Reference/Quotes.md
+    - name: "Orders"
+      href: Reference/Orders.md
+    - name: "Deals"
+      href: Reference/Deals.md
+    - name: "Carts"
+      href: Reference/Cart.md
+    - name: "Catalog"
+      href: Reference/Catalog.md
+    - name: "Inventory"
+      href: Reference/Inventory.md
+    - name: "Logistics"
+      href: Reference/Logistics.md
+    - name: "Shipments"
+      href: Reference/Shipments.md
+    - name: "Locations"
+      href: Reference/Locations.md
+  - name: "Customers and content"
+    items:
+    - name: "Contacts"
+      href: Reference/Contacts.md
+    - name: "Marketing"
+      href: Reference/Marketing.md
+    - name: "Notifications and reach"
+      href: Reference/Reach.md
+    - name: "Social"
+      href: Reference/Social.md
+    - name: "Support"
+      href: Reference/Support.md
+    - name: "Content and portals"
+      href: Reference/Content.md
+  - name: "Workforce and operations"
+    items:
+    - name: "Human resources"
+      href: Reference/HR.md
+    - name: "Learning"
+      href: Reference/Learning.md
+    - name: "Projects"
+      href: Reference/Projects.md
+    - name: "Manufacturing"
+      href: Reference/Manufacturing.md
+    - name: "Assets"
+      href: Reference/Assets.md
+    - name: "Service management"
+      href: Reference/Services.md
+    - name: "Activities"
+      href: Reference/Activities.md
+    - name: "Approvals"
+      href: Reference/Approvals.md
+    - name: "Workflows"
+      href: Reference/Workflows.md
+  - name: "Platform"
+    items:
+    - name: "Workspaces"
+      href: Reference/Tenants.md
+    - name: "Accounts and profiles"
+      href: Reference/Holders.md
+    - name: "Identity and sign-in"
+      href: Reference/Identity.md
+    - name: "Security"
+      href: Reference/Security.md
+    - name: "Trust and signing"
+      href: Reference/Trust.md
+    - name: "System"
+      href: Reference/System.md
+    - name: "Intelligence"
+      href: Reference/Intelligence.md
+    - name: "Analytics"
+      href: Reference/Analytics.md
+    - name: "Global reference data"
+      href: Reference/Globe.md

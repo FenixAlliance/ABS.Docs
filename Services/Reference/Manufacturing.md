@@ -1,6 +1,26 @@
-<!-- generated:start -->
-# Manufacturing service reference
+# Manufacturing service
 
+The Manufacturing service lets you keep the production plans, work orders and workstations of your shop floor.
+
+**Who uses it:** developers who connect production planning or shop floor systems to a workspace.
+
+**Base route:** `/api/v2/ManufacturingService/...`
+
+## What you can do
+
+- **Plan production:** create, update and delete production plans. See [Operations](~/Capabilities/Operations.md).
+- **Manage work orders:** create and update work orders, and classify them with work order types.
+- **Keep workstations:** record the workstations where the work is done.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every call.
+- **Permissions:** `production_plans_read`, `production_plans_create`, `production_plans_update` and `production_plans_delete`; the same four for `work_orders`, which also cover work order types, and for `workstations`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ManufacturingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

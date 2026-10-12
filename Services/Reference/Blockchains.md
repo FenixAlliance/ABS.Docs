@@ -1,6 +1,26 @@
-<!-- generated:start -->
-# Blockchains service reference
+# Blockchains service
 
+The Blockchains service lets you keep your workspace's blockchain records and non-fungible token (NFT) records.
+
+**Who uses it:** developers who keep a register of the blockchains and NFTs a workspace works with.
+
+**Base route:** `/api/v2/BlockchainsService/...`
+
+## What you can do
+
+- **Keep blockchain records:** create, list, count, read, update and delete the blockchain records of your workspace.
+- **Update block records:** patch a block record that belongs to one of your blockchain records.
+- **Keep NFT records:** create, list, count, read, update and delete the NFT records of your workspace.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `blockchains_read`, `blockchains_create`, `blockchains_update` and `blockchains_delete` for blockchain and block records; `non_fungible_tokens_read`, `non_fungible_tokens_create`, `non_fungible_tokens_update` and `non_fungible_tokens_delete` for NFT records.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `BlockchainsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

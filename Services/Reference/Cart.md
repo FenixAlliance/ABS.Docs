@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Cart service reference
+# Cart service
 
+The Cart service lets a storefront hold what a shopper wants to buy, save for later or compare, and then submit it as an order.
+
+**Who uses it:** developers who build a store or marketplace front end for guests and signed-in shoppers.
+
+**Base route:** `/api/v2/CartService/...`
+
+## What you can do
+
+- **Get the right cart:** the guest cart, the signed-in user's cart, a workspace's business cart, or the cart acting for the current visitor.
+- **Fill the cart:** add or remove items, increase or decrease quantities, update lines, check whether an item is already in the cart, or clear it.
+- **Keep wish lists:** create wish lists in a cart and add or remove items in them.
+- **Compare items:** add items to the cart's compare table, read them side by side, and remove them.
+- **Show recently viewed items,** newest first.
+- **Submit the cart** to create an order. See [Orders](~/Modules/Sales-Hub/Sales-Records/Orders.md).
+
+## Before you call it
+
+- **Sign-in:** most cart, wish list and compare calls need no sign-in, so guests can shop. Reading the user's cart needs a signed-in user.
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** to read a workspace's business cart or submit a cart, send the workspace ID in the `X-TenantId` header or as the `tenantId` query value.
+- **Permissions:** `carts_create` to submit a cart. The other calls declare no permission.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `CartService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

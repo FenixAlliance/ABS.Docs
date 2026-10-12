@@ -1,6 +1,28 @@
-<!-- generated:start -->
-# Licensing service reference
+# Licensing service
 
+The Licensing service lets you read the licenses your workspace holds, define the license types you work with, and see your workspace's usage.
+
+**Who uses it:** developers and administrators who track what a workspace is licensed for and how much of it the workspace uses.
+
+**Base route:** `/api/v2/LicensingService/...`
+
+## What you can do
+
+- **Read your licenses:** list and count the licenses your workspace owns, and read one. You can also create, update and delete license records.
+- **Define license types:** keep license types, with the features and attributes each one includes.
+- **Update a licensing certificate:** patch the details of a licensing certificate.
+- **See your usage:** read your workspace's usage per license: the plan, the current period and, for each licensed allowance, what you have consumed and what happens at the limit.
+- **Read the usage meters:** list every usage meter, with its unit and the licensed allowance it counts against.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `licenses_read`, `licenses_create`, `licenses_update` and `licenses_delete`. Reading usage and meters needs `licenses_read`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `LicensingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

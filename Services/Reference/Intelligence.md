@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Intelligence service reference
+# Intelligence service
 
+The Intelligence service lets you configure your workspace's AI agents, review what AI did and what it used, and decide whether AI may advise on approvals.
+
+**Who uses it:** workspace administrators who configure and audit AI, and developers who manage agents through the API.
+
+**Base route:** `/api/v2/IntelligenceService/...`
+
+## What you can do
+
+- **Configure agents.** Create, update and delete your workspace's agents, assign skills to them, and set their variables. Create and maintain the skills your agents can use.
+- **Keep agents within their permissions.** Check whether an agent holds the permissions its tools need, grant the missing ones, and revoke the ones its tools no longer use. Read the capability catalog to see what each capability does and which permission it requires.
+- **Review agent conversations.** Read an agent's conversations, their messages and the tool approvals still waiting for a decision, and upload attachments to a conversation.
+- **Audit AI activity.** Read the record of each AI run, the AI usage observations, a usage summary for a date range, and agent execution diagnostics.
+- **Check AI providers.** List the AI providers and models available to your workspace.
+- **Decide on AI advice for approvals.** AI advice on approvals is off until you opt in. Read the disclosure first: the provider and model that would be used and which approval fields are shared. Then opt in to that disclosure, or opt out at any time. Advice only informs the people who decide.
+- **Install definitions from the Gallery.** Validate, install, update and uninstall definitions published to the Gallery, and read which ones your workspace has installed.
+
+## Before you call it
+
+- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Name the workspace.** Every call takes the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant).
+- **Hold the permission.** Agents, skills, runs, usage and definitions need `bots_read`, `bots_create`, `bots_update`, `bots_delete` or `bots_manage`. Reading conversations needs `bots_read`, and reading every member's conversations also needs `bots_manage`. Attachments need `conversations_manage`. AI advice needs `approvals_read` to read the disclosure and consent, and `approvals_manage` to opt in or out. Checking an agent's permissions needs `bots_read`, and granting or revoking them needs `security_permissions_manage`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `IntelligenceService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
@@ -70,10 +94,10 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/IntelligenceService/ApprovalAdvice/Consent` | (resolved at run time) | Workspace member | Get the tenant's AI approval advice consent |
-| GET | `/api/v2/IntelligenceService/ApprovalAdvice/Disclosure` | (resolved at run time) | Workspace member | Get the AI approval advice disclosure |
-| POST | `/api/v2/IntelligenceService/ApprovalAdvice/OptIn` | (resolved at run time) | Workspace member | Opt the tenant in to AI approval advice |
-| POST | `/api/v2/IntelligenceService/ApprovalAdvice/OptOut` | (resolved at run time) | Workspace member | Opt the tenant out of AI approval advice |
+| GET | `/api/v2/IntelligenceService/ApprovalAdvice/Consent` | `approvals_read` | Workspace member | Get the tenant's AI approval advice consent |
+| GET | `/api/v2/IntelligenceService/ApprovalAdvice/Disclosure` | `approvals_read` | Workspace member | Get the AI approval advice disclosure |
+| POST | `/api/v2/IntelligenceService/ApprovalAdvice/OptIn` | `approvals_manage` | Workspace member | Opt the tenant in to AI approval advice |
+| POST | `/api/v2/IntelligenceService/ApprovalAdvice/OptOut` | `approvals_manage` | Workspace member | Opt the tenant out of AI approval advice |
 
 ## Capabilities
 
@@ -93,21 +117,21 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations` | (resolved at run time) | Workspace member | Get all conversations for a cognitive agent |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get all conversations for a cognitive agent |
 | POST | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations` | `bots_create` | Workspace member | Create a new cognitive agent conversation |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/Count` | (resolved at run time) | Workspace member | Get conversation count for a cognitive agent |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | (resolved at run time) | Workspace member | Get a cognitive agent conversation by ID |
-| PUT | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | (resolved at run time) | Workspace member | Update a cognitive agent conversation |
-| DELETE | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | (resolved at run time) | Workspace member | Delete a cognitive agent conversation |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/Count` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get conversation count for a cognitive agent |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get a cognitive agent conversation by ID |
+| PUT | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | `bots_update` (bots_manage too, to reach every user's conversations) | Workspace member | Update a cognitive agent conversation |
+| DELETE | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{id}` | `bots_delete` (bots_manage too, to reach every user's conversations) | Workspace member | Delete a cognitive agent conversation |
 
 ## CognitiveAgentMessages
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages` | (resolved at run time) | Workspace member | Get all messages for a cognitive agent conversation |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages/Count` | (resolved at run time) | Workspace member | Get message count for a cognitive agent conversation |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages/{id}` | (resolved at run time) | Workspace member | Get a cognitive agent conversation message by ID |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/PendingApprovals` | (resolved at run time) | Workspace member | Get unresolved approvals for a cognitive agent conversation |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get all messages for a cognitive agent conversation |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages/Count` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get message count for a cognitive agent conversation |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/Messages/{id}` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get a cognitive agent conversation message by ID |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Conversations/{conversationId}/PendingApprovals` | `bots_read` (bots_manage too, to reach every user's conversations) | Workspace member | Get unresolved approvals for a cognitive agent conversation |
 
 ## CognitiveAgentSkills
 
@@ -137,11 +161,11 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | --- | --- | --- | --- | --- |
 | GET | `/api/v2/IntelligenceService/CognitiveAgents` | `bots_read` | Workspace member | Get all cognitive agents |
 | POST | `/api/v2/IntelligenceService/CognitiveAgents` | `bots_create` | Workspace member | Create a new cognitive agent |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/BuiltInCapabilities` | (resolved at run time) | Workspace member | Get the intrinsic built-in capabilities every agent possesses |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/BuiltInCapabilities` | `bots_read` | Workspace member | Get the intrinsic built-in capabilities every agent possesses |
 | GET | `/api/v2/IntelligenceService/CognitiveAgents/Count` | `bots_read` | Workspace member | Get cognitive agents count |
-| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/PermissionReadiness` | (resolved at run time) | Workspace member | Get a cognitive agent's permission readiness |
-| POST | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Permissions/Grant` | (resolved at run time) | Workspace member | Grant required tool permissions to a cognitive agent |
-| POST | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Permissions/Revoke` | (resolved at run time) | Workspace member | Revoke orphaned tool permissions from a cognitive agent |
+| GET | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/PermissionReadiness` | `bots_read` | Workspace member | Get a cognitive agent's permission readiness |
+| POST | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Permissions/Grant` | `security_permissions_manage` | Workspace member | Grant required tool permissions to a cognitive agent |
+| POST | `/api/v2/IntelligenceService/CognitiveAgents/{agentId}/Permissions/Revoke` | `security_permissions_manage` | Workspace member | Revoke orphaned tool permissions from a cognitive agent |
 | GET | `/api/v2/IntelligenceService/CognitiveAgents/{id}` | `bots_read` | Workspace member | Get cognitive agent by ID |
 | PUT | `/api/v2/IntelligenceService/CognitiveAgents/{id}` | `bots_update` | Workspace member | Update a cognitive agent |
 | DELETE | `/api/v2/IntelligenceService/CognitiveAgents/{id}` | `bots_delete` | Workspace member | Delete a cognitive agent |

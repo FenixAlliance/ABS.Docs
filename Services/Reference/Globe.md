@@ -1,6 +1,28 @@
-<!-- generated:start -->
-# Globe service reference
+# Globe service
 
+The Globe service lets you read reference data about countries, states, cities, currencies, languages and time zones.
+
+**Who uses it:** developers who fill address forms, currency pickers, language lists or time zone selectors in their apps.
+
+**Base route:** `/api/v2/GlobeService/...`
+
+## What you can do
+
+- **Look up countries.** List, count and search countries by name, and read one country by its ID.
+- **Drill into a country.** Read a country's states and the cities in each state, and its calling codes, currencies, time zones and top-level domains.
+- **List currencies.** List and count currencies, and read one currency by its ID.
+- **List languages.** List and count languages, and read one language by its ID.
+- **List time zones.** List and count time zones, and read one time zone by its ID.
+
+## Before you call it
+
+- **No sign-in needed.** Every Globe call is public, so you can call it without a token.
+- **No workspace header.** The data is the same for every workspace, so these calls do not take an `X-TenantId` header.
+- **Query the lists.** List and count calls support filtering and paging. See [Filter, sort, and page](~/Web-API-Development/REST-API-Development.md#filter-sort-and-page).
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `GlobeService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

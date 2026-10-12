@@ -1,6 +1,26 @@
-<!-- generated:start -->
-# Activities service reference
+# Activities service
 
+The Activities service lets you read and write the activity feeds of your workspace and classify each activity by type.
+
+**Who uses it:** developers who record or display activity from other systems in a workspace.
+
+**Base route:** `/api/v2/ActivitiesService/...`
+
+## What you can do
+
+- **Read activity feeds:** list the activity feeds of your workspace and count the activities they hold.
+- **Record activities:** add, update and delete the activities in a feed.
+- **Classify activities:** keep the activity types you use to label activities.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every call.
+- **Permissions:** `activities_read`, `activities_create`, `activities_update` and `activities_delete`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `ActivitiesService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

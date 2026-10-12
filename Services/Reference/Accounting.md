@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Accounting service reference
+# Accounting service
 
+The Accounting service lets you keep your workspace's books over the API: chart of accounts, journals, fiscal periods, taxes, finance records and reports.
+
+**Who uses it:** developers who connect an accounting, banking or reporting system to a workspace, or who automate bookkeeping.
+
+**Base route:** `/api/v2/AccountingService/...`
+
+## What you can do
+
+- **Set up your chart of accounts:** create accounts and account groups, and organize them into ledgers, ledger types and financial books. See [Accounting](~/Modules/Accounting.md).
+- **Record journal entries:** keep journals and journal types, bind a journal to a financial book, add draft entries, post a draft entry and reverse a posted entry.
+- **Run your fiscal calendar:** keep fiscal authorities, fiscal years and fiscal periods, open or close a period, and keep the number ranges your invoices draw from. See [Invoice-number ranges](~/Modules/Accounting/Billing/Invoice-Number-Ranges.md).
+- **Configure taxes:** keep tax classes, tax rates and tax policies, record the items and documents a tax policy applies to, and read the taxes of a billable line.
+- **Keep finance records:** bank accounts, bank guarantees and bank transactions; loans and loan applications; budgets, cost centres, expense claims, receipts, grants and commissions; share classes, issuances and transfers; and transactions with their categories.
+- **Report on your books:** get the trial balance of a fiscal period, in the currency you choose and optionally for one financial book, and sum your credits, debits, incomes and expenses.
+- **Follow automatic postings:** when **Post journal entries automatically** is turned on in your Accounting settings, list the postings the platform made for you and find the ones that did not complete.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** each kind of record has its own read, create, update and delete permissions, for example `accounts_read`, `journals_create`, `ledgers_update`, `fiscal_years_delete`, `taxes_read` and `banks_create`. Posting and reversing an entry need `journals_post` and `journals_reverse`. Opening and closing a fiscal period need `fiscal_periods_open` and `fiscal_periods_close`. The table below names the permission of every endpoint.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `AccountingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

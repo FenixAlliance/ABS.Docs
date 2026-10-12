@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Invoicing service reference
+# Invoicing service
 
+The Invoicing service lets you create, issue, correct and send your workspace's invoices, and read the payments recorded on them.
+
+**Who uses it:** developers who connect billing, order processing or a customer portal to a workspace.
+
+**Base route:** `/api/v2/InvoicingService/...`
+
+## What you can do
+
+- **Create and edit invoices:** create an invoice, add, update or remove its lines, line taxes, references and adjustments, and calculate the totals of the invoice or of a single line. See [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md).
+- **Issue an invoice:** issue a draft so it becomes final and payable. It takes its number when your workspace has a number range. See [Invoice-number ranges](~/Modules/Accounting/Billing/Invoice-Number-Ranges.md).
+- **Correct an issued invoice:** read the amount that can still be credited, and issue a credit note or a debit note against the invoice. A note posts to your books only when automatic journal posting is turned on. See [Credit and debit notes](~/Modules/Accounting/Billing/Credit-and-Debit-Notes.md).
+- **Send an invoice:** preview the invoice email and send it to its recipients.
+- **Report on invoices:** list and count invoices with their extended details, sum your sales and purchase invoices, and aggregate totals, taxes, tax bases, discounts and surcharges.
+- **Follow payments:** list and count the payments recorded against an invoice. To collect a payment, see [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md).
+- **Re-post an invoice to your books:** when the accounting entry of an issued invoice did not complete, fix the cause, then post it again with a reason. Each re-post is audited, and an invoice takes at most three re-posts in 24 hours.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
+- **Permissions:** `invoices_read`, `invoices_create`, `invoices_update` and `invoices_delete`; `email_send` to preview or send the invoice email; `journals_post` to re-post an invoice to your books; `carts_read` to recognise a voucher code for a cart.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `InvoicingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

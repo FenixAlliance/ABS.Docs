@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# Holders service reference
+# Holders service
 
+The Holders service lets a signed-in person read and manage their own account: profile, settings, memberships, invitations and personal options.
+
+**Who uses it:** apps that act for a signed-in person, such as a personal dashboard or a mobile client.
+
+**Base route:** `/api/v2/Me/...`. One call, a user's public profile, lives under `/api/v2/UsersService/...`.
+
+## What you can do
+
+- **Read and update your profile.** Read your profile and extended profile, update or patch it, and read your avatar. See [Account holders](~/Capabilities/Alliance-Passport-Service/Account-Holders.md).
+- **List your workspaces and memberships.** List and count the workspaces you belong to, and read each of your memberships (enrollments). See [Business tenants](~/Capabilities/Alliance-Passport-Service/Business-Tenants.md).
+- **Review your invitations.** List the invitations addressed to you and read one before you accept it. An invitation is visible only to the account it is addressed to, or to whoever opens it from the invitation email link. See [Business users](~/Capabilities/Alliance-Passport-Service/Business-Users.md).
+- **Keep personal settings and options.** Read and update your settings, and create, read, update and delete personal options by ID or by key.
+- **Read what belongs to you.** Read your notifications and their count, your addresses, your cart, your wallet account and your social profile, followers and follows.
+- **Check Studio access.** Find out whether your account can open Studio.
+- **Show another user's public profile.** Read a user's public name and avatar, and nothing private.
+
+## Before you call it
+
+- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **No workspace header.** These calls are about your own account, so they do not take an `X-TenantId` header.
+- **Permissions.** Any signed-in account can call them. Reading your profile and your memberships also needs `users_read`.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `Me`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

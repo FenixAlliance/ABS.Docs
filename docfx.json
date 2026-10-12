@@ -31,7 +31,7 @@
           "reference/License.md",
           "Modules/SECURITY.md",
           "Modules/Signator/DIAN-Invoicing.md",
-          "Services/Wallets-Service.md",
+          "Services/Reference/Wallets.md",
           "tools/**",
           "**/node_modules/**"
         ]

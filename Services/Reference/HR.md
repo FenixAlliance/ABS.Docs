@@ -1,6 +1,30 @@
-<!-- generated:start -->
-# HR service reference
+# Human resources service
 
+The Human resources service lets you keep your workspace's people records, hire for open roles and gigs, and track time, leave, pay and appraisals.
+
+**Who uses it:** developers who connect HR systems, careers sites, time clocks or payroll tools to a workspace.
+
+**Base route:** `/api/v2/HrmsService/...`
+
+## What you can do
+
+- **Keep employee records:** create and update employees, employee types, employers and job titles, and manage the seats of a position: assign people, end an assignment, change its capacity or its department. See [Workforce](~/Capabilities/Workforce.md).
+- **Hire for open roles:** create job offers, publish, fill or close them, and keep the job fields and required skills each one asks for. Record applicants and their applications, and move each application through your recruiting stages.
+- **Publish a public job board:** read the published job offers without signing in, and publish or unpublish your employer profile.
+- **Run gigs:** create a gig, publish it, accept a proposal, award it, and mark it completed or cancelled. Gig applications are kept with the gig they answer.
+- **Track time and leave:** keep shifts, schedules and time intervals, record leave applications, and list the leave types you can apply for.
+- **Keep pay and performance records:** keep salaries, payroll periods and payroll records, list appraisal workflows and stages, and record appraisal sessions. Payroll is kept as records: the service does not calculate pay or post payroll to your books.
+- **Plan training:** list training programs and keep their courses and events.
+
+## Before you call it
+
+- **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
+- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call. The public job offer calls need neither a token nor a workspace.
+- **Permissions:** each resource has its own read, create, update and delete permissions, for example `employees_read` and `employees_update`, or `job_offers_create`. Payroll periods and payroll records share `payrolls_read`, `payrolls_create`, `payrolls_update` and `payrolls_delete`; positions use `positions_read` and `positions_update`. The table below names the permission of every call.
+
+The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
+
+<!-- generated:start -->
 > This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.
 
 Route segment: `HrmsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.

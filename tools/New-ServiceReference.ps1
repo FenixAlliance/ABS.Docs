@@ -319,6 +319,15 @@ function ConvertTo-AsciiLine([string]$Text) {
 	return $sb.ToString()
 }
 
+function Format-PermissionCell($Row) {
+	# Only permission values (lower-case tokens) are shown as code; anything else is plain language.
+	$parts = @($Row.Permission -split ',\s*' | Where-Object { $_ -and ($_ -cmatch '^[a-z][a-z0-9_.:-]*$') })
+	$cell = (@($parts | ForEach-Object { '`' + $_ + '`' }) -join ', ')
+	if ($cell -and $Row.PermissionNote) { $cell += ' (' + (ConvertTo-Cell $Row.PermissionNote) + ')' }
+	if (-not $cell -and $Row.PermissionRuntime) { $cell = ConvertTo-Cell $Row.PermissionRuntime }
+	return $cell
+}
+
 function ConvertTo-CustomerAccess([string]$Access) {
 	# Internal authorization modes -> customer terms. A workspace (tenant) endpoint that also has a user path is still
 	# described by its workspace rule.
@@ -435,6 +444,96 @@ $modeRegex = [regex]'\bExecute(Tenant|User|Anonymous)(?:Query|Command)Async\b'
 $rootDirect = [regex]'\bExecuteTenant\w*Async\s*(?:<[^()]*>)?\s*\(\s*new\s*(?:TenantId)?\s*\(\s*(?:new\s+Guid\s*\()?\s*[\w.]*GetRootTenantId\s*\(\s*\)'
 $rootVar = [regex]'(?:var|TenantId\??)\s+(\w+)\s*=\s*(?:new\s*(?:TenantId)?\s*\(\s*(?:new\s+Guid\s*\()?\s*[\w.]*GetRootTenantId\s*\(\s*\)|RootAdminGate\.RootTenant\s*\()'
 
+# Pre-pass: string constants and permission-list fields/properties (for example
+#   public const string RefundPermission = Permissions.PaymentRefunds.Create;
+#   public static readonly List<string> Read = [AuthPermissions.Applications.Read];)
+# keyed both as "Class.Member" (global) and "file|Member" (bare use in the same file).
+$fieldGlobal = @{}
+$fieldLocal = @{}
+$fieldRegex = [regex]'(?:\bconst\s+string|\bstatic\s+(?:readonly\s+)?(?:string|List<string>|IReadOnlyList<string>|IReadOnlyCollection<string>|IEnumerable<string>|ICollection<string>|string\[\]))\s+(\w+)\s*(?:=>|=)\s*([^;]+);'
+foreach ($root in $indexRoots) {
+	foreach ($f in (Get-SourceFiles $root)) {
+		if ($f.FullName -eq $permissionsFile) { continue }
+		$t = Read-Source $f.FullName
+		if (-not $t.Contains('Permission')) { continue }
+		$m = [AbsServiceRefSource]::Mask($t)
+		$rel = $f.FullName.Substring($PlatformRoot.Length + 1)
+		$classes = @($classRegex.Matches($m))
+		foreach ($fm in $fieldRegex.Matches($m)) {
+			$owner = $null
+			foreach ($c in $classes) { if ($c.Index -lt $fm.Index) { $owner = $c.Groups[1].Value } else { break } }
+			$g = $fm.Groups[2]
+			$entry = [pscustomobject]@{ ExprO = $t.Substring($g.Index, $g.Length).Trim(); ExprM = $g.Value.Trim(); File = $rel }
+			$name = $fm.Groups[1].Value
+			if ($owner) { $fieldGlobal["$owner.$name"] = $entry }
+			$fieldLocal["$rel|$name"] = $entry
+		}
+	}
+}
+
+function Test-PermissionValue([string]$Value) { return ($Value -cmatch '^[a-z][a-z0-9_.:-]*$') }
+
+function Get-RuntimePhrase([string]$Expr) {
+	if ($Expr -match '(?i)descriptor|dataset') { return 'Depends on the dataset' }
+	return 'Depends on the request'
+}
+
+function Find-Field([string]$Expr, [string]$Rel) {
+	$e = $Expr.Trim()
+	if ($e -notmatch '\.') { $k = "$Rel|$e"; if ($fieldLocal.ContainsKey($k)) { return $fieldLocal[$k] }; return $null }
+	$segs = $e -split '\.'
+	$k = ($segs[-2] + '.' + $segs[-1])
+	if ($fieldGlobal.ContainsKey($k)) { return $fieldGlobal[$k] }
+	return $null
+}
+
+function Resolve-PermissionList([string]$ExprO, [string]$ExprM, [string]$Rel, [int]$Depth = 0) {
+	# Resolves a requiredPermissions argument to permission strings, plain-language notes (conditional extras) and
+	# runtime phrases (the permission depends on data). Never returns a code identifier as a permission.
+	$r = [pscustomobject]@{
+		Perms = New-Object System.Collections.Generic.List[string]
+		Notes = New-Object System.Collections.Generic.List[string]
+		Runtime = New-Object System.Collections.Generic.List[string]
+	}
+	$e = $ExprO.Trim(); $em = $ExprM.Trim()
+	if ($Depth -gt 4 -or $e -eq '') { $r.Runtime.Add((Get-RuntimePhrase $e)); return $r }
+
+	# Known helper: ConversationAccessPermissions.For(scope, P) -> [P], plus bots_manage for every user's conversations.
+	if ($e -match '^(?:[\w.]+\.)?ConversationAccessPermissions\.For\s*\(\s*[^,]+,\s*([\w.]+)\s*\)$') {
+		$v = Resolve-Permission $Matches[1]
+		if (Test-PermissionValue $v) { $r.Perms.Add($v) } else { $r.Runtime.Add('Depends on the request') }
+		$r.Notes.Add("bots_manage too, to reach every user's conversations")
+		return $r
+	}
+
+	$open = -1; $close = -1
+	if ($em.StartsWith('[') -and $em.EndsWith(']')) { $open = 0; $close = $em.Length - 1 }
+	elseif ($em -match '^new\b[^{]*\{' -and $em.EndsWith('}')) { $open = $em.IndexOf('{'); $close = $em.Length - 1 }
+	if ($open -ge 0) {
+		$innerO = $e.Substring($open + 1, $close - $open - 1)
+		$innerM = $em.Substring($open + 1, $close - $open - 1)
+		$itemsO = Split-TopLevel $innerO $innerM
+		$itemsM = Split-TopLevel $innerM $innerM
+		for ($i = 0; $i -lt $itemsO.Count; $i++) {
+			if (-not $itemsO[$i]) { continue }
+			$sub = Resolve-PermissionList $itemsO[$i] $itemsM[$i] $Rel ($Depth + 1)
+			foreach ($p in $sub.Perms) { if (-not $r.Perms.Contains($p)) { $r.Perms.Add($p) } }
+			foreach ($n in $sub.Notes) { if (-not $r.Notes.Contains($n)) { $r.Notes.Add($n) } }
+			foreach ($u in $sub.Runtime) { if (-not $r.Runtime.Contains($u)) { $r.Runtime.Add($u) } }
+		}
+		return $r
+	}
+
+	$v = Resolve-Permission $e
+	if (Test-PermissionValue $v) { $r.Perms.Add($v); return $r }
+	if ($e -match '^[A-Za-z_][\w.]*$') {
+		$fld = Find-Field $e $Rel
+		if ($fld) { return (Resolve-PermissionList $fld.ExprO $fld.ExprM $fld.File ($Depth + 1)) }
+	}
+	$r.Runtime.Add((Get-RuntimePhrase $e))
+	return $r
+}
+
 $indexFiles = 0
 foreach ($root in $indexRoots) {
 	foreach ($f in (Get-SourceFiles $root)) {
@@ -463,7 +562,10 @@ foreach ($root in $indexRoots) {
 				$namedMode = $pieces | Where-Object { $_ -match '^AuthorizationMode\s*=' } | Select-Object -First 1
 				$perm = ''
 				$mode = 'PermissionRequired'
-				if ($positional.Count -ge 4) { $perm = Resolve-Permission $positional[2] }
+				if ($positional.Count -ge 4) {
+					$capRes = Resolve-PermissionList $positional[2] $positional[2] $rel
+					$perm = ($capRes.Perms -join ', ')
+				}
 				else { $mode = 'IdentityOnly' }
 				if ($namedMode) { $mode = ($namedMode -split '\.')[-1].Trim() }
 				if (-not $capIndex.ContainsKey($typeName)) { $capIndex[$typeName] = New-Object System.Collections.Generic.List[object] }
@@ -481,20 +583,28 @@ foreach ($root in $indexRoots) {
 				$execs = $execRegex.Matches($body)
 				if ($execs.Count -eq 0) { continue }
 				$perms = New-Object System.Collections.Generic.List[string]
-				$dynamic = $false
+				$notes = New-Object System.Collections.Generic.List[string]
+				$runtime = New-Object System.Collections.Generic.List[string]
 				foreach ($rp in $reqPermRegex.Matches($body)) {
 					$after = $rp.Index + $rp.Length
-					if ($after -lt $body.Length -and $body[$after] -eq '[') {
-						$cl = [AbsServiceRefSource]::Match($body, $after)
-						if ($cl -gt $after) {
-							$inO = $bodyO.Substring($after + 1, $cl - $after - 1)
-							$inM = $body.Substring($after + 1, $cl - $after - 1)
-							foreach ($p in (Split-TopLevel $inO $inM)) { if ($p) { $v = Resolve-Permission $p; if (-not $perms.Contains($v)) { $perms.Add($v) } } }
-						}
+					# The argument runs to the next top-level ',' or ')'.
+					$d = 0; $k = $after
+					while ($k -lt $body.Length) {
+						$ch = $body[$k]
+						if ($ch -eq '(' -or $ch -eq '[' -or $ch -eq '{') { $d++ }
+						elseif ($ch -eq ')' -or $ch -eq ']' -or $ch -eq '}') { if ($d -eq 0) { break }; $d-- }
+						elseif ($ch -eq ',' -and $d -eq 0) { break }
+						$k++
 					}
-					elseif ($body.Substring($after) -match '^(null|\[\s*\])') { }
-					else { $dynamic = $true }
+					$exprO = $bodyO.Substring($after, $k - $after).Trim()
+					$exprM = $body.Substring($after, $k - $after).Trim()
+					if ($exprM -match '^(null|\[\s*\])$') { continue }
+					$res = Resolve-PermissionList $exprO $exprM $rel
+					foreach ($p in $res.Perms) { if (-not $perms.Contains($p)) { $perms.Add($p) } }
+					foreach ($n in $res.Notes) { if (-not $notes.Contains($n)) { $notes.Add($n) } }
+					foreach ($u in $res.Runtime) { if (-not $runtime.Contains($u)) { $runtime.Add($u) } }
 				}
+				$dynamic = ($runtime.Count -gt 0)
 				$access = New-Object System.Collections.Generic.List[string]
 				foreach ($mm in $modeRegex.Matches($body)) { if (-not $access.Contains($mm.Groups[1].Value)) { $access.Add($mm.Groups[1].Value) } }
 				$root = $rootDirect.IsMatch($body)
@@ -511,7 +621,7 @@ foreach ($root in $indexRoots) {
 					$typeName = $ex.Groups[1].Value
 					if (-not $ucIndex.ContainsKey($typeName)) { $ucIndex[$typeName] = New-Object System.Collections.Generic.List[object] }
 					$ucIndex[$typeName].Add([pscustomobject]@{
-						Permissions = @($perms); Dynamic = $dynamic; Access = @($access); RootTenant = $root; RootAdmin = $rootAdmin
+						Permissions = @($perms); Notes = @($notes); Runtime = @($runtime); Dynamic = $dynamic; Access = @($access); RootTenant = $root; RootAdmin = $rootAdmin
 						File = $rel; Class = $classes[$ci].Groups[1].Value
 					})
 				}
@@ -659,6 +769,8 @@ foreach ($dir in $serviceDirs) {
 
 				# Permission / access / root
 				$noHandler = $false
+				$permNotes = New-Object System.Collections.Generic.List[string]
+				$permRuntime = New-Object System.Collections.Generic.List[string]
 				$perms = New-Object System.Collections.Generic.List[string]
 				$access = New-Object System.Collections.Generic.List[string]
 				$permSource = 'none'
@@ -687,6 +799,8 @@ foreach ($dir in $serviceDirs) {
 							if ($u.RootTenant) { $rootTenant = $true }
 							if ($u.RootAdmin) { $rootAdmin = $true }
 							if ($u.Dynamic -and -not $ucPerm -and -not $capPerm) { $permSource = 'dynamic' }
+							foreach ($n in $u.Notes) { if (-not $permNotes.Contains($n)) { $permNotes.Add($n) } }
+							if (-not $capPerm) { foreach ($x in $u.Runtime) { if (-not $permRuntime.Contains($x)) { $permRuntime.Add($x) } } }
 						}
 					}
 					if ($capPerm) {
@@ -756,7 +870,7 @@ foreach ($dir in $serviceDirs) {
 						$row = [pscustomobject]@{
 							Service = $svcName; Controller = $className; Resource = $resource; Method = $methodName
 							Verb = $tp.Verb; Path = $path; Request = ($requestTypes -join ', ')
-							Permission = ($perms -join ', '); PermissionSource = $(if ($perms.Count -gt 0) { $permSource } elseif ($permSource -eq 'dynamic') { 'dynamic' } else { 'none' })
+							Permission = ($perms -join ', '); PermissionNote = ($permNotes -join '; '); PermissionRuntime = ($permRuntime -join '; ');PermissionSource = $(if ($perms.Count -gt 0) { $permSource } elseif ($permSource -eq 'dynamic') { 'dynamic' } else { 'none' })
 							Access = ($access -join ', '); Summary = $summary; SummarySource = $summarySource
 							Retired = $retiredReason; File = $rel; Line = $line; Status = 'Documented'
 							NoDispatch = ($requestTypes.Count -eq 0); CallsService = $callsService
@@ -779,6 +893,29 @@ foreach ($dir in $serviceDirs) {
 }
 
 # ---------------------------------------------------------------------------------------------------------------
+# 3b. Resource headings. A row under /<Resource>/<Segment> whose singular-resource + segment (or resource + segment)
+#     names another controller's resource in the same service is shown under that resource's heading.
+foreach ($svc in $services) {
+	$resNames = @{}
+	foreach ($c in $svc.Controllers) { $resNames[$c.Resource] = $true }
+	foreach ($c in $svc.Controllers) {
+		foreach ($r in $c.Rows) {
+			$r | Add-Member -NotePropertyName DisplayResource -NotePropertyValue $r.Resource -Force
+			$pm3 = [regex]::Match($r.Path, '^/api/v\d+/[^/]+/([^/{}]+)/([A-Za-z]+)(?:/|$)')
+			if (-not $pm3.Success -or $pm3.Groups[1].Value -cne $r.Resource) { continue }
+			$res = $r.Resource; $seg = $pm3.Groups[2].Value
+			$singular = if ($res.EndsWith('ies')) { $res.Substring(0, $res.Length - 3) + 'y' } elseif ($res.EndsWith('s')) { $res.Substring(0, $res.Length - 1) } else { $res }
+			foreach ($cand in @(($singular + $seg), ($res + $seg))) {
+				if ($cand -cne $res -and $resNames.ContainsKey($cand)) {
+					$r.DisplayResource = $cand
+					if ($r.Status -eq 'Documented') { Add-Flag 'ResourceMerged' $svc.Name "$($r.File) ($($r.Controller)).$($r.Method)" "$($r.Verb) $($r.Path) shown under $cand" }
+					break
+				}
+			}
+		}
+	}
+}
+
 # 4. Render
 # ---------------------------------------------------------------------------------------------------------------
 function Compare-Rows {
@@ -831,19 +968,21 @@ foreach ($svc in $sortedServices) {
 	$L.Add('Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).')
 	$L.Add('')
 
-	$ctrls = New-Object 'System.Collections.Generic.List[object]'
-	foreach ($c in $svc.Controllers) { $ctrls.Add($c) }
-	$ctrls.Sort([System.Comparison[object]] { param($a, $b) $x = [string]::CompareOrdinal($a.Resource, $b.Resource); if ($x -ne 0) { $x } else { [string]::CompareOrdinal($a.Name, $b.Name) } })
+	# One heading per resource. Rows are grouped by DisplayResource, so a resource served by two controllers (for
+	# example /AssetCategories and /Assets/Categories) appears once, with both routes.
+	$headings = New-Object 'System.Collections.Generic.List[string]'
+	foreach ($r in $documented) { if (-not $headings.Contains($r.DisplayResource)) { $headings.Add($r.DisplayResource) } }
+	$headings.Sort([System.StringComparer]::Ordinal)
 
-	foreach ($c in $ctrls) {
-		$rows = @($c.Rows | Where-Object Status -eq 'Documented')
+	foreach ($h in $headings) {
+		$rows = @($documented | Where-Object { $_.DisplayResource -ceq $h })
 		if ($rows.Count -eq 0) { continue }
-		$L.Add("## $($c.Resource)")
+		$L.Add("## $h")
 		$L.Add('')
 		$L.Add('| Verb | Path | Permission | Who can call | Summary |')
 		$L.Add('| --- | --- | --- | --- | --- |')
 		foreach ($r in (Compare-Rows $rows)) {
-			$perm = if ($r.Permission) { '`' + (ConvertTo-Cell $r.Permission) + '`' } elseif ($r.PermissionSource -eq 'dynamic') { '(resolved at run time)' } else { '' }
+			$perm = Format-PermissionCell $r
 			$L.Add("| $($r.Verb) | ``$(ConvertTo-Cell $r.Path)`` | $perm | $(ConvertTo-Cell (ConvertTo-CustomerAccess $r.Access)) | $(ConvertTo-Cell $r.Summary) |")
 		}
 		$L.Add('')
@@ -891,6 +1030,7 @@ foreach ($svc in $sortedServices) {
 	$written.Add([pscustomobject]@{
 		Service = $svc.Name; File = $target
 		Controllers = @($svc.Controllers | Where-Object { @($_.Rows | Where-Object Status -eq 'Documented').Count -gt 0 }).Count
+		Resources = @($documented | ForEach-Object { $_.DisplayResource } | Sort-Object -Unique).Count
 		Actions = $documented.Count; Retired = $retired.Count
 		WithPermission = @($documented | Where-Object { $_.Permission }).Count
 	})
@@ -920,7 +1060,7 @@ foreach ($g in ($allRows | Group-Object -Property Status | Sort-Object -Property
 Write-Host ''
 Write-Host 'Flags:'
 foreach ($g in ($flags | Group-Object -Property Kind | Sort-Object -Property Name -Culture 'en-US')) { Write-Host ("  {0,-28} {1}" -f $g.Name, $g.Count) }
-foreach ($k in @('InternalController', 'InternalAction', 'RootTenantOnly', 'NoMediatorDispatch', 'NoHandlerFound', 'AmbiguousRequestType', 'PermissionDisagreement', 'RootAdminCheck', 'ControllerUsesRootTenantId', 'NoClassRoute', 'MultipleClassRoutes', 'UnresolvedTemplate', 'NoVerbAttribute', 'NoPublicActions', 'ExistingFileWithoutMarkers')) {
+foreach ($k in @('ResourceMerged', 'InternalController', 'InternalAction', 'RootTenantOnly', 'NoMediatorDispatch', 'NoHandlerFound', 'AmbiguousRequestType', 'PermissionDisagreement', 'RootAdminCheck', 'ControllerUsesRootTenantId', 'NoClassRoute', 'MultipleClassRoutes', 'UnresolvedTemplate', 'NoVerbAttribute', 'NoPublicActions', 'ExistingFileWithoutMarkers')) {
 	$items = @($flags | Where-Object Kind -eq $k)
 	if ($items.Count -eq 0) { continue }
 	Write-Host ''
