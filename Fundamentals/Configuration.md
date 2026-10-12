@@ -1,42 +1,82 @@
-# Configuring an Alliance Business Suite Instance
+# Configuration
 
-## Short Notation for this page
+This page describes the configuration file of self-hosted ABS, `suitesettings.json`, and the environment variables that override some of its settings.
 
-- Acting Business Tenant ("ABT") 
-- Current Web Portal ("CWP") 
+**Who it is for:** the instance owner or IT team that runs self-hosted ABS.
 
-The Alliance Business Suite is designed to be as easy to use as it can be by abstracting complexity through a clean UI and multiple navigation features designed to take you where you need to perform.
+**Availability:** self-hosted ABS. On ABS Online, hosted by Fenix Alliance, you do not manage this file.
 
-Once installed, your instance will be functional, but not quite yet ready for production. For this reason, new instances are created with a Not Operational Status. This Status means that even new users can be created and pretty much every functionality will work right out of the box, several Faulted functionalities won't be available until proper setup.
+## The configuration file
 
-In order to get your instance to an Operational State, you should first configure for the first time the Alliance Passport Service, perform some internal configurations, and properly set up your Root Web Portal. 
+`suitesettings.json` holds the instance-wide configuration: which database to use and how to reach it, which platform services are on, and how sign-in works. Workspace settings, such as your company details, live in the database and are managed in Studio.
 
-## Configuring your instance
-One of the most important files in your Alliance Business Suite instance is the suitesettings.json file. This file is located in the root of your instance's file directory and contains your website’s base configuration details, such as database-connection information.
+- **Where it lives:** next to the application, at `/app/suitesettings.json` in the container.
+- **How you supply it:** mount a folder that contains it at `/app/config`. The container copies it into place each time it starts. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#how-the-configuration-file-is-applied).
+- **How it is created:** the web installer writes it when you install the instance. See [Install self-hosted ABS](~/Fundamentals/Installation.md).
 
-When you first download the Alliance Business Suite, this file does not exist, as it will be created during the initial setup process.
+The file contains connection strings and other secrets. Store it with restricted access, and keep a backup with your database backups.
 
-Although you can manually provide a suitesettings.json file for your instance (bypassing like so the initial setup process), you will be required to run this initial setup process at least once to create your initial database schema and insert required records.
+## Sections
 
-Once this installation process has been completed, multiple instances can retrieve their configuration files through the ABS Management API from the root instance, and thus sharing the data layer, allowing customers to scale both the data and application layer independently, depending on their specific requirements.
+The file is a JSON object with six top-level sections.
 
-Each Alliance Business Suite instance contains its own administrator portal. Instances are bounded each a Business Tenant's Primary [Web Portal](~/Web-Development/Web-Portals.md)'s configuration.
+| Section | What it configures |
+|---|---|
+| `Status` | The installation status of the instance. |
+| `ABM` | The data layer: the database engine and connection, and data protection keys. |
+| `ABS` | Studio, the web portals and the web interface. |
+| `ABP` | Platform services, such as the APIs, HTTP behavior, messaging, health checks, logging, modules and development mode. |
+| `APS` | Sign-in and identity providers. |
+| `ACL` | Licensing. |
 
-The first towards configuring your Root Web Portal is to finish creating information for your Business Tenant. The amount of configuration required will depend on the number of Modules included in your instance. 
+### Status
 
-Note: Although currently possible, it is not recommended to edit the `suitesettings.json` file directly unless required.
+`Status` > `Installed` tells the instance whether it is installed. While it is `false`, the instance serves only the web installer. The installer sets it to `true`. The section also holds other status markers that the instance records. Do not edit them.
 
-# Administration Flow Optimization
+### Database
 
-Due to the massive amount of different types of data that the Alliance Business Suite is built to manage, and the tremendous amount of control given to our customers, it can be easy to get lost among all the different options and configurations available. We understand this and We want your workflow to be as fluid as possible, so we've been tackling this issue through several shortcuts and UI optimizations that will help you manage your business tenant's with an incredibly high APM ("Actions per Minute") rate.
+`ABM` > `Provider` names the database engine. It is one of `MySQL`, `PGSQL` (PostgreSQL), `MSSQL` (Microsoft SQL Server) or `ODPSQL` (Oracle Database). The connection string is in the matching entry of `ABM` > `Providers`.
 
-These optimizations include:
+## When the file is missing
 
-1. Drastically reducing the number of page loads required to manage everything inside the Alliance Business Suite: Our goal is to bring this number to 1, meaning that once you're into the Alliance Business Studio, 
-2. Drastically reducing the number of clicks required to get from point A to point B inside the application: Our goal is to provide multiple ways to get you where you need to be across your business tenants.
-3. Optimizing performance and improving both UX/UI to deliver clear, readable interfaces to manage data across Business Tenants.
-4. Including accessibility features to improve the way people with limitations interact with the application.
-5. Delivering additional interfaces other than the Studio to help Customers to automate and extend 
+- **In the `Production` environment** (the container default), the instance starts on built-in defaults plus any environment variables, and writes a warning to its log. It does not create a file. A new instance in this state opens the web installer.
+- **In the `Development` environment**, the instance creates a blank `suitesettings.json`.
 
+See [Environments](~/Fundamentals/Environments.md).
 
+## Environment variable overrides
 
+A set of settings can also be given as environment variables. When a variable is set, it wins over the value in `suitesettings.json` for that setting. Settings without a variable come only from the file.
+
+Set Boolean variables to `true` or `false`.
+
+| Variable | Overrides |
+|---|---|
+| `ABSUITE_MODEL_DATA_CONTEXT_CONNECTION_STRING` | The connection string of the main database. `MODEL_DATA_CONTEXT_CONNECTION_STRING` is also accepted. |
+| `ABSUITE_WORKFLOWS_DATA_CONTEXT_CONNECTION_STRING` | `ABP` > `Workflows` > `ConnectionString`. `WORKFLOWS_DATA_CONTEXT_CONNECTION_STRING` is also accepted. |
+| `ABSUITE_HEALTH_CHECKS_DATA_CONTEXT_CONNECTION_STRING` | `ABP` > `HealthChecks` > `ConnectionString`. `HEALTH_CHECKS_DATA_CONTEXT_CONNECTION_STRING` is also accepted. |
+| `ABSUITE_INSTALLED` | `Status` > `Installed`. |
+| `ABSUITE_DEV_MODE_ENABLED` | `ABP` > `DevMode` > `Enable`. |
+| `ABSUITE_MESSAGING_ENABLED` | `ABP` > `Messaging` > `Enable`. |
+| `ABSUITE_MESSAGING_DISTRIBUTED_ENABLED` | `ABP` > `Messaging` > `EnableDistributedEvents`. |
+| `ABSUITE_HTTPS_REDIRECTION_ENABLED` | `ABP` > `HTTP` > `HttpsRedirection` > `Enable`. |
+| `ABSUITE_LOGGING_ENABLED` | `ABP` > `Logging` > `Enable`. |
+| `ABSUITE_SERILOG_ENABLED` | `ABP` > `Logging` > `Serilog` > `Enable`. |
+| `ABSUITE_DATA_PROTECTION_ENABLED` | `ABM` > `DataProtection` > `Enable`. |
+| `ABSUITE_DATA_PROTECTION_PROVIDER` | `ABM` > `DataProtection` > `Provider`: `Database`, `FileSystem` or `Azure`. |
+| `ABSUITE_DATA_PROTECTION_KEY_RING_PATH` | `ABM` > `DataProtection` > `KeyRingPath`, the folder used by the `FileSystem` provider. |
+| `ABSUITE_DATA_PROTECTION_KEY_LIFETIME_DAYS` | `ABM` > `DataProtection` > `KeyLifetimeDays`. |
+| `ABSUITE_DATA_PROTECTION_APPLICATION_NAME` | `ABM` > `DataProtection` > `ApplicationName`. |
+| `ASPNETCORE_ENVIRONMENT` | The hosting environment. See [Environments](~/Fundamentals/Environments.md). |
+
+Pass variables to the container with your runtime's usual option, for example `docker run -e ABSUITE_DEV_MODE_ENABLED=false`. Environment variables are read at startup, so restart the container after you change one.
+
+### Data protection keys
+
+ABS protects sign-in cookies and other sensitive data with keys. By default, `Database` stores the keys in the ABS database, so they survive restarts and are shared by every replica. Use `FileSystem` only with a folder that every replica shares and that outlives the container.
+
+## Change the configuration
+
+1. Edit the `suitesettings.json` in your `config` folder on the host.
+2. Restart the container. The new file is copied into place, and the instance reads it at startup.
+3. Confirm that `/health` answers `200`, and check the [logs](~/Fundamentals/Logging.md) if it does not.

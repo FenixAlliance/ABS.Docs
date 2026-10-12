@@ -1,142 +1,78 @@
-# Tutorial: Get started with the Alliance Business Suite
+# Install self-hosted ABS
 
-This tutorial shows how to create and run your first Alliance Business Suite instance.
+This guide installs self-hosted ABS from the published container image and walks you through the web installer.
 
-You'll learn how to:
+**Who it is for:** the instance owner or IT team that runs self-hosted ABS.
 
-- [✔] Install an Alliance Business Suite instance.
-- [✔] (optional) Trust the development certificate.
-- [✔] Run the app.
+**Availability:** self-hosted ABS. ABS Online, hosted by Fenix Alliance, needs no installation.
 
-In the end, you'll have a working Alliance Business Suite instance running on your local machine.
+## Before you begin
 
-## Prerequisites
+Make sure you have:
 
-- .NET Core 6.0 SDK or later
-- MySQL Server 8.0 or later
+- A host that meets the [system requirements](~/get-started/Requirements.md), with a container runtime such as Docker.
+- A database server running MySQL, PostgreSQL, Microsoft SQL Server or Oracle Database, reachable from the container.
+- An empty database for ABS, and an account that can create and change tables in it.
+- Outbound HTTPS access from the container, for the downloads the installer makes.
 
-## Installation
+## Install the instance
 
+1. **Create folders on the host for the data the instance keeps.** The commands below use `/srv/absuite`. Create four folders under it: `config`, `modules`, `logs` and `appdata`. [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#keep-your-data-outside-the-container) explains what each one holds.
 
+2. **Pull the image.** Image tags match the release numbers in the [changelog](~/reference/Changelog.md). Use a version tag rather than `latest`, so you control when the instance changes.
 
-### Conventional Install
+   ```sh
+   docker pull fenixalliance/absuite:<version>
+   ```
 
-``` sh
-git clone https://github.com/FenixAlliance/ABS.Bin
-```
-``` sh
-cd ABS.Bin
-```
-```sh
-./FenixAlliance.ABS.Studio.exe
-```
-or
-```sh
-dotnet FenixAlliance.ABS.Studio.dll
-```
+3. **Start the container.** Map port 8080 and mount the four folders. The restart policy matters: the installer stops the instance when it finishes, and the policy starts it again.
 
-### Development Install
+   ```sh
+   docker run -d --name absuite --restart unless-stopped \
+     -p 8080:8080 \
+     -v /srv/absuite/config:/app/config:ro \
+     -v /srv/absuite/modules:/app/Modules \
+     -v /srv/absuite/logs:/app/logs \
+     -v /srv/absuite/appdata:/app/AppData \
+     fenixalliance/absuite:<version>
+   ```
 
+4. **Open the instance in your browser.** Go to `http://<your-host>:8080`. A new instance sends you to the web installer at `/Install`.
 
-#### Install as a Docker Container.
+5. **Complete the Database step.** Select your **Engine**, then enter the **Host**, **Port**, **Database**, **Username** and **Password** of your database server. Select **Next**.
 
-```powershell
-docker pull FenixAlliance.ABS:latest
-```
+6. **Complete the Business Tenant step.** This creates your first workspace. Enter the **Business Name** and **Business Email**, select a **Chart of Accounts** (or **Empty**), and select the **Country** and **Default Currency**. Select **Next**.
 
-#### Install as an Application Extension
+7. **Complete the Web Portal step.** Enter the **Portal Title** and **Portal Description** of your first web portal. Select **Next**.
 
-There are certain cases where customers prefer to install the Alliance Business Suite so that they can extend the standard functionalities, create modules, integrations, SPAs, or really, any kind of extensions without having to worry about all the required wiring for it to work properly.
+8. **Complete the Identity step.** Under **Engine**, keep **Default Identity** to manage sign-in in ABS. Select **Azure Active Directory B2C** only if you already run a B2C directory, and enter its details. Select **Next**.
 
+9. **Complete the Admin Account step.** Enter the **Admin Name**, **Admin Last Name**, **Admin Email** and **Admin Password**. This account becomes the instance administrator.
 
-In these cases, the best approach is to install the Alliance Business Suite as an application extension into a new or existing ASP.NET Application.
+10. **Select Install.** The installer creates the database schema, loads the reference data (countries, currencies and the chart of accounts you chose), creates your workspace and admin account, and saves the configuration file. This can take several minutes. When it finishes, the instance stops, and the restart policy starts it again.
 
-To do this:
+11. **Copy the configuration file to the host.** The installer saves `suitesettings.json` inside the container. Copy it into your `config` folder, so the instance keeps its configuration when you restart or recreate the container:
 
-1. **Add the NuGet package**
+    ```sh
+    docker cp absuite:/app/suitesettings.json /srv/absuite/config/suitesettings.json
+    ```
 
-```sh
-dotnet add package FenixAlliance.ABS.Hub --version latest
-```
+    The file holds your database password. Restrict access to the `config` folder.
 
-2. **Register Services and Configuration**
+12. **Sign in.** Open `http://<your-host>:8080` again and sign in with the admin email and password from step 9.
 
-```cs
-using FenixAlliance.ABS.Hub.Extensions;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting.Server.Features;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
+## Before you go live
 
-namespace FenixAlliance.ABS
-{
-    public class Startup
-    {
-        public IHostEnvironment Environment { get; set; }
-        public IConfiguration Configuration { get; set; }
+- **Turn off development mode.** The installer turns on development mode. Set `ABP` > `DevMode` > `Enable` to `false` in `suitesettings.json`, or set the environment variable `ABSUITE_DEV_MODE_ENABLED` to `false`. Then restart the container. See [Configuration](~/Fundamentals/Configuration.md).
+- **Serve HTTPS.** Put a reverse proxy or load balancer in front of the container. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#serve-https).
+- **Check health.** A request to `/health` answers `200` when the instance is healthy.
 
-        // Constructor
-        public Startup(IConfiguration Configuration, IHostEnvironment Environment)
-        {
-            this.Environment = Environment;
-            this.Configuration = Configuration;
-        }
+## Add modules
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-          services.AddAllianceBusinessSuite(Configuration, Environment);
-        }
+As the instance owner, you decide which modules the instance offers. Workspaces do not install modules themselves. To add a module, see [Installing a module](~/Module-Development/Installing-a-Module.md).
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app)
-        {
-          app.UseAllianceBusinessSuite(Configuration, Environment);
-        }
-    }
-}
-```
+## Next steps
 
-3. **Trust the HTTPS development certificate**:
-
-![cert.png](~/.attachments/cert-55b026f6-2aae-45a7-837b-491015fb5dca.png)
-
-Select Yes if you agree to trust the development certificate.
-
-### Installation wizard
-The Alliance Business Suite uses the `suitesettings.json` configuration file to determine whether or not the Alliance Business Suite instance is already configured to work. The Status section of the configuration file is used to instruct the system on the current configuration step.
-
-The first step towards having an operational instance is to set up the basic options such as Database Connections Strings, seeding the database, create the primary Business Tenant, and the root account holder.
-
-Customers can achieve this installation through a web wizard aimed to beat WordPress's 5 Minutes installation.
-
-
-On this wizard, you'll be prompted with a few configuration steps:
-
-**1. Primary Database Options**
-
-![Primary Database Options](~/.attachments/image-1225dbea-223d-42dd-ac65-cd6cd3c6305a.png)
-
-**2. Business Tenant Basic Information**
-
-![Business Tenant Basic Information](~/.attachments/image-c187a4ce-806b-43bd-a9f4-78537123f237.png)
-
-**3. Primary Portal Basic Information**
-
-![Primary Portal Basic Information](~/.attachments/image-f629e01c-1650-432b-bf92-389c31f8a960.png)
-
-**4. Identity Provider Options**
-
-![Identity Provider Options](~/.attachments/image-b29e9ac0-67d6-497d-8e13-75904b9a00c9.png)
-
-**5. Root Account Credentials**
-
-![Root Account Credentials](~/.attachments/image-331f6185-4104-4ac6-ac37-d66477a6275b.png)
-
-Fill in the required information on each step and click on "Install". This will create the ABM Scheme to the Database, seed data such as countries, currencies, states, cities, timezones, the selected COA, and other important, standardized data. The creation and seeding process might take up to 5 minutes, depending on your connection and system's specifications.
-
-![Seeding Process](~/.attachments/image-9a7225cf-ba75-4625-ba1c-64a0289c4755.png)
-
-Let the application finish this process, reload the page & log in with the Root Account credentials defined in previous steps.
+- [Hosting self-hosted ABS](~/Fundamentals/Hosting.md): storage, HTTPS, health checks and updates.
+- [Configuration](~/Fundamentals/Configuration.md): the configuration file and environment variable overrides.
+- [Logging](~/Fundamentals/Logging.md): where the instance writes logs and where you read them in Studio.
