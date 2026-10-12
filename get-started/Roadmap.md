@@ -44,6 +44,7 @@ The full list is in the [changelog](~/reference/Changelog.md).
 ## Long term: the platform's direction (planned)
 
 - **V4: Finance Cloud.** The foundation for businesses that build financial services on the platform: custody and payouts through the providers you choose, with every outgoing transfer going through an approval and your funds never passing through ours.
+- **Alliance Business Cloud.** A managed platform, built on the Alliance Business Suite, where you provision and run resources for your workloads across Azure, AWS and Google Cloud, for our products and for your own applications.
 - **V5: Industry clouds.** Solutions for specific industries, such as shipment events shared between importers, carriers and customs in international trade, loyalty and prepaid credits where regulation allows, and pay-per-use for AI agents. Each is built when customers ask for it.
 
 ## How this roadmap is kept
