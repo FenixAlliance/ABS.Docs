@@ -9,10 +9,5 @@
       href: REST-API/Authentication-and-Authorization.md
   - name: "AOS GraphQl API"
     href: GraphQl-API.md
-  - name: "Alliance Business Cloud"
-    href: Alliance-Business-Cloud.md
-    items:
-    - name: "About"
-      href: Alliance-Business-Cloud/About.md
   - name: "Infinity Comex Marketplace"
     href: Infinity-Comex-Marketplace.md
