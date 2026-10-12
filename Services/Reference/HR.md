@@ -8,9 +8,9 @@ The Human resources service lets you keep your workspace's people records, hire 
 
 ## What you can do
 
-- **Keep employee records:** create and update employees, employee types, employers and job titles, and manage the seats of a position: assign people, end an assignment, change its capacity or its department. See [Workforce](~/Capabilities/Workforce.md).
+- **Keep employee records:** create and update employees, employee types, employers and job titles, and manage the seats of a position: assign people, end an assignment, change its capacity or its department. Mark your employer profile public or private. See [Workforce](~/Capabilities/Workforce.md).
 - **Hire for open roles:** create job offers, publish, fill or close them, and keep the job fields and required skills each one asks for. Record applicants and their applications, and move each application through your recruiting stages.
-- **Publish a public job board:** read the published job offers without signing in, and publish or unpublish your employer profile.
+- **Publish a public job board:** read the published job offers without signing in.
 - **Run gigs:** create a gig, publish it, accept a proposal, award it, and mark it completed or cancelled. Gig applications are kept with the gig they answer.
 - **Track time and leave:** keep shifts, schedules and time intervals, record leave applications, and list the leave types you can apply for.
 - **Keep pay and performance records:** keep salaries, payroll periods and payroll records, list appraisal workflows and stages, and record appraisal sessions. Payroll is kept as records: the service does not calculate pay or post payroll to your books.
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `HrmsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## AppraisalStages
 
@@ -99,14 +99,14 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/GigApplications` | `gig_applications_read` | Workspace member | Get gig applications submitted against the tenant's gigs |
+| GET | `/api/v2/HrmsService/GigApplications` | `gig_applications_read` | Workspace member | Get gig applications |
 | POST | `/api/v2/HrmsService/GigApplications` | `gig_applications_create` | Workspace member | Create a gig application |
-| GET | `/api/v2/HrmsService/GigApplications/Count` | `gig_applications_read` | Workspace member | Count gig applications submitted against the tenant's gigs |
-| GET | `/api/v2/HrmsService/GigApplications/{gigApplicationId}` | `gig_applications_read` | Workspace member | Get a gig application by ID |
+| GET | `/api/v2/HrmsService/GigApplications/Count` | `gig_applications_read` | Workspace member | Count gig applications |
+| GET | `/api/v2/HrmsService/GigApplications/{gigApplicationId}` | `gig_applications_read` | Workspace member | Get gig application by ID |
 | PUT | `/api/v2/HrmsService/GigApplications/{gigApplicationId}` | `gig_applications_update` | Workspace member | Update a gig application |
 | PATCH | `/api/v2/HrmsService/GigApplications/{gigApplicationId}` | `gig_applications_update` | Workspace member | Patch a gig application |
 | DELETE | `/api/v2/HrmsService/GigApplications/{gigApplicationId}` | `gig_applications_delete` | Workspace member | Delete a gig application |
-| POST | `/api/v2/HrmsService/GigApplications/{gigApplicationId}/Accept` | `gig_applications_update` | Workspace member | Accept a gig proposal |
+| POST | `/api/v2/HrmsService/GigApplications/{gigApplicationId}/Accept` | `gig_applications_update` | Workspace member | Accept a gig application |
 
 ## Gigs
 
@@ -128,35 +128,35 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/JobApplicants` | `job_applicants_read` | Workspace member | Get job applicants (candidates) for a tenant |
-| POST | `/api/v2/HrmsService/JobApplicants` | `job_applicants_create` | Workspace member | Create a job applicant (candidate) profile |
-| GET | `/api/v2/HrmsService/JobApplicants/Count` | `job_applicants_read` | Workspace member | Count job applicants for a tenant |
-| GET | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_read` | Workspace member | Get a job applicant by ID |
-| PUT | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_update` | Workspace member | Update a job applicant profile |
-| PATCH | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_update` | Workspace member | Patch a job applicant profile |
-| DELETE | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_delete` | Workspace member | Delete a job applicant profile |
+| GET | `/api/v2/HrmsService/JobApplicants` | `job_applicants_read` | Workspace member | Get job applicants |
+| POST | `/api/v2/HrmsService/JobApplicants` | `job_applicants_create` | Workspace member | Create a job applicant |
+| GET | `/api/v2/HrmsService/JobApplicants/Count` | `job_applicants_read` | Workspace member | Count job applicants |
+| GET | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_read` | Workspace member | Get job applicant by ID |
+| PUT | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_update` | Workspace member | Update a job applicant |
+| PATCH | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_update` | Workspace member | Patch a job applicant |
+| DELETE | `/api/v2/HrmsService/JobApplicants/{jobApplicantId}` | `job_applicants_delete` | Workspace member | Delete a job applicant |
 
 ## JobApplications
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/JobApplications` | `job_applications_read` | Workspace member | Get job-offer applications submitted against the tenant's postings |
-| POST | `/api/v2/HrmsService/JobApplications` | `job_applications_create` | Workspace member | Create a job-offer application |
-| GET | `/api/v2/HrmsService/JobApplications/Count` | `job_applications_read` | Workspace member | Count job-offer applications submitted against the tenant's postings |
-| GET | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_read` | Workspace member | Get a job-offer application by ID |
-| PUT | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_update` | Workspace member | Update a job-offer application |
-| PATCH | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_update` | Workspace member | Patch a job-offer application |
-| DELETE | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_delete` | Workspace member | Delete a job-offer application |
-| POST | `/api/v2/HrmsService/JobApplications/{jobApplicationId}/Status` | `job_applications_update` | Workspace member | Move a job application through the recruiting funnel |
+| GET | `/api/v2/HrmsService/JobApplications` | `job_applications_read` | Workspace member | Get job applications |
+| POST | `/api/v2/HrmsService/JobApplications` | `job_applications_create` | Workspace member | Create a job application |
+| GET | `/api/v2/HrmsService/JobApplications/Count` | `job_applications_read` | Workspace member | Count job applications |
+| GET | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_read` | Workspace member | Get job application by ID |
+| PUT | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_update` | Workspace member | Update a job application |
+| PATCH | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_update` | Workspace member | Patch a job application |
+| DELETE | `/api/v2/HrmsService/JobApplications/{jobApplicationId}` | `job_applications_delete` | Workspace member | Delete a job application |
+| POST | `/api/v2/HrmsService/JobApplications/{jobApplicationId}/Status` | `job_applications_update` | Workspace member | Change job application status |
 
 ## JobFields
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/JobFields` | `job_fields_read` | Workspace member | Get job fields (role domains) for a tenant |
+| GET | `/api/v2/HrmsService/JobFields` | `job_fields_read` | Workspace member | Get job fields |
 | POST | `/api/v2/HrmsService/JobFields` | `job_fields_create` | Workspace member | Create a job field |
-| GET | `/api/v2/HrmsService/JobFields/Count` | `job_fields_read` | Workspace member | Count job fields for a tenant |
-| GET | `/api/v2/HrmsService/JobFields/{jobFieldId}` | `job_fields_read` | Workspace member | Get a job field by ID |
+| GET | `/api/v2/HrmsService/JobFields/Count` | `job_fields_read` | Workspace member | Count job fields |
+| GET | `/api/v2/HrmsService/JobFields/{jobFieldId}` | `job_fields_read` | Workspace member | Get job field by ID |
 | PUT | `/api/v2/HrmsService/JobFields/{jobFieldId}` | `job_fields_update` | Workspace member | Update a job field |
 | PATCH | `/api/v2/HrmsService/JobFields/{jobFieldId}` | `job_fields_update` | Workspace member | Patch a job field |
 | DELETE | `/api/v2/HrmsService/JobFields/{jobFieldId}` | `job_fields_delete` | Workspace member | Delete a job field |
@@ -165,13 +165,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/JobOfferFields` | `job_offer_fields_read` | Workspace member | Get job-offerfield link records for a tenant |
-| POST | `/api/v2/HrmsService/JobOfferFields` | `job_offer_fields_create` | Workspace member | Create a job-offer field link record |
-| GET | `/api/v2/HrmsService/JobOfferFields/Count` | `job_offer_fields_read` | Workspace member | Count job-offer field link records for a tenant |
-| GET | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_read` | Workspace member | Get a job-offer field link record by ID |
-| PUT | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_update` | Workspace member | Update a job-offer field link record |
-| PATCH | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_update` | Workspace member | Patch a job-offer field link record |
-| DELETE | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_delete` | Workspace member | Delete a job-offer field link record |
+| GET | `/api/v2/HrmsService/JobOfferFields` | `job_offer_fields_read` | Workspace member | Get job offer fields |
+| POST | `/api/v2/HrmsService/JobOfferFields` | `job_offer_fields_create` | Workspace member | Create a job offer field |
+| GET | `/api/v2/HrmsService/JobOfferFields/Count` | `job_offer_fields_read` | Workspace member | Count job offer fields |
+| GET | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_read` | Workspace member | Get job offer field by ID |
+| PUT | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_update` | Workspace member | Update a job offer field |
+| PATCH | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_update` | Workspace member | Patch a job offer field |
+| DELETE | `/api/v2/HrmsService/JobOfferFields/{jobOfferFieldId}` | `job_offer_fields_delete` | Workspace member | Delete a job offer field |
 
 ## JobOffers
 
@@ -260,13 +260,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/HrmsService/RequiredSkills` | `required_skills_read` | Workspace member | Get required-skill records (the structured matching substrate) for a tenant |
-| POST | `/api/v2/HrmsService/RequiredSkills` | `required_skills_create` | Workspace member | Create a required-skill record |
-| GET | `/api/v2/HrmsService/RequiredSkills/Count` | `required_skills_read` | Workspace member | Count required-skill records for a tenant |
-| GET | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_read` | Workspace member | Get a required-skill record by ID |
-| PUT | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_update` | Workspace member | Update a required-skill record |
-| PATCH | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_update` | Workspace member | Patch a required-skill record |
-| DELETE | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_delete` | Workspace member | Delete a required-skill record |
+| GET | `/api/v2/HrmsService/RequiredSkills` | `required_skills_read` | Workspace member | Get required skills |
+| POST | `/api/v2/HrmsService/RequiredSkills` | `required_skills_create` | Workspace member | Create a required skill |
+| GET | `/api/v2/HrmsService/RequiredSkills/Count` | `required_skills_read` | Workspace member | Count required skills |
+| GET | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_read` | Workspace member | Get required skill by ID |
+| PUT | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_update` | Workspace member | Update a required skill |
+| PATCH | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_update` | Workspace member | Patch a required skill |
+| DELETE | `/api/v2/HrmsService/RequiredSkills/{requiredSkillId}` | `required_skills_delete` | Workspace member | Delete a required skill |
 
 ## Salaries
 
@@ -347,5 +347,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/HrmsService/TrainingPrograms` | `training_programs_read` | Workspace member | Get training programs |
 | GET | `/api/v2/HrmsService/TrainingPrograms/Count` | `training_programs_read` | Workspace member | Count training programs |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

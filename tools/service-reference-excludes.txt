@@ -1,0 +1,24 @@
+# Operations removed from the public service reference at the request of the lane that owns them.
+# Read by New-ServiceReference.ps1. One entry per line:
+#   Service | VERB | path | reason
+# Service is the service folder name (for example Learning). VERB is GET, POST, PUT, PATCH, DELETE or * for any.
+# path is the full path as shown on the page; a trailing * matches every path that starts with the text before it.
+# Excluded rows stay in the summary JSON with Status = Excluded and the reason. Remove an entry when the
+# owning lane says the operation is real.
+
+# LMS Engine (2026-10-12): progress and grading reads are placeholders until tracking and grading ship.
+Learning | GET | /api/v2/LearningService/Me/HoursCompleted | Placeholder: always returns 0 until hours tracking ships (LMS).
+Learning | GET | /api/v2/LearningService/Me/PendingTasks | Placeholder: always returns 0 until task tracking ships (LMS).
+Learning | GET | /api/v2/LearningService/Me/AverageScore | No grading flow sets a score yet, so the average is meaningless (LMS).
+Learning | GET | /api/v2/LearningService/StudentProfiles/{studentProfileId}/HoursCompleted | Not implemented: fails with a server error (LMS).
+Learning | GET | /api/v2/LearningService/StudentProfiles/{studentProfileId}/Average | No grading flow sets a score yet, and a non-numeric score fails (LMS).
+
+# Licensing Lane (2026-10-12): licensing certificates are legacy signing material, not a customer feature.
+Licensing | * | /api/v2/LicensingService/LicensingCertificates* | Legacy signing material, not a customer feature (Licensing).
+
+# Modular Engine (2026-10-12): Studio form plumbing, and integration OAuth with no provider registered in 2.4.
+System | GET | /api/v2/SystemService/Antiforgery/GetAndStoreTokens | Studio form plumbing, not a public API (Modular).
+System | GET | /api/v2/SystemService/Antiforgery/IsRequestValid | Studio form plumbing, not a public API (Modular).
+System | GET | /api/v2/Integrations/OAuth/Authorize/{provider} | No integration OAuth provider is registered in 2.4, so it always fails (Modular).
+System | GET | /api/v2/Integrations/OAuth/Callback/{provider} | No integration OAuth provider is registered in 2.4, so it always fails (Modular).
+

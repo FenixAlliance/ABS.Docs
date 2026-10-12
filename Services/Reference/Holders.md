@@ -18,7 +18,7 @@ The Holders service lets a signed-in person read and manage their own account: p
 
 ## Before you call it
 
-- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Sign in.** Sign in with `POST /login` (your email address and password) to get an access token, and renew it with `POST /refresh`, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
 - **No workspace header.** These calls are about your own account, so they do not take an `X-TenantId` header.
 - **Permissions.** Any signed-in account can call them. Reading your profile and your memberships also needs `users_read`.
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `Me`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## Options
 
@@ -49,19 +49,19 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/Me/StudioAccess` |  | Signed-in user | Whether the current user holds Studio access (the studio_access permission in the portal tenant). |
+| GET | `/api/v2/Me/StudioAccess` |  | Signed-in user | Get the current user's Studio access |
 
 ## UserPublicProfiles
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/UsersService/Users/{userId}/PublicProfile` |  | Signed-in user | Get the public profile of a user: id, public name and avatar route. Nothing private. |
+| GET | `/api/v2/UsersService/Users/{userId}/PublicProfile` |  | Signed-in user | Get a user's public profile |
 
 ## Users
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/Me` | `users_read` | Signed-in user | Get the current user's profile |
+| GET | `/api/v2/Me` | `users_read` | Signed-in user | Gets the current user |
 | PUT | `/api/v2/Me` |  | Signed-in user | Update the current user's profile |
 | PATCH | `/api/v2/Me` |  | Signed-in user | Partially update the current user's profile |
 | GET | `/api/v2/Me/Addresses` |  | Checked by the service | Get the list of addresses for the current user |
@@ -69,23 +69,23 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/Me/Cart` |  | Signed-in user | Get the current user's cart |
 | GET | `/api/v2/Me/Enrollments` | `users_read` | Signed-in user | Get the list of enrollments for the current user |
 | GET | `/api/v2/Me/Enrollments/Extended` |  | Signed-in user | Get the list of enrollments for the current user |
-| GET | `/api/v2/Me/Enrollments/{enrollmentId}` |  | Signed-in user | Gets a single TenantEnrollment by its ID |
+| GET | `/api/v2/Me/Enrollments/{enrollmentId}` |  | Signed-in user | Get a single TenantEnrollment by its ID |
 | GET | `/api/v2/Me/Extended` |  | Signed-in user | Get the current user's extended profile |
 | GET | `/api/v2/Me/Followers` |  | Signed-in user | Get the social profiles that follow the current user |
 | GET | `/api/v2/Me/Followers/Count` |  | Signed-in user | Count the social profiles that follow the current user |
 | GET | `/api/v2/Me/Follows` |  | Signed-in user | Get the social profiles that the current user follows |
 | GET | `/api/v2/Me/Follows/Count` |  | Signed-in user | Count the social profiles that the current user follows |
 | GET | `/api/v2/Me/Invitations` |  | Signed-in user | Get the list of tenant enrollment invitations for the current user |
-| GET | `/api/v2/Me/Invitations/{invitationId}` |  | Signed-in user | Get one tenant enrollment invitation addressed to the current user: the account it is bound to, or the holder of the token from the invitation email link. Anyone else gets 404. |
+| GET | `/api/v2/Me/Invitations/{invitationId}` |  | Signed-in user | Get one tenant enrollment invitation for the current user |
 | GET | `/api/v2/Me/Notifications` |  | Signed-in user | Get the list of notifications for the current user |
-| GET | `/api/v2/Me/Notifications/Count` |  | Signed-in user | Get the count of notifications for the current user |
+| GET | `/api/v2/Me/Notifications/Count` |  | Signed-in user | Count the notifications for the current user |
 | GET | `/api/v2/Me/Settings` |  | Signed-in user | Get the settings for the current user |
 | PUT | `/api/v2/Me/Settings` |  | Signed-in user | Update the settings for the current user |
 | GET | `/api/v2/Me/SocialProfile` |  | Signed-in user | Get the current user's social profile |
 | GET | `/api/v2/Me/Tenants` |  | Signed-in user | Get the tenants that the current user is enrolled in |
 | GET | `/api/v2/Me/Tenants/Count` |  | Signed-in user | Count the tenants that the current user is enrolled in |
 | GET | `/api/v2/Me/Tenants/Extended` |  | Signed-in user | Get the tenants that the current user is enrolled in |
-| GET | `/api/v2/Me/Wallet` |  | Signed-in user | Get the current user's billing profile (A.K.A. Wallet Account) |
+| GET | `/api/v2/Me/Wallet` |  | Signed-in user | Get the current user's billing profile |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

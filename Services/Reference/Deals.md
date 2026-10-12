@@ -9,7 +9,7 @@ The Deals service lets you track sales opportunities as deal units and define th
 ## What you can do
 
 - **Track opportunities:** create, update and delete deal units, and list them with their count or extended details. See [Deal units](~/Modules/Sales-Hub/Sales-Records/Deal-Units.md).
-- **Price a deal unit:** add, update or remove its lines, and calculate the deal unit or a single line.
+- **Price a deal unit:** add, update or remove its lines, and calculate the deal unit.
 - **Close a deal unit** as won or lost.
 - **Define your sales stages:** create deal unit flows and their ordered stages. See [Deal unit flows](~/Modules/Sales-Hub/Sales-Flows.md).
 
@@ -26,7 +26,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `DealsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## DealUnitFlows
 
@@ -69,7 +69,6 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PUT | `/api/v2/DealsService/DealUnits/{dealUnitId}/Lines/{dealUnitLineId}` | `deal_units_update` | Workspace member | Update a deal unit line |
 | PATCH | `/api/v2/DealsService/DealUnits/{dealUnitId}/Lines/{dealUnitLineId}` | `deal_units_update` | Workspace member | Patch a deal unit line |
 | DELETE | `/api/v2/DealsService/DealUnits/{dealUnitId}/Lines/{dealUnitLineId}` | `deal_units_delete` | Workspace member | Delete a deal unit line |
-| PUT | `/api/v2/DealsService/DealUnits/{dealUnitId}/Lines/{dealUnitLineId}/Calculate` | `deal_units_update` |  | Calculate a deal unit line |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

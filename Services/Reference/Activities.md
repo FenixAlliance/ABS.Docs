@@ -12,6 +12,8 @@ The Activities service lets you read and write the activity feeds of your worksp
 - **Record activities:** add, update and delete the activities in a feed.
 - **Classify activities:** keep the activity types you use to label activities.
 
+Activity feeds are created by the platform for each record that has one (for example a contact or a deal); you add activities to an existing feed and cannot create feeds through this service.
+
 ## Before you call it
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
@@ -25,7 +27,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `ActivitiesService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## ActivityFeeds
 
@@ -47,8 +49,8 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/ActivitiesService/ActivityTypes/Count` | `activities_read` | Workspace member | Count Activity Types |
 | GET | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_read` | Workspace member | Get Activity Type |
 | PUT | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_update` | Workspace member | Update Activity Type |
-| PATCH | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_update` | Workspace member | Patch an activity type |
+| PATCH | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_update` | Workspace member | Patch Activity Type |
 | DELETE | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_delete` | Workspace member | Delete Activity Type |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

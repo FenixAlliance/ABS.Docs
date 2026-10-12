@@ -6,15 +6,15 @@ The Payments service lets you connect your payment provider account, get paid fo
 
 **Base route:** `/api/v2/PaymentsService/...`
 
-**Availability:** payments run today in test mode, through Stripe. Live payments and other providers are coming.
+**Availability:** payments run today in test mode, through Stripe and Mercado Pago. Live payments are coming.
 
 ## What you can do
 
-- **Connect your payment provider:** create the connection to your own Stripe account, list your connections, update the account ID and enabled capabilities, and rotate the notification URL. See [Stripe](~/Integrations/Stripe.md).
+- **Connect your payment provider:** create the connection to your own Stripe or Mercado Pago account, list your connections, update the account ID and enabled capabilities, and rotate the notification URL. See [Stripe](~/Integrations/Stripe.md).
 - **Get paid for an invoice:** create a payment link for one of your invoices, or a payment reference you can print on a document. The payer enters card details on the provider's own checkout. See [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md).
-- **Refund a payment:** return a completed payment through the provider that collected it. Each refund request is sent once.
+- **Refund a payment:** return a completed payment through the provider that collected it. Each refund request is sent once. Refunds are available for Stripe and Mercado Pago.
 - **Reconcile outcomes:** list the provider operations whose outcome is not yet confirmed, and ask the provider what became of one.
-- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms.
+- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms. A payment you create here is a record. It does not mark an invoice as paid.
 
 ## Before you call it
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `PaymentsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## PaymentMethods
 
@@ -119,5 +119,5 @@ These endpoints are still served but are retired. Do not build new integrations 
 | --- | --- | --- | --- |
 | Payments | GET | `/api/v2/PaymentsService/Payments/{paymentId}/Details` | [Obsolete]: {paymentId}/Details is a deprecated way to access an endpoint, use GET {paymentId} instead |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

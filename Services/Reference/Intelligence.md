@@ -14,7 +14,7 @@ The Intelligence service lets you configure your workspace's AI agents, review w
 - **Audit AI activity.** Read the record of each AI run, the AI usage observations, a usage summary for a date range, and agent execution diagnostics.
 - **Check AI providers.** List the AI providers and models available to your workspace.
 - **Decide on AI advice for approvals.** AI advice on approvals is off until you opt in. Read the disclosure first: the provider and model that would be used and which approval fields are shared. Then opt in to that disclosure, or opt out at any time. Advice only informs the people who decide.
-- **Install definitions from the Gallery.** Validate, install, update and uninstall definitions published to the Gallery, and read which ones your workspace has installed.
+- **Install from the Gallery.** Validate, install, update and uninstall agent, skill and workflow definitions published to the Gallery, and see which ones your workspace has installed.
 
 ## Before you call it
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `IntelligenceService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## AgentExecutionDiagnostics
 
@@ -191,5 +191,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/IntelligenceService/DefinitionDistribution/Update` | `bots_update` | Workspace member | Update an installed repository-backed definition |
 | POST | `/api/v2/IntelligenceService/DefinitionDistribution/Validate` | `bots_read` | Workspace member | Validate a repository-backed definition |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

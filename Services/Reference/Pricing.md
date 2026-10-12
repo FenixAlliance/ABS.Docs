@@ -12,7 +12,7 @@ The Pricing service lets you set the prices and discounts of your items, control
 - **Keep discount lists:** create discount lists and the discount entries in them.
 - **Keep pricing rules:** create, update and delete the rules that adjust your prices.
 - **Set rounding policies:** create, update and delete the policies that round your amounts.
-- **Calculate an item's price:** get an item's calculated price for a price list, a discount list, a quantity and a currency, and read its final price, total taxes and total savings.
+- **Calculate an item's price:** get an item's calculated price for a price list, a discount list, a quantity and a currency, and read its final price, total taxes and total savings. Send the currency to get the price in that currency. When you leave it out, the price is in the item's own currency, and an item that has no currency set is refused.
 
 ## Before you call it
 
@@ -28,7 +28,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `PricingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## DiscountLists
 
@@ -101,5 +101,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/PricingService/RoundingPolicies/{roundingPolicyId}` | `pricing_rules_update` | Workspace member | Patches a rounding policy |
 | DELETE | `/api/v2/PricingService/RoundingPolicies/{roundingPolicyId}` | `pricing_rules_delete` | Workspace member | Deletes a rounding policy |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

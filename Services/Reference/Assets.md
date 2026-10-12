@@ -11,7 +11,7 @@ The Assets service lets you keep a register of the assets your workspace owns, w
 - **Keep an asset register:** create, update and delete assets, and organize them by category and type.
 - **Record transfers:** record when an asset moves, and list the transfers of one asset or of the whole workspace.
 - **Record repairs:** keep the repair history of each asset.
-- **Record value changes:** keep the value amendments and the depreciation records of each asset.
+- **Record value changes:** keep the value amendments of each asset, and record its depreciation. Depreciation records are entered by you; the platform does not calculate depreciation and does not post it to your accounts.
 
 ## Before you call it
 
@@ -26,26 +26,26 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `AssetsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## AssetCategories
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/AssetsService/AssetCategories` | `assets_read` | Workspace member | Gets all asset categories for a tenant. |
-| POST | `/api/v2/AssetsService/AssetCategories` | `assets_create` | Workspace member | Creates a new asset category. |
-| GET | `/api/v2/AssetsService/AssetCategories/count` | `assets_read` | Workspace member | Gets the count of asset categories for a tenant. |
-| GET | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category. |
-| PUT | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category. |
-| PATCH | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category. |
-| DELETE | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_delete` | Workspace member | Deletes an asset category. |
-| GET | `/api/v2/AssetsService/Assets/Categories` | `assets_read` | Workspace member | Gets all asset categories for a tenant. |
-| POST | `/api/v2/AssetsService/Assets/Categories` | `assets_create` | Workspace member | Creates a new asset category. |
-| GET | `/api/v2/AssetsService/Assets/Categories/count` | `assets_read` | Workspace member | Gets the count of asset categories for a tenant. |
-| GET | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category by ID. |
-| PUT | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category. |
-| PATCH | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category. |
-| DELETE | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_delete` | Workspace member | Deletes an existing asset category. |
+| GET | `/api/v2/AssetsService/AssetCategories` | `assets_read` | Workspace member | Gets all asset categories for the current tenant |
+| POST | `/api/v2/AssetsService/AssetCategories` | `assets_create` | Workspace member | Creates a new asset category |
+| GET | `/api/v2/AssetsService/AssetCategories/count` | `assets_read` | Workspace member | Gets the count of asset categories |
+| GET | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category |
+| PUT | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category |
+| PATCH | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category |
+| DELETE | `/api/v2/AssetsService/AssetCategories/{categoryId}` | `assets_delete` | Workspace member | Deletes an asset category |
+| GET | `/api/v2/AssetsService/Assets/Categories` | `assets_read` | Workspace member | Gets all asset categories |
+| POST | `/api/v2/AssetsService/Assets/Categories` | `assets_create` | Workspace member | Creates a new asset category |
+| GET | `/api/v2/AssetsService/Assets/Categories/count` | `assets_read` | Workspace member | Gets the count of asset categories |
+| GET | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_read` | Workspace member | Gets a specific asset category |
+| PUT | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Updates an existing asset category |
+| PATCH | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_update` | Workspace member | Partially updates an existing asset category |
+| DELETE | `/api/v2/AssetsService/Assets/Categories/{categoryId}` | `assets_delete` | Workspace member | Deletes an existing asset category |
 
 ## AssetTransfers
 
@@ -63,25 +63,25 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/AssetsService/AssetTypes` | `assets_read` | Workspace member | Gets all asset types for a tenant. |
-| POST | `/api/v2/AssetsService/AssetTypes` | `assets_create` | Workspace member | Creates a new asset type. |
-| GET | `/api/v2/AssetsService/AssetTypes/count` | `assets_read` | Workspace member | Gets the count of asset types for a tenant. |
-| GET | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_read` | Workspace member | Gets a specific asset type. |
-| PUT | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_update` | Workspace member | Updates an existing asset type. |
-| PATCH | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_update` | Workspace member | Partially updates an existing asset type. |
-| DELETE | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_delete` | Workspace member | Deletes an asset type. |
+| GET | `/api/v2/AssetsService/AssetTypes` | `assets_read` | Workspace member | Gets all asset types for the current tenant |
+| POST | `/api/v2/AssetsService/AssetTypes` | `assets_create` | Workspace member | Creates a new asset type |
+| GET | `/api/v2/AssetsService/AssetTypes/count` | `assets_read` | Workspace member | Gets the count of asset types |
+| GET | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_read` | Workspace member | Gets a specific asset type |
+| PUT | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_update` | Workspace member | Updates an existing asset type |
+| PATCH | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_update` | Workspace member | Partially updates an existing asset type |
+| DELETE | `/api/v2/AssetsService/AssetTypes/{typeId}` | `assets_delete` | Workspace member | Deletes an asset type |
 
 ## Assets
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/AssetsService/Assets` | `assets_read` | Workspace member | Gets all assets for a tenant. |
-| POST | `/api/v2/AssetsService/Assets` | `assets_create` | Workspace member | Creates a new asset. |
-| GET | `/api/v2/AssetsService/Assets/count` | `assets_read` | Workspace member | Gets the count of assets for a tenant. |
-| GET | `/api/v2/AssetsService/Assets/{assetId}` | `assets_read` | Workspace member | Gets a specific asset by ID. |
-| PUT | `/api/v2/AssetsService/Assets/{assetId}` | `assets_update` | Workspace member | Updates an existing asset. |
-| PATCH | `/api/v2/AssetsService/Assets/{assetId}` | `assets_update` | Workspace member | Partially updates an existing asset. |
-| DELETE | `/api/v2/AssetsService/Assets/{assetId}` | `assets_delete` | Workspace member | Deletes an existing asset. |
+| GET | `/api/v2/AssetsService/Assets` | `assets_read` | Workspace member | Gets all assets for the current tenant |
+| POST | `/api/v2/AssetsService/Assets` | `assets_create` | Workspace member | Creates a new asset |
+| GET | `/api/v2/AssetsService/Assets/count` | `assets_read` | Workspace member | Gets the count of assets |
+| GET | `/api/v2/AssetsService/Assets/{assetId}` | `assets_read` | Workspace member | Gets a specific asset by ID |
+| PUT | `/api/v2/AssetsService/Assets/{assetId}` | `assets_update` | Workspace member | Updates an existing asset |
+| PATCH | `/api/v2/AssetsService/Assets/{assetId}` | `assets_update` | Workspace member | Partially updates an existing asset |
+| DELETE | `/api/v2/AssetsService/Assets/{assetId}` | `assets_delete` | Workspace member | Deletes an existing asset |
 | GET | `/api/v2/AssetsService/Assets/{assetId}/DepreciationRecords` | `assets_read` | Workspace member | Gets depreciation records for a specific asset |
 | POST | `/api/v2/AssetsService/Assets/{assetId}/DepreciationRecords` | `assets_create` | Workspace member | Creates a new depreciation record for an asset |
 | GET | `/api/v2/AssetsService/Assets/{assetId}/DepreciationRecords/Count` | `assets_read` | Workspace member | Gets count of depreciation records for a specific asset |
@@ -111,5 +111,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/AssetsService/Assets/{assetId}/ValueAmends/{amendId}` | `assets_update` | Workspace member | Partially updates a value amendment for an asset |
 | DELETE | `/api/v2/AssetsService/Assets/{assetId}/ValueAmends/{amendId}` | `assets_delete` | Workspace member | Deletes a value amendment for an asset |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

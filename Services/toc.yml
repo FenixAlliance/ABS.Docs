@@ -34,8 +34,6 @@
       href: Reference/Cart.md
     - name: "Catalog"
       href: Reference/Catalog.md
-    - name: "Inventory"
-      href: Reference/Inventory.md
     - name: "Logistics"
       href: Reference/Logistics.md
     - name: "Shipments"

@@ -64,7 +64,8 @@ param(
 	[string]$SummaryPath,
 	[string]$NoHandlerListPath,
 	[string]$NoMediatorListPath,
-	[string]$StubListPath
+	[string]$StubListPath,
+	[string]$ExcludeListPath = (Join-Path $PSScriptRoot 'service-reference-excludes.txt')
 )
 
 Set-StrictMode -Version 3.0
@@ -90,6 +91,27 @@ $indexRoots = @(
 # The service projects themselves are indexed too (some declare their own request types and use cases).
 $indexRoots += @(Get-ChildItem -LiteralPath (Join-Path $PlatformRoot 'FenixAlliance.ABS') -Directory |
 	Where-Object { $_.Name -match '^FenixAlliance\.ABS\.Services\.\w+$' } | ForEach-Object { $_.FullName })
+
+# Lane-requested exclusions (service-reference-excludes.txt): Service | VERB | path (trailing * = prefix) | reason.
+$excludes = New-Object System.Collections.Generic.List[object]
+if ($ExcludeListPath -and (Test-Path -LiteralPath $ExcludeListPath)) {
+	foreach ($ln in [System.IO.File]::ReadAllLines($ExcludeListPath)) {
+		$x = $ln.Trim()
+		if (-not $x -or $x.StartsWith('#')) { continue }
+		$p = @($x -split '\s*\|\s*')
+		if ($p.Count -lt 4) { throw "Bad exclude line (need Service | VERB | path | reason): $x" }
+		$excludes.Add([pscustomobject]@{ Service = $p[0]; Verb = $p[1].ToUpperInvariant(); Path = $p[2]; Reason = ($p[3..($p.Count - 1)] -join ' | '); Hits = 0 })
+	}
+}
+function Get-ExcludeReason([string]$Svc, [string]$Verb, [string]$Path) {
+	foreach ($e in $excludes) {
+		if ($e.Service -cne $Svc) { continue }
+		if ($e.Verb -ne '*' -and $e.Verb -ne $Verb) { continue }
+		$hit = if ($e.Path.EndsWith('*')) { $Path.StartsWith($e.Path.Substring(0, $e.Path.Length - 1), [System.StringComparison]::Ordinal) } else { $Path -ceq $e.Path }
+		if ($hit) { $e.Hits++; return $e.Reason }
+	}
+	return $null
+}
 
 $platformCommit = (& git -C $PlatformRoot rev-parse --short HEAD 2>$null)
 if (-not $platformCommit) { $platformCommit = 'unknown' }
@@ -329,10 +351,12 @@ function Format-PermissionCell($Row) {
 }
 
 function ConvertTo-CustomerAccess([string]$Access) {
-	# Internal authorization modes -> customer terms. A workspace (tenant) endpoint that also has a user path is still
-	# described by its workspace rule.
+	# Internal authorization modes -> customer terms. A use case with both a workspace branch and a user or public
+	# branch takes the workspace only when one is sent (TenantId optional), so both readings are stated.
 	if (-not $Access) { return '' }
 	$modes = @($Access -split ',\s*' | Where-Object { $_ })
+	if ($modes -contains 'Tenant' -and $modes -contains 'User') { return 'Signed-in user, or workspace member with a workspace' }
+	if ($modes -contains 'Tenant' -and $modes -contains 'Anonymous') { return 'Public, or workspace member with a workspace' }
 	$out = New-Object System.Collections.Generic.List[string]
 	foreach ($mo in @('Tenant', 'User', 'Anonymous', 'Delegated')) {
 		if ($modes -notcontains $mo) { continue }
@@ -721,17 +745,20 @@ foreach ($dir in $serviceDirs) {
 				$bodyM = $sigM
 
 				# Summary
-				$summary = Get-DocSummary $regionO
-				$summarySource = 'xml'
+				# The public [SwaggerOperation(Summary = ...)] text comes first: it is what the instance's own API reference
+				# shows, and it is written for callers. The XML <summary> (often a note for maintainers) is the fallback.
+				$summary = $null
+				$summarySource = 'none'
+				$so = $at.Items | Where-Object Name -eq 'SwaggerOperation' | Select-Object -First 1
+				if ($so) {
+					$sv = $null
+					if ($so.Named.ContainsKey('Summary')) { $sv = Get-StringLiteral $so.Named['Summary'] }
+					elseif ($so.Positional.Count -ge 1) { $sv = Get-StringLiteral $so.Positional[0] }
+					if ($sv) { $summary = $sv; $summarySource = 'swagger' }
+				}
 				if (-not $summary) {
-					$so = $at.Items | Where-Object Name -eq 'SwaggerOperation' | Select-Object -First 1
-					$summarySource = 'none'
-					if ($so) {
-						$sv = $null
-						if ($so.Named.ContainsKey('Summary')) { $sv = Get-StringLiteral $so.Named['Summary'] }
-						elseif ($so.Positional.Count -ge 1) { $sv = Get-StringLiteral $so.Positional[0] }
-						if ($sv) { $summary = $sv; $summarySource = 'swagger' }
-					}
+					$summary = Get-DocSummary $regionO
+					if ($summary) { $summarySource = 'xml' }
 				}
 
 				# Request types
@@ -814,7 +841,9 @@ foreach ($dir in $serviceDirs) {
 						foreach ($p in $ucPerm) { if (-not $perms.Contains($p)) { $perms.Add($p) } }
 						if ($permSource -ne 'capability') { $permSource = 'usecase' }
 					}
-					if (-not $capIndex.ContainsKey($rt) -and -not $ucIndex.ContainsKey($rt)) {
+					# A [BusinessCapability] declaration alone does not make an operation work: without a use case whose
+					# ExecuteAsync takes the request, the mediator cannot dispatch it.
+					if (-not $ucIndex.ContainsKey($rt)) {
 						$noHandler = $true
 						Add-Flag 'NoHandlerFound' $svcName "$where.$methodName" "$rt has no [BusinessCapability] and no use case ExecuteAsync($rt ...) in the indexed source."
 					}
@@ -877,6 +906,7 @@ foreach ($dir in $serviceDirs) {
 						}
 						if ($classIgnore -or $methodIgnore) { $row.Status = 'Internal'; if ($methodIgnore -and -not $classIgnore) { Add-Flag 'InternalAction' $svcName "$where.$methodName" '[ApiExplorerSettings(IgnoreApi = true)] on the action: excluded.' } }
 						elseif ($rootReason) { $row.Status = 'RootTenantOnly'; Add-Flag 'RootTenantOnly' $svcName "$where.$methodName" "$($tp.Verb) $path excluded: $rootReason." }
+						elseif ($exReason = (Get-ExcludeReason $svcName $tp.Verb $path)) { $row.Status = 'Excluded'; $row | Add-Member -NotePropertyName ExcludeReason -NotePropertyValue $exReason -Force; Add-Flag 'ExcludedByList' $svcName "$where.$methodName" "$($tp.Verb) $path : $exReason" }
 						elseif ($noHandler) { $row.Status = 'NoHandler' }
 						elseif ($isStub) { $row.Status = 'Stub' }
 						elseif ($requestTypes.Count -eq 0 -and -not $callsService) { $row.Status = 'NoDispatchNoService' }
@@ -965,7 +995,7 @@ foreach ($svc in $sortedServices) {
 	$L.Add('> This page is generated from the controller source by `Docs.Customer/tools/New-ServiceReference.ps1`. Do not edit the content between the generated markers; rerun the generator instead.')
 	$L.Add('')
 	if ($segment) { $L.Add("Route segment: ``$segment``. Paths are relative to the API host. Workspace endpoints read the workspace from the ``tenantId`` request value (for example the query string) or the ``X-TenantId`` header.") ; $L.Add('') }
-	$L.Add('Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).')
+	$L.Add('Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.')
 	$L.Add('')
 
 	# One heading per resource. Rows are grouped by DisplayResource, so a resource served by two controllers (for
@@ -1060,13 +1090,17 @@ foreach ($g in ($allRows | Group-Object -Property Status | Sort-Object -Property
 Write-Host ''
 Write-Host 'Flags:'
 foreach ($g in ($flags | Group-Object -Property Kind | Sort-Object -Property Name -Culture 'en-US')) { Write-Host ("  {0,-28} {1}" -f $g.Name, $g.Count) }
-foreach ($k in @('ResourceMerged', 'InternalController', 'InternalAction', 'RootTenantOnly', 'NoMediatorDispatch', 'NoHandlerFound', 'AmbiguousRequestType', 'PermissionDisagreement', 'RootAdminCheck', 'ControllerUsesRootTenantId', 'NoClassRoute', 'MultipleClassRoutes', 'UnresolvedTemplate', 'NoVerbAttribute', 'NoPublicActions', 'ExistingFileWithoutMarkers')) {
+foreach ($k in @('ExcludedByList', 'ResourceMerged', 'InternalController', 'InternalAction', 'RootTenantOnly', 'NoMediatorDispatch', 'NoHandlerFound', 'AmbiguousRequestType', 'PermissionDisagreement', 'RootAdminCheck', 'ControllerUsesRootTenantId', 'NoClassRoute', 'MultipleClassRoutes', 'UnresolvedTemplate', 'NoVerbAttribute', 'NoPublicActions', 'ExistingFileWithoutMarkers')) {
 	$items = @($flags | Where-Object Kind -eq $k)
 	if ($items.Count -eq 0) { continue }
 	Write-Host ''
 	Write-Host "[$k]"
 	foreach ($it in $items) { Write-Host "  $($it.Service) | $($it.Where) | $($it.Detail)" }
 }
+
+Write-Host ''
+Write-Host "Exclude list: $($excludes.Count) entries from $ExcludeListPath"
+foreach ($e in $excludes) { if ($e.Hits -eq 0) { Write-Host "  UNUSED (matches no route; check or remove): $($e.Service) | $($e.Verb) | $($e.Path)" } }
 
 function Write-RowList([string]$Path, $Rows, [scriptblock]$Format) {
 	$list = New-Object 'System.Collections.Generic.List[string]'

@@ -11,7 +11,7 @@ The Reach service lets you decide who in your workspace is notified about what, 
 - **Choose who hears about what:** create notification rules for a category, change who a rule reaches, and enable or disable a rule. See [Notifications](~/Capabilities/Notifications.md).
 - **Set workspace notification settings:** set or withdraw the workspace policy and the workspace default, and list the notification categories.
 - **Let people choose for themselves:** read, set and clear a person's own settings, for one workspace or for all their workspaces at once.
-- **Stop email to an address:** add an address to the suppression list and list the suppressed addresses. A suppressed address receives no email.
+- **Stop email to an address:** add an address to the suppression list and list the suppressed addresses. A suppressed address receives no notification email.
 - **Explain a notification:** for one notification, see who it reached and who it did not; for one person, see why they were or were not notified, for one notification or over a time window. You can also list the notifications, decisions and deliveries recorded in your workspace.
 
 The notifications themselves, with read and archive, are in the [Social service](Social.md).
@@ -31,7 +31,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `ReachService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## Categories
 
@@ -46,7 +46,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | --- | --- | --- | --- | --- |
 | GET | `/api/v2/ReachService/Decisions` | `notifications_read` | Workspace member | Gets the current tenant Reach decisions |
 | GET | `/api/v2/ReachService/Decisions/Count` | `notifications_read` | Workspace member | Gets the current tenant Reach decision count |
-| GET | `/api/v2/ReachService/Decisions/Explain` | `notifications_read` | Workspace member | "Why did this person not receive this" - the support-desk entry point. Name the recipient by principalId OR by contactId, and ask about ONE reachOccurrenceId OR about a half-open fromUtc/toUtc window. Both coordinates at once, or both question forms at once, are refused with the reason rather than silently answered halfway. |
+| GET | `/api/v2/ReachService/Decisions/Explain` | `notifications_read` | Workspace member | Explains why a person did or did not receive a notification |
 | GET | `/api/v2/ReachService/Decisions/{reachDecisionId}` | `notifications_read` | Workspace member | Gets one Reach decision |
 
 ## Deliveries
@@ -109,5 +109,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/ReachService/Suppressions` | `notifications_manage` | Workspace member | Suppresses an address |
 | GET | `/api/v2/ReachService/Suppressions/Count` | `notifications_read` | Workspace member | Gets the current tenant Reach suppression count |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

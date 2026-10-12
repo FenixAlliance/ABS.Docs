@@ -14,6 +14,7 @@ The Contacts service lets you keep your workspace's contact list: the people and
 - **Describe your contacts:** maintain contact groups, contact sources, contact profiles, and relations between contacts with your own relation types. See [CRM](~/Modules/CRM.md).
 - **Store your own settings on a contact:** read and write key and value options per contact.
 - **Read what a contact holds with you:** the contact's avatar, cart, wallet and social profile.
+- **Sync into your contacts:** `POST /api/v2/CrmService/Sync` and `POST /api/v2/CrmService/Sync/Me` do the same thing. Use `Sync/Me`.
 
 ## Before you call it
 
@@ -29,7 +30,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `CrmService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## ContactGroups
 
@@ -105,14 +106,14 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/CrmService/Contacts/Individuals/Count` | `contacts_read` | Workspace member | Get all contacts of type individual count |
 | GET | `/api/v2/CrmService/Contacts/Individuals/Extended` | `contacts_read` | Workspace member | Get all contacts of type individual |
 | POST | `/api/v2/CrmService/Contacts/Individuals/Upsert` | `contacts_manage` | Workspace member | Upsert a user onto a tenant's contact list |
-| GET | `/api/v2/CrmService/Contacts/Individuals/{contactId}` | `contacts_read` | Workspace member | Get a Contact of type Individual by ID. |
+| GET | `/api/v2/CrmService/Contacts/Individuals/{contactId}` | `contacts_read` | Workspace member | Get a Contact of type Individual by ID |
 | GET | `/api/v2/CrmService/Contacts/Individuals/{contactId}/Individuals` | `contacts_read` | Workspace member | Get individual related individuals |
 | GET | `/api/v2/CrmService/Contacts/Individuals/{contactId}/Organizations` | `contacts_read` | Workspace member | Get individual related organizations |
 | GET | `/api/v2/CrmService/Contacts/Organizations` | `organizations_read` | Workspace member | Get all contacts of type organization |
 | GET | `/api/v2/CrmService/Contacts/Organizations/Count` | `organizations_read` | Workspace member | Get all contacts of type organization count |
 | GET | `/api/v2/CrmService/Contacts/Organizations/Extended` | `organizations_read` | Workspace member | Get all contacts of type organization |
 | POST | `/api/v2/CrmService/Contacts/Organizations/Upsert` | `contacts_manage` | Workspace member | Upsert a tenant onto another tenant's contact list |
-| GET | `/api/v2/CrmService/Contacts/Organizations/{contactId}` | `organizations_read` | Workspace member | Get a Contact of type Organization by ID. |
+| GET | `/api/v2/CrmService/Contacts/Organizations/{contactId}` | `organizations_read` | Workspace member | Get a Contact of type Organization by ID |
 | GET | `/api/v2/CrmService/Contacts/Organizations/{contactId}/Individuals` | `organizations_read` | Workspace member | Get organization related individuals |
 | GET | `/api/v2/CrmService/Contacts/Organizations/{contactId}/Organizations` | `organizations_read` | Workspace member | Get organization related organizations |
 | POST | `/api/v2/CrmService/Contacts/Related` |  | Signed-in user | Create or reuse the current user's contact in a tenant's contact list |
@@ -131,7 +132,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | DELETE | `/api/v2/CrmService/Contacts/{contactId}/Emails/{emailId}` | `contacts_delete` | Workspace member | Delete a contact email address |
 | POST | `/api/v2/CrmService/Contacts/{contactId}/Emails/{emailId}/Verify` | `contacts_update` | Workspace member | Verify a contact email address |
 | GET | `/api/v2/CrmService/Contacts/{contactId}/Extended` | `contacts_read` | Workspace member | Get a contact by ID |
-| GET | `/api/v2/CrmService/Contacts/{contactId}/Profiles` | `contact_profiles_read` | Workspace member | Get a contact's social profile |
+| GET | `/api/v2/CrmService/Contacts/{contactId}/Profiles` | `contact_profiles_read` | Workspace member | Get a contact's social profiles |
 | POST | `/api/v2/CrmService/Contacts/{contactId}/Profiles` | `contact_profiles_create` | Workspace member | Create a contact profile |
 | GET | `/api/v2/CrmService/Contacts/{contactId}/Profiles/Count` | `contact_profiles_read` | Workspace member | Get contact profiles count |
 | PUT | `/api/v2/CrmService/Contacts/{contactId}/Profiles/{profileId}` | `contact_profiles_update` | Workspace member | Update a contact profile |
@@ -158,10 +159,10 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| POST | `/api/v2/CrmService/Sync` | `contacts_manage` | Workspace member | Sync the current user into a tenant's contact list. |
-| POST | `/api/v2/CrmService/Sync/Me` | `contacts_manage` | Workspace member | Sync the user into a tenant's contact list. |
-| POST | `/api/v2/CrmService/Sync/Tenant` | `contacts_manage` | Workspace member | Sync a tenant into another tenant's contact list. |
-| POST | `/api/v2/CrmService/Sync/User` | `contacts_manage` | Workspace member | Sync a user into a tenant's contact list. |
+| POST | `/api/v2/CrmService/Sync` | `contacts_manage` | Workspace member | Sync the current user into the current tenant's contact list |
+| POST | `/api/v2/CrmService/Sync/Me` | `contacts_manage` | Workspace member | Sync the current user into a tenant's contact list |
+| POST | `/api/v2/CrmService/Sync/Tenant` | `contacts_manage` | Workspace member | Sync a tenant into another tenant's contact list |
+| POST | `/api/v2/CrmService/Sync/User` | `contacts_manage` | Workspace member | Sync a user into a tenant's contact list |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

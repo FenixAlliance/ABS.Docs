@@ -1,6 +1,6 @@
 # Blockchains service
 
-The Blockchains service lets you keep your workspace's blockchain records and non-fungible token (NFT) records.
+The Blockchains service lets you keep your workspace's blockchain records and non-fungible token (NFT) records. These are records only. The service doesn't connect to a blockchain, send transactions or mint tokens.
 
 **Who uses it:** developers who keep a register of the blockchains and NFTs a workspace works with.
 
@@ -25,7 +25,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `BlockchainsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## Blockchains
 
@@ -52,5 +52,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/BlockchainsService/NonFungibleTokens/{id}` | `non_fungible_tokens_update` | Workspace member | Patch a non-fungible token |
 | DELETE | `/api/v2/BlockchainsService/NonFungibleTokens/{id}` | `non_fungible_tokens_delete` | Workspace member | Delete an NFT |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

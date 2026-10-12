@@ -11,7 +11,7 @@ The Subscriptions service lets you sell subscriptions from your own plans, buy a
 - **Keep subscription plans:** create, update and delete the plans your workspace sells.
 - **Keep subscriptions:** create, read, update and delete subscription records.
 - **Start a subscription from your plan:** start a subscription to one of your own plans, billed to the customer you name, for a first billing period you set.
-- **Buy a platform plan:** purchase a platform offering for your workspace, for the billing cycle you choose. The price is computed for you.
+- **Buy a platform plan:** purchase a platform offering for your workspace, for the billing cycle you choose. The price is computed for you, in your workspace's currency. The Free plan needs no payment.
 - **Find what to pay:** starting or buying a subscription does not take payment by itself. Its invoice appears shortly after; read the subscription's payable obligation to find that invoice, then pay it.
 - **Show plan prices:** get the platform's plans priced in a currency you choose.
 
@@ -30,7 +30,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `SubscriptionsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## CommercialSubscriptions
 
@@ -72,5 +72,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/SubscriptionsService/Subscriptions/{subscriptionId}` | `subscriptions_update` | Workspace member | Patch a subscription |
 | DELETE | `/api/v2/SubscriptionsService/Subscriptions/{subscriptionId}` | `subscriptions_delete` | Workspace member | Delete a subscription |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

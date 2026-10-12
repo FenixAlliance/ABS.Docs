@@ -31,15 +31,15 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `LearningService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## CourseArticles
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseArticles` |  | Workspace member | Get all course articles |
+| GET | `/api/v2/LearningService/CourseArticles` |  | Signed-in user, or workspace member with a workspace | Get all course articles |
 | POST | `/api/v2/LearningService/CourseArticles` | `courses_create` | Workspace member | Create a new course article |
-| GET | `/api/v2/LearningService/CourseArticles/Count` |  | Workspace member | Get course articles count |
+| GET | `/api/v2/LearningService/CourseArticles/Count` |  | Signed-in user, or workspace member with a workspace | Get course articles count |
 | GET | `/api/v2/LearningService/CourseArticles/{articleId}` |  | Checked by the service | Get course article by ID |
 | PUT | `/api/v2/LearningService/CourseArticles/{articleId}` | `courses_update` | Workspace member | Update a course article |
 | PATCH | `/api/v2/LearningService/CourseArticles/{articleId}` | `courses_update` | Workspace member | Patch a course article |
@@ -49,9 +49,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseAssignmentComponents` |  | Workspace member | Get all course assignment components |
+| GET | `/api/v2/LearningService/CourseAssignmentComponents` |  | Signed-in user, or workspace member with a workspace | Get all course assignment components |
 | POST | `/api/v2/LearningService/CourseAssignmentComponents` | `courses_create` | Workspace member | Create a course assignment component |
-| GET | `/api/v2/LearningService/CourseAssignmentComponents/Count` |  | Workspace member | Get course assignment components count |
+| GET | `/api/v2/LearningService/CourseAssignmentComponents/Count` |  | Signed-in user, or workspace member with a workspace | Get course assignment components count |
 | GET | `/api/v2/LearningService/CourseAssignmentComponents/{componentId}` |  | Checked by the service | Get course assignment component by ID |
 | PUT | `/api/v2/LearningService/CourseAssignmentComponents/{componentId}` | `courses_update` | Workspace member | Update a course assignment component |
 | PATCH | `/api/v2/LearningService/CourseAssignmentComponents/{componentId}` | `courses_update` | Workspace member | Patch a course assignment component |
@@ -61,9 +61,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseAssignmentTypes` |  | Workspace member | Get all course assignment types |
+| GET | `/api/v2/LearningService/CourseAssignmentTypes` |  | Signed-in user, or workspace member with a workspace | Get all course assignment types |
 | POST | `/api/v2/LearningService/CourseAssignmentTypes` | `courses_create` | Workspace member | Create a course assignment type |
-| GET | `/api/v2/LearningService/CourseAssignmentTypes/Count` |  | Workspace member | Get course assignment types count |
+| GET | `/api/v2/LearningService/CourseAssignmentTypes/Count` |  | Signed-in user, or workspace member with a workspace | Get course assignment types count |
 | GET | `/api/v2/LearningService/CourseAssignmentTypes/{assignmentTypeId}` |  | Checked by the service | Get course assignment type by ID |
 | PUT | `/api/v2/LearningService/CourseAssignmentTypes/{assignmentTypeId}` | `courses_update` | Workspace member | Update a course assignment type |
 | PATCH | `/api/v2/LearningService/CourseAssignmentTypes/{assignmentTypeId}` | `courses_update` | Workspace member | Patch a course assignment type |
@@ -73,9 +73,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseAssignments` |  | Workspace member | Get all course assignments |
+| GET | `/api/v2/LearningService/CourseAssignments` |  | Signed-in user, or workspace member with a workspace | Get all course assignments |
 | POST | `/api/v2/LearningService/CourseAssignments` | `courses_create` | Workspace member | Create a new course assignment |
-| GET | `/api/v2/LearningService/CourseAssignments/Count` |  | Workspace member | Get course assignments count |
+| GET | `/api/v2/LearningService/CourseAssignments/Count` |  | Signed-in user, or workspace member with a workspace | Get course assignments count |
 | GET | `/api/v2/LearningService/CourseAssignments/{assignmentId}` | `courses_read` | Workspace member | Get course assignment by ID |
 | PUT | `/api/v2/LearningService/CourseAssignments/{assignmentId}` | `courses_update` | Workspace member | Update a course assignment |
 | PATCH | `/api/v2/LearningService/CourseAssignments/{assignmentId}` | `courses_update` | Workspace member | Patch a course assignment |
@@ -85,9 +85,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseCategories` |  | Workspace member | Get all course categories |
+| GET | `/api/v2/LearningService/CourseCategories` |  | Signed-in user, or workspace member with a workspace | Get all course categories |
 | POST | `/api/v2/LearningService/CourseCategories` | `courses_create` | Workspace member | Create a new course category |
-| GET | `/api/v2/LearningService/CourseCategories/Count` |  | Workspace member | Get course categories count |
+| GET | `/api/v2/LearningService/CourseCategories/Count` |  | Signed-in user, or workspace member with a workspace | Get course categories count |
 | GET | `/api/v2/LearningService/CourseCategories/{categoryId}` |  | Checked by the service | Get course category by ID |
 | PUT | `/api/v2/LearningService/CourseCategories/{categoryId}` | `courses_update` | Workspace member | Update a course category |
 | PATCH | `/api/v2/LearningService/CourseCategories/{categoryId}` | `courses_update` | Workspace member | Patch a course category |
@@ -97,10 +97,10 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseCertificates` |  | Workspace member | Get all course certificates |
+| GET | `/api/v2/LearningService/CourseCertificates` |  | Signed-in user, or workspace member with a workspace | Get all course certificates |
 | POST | `/api/v2/LearningService/CourseCertificates` | `courses_create` | Workspace member | Create a course certificate |
-| GET | `/api/v2/LearningService/CourseCertificates/Count` |  | Workspace member | Get course certificates count |
-| GET | `/api/v2/LearningService/CourseCertificates/Template` |  | Workspace member | Get all certificate templates |
+| GET | `/api/v2/LearningService/CourseCertificates/Count` |  | Signed-in user, or workspace member with a workspace | Get course certificates count |
+| GET | `/api/v2/LearningService/CourseCertificates/Template` |  | Signed-in user, or workspace member with a workspace | Get all certificate templates |
 | POST | `/api/v2/LearningService/CourseCertificates/Template` | `courses_create` | Workspace member | Create a certificate template |
 | GET | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_read` | Workspace member | Get certificate template by ID |
 | PATCH | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_update` | Workspace member | Patch a certificate template |
@@ -114,9 +114,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseCohorts` |  | Workspace member | Get all course cohorts |
+| GET | `/api/v2/LearningService/CourseCohorts` |  | Signed-in user, or workspace member with a workspace | Get all course cohorts |
 | POST | `/api/v2/LearningService/CourseCohorts` | `courses_create` | Workspace member | Create a new course cohort |
-| GET | `/api/v2/LearningService/CourseCohorts/Count` |  | Workspace member | Get course cohorts count |
+| GET | `/api/v2/LearningService/CourseCohorts/Count` |  | Signed-in user, or workspace member with a workspace | Get course cohorts count |
 | GET | `/api/v2/LearningService/CourseCohorts/{cohortId}` |  | Checked by the service | Get course cohort by ID |
 | PUT | `/api/v2/LearningService/CourseCohorts/{cohortId}` | `courses_update` | Workspace member | Update a course cohort |
 | PATCH | `/api/v2/LearningService/CourseCohorts/{cohortId}` | `courses_update` | Workspace member | Patch a course cohort |
@@ -137,9 +137,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseContentGroups` |  | Workspace member | Get all course content groups |
+| GET | `/api/v2/LearningService/CourseContentGroups` |  | Signed-in user, or workspace member with a workspace | Get all course content groups |
 | POST | `/api/v2/LearningService/CourseContentGroups` | `courses_create` | Workspace member | Create a new course content group |
-| GET | `/api/v2/LearningService/CourseContentGroups/Count` |  | Workspace member | Get course content groups count |
+| GET | `/api/v2/LearningService/CourseContentGroups/Count` |  | Signed-in user, or workspace member with a workspace | Get course content groups count |
 | GET | `/api/v2/LearningService/CourseContentGroups/{groupId}` |  | Checked by the service | Get course content group by ID |
 | PUT | `/api/v2/LearningService/CourseContentGroups/{groupId}` | `courses_update` | Workspace member | Update a course content group |
 | PATCH | `/api/v2/LearningService/CourseContentGroups/{groupId}` | `courses_update` | Workspace member | Patch a course content group |
@@ -151,9 +151,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseEnrollments` |  | Workspace member | Get all course enrollments |
+| GET | `/api/v2/LearningService/CourseEnrollments` |  | Signed-in user, or workspace member with a workspace | Get all course enrollments |
 | POST | `/api/v2/LearningService/CourseEnrollments` | `courses_create` | Workspace member | Create a new course enrollment |
-| GET | `/api/v2/LearningService/CourseEnrollments/Count` |  | Workspace member | Get course enrollments count |
+| GET | `/api/v2/LearningService/CourseEnrollments/Count` |  | Signed-in user, or workspace member with a workspace | Get course enrollments count |
 | GET | `/api/v2/LearningService/CourseEnrollments/Student/{studentProfileId}` |  | Checked by the service | Get enrollments by student |
 | GET | `/api/v2/LearningService/CourseEnrollments/{courseEnrollmentId}` | `courses_read` | Workspace member | Get course enrollment by ID |
 | PUT | `/api/v2/LearningService/CourseEnrollments/{courseEnrollmentId}` | `courses_update` | Workspace member | Update a course enrollment |
@@ -164,9 +164,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseFiles` |  | Workspace member | Get all course files |
+| GET | `/api/v2/LearningService/CourseFiles` |  | Signed-in user, or workspace member with a workspace | Get all course files |
 | POST | `/api/v2/LearningService/CourseFiles` | `courses_create` | Workspace member | Create a new course file |
-| GET | `/api/v2/LearningService/CourseFiles/Count` |  | Workspace member | Get course files count |
+| GET | `/api/v2/LearningService/CourseFiles/Count` |  | Signed-in user, or workspace member with a workspace | Get course files count |
 | GET | `/api/v2/LearningService/CourseFiles/{fileId}` |  | Checked by the service | Get course file by ID |
 | PUT | `/api/v2/LearningService/CourseFiles/{fileId}` | `courses_update` | Workspace member | Update a course file |
 | PATCH | `/api/v2/LearningService/CourseFiles/{fileId}` | `courses_update` | Workspace member | Patch a course file |
@@ -176,9 +176,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseForums` |  | Workspace member | Get all course forums |
+| GET | `/api/v2/LearningService/CourseForums` |  | Signed-in user, or workspace member with a workspace | Get all course forums |
 | POST | `/api/v2/LearningService/CourseForums` | `courses_create` | Workspace member | Create a course forum |
-| GET | `/api/v2/LearningService/CourseForums/Count` |  | Workspace member | Get course forums count |
+| GET | `/api/v2/LearningService/CourseForums/Count` |  | Signed-in user, or workspace member with a workspace | Get course forums count |
 | GET | `/api/v2/LearningService/CourseForums/{forumId}` |  | Checked by the service | Get course forum by ID |
 | PUT | `/api/v2/LearningService/CourseForums/{forumId}` | `courses_update` | Workspace member | Update a course forum |
 | PATCH | `/api/v2/LearningService/CourseForums/{forumId}` | `courses_update` | Workspace member | Patch a course forum |
@@ -188,9 +188,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseGradingRubrics` |  | Workspace member | Get all course grading rubrics |
+| GET | `/api/v2/LearningService/CourseGradingRubrics` |  | Signed-in user, or workspace member with a workspace | Get all course grading rubrics |
 | POST | `/api/v2/LearningService/CourseGradingRubrics` | `courses_create` | Workspace member | Create a course grading rubric |
-| GET | `/api/v2/LearningService/CourseGradingRubrics/Count` |  | Workspace member | Get course grading rubrics count |
+| GET | `/api/v2/LearningService/CourseGradingRubrics/Count` |  | Signed-in user, or workspace member with a workspace | Get course grading rubrics count |
 | GET | `/api/v2/LearningService/CourseGradingRubrics/{rubricId}` | `courses_read` | Workspace member | Get course grading rubric by ID |
 | PUT | `/api/v2/LearningService/CourseGradingRubrics/{rubricId}` | `courses_update` | Workspace member | Update a course grading rubric |
 | PATCH | `/api/v2/LearningService/CourseGradingRubrics/{rubricId}` | `courses_update` | Workspace member | Patch a course grading rubric |
@@ -200,9 +200,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseHandouts` |  | Workspace member | Get all course handouts |
+| GET | `/api/v2/LearningService/CourseHandouts` |  | Signed-in user, or workspace member with a workspace | Get all course handouts |
 | POST | `/api/v2/LearningService/CourseHandouts` | `courses_create` | Workspace member | Create a course handout |
-| GET | `/api/v2/LearningService/CourseHandouts/Count` |  | Workspace member | Get course handouts count |
+| GET | `/api/v2/LearningService/CourseHandouts/Count` |  | Signed-in user, or workspace member with a workspace | Get course handouts count |
 | GET | `/api/v2/LearningService/CourseHandouts/{handoutId}` |  | Checked by the service | Get course handout by ID |
 | PUT | `/api/v2/LearningService/CourseHandouts/{handoutId}` | `courses_update` | Workspace member | Update a course handout |
 | PATCH | `/api/v2/LearningService/CourseHandouts/{handoutId}` | `courses_update` | Workspace member | Patch a course handout |
@@ -212,9 +212,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseLibraries` |  | Workspace member | Get all course libraries |
+| GET | `/api/v2/LearningService/CourseLibraries` |  | Signed-in user, or workspace member with a workspace | Get all course libraries |
 | POST | `/api/v2/LearningService/CourseLibraries` | `courses_create` | Workspace member | Create a course library |
-| GET | `/api/v2/LearningService/CourseLibraries/Count` |  | Workspace member | Get course libraries count |
+| GET | `/api/v2/LearningService/CourseLibraries/Count` |  | Signed-in user, or workspace member with a workspace | Get course libraries count |
 | GET | `/api/v2/LearningService/CourseLibraries/{libraryId}` |  | Checked by the service | Get course library by ID |
 | PUT | `/api/v2/LearningService/CourseLibraries/{libraryId}` | `courses_update` | Workspace member | Update a course library |
 | PATCH | `/api/v2/LearningService/CourseLibraries/{libraryId}` | `courses_update` | Workspace member | Patch a course library |
@@ -224,9 +224,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CoursePages` |  | Workspace member | Get all course pages |
+| GET | `/api/v2/LearningService/CoursePages` |  | Signed-in user, or workspace member with a workspace | Get all course pages |
 | POST | `/api/v2/LearningService/CoursePages` | `courses_create` | Workspace member | Create a new course page |
-| GET | `/api/v2/LearningService/CoursePages/Count` |  | Workspace member | Get course pages count |
+| GET | `/api/v2/LearningService/CoursePages/Count` |  | Signed-in user, or workspace member with a workspace | Get course pages count |
 | GET | `/api/v2/LearningService/CoursePages/{pageId}` |  | Checked by the service | Get course page by ID |
 | PUT | `/api/v2/LearningService/CoursePages/{pageId}` | `courses_update` | Workspace member | Update a course page |
 | PATCH | `/api/v2/LearningService/CoursePages/{pageId}` | `courses_update` | Workspace member | Patch a course page |
@@ -236,9 +236,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseProblemSets` |  | Workspace member | Get all course problem sets |
+| GET | `/api/v2/LearningService/CourseProblemSets` |  | Signed-in user, or workspace member with a workspace | Get all course problem sets |
 | POST | `/api/v2/LearningService/CourseProblemSets` | `courses_create` | Workspace member | Create a new course problem set |
-| GET | `/api/v2/LearningService/CourseProblemSets/Count` |  | Workspace member | Get course problem sets count |
+| GET | `/api/v2/LearningService/CourseProblemSets/Count` |  | Signed-in user, or workspace member with a workspace | Get course problem sets count |
 | GET | `/api/v2/LearningService/CourseProblemSets/{problemSetId}` | `courses_read` | Workspace member | Get course problem set by ID |
 | PUT | `/api/v2/LearningService/CourseProblemSets/{problemSetId}` | `courses_update` | Workspace member | Update a course problem set |
 | PATCH | `/api/v2/LearningService/CourseProblemSets/{problemSetId}` | `courses_update` | Workspace member | Patch a course problem set |
@@ -248,9 +248,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseSections` |  | Workspace member | Get all course sections |
+| GET | `/api/v2/LearningService/CourseSections` |  | Signed-in user, or workspace member with a workspace | Get all course sections |
 | POST | `/api/v2/LearningService/CourseSections` | `courses_create` | Workspace member | Create a new course section |
-| GET | `/api/v2/LearningService/CourseSections/Count` |  | Workspace member | Get course sections count |
+| GET | `/api/v2/LearningService/CourseSections/Count` |  | Signed-in user, or workspace member with a workspace | Get course sections count |
 | GET | `/api/v2/LearningService/CourseSections/{sectionId}` |  | Checked by the service | Get course section by ID |
 | PUT | `/api/v2/LearningService/CourseSections/{sectionId}` | `courses_update` | Workspace member | Update a course section |
 | PATCH | `/api/v2/LearningService/CourseSections/{sectionId}` | `courses_update` | Workspace member | Patch a course section |
@@ -260,9 +260,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseTeamMemberships` |  | Workspace member | Get all course team memberships |
+| GET | `/api/v2/LearningService/CourseTeamMemberships` |  | Signed-in user, or workspace member with a workspace | Get all course team memberships |
 | POST | `/api/v2/LearningService/CourseTeamMemberships` | `courses_create` | Workspace member | Create a course team membership |
-| GET | `/api/v2/LearningService/CourseTeamMemberships/Count` |  | Workspace member | Get course team memberships count |
+| GET | `/api/v2/LearningService/CourseTeamMemberships/Count` |  | Signed-in user, or workspace member with a workspace | Get course team memberships count |
 | GET | `/api/v2/LearningService/CourseTeamMemberships/{membershipId}` | `courses_read` | Workspace member | Get course team membership by ID |
 | PUT | `/api/v2/LearningService/CourseTeamMemberships/{membershipId}` | `courses_update` | Workspace member | Update a course team membership |
 | PATCH | `/api/v2/LearningService/CourseTeamMemberships/{membershipId}` | `courses_update` | Workspace member | Patch a course team membership |
@@ -272,9 +272,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseUnitComponents` |  | Workspace member | Get all course unit components |
+| GET | `/api/v2/LearningService/CourseUnitComponents` |  | Signed-in user, or workspace member with a workspace | Get all course unit components |
 | POST | `/api/v2/LearningService/CourseUnitComponents` | `courses_create` | Workspace member | Create a new course unit component |
-| GET | `/api/v2/LearningService/CourseUnitComponents/Count` |  | Workspace member | Get course unit components count |
+| GET | `/api/v2/LearningService/CourseUnitComponents/Count` |  | Signed-in user, or workspace member with a workspace | Get course unit components count |
 | GET | `/api/v2/LearningService/CourseUnitComponents/{componentId}` |  | Checked by the service | Get course unit component by ID |
 | PUT | `/api/v2/LearningService/CourseUnitComponents/{componentId}` | `courses_update` | Workspace member | Update a course unit component |
 | PATCH | `/api/v2/LearningService/CourseUnitComponents/{componentId}` | `courses_update` | Workspace member | Patch a course unit component |
@@ -284,9 +284,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseUnits` |  | Workspace member | Get all course units |
+| GET | `/api/v2/LearningService/CourseUnits` |  | Signed-in user, or workspace member with a workspace | Get all course units |
 | POST | `/api/v2/LearningService/CourseUnits` | `courses_create` | Workspace member | Create a new course unit |
-| GET | `/api/v2/LearningService/CourseUnits/Count` |  | Workspace member | Get course units count |
+| GET | `/api/v2/LearningService/CourseUnits/Count` |  | Signed-in user, or workspace member with a workspace | Get course units count |
 | GET | `/api/v2/LearningService/CourseUnits/{unitId}` |  | Checked by the service | Get course unit by ID |
 | PUT | `/api/v2/LearningService/CourseUnits/{unitId}` | `courses_update` | Workspace member | Update a course unit |
 | PATCH | `/api/v2/LearningService/CourseUnits/{unitId}` | `courses_update` | Workspace member | Patch a course unit |
@@ -296,9 +296,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseUpdates` |  | Workspace member | Get all course updates |
+| GET | `/api/v2/LearningService/CourseUpdates` |  | Signed-in user, or workspace member with a workspace | Get all course updates |
 | POST | `/api/v2/LearningService/CourseUpdates` | `courses_create` | Workspace member | Create a new course update |
-| GET | `/api/v2/LearningService/CourseUpdates/Count` |  | Workspace member | Get course updates count |
+| GET | `/api/v2/LearningService/CourseUpdates/Count` |  | Signed-in user, or workspace member with a workspace | Get course updates count |
 | GET | `/api/v2/LearningService/CourseUpdates/{updateId}` |  | Checked by the service | Get course update by ID |
 | PUT | `/api/v2/LearningService/CourseUpdates/{updateId}` | `courses_update` | Workspace member | Update a course update |
 | PATCH | `/api/v2/LearningService/CourseUpdates/{updateId}` | `courses_update` | Workspace member | Patch a course update |
@@ -308,9 +308,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/CourseWikis` |  | Workspace member | Get all course wikis |
+| GET | `/api/v2/LearningService/CourseWikis` |  | Signed-in user, or workspace member with a workspace | Get all course wikis |
 | POST | `/api/v2/LearningService/CourseWikis` | `courses_create` | Workspace member | Create a new course wiki |
-| GET | `/api/v2/LearningService/CourseWikis/Count` |  | Workspace member | Get course wikis count |
+| GET | `/api/v2/LearningService/CourseWikis/Count` |  | Signed-in user, or workspace member with a workspace | Get course wikis count |
 | GET | `/api/v2/LearningService/CourseWikis/{wikiId}` |  | Checked by the service | Get course wiki by ID |
 | PUT | `/api/v2/LearningService/CourseWikis/{wikiId}` | `courses_update` | Workspace member | Update a course wiki |
 | PATCH | `/api/v2/LearningService/CourseWikis/{wikiId}` | `courses_update` | Workspace member | Patch a course wiki |
@@ -370,9 +370,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/InstructorProfiles` | `courses_read` | Workspace member |  |
+| GET | `/api/v2/LearningService/InstructorProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
 | POST | `/api/v2/LearningService/InstructorProfiles` | `courses_create` | Workspace member |  |
-| GET | `/api/v2/LearningService/InstructorProfiles/Count` | `courses_read` | Workspace member |  |
+| GET | `/api/v2/LearningService/InstructorProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
 | GET | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_read` | Workspace member |  |
 | PUT | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member |  |
 | PATCH | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member |  |
@@ -383,7 +383,6 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
 | GET | `/api/v2/LearningService/Me/Assignments/{courseAssignmentId}` |  | Signed-in user | Get one assignment of a course the current user is enrolled in |
-| GET | `/api/v2/LearningService/Me/AverageScore` |  | Signed-in user | Get current user's average score |
 | GET | `/api/v2/LearningService/Me/Certificates` |  | Signed-in user | Get current user's completion certificates |
 | GET | `/api/v2/LearningService/Me/Certificates/Count` |  | Signed-in user | Get current user's certificates count |
 | GET | `/api/v2/LearningService/Me/Certificates/{courseCertificateId}` |  | Signed-in user | Get one of the current user's completion certificates by ID |
@@ -392,12 +391,10 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/LearningService/Me/Courses/{courseId}/Enrollment` |  | Signed-in user | Get whether the current user is enrolled in a course |
 | GET | `/api/v2/LearningService/Me/Enrollments` |  | Signed-in user | Get current user's course enrollments |
 | GET | `/api/v2/LearningService/Me/Enrollments/Count` |  | Signed-in user | Get current user's enrollment count |
-| GET | `/api/v2/LearningService/Me/HoursCompleted` |  | Signed-in user | Get current user's completed hours |
 | GET | `/api/v2/LearningService/Me/InstructorCourses` |  | Signed-in user | Get current user's instructor courses |
 | GET | `/api/v2/LearningService/Me/InstructorCourses/Count` |  | Signed-in user | Get current user's instructor courses count |
 | GET | `/api/v2/LearningService/Me/InstructorProfiles` |  | Signed-in user | Get current user's instructor profiles |
 | GET | `/api/v2/LearningService/Me/InstructorProfiles/Count` |  | Signed-in user | Get current user's instructor profiles count |
-| GET | `/api/v2/LearningService/Me/PendingTasks` |  | Signed-in user | Get current user's pending task count |
 | GET | `/api/v2/LearningService/Me/ProblemSets/{courseProblemSetId}` |  | Signed-in user | Get one problem set of a course the current user is enrolled in |
 | GET | `/api/v2/LearningService/Me/StudentProfiles` |  | Signed-in user | Get current user's student profiles |
 | GET | `/api/v2/LearningService/Me/StudentProfiles/Count` |  | Signed-in user | Get current user's student profiles count |
@@ -406,15 +403,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/StudentProfiles` | `courses_read` | Workspace member |  |
+| GET | `/api/v2/LearningService/StudentProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
 | POST | `/api/v2/LearningService/StudentProfiles` | `courses_create` | Workspace member |  |
-| GET | `/api/v2/LearningService/StudentProfiles/Count` | `courses_read` | Workspace member |  |
+| GET | `/api/v2/LearningService/StudentProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
 | GET | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_read` | Workspace member |  |
 | PUT | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member |  |
 | PATCH | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member |  |
 | DELETE | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_delete` | Workspace member |  |
-| GET | `/api/v2/LearningService/StudentProfiles/{studentProfileId}/Average` | `courses_read` | Workspace member |  |
-| GET | `/api/v2/LearningService/StudentProfiles/{studentProfileId}/HoursCompleted` |  | Signed-in user |  |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

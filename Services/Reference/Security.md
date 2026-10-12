@@ -13,14 +13,14 @@ The Security service lets you control what members, apps and application identit
 - **Run application identities.** Provision an identity for automated work, grant it only the permissions it needs, and suspend, reinstate or disable it. A disabled identity stops the unattended work that depends on it. See [Application identities](~/Capabilities/Alliance-Passport-Service.md#application-identities).
 - **Register apps.** Register the OAuth apps that sign people in, update or remove them, and list the authorizations people have given each app. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md).
 - **Manage business applications.** Create, update and delete the workspace's business applications, and read the roles and permissions attached to each.
-- **Review activity.** Read the workspace's logs and security logs, and your own activity log. Role and permission changes appear in the security logs. These lists are read-only.
+- **Review activity.** Read the workspace's logs and security logs, and your own activity log. Granting or revoking a role or permission for a member appears in the security logs. These lists are read-only.
 - **Review webhooks and certificates.** Read the webhook requests the workspace received and its security certificates.
 
 ## Before you call it
 
 - **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
 - **Name the workspace.** Workspace calls take the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant). Reading your own activity log needs only a signed-in account.
-- **Hold the permission.** Roles need `security_roles_read`, `security_roles_create`, `security_roles_update`, `security_roles_delete` or `security_roles_manage`, and permissions need the matching `security_permissions_*` permission. OAuth apps need `oauth_applications_*`, business applications need `applications_*`, and the logs need `tenant_logs_read` or `security_logs_read`. Application identities need `applications_read` to read, `applications_manage` to provision and change state, and `security_permissions_manage` to grant or revoke permissions.
+- **Hold the permission.** Roles need `security_roles_read`, `security_roles_create`, `security_roles_update`, `security_roles_delete` or `security_roles_manage`, and permissions need the matching `security_permissions_*` permission. OAuth apps need `oauth_applications_*`, business applications need `applications_*`, and the logs need `tenant_logs_read` or `security_logs_read`. Application identities need `applications_read` to read, `applications_manage` to provision and change state, and `security_permissions_manage` to grant or revoke permissions. Managing security roles and permissions is full administrative control of the workspace. Give those permissions only to administrators.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `SecurityService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## ApplicationPrincipals
 
@@ -148,5 +148,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/SecurityService/Webhooks` | `webhook_requests_read` | Workspace member | Get all webhook requests |
 | GET | `/api/v2/SecurityService/Webhooks/Count` | `webhook_requests_read` | Workspace member | Get webhook requests count |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

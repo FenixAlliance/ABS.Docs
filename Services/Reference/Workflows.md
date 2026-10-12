@@ -20,7 +20,7 @@ An AI agent step in a workflow can read your data and answer, but it does not ch
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics. The webhook address takes no token; the delivery signature, or for an unsigned binding the private address, authenticates it.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
-- **Permissions:** `workflows_read` to read workflows and runs, `workflows_create` to create and clone, `workflows_update` to edit a draft, `workflows_manage` to publish and archive, and `workflows_manage_triggers` to read bindings. Starting a run, test runs and changes to bindings are checked against the workflow when you call them.
+- **Permissions:** `workflows_read` to read workflows and runs, `workflows_create` to create and clone, `workflows_update` to edit a draft, `workflows_manage` to publish and archive, and `workflows_manage_triggers` to read bindings. `workflows_execute` to start a run, as yourself or unattended, `workflows_update` to test-run a draft, and `workflows_manage_triggers` to create, change, enable, disable or delete a binding. A binding only fires when the identity it runs as also holds `workflows_execute`; the readiness check tells you if it doesn't.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `WorkflowsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## WorkflowCapabilities
 
@@ -97,5 +97,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | --- | --- | --- | --- | --- |
 | POST | `/api/v2/WorkflowsService/Triggers/Webhooks/{webhookKey}` |  | Public |  |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

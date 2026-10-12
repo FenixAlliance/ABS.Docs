@@ -29,13 +29,13 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `ContentService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## BlogPostAuthors
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/ContentService/BlogPostAuthors` | `portal_posts_read` | Workspace member, Public | Get blog authors |
+| GET | `/api/v2/ContentService/BlogPostAuthors` | `portal_posts_read` | Public, or workspace member with a workspace | Get blog authors |
 | GET | `/api/v2/ContentService/BlogPostAuthors/{authorId}` |  | Public | Get blog author by ID |
 | GET | `/api/v2/ContentService/BlogPostAuthors/{authorId}/BlogPosts` |  | Public | Get blog posts by author |
 | GET | `/api/v2/ContentService/BlogPostAuthors/{authorId}/BlogPosts/Count` |  | Public | Count blog posts by author |
@@ -68,29 +68,29 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/ContentService/BlogPosts` | `portal_posts_read` | Workspace member, Public | Retrieve a list of blog posts |
+| GET | `/api/v2/ContentService/BlogPosts` | `portal_posts_read` | Public, or workspace member with a workspace | Retrieve a list of blog posts |
 | POST | `/api/v2/ContentService/BlogPosts` | `portal_posts_create` | Workspace member | Create a new blog post |
-| GET | `/api/v2/ContentService/BlogPosts/Count` | `portal_posts_read` | Workspace member, Public | Get the count of blog posts |
-| GET | `/api/v2/ContentService/BlogPosts/Public` |  | Public | Gets the publicly-visible blog posts of a portal (anonymous). |
-| GET | `/api/v2/ContentService/BlogPosts/Public/Count` |  | Public | Counts the publicly-visible blog posts of a portal (anonymous). |
-| GET | `/api/v2/ContentService/BlogPosts/Public/{blogPostId}` |  | Public | Gets a single publicly-visible blog post of a portal by id (anonymous). An unpublished or out-of-portal post is not found. |
-| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}` | `portal_posts_read` | Workspace member, Public | Gets a single blog post by its ID |
+| GET | `/api/v2/ContentService/BlogPosts/Count` | `portal_posts_read` | Public, or workspace member with a workspace | Get the count of blog posts |
+| GET | `/api/v2/ContentService/BlogPosts/Public` |  | Public | Get public blog posts |
+| GET | `/api/v2/ContentService/BlogPosts/Public/Count` |  | Public | Count public blog posts |
+| GET | `/api/v2/ContentService/BlogPosts/Public/{blogPostId}` |  | Public | Get public blog post by ID |
+| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}` | `portal_posts_read` | Public, or workspace member with a workspace | Get a blog post by ID |
 | PUT | `/api/v2/ContentService/BlogPosts/{blogPostId}` | `portal_posts_update` | Workspace member | Update a blog post |
 | PATCH | `/api/v2/ContentService/BlogPosts/{blogPostId}` | `portal_posts_update` | Workspace member | Patch a blog post |
 | DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}` | `portal_posts_delete` | Workspace member | Delete a blog post |
-| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories` |  | Public | Get a list of categories related to a specific blog post |
-| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories` | `portal_posts_create` | Workspace member | Create a new category and relate it to a blog post |
+| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories` |  | Public | Get categories for a blog post |
+| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories` | `portal_posts_create` | Workspace member | Create a category for a blog post |
 | POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories/{categoryId}` | `portal_posts_update` | Workspace member | Relate an existing category to a blog post |
-| DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories/{categoryId}` | `portal_posts_delete` | Workspace member | Remove a category relation from a blog post |
-| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments` |  | Public | Get a list of comments for a specific blog post |
-| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments` | `portal_posts_create` | Workspace member | Create a new comment for a blog post |
+| DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}/Categories/{categoryId}` | `portal_posts_delete` | Workspace member | Remove a category from a blog post |
+| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments` |  | Public | Get comments for a blog post |
+| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments` | `portal_posts_create` | Workspace member | Create a comment for a blog post |
 | DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments/{commentId}` | `portal_posts_delete` | Workspace member | Delete a blog post comment |
-| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments/{commentId}/Replies` |  | Public | Get replies for a specific comment |
-| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments/{commentId}/Reply` | `portal_posts_create` | Workspace member | Reply to a comment |
-| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags` |  | Public | Get a list of tags related to a specific blog post |
-| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags` | `portal_posts_create` | Workspace member | Create a new tag and relate it to a blog post |
+| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments/{commentId}/Replies` |  | Public | Get replies for a comment |
+| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Comments/{commentId}/Reply` | `portal_posts_create` | Workspace member | Reply to a blog post comment |
+| GET | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags` |  | Public | Get tags for a blog post |
+| POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags` | `portal_posts_create` | Workspace member | Create a tag for a blog post |
 | POST | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags/{tagId}` | `portal_posts_update` | Workspace member | Relate an existing tag to a blog post |
-| DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags/{tagId}` | `portal_posts_delete` | Workspace member | Remove a tag relation from a blog post |
+| DELETE | `/api/v2/ContentService/BlogPosts/{blogPostId}/Tags/{tagId}` | `portal_posts_delete` | Workspace member | Remove a tag from a blog post |
 
 ## BusinessDomains
 
@@ -130,25 +130,25 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/ContentService/Portals` | `portals_read` | Workspace member | Get all portals for a tenant |
+| GET | `/api/v2/ContentService/Portals` | `portals_read` | Workspace member | Get portals |
 | POST | `/api/v2/ContentService/Portals` | `portals_create` | Workspace member | Create a new web portal |
-| GET | `/api/v2/ContentService/Portals/Count` | `portals_read` | Workspace member | Count portals for a tenant |
+| GET | `/api/v2/ContentService/Portals/Count` | `portals_read` | Workspace member | Count portals |
 | GET | `/api/v2/ContentService/Portals/Current` |  | Public | Get the current portal |
-| GET | `/api/v2/ContentService/Portals/Current/Options` |  | Public | Get the current portal settings |
-| POST | `/api/v2/ContentService/Portals/Initialize` |  | Public | Initialize the current portal for the current user. |
+| GET | `/api/v2/ContentService/Portals/Current/Options` |  | Public | Get the current portal's options |
+| POST | `/api/v2/ContentService/Portals/Initialize` |  | Public | Initialize the current portal |
 | GET | `/api/v2/ContentService/Portals/Root` |  | Public | Get the root portal |
 | GET | `/api/v2/ContentService/Portals/Search` |  | Public | Search for a portal by its domain |
-| GET | `/api/v2/ContentService/Portals/{portalId}` | `portals_read` | Workspace member, Public | Retrieve a single portal by its ID |
+| GET | `/api/v2/ContentService/Portals/{portalId}` | `portals_read` | Public, or workspace member with a workspace | Get a web portal by its ID |
 | PUT | `/api/v2/ContentService/Portals/{portalId}` | `portals_update` | Workspace member | Update an existing web portal |
-| PATCH | `/api/v2/ContentService/Portals/{portalId}` | `portals_update` | Workspace member | Partially updates a web portal |
-| DELETE | `/api/v2/ContentService/Portals/{portalId}` | `portals_delete` | Workspace member | Deletes a web portal by its ID |
-| GET | `/api/v2/ContentService/Portals/{portalId}/DomainBindings` | `portals_read` | Workspace member | Get the BusinessDomains bound to a web portal |
-| POST | `/api/v2/ContentService/Portals/{portalId}/DomainBindings/{businessDomainId}` | `portals_update` | Workspace member | Bind a BusinessDomain to a web portal |
-| DELETE | `/api/v2/ContentService/Portals/{portalId}/DomainBindings/{businessDomainId}` | `portals_update` | Workspace member | Unbind a BusinessDomain from a web portal |
-| GET | `/api/v2/ContentService/Portals/{portalId}/Options` |  | Public | Get a portal's options by its ID |
-| GET | `/api/v2/ContentService/Portals/{portalId}/Settings` |  | Public | Get a portal's settings by its ID |
-| PUT | `/api/v2/ContentService/Portals/{portalId}/Settings` | `portals_update` | Workspace member | Update a web portal's settings (Options) by its ID |
-| GET | `/api/v2/ContentService/Portals/{portalId}/Settings/Full` | `portals_update` | Workspace member | Get a portal's FULL settings (credentials and integration secrets included) for its owning tenant |
+| PATCH | `/api/v2/ContentService/Portals/{portalId}` | `portals_update` | Workspace member | Partially update a web portal |
+| DELETE | `/api/v2/ContentService/Portals/{portalId}` | `portals_delete` | Workspace member | Delete a web portal |
+| GET | `/api/v2/ContentService/Portals/{portalId}/DomainBindings` | `portals_read` | Workspace member | Get a web portal's bound domains |
+| POST | `/api/v2/ContentService/Portals/{portalId}/DomainBindings/{businessDomainId}` | `portals_update` | Workspace member | Bind a domain to a web portal |
+| DELETE | `/api/v2/ContentService/Portals/{portalId}/DomainBindings/{businessDomainId}` | `portals_update` | Workspace member | Unbind a domain from a web portal |
+| GET | `/api/v2/ContentService/Portals/{portalId}/Options` |  | Public | Get a web portal's public options by its ID |
+| GET | `/api/v2/ContentService/Portals/{portalId}/Settings` |  | Public | Get a web portal's public settings by its ID |
+| PUT | `/api/v2/ContentService/Portals/{portalId}/Settings` | `portals_update` | Workspace member | Update a web portal's settings |
+| GET | `/api/v2/ContentService/Portals/{portalId}/Settings/Full` | `portals_update` | Workspace member | Get a web portal's full settings |
 
 ## WebComponents
 
@@ -241,5 +241,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/ContentService/WebsiteThemes/{id}` | `portals_update` | Workspace member | Patch a website theme |
 | DELETE | `/api/v2/ContentService/WebsiteThemes/{id}` | `portals_delete` | Workspace member | Delete a website theme |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

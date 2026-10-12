@@ -8,7 +8,8 @@ The Social service lets people follow each other, post, comment and react, talk 
 
 ## What you can do
 
-- **Read notifications:** list and count the notifications of a social profile, mark one read, and archive or unarchive it. See [Notifications](~/Capabilities/Notifications.md).
+- **Read notifications:** list and count the notifications of a social profile, mark one read, and archive or unarchive it. See [Notifications](~/Capabilities/Notifications.md). Without a workspace, the calls read and change your own personal inbox. With a workspace (`X-TenantId` or `tenantId`), they read and change that workspace's notifications for your profile. Add `archived=true` to the list and count calls to read the Archived view instead of the inbox.
+- **Read workspace bulletins:** a workspace's shared notices are listed in the [Tenants service](Tenants.md) (`/Tenants/{tenantId}/Notifications`, also with `archived=`). Each member reads and archives a bulletin for themselves only.
 - **Follow profiles:** read social profiles, their followers and the profiles they follow, and follow or unfollow a profile.
 - **Post and react:** create posts with attachments and images, comment on them, and react to posts and comments. Read and post in social feeds.
 - **Talk in conversations:** start a conversation or a direct conversation, send, edit and delete messages, and mark a conversation read.
@@ -22,7 +23,7 @@ Who receives a notification is decided by the rules in the [Reach service](Reach
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
 - **Signed-in calls:** posts, feeds, comments, reactions, conversations, follows and your own curriculum need a signed-in user and no workspace permission.
-- **Permissions:** `notifications_create` and `notifications_update` to create a notification or mark it read, and `notifications_read` to archive or unarchive one; `social_groups_create`, `social_groups_update` and `social_groups_delete`; `curriculums_create`, `curriculums_update` and `curriculums_delete` for work experience; `skills_read`, `skills_create`, `skills_update` and `skills_delete`.
+- **Permissions:** in a workspace, `notifications_create` to create a notification, `notifications_update` to mark one read, and `notifications_read` to archive or unarchive one. Calls on your own personal inbox need only a signed-in user. The other permissions are `social_groups_create`, `social_groups_update` and `social_groups_delete`; `curriculums_create`, `curriculums_update` and `curriculums_delete` for work experience; `skills_read`, `skills_create`, `skills_update` and `skills_delete`.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -31,28 +32,28 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `SocialService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## CurriculumExperiences
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences` |  | Workspace member | Get work-experience records for a curriculum |
-| POST | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences` | `curriculums_create` | Workspace member | Create a work-experience record |
-| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/Count` |  | Workspace member | Count work-experience records for a curriculum |
-| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` |  | Workspace member | Get a work-experience record by ID |
-| PUT | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_update` | Workspace member | Update a work-experience record |
-| PATCH | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_update` | Workspace member | Patch a work-experience record |
-| DELETE | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_delete` | Workspace member | Delete a work-experience record |
+| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences` |  | Signed-in user, or workspace member with a workspace | Get curriculum experiences |
+| POST | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences` | `curriculums_create` | Signed-in user, or workspace member with a workspace | Create a curriculum experience |
+| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/Count` |  | Signed-in user, or workspace member with a workspace | Count curriculum experiences |
+| GET | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` |  | Signed-in user, or workspace member with a workspace | Get curriculum experience by ID |
+| PUT | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_update` | Signed-in user, or workspace member with a workspace | Update a curriculum experience |
+| PATCH | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_update` | Signed-in user, or workspace member with a workspace | Patch a curriculum experience |
+| DELETE | `/api/v2/SocialService/Curriculums/{curriculumId}/Experiences/{experienceId}` | `curriculums_delete` | Signed-in user, or workspace member with a workspace | Delete a curriculum experience |
 
 ## Curriculums
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/SocialService/Curriculums` |  | Workspace member | Get curricula authored on a social profile |
+| GET | `/api/v2/SocialService/Curriculums` |  | Signed-in user, or workspace member with a workspace | Get curricula |
 | POST | `/api/v2/SocialService/Curriculums` |  | Signed-in user | Create a curriculum |
-| GET | `/api/v2/SocialService/Curriculums/Count` |  | Workspace member | Count curricula authored on a social profile |
-| GET | `/api/v2/SocialService/Curriculums/{curriculumId}` |  | Workspace member | Get a curriculum by ID |
+| GET | `/api/v2/SocialService/Curriculums/Count` |  | Signed-in user, or workspace member with a workspace | Count curricula |
+| GET | `/api/v2/SocialService/Curriculums/{curriculumId}` |  | Signed-in user, or workspace member with a workspace | Get curriculum by ID |
 | PUT | `/api/v2/SocialService/Curriculums/{curriculumId}` |  | Signed-in user | Update a curriculum |
 | PATCH | `/api/v2/SocialService/Curriculums/{curriculumId}` |  | Signed-in user | Patch a curriculum |
 | DELETE | `/api/v2/SocialService/Curriculums/{curriculumId}` |  | Signed-in user | Delete a curriculum |
@@ -61,10 +62,10 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/SocialService/Skills` | `skills_read` | Workspace member | Get skills (skill catalog) for a tenant |
+| GET | `/api/v2/SocialService/Skills` | `skills_read` | Workspace member | Get skills |
 | POST | `/api/v2/SocialService/Skills` | `skills_create` | Workspace member | Create a skill |
-| GET | `/api/v2/SocialService/Skills/Count` | `skills_read` | Workspace member | Count skills for a tenant |
-| GET | `/api/v2/SocialService/Skills/{skillId}` | `skills_read` | Workspace member | Get a skill by ID |
+| GET | `/api/v2/SocialService/Skills/Count` | `skills_read` | Workspace member | Count skills |
+| GET | `/api/v2/SocialService/Skills/{skillId}` | `skills_read` | Workspace member | Get skill by ID |
 | PUT | `/api/v2/SocialService/Skills/{skillId}` | `skills_update` | Workspace member | Update a skill |
 | PATCH | `/api/v2/SocialService/Skills/{skillId}` | `skills_update` | Workspace member | Patch a skill |
 | DELETE | `/api/v2/SocialService/Skills/{skillId}` | `skills_delete` | Workspace member | Delete a skill |
@@ -88,13 +89,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/SocialService/SocialGroups` |  | Workspace member | Get social groups |
-| POST | `/api/v2/SocialService/SocialGroups` | `social_groups_create` | Workspace member | Create a social group |
-| GET | `/api/v2/SocialService/SocialGroups/Count` |  | Workspace member | Count social groups |
-| GET | `/api/v2/SocialService/SocialGroups/{socialGroupId}` |  | Workspace member | Get social group by ID |
-| PUT | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_update` | Workspace member | Update a social group |
-| PATCH | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_update` | Workspace member | Patch a social group |
-| DELETE | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_delete` | Workspace member | Delete a social group |
+| GET | `/api/v2/SocialService/SocialGroups` |  | Signed-in user, or workspace member with a workspace | Get social groups |
+| POST | `/api/v2/SocialService/SocialGroups` | `social_groups_create` | Signed-in user, or workspace member with a workspace | Create a social group |
+| GET | `/api/v2/SocialService/SocialGroups/Count` |  | Signed-in user, or workspace member with a workspace | Count social groups |
+| GET | `/api/v2/SocialService/SocialGroups/{socialGroupId}` |  | Signed-in user, or workspace member with a workspace | Get social group by ID |
+| PUT | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_update` | Signed-in user, or workspace member with a workspace | Update a social group |
+| PATCH | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_update` | Signed-in user, or workspace member with a workspace | Patch a social group |
+| DELETE | `/api/v2/SocialService/SocialGroups/{socialGroupId}` | `social_groups_delete` | Signed-in user, or workspace member with a workspace | Delete a social group |
 
 ## SocialPosts
 
@@ -137,38 +138,38 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/SocialService/SocialProfiles` |  | Workspace member | Get Social Profiles |
-| GET | `/api/v2/SocialService/SocialProfiles/Count` |  | Workspace member | Count Social Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles` |  | Signed-in user, or workspace member with a workspace | Get Social Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles/Count` |  | Signed-in user, or workspace member with a workspace | Count Social Profiles |
 | GET | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages` |  | Signed-in user | Get Messages |
 | POST | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages` |  | Signed-in user | Create Message |
 | GET | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages/Count` |  | Signed-in user | Count Messages |
 | POST | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages/Read` |  | Signed-in user | Mark Conversation Read |
 | PUT | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages/{messageId}` |  | Signed-in user | Update Message |
 | DELETE | `/api/v2/SocialService/SocialProfiles/{conversationId}/Messages/{messageId}` |  | Signed-in user | Delete Message |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}` |  | Workspace member | Get Social Profile |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}` |  | Signed-in user, or workspace member with a workspace | Get Social Profile |
 | GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Conversations` |  | Signed-in user | Get Conversations |
 | POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Conversations` |  | Signed-in user | Create Conversation |
 | GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Conversations/Count` |  | Signed-in user | Count Conversations |
 | POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Conversations/Direct` |  | Signed-in user | Get or Create Direct Conversation |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers` |  | Workspace member | Get Followers |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Count` |  | Workspace member | Count Followers |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Profiles` |  | Workspace member | Get Follower Profiles |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Profiles/Count` |  | Workspace member | Count Follower Profiles |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows` |  | Workspace member | Get Follows |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Count` |  | Workspace member | Count Follows |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Profiles` |  | Workspace member | Get Followed Profiles |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Profiles/Count` |  | Workspace member | Count Followed Profiles |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/{followedSocialProfileId}` |  | Workspace member | Check if Follow Exists |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers` |  | Signed-in user, or workspace member with a workspace | Get Followers |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Count` |  | Signed-in user, or workspace member with a workspace | Count Followers |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Profiles` |  | Signed-in user, or workspace member with a workspace | Get Follower Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Followers/Profiles/Count` |  | Signed-in user, or workspace member with a workspace | Count Follower Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows` |  | Signed-in user, or workspace member with a workspace | Get Follows |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Count` |  | Signed-in user, or workspace member with a workspace | Count Follows |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Profiles` |  | Signed-in user, or workspace member with a workspace | Get Followed Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/Profiles/Count` |  | Signed-in user, or workspace member with a workspace | Count Followed Profiles |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/{followedSocialProfileId}` |  | Signed-in user, or workspace member with a workspace | Check if Follow Exists |
 | POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/{followedSocialProfileId}` |  | Signed-in user | Follow |
 | DELETE | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Follows/{followedSocialProfileId}` |  | Signed-in user | Unfollow |
 | GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/GroupEnrollments/Count` |  | Signed-in user | Count Group Enrollments |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications` |  | Workspace member | Get Notifications |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications` |  | Signed-in user, or workspace member with a workspace | Get Notifications |
 | POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications` | `notifications_create` | Workspace member | Create Notification |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/Count` |  | Workspace member | Count Notifications |
-| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}` |  | Workspace member | Get Notification |
-| PUT | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}` | `notifications_update` | Workspace member | Mark Notification Read |
-| POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}/Archive` | `notifications_read` | Workspace member | Archive Notification |
-| POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}/Unarchive` | `notifications_read` | Workspace member | Unarchive Notification |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/Count` |  | Signed-in user, or workspace member with a workspace | Count Notifications |
+| GET | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}` |  | Signed-in user, or workspace member with a workspace | Get Notification |
+| PUT | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}` | `notifications_update` | Signed-in user, or workspace member with a workspace | Mark Notification Read |
+| POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}/Archive` | `notifications_read` | Signed-in user, or workspace member with a workspace | Archive Notification |
+| POST | `/api/v2/SocialService/SocialProfiles/{socialProfileId}/Notifications/{notificationId}/Unarchive` | `notifications_read` | Signed-in user, or workspace member with a workspace | Unarchive Notification |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

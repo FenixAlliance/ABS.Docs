@@ -1,6 +1,6 @@
 # Licensing service
 
-The Licensing service lets you read the licenses your workspace holds, define the license types you work with, and see your workspace's usage.
+The Licensing service lets you keep license records, define the license types you work with, and see your workspace's usage against its plan.
 
 **Who uses it:** developers and administrators who track what a workspace is licensed for and how much of it the workspace uses.
 
@@ -8,9 +8,8 @@ The Licensing service lets you read the licenses your workspace holds, define th
 
 ## What you can do
 
-- **Read your licenses:** list and count the licenses your workspace owns, and read one. You can also create, update and delete license records.
-- **Define license types:** keep license types, with the features and attributes each one includes.
-- **Update a licensing certificate:** patch the details of a licensing certificate.
+- **Keep license records:** create, read, update and delete the license records your workspace keeps, with their license types, features and attributes.
+- **Your workspace's own plan license** is read from the Tenants service: `GET /api/v2/TenantsService/Tenants/{tenantId}/Licenses` (see the [Tenants page](Tenants.md)). It is issued when a plan is bought or the Free plan is chosen, and cannot be created or edited through this API.
 - **See your usage:** read your workspace's usage per license: the plan, the current period and, for each licensed allowance, what you have consumed and what happens at the limit.
 - **Read the usage meters:** list every usage meter, with its unit and the licensed allowance it counts against.
 
@@ -27,7 +26,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `LicensingService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## LicenseAttributes
 
@@ -76,12 +75,6 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PUT | `/api/v2/LicensingService/Licenses/{licenseId}` | `licenses_update` | Workspace member | Update a license |
 | DELETE | `/api/v2/LicensingService/Licenses/{licenseId}` | `licenses_delete` | Workspace member | Delete a license |
 
-## LicensingCertificates
-
-| Verb | Path | Permission | Who can call | Summary |
-| --- | --- | --- | --- | --- |
-| PATCH | `/api/v2/LicensingService/LicensingCertificates/{id}` | `licenses_update` | Workspace member | Patch a licensing certificate |
-
 ## Usage
 
 | Verb | Path | Permission | Who can call | Summary |
@@ -89,5 +82,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/LicensingService/Usage` | `licenses_read` | Workspace member | Get the tenant's usage |
 | GET | `/api/v2/LicensingService/Usage/Meters` | `licenses_read` | Workspace member | Get the usage meter registry |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

@@ -18,7 +18,7 @@ The Tenants service lets you create workspaces and manage who belongs to them an
 
 ## Before you call it
 
-- **Sign in.** Sign in with your email address to get a token, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
+- **Sign in.** Sign in with `POST /login` (your email address and password) to get an access token, and renew it with `POST /refresh`, or use the OpenID Connect flows. See [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md) and [REST API development](~/Web-API-Development/REST-API-Development.md).
 - **Name the workspace.** Workspace calls take the workspace from the `X-TenantId` header or the `tenantId` request value. See [Tell us which tenant](~/Web-API-Development/REST-API-Development.md#tell-us-which-tenant). Creating a workspace and answering an invitation need only a signed-in account.
 - **Hold the permission.** Each call needs the permission shown in the table, for example `tenants_read`, `tenants_update`, `tenants_manage`, `enrollments_read`, `departments_create`, `positions_update`, `teams_read`, `territories_read` or `units_create`.
 
@@ -29,7 +29,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `TenantsService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## BusinessRelationships
 
@@ -208,7 +208,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
 | POST | `/api/v2/TenantsService/Tenants` |  | Signed-in user | Create a new business tenant |
-| DELETE | `/api/v2/TenantsService/Tenants` | `tenants_delete` | Workspace member | Delete a business tenant |
+| DELETE | `/api/v2/TenantsService/Tenants` | `tenants_delete` | Workspace member | Delete a tenant |
 | GET | `/api/v2/TenantsService/Tenants/Current` | `tenants_read` | Workspace member | Get the user's current default tenant |
 | POST | `/api/v2/TenantsService/Tenants/Deselect` |  | Signed-in user | Deselect the user's default tenant |
 | GET | `/api/v2/TenantsService/Tenants/Root` |  | Public | Get the root tenant of the platform |
@@ -217,7 +217,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/TenantsService/Tenants/{tenantId}` | `tenants_update` | Workspace member | Patch a tenant's profile |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Avatar` |  |  | Get a tenant's avatar |
 | POST | `/api/v2/TenantsService/Tenants/{tenantId}/Avatar` |  |  | Update a tenant's avatar |
-| GET | `/api/v2/TenantsService/Tenants/{tenantId}/Cart` |  | Workspace member, Public | Get a tenant's default cart |
+| GET | `/api/v2/TenantsService/Tenants/{tenantId}/Cart` |  | Public, or workspace member with a workspace | Get a tenant's default cart |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Enrollments` | `enrollments_read` | Workspace member | Get the list of user enrollments for a tenant |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Enrollments/{enrollmentId}` | `enrollments_read` | Workspace member | Get a specific tenant enrollment |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Enrollments/{enrollmentId}/Extended` | `enrollments_read` | Workspace member | Get a specific tenant enrollment |
@@ -234,7 +234,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Invitations/Redeemed` | `tenants_read` | Workspace member | Get the list of invitations issued by a tenant that have been redeemed |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Invitations/Revoked` | `tenants_read` | Workspace member | Get the list of invitations issued by a tenant that have been revoked |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Licenses` | `licenses_read` | Workspace member | Get the list of licenses available to a tenant |
-| GET | `/api/v2/TenantsService/Tenants/{tenantId}/Notifications` | `notifications_read` | Workspace member | Get the lit of notifications for a tenant |
+| GET | `/api/v2/TenantsService/Tenants/{tenantId}/Notifications` | `notifications_read` | Workspace member | Get the list of notifications for a tenant |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/Notifications/Count` | `notifications_read` | Workspace member | Get the count of notifications for a tenant |
 | POST | `/api/v2/TenantsService/Tenants/{tenantId}/Select` |  | Workspace member | Select a business tenant as the user's default tenant |
 | GET | `/api/v2/TenantsService/Tenants/{tenantId}/SocialProfile` |  | Workspace member | Get a tenant's social profile |
@@ -297,5 +297,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/TenantsService/Units/{tenantUnitId}` | `units_update` | Workspace member | Patch a tenant unit |
 | DELETE | `/api/v2/TenantsService/Units/{tenantUnitId}` | `units_delete` | Workspace member | Delete a tenant unit |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

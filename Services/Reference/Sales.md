@@ -9,6 +9,7 @@ The Sales service lets you manage the stores, sales literature and loyalty progr
 ## What you can do
 
 - **Stores:** list, create, update and delete the store records of your workspace.
+- **Points of sale:** list, create, update and delete the point of sale records of your workspace.
 - **Sales literature:** keep brochures and other sales material in one place, and list it with its extended details.
 - **Loyalty programs:** keep loyalty program records. A record names the program and the price list that goes with it. It does not track points or rewards.
 - Deal units, quotes and orders have their own services. See [Sales Hub](~/Modules/Sales-Hub.md) for how they fit together.
@@ -17,7 +18,7 @@ The Sales service lets you manage the stores, sales literature and loyalty progr
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
-- **Permissions:** each resource has its own read, create, update and delete permission: `stores_*`, `sales_literatures_*` and `loyalty_programs_*` (for example `stores_read`).
+- **Permissions:** each resource has its own read, create, update and delete permission: `stores_*`, `point_of_sales_*`, `sales_literatures_*` and `loyalty_programs_*` (for example `stores_read`).
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -26,7 +27,7 @@ The full request and response schemas are in the API reference of your instance 
 
 Route segment: `SalesService`. Paths are relative to the API host. Workspace endpoints read the workspace from the `tenantId` request value (for example the query string) or the `X-TenantId` header.
 
-Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner).
+Columns: **Permission** is the permission the caller needs (blank when the endpoint declares none). **Who can call**: Workspace member (a member of the workspace, holding the permission when one is listed), Signed-in user (any signed-in user), Public (no sign-in needed), or Checked by the service (the service decides per record, for example a workspace member or an enrolled learner). A row that ends in "or workspace member with a workspace" also works without a workspace; when you send one, the workspace rule and the listed permission apply.
 
 ## LoyaltyPrograms
 
@@ -77,5 +78,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/SalesService/Stores/{storeId}` | `stores_update` | Workspace member | Patch a store |
 | DELETE | `/api/v2/SalesService/Stores/{storeId}` | `stores_delete` | Workspace member | Delete a store |
 
-Generated from the source at commit 3d7372eed2.
+Generated from the source at commit 642fb3c3ad.
 <!-- generated:end -->

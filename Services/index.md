@@ -29,7 +29,6 @@ Every service page starts with what the service is for and what you can do with 
 - [Deals](Reference/Deals.md)
 - [Carts](Reference/Cart.md)
 - [Catalog](Reference/Catalog.md)
-- [Inventory](Reference/Inventory.md)
 - [Logistics](Reference/Logistics.md)
 - [Shipments](Reference/Shipments.md)
 - [Locations](Reference/Locations.md)
