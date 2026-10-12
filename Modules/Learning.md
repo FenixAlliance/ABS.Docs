@@ -39,13 +39,13 @@ See [Students, instructors and enrollments](Learning/Students-and-instructors.md
 
 ### Sell courses
 
-A course is part of your catalog, so you can sell it like any other item. When the buyer pays, they are enrolled in the course. A free course goes through a checkout at no cost. A full refund ends the enrollment.
+A course is part of your catalog, so you can sell it like any other item. When the buyer pays, they are enrolled in the course. A full refund ends the enrollment. To give a learner a course at no cost, enroll them yourself.
 
 See [Sell courses](Learning/Selling-courses.md).
 
 ### Recognize completion
 
-You can design certificate templates for a course and issue completion certificates to your learners. A learner sees their own certificates in Studio, and only the holder of a certificate can read it.
+You can design certificate templates for a course and issue completion certificates to your learners. Learners see only their own certificates in Studio.
 
 ### Keep learners informed
 
@@ -58,7 +58,7 @@ Every enrollment has one of three statuses:
 | Status | What it means |
 |---|---|
 | Active | The learner has access to the course. |
-| Completed | The learner finished the course and keeps access. |
+| Completed | Reserved for course completion, which is planned. Today enrollments are Active or Revoked. |
 | Revoked | Access was withdrawn, for example after a full refund. |
 
 A revoked enrollment is final. If the learner joins the course again, for example by buying it again, they get a new enrollment.

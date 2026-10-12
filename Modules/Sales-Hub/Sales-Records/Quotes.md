@@ -11,9 +11,9 @@ A quote offers your prices to a customer for a set period, and your customer can
 1. **You create the quote**, add its lines and set how long it is valid.
 2. **You send it** by email, or share it.
 3. **Your customer places the order** from the quote while it is open and not expired. The quote becomes **Accepted**, and the order appears in your **Orders** with the next number in your series.
-4. **You close the quote** when it no longer applies. A closed quote cannot be ordered. You can reopen it if you need to.
+4. **You close the quote** when it no longer applies. A closed quote cannot be ordered. You can reopen it to edit it again.
 
-A quote's status is **New**, **Accepted**, **Declined** or **Expired**.
+A quote's status is **Draft**, **New**, **Accepted**, **Declined** or **Expired**. Closing a quote sets its status to **Expired**.
 
 ## Create a quote
 
@@ -27,7 +27,7 @@ A quote's status is **New**, **Accepted**, **Declined** or **Expired**.
 8. Select **Add Line**, choose the **Item** and enter the quantity. Repeat for each item.
 9. Select **Create**.
 
-A new quote is valid for one month by default.
+A new quote is valid for 30 days by default.
 
 ## Set the validity period
 
@@ -53,7 +53,7 @@ On the quote's page you can:
 2. In the actions menu, select **Send Email**.
 3. Check the email preview, enter the recipient's **Email**, and select **Submit**.
 
-The customer receives the quote with a link to view it. Only the people a quote was sent to can view it.
+Your customer opens the quote in their workspace: **Wallet**, then **Quotes**.
 
 To share the quote another way, select **Share Quote**. You can share its link or create a QR code for it.
 
@@ -75,7 +75,7 @@ The order cannot be placed when the quote is closed, has expired, or was already
 1. Open the quote.
 2. In the actions menu, select **Close Quote** and confirm with **Close**.
 
-A closed quote cannot be changed or ordered. To reopen it, select **Reopen Quote**.
+A closed quote cannot be changed or ordered. To edit a closed quote again, select **Reopen Quote**.
 
 ## Delete a quote
 

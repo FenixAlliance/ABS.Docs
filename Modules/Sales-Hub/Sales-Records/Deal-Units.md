@@ -48,7 +48,7 @@ The platform records the outcome and the date it was won or lost. A closed deal 
 1. Open the deal unit.
 2. In the actions menu, select **Delete Deal Unit** and confirm.
 
-You cannot delete a deal unit that has orders, invoices, payments, shipments or other related records. Deleting cannot be undone.
+A deal unit that other records depend on may not be deletable. Deleting cannot be undone.
 
 ## Related pages
 

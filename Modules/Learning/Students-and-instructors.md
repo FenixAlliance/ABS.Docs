@@ -50,7 +50,7 @@ Every enrollment has a status:
 | Status | What it means |
 |---|---|
 | Active | The learner has access to the course. New enrollments start as active. |
-| Completed | The learner finished the course and keeps access. |
+| Completed | Reserved for course completion, which is planned. Today enrollments are Active or Revoked. |
 | Revoked | Access was withdrawn, for example after a full refund. |
 
 A revoked enrollment is final. It is never reactivated. If the learner joins the course again, they get a new enrollment.
@@ -62,7 +62,7 @@ A revoked enrollment is final. It is never reactivated. If the learner joins the
 3. Choose the **Student Profile**, the **Enrollment** and the **Certificate Template**.
 4. Select **Create**.
 
-A certificate stays valid after a refund. Only the person who holds a certificate can read it.
+A certificate stays valid after a refund. Learners see only their own certificates; staff with the course permissions see all of them.
 
 ## What learners see
 

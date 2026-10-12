@@ -4,7 +4,7 @@ Payments record the money your customers pay against your invoices, collected th
 
 **Who it is for:** billing administrators who collect payment for invoices and finance teams who follow up on what has been paid.
 
-**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Payments**. Generating a payment link needs permission to manage payments. Connecting a payment provider is done from your workspace's **Integrations**.
+**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Payments**. Payment links are created from **Wallet** > **Invoices**. Generating a payment link needs permission to manage payments. Connecting a payment provider is done from your workspace's **Integrations**.
 
 ## Payment providers you can connect
 
@@ -17,7 +17,9 @@ You can connect these providers:
 - PayU
 - ePayco
 
-To connect one, open your workspace's **Integrations** in Studio, open the provider and enter the credentials from your provider account.
+To connect one, enter your provider credentials on the provider's page under your workspace's **Integrations** in Studio. Then create the payment connection through the API (see [For developers](#for-developers)). It sets test or live mode and returns your notification URL once; add that URL in your provider's dashboard. Use the same mode on the provider's Integrations page and on the connection.
+
+For Mercado Pago, whether checkout runs in Mercado Pago's sandbox follows the production switch on its Integrations page.
 
 Each connection works in either a test environment or a live environment. Use test mode to try the full checkout with your provider's test credentials. A test payment runs end to end but never marks an invoice as paid. Only a live payment does.
 
@@ -25,12 +27,12 @@ For how connections, credentials and provider notifications work, see [Integrati
 
 ## Collect payment for an invoice
 
-1. Open the invoice from **Invoices**. The invoice must have a balance due and must not be paid, closed or on hold.
-2. In the actions menu, select **Generate Payment Link**.
+1. Open the invoice from **Wallet** > **Invoices**. The invoice must have a balance due and must not be paid, closed or on hold.
+2. Select **Payment link**.
 3. Copy the link with the copy button. The dialog shows the link only once, together with its expiry date when it has one. Anyone with the link can pay the invoice.
 4. Send the link to your customer.
 
-To create another link later, select **Generate Payment Link** again. Each time you select it, a new link is created.
+To create another link later, select **Payment link** again. Each time you select it, a new link is created. Earlier links stay usable until they expire. A link cannot be revoked yet.
 
 ## What your customer sees
 
@@ -44,6 +46,7 @@ If no payment method is available for the invoice yet, the payment page says so.
 ## When a payment arrives
 
 - A live payment that completes is recorded against the invoice and marks the invoice as paid.
+- Recording a payment you received outside the payment checkout, such as cash or a bank transfer, against an invoice is not available yet. A payment you create by hand does not mark the invoice as paid.
 - The platform confirms each provider notification before it changes any payment, and applies each payment once, even if the provider sends the same notification several times.
 - When **Post journal entries automatically** is turned on in your Accounting settings, the platform posts the payment's journal entry. See [Accounting](~/Modules/Accounting.md).
 
@@ -62,6 +65,6 @@ You can also see the payments for one invoice through the API.
 
 - Payments are available under `/api/v2/PaymentsService/Payments`, and an invoice's payments under `/api/v2/InvoicingService/Invoices/{invoiceId}/Payments`.
 - Payment provider connections are managed under `/api/v2/PaymentsService/PaymentProviderRegistrations`, including setting the environment, updating the credential and rotating the notification key.
-- A refund is requested with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`.
+- A refund is requested with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`. Refunds are available for Stripe, Mercado Pago and ePayco. PayU refunds are not available yet. Refunds are available through the API only; Studio has no refund action.
 - An operation whose outcome the provider has not confirmed is listed by `GET /api/v2/PaymentsService/ProviderOperations/AwaitingOutcome`, and reconciled with `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/ReconcileOutcome`.
 - A payment link is created with `POST /api/v2/PaymentsService/PublicPaymentLinks`, which needs permission to manage payments. The payment page for a link is `/Payments/{token}`. The token is part of the link and is shown only when the link is created.

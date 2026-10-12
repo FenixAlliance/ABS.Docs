@@ -4,7 +4,7 @@ Sell a course like any other item in your catalog, and let the purchase enroll t
 
 ## Who it is for
 
-Businesses that charge for their courses, or that offer free courses through the same checkout.
+Businesses that charge for their courses.
 
 ## Availability
 
@@ -24,11 +24,11 @@ Each course on the invoice creates one enrollment. If the buyer already has acce
 
 ## Free courses
 
-A course with a price of zero is free. A free course still goes through a checkout, at no cost. When that checkout completes, the buyer is enrolled in the same way as for a paid course.
+To give a learner a course at no cost, enroll them yourself. See [Students and instructors](Students-and-instructors.md).
 
 ## Prices
 
-You set a course's regular price, and its currency, through the Learning service of the REST API (`/api/v2/LearningService/Courses`). A course you create in Studio starts without a price, so it is free until you set one.
+You set a course's regular price, and its currency, through the Learning service of the REST API (`/api/v2/LearningService/Courses`). A course you create in Studio starts with no price; set one before you sell it.
 
 ## Refunds
 

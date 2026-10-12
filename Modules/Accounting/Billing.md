@@ -12,7 +12,7 @@ The **Billing Dashboard** and the Accounting side menu give you these areas:
 
 | Area | What you do there |
 |------|-------------------|
-| **Invoices** | Create invoices, add lines and taxes, preview, email and share a payment link. See [Invoices](Billing/Billing-Records/Invoices.md). |
+| **Invoices** | Create invoices, add lines and taxes, and preview or email closed invoices. Payment links are created from **Wallet** > **Invoices**. See [Invoices](Billing/Billing-Records/Invoices.md). |
 | **Credit Notes** and **Debit Notes** | Reduce or increase what is owed on an issued invoice. See [Credit and debit notes](Billing/Credit-and-Debit-Notes.md). |
 | **Payments** | Review the payments recorded against your invoices, including those collected through your payment provider. See [Payments](Billing/Billing-Records/Payments.md). |
 | **Receipts** | Review receipt records. See [Receipts](Billing/Billing-Records/Receipts.md). |
@@ -25,7 +25,7 @@ Orders are managed in Sales Hub. See [Orders](~/Modules/Sales-Hub/Sales-Records/
 
 1. **You create an invoice** in Studio or through the API, or a buyer's checkout creates one for an order. A new invoice starts as a draft that you can still edit.
 2. **The invoice is issued.** Issuing gives the invoice its number from your active range, if you use ranges, and makes it a payable amount. From then on its amounts cannot change.
-3. **You share it.** You can preview the invoice, send it by email and generate a payment link for it.
+3. **You share it.** You create a payment link for the invoice from **Wallet** > **Invoices** and send it to your customer. Preview and email in Accounting are available on closed invoices only.
 4. **Your customer pays** on your payment provider's own checkout. A live payment marks the invoice as paid.
 5. **You correct it if needed.** An issued invoice is never re-priced. You issue a credit note to reduce what is owed or a debit note to increase it.
 6. **Your books follow.** When **Post journal entries automatically** is turned on in the Accounting settings, the platform posts the journal entry when an invoice is issued, reduced by a credit note or paid. When it is off, nothing posts automatically. See [Accounting](~/Modules/Accounting.md).

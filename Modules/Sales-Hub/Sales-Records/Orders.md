@@ -8,8 +8,9 @@ An order records a confirmed sale: what your customer is buying, where it ships,
 
 ## How orders are created
 
-An order reaches your **Orders** in one of two ways:
+An order reaches your **Orders** in one of three ways:
 
+- **Your customer checks out a cart** from your store or the marketplace.
 - **Your customer places it from a quote** you sent them. See [Quotes](Quotes.md).
 - **You create it yourself** in Sales Hub.
 
@@ -68,7 +69,7 @@ You collect payment for an order through an invoice.
 
 1. Open the order and go to the **Invoices** tab.
 2. Select **Add** and complete the invoice. It is linked to the order.
-3. On the invoice, generate its payment link and send it to your customer.
+3. Open the invoice from **Wallet** > **Invoices**, select **Payment link** and send the link to your customer.
 4. Your customer pays on the invoice's payment checkout, with any payment method your workspace accepts.
 
 See [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md) for the full steps.
@@ -83,11 +84,11 @@ See [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md) for the
 1. Open the order.
 2. In the actions menu, select **Close Order** and confirm with **Close**.
 
-Closing an order marks it as final so no further changes are made to it. Only an administrator can reverse it.
+Closing is final: a closed order cannot be changed or reopened.
 
 ## Delete an order
 
-In the actions menu, select **Delete Order** and confirm. The order's lines are deleted with it. You cannot delete an order that has invoices, payments, shipments or other related records. Deleting cannot be undone.
+In the actions menu, select **Delete Order** and confirm. The order's lines are deleted with it. An order that other records depend on may not be deletable. Deleting cannot be undone.
 
 ## Related pages
 

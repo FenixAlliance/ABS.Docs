@@ -55,13 +55,11 @@ A refused issue uses no number, so your numbering has no gaps. See [Invoice-numb
 
 ## Share an invoice and get paid
 
-The actions menu on the invoice's details page offers:
-
-- **Preview**, to see the invoice as your customer sees it.
-- **Send Email**, to preview the invoice email and send it to an address you enter.
-- **Generate Payment Link**, for users who can manage payments, to create a link your customer uses to pay on your payment provider's checkout.
+To get paid, open the invoice from **Wallet** > **Invoices** and select **Payment link**. The button shows on any unpaid invoice. It creates a link your customer uses to pay on your payment provider's checkout.
 
 Your customer can pay through the link while the invoice has a balance due and is not paid, closed or on hold. See [Payments](Payments.md) for how the payment link and checkout work.
+
+In **Accounting** > **Billing** > **Invoices**, the actions menu offers **Preview** (to see the invoice as your customer sees it) and **Send Email** (to send it to an address you enter) on closed invoices only.
 
 A closed invoice allows no further changes, cannot be deleted, cannot be paid through a payment link and cannot take a credit or debit note.
 

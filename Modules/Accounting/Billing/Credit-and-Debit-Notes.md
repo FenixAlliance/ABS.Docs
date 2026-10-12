@@ -45,7 +45,7 @@ A debit note has no upper limit. It raises the invoice's creditable amount by th
 ## What a note changes
 
 - **What the customer owes.** A credit note lowers the amount outstanding on the invoice and a debit note raises it.
-- **Your books.** When **Post journal entries automatically** is turned on in your Accounting settings, the platform posts the note's journal entry once the note is issued. When it is off, nothing posts automatically. See [Accounting](~/Modules/Accounting.md).
+- **Your books.** When **Post journal entries automatically** is turned on in your Accounting settings, the platform posts the note's journal entry once the note is issued. A credit note's entry posts only after the original invoice's own entry is in your books, so a note against an invoice that was issued while the setting was off is not posted automatically. When the setting is off, nothing posts automatically. See [Accounting](~/Modules/Accounting.md).
 - **The original invoice.** The invoice itself does not change. The note keeps the reason and a reference to the invoice it adjusts.
 
 ## Numbering notes
