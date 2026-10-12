@@ -50,16 +50,18 @@ A role is usually the better choice: you maintain the set of permissions once, i
 
 ## Rules that protect access
 
-- **You cannot grant built-in access to yourself.** No one can grant a built-in role or permission to their own membership. Another administrator must do it.
+- **You cannot grant built-in access to yourself.** No one can grant a built-in role or permission to their own membership. Another administrator must do it. Managing security roles and permissions is full administrative control of the workspace. Give it only to the people you trust as administrators.
 - **Built-in roles stay as they are.** You grant built-in roles, but you cannot change which permissions they contain.
 - **Every change is recorded.** Each role or permission granted to or revoked from a member is written to the workspace's **Security Logs**, with who made the change and when.
 - **A disabled membership cannot act.** The **User Enrollments** list shows which memberships are the owner, an administrator or disabled. A disabled membership keeps its history but cannot act in the workspace.
 
 ## Positions
 
-Positions describe your organization chart. In Studio they are under your workspace's **Organization** > **Positions**.
+Positions describe your organization chart. In Studio, your workspace's **Organization** > **Positions** lists them. You manage who holds a position through the HR API.
 
-- A position belongs to a department and has a capacity, the number of people who can hold it at the same time.
+- A position can belong to a department, which is optional and can be changed later.
+- A position has a capacity, the number of people who can hold it at the same time. The capacity is at least 1, and it cannot be lowered below the number of seats currently held.
+- A person holds at most one seat on the same position, and a new assignment is refused when every seat is filled.
 - Each assignment records when it starts and ends, and ended assignments are kept as history.
 - A position cannot be deleted while someone holds it.
 

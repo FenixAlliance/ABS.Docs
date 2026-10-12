@@ -23,9 +23,10 @@ The implicit flow is not offered. The authorization endpoint also accepts the hy
 
 ### Rules every client follows
 
-- **PKCE uses S256 only.** The `plain` method is refused. Public clients, such as mobile and single-page apps, must use PKCE.
+- **Always use PKCE, with S256.** The `plain` method is refused. Your administrator can require PKCE for every app or for your app's registration.
 - **Sign-in controls always apply.** The person signs in on the platform's own sign-in page, so two-factor authentication, lockout and external providers work as they do in Studio.
 - **Two-factor accounts need a browser flow.** The password grant has no second-factor step, so it refuses every account with two-factor authentication on, with the same error a wrong password gives. Use the authorization code flow instead.
+- **Prefer the authorization code flow for new apps.** The password grant also exists for accounts without two-factor authentication, but use the authorization code flow for any new app.
 
 ### Machine-to-machine sign-in
 
@@ -79,7 +80,7 @@ To end access early, revoke the refresh token at the revocation endpoint. A revo
 
 ## Register an app
 
-A workspace administrator registers your app in Studio, in the workspace's Security module, under its OAuth applications. Registration records:
+A workspace administrator registers your app in Studio, under the workspace's **Security** > **OAuth Apps**. Registration records:
 
 - the **Client ID** that identifies your app, and a **Client Secret** for apps that can keep one confidential;
 - the **Redirect Uris** the authorization server may send the person back to;

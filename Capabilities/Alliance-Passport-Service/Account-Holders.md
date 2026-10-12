@@ -38,13 +38,17 @@ By default, you confirm your email address before your first sign-in.
 
 These controls apply to every way of signing in, including apps that sign you in through the platform.
 
-- **Two-factor authentication.** When you turn on [two-factor authentication](Account-Holders/Multi%252Dfactor-Authentication.md), a correct password is never enough on its own. Every sign-in also needs a code from your authenticator app or one of your single-use recovery codes.
+- **Two-factor authentication.** When you turn on [two-factor authentication](Account-Holders/Multi%252Dfactor-Authentication.md), a correct password is never enough on its own. Every sign-in also needs a code from your authenticator app or one of your single-use recovery codes, unless you chose to remember this device when you last entered a code.
 - **Lockout.** Repeated failed sign-in attempts lock the account. The sign-in page then shows **Account temporarily locked**, and you can try again after a few minutes.
 - **No account hints.** A wrong email address and a wrong password produce the same message, so the sign-in page never reveals whether an account exists.
 
 ## Sign in with a link sent to your email
 
-If your instance administrator turns it on, the sign-in page shows **Email me a sign-in link**. The link signs you in once and expires after a short time. If your account has two-factor authentication on, you still enter your authenticator code after you open the link.
+If your instance administrator turns it on, the sign-in page shows **Email me a sign-in link**. The link signs you in once and expires after a short time. The link is refused for an account that is locked or whose email address is not confirmed. If your account has two-factor authentication on, you still enter your authenticator code after you open the link, unless you chose to remember this device when you last entered a code.
+
+## Sign in with a passkey
+
+If your instance administrator turns it on, you can sign in with a passkey and manage your passkeys in your account settings. Two-factor authentication still applies when you sign in with a passkey.
 
 ## Sign in with an external provider
 
@@ -62,6 +66,7 @@ Your account settings let you:
 - change or reset your password;
 - turn two-factor authentication on or off and generate new recovery codes;
 - add or remove external sign-ins;
+- manage your passkeys, if your instance administrator turned them on;
 - sign out.
 
 If you forget your password, see [Password recovery](Account-Holders/Password-Recovery.md).

@@ -26,7 +26,7 @@ Every workspace has a currency, and its carts and documents use it. The workspac
 
 1. the currency you choose when you create it;
 2. otherwise, the currency of the country you choose, when that country has exactly one currency;
-3. otherwise, the default currency of your instance.
+3. otherwise, the currency of your instance's main workspace.
 
 If none of these gives a currency, the workspace is not created and you are asked to choose one.
 

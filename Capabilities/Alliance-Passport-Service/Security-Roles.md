@@ -60,6 +60,8 @@ You grant roles from the member's membership page. See [Grant roles and permissi
 
 No one can grant a built-in role to their own membership. Every grant and revocation is recorded in the workspace's **Security Logs**.
 
+Managing security roles and permissions is full administrative control of the workspace. Give it only to the people you trust as administrators.
+
 ## Related
 
 - [Business permissions](Business-Permissions.md)

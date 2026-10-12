@@ -47,6 +47,8 @@ When one member needs an exception, grant the permission directly:
 
 No one can grant a built-in permission to their own membership. Every grant and revocation is recorded in the workspace's **Security Logs**.
 
+Managing security roles and permissions is full administrative control of the workspace. Give it only to the people you trust as administrators.
+
 ## Built-in and custom permissions
 
 Built-in permissions are marked as system permissions. Every feature of the platform checks built-in permissions, and they cannot be changed.

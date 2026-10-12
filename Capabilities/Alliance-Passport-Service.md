@@ -42,7 +42,7 @@ See [Account holders](Alliance-Passport-Service/Account-Holders.md) for the full
 
 Automated work that runs inside your workspace, such as connectors and unattended workflow steps, acts under an application identity. An application identity has its own membership, roles and permissions, so it can do only what you grant it. It can never sign in to Studio or to a sign-in page.
 
-Administrators manage application identities in Studio, in the workspace's IAM module, under **Application Principals**. Which modules your workspace can use depends on your plan. You can suspend an identity to pause the work that depends on it, reinstate it, or disable it to retire it.
+Administrators manage application identities in Studio, in the workspace's IAM module, under **Application Principals**. Which modules your workspace can use depends on your plan. There you provision an identity and grant it access. You can suspend an identity to pause the work that depends on it, reinstate it, or disable it to retire it.
 
 ## Connecting apps
 
