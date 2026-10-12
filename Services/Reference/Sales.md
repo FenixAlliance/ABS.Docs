@@ -78,5 +78,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/SalesService/Stores/{storeId}` | `stores_update` | Workspace member | Patch a store |
 | DELETE | `/api/v2/SalesService/Stores/{storeId}` | `stores_delete` | Workspace member | Delete a store |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

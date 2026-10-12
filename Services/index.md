@@ -15,6 +15,7 @@ Every service page starts with what the service is for and what you can do with 
 - [Accounting](Reference/Accounting.md)
 - [Invoicing](Reference/Invoicing.md)
 - [Payments](Reference/Payments.md)
+- [Wallets](Reference/Wallets.md)
 - [Pricing](Reference/Pricing.md)
 - [Currencies and exchange rates](Reference/Forex.md)
 - [Subscriptions](Reference/Subscriptions.md)

@@ -114,5 +114,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/ProjectsService/TimeLogs/{timeLogId}` | `time_logs_update` | Workspace member | Patch a project time log |
 | DELETE | `/api/v2/ProjectsService/TimeLogs/{timeLogId}` | `time_logs_delete` | Workspace member | Delete a project time log |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

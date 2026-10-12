@@ -63,5 +63,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | DELETE | `/api/v2/OrdersService/Orders/{orderId}/Lines/{orderLineId}` | `orders_update` | Workspace member | Deletes an order line. |
 | PUT | `/api/v2/OrdersService/Orders/{orderId}/Lines/{orderLineId}/Calculate` | `orders_update` | Workspace member | Calculates totals for an order line. |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

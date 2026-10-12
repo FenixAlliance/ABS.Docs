@@ -96,5 +96,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/SystemService/Tenants/{tenantId}/Emails/Preview` | `email_send` | Workspace member | Preview the rendered email for a tenant. |
 | POST | `/api/v2/SystemService/Tenants/{tenantId}/Emails/Send` | `email_send` | Workspace member | Send an email to a tenant. |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

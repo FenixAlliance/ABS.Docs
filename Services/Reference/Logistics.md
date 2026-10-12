@@ -309,5 +309,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/LogisticsService/Warehouses/{warehouseId}` | `warehouses_update` | Workspace member | Patch a warehouse |
 | DELETE | `/api/v2/LogisticsService/Warehouses/{warehouseId}` | `warehouses_delete` | Workspace member | Delete a warehouse |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

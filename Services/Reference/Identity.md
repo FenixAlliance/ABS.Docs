@@ -63,5 +63,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/connect/userinfo` |  |  |  |
 | POST | `/connect/userinfo` |  |  |  |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

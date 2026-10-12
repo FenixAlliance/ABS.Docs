@@ -14,7 +14,7 @@ The Payments service lets you connect your payment provider account, get paid fo
 - **Get paid for an invoice:** create a payment link for one of your invoices, or a payment reference you can print on a document. The payer enters card details on the provider's own checkout. See [Payments](~/Modules/Accounting/Billing/Billing-Records/Payments.md).
 - **Refund a payment:** return a completed payment through the provider that collected it. Each refund request is sent once. Refunds are available for Stripe and Mercado Pago.
 - **Reconcile outcomes:** list the provider operations whose outcome is not yet confirmed, and ask the provider what became of one.
-- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms. A payment you create here is a record. It does not mark an invoice as paid.
+- **Keep payment records:** create, read, update and delete payments, payment methods, payment modes and payment terms. A payment you create here is a record. It does not mark an invoice as paid, and its status is set by the platform, not by the request. A payment can reference only invoices and wallets you own.
 
 ## Before you call it
 
@@ -119,5 +119,5 @@ These endpoints are still served but are retired. Do not build new integrations 
 | --- | --- | --- | --- |
 | Payments | GET | `/api/v2/PaymentsService/Payments/{paymentId}/Details` | [Obsolete]: {paymentId}/Details is a deprecated way to access an endpoint, use GET {paymentId} instead |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

@@ -74,5 +74,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/GlobeService/Timezones/Count` |  | Public | Count timezones |
 | GET | `/api/v2/GlobeService/Timezones/{*timeZoneId}` |  | Public | Get timezone by ID |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

@@ -148,5 +148,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/SecurityService/Webhooks` | `webhook_requests_read` | Workspace member | Get all webhook requests |
 | GET | `/api/v2/SecurityService/Webhooks/Count` | `webhook_requests_read` | Workspace member | Get webhook requests count |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

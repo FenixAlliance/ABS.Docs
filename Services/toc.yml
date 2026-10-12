@@ -10,6 +10,8 @@
       href: Reference/Invoicing.md
     - name: "Payments"
       href: Reference/Payments.md
+    - name: "Wallets"
+      href: Reference/Wallets.md
     - name: "Pricing"
       href: Reference/Pricing.md
     - name: "Currencies and exchange rates"

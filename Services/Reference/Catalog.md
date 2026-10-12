@@ -320,5 +320,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/CatalogService/Merchants/Count` |  | Public | Count merchants |
 | GET | `/api/v2/CatalogService/Merchants/{merchantId}` |  | Public | Get merchant by ID |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

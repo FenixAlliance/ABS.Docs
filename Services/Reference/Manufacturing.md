@@ -75,5 +75,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/ManufacturingService/Workstations/{id}` | `workstations_update` | Workspace member | Patch a workstation |
 | DELETE | `/api/v2/ManufacturingService/Workstations/{id}` | `workstations_delete` | Workspace member | Delete a workstation |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

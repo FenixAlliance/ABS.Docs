@@ -87,5 +87,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/Me/Tenants/Extended` |  | Signed-in user | Get the tenants that the current user is enrolled in |
 | GET | `/api/v2/Me/Wallet` |  | Signed-in user | Get the current user's billing profile |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

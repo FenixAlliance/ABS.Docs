@@ -163,5 +163,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/TrustService/SigningRequests/{id}/send` | `signed_documents_update` | Workspace member | Send a signing request |
 | POST | `/api/v2/TrustService/SigningRequests/{id}/void` | `signed_documents_update` | Workspace member | Void a signing request |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

@@ -46,5 +46,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/LocationsService/Locations/{locationId}` | `locations_update` | Workspace member | Patch a location |
 | DELETE | `/api/v2/LocationsService/Locations/{locationId}` | `locations_delete` | Workspace member | Delete Location |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

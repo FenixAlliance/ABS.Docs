@@ -191,5 +191,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/IntelligenceService/DefinitionDistribution/Update` | `bots_update` | Workspace member | Update an installed repository-backed definition |
 | POST | `/api/v2/IntelligenceService/DefinitionDistribution/Validate` | `bots_read` | Workspace member | Validate a repository-backed definition |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

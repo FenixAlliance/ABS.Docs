@@ -221,5 +221,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/SupportService/WarrantyRequests/{warrantyRequestId}` | `warranty_requests_update` | Workspace member | Patch a warranty request |
 | DELETE | `/api/v2/SupportService/WarrantyRequests/{warrantyRequestId}` | `warranty_requests_delete` | Workspace member | Delete a warranty request |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

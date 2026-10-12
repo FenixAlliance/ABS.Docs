@@ -109,5 +109,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/ReachService/Suppressions` | `notifications_manage` | Workspace member | Suppresses an address |
 | GET | `/api/v2/ReachService/Suppressions/Count` | `notifications_read` | Workspace member | Gets the current tenant Reach suppression count |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

@@ -41,5 +41,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | --- | --- | --- | --- | --- |
 | POST | `/api/v2/AnalyticsService/Queries/Execute` | Depends on the dataset | Workspace member | Execute a governed analytics query |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

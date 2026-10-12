@@ -411,5 +411,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member |  |
 | DELETE | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_delete` | Workspace member |  |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

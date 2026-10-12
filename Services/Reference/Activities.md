@@ -52,5 +52,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_update` | Workspace member | Patch Activity Type |
 | DELETE | `/api/v2/ActivitiesService/ActivityTypes/{activityTypeId}` | `activities_delete` | Workspace member | Delete Activity Type |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

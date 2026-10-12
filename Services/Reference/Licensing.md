@@ -82,5 +82,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/LicensingService/Usage` | `licenses_read` | Workspace member | Get the tenant's usage |
 | GET | `/api/v2/LicensingService/Usage/Meters` | `licenses_read` | Workspace member | Get the usage meter registry |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

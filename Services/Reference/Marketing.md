@@ -215,5 +215,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/MarketingService/SocialPostBuckets/{socialpostbucketId}` | `social_posts_update` | Workspace member | Patch a social post bucket |
 | DELETE | `/api/v2/MarketingService/SocialPostBuckets/{socialpostbucketId}` | `social_posts_delete` | Workspace member | Delete a social post bucket |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

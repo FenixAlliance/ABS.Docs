@@ -41,5 +41,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/ApprovalsService/{ticketId}/Decide` | `approvals_decide` | Workspace member | Record a decision on a pending approval |
 | POST | `/api/v2/ApprovalsService/{ticketId}/Reassign` | `approvals_manage` | Workspace member | Reassign a pending approval to a different approver |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

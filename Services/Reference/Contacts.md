@@ -164,5 +164,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/CrmService/Sync/Tenant` | `contacts_manage` | Workspace member | Sync a tenant into another tenant's contact list |
 | POST | `/api/v2/CrmService/Sync/User` | `contacts_manage` | Workspace member | Sync a user into a tenant's contact list |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

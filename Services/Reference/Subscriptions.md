@@ -72,5 +72,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/SubscriptionsService/Subscriptions/{subscriptionId}` | `subscriptions_update` | Workspace member | Patch a subscription |
 | DELETE | `/api/v2/SubscriptionsService/Subscriptions/{subscriptionId}` | `subscriptions_delete` | Workspace member | Delete a subscription |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

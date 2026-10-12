@@ -9,10 +9,11 @@ The Wallets service lets you read a wallet and the business records that flow th
 ## What you can do
 
 - **Read a wallet:** get a wallet's details, including its balance.
-- **Follow commercial activity:** list and count a wallet's orders, quotes and invoices, with incoming and outgoing invoices listed separately. Orders, invoices, payments and quotes read through a wallet are shown only to the wallet's owner.
-- **Follow money movements:** list and count a wallet's payments, incoming and outgoing, its refunds and its chargebacks, and record a payment on the wallet.
+- **Follow commercial activity:** list and count a wallet's orders, quotes and invoices, with incoming and outgoing invoices listed separately.
+- **Follow money movements:** list and count a wallet's payments, incoming and outgoing, its refunds and its chargebacks, and record a payment on the wallet. A payment recorded on a wallet is sent from that wallet, and its status is set by the platform, not by the request.
 - **Request a withdrawal:** create a withdrawal request, and list and count a wallet's withdrawal requests and withdrawals.
 - **Keep wallet details:** manage a wallet's bank accounts, locations and payment tokens.
+- **Only your own wallets:** everything read through a wallet, including its balance, is shown only to the wallet's owner.
 - **Read your Ether balance:** as a signed-in user, read the Ether balance of your own wallet.
 
 ## Before you call it
@@ -89,5 +90,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws` | `wallets_create` | Signed-in user, or workspace member with a workspace | Create Wallet Withdraw Request |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws/Count` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Withdraws Count |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

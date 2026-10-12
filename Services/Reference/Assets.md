@@ -111,5 +111,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/AssetsService/Assets/{assetId}/ValueAmends/{amendId}` | `assets_update` | Workspace member | Partially updates a value amendment for an asset |
 | DELETE | `/api/v2/AssetsService/Assets/{assetId}/ValueAmends/{amendId}` | `assets_delete` | Workspace member | Deletes a value amendment for an asset |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

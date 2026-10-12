@@ -11,7 +11,7 @@ The Content service lets you build and run your workspace's websites: portals, p
 - **Manage portals:** create and update portals and their settings. See [Portals](~/Capabilities/Alliance-Business-Studio/Portals.md) and [CMS](~/Modules/CMS.md).
 - **Connect your own domain:** register a domain, verify it, and bind it to a portal.
 - **Publish pages:** create, update and delete web pages, and organize them with categories and tags.
-- **Run a blog:** write blog posts, organize them with categories and tags, and manage comments and replies.
+- **Run a blog:** write blog posts, organize them with categories and tags, and manage comments and replies. A post belongs to one of your workspace's portals, named by its `WebPortalId`, and a post that names another workspace's portal is refused. Only published posts appear in a portal's public reads. The post body, written as rich text, Markup or Markdown, is stored as sanitized HTML.
 - **Shape the site:** maintain web templates, web components, web contents, website themes, menus and localization strings.
 - **Read a site without sign-in:** read the current portal and its settings, find a portal by its domain, and read published blog posts with their authors, categories, tags and comments.
 
@@ -20,7 +20,7 @@ The Content service lets you build and run your workspace's websites: portals, p
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
 - **Permissions:** `portals_read`, `portals_create`, `portals_update` and `portals_delete` for portals, templates, components, themes, menus and localization strings; `portal_pages_read`, `portal_pages_create`, `portal_pages_update` and `portal_pages_delete` for pages; `portal_posts_read`, `portal_posts_create`, `portal_posts_update` and `portal_posts_delete` for blog posts and web contents; `business_domains_read`, `business_domains_create`, `business_domains_update` and `business_domains_delete` for domains.
-- **Code pages:** pages, posts, templates, components and contents in Razor, C# or CSHtml are available only in workspaces an instance administrator enables, and only their owners and administrators can create or change them. Everywhere else, set the content type to HTML, Markdown or Markup. A content type left empty counts as code.
+- **Code pages:** pages, posts, templates, components and contents in Razor, C# or CSHtml are available only in workspaces an instance administrator enables, and only their owners and administrators can create or change them. Everywhere else, set the content type to HTML, Markdown or Markup. A content type left empty counts as code. In other workspaces, a page saved from the visual builder is stored as static HTML.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -241,5 +241,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/ContentService/WebsiteThemes/{id}` | `portals_update` | Workspace member | Patch a website theme |
 | DELETE | `/api/v2/ContentService/WebsiteThemes/{id}` | `portals_delete` | Workspace member | Delete a website theme |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

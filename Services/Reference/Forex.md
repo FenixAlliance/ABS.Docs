@@ -52,5 +52,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/ForexService/Rates/Latest` |  | Public | Get latest currency rates |
 | GET | `/api/v2/ForexService/Rates/Latest/{currencyId}` |  | Public | Get latest rate for a currency |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

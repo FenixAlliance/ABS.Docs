@@ -347,5 +347,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/HrmsService/TrainingPrograms` | `training_programs_read` | Workspace member | Get training programs |
 | GET | `/api/v2/HrmsService/TrainingPrograms/Count` | `training_programs_read` | Workspace member | Count training programs |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

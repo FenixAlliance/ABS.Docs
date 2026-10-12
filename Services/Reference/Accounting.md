@@ -614,5 +614,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PATCH | `/api/v2/AccountingService/Transactions/{transactionId}` | `transactions_update` | Workspace member | Patch a transaction |
 | DELETE | `/api/v2/AccountingService/Transactions/{transactionId}` | `transactions_delete` | Workspace member | Delete a transaction |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->

@@ -69,5 +69,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/QuotesService/Quotes/{quoteId}/PlaceOrder` | `orders_create` | Signed-in user, or workspace member with a workspace | Place an order from a quote the tenant received. |
 | PUT | `/api/v2/QuotesService/Quotes/{quoteId}/Reopen` | `quotes_update` | Workspace member | Reopen a closed quote. |
 
-Generated from the source at commit 642fb3c3ad.
+Generated from the source at commit 05da3e4078.
 <!-- generated:end -->
