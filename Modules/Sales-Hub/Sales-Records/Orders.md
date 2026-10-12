@@ -69,7 +69,7 @@ You collect payment for an order through an invoice.
 
 1. Open the order and go to the **Invoices** tab.
 2. Select **Add** and complete the invoice. It is linked to the order.
-3. Open the invoice from **Wallet** > **Invoices**, select **Payment link** and send the link to your customer.
+3. Issue the invoice, then select **Generate Payment Link** in its actions menu and send the link to your customer. You can also create the link from **Wallet** > **Invoices**.
 4. Your customer pays on the invoice's payment checkout, with any payment method your workspace accepts.
 
 See [Invoices](~/Modules/Accounting/Billing/Billing-Records/Invoices.md) for the full steps.

@@ -10,8 +10,8 @@ An invoice bills a customer for goods or services in the invoice's own currency,
 
 | Stage | What it means | What you can do |
 |-------|---------------|-----------------|
-| **Draft** | The invoice is being prepared. | Edit everything, add and remove lines, recalculate, delete. |
-| **Issued** | The invoice is final and payable. It has its number, if your workspace uses number ranges. | Edit the description and the dates. Issue credit and debit notes against it. Its amounts no longer change. |
+| **Draft** | The invoice is being prepared. | Edit everything, add and remove lines, recalculate, issue, delete. |
+| **Issued** | The invoice is final and payable. It has its number, if your workspace uses number ranges. | Edit the description and the dates. Preview it, email it and generate a payment link while it is unpaid. Issue credit and debit notes against it. Its amounts no longer change. |
 | **Paid** | A live payment covered what is owed. | Review the payment on the invoice. |
 
 An issued invoice is never re-priced. If you try to change an amount on it, the change is refused with the message that the invoice has been issued and must be corrected with a credit or debit note.
@@ -37,13 +37,15 @@ Open the invoice from **Invoices** with **View**. The details page shows the inv
 - Add, edit or delete lines in the lines section.
 - From the actions menu, select **Recalculate** to refresh the totals.
 - From the actions menu, select **Delete** to remove a draft you no longer need.
+- From the actions menu, select **Issue** when the draft is ready. See [Issue an invoice](#issue-an-invoice).
 
 ## Issue an invoice
 
 Issuing makes the invoice final and payable. When your workspace uses number ranges, issuing also gives the invoice the next number from its range.
 
 - **Invoices from checkout** are issued automatically when a buyer checks out an order.
-- **Invoices you create** are issued through the REST API with `POST /api/v2/InvoicingService/Invoices/{invoiceId}/Issue`, or created already issued by sending the status `Signed` when you create them through the API. Issuing an invoice that is already issued succeeds and changes nothing.
+- **Invoices you create** are issued from the invoice's details page: in the actions menu, select **Issue** and confirm with **Submit**. You need permission to update invoices. If issuing is refused, the message tells you why.
+- **Through the API**, issue an invoice with `POST /api/v2/InvoicingService/Invoices/{invoiceId}/Issue`, or create it already issued by sending the status `Signed`. Issuing an invoice that is already issued succeeds and changes nothing.
 
 Issuing is refused when:
 
@@ -55,11 +57,15 @@ A refused issue uses no number, so your numbering has no gaps. See [Invoice-numb
 
 ## Share an invoice and get paid
 
-To get paid, open the invoice from **Wallet** > **Invoices** and select **Payment link**. The button shows on any unpaid invoice. It creates a link your customer uses to pay on your payment provider's checkout.
+On an issued invoice that is not paid and not closed, the actions menu on the invoice's details page offers:
+
+- **Preview**, to see the invoice as your customer sees it.
+- **Send Email**, to preview the invoice email and send it to an address you enter.
+- **Generate Payment Link**, for users who can manage payments, to create a link your customer uses to pay on your payment provider's checkout.
+
+You can also create the payment link from **Wallet** > **Invoices**: open the invoice and select **Payment link**.
 
 Your customer can pay through the link while the invoice has a balance due and is not paid, closed or on hold. See [Payments](Payments.md) for how the payment link and checkout work.
-
-In **Accounting** > **Billing** > **Invoices**, the actions menu offers **Preview** (to see the invoice as your customer sees it) and **Send Email** (to send it to an address you enter) on closed invoices only.
 
 A closed invoice allows no further changes, cannot be deleted, cannot be paid through a payment link and cannot take a credit or debit note.
 
@@ -69,6 +75,8 @@ You never edit the amounts of an issued invoice. Instead, open the invoice and c
 
 - **Credit note**, to reduce what is owed, for example for a return, a discount or an annulment.
 - **Debit note**, to increase what is owed, for example for interest or extra charges.
+
+These actions show on an issued standard invoice that is not closed, including a paid one.
 
 See [Credit and debit notes](../Credit-and-Debit-Notes.md).
 

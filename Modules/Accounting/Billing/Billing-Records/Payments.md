@@ -4,7 +4,7 @@ Payments record the money your customers pay against your invoices, collected th
 
 **Who it is for:** billing administrators who collect payment for invoices and finance teams who follow up on what has been paid.
 
-**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Payments**. Payment links are created from **Wallet** > **Invoices**. Generating a payment link needs permission to manage payments. Connecting a payment provider is done from your workspace's **Integrations**.
+**Availability:** in Studio, open your workspace and go to **Modules** > **Accounting** > **Billing** > **Payments**. Payment links are created from the invoice in **Invoices**, or from **Wallet** > **Invoices**. Generating a payment link needs permission to manage payments. Connecting a payment provider is done from your workspace's **Integrations**.
 
 ## Payment providers you can connect
 
@@ -27,12 +27,14 @@ For how connections, credentials and provider notifications work, see [Integrati
 
 ## Collect payment for an invoice
 
-1. Open the invoice from **Wallet** > **Invoices**. The invoice must have a balance due and must not be paid, closed or on hold.
-2. Select **Payment link**.
+1. Open the invoice from **Invoices**. The invoice must be issued, have a balance due and must not be paid, closed or on hold.
+2. In the actions menu, select **Generate Payment Link**.
 3. Copy the link with the copy button. The dialog shows the link only once, together with its expiry date when it has one. Anyone with the link can pay the invoice.
 4. Send the link to your customer.
 
-To create another link later, select **Payment link** again. Each time you select it, a new link is created. Earlier links stay usable until they expire. A link cannot be revoked yet.
+You can also create the link from **Wallet** > **Invoices**: open the invoice and select **Payment link**.
+
+To create another link later, select **Generate Payment Link** (or **Payment link** in Wallet) again. Each time you select it, a new link is created. Earlier links stay usable until they expire. A link cannot be revoked yet.
 
 ## What your customer sees
 
