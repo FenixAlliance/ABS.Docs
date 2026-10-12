@@ -80,7 +80,7 @@ Make sure you have:
 ## Before you go live
 
 - **Serve HTTPS.** Put a reverse proxy or load balancer in front of the container. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#serve-https).
-- **Check health.** A request to `/health` answers `200` when the instance is healthy.
+- **Check health.** A request to `/health` answers `200` when the instance is healthy or degraded, and `503` when it is unhealthy. A new instance often reports degraded until you finish its settings. See [Check health](~/Fundamentals/Hosting.md#check-health).
 
 ## Add modules
 

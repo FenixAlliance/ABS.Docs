@@ -66,6 +66,30 @@ Only your reverse proxy may reach the container's ports. Never publish ports 80 
 
 Point your orchestrator's liveness and readiness probes, or your load balancer's health check, at `/health`.
 
+### Read the overall status
+
+- **Healthy:** every check passed.
+- **Degraded:** the instance serves requests, but at least one check found something you should look at. `/health` still answers `200`, so the instance stays in rotation.
+- **Unhealthy:** at least one check found a fault that waiting does not fix. `/health` answers `503`.
+
+### See each check
+
+`/health` reports only the overall status. To see which check reported what, sign in as an administrator of the root workspace and open `/health-ui`, or read the detailed feed at `/health-checks`. Both are on in the shipped settings, and both are closed to everyone else.
+
+| Check | What it looks at | When it is not healthy |
+|---|---|---|
+| `db_health_check` | The platform database answers. | Unhealthy when the database cannot be reached. |
+| `cms_health_check` | The content engine answers. | Unhealthy when it reports a fault. |
+| `realtime_topology_health_check` | The replica count you declared in `ABSUITE_REALTIME_DECLARED_REPLICAS`. | Degraded when it is not set, unhealthy when it is 2 or more. See [Run a single replica](#run-a-single-replica). |
+| `module_composition_health_check` | Every installed module loaded at startup. | Degraded when some modules loaded with errors, so their screens or APIs may be partly missing. Unhealthy when loading stopped partway. The log names the cause. |
+| `suite_options_manifest_health_check` | The instance found its settings file. | Degraded when there is no settings file and the instance runs on built-in defaults plus environment variables. That is correct if you configure the instance only through environment variables. |
+| `background_workers` | Background processing runs on this instance. | Degraded when background workers are held back on this instance. |
+| `messaging_transport`, `messaging_publish`, `messaging_consumers` | The connection to your message broker, publishing, and the consumers that process messages. Present only when messaging is on. | The broker connection is unhealthy when it fails. Publishing and the consumers are degraded while the broker is disconnected. |
+| `reach_engine_readiness_health_check` | Outbound message delivery is set up to deliver. | Unhealthy when the instance is expected to deliver messages but a delivery step is switched off, so accepted messages are never sent. |
+| `agent_runtime_fabric_health_check` | AI agent runtimes, when that feature is on. | Degraded when agent work is queued but no runtime is live to pick it up, or when a runtime has stopped reporting. Never unhealthy. |
+
+A degraded status on a new instance usually comes from a setting you have not made yet, such as the declared replica count. Fix the setting and the check returns to healthy.
+
 ## Run a single replica
 
 Run a single replica and set `ABSUITE_REALTIME_DECLARED_REPLICAS=1`. Running more than one replica is not supported yet.
