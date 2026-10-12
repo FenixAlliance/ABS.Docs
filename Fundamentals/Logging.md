@@ -14,11 +14,7 @@ ABS uses Serilog for its application error log, and the standard ASP.NET Core lo
 - **Console:** the same error records also go to the console, together with the standard ASP.NET Core host output, which includes information messages such as startup progress. Your container runtime collects the console. Read it with `docker logs absuite`, or with your orchestrator's log tools.
 - **Console levels:** to change how much the standard host output shows, use the standard `Logging` section of an `appsettings.json` file. Supply the file through `/app/config`, as described in [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#how-the-configuration-file-is-applied).
 
-Mount `/app/logs` to storage on the host to keep the files when you recreate the container. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#keep-your-data-outside-the-container). The instance keeps the 31 most recent daily files and removes older ones. To keep logs longer, archive the files before then, or collect the console output with your own log tools.
-
-### Request logging
-
-To also log HTTP requests, set both `ABP` > `Logging` > `Enable` and `ABP` > `Logging` > `Serilog` > `Enable` to `true` in `suitesettings.json`, or set `ABSUITE_LOGGING_ENABLED` and `ABSUITE_SERILOG_ENABLED` to `true`. Because the minimum level of the log files is error, only requests that fail with a server error are recorded there. See [Configuration](~/Fundamentals/Configuration.md#environment-variable-overrides).
+Mount `/app/logs` to storage on the host to keep the files when you recreate the container. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#keep-your-data-outside-the-container). By default, the instance keeps the 31 most recent daily files and removes older ones. To keep logs longer, archive the files before then, or collect the console output with your own log tools.
 
 ## Read logs in Studio
 

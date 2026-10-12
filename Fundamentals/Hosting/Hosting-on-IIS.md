@@ -6,7 +6,7 @@ Internet Information Services (IIS) is not the supported path for self-hosted AB
 
 ## What is supported
 
-Containers are the supported way to run self-hosted ABS. Fenix Alliance publishes the Linux container image `fenixalliance/absuite` for each release, and does not publish a separate build for IIS.
+Containers are the supported way to run self-hosted ABS. Fenix Alliance publishes the Linux container image `fenixalliance/absuite-hub`, tagged with release numbers, and does not publish a separate build for IIS.
 
 To run ABS on a Windows server, run the Linux container image on a container runtime that supports Linux containers on Windows. Then follow [Install self-hosted ABS](~/Fundamentals/Installation.md) and [Hosting self-hosted ABS](~/Fundamentals/Hosting.md).
 

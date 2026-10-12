@@ -14,7 +14,7 @@ This page describes the configuration file of self-hosted ABS, `suitesettings.js
 - **How you supply it:** mount a folder that contains it at `/app/config`. The container copies it into place each time it starts. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#how-the-configuration-file-is-applied).
 - **How it is created:** the web installer writes it when you install the instance. See [Install self-hosted ABS](~/Fundamentals/Installation.md).
 
-The file contains connection strings and other secrets. Store it with restricted access, and keep a backup with your database backups.
+The file contains connection strings and other secrets. Store it with restricted access, and keep a backup with your database backups. Do not commit it to source control or bake it into an image.
 
 ## Sections
 
@@ -59,6 +59,8 @@ Set Boolean variables to `true` or `false`.
 | `ABSUITE_DEV_MODE_ENABLED` | `ABP` > `DevMode` > `Enable`. |
 | `ABSUITE_MESSAGING_ENABLED` | `ABP` > `Messaging` > `Enable`. |
 | `ABSUITE_MESSAGING_DISTRIBUTED_ENABLED` | `ABP` > `Messaging` > `EnableDistributedEvents`. |
+| `ABSUITE_OUTBOX_ENABLED` | `ABP` > `Outbox` > `Enable`. |
+| `ABSUITE_INBOX_ENABLED` | `ABP` > `Inbox` > `Enable`. |
 | `ABSUITE_HTTPS_REDIRECTION_ENABLED` | `ABP` > `HTTP` > `HttpsRedirection` > `Enable`. |
 | `ABSUITE_LOGGING_ENABLED` | `ABP` > `Logging` > `Enable`. |
 | `ABSUITE_SERILOG_ENABLED` | `ABP` > `Logging` > `Serilog` > `Enable`. |
@@ -67,6 +69,7 @@ Set Boolean variables to `true` or `false`.
 | `ABSUITE_DATA_PROTECTION_KEY_RING_PATH` | `ABM` > `DataProtection` > `KeyRingPath`, the folder used by the `FileSystem` provider. |
 | `ABSUITE_DATA_PROTECTION_KEY_LIFETIME_DAYS` | `ABM` > `DataProtection` > `KeyLifetimeDays`. |
 | `ABSUITE_DATA_PROTECTION_APPLICATION_NAME` | `ABM` > `DataProtection` > `ApplicationName`. |
+| `ABSUITE_REALTIME_DECLARED_REPLICAS` | No file setting. Declares how many replicas run. Set it to `1`. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#run-a-single-replica). |
 | `ASPNETCORE_ENVIRONMENT` | The hosting environment. See [Environments](~/Fundamentals/Environments.md). |
 
 Pass variables to the container with your runtime's usual option, for example `docker run -e ABSUITE_DEV_MODE_ENABLED=false`. Environment variables are read at startup, so restart the container after you change one.

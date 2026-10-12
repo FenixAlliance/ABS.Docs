@@ -42,8 +42,8 @@ ABS meets you where you are — one product, several distribution models, none o
 - **As a dependency** — bring the suite into your own ASP.NET app with a single registration.
 
 ```powershell
-docker pull fenixalliance/absuite-platform:latest
-docker run -p 8080:8080 fenixalliance/absuite-platform:latest
+docker pull fenixalliance/absuite-hub:latest
+docker run -p 8080:8080 fenixalliance/absuite-hub:latest
 ```
 
 See **[Getting started](~/get-started/Getting-started.md)** to install, and the **[Fundamentals](~/get-started/Fundamentals.md)** for hosting and production options.

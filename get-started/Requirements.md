@@ -17,7 +17,7 @@ Studio runs in the browser and needs WebSocket support. Use a current version of
 
 ## Runtime and container image
 
-- **Container image:** the supported way to run self-hosted ABS is the published container image, `fenixalliance/absuite` on Docker Hub. See [Install self-hosted ABS](~/Fundamentals/Installation.md).
+- **Container image:** the supported way to run self-hosted ABS is the published container image `fenixalliance/absuite-hub` on Docker Hub. It contains every module and integration. A smaller image, `fenixalliance/absuite`, contains a reduced set of modules. See [Install self-hosted ABS](~/Fundamentals/Installation.md).
 - **Platform:** the image is a Linux image for x64 (amd64) processors.
 - **Container runtime:** any OCI-compatible runtime or orchestrator that runs Linux containers, such as a Docker host, Kubernetes or a managed container service.
 - **.NET:** ABS runs on .NET 10. The runtime ships inside the image, so you do not install .NET on the host.
@@ -44,7 +44,18 @@ RabbitMQ is optional.
 - With messaging turned on and distributed events turned off, ABS handles its events inside the same process. No message broker is needed.
 - With distributed events turned on, ABS sends events through RabbitMQ. RabbitMQ is the only supported message broker.
 
-A new installation starts with messaging turned off. To turn it on for a single instance without a broker, set `ABP` > `Messaging` > `Enable` to `true` and `ABP` > `Messaging` > `EnableDistributedEvents` to `false`.
+A new installation starts with messaging, the outbox and the inbox turned off. If messaging is off, business events are not delivered. Workflows that start from events do not start, and background follow-up such as posting an issued invoice to accounting does not run.
+
+For a single instance without a broker, set these values in `suitesettings.json`:
+
+| Setting | Value |
+|---|---|
+| `ABP` > `Messaging` > `Enable` | `true` |
+| `ABP` > `Messaging` > `EnableDistributedEvents` | `false` |
+| `ABP` > `Outbox` > `Enable` | `true` |
+| `ABP` > `Inbox` > `Enable` | `true` |
+
+Set `EnableDistributedEvents` to `false` explicitly. When the `Messaging` section exists without it, ABS uses RabbitMQ.
 
 See [Configuration](~/Fundamentals/Configuration.md) for the settings that control messaging.
 

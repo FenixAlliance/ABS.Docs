@@ -59,8 +59,8 @@ ABS meets you where you are — one product, several **distribution models**, no
 ### Quick start (Docker)
 
 ```powershell
-docker pull fenixalliance/absuite-platform:latest
-docker run -p 8080:8080 fenixalliance/absuite-platform:latest
+docker pull fenixalliance/absuite-hub:latest
+docker run -p 8080:8080 fenixalliance/absuite-hub:latest
 ```
 
 Open the provided URL and complete the installation wizard. See **[Hosting](~/Fundamentals/Hosting.md)** for production options.

@@ -22,22 +22,25 @@ Make sure you have:
 2. **Pull the image.** Image tags match the release numbers in the [changelog](~/reference/Changelog.md). Use a version tag rather than `latest`, so you control when the instance changes.
 
    ```sh
-   docker pull fenixalliance/absuite:<version>
+   docker pull fenixalliance/absuite-hub:<version>
    ```
 
-3. **Start the container.** Map port 8080 and mount the four folders. The restart policy matters: the installer stops the instance when it finishes, and the policy starts it again.
+3. **Start the container.** Mount the four folders, and publish port 8080 only on the host itself. The restart policy matters: the installer stops the instance when it finishes, and the policy starts it again. `ABSUITE_REALTIME_DECLARED_REPLICAS=1` declares that you run a single replica, which is the supported topology.
 
    ```sh
    docker run -d --name absuite --restart unless-stopped \
-     -p 8080:8080 \
+     -p 127.0.0.1:8080:8080 \
+     -e ABSUITE_REALTIME_DECLARED_REPLICAS=1 \
      -v /srv/absuite/config:/app/config:ro \
      -v /srv/absuite/modules:/app/Modules \
      -v /srv/absuite/logs:/app/logs \
      -v /srv/absuite/appdata:/app/AppData \
-     fenixalliance/absuite:<version>
+     fenixalliance/absuite-hub:<version>
    ```
 
-4. **Open the instance in your browser.** Go to `http://<your-host>:8080`. A new instance sends you to the web installer at `/Install`.
+   Never publish ports 80 or 8080 to the internet or to untrusted networks. Only your reverse proxy may reach them. If the proxy runs on another machine, publish the port only on a private network that the proxy uses. See [Serve HTTPS](~/Fundamentals/Hosting.md#serve-https).
+
+4. **Open the instance in your browser.** On the host, go to `http://localhost:8080`, or open the instance through your reverse proxy. A new instance sends you to the web installer at `/Install`.
 
 5. **Complete the Database step.** Select your **Engine**, then enter the **Host**, **Port**, **Database**, **Username** and **Password** of your database server. Select **Next**.
 
@@ -51,6 +54,8 @@ Make sure you have:
 
 10. **Select Install.** The installer creates the database schema, loads the reference data (countries, currencies and the chart of accounts you chose), creates your workspace and admin account, and saves the configuration file. This can take several minutes. When it finishes, the instance stops, and the restart policy starts it again.
 
+    The installer also downloads a base website theme and keeps it inside the container, outside the mounted folders. A recreated container loses it. ABS uses it only when no theme is installed in `AppData`.
+
 11. **Copy the configuration file to the host.** The installer saves `suitesettings.json` inside the container. Copy it into your `config` folder, so the instance keeps its configuration when you restart or recreate the container:
 
     ```sh
@@ -59,11 +64,21 @@ Make sure you have:
 
     The file holds your database password. Restrict access to the `config` folder.
 
-12. **Sign in.** Open `http://<your-host>:8080` again and sign in with the admin email and password from step 9.
+12. **Set the production settings. This step is required.** Edit the `suitesettings.json` in your `config` folder:
+
+    - **Turn off development mode.** The installer turns on development mode. Set `ABP` > `DevMode` > `Enable` to `false`. You can instead set the environment variable `ABSUITE_DEV_MODE_ENABLED` to `false`.
+    - **Turn on messaging, the outbox and the inbox.** Set `ABP` > `Messaging` > `Enable` to `true`, `ABP` > `Messaging` > `EnableDistributedEvents` to `false`, `ABP` > `Outbox` > `Enable` to `true` and `ABP` > `Inbox` > `Enable` to `true`. Without them, business events are not delivered. See [System requirements](~/get-started/Requirements.md#messaging).
+
+    Then restart the container, so it copies the edited file into place:
+
+    ```sh
+    docker restart absuite
+    ```
+
+13. **Sign in.** Open the instance again and sign in with the admin email and password from step 9.
 
 ## Before you go live
 
-- **Turn off development mode.** The installer turns on development mode. Set `ABP` > `DevMode` > `Enable` to `false` in `suitesettings.json`, or set the environment variable `ABSUITE_DEV_MODE_ENABLED` to `false`. Then restart the container. See [Configuration](~/Fundamentals/Configuration.md).
 - **Serve HTTPS.** Put a reverse proxy or load balancer in front of the container. See [Hosting self-hosted ABS](~/Fundamentals/Hosting.md#serve-https).
 - **Check health.** A request to `/health` answers `200` when the instance is healthy.
 

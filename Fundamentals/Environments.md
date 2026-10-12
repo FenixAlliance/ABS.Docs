@@ -17,11 +17,11 @@ ABS reads its hosting environment from the standard ASP.NET Core variable `ASPNE
 | Missing `suitesettings.json` | Runs on built-in defaults plus environment variables, logs a warning and writes no file. | Creates a blank `suitesettings.json`. |
 | Development mode | Off unless you turn it on in `suitesettings.json`. | On, unless `ABSUITE_DEV_MODE_ENABLED` is `false`. |
 
-Development mode turns on developer conveniences, such as the API explorer. Use it only for building and testing.
+Development mode turns on the API explorer and OpenAPI documents, can show detailed error pages with internal details, and relaxes some request checks. Never run a production instance with development mode on.
 
 ## Development mode in production
 
-Development mode can also be turned on in `suitesettings.json` with `ABP` > `DevMode` > `Enable`. The web installer turns it on, so check it before you go live:
+Development mode can also be turned on in `suitesettings.json` with `ABP` > `DevMode` > `Enable`. The web installer turns it on, so turning it off is a required step before you go live:
 
 1. Set `ABP` > `DevMode` > `Enable` to `false` in the `suitesettings.json` in your `config` folder.
 2. Restart the container.
