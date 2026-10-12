@@ -36,6 +36,14 @@ These changes are complete and verified, and they reach you with the next releas
 - **Grids now show names instead of raw identifiers**, so a related record reads as its name, not a code.
 - **Every document keeps its own currency.** The platform no longer falls back to US dollars anywhere a document has a currency of its own.
 - The order summary now shows the workspace, the total and the date, and the sales and logistics pages use consistent icons.
+- **For developers: Mercado Pago card routes.** `PUT /api/v2/Integrations/MercadoPago/Cards/Update` is retired and answers `410 Gone` with a link to its successor, `PUT .../Cards/UpdateByToken`, which updates a saved card from a Mercado Pago card token (`customerId` and `cardId` in the query). `PUT .../Cards/Delete` now takes `customerId` and `cardId` in the query and answers `400` when either is missing.
+- **For developers: retired payment routes.** These routes now answer `410 Gone` with a `Deprecation` header and a `Link` to their successor. None of them reads a request body.
+  - Mercado Pago refunds: `POST .../MercadoPago/Refunds/Create`, `POST .../MercadoPago/AdvancedPayments/Refund` and `POST .../MercadoPago/AdvancedPayments/RefundAll` (refund through `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`).
+  - Mercado Pago cancellation: `POST .../MercadoPago/AdvancedPayments/Cancel` (cancel through `PUT .../MercadoPago/Cancellations/CancelPayment`).
+  - Mercado Pago collections: `POST .../MercadoPago/Payments/Process`, `POST .../MercadoPago/Wrapper/CreatePreference`, `POST .../MercadoPago/Preferences/Create`, `PUT .../MercadoPago/Preferences/Update`, `POST .../MercadoPago/AdvancedPayments/Create`, `POST .../MercadoPago/AdvancedPayments/Capture`, `PUT .../MercadoPago/AdvancedPayments/Update`, `POST .../MercadoPago/Subscriptions/Create`, `PUT .../MercadoPago/Subscriptions/Update` and `PUT .../MercadoPago/InStoreOrders/Create` (payments are collected through the invoice's payment checkout, `/Payments/{token}`).
+  - Mercado Pago card tokens: `POST .../MercadoPago/CardTokens/Create` (create card tokens in the payer's browser with MercadoPago.js and your public key).
+  - ePayco: `POST .../ePayco/Payments/Process` and `POST .../ePayco/Payments/Global/Process` (payments are collected through the invoice's payment checkout), `POST .../ePayco/Withdraws/Withdraw` (no replacement in this release), and `GET .../ePayco/Syncronization/Sync/Primary` (reconcile a collection through `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/ReconcileOutcome`).
+  - ABS never accepts raw card numbers or security codes on any route: the payer enters them on the payment provider's own checkout.
 
 ### Fixed
 
