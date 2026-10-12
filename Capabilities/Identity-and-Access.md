@@ -19,6 +19,6 @@ This is about *access*, not proof. Proving that a document or action is authenti
 | Module | What it does |
 |---|---|
 | [IAM](~/Modules/IAM.md) | Users, roles, and central access management |
-| [Security](~/Modules/SECURITY.md) | Tenant access, permissions, and security & audit logs |
+| Security | Tenant access, permissions, and security & audit logs |
 
 Built on the **[Alliance Passport Service (APS)](~/Capabilities/Alliance-Passport-Service.md)** foundation. To build on it, see **[Web API development](~/get-started/Web-API-Development.md)**.

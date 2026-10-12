@@ -9,7 +9,7 @@ Pages are WebContent Components, which makes them extremely powerful. They are s
 
 Although pages can inject services and even interact with the ABM Database Provider through the DataContext instance present at every page, pages can optionally contain a caller method. This method's responsibility is to produce the model that's going to be used to fill the page's Model property, sort of like a controller method passing a Model to a view.
 
-Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
+Code pages (Razor, C# and CSHtml) are available only to workspaces an instance administrator enables for them, and only their owners and administrators can create or change them.
 
 ## Creating a Web Page
 

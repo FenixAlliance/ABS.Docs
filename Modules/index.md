@@ -1,6 +1,6 @@
 # Modules
 
-Modules are how you turn on [capabilities](~/Capabilities/index.md). Each module is a self-contained feature package, with its own screens, menus, and data, that the platform loads into your instance. Enable the modules your plan entitles you to and they appear in the Studio for your tenant. Nothing is forked, and new modules arrive without changing the platform.
+Modules are how you turn on [capabilities](~/Capabilities/index.md). Each module is a self-contained feature package, with its own screens, menus, and data, that the platform loads into your instance. The instance owner decides which modules are available on the instance, and the modules your plan entitles you to appear in the Studio for your tenant. Tenants do not install modules. Nothing is forked, and new modules arrive without changing the platform.
 
 ## How modules work
 
@@ -67,7 +67,7 @@ Browse the modules that ship with ABS, grouped by the capability each one delive
 - **[Workflows](~/Modules/WORKFLOWS.md)**: visual workflow editor and process automation.
 
 ### Workforce
-- **[Workforce](~/Modules/HRMS.md)**: employees, payroll, shifts, leave, appraisals, hiring, and training.
+- **Workforce**: employees, payroll, shifts, leave, appraisals, hiring, and training.
 - **[Learning](~/Modules/Learning.md)**: courses, collections, instructors, and students.
 - **[Workplace](~/Modules/WORKPLACE.md)**: shared file and document workspace.
 
@@ -80,7 +80,7 @@ Browse the modules that ship with ABS, grouped by the capability each one delive
 
 ### Identity & Access
 - **[IAM](~/Modules/IAM.md)**: users, roles, groups, and central access management.
-- **[Security](~/Modules/SECURITY.md)**: tenant access, permissions, and security and audit logs.
+- **Security**: tenant access, permissions, and security and audit logs.
 
 ### Trust & Compliance
 - **[Signator](~/Modules/Signator.md)**: e-signatures, signing requests, certificates, and trust evidence.

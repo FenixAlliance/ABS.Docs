@@ -1,6 +1,6 @@
 # Introduction to Account Holder Entities
 
-An Account Holder is a CredentialsPrincipal for the APS Engine. It represents a human user identified by a username/password. (Unless using some kind of federated identity service like Azure Active Directory, Google, Facebook, Microsoft Identity, etc...)
+An Account Holder is a CredentialsPrincipal for the APS Engine. It represents a human user identified by a username/password. (Unless using some kind of federated identity service like Microsoft Entra ID, Google, Facebook, Microsoft Identity, etc...)
 
 The "Credentials" aspect of APS Identity and Access Management (IAM) helps you with the question "Who is that user?", often referred to as authentication. Instead of sharing your root user credentials with others, you can create individual Account Holders within your instance that correspond to users in your organization. 
 
@@ -25,7 +25,7 @@ Each Account Holder can have their own password for access to the ABS.
 
 By default, ABS Portals are configured to allow Guest Users and Customer Users. These Guest Users are unauthenticated portal visitors granted with a limited set of permissions, like `store_read`, `cart_view`, `cart_update`, while Customer Accounts are allowed for more extensive permissions such as `account_read`, `account_delete`, `account_update`, `wallet_read`, and others.
 
-If the Enable New User Option is marked to true, Guest Users can quickly create and manage their Account Holder credentials by themselves. The APS Engine is configured to allow local or federated accounts by enabling and configuring additional identity providers such as Google, Facebook, Microsoft, LinkedIn, Twitter, and more.
+If the Enable New User Option is marked to true, Guest Users can quickly create and manage their Account Holder credentials by themselves. The APS Engine is configured to allow local or federated accounts by enabling and configuring additional identity providers such as Google, Facebook, Microsoft, LinkedIn, Twitter, and more. The sign-in options you see depend on which providers your instance administrator has enabled.
 
 
 ![When creating a local account, you will be asked to verify your email address through a code.](~/.attachments/image-79a1abf3-4957-4c4f-aae8-5df764ebcc72.png)
@@ -39,9 +39,9 @@ If the users in your organization already have a way to be authenticated, such a
 
 **Federation is particularly useful in these cases:**
 
-If your corporate directory is Microsoft Active Directory, you can use Azure Active Directory to establish trust between your corporate directory and your ABS instance.
+If your corporate directory is Microsoft Active Directory, you can use Microsoft Entra ID to establish trust between your corporate directory and your ABS instance.
 
-**Your users already have Internet identities**: If you are creating a mobile app or web-based app that can let users identify themselves through an Internet identity provider like Login with Amazon, Facebook, Google, or any OpenID Connect (OIDC) compatible identity provider, the app can use federation to access ABS resources. For more information, see About web identity federation.
+**Your users already have Internet identities**: If you are creating a mobile app or web-based app that can let users identify themselves through an Internet identity provider like Login with Amazon, Facebook, Google, or any OpenID Connect (OIDC) compatible identity provider, the app can use federation to access ABS resources. For more information, see About web identity federation. The sign-in options you see depend on which providers your instance administrator has enabled.
 
 ## Enabling supported identity providers
 
@@ -58,7 +58,7 @@ Select the Hello <email alias> link at the top-right corner to navigate to the M
 
 ### Creating your Alliance ID through an identity provider: \(e.g. Amazon, Facebook, LinkedIn, Google...\)
 ------------------------------------------------------------ -------------------------------------------
-If you don’t already have an Alliance ID account, you can get it for free by using those accounts that you already own and use \(like your social media accounts\). For this matter, you will need to select the identity provider of your choice when you [create your Account Holder](https://fenixalliance.com.co/Account/SignIn). 
+If you don’t already have an Alliance ID account, you can get it for free by using those accounts that you already own and use \(like your social media accounts\). For this matter, you will need to select the identity provider of your choice when you [create your Account Holder](https://fenixalliance.com.co/Account/SignIn). The sign-in options you see depend on which providers your instance administrator has enabled.
 
 
 You will need to log in to your Alliance ID account through your chosen identity provider to get access to your account and resources.

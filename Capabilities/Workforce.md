@@ -7,7 +7,8 @@ Workforce is how you manage the people side of the organization: your employees,
 ## What you can do
 
 - **Manage employees** — records, org structure, shifts, leave, and appraisals.
-- **Hire and onboard** — recruitment and hiring pipelines.
+- **Hire**: job offers, applicants and applications, each with a status.
+- **Keep pay records**: salaries, and payroll records by period.
 - **Grow skills** — courses, collections, instructors, and student progress in a built-in LMS.
 - **Work together** — shared file and document workspaces, folders, and a file manager.
 
@@ -15,7 +16,7 @@ Workforce is how you manage the people side of the organization: your employees,
 
 | Module | What it does |
 |---|---|
-| [Workforce](~/Modules/HRMS.md) | Employees, payroll, shifts, leave, appraisals, hiring, and training |
+| Workforce | Employees, payroll, shifts, leave, appraisals, hiring, and training |
 | [Learning](~/Modules/Learning.md) | Courses, collections, instructors, and students (LMS) |
 | [Workplace](~/Modules/WORKPLACE.md) | Shared file and document workspace |
 

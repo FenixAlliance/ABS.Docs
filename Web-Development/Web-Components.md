@@ -23,7 +23,7 @@ A view component consists of two parts: the class (typically derived from ViewCo
 ## Creating a view component
 A view component class can be created on your ABS Instance administration dashboard, under **Appearance** > **Components**.
 
-Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
+Code pages (Razor, C# and CSHtml) are available only to workspaces an instance administrator enables for them, and only their owners and administrators can create or change them.
 
 
 ## View component methods

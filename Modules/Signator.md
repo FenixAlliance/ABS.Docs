@@ -41,7 +41,7 @@ Signator signs with real digital certificates.
 
 ### Trust evidence & verification
 
-Every signing produces an **evidence chain** — a record of who signed, what exact content they signed, when, with which certificate, and the verification result. You can review this chain on screen, and an included verification view lets you re-check a signed artifact at any time. Evidence is written by the signing pipeline itself, not editable after the fact — so the trail can be relied on.
+Every signing produces an **evidence chain**: a record of who signed, what exact content they signed, when, with which certificate, and the verification result. You can review this chain on screen, and signed-in users can re-check a signed document's signature at any time. Evidence is written by the signing pipeline itself, not editable after the fact, so the trail can be relied on.
 
 ### Sealed, tamper-evident records
 
@@ -60,12 +60,11 @@ Once an artifact is **sealed**, it becomes append-only: it cannot be edited or r
 | Quick Sign (prepare → freeze → sign → seal) | ✅ Available |
 | Internal signing requests | ✅ Available |
 | On-screen evidence chain & verification | ✅ Available |
-| Signature representations | 🔵 Rolling out |
-| External signing portal (sign without a Studio account) | 🔵 Rolling out |
+| Signature representations | ✅ Available |
+| External signing portal (sign without a Studio account) | ✅ Available |
 | Regulated e-invoicing / authority submission (DIAN) | 🧭 On the roadmap |
 
 ## Related
 
 - Capability family: **[Trust & Compliance](~/Capabilities/Trust-and-Compliance.md)**
 - Works with: **[Identity & Access](~/Capabilities/Identity-and-Access.md)**
-- Regulated invoicing: **[DIAN Invoicing](~/Modules/Signator/DIAN-Invoicing.md)**

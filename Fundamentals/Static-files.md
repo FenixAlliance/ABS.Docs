@@ -20,7 +20,7 @@ The ABP-FS allows customers to upload public files within the scope of a [Web Po
 
 When developing single or multiple portals, customers might want to share common files between them. To do so, they can now upload Unscoped Public Files that will be available through the `/Public` endpoint.
 
-Unscoped files are marked as read-only files by default and can only be uploaded by an Account Holder with `global_admin` [Business Permission](~/Capabilities/Alliance-Passport-Service/Business-Permissions.md).
+Unscoped files are marked as read-only files by default and can only be uploaded by an Account Holder with `global_admin` Business Permission.
 
 ### Public Files URL
 

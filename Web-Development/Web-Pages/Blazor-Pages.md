@@ -2,7 +2,7 @@
 
 The Alliance Business Suite Portals include Blazor Support (Server-Side). ABS Blazor Pages are based on components. A component in Blazor is an element of UI, such as a page, dialog, or data entry form.
 
-Code pages (Razor, C# and CSHtml) are available only to workspaces enabled for them.
+Code pages (Razor, C# and CSHtml) are available only to workspaces an instance administrator enables for them, and only their owners and administrators can create or change them.
 
 To the Alliance Business Suite, Blazor Components are .NET C# classes built into .NET assemblies that:
 

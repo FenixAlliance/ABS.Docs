@@ -85,8 +85,5 @@
     href: WORKFLOWS.md
   - name: "Signator"
     href: Signator.md
-    items:
-    - name: "DIAN Invoicing"
-      href: Signator/DIAN-Invoicing.md
 - name: "Official Integrations"
   href: Integrations.md

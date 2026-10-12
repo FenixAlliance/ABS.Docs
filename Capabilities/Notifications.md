@@ -29,7 +29,7 @@ Additional channels are a deliberate future step rather than a hidden switch. Wh
 
 **Preferences are honoured, in a defined order.** Platform, workspace policy, workspace default, your membership of that workspace, and your personal settings each get a say, in that order. Categories declared mandatory, such as security and legal notices, cannot be switched off, and the interface says so rather than silently ignoring the setting.
 
-**Failing addresses stop receiving mail.** A permanently failing address suppresses future delivery to that address, independently of who the person is.
+**Suppressed addresses stop receiving mail.** An address on the suppression list receives no further email, independently of who the person is. Today an administrator adds addresses to the list; automatic suppression from bounces arrives with mail-provider feedback.
 
 **The person who caused it is not told about it.** Acting on a record does not generate a notification to yourself about your own action, unless a rule deliberately asks for a receipt.
 
@@ -53,7 +53,7 @@ A setting you cannot change is shown as locked with the reason, rather than appe
 Stated plainly, because an accurate boundary is more useful than an optimistic one:
 
 - **Mobile push, web push and SMS** are not available. Only in-app and email deliver today.
-- **Delivery feedback from your mail provider**, such as bounce and complaint handling, is modelled but not yet connected to a live provider. Suppression works from failures ABS observes itself.
+- **Delivery feedback from your mail provider**, such as bounce and complaint handling, is modelled but not yet connected to a live provider. Until then, suppression comes from addresses an administrator adds.
 - **Unsubscribe links** for recipients are not available yet.
 - **Email is sent under the platform's sending identity.** Per-workspace sending domains are a later step.
 

@@ -28,6 +28,11 @@
           "Fundamentals/Shortcuts.md",
           "reference/Security.md",
           "reference/License.md",
+          "Capabilities/Alliance-Passport-Service/Security-Roles.md",
+          "Capabilities/Alliance-Passport-Service/Business-Permissions.md",
+          "Modules/SECURITY.md",
+          "Modules/Signator/DIAN-Invoicing.md",
+          "Services/Wallets-Service.md",
           "**/node_modules/**"
         ]
       }

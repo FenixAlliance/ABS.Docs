@@ -47,10 +47,6 @@
       href: Alliance-Passport-Service/Business-Users.md
     - name: "Business Tenants"
       href: Alliance-Passport-Service/Business-Tenants.md
-    - name: "Security Roles"
-      href: Alliance-Passport-Service/Security-Roles.md
-    - name: "Business Permissions"
-      href: Alliance-Passport-Service/Business-Permissions.md
     - name: "Connect Protocols"
       href: Alliance-Passport-Service/Connect-protocols.md
   - name: "Alliance Business Platform"

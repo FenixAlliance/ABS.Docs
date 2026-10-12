@@ -8,7 +8,7 @@ We're building the Alliance Business Studio to help you manage your entire Allia
 
 ## Accessing the Studio
 
-The Alliance Business Studio can be used by navigating to the `/Studio` route on an existing Alliance Business Suite installation. To access the Alliance Business Studio, Account Holders are required to, at least, have the `studio_access` [permission](~/Capabilities/Alliance-Passport-Service/Business-Permissions.md). 
+The Alliance Business Studio can be used by navigating to the `/Studio` route on an existing Alliance Business Suite installation. To access the Alliance Business Studio, Account Holders are required to, at least, have the `studio_access` permission. 
 
 By default, business tenant administrators can access the studio independently of whether or not they have the `studio_access` permission. 
 

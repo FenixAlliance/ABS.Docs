@@ -56,7 +56,7 @@ To authenticate from the root user, you must sign in with the email address and 
 
 To authenticate from the API or ABS Commander CLI (Bash or Powershell), you must create and provide an access key and secret key. You can get these keys by installing and navigating to the ABS Self-integration. 
 
-Users might also be required to provide additional security information. For example, Alliance Business Systems recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](~/Capabilities/Alliance-Passport-Service/Account-Holders.md) and [APS Security Roles](~/Capabilities/Alliance-Passport-Service/Security-Roles.md).
+Users might also be required to provide additional security information. For example, Alliance Business Systems recommends that you use multi-factor authentication (MFA) to increase the security of your account and to enforce it on Privileged Account Holders. To learn more about the IAM entities that the Alliance Passport Service can authenticate, see [APS Identity Holders](~/Capabilities/Alliance-Passport-Service/Account-Holders.md).
 
 
 ### Authentication Middleware
@@ -93,7 +93,7 @@ The APS Engine checks each policy that applies to the context of any given reque
 To learn more about how all types of policies are evaluated, please refer to Authorization evaluation logic. If you need to make a request in a different account, a policy in the other account must allow you to access the resource, and the Identity Entity that you use to make the request must have an identity-based policy that allows the request.
 
 
-### [Security Permissions](~/Capabilities/Alliance-Passport-Service/Business-Permissions.md)
+### Security Permissions
 
 After your request has been authenticated and authorized, the Alliance Passport Service approves the actions or operations in your request. Operations are defined by service and include things that you can do to a resource, such as reading, creating, editing, and deleting that resource. For example, APS supports several actions for each [ABM Record](~/Capabilities/Alliance-Business-Model/Records.md), including the following actions:
 
