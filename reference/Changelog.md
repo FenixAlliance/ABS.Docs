@@ -22,7 +22,7 @@ These changes are complete and verified, and they reach you with the next releas
 
 ### Added
 
-- **Get paid through your own payment provider.** Connect your own Stripe or Mercado Pago account, and send a payment link for an invoice. The payer pays on the provider's own checkout, and you can refund a completed payment. Payments run in test mode in this release; live payments are coming. See [Payments](~/Services/Reference/Payments.md).
+- **Get paid through your own payment provider.** Connect your own Stripe or Mercado Pago account, and send a payment link for an invoice. The payer pays on the provider's own checkout, and you can refund a completed payment. In this release your workspace's provider connections run in test mode; live payments for your workspace are coming. See [Payments](~/Services/Reference/Payments.md).
 - **Credit and debit notes.** You can issue a credit note or a debit note against an issued invoice. Each note takes the next number in your own note series, a credit note can never exceed what is still creditable on the invoice, and, when automatic journal posting is turned on, the reduction is posted to your accounts once the original invoice's entry is in your books. Colombian notes carry the reason and the full reference to the original invoice that DIAN requires.
 - **Positions with several holders.** A position can now hold more than one person, up to a capacity you set, and belongs to a department. Each holder's assignment is recorded with its dates, and a position cannot be deleted while someone holds it.
 - **Archive notifications.** In the Tools inbox you can archive and unarchive notifications, one at a time or a whole page, and switch to an Archived view. Archiving is per reader and never deletes anything.
