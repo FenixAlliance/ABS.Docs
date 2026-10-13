@@ -22,6 +22,7 @@ These changes are complete and verified, and they reach you with the next releas
 
 ### Added
 
+- **Get paid through your own payment provider.** Connect your own Stripe or Mercado Pago account, and send a payment link for an invoice. The payer pays on the provider's own checkout, and you can refund a completed payment. Payments run in test mode in this release; live payments are coming. See [Payments](~/Services/Reference/Payments.md).
 - **Credit and debit notes.** You can issue a credit note or a debit note against an issued invoice. Each note takes the next number in your own note series, a credit note can never exceed what is still creditable on the invoice, and, when automatic journal posting is turned on, the reduction is posted to your accounts once the original invoice's entry is in your books. Colombian notes carry the reason and the full reference to the original invoice that DIAN requires.
 - **Positions with several holders.** A position can now hold more than one person, up to a capacity you set, and belongs to a department. Each holder's assignment is recorded with its dates, and a position cannot be deleted while someone holds it.
 - **Archive notifications.** In the Tools inbox you can archive and unarchive notifications, one at a time or a whole page, and switch to an Archived view. Archiving is per reader and never deletes anything.
@@ -31,6 +32,8 @@ These changes are complete and verified, and they reach you with the next releas
 - **Selling courses.** When the buyer pays for a course, they are enrolled, and a full refund ends the enrollment. Each enrollment is active or revoked.
 - **Banners.** Create banner sets in Studio and place them on your site's pages and posts. A visitor who clicks a banner is taken to its link.
 - **Invoice-number range health.** Your invoice-number ranges show when they are expiring or nearly used up, and your billing administrators are notified when a range runs low and when no usable range is left for an automatic invoice.
+- **Bulletins read per reader.** On your workspace's bulletin board, a bulletin shows as read only for the people who have read it.
+- **Gigs and the employer directory.** Gigs move through a status lifecycle, and an employer profile is listed in the public employer directory only when its owner turns that on.
 
 ### Changed
 
@@ -38,10 +41,14 @@ These changes are complete and verified, and they reach you with the next releas
 - **For developers: the legacy token endpoint is turned off.** `/api/v2/OAuth/Token`, which issued tokens for a client ID and secret, is off by default. There is no replacement for machine-to-machine sign-in in this release, so an integration that depends on it should contact us before upgrading.
 - **Studio has a new look**, built on the latest version of its design system, and its pages now load their data through the platform's API.
 - **Grids now show names instead of raw identifiers**, so a related record reads as its name, not a code.
-- **Every document keeps its own currency.** The platform no longer falls back to US dollars anywhere a document has a currency of its own.
+- **Every document keeps its own currency.** The platform no longer falls back to US dollars anywhere a document has a currency of its own, and public item prices are given in the item's own currency.
 - **New workspaces choose their currency.** When you create a workspace you pick its currency, and its carts and documents use it.
 - **Approvals are always decided by a person.** An approver must be a person, not an automated account, and each approver holds one seat per approval stage.
 - The order summary now shows the workspace, the total and the date, and the sales and logistics pages use consistent icons.
+- **Invoices are issued from Studio.** The Close and Mark as paid actions, which never saved, are removed. A payment you record does not mark an invoice as paid.
+- **Pages without code.** In a workspace that is not enabled for code, a page saved from the visual builder or from Live Edit is stored as static HTML.
+- **For operators: the health checks dashboard is back.** Administrators of the root workspace can open `/health-ui` and read the detailed feed at `/health-checks`. See [Check health](~/Fundamentals/Hosting.md#check-health).
+- **For operators: new installs start in production mode.** The web installer no longer turns on development mode. Development mode is on only for a host that runs in the Development environment.
 - **For developers: Mercado Pago card routes.** `PUT /api/v2/Integrations/MercadoPago/Cards/Update` is retired and answers `410 Gone` with a link to its successor, `PUT .../Cards/UpdateByToken`, which updates a saved card from a Mercado Pago card token (`customerId` and `cardId` in the query). `PUT .../Cards/Delete` now takes `customerId` and `cardId` in the query and answers `400` when either is missing.
 - **For developers: retired payment routes.** These routes now answer `410 Gone` with a `Deprecation` header and a `Link` to their successor. None of them reads a request body.
   - Mercado Pago refunds: `POST .../MercadoPago/Refunds/Create`, `POST .../MercadoPago/AdvancedPayments/Refund` and `POST .../MercadoPago/AdvancedPayments/RefundAll` (refund through `POST /api/v2/PaymentsService/ProviderOperations/{providerOperationId}/Refund`).
@@ -64,11 +71,18 @@ These changes are complete and verified, and they reach you with the next releas
 - The administration pages load and save settings correctly, the users list no longer reloads every row, and the server memory gauge no longer slows the server down.
 - The workflow details panel no longer shows a developer note.
 - The page you are on is now announced to screen readers.
+- Quotes, orders and deals show their amounts in the document's own currency. You can create a price list and reopen a quote from Studio, and the orders list shows each order's number.
+- Blog posts publish correctly: a post's body, excerpt and search fields are saved, and a post belongs to one of your own portals.
+- Analytics totals leave out deleted invoices, contacts and stock items, and never add together payment amounts in different currencies.
 
 ### Security
 
 - Sign-in hardening: an account with two-factor authentication can no longer sign in with its password alone on any path, a wrong password is refused on every path, and repeated failures always lock the account.
-- Orders, invoices, payments and quotes read through a wallet are shown only to the wallet's owner.
+- Everything read through a wallet, including its balance, is shown only to the wallet's owner.
+- A payment can name only an order your workspace owns and an invoice your workspace issued or that was addressed to it, and a named sending wallet must be your own.
+- A call that needs a workspace permission is refused when it does not name a workspace.
+- A workspace that is not enabled for code can no longer have code compiled or run through any page, preview or saved page.
+- Server errors no longer return internal details to API clients.
 - Contact records never carry the sign-in provider's access token.
 - Sign-in tokens for AI connectors are now checked more strictly.
 

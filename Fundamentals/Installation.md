@@ -66,7 +66,7 @@ Make sure you have:
 
 12. **Set the production settings. This step is required.** Edit the `suitesettings.json` in your `config` folder:
 
-    - **Turn off development mode.** The installer turns on development mode. Set `ABP` > `DevMode` > `Enable` to `false`. You can instead set the environment variable `ABSUITE_DEV_MODE_ENABLED` to `false`.
+    - **Check that development mode is off.** On the published image, which runs in the `Production` environment, the installer saves `ABP` > `DevMode` > `Enable` as `false`. Keep it that way in production. You can also set the environment variable `ABSUITE_DEV_MODE_ENABLED` to `false`.
     - **Turn on messaging, the outbox and the inbox.** Set `ABP` > `Messaging` > `Enable` to `true`, `ABP` > `Messaging` > `EnableDistributedEvents` to `false`, `ABP` > `Outbox` > `Enable` to `true` and `ABP` > `Inbox` > `Enable` to `true`. Without them, business events are not delivered. See [System requirements](~/get-started/Requirements.md#messaging).
 
     Then restart the container, so it copies the edited file into place:
