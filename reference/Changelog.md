@@ -16,9 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
-## [Unreleased]
+## [2.4.1] - 2026-10-13
 
-These changes are complete and verified, and they reach you with the next release.
+A security update for 2.4.0. Update to it if you run 2.4.0.
+
+### Security
+
+- Sign-in applications and their authorizations are read and changed only within the workspace that owns them.
+
+## [2.4.0] - 2026-10-13
+
+The commercial release. It reached production on 2026-10-13, followed the same day by 2.4.1.
 
 ### Added
 

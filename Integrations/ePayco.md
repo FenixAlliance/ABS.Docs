@@ -73,7 +73,7 @@ Call `POST /api/v2/PaymentsService/PaymentProviderRegistrations/{registrationId}
 
 ## Retired routes
 
-Older ePayco routes for processing payments, withdrawals and synchronization are retired. They answer `410 Gone` with a link to their successor. For the full list, see the [changelog](~/reference/Changelog.md#unreleased).
+Older ePayco routes for processing payments, withdrawals and synchronization are retired. They answer `410 Gone` with a link to their successor. For the full list, see the [changelog](~/reference/Changelog.md#240---2026-10-13).
 
 ## For developers
 

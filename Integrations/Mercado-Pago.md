@@ -74,7 +74,7 @@ Each request is sent once. If you repeat it, the request is refused with a confl
 
 ## Retired routes
 
-Older Mercado Pago routes for payments, preferences, refunds, cancellations and card tokens are retired. They answer `410 Gone` with a link to their successor. For the full list, see the [changelog](~/reference/Changelog.md#unreleased).
+Older Mercado Pago routes for payments, preferences, refunds, cancellations and card tokens are retired. They answer `410 Gone` with a link to their successor. For the full list, see the [changelog](~/reference/Changelog.md#240---2026-10-13).
 
 ## For developers
 
