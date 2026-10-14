@@ -20,9 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 A security update for 2.4.0. Update to it if you run 2.4.0.
 
-### Security
+### Security fixes
 
-- Sign-in applications and their authorizations are read and changed only within the workspace that owns them.
+- Improved protection of sign-in applications between workspaces.
 
 ## [2.4.0] - 2026-10-13
 
