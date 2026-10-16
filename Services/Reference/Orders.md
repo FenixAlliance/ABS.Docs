@@ -19,7 +19,7 @@ The Orders service lets you create and manage the orders your workspace sells, a
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
-- **Permissions:** `orders_read`, `orders_create`, `orders_update` and `orders_delete`; `carts_create` to submit a cart; `email_send` to preview or send the order email.
+- **Permissions:** `orders_read`, `orders_create`, `orders_update` and `orders_delete`; `email_send` to preview or send the order email. Submitting your own cart, and reading the orders you received personally, run as you and need only sign-in.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -38,15 +38,15 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/OrdersService/Orders` | `orders_create` | Workspace member | Creates a new order. |
 | GET | `/api/v2/OrdersService/Orders/Count` | `orders_read` | Workspace member | Gets the count of orders for a tenant. |
 | GET | `/api/v2/OrdersService/Orders/Extended` | `orders_read` | Workspace member | Gets a list of extended orders for a tenant. |
-| GET | `/api/v2/OrdersService/Orders/Me/Received` | `orders_read` | Signed-in user, or workspace member with a workspace | List the orders the current user received. |
-| GET | `/api/v2/OrdersService/Orders/Me/Received/Count` | `orders_read` | Signed-in user, or workspace member with a workspace | Count the orders the current user received. |
-| GET | `/api/v2/OrdersService/Orders/Me/Received/{orderId}` | `orders_read` | Signed-in user, or workspace member with a workspace | Get an order the current user received. |
-| GET | `/api/v2/OrdersService/Orders/Me/Received/{orderId}/Lines` | `orders_read` | Signed-in user, or workspace member with a workspace | List the lines of an order the current user received. |
+| GET | `/api/v2/OrdersService/Orders/Me/Received` |  | Signed-in user | List the orders the current user received. |
+| GET | `/api/v2/OrdersService/Orders/Me/Received/Count` |  | Signed-in user | Count the orders the current user received. |
+| GET | `/api/v2/OrdersService/Orders/Me/Received/{orderId}` |  | Signed-in user | Get an order the current user received. |
+| GET | `/api/v2/OrdersService/Orders/Me/Received/{orderId}/Lines` |  | Signed-in user | List the lines of an order the current user received. |
 | GET | `/api/v2/OrdersService/Orders/Received` | `orders_read` | Signed-in user, or workspace member with a workspace | List the orders the tenant received. |
 | GET | `/api/v2/OrdersService/Orders/Received/Count` | `orders_read` | Signed-in user, or workspace member with a workspace | Count the orders the tenant received. |
 | GET | `/api/v2/OrdersService/Orders/Received/{orderId}` | `orders_read` | Signed-in user, or workspace member with a workspace | Get an order the tenant received. |
 | GET | `/api/v2/OrdersService/Orders/Received/{orderId}/Lines` | `orders_read` | Signed-in user, or workspace member with a workspace | List the lines of an order the tenant received. |
-| POST | `/api/v2/OrdersService/Orders/SubmitCart` | `carts_create` | Signed-in user, or workspace member with a workspace | Submits a cart and creates an order. |
+| POST | `/api/v2/OrdersService/Orders/SubmitCart` |  | Signed-in user | Submits a cart and creates an order. |
 | GET | `/api/v2/OrdersService/Orders/{orderId}` | `orders_read` | Workspace member | Gets a specific order by ID. |
 | PUT | `/api/v2/OrdersService/Orders/{orderId}` | `orders_update` | Workspace member | Updates an existing order. |
 | PATCH | `/api/v2/OrdersService/Orders/{orderId}` | `orders_update` | Workspace member | Partially updates an existing order. |
@@ -63,5 +63,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | DELETE | `/api/v2/OrdersService/Orders/{orderId}/Lines/{orderLineId}` | `orders_update` | Workspace member | Deletes an order line. |
 | PUT | `/api/v2/OrdersService/Orders/{orderId}/Lines/{orderLineId}/Calculate` | `orders_update` | Workspace member | Calculates totals for an order line. |
 
-Generated from the source at commit 05da3e4078.
+Generated from the source at commit 53563a0915.
 <!-- generated:end -->

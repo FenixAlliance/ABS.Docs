@@ -19,7 +19,7 @@ The Quotes service lets you create, price and send quotes, and lets the customer
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
 - **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, on every workspace call.
-- **Permissions:** `quotes_read`, `quotes_create`, `quotes_update` and `quotes_delete` for quotes and their lines; `orders_create` to place an order from a received quote; `email_send` to preview or send the quote email.
+- **Permissions:** `quotes_read`, `quotes_create`, `quotes_update` and `quotes_delete` for quotes and their lines; `orders_create` to place an order from a quote your workspace received; `email_send` to preview or send the quote email. Reading the quotes you received personally, and placing an order from one, run as you and need only sign-in.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -38,11 +38,11 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/QuotesService/Quotes` | `quotes_create` | Workspace member | Create a new quote. |
 | GET | `/api/v2/QuotesService/Quotes/Count` | `quotes_read` | Workspace member | Get the count of quotes. |
 | GET | `/api/v2/QuotesService/Quotes/Extended` | `quotes_read` | Workspace member | Get a list of extended quotes. |
-| GET | `/api/v2/QuotesService/Quotes/Me/Received` | `quotes_read` | Signed-in user, or workspace member with a workspace | List the quotes the current user received. |
-| GET | `/api/v2/QuotesService/Quotes/Me/Received/Count` | `quotes_read` | Signed-in user, or workspace member with a workspace | Count the quotes the current user received. |
-| GET | `/api/v2/QuotesService/Quotes/Me/Received/{quoteId}` | `quotes_read` | Signed-in user, or workspace member with a workspace | Get a quote the current user received. |
-| GET | `/api/v2/QuotesService/Quotes/Me/Received/{quoteId}/Lines` | `quotes_read` | Signed-in user, or workspace member with a workspace | List the lines of a quote the current user received. |
-| POST | `/api/v2/QuotesService/Quotes/Me/{quoteId}/PlaceOrder` | `orders_create` | Signed-in user, or workspace member with a workspace | Place an order from a quote the current user received. |
+| GET | `/api/v2/QuotesService/Quotes/Me/Received` |  | Signed-in user | List the quotes the current user received. |
+| GET | `/api/v2/QuotesService/Quotes/Me/Received/Count` |  | Signed-in user | Count the quotes the current user received. |
+| GET | `/api/v2/QuotesService/Quotes/Me/Received/{quoteId}` |  | Signed-in user | Get a quote the current user received. |
+| GET | `/api/v2/QuotesService/Quotes/Me/Received/{quoteId}/Lines` |  | Signed-in user | List the lines of a quote the current user received. |
+| POST | `/api/v2/QuotesService/Quotes/Me/{quoteId}/PlaceOrder` |  | Signed-in user | Place an order from a quote the current user received. |
 | GET | `/api/v2/QuotesService/Quotes/Received` | `quotes_read` | Signed-in user, or workspace member with a workspace | List the quotes the tenant received. |
 | GET | `/api/v2/QuotesService/Quotes/Received/Count` | `quotes_read` | Signed-in user, or workspace member with a workspace | Count the quotes the tenant received. |
 | GET | `/api/v2/QuotesService/Quotes/Received/{quoteId}` | `quotes_read` | Signed-in user, or workspace member with a workspace | Get a quote the tenant received. |
@@ -69,5 +69,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | POST | `/api/v2/QuotesService/Quotes/{quoteId}/PlaceOrder` | `orders_create` | Signed-in user, or workspace member with a workspace | Place an order from a quote the tenant received. |
 | PUT | `/api/v2/QuotesService/Quotes/{quoteId}/Reopen` | `quotes_update` | Workspace member | Reopen a closed quote. |
 
-Generated from the source at commit 05da3e4078.
+Generated from the source at commit 53563a0915.
 <!-- generated:end -->

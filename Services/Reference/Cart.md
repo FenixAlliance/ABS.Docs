@@ -37,7 +37,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
 | GET | `/api/v2/CartService/Carts/ActingCart` |  | Public | Get the acting cart |
-| GET | `/api/v2/CartService/Carts/BusinessCart/{tenantId}` |  | Public, or workspace member with a workspace | Get the business cart |
+| GET | `/api/v2/CartService/Carts/BusinessCart/{tenantId}` |  | Signed-in user, or workspace member with a workspace | Get the business cart |
 | GET | `/api/v2/CartService/Carts/GuestCart` |  | Public | Get the guest cart |
 | GET | `/api/v2/CartService/Carts/UserCart` |  | Signed-in user | Get the current user's cart |
 | GET | `/api/v2/CartService/Carts/{cartId}` |  | Public | Get all business owned contacts |
@@ -124,5 +124,5 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/CartService/WishLists/{wishListId}/Details` |  | Public | Get wish list details |
 | GET | `/api/v2/CartService/WishLists/{wishListId}/Records` |  | Public | Get wish list item records |
 
-Generated from the source at commit 05da3e4078.
+Generated from the source at commit 53563a0915.
 <!-- generated:end -->

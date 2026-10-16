@@ -19,8 +19,8 @@ The Wallets service lets you read a wallet and the business records that flow th
 ## Before you call it
 
 - **Authentication:** sign in with your email and password to get an access token, and send it as `Authorization: Bearer <token>`. You can also get a token through the OpenID Connect flows in [Connect protocols](~/Capabilities/Alliance-Passport-Service/Connect-protocols.md). See [REST API development](~/Web-API-Development/REST-API-Development.md) for the request basics.
-- **Workspace:** send the workspace ID in the `X-TenantId` header, or as the `tenantId` query value, when you work with a workspace's wallet.
-- **Permissions:** `wallets_read` and `wallets_create` for the wallet, its chargebacks and its withdrawals; `orders_read`, `quotes_read` and `invoices_read` for its commercial records; `payments_read` and `payments_create` for its payments and refunds; the read, create, update and delete permissions of `bank_accounts`, `locations` and `payment_tokens` for its details, for example `bank_accounts_read`.
+- **Workspace:** a wallet's bank accounts, payment tokens and locations take the workspace ID, in the `X-TenantId` header or as the `tenantId` query value, when you work with a workspace's wallet. Every other wallet call works on your own wallet, as you.
+- **Permissions:** with a workspace, the read, create, update and delete permissions of `bank_accounts`, `locations` and `payment_tokens`, for example `bank_accounts_read`. The calls on your own wallet need only sign-in.
 
 The full request and response schemas are in the API reference of your instance at `/api/v2/documentation`.
 
@@ -41,7 +41,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Details |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}` |  | Signed-in user | Get Wallet Details |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts` | `bank_accounts_read` | Signed-in user, or workspace member with a workspace | Get Wallet Bank Accounts |
 | POST | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts` | `bank_accounts_create` | Signed-in user, or workspace member with a workspace | Create Wallet Bank Account |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts/Count` | `bank_accounts_read` | Signed-in user, or workspace member with a workspace | Get Wallet Bank Accounts Count |
@@ -49,34 +49,34 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PUT | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts/{bankAccountId}` | `bank_accounts_update` | Signed-in user, or workspace member with a workspace | Update Wallet Bank Account |
 | PATCH | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts/{bankAccountId}` | `bank_accounts_update` | Signed-in user, or workspace member with a workspace | Patch Wallet Bank Account |
 | DELETE | `/api/v2/WalletsService/Wallets/{walletId}/BankAccounts/{bankAccountId}` | `bank_accounts_delete` | Signed-in user, or workspace member with a workspace | Delete Wallet Bank Account |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Chargebacks` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Chargebacks |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Chargebacks/Count` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Chargebacks Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Wallet Invoices |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Count` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Wallet Invoices Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Incoming` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Incoming Wallet Invoices |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Incoming/Count` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Incoming Wallet Invoices Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Outgoing` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Outgoing Wallet Invoices |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Outgoing/Count` | `invoices_read` | Signed-in user, or workspace member with a workspace | Get Outgoing Wallet Invoices Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Chargebacks` |  | Signed-in user | Get Wallet Chargebacks |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Chargebacks/Count` |  | Signed-in user | Get Wallet Chargebacks Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices` |  | Signed-in user | Get Wallet Invoices |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Count` |  | Signed-in user | Get Wallet Invoices Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Incoming` |  | Signed-in user | Get Incoming Wallet Invoices |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Incoming/Count` |  | Signed-in user | Get Incoming Wallet Invoices Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Outgoing` |  | Signed-in user | Get Outgoing Wallet Invoices |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Invoices/Outgoing/Count` |  | Signed-in user | Get Outgoing Wallet Invoices Count |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Locations` | `locations_read` | Signed-in user, or workspace member with a workspace | Get Wallet Locations |
 | POST | `/api/v2/WalletsService/Wallets/{walletId}/Locations` | `locations_create` | Signed-in user, or workspace member with a workspace | Create Wallet Location |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Locations/Count` | `locations_read` | Signed-in user, or workspace member with a workspace | Get Wallet Locations Count |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Locations/{locationId}` | `locations_read` | Signed-in user, or workspace member with a workspace | Get Wallet Location |
 | PUT | `/api/v2/WalletsService/Wallets/{walletId}/Locations/{locationId}` | `locations_update` | Signed-in user, or workspace member with a workspace | Update Wallet Location |
 | DELETE | `/api/v2/WalletsService/Wallets/{walletId}/Locations/{locationId}` | `locations_delete` | Signed-in user, or workspace member with a workspace | Delete Wallet Location |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders` | `orders_read` | Signed-in user, or workspace member with a workspace | Get Wallet Orders |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders/Count` | `orders_read` | Signed-in user, or workspace member with a workspace | Get Wallet Orders Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders/Extended` | `orders_read` | Signed-in user, or workspace member with a workspace | Get Wallet Extended Orders |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Wallet Payments |
-| POST | `/api/v2/WalletsService/Wallets/{walletId}/Payments` | `payments_create` | Signed-in user, or workspace member with a workspace | Create Wallet Payment |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Count` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Wallet Payments Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Incoming` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Incoming Payments |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Incoming/Count` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Incoming Payments Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Outgoing` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Outgoing Payments |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Outgoing/Count` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Outgoing Payments Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Quotes` | `quotes_read` | Signed-in user, or workspace member with a workspace | Get Wallet Quotes |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Quotes/Count` | `quotes_read` | Signed-in user, or workspace member with a workspace | Get Wallet Quotes Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Refunds` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Wallet Refunds |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Refunds/Count` | `payments_read` | Signed-in user, or workspace member with a workspace | Get Wallet Refunds Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders` |  | Signed-in user | Get Wallet Orders |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders/Count` |  | Signed-in user | Get Wallet Orders Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Orders/Extended` |  | Signed-in user | Get Wallet Extended Orders |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments` |  | Signed-in user | Get Wallet Payments |
+| POST | `/api/v2/WalletsService/Wallets/{walletId}/Payments` |  | Signed-in user | Create Wallet Payment |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Count` |  | Signed-in user | Get Wallet Payments Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Incoming` |  | Signed-in user | Get Incoming Payments |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Incoming/Count` |  | Signed-in user | Get Incoming Payments Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Outgoing` |  | Signed-in user | Get Outgoing Payments |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Payments/Outgoing/Count` |  | Signed-in user | Get Outgoing Payments Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Quotes` |  | Signed-in user | Get Wallet Quotes |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Quotes/Count` |  | Signed-in user | Get Wallet Quotes Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Refunds` |  | Signed-in user | Get Wallet Refunds |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Refunds/Count` |  | Signed-in user | Get Wallet Refunds Count |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Tokens` | `payment_tokens_read` | Signed-in user, or workspace member with a workspace | Get Wallet Tokens |
 | POST | `/api/v2/WalletsService/Wallets/{walletId}/Tokens` | `payment_tokens_create` | Signed-in user, or workspace member with a workspace | Create Wallet Token |
 | GET | `/api/v2/WalletsService/Wallets/{walletId}/Tokens/Count` | `payment_tokens_read` | Signed-in user, or workspace member with a workspace | Get Wallet Tokens Count |
@@ -84,11 +84,11 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | PUT | `/api/v2/WalletsService/Wallets/{walletId}/Tokens/{tokenId}` | `payment_tokens_update` | Signed-in user, or workspace member with a workspace | Update Wallet Token |
 | PATCH | `/api/v2/WalletsService/Wallets/{walletId}/Tokens/{tokenId}` | `payment_tokens_update` | Signed-in user, or workspace member with a workspace | Patch Wallet Token |
 | DELETE | `/api/v2/WalletsService/Wallets/{walletId}/Tokens/{tokenId}` | `payment_tokens_delete` | Signed-in user, or workspace member with a workspace | Delete Wallet Token |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/WithdrawRequests` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Withdraw Requests |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/WithdrawRequests/Count` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Withdraw Requests Count |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Withdraws |
-| POST | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws` | `wallets_create` | Signed-in user, or workspace member with a workspace | Create Wallet Withdraw Request |
-| GET | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws/Count` | `wallets_read` | Signed-in user, or workspace member with a workspace | Get Wallet Withdraws Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/WithdrawRequests` |  | Signed-in user | Get Wallet Withdraw Requests |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/WithdrawRequests/Count` |  | Signed-in user | Get Wallet Withdraw Requests Count |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws` |  | Signed-in user | Get Wallet Withdraws |
+| POST | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws` |  | Signed-in user | Create Wallet Withdraw Request |
+| GET | `/api/v2/WalletsService/Wallets/{walletId}/Withdraws/Count` |  | Signed-in user | Get Wallet Withdraws Count |
 
-Generated from the source at commit 05da3e4078.
+Generated from the source at commit 53563a0915.
 <!-- generated:end -->

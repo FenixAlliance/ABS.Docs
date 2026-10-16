@@ -849,6 +849,16 @@ foreach ($dir in $serviceDirs) {
 					}
 				}
 				if ($classAnon -or ($at.Items | Where-Object Name -eq 'AllowAnonymous')) { if (-not $access.Contains('Anonymous')) { $access.Add('Anonymous') } }
+				# An action that sends Maybe.None as the request's tenant, or names no tenant at all, never reaches the use
+				# case's workspace branch: it always runs as the signed-in user. The workspace branch's permissions do not
+				# apply to that route.
+				$passesNoTenant = ($bodyM -match 'new\s+\w+\s*\(\s*Maybe\.None\b') -or ($bodyM -notmatch '(?i)\btenantId\b|GetRootTenantId')
+				if ($passesNoTenant -and $access.Contains('Tenant') -and $access.Contains('User')) {
+					[void]$access.Remove('Tenant')
+					if ($perms.Count -gt 0) { Add-Flag 'TenantNotPassed' $svcName "$where.$methodName" "Action passes no tenant to the use case; dropped the workspace-branch permissions $($perms -join ', ')." }
+					$perms.Clear()
+					if ($permSource -ne 'dynamic') { $permSource = 'none' }
+				}
 
 				$controllerRoot = $bodyM -match 'GetRootTenantId\s*\(' -and ($access -contains 'Tenant')
 				# Root-only enforced deeper (in an application service) is invisible to the use-case scan, but the action's
