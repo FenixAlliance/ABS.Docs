@@ -1,8 +1,8 @@
 # AI credit packs
 
-From version 2.7.0 a workspace on a paid plan can buy prepaid AI credits in packs.
+> **Coming.** Prepaid AI credit packs are built and switched off in 2.7.0. This page describes how they will work. We will announce when they are on.
 
-> Credit packs appear only where they are switched on for your workspace. If you don't see them on the usage page, they are not available to you yet.
+A workspace on a paid plan will be able to buy prepaid AI credits in packs.
 
 ## The packs
 

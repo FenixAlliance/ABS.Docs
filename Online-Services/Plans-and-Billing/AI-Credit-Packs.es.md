@@ -1,8 +1,8 @@
 # Paquetes de créditos de IA
 
-Desde la versión 2.7.0 un espacio de trabajo con un plan de pago puede comprar créditos de IA prepagados en paquetes.
+> **Próximamente.** Los paquetes de créditos de IA prepagados ya están construidos y permanecen apagados en la 2.7.0. Esta página explica cómo van a funcionar. Avisaremos cuando estén encendidos.
 
-> Los paquetes aparecen solo donde están activados para tu espacio. Si no los ves en la página de uso, todavía no están disponibles para ti.
+Un espacio de trabajo con un plan de pago podrá comprar créditos de IA prepagados en paquetes.
 
 ## Los paquetes
 
