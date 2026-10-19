@@ -22,6 +22,7 @@ You need permission to create and update courses. Courses are in the Learning mo
    - **SKU** and **Version**.
    - **Start Date** and **End Date**, and **Inscriptions Start** and **Inscriptions End** for the enrollment period.
    - **Max Enrollments**.
+   - **Price** and **Currency**, if you sell the course. A price of 0 means the course is free; a price can't be negative.
    - **Total Effort (Weeks)**, **Hours Per Week** and **Total Effort (Hours)**.
 5. Select **Create**.
 
@@ -58,9 +59,8 @@ Published courses appear in the public course catalog. The public catalog shows 
 
 ## Edit or delete a course
 
-- To change a course, open it with **View**, change its details and select **Save**. You can also select **Edit** from the course list.
-- To delete a course from the course list, select **Delete** and confirm.
-- To delete a course from its details, select **Delete**. The course is deleted at once, without a confirmation step.
+- To change a course, open it with **View**, change its details and select **Save**. You can also select **Edit** from the course list. The edit form includes **Price** and **Currency**.
+- To delete a course, select **Delete**, either in the course list or in the course details, and confirm.
 - Deleting a course cannot be undone.
 
 ## Related
@@ -68,3 +68,4 @@ Published courses appear in the public course catalog. The public catalog shows 
 - [Learning overview](../Learning.md)
 - [Students, instructors and enrollments](Students-and-instructors.md)
 - [Sell courses](Selling-courses.md)
+- [Crear y publicar un curso (español)](Courses.es.md)

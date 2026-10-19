@@ -29,7 +29,7 @@ See [Create and publish a course](Learning/Courses.md).
 ### Organize your catalog
 
 - **Categories** group courses by subject.
-- **Collections** group related courses under one name, for example a learning path.
+- **Collections** group related courses under one name, for example a learning path. You create collections in Studio. Adding courses to a collection, or removing them, is done through the Learning service of the REST API (`/api/v2/LearningService/CourseCollections/{collectionId}/Courses`). Coming: adding and removing a collection's courses in Studio.
 
 ### Manage instructors and students
 
@@ -39,13 +39,13 @@ See [Students, instructors and enrollments](Learning/Students-and-instructors.md
 
 ### Sell courses
 
-A course is part of your catalog, so you can sell it like any other item. When the buyer pays, they are enrolled in the course. A full refund ends the enrollment. To give a learner a course at no cost, enroll them yourself.
+A course is part of your catalog, so you can sell it like any other item. You set its price and currency in Studio. When the buyer pays, they are enrolled in the course. A full refund ends the enrollment. To give a learner a course at no cost, enroll them yourself.
 
 See [Sell courses](Learning/Selling-courses.md).
 
 ### Recognize completion
 
-You can design certificate templates for a course and issue completion certificates to your learners. Learners see only their own certificates in Studio.
+You can design certificate templates for a course and issue completion certificates to your learners. Staff issue certificates; learners see only their own certificates in Studio.
 
 ### Keep learners informed
 
@@ -58,11 +58,19 @@ Every enrollment has one of three statuses:
 | Status | What it means |
 |---|---|
 | Active | The learner has access to the course. |
-| Completed | Reserved for course completion, which is planned. Today enrollments are Active or Revoked. |
+| Completed | Coming. Today no enrollment reaches this status: enrollments are Active or Revoked. |
 | Revoked | Access was withdrawn, for example after a full refund. |
 
 A revoked enrollment is final. If the learner joins the course again, for example by buying it again, they get a new enrollment.
 
-## What is planned
+## Coming
 
-Grading and quizzes for courses are planned. See the [roadmap](../get-started/Roadmap.md).
+- Grading and quizzes for courses.
+- Learner progress, learning hours and pending tasks (the student dashboard shows **Not available yet** for these today).
+- Course completion, and certificates issued automatically on completion.
+- A free course that enrolls the learner through checkout.
+- Adding and removing a collection's courses in Studio.
+
+See the [roadmap](../get-started/Roadmap.md).
+
+- [Aprendizaje (español)](Learning.es.md)

@@ -26,9 +26,11 @@ Each course on the invoice creates one enrollment. If the buyer already has acce
 
 To give a learner a course at no cost, enroll them yourself. See [Students and instructors](Students-and-instructors.md).
 
+Coming: a free course that enrolls the learner through checkout, with no invoice to pay.
+
 ## Prices
 
-You set a course's regular price, and its currency, through the Learning service of the REST API (`/api/v2/LearningService/Courses`). A course you create in Studio starts with no price; set one before you sell it.
+Set a course's **Price** and **Currency** in Studio, in the course's create or edit form (see [Create and publish a course](Courses.md)). You can also set them through the Learning service of the REST API (`/api/v2/LearningService/Courses`). A price can't be negative, and the currency must be one of the currencies the platform knows; otherwise the course is not saved. A course with no price is free.
 
 ## Refunds
 
@@ -52,3 +54,4 @@ A revoked enrollment is final. If the learner buys the course again, they get a 
 - [Create and publish a course](Courses.md)
 - [Students, instructors and enrollments](Students-and-instructors.md)
 - [Invoices](../Accounting/Billing/Billing-Records/Invoices.md)
+- [Vender cursos (español)](Selling-courses.es.md)

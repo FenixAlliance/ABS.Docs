@@ -9,14 +9,14 @@ The Learning service lets you build and run courses, manage the people who teach
 ## What you can do
 
 - **Build courses:** create and update courses and their sections, units, pages, wikis and articles, libraries, handouts, files and assignments. See [Learning](~/Modules/Learning.md) and [Create and publish a course](~/Modules/Learning/Courses.md).
-- **Organize your catalog:** group courses in categories and collections.
+- **Organize your catalog:** group courses in categories and collections, and add courses to a collection or remove them (`CourseCollections/{collectionId}/Courses`; both the collection and the course must belong to your workspace).
 - **Manage people:** keep student and instructor profiles, enroll students, organize them in cohorts, and set up each course team. See [Students, instructors and enrollments](~/Modules/Learning/Students-and-instructors.md).
 - **Publish a course catalog:** read the public courses without signing in, so a website can list what you teach. To charge for a course, see [Sell courses](~/Modules/Learning/Selling-courses.md).
 - **Recognize completion:** design certificate templates and issue completion certificates.
 - **Keep learners informed:** post course updates and run course forums.
 - **Show learners their own work:** list the signed-in user's courses, enrollments and certificates, check whether they are enrolled in a course, and read the assignments of a course they take.
 
-Grading and quizzes are planned; see the [roadmap](~/get-started/Roadmap.md).
+Coming: grading and quizzes, and learner progress. Until then, the reads for a learner's completed hours and pending tasks answer `501 Not Implemented`. See the [roadmap](~/get-started/Roadmap.md).
 
 ## Before you call it
 
