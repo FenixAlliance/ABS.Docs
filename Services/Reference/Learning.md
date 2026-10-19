@@ -103,6 +103,7 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/LearningService/CourseCertificates/Template` |  | Signed-in user, or workspace member with a workspace | Get all certificate templates |
 | POST | `/api/v2/LearningService/CourseCertificates/Template` | `courses_create` | Workspace member | Create a certificate template |
 | GET | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_read` | Workspace member | Get certificate template by ID |
+| PUT | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_update` | Workspace member | Update a certificate template |
 | PATCH | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_update` | Workspace member | Patch a certificate template |
 | DELETE | `/api/v2/LearningService/CourseCertificates/Template/{courseCertificateTemplateId}` | `courses_delete` | Workspace member | Delete a certificate template |
 | GET | `/api/v2/LearningService/CourseCertificates/{courseCertificateId}` | `courses_read` | Workspace member | Get course certificate by ID |
@@ -132,6 +133,9 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 | GET | `/api/v2/LearningService/CourseCollections/{collectionId}` | `courses_read` | Workspace member | Get course collection by ID |
 | PUT | `/api/v2/LearningService/CourseCollections/{collectionId}` | `courses_update` | Workspace member | Update a course collection |
 | DELETE | `/api/v2/LearningService/CourseCollections/{collectionId}` | `courses_delete` | Workspace member | Delete a course collection |
+| GET | `/api/v2/LearningService/CourseCollections/{collectionId}/Courses` | `courses_read` | Workspace member | List the courses in a course collection |
+| POST | `/api/v2/LearningService/CourseCollections/{collectionId}/Courses/{courseId}` | `courses_update` | Workspace member | Add a course to a course collection |
+| DELETE | `/api/v2/LearningService/CourseCollections/{collectionId}/Courses/{courseId}` | `courses_update` | Workspace member | Remove a course from a course collection |
 
 ## CourseContentGroups
 
@@ -370,13 +374,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/InstructorProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
-| POST | `/api/v2/LearningService/InstructorProfiles` | `courses_create` | Workspace member |  |
-| GET | `/api/v2/LearningService/InstructorProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
-| GET | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_read` | Workspace member |  |
-| PUT | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member |  |
-| PATCH | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member |  |
-| DELETE | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_delete` | Workspace member |  |
+| GET | `/api/v2/LearningService/InstructorProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace | List instructor profiles |
+| POST | `/api/v2/LearningService/InstructorProfiles` | `courses_create` | Workspace member | Create an instructor profile |
+| GET | `/api/v2/LearningService/InstructorProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace | Count instructor profiles |
+| GET | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_read` | Workspace member | Get an instructor profile by ID |
+| PUT | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member | Update an instructor profile (full replace) |
+| PATCH | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_update` | Workspace member | Patch an instructor profile (JSON Patch) |
+| DELETE | `/api/v2/LearningService/InstructorProfiles/{instructorProfileId}` | `courses_delete` | Workspace member | Delete an instructor profile |
 
 ## Me
 
@@ -403,13 +407,13 @@ Columns: **Permission** is the permission the caller needs (blank when the endpo
 
 | Verb | Path | Permission | Who can call | Summary |
 | --- | --- | --- | --- | --- |
-| GET | `/api/v2/LearningService/StudentProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
-| POST | `/api/v2/LearningService/StudentProfiles` | `courses_create` | Workspace member |  |
-| GET | `/api/v2/LearningService/StudentProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace |  |
-| GET | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_read` | Workspace member |  |
-| PUT | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member |  |
-| PATCH | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member |  |
-| DELETE | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_delete` | Workspace member |  |
+| GET | `/api/v2/LearningService/StudentProfiles` | `courses_read` | Signed-in user, or workspace member with a workspace | List student profiles |
+| POST | `/api/v2/LearningService/StudentProfiles` | `courses_create` | Workspace member | Create a student profile |
+| GET | `/api/v2/LearningService/StudentProfiles/Count` | `courses_read` | Signed-in user, or workspace member with a workspace | Count student profiles |
+| GET | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_read` | Workspace member | Get a student profile by ID |
+| PUT | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member | Update a student profile (full replace) |
+| PATCH | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_update` | Workspace member | Patch a student profile (JSON Patch) |
+| DELETE | `/api/v2/LearningService/StudentProfiles/{studentProfileId}` | `courses_delete` | Workspace member | Delete a student profile |
 
-Generated from the source at commit 05da3e4078.
+Generated from the source at commit 71a747dd36.
 <!-- generated:end -->
