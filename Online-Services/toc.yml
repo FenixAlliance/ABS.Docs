@@ -11,3 +11,15 @@
     href: GraphQl-API.md
   - name: "Infinity Comex Marketplace"
     href: Infinity-Comex-Marketplace.md
+  - name: "Plans and billing"
+    items:
+    - name: "Changing your plan online"
+      href: Plans-and-Billing/Changing-Your-Plan.md
+    - name: "AI credit packs"
+      href: Plans-and-Billing/AI-Credit-Packs.md
+  - name: "Agents"
+    items:
+    - name: "Agent capabilities and limits"
+      href: Agents/Agent-Capabilities.md
+    - name: "Connect Claude, ChatGPT or Grok over MCP"
+      href: Agents/Connect-AI-Assistants-over-MCP.md
