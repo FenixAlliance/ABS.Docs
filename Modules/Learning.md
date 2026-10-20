@@ -29,7 +29,7 @@ See [Create and publish a course](Learning/Courses.md).
 ### Organize your catalog
 
 - **Categories** group courses by subject.
-- **Collections** group related courses under one name, for example a learning path. You create collections in Studio. Adding courses to a collection, or removing them, is done through the Learning service of the REST API (`/api/v2/LearningService/CourseCollections/{collectionId}/Courses`). Coming: adding and removing a collection's courses in Studio.
+- **Collections** group related courses under one name, for example a learning path. You create collections in Studio, under **Catalog** > **Collections**. To add or remove a collection's courses, select **Courses** in the collection's actions: the dialog lists its courses, lets you add one with the **Course** selector, and removes one with its remove button. Changing a collection's courses needs permission to update courses. You can also do it through the Learning service of the REST API (`/api/v2/LearningService/CourseCollections/{collectionId}/Courses`).
 
 ### Manage instructors and students
 
@@ -69,7 +69,6 @@ A revoked enrollment is final. If the learner joins the course again, for exampl
 - Learner progress, learning hours and pending tasks (the student dashboard shows **Not available yet** for these today).
 - Course completion, and certificates issued automatically on completion.
 - A free course that enrolls the learner through checkout.
-- Adding and removing a collection's courses in Studio.
 
 See the [roadmap](../get-started/Roadmap.md).
 

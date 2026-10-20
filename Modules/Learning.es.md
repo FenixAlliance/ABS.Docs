@@ -29,7 +29,7 @@ Consulta [Crear y publicar un curso](Learning/Courses.es.md).
 ### Organizar tu catálogo
 
 - Las **categorías** agrupan cursos por tema.
-- Las **colecciones** agrupan cursos relacionados bajo un nombre, por ejemplo una ruta de aprendizaje. Creas las colecciones en Studio. Agregar cursos a una colección, o quitarlos, se hace con el servicio Learning de la API REST (`/api/v2/LearningService/CourseCollections/{collectionId}/Courses`). Próximamente: agregar y quitar los cursos de una colección en Studio.
+- Las **colecciones** agrupan cursos relacionados bajo un nombre, por ejemplo una ruta de aprendizaje. Creas las colecciones en Studio, en **Catálogo** > **Colecciones**. Para agregar o quitar los cursos de una colección, selecciona **Cursos** en las acciones de la colección: el cuadro de diálogo lista sus cursos, te deja agregar uno con el selector **Curso** y quita uno con su botón de quitar. Cambiar los cursos de una colección requiere permiso para actualizar cursos. También puedes hacerlo con el servicio Learning de la API REST (`/api/v2/LearningService/CourseCollections/{collectionId}/Courses`).
 
 ### Gestionar instructores y estudiantes
 
@@ -69,7 +69,6 @@ Una inscripción revocada es definitiva. Si el estudiante vuelve al curso, por e
 - Progreso del estudiante, horas de aprendizaje y tareas pendientes (hoy el panel del estudiante muestra **Aún no disponible** para estos datos).
 - Finalización de cursos, y certificados emitidos automáticamente al completar un curso.
 - Un curso gratuito que inscribe al estudiante desde el proceso de pago.
-- Agregar y quitar los cursos de una colección en Studio.
 
 Consulta la [hoja de ruta](../get-started/Roadmap.md).
 
