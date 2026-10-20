@@ -4,7 +4,7 @@ From version 2.7.0 each workspace decides which built-in capabilities its agents
 
 ## Where to find it
 
-- **Nucleus Web:** **Workspace > Configuration > Policies** lists every capability with its switch and its limits (coming with the next Nucleus Web update).
+- **Nucleus Web:** **Workspace > Configuration > Policies** lists every capability with its switch and its limits.
 - **Studio:** **Tenants > your workspace > Settings > AI options** holds the workspace AI options described below.
 
 Anyone in the workspace can see the list. Changing a capability or its limits needs the permission to manage workspace settings.

@@ -4,7 +4,7 @@ Desde la versión 2.7.0 cada espacio de trabajo decide qué capacidades integrad
 
 ## Dónde encontrarlo
 
-- **Nucleus Web:** **Espacio de trabajo > Configuración > Políticas** muestra cada capacidad con su interruptor y sus límites (llega con la próxima actualización de Nucleus Web).
+- **Nucleus Web:** **Espacio de trabajo > Configuración > Políticas** muestra cada capacidad con su interruptor y sus límites.
 - **Studio:** **Tenants > tu espacio > Configuración > Opciones de IA** reúne las opciones de IA del espacio que se describen abajo.
 
 Cualquier persona del espacio puede ver la lista. Cambiar una capacidad o sus límites requiere el permiso para administrar la configuración del espacio.

@@ -27,7 +27,7 @@ Agents work with their own identity, under approvals you can trust. This release
 - **Approvals you can trust.** Actions with money or legal weight, such as issuing an invoice, adding a note to it or deleting it, and an agent's checkout, wait for a person to approve the exact thing that will happen. The approval card shows what you are approving, frozen when the request opens, and a decision only counts while the approver still holds the permission.
 - **Long conversations that keep their context.** Agents keep the thread of a long conversation: older turns are folded into a summary, large results are stored and read back in pages, and an agent can recall earlier parts of the conversation.
 - **Invoices you received.** A Received tab on your Wallet invoices in Studio lists the invoices other organizations sent you.
-- **AI usage measured.** AI usage is now measured per workspace and per person.
+- **AI usage you can see.** AI usage is now measured per workspace and per person, so you can see in Nucleus Web what your team uses.
 - **Workspace AI options.** Decide in Studio whether agents may use computer use and voice recording, and how long AI vendors may keep your data.
 - **Search, set up from Studio.** Set up search for your workspace in Studio, see its state in plain words, and choose which automation it runs.
 - **Organization.** Archive and restore departments, positions and teams with a "Show archived" view, and see a team's card when you hover over it.
