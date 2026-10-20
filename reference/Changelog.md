@@ -16,6 +16,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
+## [2.7.0] - 2026-10-20
+
+**Your team of people and agents, running on governed AI.**
+Agents work with their own identity, under approvals you can trust. This release also includes the changes from 2.5.0 and 2.6.0.
+
+### Added
+
+- **Agents with their own identity.** An agent can hold a role you allow, narrowed to what it actually needs each time it acts. Workspace managers see and change each agent's capabilities one at a time.
+- **Approvals you can trust.** Actions with money or legal weight, such as issuing an invoice, adding a note to it or deleting it, and an agent's checkout, wait for a person to approve the exact thing that will happen. The approval card shows what you are approving, frozen when the request opens, and a decision only counts while the approver still holds the permission.
+- **Long conversations that keep their context.** Agents keep the thread of a long conversation: older turns are folded into a summary, large results are stored and read back in pages, and an agent can recall earlier parts of the conversation.
+- **Invoices you received.** A Received tab on your Wallet invoices in Studio lists the invoices other organizations sent you.
+- **AI usage measured.** AI usage is now measured per workspace and per person.
+- **Workspace AI options.** Decide in Studio whether agents may use computer use and voice recording, and how long AI vendors may keep your data.
+- **Search, set up from Studio.** Set up search for your workspace in Studio, see its state in plain words, and choose which automation it runs.
+- **Organization.** Archive and restore departments, positions and teams with a "Show archived" view, and see a team's card when you hover over it.
+- **Workforce.** Studio pages for appraisal workflows and stages, leave types, training programs, payroll periods, employee types and job titles, plus gig and employer lifecycle actions.
+- **Accounting.** Budget lines in Studio, a trial balance per book at the period-end rate, and an income statement summary.
+- **Courses.** Set a course's price and currency in Studio and see each enrollment's status.
+- **Banners.** Change a banner assignment's placement and portal without recreating it.
+
+### Improved
+
+- Order status follows the order's real life cycle, and the remaining Logistics and deal unit routes now work.
+- GraphQL errors use the same stable codes as the REST API.
+- Production alerts fire on new kinds of errors and on bursts.
+
+### Security
+
+- Payment links and payment starts are rate-limited, and live collection can be switched off at once if needed.
+- Every attempt to delete a workspace leaves an audit record that the deletion cannot remove.
+- Email tracking and provider feedback are bound to the delivery they belong to, and malformed tracking links are refused early.
+- Agents can never pass as people anywhere a person's identity is required.
+- Time intervals, shifts and training events link only to schedules, employees and programs in your own workspace.
+
+### Coming
+
+- **Sign up, choose a plan and pay by card on your own**, with an invoice-ready email, a receipt, a welcome email when your workspace is active, and renewal reminders, in English or Spanish.
+- **Card payments with 3-D Secure through PayPal, and the Wompi payment rail.**
+- **Paying the invoices you received**, from the buyer pay page in Nucleus Web.
+- **A payment link the buyer can reopen** to continue paying, and provider refunds that are posted for you and credited to their invoice exactly once.
+- **Electronic invoicing for Colombia (DIAN)**, enabled per workspace.
+- **More AI models:** Google Gemini and Mistral AI.
+- **Changing your plan online**, with a preview and credit for unused time.
+- **Monthly AI allowances per plan, usage limits and prepaid AI credit packs.**
+- **Connecting Claude, ChatGPT or Grok to Alliance Business Suite over MCP.**
+- **Scheduled agent runs.**
+- **Agents acting on your behalf (token exchange).**
+
 ## [2.4.1] - 2026-10-13
 
 A security update for 2.4.0. Update to it if you run 2.4.0.
