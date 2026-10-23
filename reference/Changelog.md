@@ -16,6 +16,118 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
+## [2.7.1] - 2026-10-22
+
+### Added
+
+- **A monthly AI budget on every plan.** Each plan now includes a monthly budget for the AI that Alliance Business Suite pays for: Free USD 1, Starter USD 8, Growth USD 25, Professional USD 40 and Business USD 80. It is one shared pool for the whole workspace, and anyone without a personal limit can use the whole pool. Annual plans get the same monthly figure for every month. AI does not stop at the budget yet (see Coming).
+- **Your own AI limits, on the usage page.** Each person sees what is left of their AI for the session, the week and the month, and of the workspace pool.
+- **Demo and internal plans.** Fenix Alliance can give a workspace a Demo plan or an Internal plan without a sale, and remove it. A workspace on such a plan cannot buy AI credit packs.
+- **Module access for a set time.** When Fenix Alliance gives your workspace access to a module, the grant has a term: a Demo lasts the days set on it (30 by default, up to 90), and an Internal grant lasts until it is removed.
+- **Courses in a collection, from Studio.** The course collections list has a Courses action to see, add and remove a collection's courses.
+- **A daily limit for agent web reading you can change.** Reading web pages is now counted per workspace per day, and you can set the daily limit within the platform's ceiling. If the count can't be read, the reading stops instead of running unchecked.
+- **Daily limits per agent capability.** In Nucleus Web, a workspace manager can set how many calls per day an agent capability may make, wherever the platform counts them.
+- **Payment keys in our secure credential store.** Mercado Pago, Stripe and PayU keys can be moved into the platform's credential store, and the old copy is deleted only once the stored one is proven to work.
+- **Background agent runs in Nucleus Web and Nucleus Desktop.** An agent keeps working after you close the page or the window, for up to 60 minutes, and you can stop it or reattach to it later, even after a restart. Up to 5 running at once per person and 25 per workspace. In Nucleus Web, a notification tells you whether the run finished, was interrupted or failed.
+- **Accounting home at a glance.** The Accounting home shows the current fiscal period and how many postings are waiting for attention, with a link to each.
+- **Download CSV in the Analytics explorer.** After a query runs, you can download the same rows the chart shows as a CSV file.
+- **Sequential e-signature that moves on by itself.** When a signer finishes their step, the next signers are invited automatically, and a cancelled request or a signer who already finished never gets a new invitation.
+- **Modules granted by Fenix Alliance are marked.** Your modules list marks a module that Fenix Alliance granted with "Granted by Fenix Alliance" and shows when the grant ends, and Fenix Alliance can now also hide a single module.
+- **Approvals in Pocket.** The Pocket mobile app has an approvals inbox where you can open and decide approvals, like Nucleus Desktop.
+- **Keys for communications, AI and search in our secure credential store.** A workspace administrator can place, rotate or remove the keys for communications, AI and search providers in the platform's credential store.
+- **Paging, filtering and sorting in the API reference.** The API documentation now describes the paging, filtering and sorting options of every list, so generated SDKs can use them.
+
+### Changed (please read)
+
+- **Workflow webhook triggers need a signature.** A webhook trigger without a signature no longer runs. If your workspace uses webhook triggers, set up signing on each one so they keep running.
+- **Connecting Mercado Libre is paused in Studio.** You can't connect a Mercado Libre account until its new connect flow is set up (see Coming). Your saved settings are kept.
+
+### Improved
+
+- A plan change you confirm right at the end of its price quote now asks you to see the price again, instead of showing an error.
+- A renewal invoice that is voided now says why: replaced by your new plan, cancelled at the end of the period, or the subscription ended.
+- Nucleus Web opens faster: the signed-in app downloads about 21% less JavaScript and half the render-blocking styles, and the dashboard appears as soon as your workspace is known.
+- The AI usage panel in Nucleus Web shows the dollar figures for each window, and an annual plan's period reads "This plan year".
+- The public pricing page shows only what you can buy today; annual billing, the Free model and add-ons are marked as coming.
+- Quotes, orders and invoices keep the record of which price, price list and discount priced each line, from quote to order to invoice.
+- Nucleus Desktop shows your own AI limits, and a failed agent run explains itself in our own words.
+- A payment made against an invoice keeps the invoice's exchange rate, so the accounting entry for the payment records it.
+- An action that is already waiting for an approval cannot open a second approval request for the same thing.
+- A signer's reason for declining is limited to 1,000 characters.
+
+### Fixed
+
+- A renewal invoice issued just as a subscription ended, through a refund or a plan change, is now voided automatically.
+- Accounting: a posting never picks a fiscal period when more than one could apply, and a fiscal period is only ever written into your own fiscal year.
+- Fiscal period pages work for a workspace whose tax authority is set by its code, such as DIAN.
+- Saving Wompi settings keeps your webhook tolerance instead of resetting it.
+- Two credits, two payments, or a payment and a cancellation landing on one invoice at the same moment now give one outcome, so credits never exceed the invoice and an invoice can never end up both paid and voided.
+- Agents see their conversation history again, and their tools for recalling earlier conversations work again.
+- Invoices, orders, quotes and deals show every line, even past the page limit, with a notice when a list is long, and other long Studio lists load instead of failing.
+- Invoice and payment views show the exchange rate as "1 USD = N" in your currency, never as an amount or 0.00.
+- An ePayco charge records its exchange rate only on its own payment and never changes the rates everyone else sees.
+- A person is shown as locked or disabled only while a lockout is actually running.
+- A workspace's first workflow trigger saves completely in one step.
+- Deleting an account or a workspace removes its conversation data too, so the deletion is no longer blocked.
+- A course can be added to a collection only once, even when two people add it at the same moment.
+- Colombian electronic documents carry the party's fiscal responsibilities in the right field, and the payment exchange-rate date is kept correctly.
+- The Google Merchant feed prices products in the currency asked for and never mislabels it, and the Facebook catalog feed follows Meta's catalog format.
+- The AI options page always manages the workspace shown in the header.
+
+### Security
+
+- The guest cart cookie is signed, so a cart can only be reached by the visitor it belongs to.
+- Sign-in, workspace switching and image saves only send you back to pages on this site.
+- Public product pages return only what is meant to be public: reviews, questions, images and attachments of publicly visible items.
+- A file whose malware scan never arrives is held back after 60 minutes and never served until the scan clears it.
+- Payment provider evidence and payer identity checks no longer appear in general payment reads.
+- An agent's checkout needs an approval unless a person is buying directly.
+- A payment's fraud score is set only by the platform, never by the app that creates or updates the payment.
+- Changes our team makes to your workspace from the platform administration console need an administrator acting as themselves, never an agent or an automation, and every change is recorded.
+- A suspended or disabled account cannot run anything in the background.
+- Live updates check that you still belong to what you are watching, and stop for anyone who no longer does.
+- Our deployment and administration scripts take their secrets from the environment and check the certificate of every server they connect to.
+- The connector for editing Office documents in the browser is switched off while we rework how it protects access.
+- A document sent for e-signature can only take a plain workspace file or its own signed files, never a file from a private conversation.
+- Invoice lines, prices and the parties on invoices and fiscal documents only ever come from your own workspace or from publicly listed items.
+- Reading another workspace's listed products, images and attachments shows only their public details, and public price pages ignore private price lists.
+- The GraphQL API refuses very deep or very costly queries and batched requests, and its schema browser is available only in development.
+- A shopping cart holds at most 50 lines, and reading a guest cart no longer looks up the visitor's location.
+- Ownership checks never treat a missing owner as a match, across records such as contacts, quotes, wallets and invoices.
+- An old support-bot page is retired and its embedded key removed.
+- Draft blog posts can no longer be read from the public portal.
+- Product feeds for Google and Facebook share only a workspace's own published products.
+- More public pages now require sign-in where they should.
+- Workflow webhook triggers accept only signed, timestamped requests, and a repeated request runs once.
+- Only the owner and the finance manager can change payment provider settings and payout destinations; a cashier no longer can.
+- Signing in with an outside account uses only an email that provider has verified, links the login only after you confirm your mailbox, and never skips your two-step verification.
+- Post images are served only to people allowed to see the post, and new uploads are stored privately.
+- A web page that is in the trash or scheduled for later is no longer public.
+- Course, enrollment and certificate lists are limited to your own workspace, and the certificates grid needs course management permission.
+- A support ticket's attachments can be opened only through the ticket, with ticket permission.
+- Compare lists and recently viewed items show a product only while it is public or your own.
+- Tax rules and tax policies from another workspace never apply to your items or prices.
+- Visitors and non-members see only public details of portals and their owners.
+- Setting up a chart of accounts fetches only from our verified catalog, and the Empty option fetches nothing.
+- Very costly API list queries are refused with a clear message instead of reaching the database.
+- More kinds of connector credentials, such as certificate passwords and technical keys, are masked like every other secret.
+- PayU checkout limits repeated requests from one address.
+- A disabled membership no longer shows its email or receives live updates in the workspace switcher, and an approver who is reassigned stops getting that approval's live updates.
+- Images in the content editor are cached only by your own browser, for a few minutes.
+- Old AI model-training endpoints are no longer reachable.
+- The old Mercado Libre connection flow is retired, and your saved settings are kept.
+
+### Coming next
+
+- **AI usage limits.** AI stops at your plan's monthly budget, with raises you approve.
+- **Prepaid AI credit packs**, for plans with a monthly AI budget.
+- **Several accounts per integration**, including your personal ones, with an account picker and a default.
+- **Connecting Google and Microsoft accounts** to your integrations. Disconnecting a Google account also withdraws its access at Google.
+- **Agents that use your connected accounts safely**, only with your consent for each agent and account, with approvals for anything consequential, revocable at any time and always recorded.
+- **Team conversations** with agents.
+- **DIAN electronic invoicing for your workspace**, including Colombian credit and debit notes with their own DIAN code (CUDE), and the CUFE or CUDE and the QR code on the invoice PDF. It is off by default and sending to DIAN is not connected yet; until it is on, your invoices keep their plain PDF.
+- **Connecting Mercado Libre again**, through the same secure sign-in as Google and Microsoft.
+
 ## [2.7.0] - 2026-10-20
 
 **Your team of people and agents, running on governed AI.**
