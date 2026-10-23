@@ -24,7 +24,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 - **Firma electrónica secuencial que avanza sola.** Cuando un firmante termina su paso, los siguientes firmantes se invitan automáticamente, y una solicitud cancelada o un firmante que ya terminó nunca recibe una invitación nueva.
 - **Los módulos que otorga Fenix Alliance quedan marcados.** Tu lista de módulos marca con "Otorgado por Fenix Alliance" un módulo que Fenix Alliance otorgó y muestra cuándo termina el acceso, y Fenix Alliance ahora también puede ocultar un módulo concreto.
 - **Aprobaciones en Pocket.** La app móvil Pocket tiene una bandeja de aprobaciones donde puedes abrir y decidir aprobaciones, como en Nucleus Desktop.
-- **Llaves de comunicaciones, IA y búsqueda en nuestro almacén seguro de credenciales.** Un administrador del espacio puede guardar, rotar o quitar las llaves de los proveedores de comunicaciones, IA y búsqueda en el almacén de credenciales de la plataforma.
+- **Llaves de comunicaciones, IA y búsqueda en nuestro almacén seguro de credenciales.** Un administrador del espacio puede guardar, rotar o quitar las llaves de los proveedores de comunicaciones, IA y búsqueda en el almacén de credenciales de la plataforma. **Aún no disponible:** guardar llaves sigue apagado en producción hasta que se active el almacén de credenciales, y las llaves de comunicaciones y búsqueda surten efecto cuando esos servicios lleguen.
 - **Paginación, filtros y orden en la referencia de la API.** La documentación de la API ahora describe las opciones de paginación, filtro y orden de cada lista, para que los SDK generados las puedan usar.
 
 ### Cambios (léelos)
@@ -134,7 +134,7 @@ Los agentes trabajan con su propia identidad, bajo aprobaciones en las que puede
 - **Facturas que recibes.** Una pestaña Recibidas en las facturas de tu Billetera, en Studio, muestra las facturas que te enviaron otras organizaciones.
 - **Uso de IA a la vista.** El uso de IA ahora se mide por espacio de trabajo y por persona, así que puedes ver en Nucleus Web cuánto usa tu equipo.
 - **Opciones de IA del espacio.** Decide en Studio si los agentes pueden usar el control del computador y la grabación de voz, y cuánto tiempo pueden conservar tus datos los proveedores de IA.
-- **Búsqueda, configurada desde Studio.** Configura la búsqueda de tu espacio en Studio, mira su estado en palabras claras y elige qué automatización ejecuta.
+- **Búsqueda, configurada desde Studio.** Configura la búsqueda de tu espacio en Studio, mira su estado en palabras claras y elige qué automatización ejecuta. **Aún no disponible:** llega cuando el servicio de búsqueda esté incluido en una versión.
 - **Organización.** Archiva y restaura departamentos, cargos y equipos con la vista "Mostrar archivados", y ve la tarjeta de un equipo al pasar el cursor.
 - **Talento humano.** Páginas de Studio para flujos y etapas de evaluación, tipos de licencia, programas de formación, periodos de nómina, tipos de empleado y cargos, además de acciones del ciclo de vida de trabajos por encargo y empleadores.
 - **Contabilidad.** Líneas de presupuesto en Studio, balance de prueba por libro a la tasa de cierre del periodo y un resumen del estado de resultados.

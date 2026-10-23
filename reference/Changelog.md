@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Sequential e-signature that moves on by itself.** When a signer finishes their step, the next signers are invited automatically, and a cancelled request or a signer who already finished never gets a new invitation.
 - **Modules granted by Fenix Alliance are marked.** Your modules list marks a module that Fenix Alliance granted with "Granted by Fenix Alliance" and shows when the grant ends, and Fenix Alliance can now also hide a single module.
 - **Approvals in Pocket.** The Pocket mobile app has an approvals inbox where you can open and decide approvals, like Nucleus Desktop.
-- **Keys for communications, AI and search in our secure credential store.** A workspace administrator can place, rotate or remove the keys for communications, AI and search providers in the platform's credential store.
+- **Keys for communications, AI and search in our secure credential store.** A workspace administrator can place, rotate or remove the keys for communications, AI and search providers in the platform's credential store. **Not available yet:** storing keys stays off in production until the credential store is switched on, and communications and search keys take effect when those services ship.
 - **Paging, filtering and sorting in the API reference.** The API documentation now describes the paging, filtering and sorting options of every list, so generated SDKs can use them.
 
 ### Changed (please read)
@@ -144,7 +144,7 @@ Agents work with their own identity, under approvals you can trust. This release
 - **Invoices you received.** A Received tab on your Wallet invoices in Studio lists the invoices other organizations sent you.
 - **AI usage you can see.** AI usage is now measured per workspace and per person, so you can see in Nucleus Web what your team uses.
 - **Workspace AI options.** Decide in Studio whether agents may use computer use and voice recording, and how long AI vendors may keep your data.
-- **Search, set up from Studio.** Set up search for your workspace in Studio, see its state in plain words, and choose which automation it runs.
+- **Search, set up from Studio.** Set up search for your workspace in Studio, see its state in plain words, and choose which automation it runs. **Not available yet:** this ships when the search service is included in a release.
 - **Organization.** Archive and restore departments, positions and teams with a "Show archived" view, and see a team's card when you hover over it.
 - **Workforce.** Studio pages for appraisal workflows and stages, leave types, training programs, payroll periods, employee types and job titles, plus gig and employer lifecycle actions.
 - **Accounting.** Budget lines in Studio, a trial balance per book at the period-end rate, and an income statement summary.
@@ -263,7 +263,7 @@ The first 2.3 release with its complete set of packages and container images. It
 
 ### Fixed
 
-- The release build now includes the Azure Communication integration, so the platform's container images build in full.
+- The release build now compiles the Azure Communication integration.
 
 ## [2.3.2] - 2026-10-05
 
@@ -320,8 +320,8 @@ Reached production on 2026-10-02.
 ### Added
 
 - **New businesses start in their own currency.** When a business is created, its currency is set from its country, so a business in Colombia starts in Colombian pesos, and you can change it at any time. Where a country has no single currency, the business starts in US dollars.
-- **Assistants and workflows can now search your workspace.** An assistant can draw on what it finds to answer you, through the same permission-checked search you use yourself.
-- **Search stays current while it is rebuilt.** A new search index is checked and switched in automatically, even while your data keeps changing, and the changes you make during a rebuild are not lost.
+- **Assistants and workflows can now search your workspace.** An assistant can draw on what it finds to answer you, through the same permission-checked search you use yourself. **Not available yet:** this ships when the search service is included in a release.
+- **Search stays current while it is rebuilt.** A new search index is checked and switched in automatically, even while your data keeps changing, and the changes you make during a rebuild are not lost. **Not available yet:** this ships when the search service is included in a release.
 - **Administrators can now see and resolve stuck integration messages** rather than leaving them to retry unseen.
 - Licence verification can now run against a configured trust manifest, and refuses every licence if that manifest is missing or unusable.
 - **For developers:** release numbers now follow semantic versioning, starting with 2.1.2, and each release is tagged when it is published.
@@ -380,7 +380,7 @@ The first release under semantic versioning. It gathers everything built since p
 - **Colombian electronic invoices issued in another currency now carry the exchange rate to pesos that DIAN requires.** A document whose rate cannot be stated is refused rather than sent incomplete.
 - **With ePayco, you can now refund a collected payment from the platform.** The refund is recorded before ePayco is contacted, so repeating the request never refunds twice. You can also list the bank accounts your own ePayco account pays out to, with account numbers masked.
 - **Overdue approval requests are now escalated or expired on schedule**, and every decision is tied to the evidence it was made on.
-- You can now rejoin a live communication session after leaving it.
+- Rejoining a live communication session after leaving it. **Not available yet:** this ships when the communications service is included in a release.
 - **Anonymous traffic can now be rate limited per client address**, with limits you configure. Signed-in use is not limited.
 - Email images and styles are now served by your own instance, so emails look the same wherever the platform runs.
 - **For developers:** every API operation has one stable, predictable operation id; the Colombian e-invoicing API now describes its responses in full; and OpenAPI snapshots can be compared to catch breaking changes before release.
@@ -430,7 +430,7 @@ The first release under semantic versioning. It gathers everything built since p
 - Approval lists show a summary without the stored ticket details, and a decision is accepted only while the ticket is still at the stage it was made for.
 - Sign-in requires the stronger S256 method for proof-key exchange on every client.
 - Hardened how containers handle configuration secrets at startup.
-- **Tenant isolation hardening** across files and storage, the catalog, payments, accounting, billing, licensing, subscriptions, CRM, marketing, digital assets, learning, content, sales and logistics, social, support, communications and identity.
+- **Tenant isolation hardening** across files and storage, the catalog, payments, accounting, billing, licensing, subscriptions, CRM, marketing, digital assets, learning, content, sales and logistics, social, support and identity.
 - Avatar uploads are type-checked and scanned before they are stored, and uploaded documents are no longer displayed inline on public pages.
 - Only a person can decide an approval. Assistants and automations can request one, never grant it.
 - Workflows refuse to be saved, published or installed with a secret written into them.
