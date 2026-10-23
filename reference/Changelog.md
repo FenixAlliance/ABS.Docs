@@ -41,6 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Workflow webhook triggers need a signature.** A webhook trigger without a signature no longer runs. If your workspace uses webhook triggers, set up signing on each one so they keep running.
 - **Connecting Mercado Libre is paused in Studio.** You can't connect a Mercado Libre account until its new connect flow is set up (see Coming). Your saved settings are kept.
+- On the portals, course authoring on the Academy and the Talent candidate and employer dashboards are closed until they are rebuilt behind sign-in, and so are the license validation pages.
+- The course slider is off the Boomlabs Academy home, ClassPass and SRA pages until it shows only that academy's courses.
+- Document editing in the browser and the old support-bot addresses are no longer served on any portal.
 
 ### Improved
 

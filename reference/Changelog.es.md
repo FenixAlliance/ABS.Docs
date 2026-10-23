@@ -31,6 +31,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 
 - **Los disparadores webhook de los flujos de trabajo necesitan firma.** Un disparador webhook sin firma ya no se ejecuta. Si tu espacio usa disparadores webhook, configura la firma en cada uno para que sigan funcionando.
 - **Conectar Mercado Libre queda en pausa en Studio.** No puedes conectar una cuenta de Mercado Libre hasta que su nuevo flujo de conexión esté listo (ver Próximamente). Tu configuración guardada se conserva.
+- En los portales, la creación de cursos en la Academia y los tableros de candidatos y empleadores de Talento quedan cerrados hasta que se reconstruyan detrás del inicio de sesión, y también las páginas de validación de licencias.
+- El carrusel de cursos sale de la página de inicio de Boomlabs Academy y de las páginas de ClassPass y SRA hasta que muestre solo los cursos de esa academia.
+- La edición de documentos en el navegador y las direcciones antiguas del bot de soporte ya no se sirven en ningún portal.
 
 ### Mejoras
 
