@@ -39,7 +39,7 @@ See [Students, instructors and enrollments](Learning/Students-and-instructors.md
 
 ### Sell courses
 
-A course is part of your catalog, so you can sell it like any other item. You set its price and currency in Studio. When the buyer pays, they are enrolled in the course. A full refund ends the enrollment. To give a learner a course at no cost, enroll them yourself.
+A course is part of your catalog, and you set its price and currency in Studio. Coming: selling a course like any other item, where the buyer is enrolled once they pay and a full refund ends the enrollment. Today, to give a learner a course, enroll them yourself.
 
 See [Sell courses](Learning/Selling-courses.md).
 
@@ -61,13 +61,14 @@ Every enrollment has one of three statuses:
 | Completed | Coming. Today no enrollment reaches this status: enrollments are Active or Revoked. |
 | Revoked | Access was withdrawn, for example after a full refund. |
 
-A revoked enrollment is final. If the learner joins the course again, for example by buying it again, they get a new enrollment.
+A revoked enrollment is final. If the learner joins the course again, they get a new enrollment.
 
 ## Coming
 
 - Grading and quizzes for courses.
 - Learner progress, learning hours and pending tasks (the student dashboard shows **Not available yet** for these today).
 - Course completion, and certificates issued automatically on completion.
+- Selling courses: buying a course, with enrollment once it is paid.
 - A free course that enrolls the learner through checkout.
 
 See the [roadmap](../get-started/Roadmap.md).

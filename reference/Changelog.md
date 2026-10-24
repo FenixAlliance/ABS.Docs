@@ -199,7 +199,7 @@ The commercial release. It reached production on 2026-10-13, followed the same d
 - **AI advice on approvals, only if you turn it on.** Advice is off by default. An approvals manager opts the workspace in after seeing exactly which provider and model would be used and which approval fields are shared. Any later change to those suspends advice until the workspace confirms again, and opting out hides advice at once.
 - **See what your workspace uses, and what it costs.** A new usage view in Studio shows your workspace's usage and its cost, and administrators can set limits on it.
 - **Order numbers, and orders from quotes.** Every order gets a number in your own series, for example ORD-000123, that cannot be edited. You can place an order directly from a quote you received while the quote is open and not expired.
-- **Selling courses.** When the buyer pays for a course, they are enrolled, and a full refund ends the enrollment. Each enrollment is active or revoked.
+- **Selling courses.** When the buyer pays for a course, they are enrolled, and a full refund ends the enrollment. Each enrollment is active or revoked. **Not available yet:** selling courses is coming; today you enroll learners yourself.
 - **Banners.** Create banner sets in Studio and place them on your site's pages and posts. A visitor who clicks a banner is taken to its link.
 - **Invoice-number range health.** Your invoice-number ranges show when they are expiring or nearly used up, and your billing administrators are notified when a range runs low and when no usable range is left for an automatic invoice.
 - **Bulletins read per reader.** On your workspace's bulletin board, a bulletin shows as read only for the people who have read it.

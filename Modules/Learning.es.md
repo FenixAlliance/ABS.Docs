@@ -39,7 +39,7 @@ Consulta [Estudiantes, instructores e inscripciones](Learning/Students-and-instr
 
 ### Vender cursos
 
-Un curso forma parte de tu catálogo, así que puedes venderlo como cualquier otro artículo. Fijas su precio y su moneda en Studio. Cuando el comprador paga, queda inscrito en el curso. Un reembolso total termina la inscripción. Para dar un curso sin costo, inscribe tú mismo al estudiante.
+Un curso forma parte de tu catálogo, y fijas su precio y su moneda en Studio. Próximamente: vender un curso como cualquier otro artículo, con la inscripción del comprador cuando paga y el fin de la inscripción con un reembolso total. Hoy, para dar un curso a un estudiante, inscríbelo tú mismo.
 
 Consulta [Vender cursos](Learning/Selling-courses.es.md).
 
@@ -61,13 +61,14 @@ Cada inscripción tiene uno de tres estados:
 | Completada | Próximamente. Hoy ninguna inscripción llega a este estado: las inscripciones están activas o revocadas. |
 | Revocada | Se retiró el acceso, por ejemplo después de un reembolso total. |
 
-Una inscripción revocada es definitiva. Si el estudiante vuelve al curso, por ejemplo comprándolo de nuevo, recibe una inscripción nueva.
+Una inscripción revocada es definitiva. Si el estudiante vuelve al curso, recibe una inscripción nueva.
 
 ## Próximamente
 
 - Calificaciones y cuestionarios para los cursos.
 - Progreso del estudiante, horas de aprendizaje y tareas pendientes (hoy el panel del estudiante muestra **Aún no disponible** para estos datos).
 - Finalización de cursos, y certificados emitidos automáticamente al completar un curso.
+- Vender cursos: comprar un curso, con la inscripción cuando queda pagado.
 - Un curso gratuito que inscribe al estudiante desde el proceso de pago.
 
 Consulta la [hoja de ruta](../get-started/Roadmap.md).

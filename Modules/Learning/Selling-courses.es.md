@@ -1,6 +1,8 @@
 # Vender cursos
 
-Vende un curso como cualquier otro artículo de tu catálogo, y deja que la compra inscriba al comprador por ti.
+> **Próximamente.** La venta de cursos aún no está disponible. Esta página describe cómo funcionará. Hoy, para dar un curso a un estudiante, inscríbelo tú mismo; consulta [Estudiantes, instructores e inscripciones](Students-and-instructors.es.md).
+
+Podrás vender un curso como cualquier otro artículo de tu catálogo, y dejar que la compra inscriba al comprador por ti.
 
 ## Para quién es
 
@@ -10,17 +12,17 @@ Empresas que cobran por sus cursos.
 
 Necesitas el módulo de Aprendizaje para publicar cursos, y los permisos de facturación de tu espacio de trabajo para facturarlos y emitir notas crédito. La disponibilidad puede depender de tu plan.
 
-## Cómo una venta inscribe al comprador
+## Cómo una venta inscribirá al comprador
 
-Un curso es un artículo de tu catálogo. Puede ir en una factura como un producto o un servicio.
+Un curso es un artículo de tu catálogo.
 
 1. El comprador compra el curso, o tú se lo facturas.
-2. Cuando la factura queda pagada por completo, el comprador queda inscrito en cada curso de esa factura.
+2. Cuando queda pagado por completo, el comprador queda inscrito en cada curso que pagó.
 3. La inscripción empieza **activa**. El curso aparece en **Mis cursos** cuando el comprador inicia sesión con la cuenta vinculada a su contacto.
 
-No necesitas inscribir al comprador tú mismo. Si el comprador aún no tiene perfil de estudiante en tu espacio, se le crea uno.
+No necesitarás inscribir al comprador tú mismo. Si el comprador aún no tiene perfil de estudiante en tu espacio, se le creará uno.
 
-Cada curso de la factura crea una inscripción. Si el comprador ya tiene acceso al curso, por una inscripción activa o completada, no se crea una segunda.
+Cada curso pagado creará una inscripción. Si el comprador ya tiene acceso al curso, por una inscripción activa o completada, no se creará una segunda.
 
 ## Cursos gratuitos
 

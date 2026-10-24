@@ -21,7 +21,7 @@ Cada estudiante y cada instructor tiene un perfil en tu espacio de trabajo. El p
 3. Elige el **Contacto**. También puedes agregar un texto **Acerca de** y una **URL del avatar**.
 4. Selecciona **Crear**.
 
-No necesitas crear un perfil de estudiante para un comprador. Cuando alguien compra un curso y aún no tiene perfil de estudiante, se le crea uno.
+Próximamente: cuando la venta de cursos esté disponible, un comprador que aún no tenga perfil de estudiante recibirá uno automáticamente.
 
 ## Asignar instructores a un curso
 

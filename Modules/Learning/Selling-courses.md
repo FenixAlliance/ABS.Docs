@@ -1,6 +1,8 @@
 # Sell courses
 
-Sell a course like any other item in your catalog, and let the purchase enroll the buyer for you.
+> **Coming.** Selling courses is not available yet. This page describes how it will work. Today, to give a learner a course, enroll them yourself; see [Students and instructors](Students-and-instructors.md).
+
+You will be able to sell a course like any other item in your catalog, and let the purchase enroll the buyer for you.
 
 ## Who it is for
 
@@ -10,17 +12,17 @@ Businesses that charge for their courses.
 
 You need the Learning module to publish courses, and the billing permissions of your workspace to invoice them and issue credit notes. Availability can depend on your plan.
 
-## How a sale enrolls the buyer
+## How a sale will enroll the buyer
 
-A course is an item in your catalog. It can go on an invoice like a product or a service.
+A course is an item in your catalog.
 
 1. The buyer buys the course, or you invoice them for it.
-2. When the invoice is paid in full, the buyer is enrolled in every course on that invoice.
+2. When it is paid in full, the buyer is enrolled in every course they paid for.
 3. The enrollment starts as **active**. The course appears in **My Courses** when the buyer signs in with the account linked to their contact.
 
-You do not need to enroll the buyer yourself. If the buyer has no student profile in your workspace yet, one is created for them.
+You will not need to enroll the buyer yourself. If the buyer has no student profile in your workspace yet, one will be created for them.
 
-Each course on the invoice creates one enrollment. If the buyer already has access to the course, through an active or completed enrollment, no second enrollment is created.
+Each course paid for will create one enrollment. If the buyer already has access to the course, through an active or completed enrollment, no second enrollment will be created.
 
 ## Free courses
 

@@ -21,7 +21,7 @@ Each student and each instructor has a profile in your workspace. A profile is l
 3. Choose the **Contact**. You can also add an **About** text and an **Avatar URL**.
 4. Select **Create**.
 
-You do not need to create a student profile for a buyer. When someone buys a course and has no student profile yet, one is created for them.
+Coming: when selling courses is available, a buyer who has no student profile yet gets one automatically.
 
 ## Assign instructors to a course
 
