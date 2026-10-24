@@ -1,6 +1,8 @@
 # Cambiar tu plan en línea
 
-Desde la versión 2.7.0 puedes pasar tu espacio de trabajo a otro plan por tu cuenta. Primero ves el precio exacto, y nada cambia hasta que lo confirmas.
+> **Próximamente.** Cambiar a un plan pago en línea, y pagarlo en línea, aún no está disponible. Esta página describe cómo funcionará. Hoy, escribe a soporte y cambiamos el plan por ti.
+
+Podrás pasar tu espacio de trabajo a otro plan por tu cuenta. Primero ves el precio exacto, y nada cambia hasta que lo confirmas.
 
 > Si tu espacio muestra una nota de "habla con nosotros" en lugar de la lista de planes, el cambio de plan en línea aún no está activado para él. Escribe a soporte y cambiamos el plan por ti.
 

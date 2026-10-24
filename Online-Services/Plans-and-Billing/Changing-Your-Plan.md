@@ -1,6 +1,8 @@
 # Changing your plan online
 
-From version 2.7.0 you can move your workspace to another plan yourself. You see the exact price first, and nothing changes until you confirm it.
+> **Coming.** Changing to a paid plan online, and paying for it online, is not available yet. This page describes how it will work. Today, contact support and we change the plan for you.
+
+You will be able to move your workspace to another plan yourself. You see the exact price first, and nothing changes until you confirm it.
 
 > If your workspace shows a "talk to us" note instead of the plan list, online plan changes are not switched on for it yet. Contact support and we change the plan for you.
 
