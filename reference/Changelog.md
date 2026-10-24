@@ -27,14 +27,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Courses in a collection, from Studio.** The course collections list has a Courses action to see, add and remove a collection's courses.
 - **A daily limit for agent web reading you can change.** Reading web pages is now counted per workspace per day, and you can set the daily limit within the platform's ceiling. If the count can't be read, the reading stops instead of running unchecked.
 - **Daily limits per agent capability.** In Nucleus Web, a workspace manager can set how many calls per day an agent capability may make, wherever the platform counts them.
-- **Payment keys in our secure credential store.** Mercado Pago, Stripe and PayU keys can be moved into the platform's credential store, and the old copy is deleted only once the stored one is proven to work.
 - **Background agent runs in Nucleus Web and Nucleus Desktop.** An agent keeps working after you close the page or the window, for up to 60 minutes, and you can stop it or reattach to it later, even after a restart. Up to 5 running at once per person and 25 per workspace. In Nucleus Web, a notification tells you whether the run finished, was interrupted or failed.
 - **Accounting home at a glance.** The Accounting home shows the current fiscal period and how many postings are waiting for attention, with a link to each.
 - **Download CSV in the Analytics explorer.** After a query runs, you can download the same rows the chart shows as a CSV file.
 - **Sequential e-signature that moves on by itself.** When a signer finishes their step, the next signers are invited automatically, and a cancelled request or a signer who already finished never gets a new invitation.
 - **Modules granted by Fenix Alliance are marked.** Your modules list marks a module that Fenix Alliance granted with "Granted by Fenix Alliance" and shows when the grant ends, and Fenix Alliance can now also hide a single module.
 - **Approvals in Pocket.** The Pocket mobile app has an approvals inbox where you can open and decide approvals, like Nucleus Desktop.
-- **Keys for communications, AI and search in our secure credential store.** A workspace administrator can place, rotate or remove the keys for communications, AI and search providers in the platform's credential store. **Not available yet:** storing keys stays off in production until the credential store is switched on, and communications and search keys take effect when those services ship.
 - **Paging, filtering and sorting in the API reference.** The API documentation now describes the paging, filtering and sorting options of every list, so generated SDKs can use them.
 
 ### Changed (please read)
@@ -130,6 +128,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Team conversations** with agents.
 - **DIAN electronic invoicing for your workspace**, including Colombian credit and debit notes with their own DIAN code (CUDE), and the CUFE or CUDE and the QR code on the invoice PDF. It is off by default and sending to DIAN is not connected yet; until it is on, your invoices keep their plain PDF.
 - **Connecting Mercado Libre again**, through the same secure sign-in as Google and Microsoft.
+- **Our secure credential store for your keys.** Workspace administrators will be able to keep the keys for payment, communications, AI and search providers in the platform's credential store, and rotate or remove them there.
 
 ## [2.7.0] - 2026-10-20
 

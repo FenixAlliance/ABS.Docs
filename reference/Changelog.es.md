@@ -17,14 +17,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 - **Cursos de una colección, desde Studio.** La lista de colecciones de cursos tiene una acción Cursos para ver, agregar y quitar los cursos de una colección.
 - **Un límite diario para la lectura web de los agentes que puedes cambiar.** La lectura de páginas web ahora se cuenta por espacio y por día, y puedes fijar el límite diario dentro del tope de la plataforma. Si el conteo no se puede leer, la lectura se detiene en lugar de seguir sin control.
 - **Límites diarios por capacidad de los agentes.** En Nucleus Web, quien administra el espacio puede fijar cuántas llamadas al día puede hacer una capacidad de un agente, donde la plataforma las cuenta.
-- **Llaves de pago en nuestro almacén seguro de credenciales.** Las llaves de Mercado Pago, Stripe y PayU se pueden pasar al almacén de credenciales de la plataforma, y la copia anterior se borra solo cuando se comprueba que la guardada funciona.
 - **Ejecuciones de agentes en segundo plano en Nucleus Web y Nucleus Desktop.** Un agente sigue trabajando después de que cierras la página o la ventana, hasta por 60 minutos, y puedes detenerlo o volver a conectarte más tarde, incluso después de reiniciar. Hasta 5 en curso a la vez por persona y 25 por espacio. En Nucleus Web, una notificación te dice si la ejecución terminó, se interrumpió o falló.
 - **El inicio de Contabilidad de un vistazo.** El inicio de Contabilidad muestra el periodo fiscal actual y cuántos asientos esperan atención, con un enlace a cada uno.
 - **Descargar CSV en el explorador de Analítica.** Después de ejecutar una consulta, puedes descargar como archivo CSV las mismas filas que muestra la gráfica.
 - **Firma electrónica secuencial que avanza sola.** Cuando un firmante termina su paso, los siguientes firmantes se invitan automáticamente, y una solicitud cancelada o un firmante que ya terminó nunca recibe una invitación nueva.
 - **Los módulos que otorga Fenix Alliance quedan marcados.** Tu lista de módulos marca con "Otorgado por Fenix Alliance" un módulo que Fenix Alliance otorgó y muestra cuándo termina el acceso, y Fenix Alliance ahora también puede ocultar un módulo concreto.
 - **Aprobaciones en Pocket.** La app móvil Pocket tiene una bandeja de aprobaciones donde puedes abrir y decidir aprobaciones, como en Nucleus Desktop.
-- **Llaves de comunicaciones, IA y búsqueda en nuestro almacén seguro de credenciales.** Un administrador del espacio puede guardar, rotar o quitar las llaves de los proveedores de comunicaciones, IA y búsqueda en el almacén de credenciales de la plataforma. **Aún no disponible:** guardar llaves sigue apagado en producción hasta que se active el almacén de credenciales, y las llaves de comunicaciones y búsqueda surten efecto cuando esos servicios lleguen.
 - **Paginación, filtros y orden en la referencia de la API.** La documentación de la API ahora describe las opciones de paginación, filtro y orden de cada lista, para que los SDK generados las puedan usar.
 
 ### Cambios (léelos)
@@ -120,6 +118,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 - **Conversaciones en equipo** con agentes.
 - **Facturación electrónica DIAN para tu espacio**, incluidas las notas crédito y débito de Colombia con su propio código DIAN (CUDE), y el CUFE o el CUDE y el código QR en el PDF de la factura. Está apagada por defecto y el envío a DIAN todavía no está conectado; mientras no esté activa, tus facturas conservan su PDF normal.
 - **Volver a conectar Mercado Libre**, con el mismo inicio de sesión seguro que Google y Microsoft.
+- **Nuestro almacén seguro de credenciales para tus llaves.** Los administradores del espacio podrán guardar en el almacén de credenciales de la plataforma las llaves de los proveedores de pago, comunicaciones, IA y búsqueda, y rotarlas o quitarlas allí.
 
 ## [2.7.0] - 2026-10-20
 
