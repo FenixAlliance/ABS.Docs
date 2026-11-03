@@ -40,7 +40,7 @@ A client that registered itself is not registered by us, so its consent page mar
 
 - **Only what you can do.** The assistant's access is your own permissions, narrowed to what you approved. It can never do something you can't.
 - **One workspace at a time.** Every request names the workspace it acts in. The assistant never falls back to another workspace.
-- **Only what the workspace allows AI to do.** Each workspace decides which kinds of AI action are allowed. A new workspace allows reading and creating records, and every other kind of action is off until a workspace administrator turns it on. Some actions, such as payments, also need a person's approval.
+- **Only what the workspace allows AI to do.** Each workspace decides which kinds of AI action are allowed. A new workspace allows reading and creating records, and every other kind of action is off until a workspace administrator turns it on. A workspace that existed before 2.8.0 keeps working as before: AI may read, create and change records until a workspace administrator turns changing off. Exporting and publishing are off in every workspace until an administrator turns them on. Some actions, such as payments, also need a person's approval.
 - **MCP tokens work only on MCP.** A token issued to an assistant works only at `https://absuite.net/mcp`, not on the REST or GraphQL APIs, and an assistant can never exchange it to act as you somewhere else.
 
 ## Sign-in and tokens

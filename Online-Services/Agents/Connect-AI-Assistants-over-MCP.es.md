@@ -40,7 +40,7 @@ Un cliente que se registró solo no está registrado por nosotros, así que su p
 
 - **Solo lo que tú puedes hacer.** El acceso del asistente son tus propios permisos, reducidos a lo que aprobaste. Nunca puede hacer algo que tú no puedas.
 - **Un espacio de trabajo a la vez.** Cada solicitud nombra el espacio de trabajo en el que actúa. El asistente nunca pasa a otro espacio de trabajo.
-- **Solo lo que el espacio de trabajo permite a la IA.** Cada espacio de trabajo decide qué tipos de acción de IA se permiten. Un espacio de trabajo nuevo permite leer y crear registros, y los demás tipos de acción están apagados hasta que un administrador del espacio de trabajo los enciende. Algunas acciones, como los pagos, también necesitan la aprobación de una persona.
+- **Solo lo que el espacio de trabajo permite a la IA.** Cada espacio de trabajo decide qué tipos de acción de IA se permiten. Un espacio de trabajo nuevo permite leer y crear registros, y los demás tipos de acción están apagados hasta que un administrador del espacio de trabajo los enciende. Un espacio de trabajo que ya existía antes de la 2.8.0 sigue funcionando como antes: la IA puede leer, crear y cambiar registros hasta que un administrador del espacio de trabajo apaga los cambios. Exportar y publicar están apagados en todos los espacios de trabajo hasta que un administrador los enciende. Algunas acciones, como los pagos, también necesitan la aprobación de una persona.
 - **Los tokens de MCP solo sirven en MCP.** Un token emitido a un asistente solo funciona en `https://absuite.net/mcp`, no en las API REST ni GraphQL, y un asistente nunca puede canjearlo para actuar como tú en otro lugar.
 
 ## Inicio de sesión y tokens
