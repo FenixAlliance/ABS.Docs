@@ -22,7 +22,7 @@ Necesitas permiso para crear y actualizar cursos. Los cursos están en el módul
    - **SKU** y **Versión**.
    - **Fecha de inicio** y **Fecha de fin**, e **Inicio de inscripciones** y **Fin de inscripciones** para el periodo de inscripción.
    - **Máximo de inscripciones**.
-   - **Precio** y **Moneda**, si vendes el curso. Un precio de 0 significa que el curso es gratuito; el precio no puede ser negativo.
+   - **Precio** y **Moneda**, si vendes el curso. Un precio de 0 significa que el curso es gratuito; el precio no puede ser negativo. Mientras el precio es 0, el formulario muestra la insignia **Gratis**, y al guardar te pide confirmar que el curso debe ser gratuito.
    - **Esfuerzo total (semanas)**, **Horas por semana** y **Esfuerzo total (horas)**.
 5. Selecciona **Crear**.
 
@@ -55,7 +55,9 @@ En **Comunicación**:
 2. Selecciona **Publicado**.
 3. Selecciona **Guardar**.
 
-Los cursos publicados aparecen en el catálogo público de cursos. El catálogo público muestra solo cursos publicados.
+Los cursos publicados aparecen en el catálogo público de cursos. El catálogo muestra los cursos publicados de todos los espacios de trabajo activos de la plataforma; un curso de un espacio eliminado no se muestra. Cada curso muestra su título, resumen, imagen, precio, categoría y el nombre del instructor. El catálogo nunca muestra inscripciones ni estudiantes.
+
+En la lista de cursos, un curso gratuito lleva la insignia **Gratis** en la columna **Precio**. Cambiar un curso de pago a precio 0 te pide confirmarlo.
 
 ## Editar o eliminar un curso
 

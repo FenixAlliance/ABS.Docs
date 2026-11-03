@@ -22,7 +22,7 @@ You need permission to create and update courses. Courses are in the Learning mo
    - **SKU** and **Version**.
    - **Start Date** and **End Date**, and **Inscriptions Start** and **Inscriptions End** for the enrollment period.
    - **Max Enrollments**.
-   - **Price** and **Currency**, if you sell the course. A price of 0 means the course is free; a price can't be negative.
+   - **Price** and **Currency**, if you sell the course. A price of 0 means the course is free; a price can't be negative. While the price is 0, the form shows a **Free** badge, and saving asks you to confirm that the course is meant to be free.
    - **Total Effort (Weeks)**, **Hours Per Week** and **Total Effort (Hours)**.
 5. Select **Create**.
 
@@ -55,7 +55,9 @@ Under **Communication**:
 2. Select **Published**.
 3. Select **Save**.
 
-Published courses appear in the public course catalog. The public catalog shows only published courses.
+Published courses appear in the public course catalog. The catalog lists the published courses of every active workspace on the platform; a course of a deleted workspace is not shown. Each course shows its title, summary, image, price, category and instructor name. The catalog never shows enrollments or learners.
+
+In the course list, a free course carries a **Free** badge in the **Price** column. Changing a paid course to a price of 0 asks you to confirm it.
 
 ## Edit or delete a course
 

@@ -6,6 +6,135 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 
 > Las versiones anteriores a la 2.7.0 están en el [registro de cambios en inglés](Changelog.md).
 
+## [2.8.0] - DATE-WHEN-LIVE
+
+Esta es la versión semántica 2.8.0. No es la antigua *Product release 2.8.0* del registro en inglés.
+
+### Añadido
+
+- **Conecta Claude o ChatGPT con Alliance Business Suite.** Un asistente de IA ahora puede conectarse a tu cuenta por el Model Context Protocol (MCP) en `https://absuite.net/mcp`. Inicias sesión tú mismo y apruebas la conexión; el asistente nunca ve tu contraseña. El asistente actúa dentro de tus propios permisos y del acceso que aprobaste, en el espacio de trabajo que nombra cada solicitud, y solo dentro de lo que ese espacio de trabajo permite a la IA. La conexión se enciende poco después de que esta versión esté en línea, y lo anunciaremos. Consulta [Conecta un asistente de IA por MCP](../Online-Services/Agents/Connect-AI-Assistants-over-MCP.es.md).
+- **Elige lo que la IA puede hacer en cada espacio de trabajo.** Cada acción de IA pertenece ahora a una clase de efecto, como leer o crear registros. Un espacio de trabajo nuevo empieza con la IA autorizada a leer y crear, y todas las demás clases de efecto apagadas. Un administrador del espacio de trabajo puede encender las demás.
+- **Elige qué herramientas MCP puede usar cada agente.** Un administrador del espacio de trabajo ahora concede a un agente las herramientas de una conexión MCP una por una. A un agente solo se le ofrecen las herramientas que se le concedieron.
+- **La línea de comandos `absuite`.** La línea de comandos ahora se llama `absuite` y llega a todos los servicios: `absuite <servicio> <recurso> <verbo>`. Puede leer, crear, actualizar y borrar registros, con una prueba en seco y una confirmación escrita antes de borrar. Los scripts reciben una salida estable (`-o json`, `jsonc`, `table`, `tsv`, `yaml` o `none`, y `--query` con JMESPath), códigos de salida estables y `--no-input` para ejecuciones desatendidas. `--verbose` y `--debug` nunca muestran un secreto.
+- **Costos de envío desde tus zonas de envío.** Un envío ahora se cotiza con la zona de envío que corresponde a su destino (código postal, luego país o región, luego una zona Everywhere y luego la zona Default), el método de la zona, la clase de envío del artículo y sus políticas de envío, en la moneda del pedido. Los administradores del espacio de trabajo pueden definir los métodos y regiones de una zona, los países de una región y los costos por clase de un método.
+- **Informes guardados de Analytics.** Puedes guardar una vista del Analytics Explorer como informe del espacio de trabajo, y abrirlo, renombrarlo y borrarlo después.
+- **Responde en un ticket de soporte.** Puedes responder en la conversación de un ticket de soporte con tu propio perfil. La acción Ver de las listas de Helpdesk ahora abre una página de detalles de solo lectura.
+- **Notificaciones sociales.** Se te avisa cuando alguien comenta, responde, reacciona o te menciona en tu contenido, siempre que puedas leerlo.
+- **Conecta Facebook, Instagram y LinkedIn.** Las cuentas sociales se conectan con el mismo flujo de inicio de sesión que las demás integraciones, y una cuenta conectada se puede agregar a una publicación en borrador.
+- **Finalización de cursos.** Una inscripción se puede completar, y emitir un certificado de finalización la completa.
+- **Tus propias licencias.** Un miembro con sesión iniciada puede listar las licencias que tiene en un espacio de trabajo.
+- **Un interruptor de emergencia para los cobros.** Un administrador puede pausar de inmediato el cobro de pagos reales. La plataforma revisa el interruptor cada pocos segundos y, si no puede leerlo, no cobra.
+- **Facturación electrónica (DIAN).** Un documento electrónico firmado se envía a la autoridad tributaria por una sola cola. La plataforma consulta el estado del documento ante la autoridad antes de cada envío, reintenta un número limitado de veces y emite una alerta cuando deja de reintentar.
+
+### Cambiado (léelo, por favor)
+
+- **Las compras sin pagar vencen.** Una compra de autoservicio sin pagar ahora vence después de los días que fija su plan. Un pago que llegue después no la revive; compra de nuevo.
+- **Un reembolso o contracargo retira un curso.** Cuando el pago de un curso se reembolsa por completo o se contracarga, se revocan la inscripción y su certificado de finalización, y se registra el motivo.
+- **Los ajustes de factura se escriben como porcentajes.** Las columnas y campos de ajuste dicen "Descuento %" y "Recargo %", y escribes 15 para 15 %. Un valor fuera de 0 % a 100 % se rechaza.
+- **Un espacio de trabajo borrado se cierra de inmediato.** Cuando se borra un espacio de trabajo, se rechazan sus miembros, aplicaciones y agentes, se revocan los tokens de sus aplicaciones conectadas, se detienen sus suscripciones y se anulan sus facturas abiertas.
+- **Cambiar el inicio de sesión de alguien cierra su sesión.** Cuando un administrador edita los datos de inicio de sesión de una persona, se cierra su sesión en todas partes y el cambio queda registrado.
+- **Algunas listas ahora necesitan su permiso de lectura.** El contenido y las inscripciones de cursos, los artículos de conocimiento, las políticas de garantía, devolución y reembolso y las prioridades de tickets necesitan cada uno su propio permiso de lectura. Los miembros y lectores siguen leyéndolos. Crear, editar y borrar prioridades de tickets sigue necesitando los permisos de tickets. Para los roles personalizados, consulta Problemas conocidos.
+- **Aprobaciones.** Nadie aprueba su propia exportación de agente, publicación de agente, pago, solicitud de factura u horas de proyecto, y un plazo que vence nunca aprueba nada.
+- **Un carrito rechaza monedas mezcladas.** Un carrito rechaza un artículo con precio en otra moneda, y el pago rechaza un artículo que ya no está disponible.
+
+### Mejorado
+
+- Borrar un método de envío, transportista, bodega o lista de empaque que otros registros aún usan se rechaza con un mensaje claro, en lugar de un error de base de datos.
+- La búsqueda en base de datos ordena los resultados por relevancia (BM25).
+- Las páginas de los portales se muestran con menos lecturas de base de datos, y una dirección de portal con o sin `www` llega al mismo portal.
+- Studio: los campos de porcentaje muestran el porcentaje que escribiste, el selector de empresa y la cuadrícula de inicio de la cuenta funcionan como se espera, las cuadrículas se apilan en el teléfono en modo oscuro y una lista que no carga muestra una frase sencilla en lugar del texto del error. El carrito de la tienda muestra un mensaje en lugar de fallar cuando falla una llamada del carrito.
+- Las actividades de un contacto de CRM borrado salen de la búsqueda.
+
+### Seguridad
+
+- Los enlaces que envía la plataforma, como las invitaciones a firmar, siempre usan la dirección configurada de la plataforma, nunca una tomada de la solicitud entrante.
+- Una solicitud MCP actúa solo en el espacio de trabajo que nombra y nunca pasa a otro, y las API REST y GraphQL rechazan un token MCP.
+- Una aplicación administrada por la plataforma solo la puede cambiar o eliminar un administrador de la plataforma.
+- Los registros que apuntan a otros registros (aprobaciones, evaluaciones, ausencias y nómina de RR. HH., listas de precios y ubicaciones de envío de facturas, participantes de sesiones de comunicaciones) solo aceptan registros de tu propio espacio de trabajo.
+- Las listas de seguidores solo muestran perfiles que puedes ver.
+
+### Problemas conocidos
+
+- **La conexión de asistentes de IA no está encendida al lanzamiento.** Las conexiones MCP se abren poco después de que la 2.8.0 esté en línea. Hasta entonces, `https://absuite.net/mcp` no responde.
+- **El autorregistro de otros clientes MCP está apagado al lanzamiento.** Otros clientes MCP (Cursor, VS Code y otros) podrán registrarse solos cuando se encienda el registro dinámico; lo anunciaremos.
+- **Roles personalizados y las listas de Soporte.** Un rol personalizado que leía artículos de conocimiento, políticas de garantía, devolución o reembolso o prioridades de tickets antes de la 2.8.0 puede ver "no autorizado" en esas listas y en sus páginas de detalles de Helpdesk hasta que restauremos su acceso. Para arreglarlo ya, un administrador del espacio de trabajo le concede al rol el permiso de lectura correspondiente: KnowledgeArticles.Read, WarrantyPolicies.Read, ReturnPolicies.Read, RefundPolicies.Read o SupportTicketPriorities.Read.
+- **Grok** todavía no puede conectarse.
+- **Conectar servidores MCP externos a tus agentes** desde Studio todavía no está abierto. Las concesiones de herramientas funcionan con las conexiones que ya existen.
+- **Las renovaciones con tarjeta guardada** todavía necesitan que el comprador pague. El cobro automático de una tarjeta guardada está preparado, pero ningún proveedor de pagos lo admite todavía.
+- **Flujos de trabajo: un paso gobernado después de una espera.** En un flujo de trabajo publicado, un paso que ejecuta una acción gobernada después de un paso de espera (Delay) no se ejecuta cuando el temporizador de la espera reanuda el flujo por sí solo, y la ejecución termina como Faulted. No se cambia ni se expone nada: el paso se niega antes de hacer cualquier cosa. Una ejecución que reanuda una persona, por ejemplo con una aprobación o una tarea de usuario, no se ve afectada. Hasta la 2.8.1, no pongas una acción gobernada después de una espera. Tampoco se registra el historial de pasos de una pasada que reanuda el temporizador de la espera; el de todas las demás pasadas sí.
+- **El paquete npm de `absuite`** se publica en la 2.8.1.
+
+## [2.7.4] - DATE-WHEN-LIVE
+
+### Añadido
+
+- **Consulta las operaciones de un pago con el proveedor.** El personal que puede ver pagos ahora ve las operaciones de cada pago con el proveedor (cobro, reembolso y cancelación), con su estado, montos, referencia del proveedor y horas. No se muestran identificadores internos ni datos sin procesar del proveedor.
+
+### Seguridad
+
+- **Las claves de los proveedores de pago se guardan cifradas.** Desde esta versión, las claves que guardas en Studio para cualquier proveedor de pago siempre se guardan cifradas. Esto incluye Mercado Pago, Wompi, Stripe, PayPal, PayU, ePayco, Amazon Pay, Amazon, American Express, Mercado Libre, Airwallex, Authorize.Net, Braintree, Mastercard, Visa, OpenPay, Nequi y Skrill. Si el cifrado no está disponible, el guardado se rechaza y Studio muestra un error. Las claves guardadas antes de esta versión se quedan como se guardaron; al guardarlas de nuevo se aplica la nueva regla.
+- **Un solo juego de claves por proveedor de pago.** Desde esta versión, cada proveedor de pago conserva exactamente un juego de claves guardado por espacio de trabajo. Si un espacio de trabajo tiene dos, los pagos con ese proveedor se pausan y no se cobra nada, y la página de configuración del proveedor en Studio pide a un administrador que elimine el juego sobrante. Los pagos se reanudan en cuanto se elimina. La plataforma ya no elige uno de los dos al azar.
+
+## [2.7.2] - DATE-WHEN-LIVE
+
+### Añadido
+
+- **Borra tu cuenta.** Ahora puedes borrar tu propia cuenta desde Yo > Configuración > Borrar tu cuenta. La confirmas, se cierra tu sesión de inmediato y tienes 14 días para cambiar de opinión con el enlace de cancelación que te enviamos por correo. Un administrador de la plataforma también puede borrar la cuenta de un usuario. Borrar una cuenta elimina o anonimiza los datos de la persona en toda la plataforma: perfil e inicio de sesión, contactos y solicitudes, publicaciones y mensajes sociales, listas de deseos, chats de IA, archivos, correos y boletines, asignaciones de tareas, puestos de licencia y datos de pago guardados. Las tareas abiertas pasan a un administrador del espacio de trabajo o quedan marcadas para reasignar, las aprobaciones que esperaban a la persona esperan un nuevo aprobador y un puesto del plan que tenía pasa a otro propietario activo. Se conserva lo que exige la ley: facturas y recibos emitidos, documentos electrónicos ya enviados a la autoridad tributaria y asientos contables registrados. Donde el contenido conservado sigue visible, como una entrada de blog, una reseña o un mensaje, el autor aparece como "Usuario eliminado".
+- **Una insignia "Gratis" para los cursos gratuitos.** Los cursos con precio 0 muestran la insignia Gratis en Studio, y Studio te pide confirmar antes de guardar un curso como gratuito.
+
+### Cambiado (léelo, por favor)
+
+- **Los espacios de trabajo de los que saliste dejan tu lista.** Los espacios de trabajo de los que te retiraron ya no aparecen en tu lista ni en el selector, y los selectores ya no muestran la columna "Habilitado".
+- **Borrar una aplicación conserva su historial.** Borrar una aplicación que ha actuado como miembro de tu espacio de trabajo ahora la deshabilita y conserva su historial, en lugar de eliminarla.
+- **Archivos abiertos por su enlace.** Dentro de un espacio de trabajo, un archivo abierto por su enlace solo se muestra cuando es un tipo de archivo que se puede compartir así y tienes permiso para leer ese tipo de registro. Los demás archivos se abren desde el registro al que pertenecen.
+- Las suscripciones no se renuevan ni se cobran mientras la cuenta de quien paga esté suspendida o pendiente de borrado.
+- Algunos endpoints de la API sin terminar (detalle de márgenes, píxeles de seguimiento y un webhook de hosting) ahora responden "no implementado" en lugar de un éxito vacío.
+
+### Mejorado
+
+- Las páginas públicas de portales y tiendas cargan más rápido: saber en qué sitio está un visitante requiere muchas menos lecturas de la base de datos, y la ubicación del visitante se recuerda unos minutos y no se consulta para los rastreadores.
+- Las páginas de Talento humano en Studio (empleados, evaluaciones, ausencias, nómina y más) usan el mismo diseño de página y barra de título que el resto de Studio.
+- Quitar una pieza de un conjunto de banners conserva sus vistas y clics en el rendimiento total del conjunto.
+- La documentación de la API indica el límite de tamaño de página, como máximo 120 filas por página, para que los SDK generados lo comprueben antes de llamar.
+
+### Corregido
+
+- El feed de productos de Google Merchant envía enlaces de producto correctos, usa los valores de existencias de Google y omite los productos sin imagen, así Google deja de rechazar artículos.
+- Editar un pedido en Studio ya no rompe su vínculo con el carrito original.
+- En facturas en otra moneda, el saldo pendiente en dólares estadounidenses es correcto después de aplicar los pagos.
+- El catálogo público de cursos ya no muestra cursos de espacios de trabajo cerrados.
+- La primera vez que una aplicación instalada ejecuta un flujo de trabajo en tu espacio de trabajo, termina en lugar de fallar.
+- Si un asistente de IA no puede cargar los mensajes anteriores de una conversación, lo dice y te pide intentarlo de nuevo, en lugar de responder sin contexto. Esa ejecución no cuenta como uso.
+- Los intervalos de tiempo, turnos y eventos de formación ya no pueden ser su propio padre ni formar un ciclo.
+- Una compra que no se puede pagar en línea se rechaza antes de crear nada.
+
+### Seguridad
+
+- Iniciar sesión en una cuenta cerrada, suspendida o pendiente de borrado da la misma respuesta que una contraseña incorrecta, y el navegador nunca guarda en caché las páginas de borrado.
+- El inicio de sesión, el registro y la recuperación de contraseña rechazan una respuesta CAPTCHA tomada de otra página u otro sitio.
+- Una persona que fue retirada de un espacio de trabajo y vuelve a unirse regresa como miembro regular, sin sus permisos anteriores.
+- Deshabilitar una aplicación detiene de inmediato sus ejecuciones programadas y sus agentes.
+- Los registros solo pueden hacer referencia a datos de tu propio espacio de trabajo: registros contables (comisiones, diarios, centros de costo, grupos de cuentas, cuentas bancarias), impuestos de líneas de factura (tus políticas de impuestos o las estándar de la plataforma), categorías de artículos, imágenes y adjuntos de artículos, contactos, páginas web, entradas de blog, menús, plantillas de certificados de cursos, adjuntos de publicaciones sociales, e industrias y territorios. Los registros padre ya no pueden formar un ciclo.
+- Cuando se registra un pago, la plataforma completa las billeteras que pagan y reciben y los datos de ubicación; nunca se toman de la solicitud.
+- Editar una factura ya no puede redirigirla a la billetera de otro pagador, y una cuenta bancaria solo puede vincularse a una billetera por el propietario de esa billetera.
+- El comprador y la tasa de cambio de un pedido ya no pueden cambiarse al editar el pedido, y el receptor de un pedido solo puede cambiarlo el emisor mientras el pedido es nuevo y aún no está facturado.
+- Los vendedores solo pueden iniciar una suscripción en un plan publicado y todavía disponible.
+- Los detalles de un pago ya no muestran una puntuación de fraude, que la plataforma nunca calculaba.
+- Canjear una licencia requiere el permiso de gestión de licencias, y ya no se aceptan licencias firmadas con una antigua clave de desarrollo.
+- La dirección de un servidor de herramientas de IA personalizado no puede contener una cadena de consulta, así las claves no pueden esconderse en ella, y los demás administradores ven la dirección sin ella.
+- La página pública de firma de documentos solo muestra mensajes claros y esperados cuando algo sale mal.
+- Los nuevos planes de cuentas se crean a partir de un archivo de catálogo fijo y verificado.
+- Las descargas CSV del Explorador de Analytics neutralizan las fórmulas de hoja de cálculo incluso detrás de espacios iniciales.
+- Refuerzos menores: la configuración de los proveedores de pago no puede apuntar al almacenamiento protegido de credenciales de la plataforma, las imágenes de publicaciones sociales llevan una cabecera de seguridad adicional para el navegador y, después de subir la imagen principal de un artículo, solo se te devuelve a una página de este sitio.
+
+### Próximamente
+
+- **Pagar con tarjeta un plan o un paquete de crédito de IA en la aplicación.** El pago con tarjeta se abre en una actualización posterior.
+- **Tus propios servidores de herramientas de IA (MCP)**, conectados por su dirección web, para los administradores del espacio de trabajo.
+- **Pausar una programación de agente y ver su historial de ejecuciones**, y agentes programados que mantienen una sola conversación entre ejecuciones.
+- **Aprobaciones para agentes que actúan en tus cuentas personales conectadas**, vistas y decididas solo por ti.
+- **Comprobaciones de la DIAN antes de firmar una factura electrónica**: primero se comprueban los datos que faltan de las partes y los rangos de numeración.
+
 ## [2.7.1] - 2026-10-22
 
 ### Novedades

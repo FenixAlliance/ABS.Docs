@@ -16,6 +16,135 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
+## [2.8.0] - DATE-WHEN-LIVE
+
+This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0* further down this page.
+
+### Added
+
+- **Connect Claude or ChatGPT to Alliance Business Suite.** An AI assistant can now connect to your account over the Model Context Protocol (MCP) at `https://absuite.net/mcp`. You sign in yourself and approve the connection; the assistant never sees your password. The assistant acts within your own permissions and the access you approved, in the workspace each request names, and only within what that workspace allows AI to do. Connecting is switched on shortly after this release goes live, and we will announce it. See [Connect an AI assistant over MCP](../Online-Services/Agents/Connect-AI-Assistants-over-MCP.md).
+- **Choose what AI may do in each workspace.** Every AI action now belongs to an effect class, such as reading or creating records. A new workspace starts with AI allowed to read and create, and every other effect class off. A workspace administrator can turn the others on.
+- **Choose which MCP tools each agent may use.** A workspace administrator now grants an agent the tools of an MCP connection one by one. An agent is offered only the tools it was granted.
+- **The `absuite` command line.** The command line is now called `absuite`, and it reaches every service: `absuite <service> <resource> <verb>`. It can read, create, update and delete records, with a dry run and a typed confirmation before a delete. Scripts get stable output (`-o json`, `jsonc`, `table`, `tsv`, `yaml` or `none`, and `--query` with JMESPath), stable exit codes, and `--no-input` for unattended runs. `--verbose` and `--debug` never print a secret.
+- **Shipping costs from your shipping zones.** A shipment is now priced from the shipping zone that matches its destination (postcode, then country or region, then an Everywhere zone, then the Default zone), the zone's method, the item's shipping class and its shipping policies, in the order's currency. Workspace administrators can set a zone's methods and regions, a region's countries and a method's class costs.
+- **Saved Analytics reports.** You can save an Analytics Explorer view as a workspace report, and open, rename and delete it later.
+- **Reply on a support ticket.** You can reply on a support ticket's conversation as yourself. The View action on the Helpdesk lists now opens a read-only details page.
+- **Social notifications.** You are told when someone comments on, replies to, reacts to or mentions your content, as long as you can read it.
+- **Connect Facebook, Instagram and LinkedIn.** Social accounts connect through the same sign-in flow as the other integrations, and a connected account can be added to a draft post.
+- **Course completion.** An enrollment can be completed, and issuing a completion certificate completes it.
+- **Your own licenses.** A signed-in member can list the licenses they hold in a workspace.
+- **A live payments kill switch.** An administrator can pause live payment collection at once. The platform checks the switch every few seconds, and if it cannot read it, it does not collect.
+- **Electronic invoicing (DIAN).** A signed electronic document is sent to the tax authority through one queue. The platform asks the authority for the document's status before every send, retries a limited number of times, and raises an alert when it stops retrying.
+
+### Changed (please read)
+
+- **Unpaid checkouts expire.** An unpaid self-serve purchase now expires after the number of days its plan sets. A payment that arrives after that cannot revive it; buy again instead.
+- **A refund or chargeback withdraws a course.** When a course payment is fully refunded or charged back, the enrollment and its completion certificate are revoked, and the reason is recorded.
+- **Invoice adjustments are typed as percents.** The adjustment columns and fields read "Discount %" and "Surcharge %", and you type 15 for 15%. A value outside 0% to 100% is refused.
+- **A deleted workspace is closed at once.** When a workspace is deleted, its members, applications and agents are refused, the tokens of its connected applications are revoked, its subscriptions stop and its open invoices are voided.
+- **Changing someone's sign-in signs them out.** When an administrator edits a person's sign-in details, that person is signed out everywhere, and the change is recorded.
+- **Some lists now need their read permission.** Course content and enrollments, knowledge articles, warranty, return and refund policies and ticket priorities each need their own read permission. Members and viewers keep reading them. Creating, editing and deleting ticket priorities still needs the ticket permissions. For custom roles, see Known issues.
+- **Approvals.** Nobody approves their own agent export, agent publish, payment, invoice request or project hours, and a deadline that passes never approves anything.
+- **A cart refuses mixed currencies.** A cart refuses an item priced in another currency, and checkout refuses an item that is no longer available.
+
+### Improved
+
+- Deleting a shipping method, courier, warehouse or packing slip that other records still use is refused with a clear message, instead of a database error.
+- Database search ranks results by relevance (BM25).
+- Portal pages render with fewer database reads, and a portal address with or without `www` reaches the same portal.
+- Studio: percent fields show the percent you typed, the business switcher and the account home grid work as expected, grids stack on a phone in dark mode, and a list that fails to load shows a plain sentence instead of error text. The storefront cart shows a message instead of failing when a cart call fails.
+- A deleted CRM contact's activities leave search.
+
+### Security
+
+- Links the platform sends, such as signing invitations, always use the platform's configured address, never one taken from the incoming request.
+- An MCP request acts only in the workspace it names and never falls back to another one, and an MCP token is refused by the REST and GraphQL APIs.
+- A platform-managed application can be changed or removed only by a platform administrator.
+- Records that point at other records (HR approvals, appraisals, leave, payroll, invoice price lists and shipping locations, communication session rosters) accept only records from your own workspace.
+- Follow lists show only profiles you are allowed to see.
+
+### Known issues
+
+- **Connecting an AI assistant is not on at launch.** MCP connections open shortly after 2.8.0 goes live. Until then, `https://absuite.net/mcp` does not answer.
+- **Self-registration for other MCP clients is off at launch.** Other MCP clients (Cursor, VS Code and others) can register themselves once dynamic registration is switched on; we will announce it.
+- **Custom roles and the Support lists.** A custom role that read knowledge articles, warranty, return or refund policies or ticket priorities before 2.8.0 may see "not authorized" on those lists and their Helpdesk details pages until we restore its access. To fix it now, a workspace administrator grants the role the matching read permission: KnowledgeArticles.Read, WarrantyPolicies.Read, ReturnPolicies.Read, RefundPolicies.Read or SupportTicketPriorities.Read.
+- **Grok** cannot connect yet.
+- **Connecting outside MCP servers to your agents** from Studio is not open yet. Tool grants work for connections that already exist.
+- **Renewals with a saved card** still need the buyer to pay. Charging a saved card automatically is prepared but no payment provider supports it yet.
+- **Workflows: a governed step after a Delay.** In a published workflow, a step that runs a governed action after a Delay step does not run when the Delay's timer resumes the workflow on its own, and the run ends as Faulted. Nothing is changed or exposed: the step refuses before it does anything. A run that a person resumes, for example through an approval or a user task, is not affected. Until 2.8.1, don't place a governed action after a Delay. The step history of a pass that the Delay timer resumes is not recorded either; every other pass is.
+- **The `absuite` npm package** is published in 2.8.1.
+
+## [2.7.4] - DATE-WHEN-LIVE
+
+### Added
+
+- **See a payment's provider operations.** Staff who can view payments now see each payment's operations with the provider (collection, refund and cancellation), with their status, amounts, provider reference and times. Internal identifiers and raw provider data are not shown.
+
+### Security
+
+- **Payment provider keys are stored encrypted.** From this release, keys you save in Studio for any payment provider are always stored encrypted. This covers Mercado Pago, Wompi, Stripe, PayPal, PayU, ePayco, Amazon Pay, Amazon, American Express, Mercado Libre, Airwallex, Authorize.Net, Braintree, Mastercard, Visa, OpenPay, Nequi and Skrill. If encryption is not available, the save is refused and Studio shows an error. Keys saved before this release stay as they were stored; saving them again applies the new rule.
+- **One set of keys per payment provider.** From this release, each payment provider keeps exactly one saved set of keys per workspace. If a workspace has two, payments through that provider are paused and nothing is charged, and the provider's settings page in Studio asks an administrator to remove the extra set. Payments resume as soon as it is removed. The platform no longer picks one of the two at random.
+
+## [2.7.2] - DATE-WHEN-LIVE
+
+### Added
+
+- **Erase your account.** You can now erase your own account from Me > Settings > Erase your account. You confirm it, you are signed out at once, and you have 14 days to change your mind with the cancel link we email you. A platform administrator can also erase a user's account. Erasing removes or anonymises the person's data across the platform: profile and sign-in, contacts and inquiries, social posts and messages, wish lists, AI chats, files, emails and newsletters, task assignments, licence seats and saved payment details. Open tasks pass to a workspace manager or are marked for reassignment, approvals waiting on the person wait for a new approver, and a plan seat they held moves to another active owner. What the law requires is kept: issued invoices and receipts, electronic documents already sent to the tax authority, and posted accounting entries. Where kept content is still shown, such as a blog post, a review or a message, the author appears as "Deleted user".
+- **A "Free" badge for free courses.** Courses with a price of 0 show a Free badge in Studio, and Studio asks you to confirm before you save a course as free.
+
+### Changed (please read)
+
+- **Removed workspaces leave your list.** Workspaces you have been removed from no longer appear in your workspace list or switcher, and the pickers no longer show an "Enabled" column.
+- **Deleting an application keeps its history.** Deleting an application that has acted as a member of your workspace now disables it and keeps its history, instead of removing it.
+- **Files opened by their link.** Inside a workspace, a file opened by its link is shown only when it is a kind of file that can be shared that way and you have permission to read that kind of record. Other files are reached through the record they belong to.
+- Subscriptions are not renewed or charged while the paying person's account is suspended or waiting to be erased.
+- A few unfinished API endpoints (margin details, tracking pixels and a hosting webhook) now answer "not implemented" instead of an empty success.
+
+### Improved
+
+- Public portal and store pages load faster: working out which site a visitor is on takes far fewer database reads, and visitor location lookups are remembered for a few minutes and skipped for crawlers.
+- The Workforce pages in Studio (employees, appraisals, leave, payroll and more) use the same page layout and title bar as the rest of Studio.
+- Removing a banner creative keeps its views and clicks in the banner set's performance totals.
+- The API documentation states the page-size limit, at most 120 rows per page, so generated SDKs can check it before they call.
+
+### Fixed
+
+- The Google Merchant product feed sends correct product links, uses Google's stock values and leaves out products without an image, so Google stops rejecting items.
+- Editing an order in Studio no longer breaks its link to the original cart.
+- On invoices in another currency, the remaining balance in US dollars is correct after payments are applied.
+- The public course catalog no longer shows courses from workspaces that have been closed.
+- The first time an installed application runs a workflow in your workspace, it completes instead of failing.
+- If an AI assistant can't load the earlier messages of a conversation, it says so and asks you to try again, instead of answering without context. No usage is counted for that run.
+- Time intervals, shifts and training events can no longer be made their own parent or placed in a loop.
+- A purchase that can't be paid online is refused before anything is created.
+
+### Security
+
+- Signing in to a closed, suspended or pending-erasure account gives the same answer as a wrong password, and erasure pages are never cached by the browser.
+- Sign-in, sign-up and password recovery reject a CAPTCHA answer taken from another page or site.
+- A person who was removed from a workspace and rejoins comes back as a regular member, without their old rights.
+- Disabling an application stops its scheduled runs and agents at once.
+- Records can only reference your own workspace's data: accounting records (commissions, journals, cost centres, account groups, bank accounts), invoice line taxes (your own or the platform's standard tax policies), item categories, item images and attachments, contacts, web pages, blog posts, menus, course certificate templates, social post attachments, and industries and territories. Parent records can no longer form a loop.
+- When a payment is recorded, the paying and receiving wallets and the location data are filled in by the platform, never taken from the request.
+- Editing an invoice can no longer redirect it to another payer's wallet, and a bank account can be linked to a wallet only by the wallet's owner.
+- An order's buyer and exchange rate can no longer be changed through an order edit, and an order's receiver can be changed only by the issuer while the order is new and not yet invoiced.
+- Sellers can start a subscription only on a plan that is published and still available.
+- Payment details no longer show a fraud score, which the platform never calculated.
+- Redeeming a licence needs the licence-management permission, and licences signed with an old development key are no longer accepted.
+- A custom AI tool server address can't contain a query string, so keys can't hide in it, and other managers see the address without it.
+- The public document-signing page shows only clear, expected messages when something goes wrong.
+- New charts of accounts are seeded from a fixed, verified catalog file.
+- Analytics CSV downloads neutralise spreadsheet formulas even behind leading spaces.
+- Smaller hardening: payment provider settings can't point at protected platform credential storage, social post images carry an extra browser safety header, and after uploading an item's main image you are only sent back to a page on this site.
+
+### Coming next
+
+- **Paying by card for a plan or an AI credit pack in the app.** Card payment opens in a later update.
+- **Your own AI tool servers (MCP)**, connected by their web address, for workspace managers.
+- **Pausing an agent schedule and seeing its run history**, and scheduled agents that keep one conversation across their runs.
+- **Approvals for agents acting on your personal connected accounts**, seen and decided only by you.
+- **DIAN checks before an electronic invoice is signed**: missing party details and numbering ranges are checked first.
+
 ## [2.7.1] - 2026-10-22
 
 ### Added

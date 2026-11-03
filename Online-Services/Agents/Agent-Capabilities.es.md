@@ -50,5 +50,5 @@ Los cambios en estas opciones aplican en cuanto los guardas.
 
 ## Relacionado
 
-- [Conecta Claude, ChatGPT o Grok por MCP](Connect-AI-Assistants-over-MCP.es.md)
+- [Conecta Claude, ChatGPT o cualquier cliente MCP](Connect-AI-Assistants-over-MCP.es.md)
 - [Agent capabilities and limits (English)](Agent-Capabilities.md)
