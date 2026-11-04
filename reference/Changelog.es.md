@@ -62,7 +62,6 @@ Esta es la versión semántica 2.8.0. No es la antigua *Product release 2.8.0* d
 - **Conectar servidores MCP externos a tus agentes** desde Studio todavía no está abierto. Las concesiones de herramientas funcionan con las conexiones que ya existen.
 - **Las renovaciones con tarjeta guardada** todavía necesitan que el comprador pague. El cobro automático de una tarjeta guardada está preparado, pero ningún proveedor de pagos lo admite todavía.
 - **Flujos de trabajo: un paso gobernado después de una espera.** En un flujo de trabajo publicado, un paso que ejecuta una acción gobernada después de un paso de espera (Delay) no se ejecuta cuando el temporizador de la espera reanuda el flujo por sí solo, y la ejecución termina como Faulted. No se cambia ni se expone nada: el paso se niega antes de hacer cualquier cosa. Una ejecución que reanuda una persona, por ejemplo con una aprobación o una tarea de usuario, no se ve afectada. Hasta la 2.8.1, no pongas una acción gobernada después de una espera. Tampoco se registra el historial de pasos de una pasada que reanuda el temporizador de la espera; el de todas las demás pasadas sí.
-- **Aumentos del límite de uso para algunas licencias.** No se puede abrir una solicitud para aumentar el límite de uso de una licencia que vino con tu espacio de trabajo o que un vendedor tiene para sí mismo. La solicitud se rechaza y no se cambia nada. Las demás licencias no se ven afectadas. Se corrige en la 2.8.1.
 - **El paquete npm de `absuite`** se publica en la 2.8.1.
 
 ## [2.7.4] - DATE-WHEN-LIVE
