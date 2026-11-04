@@ -72,6 +72,7 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - **Connecting outside MCP servers to your agents** from Studio is not open yet. Tool grants work for connections that already exist.
 - **Renewals with a saved card** still need the buyer to pay. Charging a saved card automatically is prepared but no payment provider supports it yet.
 - **Workflows: a governed step after a Delay.** In a published workflow, a step that runs a governed action after a Delay step does not run when the Delay's timer resumes the workflow on its own, and the run ends as Faulted. Nothing is changed or exposed: the step refuses before it does anything. A run that a person resumes, for example through an approval or a user task, is not affected. Until 2.8.1, don't place a governed action after a Delay. The step history of a pass that the Delay timer resumes is not recorded either; every other pass is.
+- **Usage-limit raises for some licenses.** A request to raise a license's usage limit can't be opened for a license that came with your workspace or that a seller holds for itself. The request is refused and nothing is changed. Other licenses are not affected. Fixed in 2.8.1.
 - **The `absuite` npm package** is published in 2.8.1.
 
 ## [2.7.4] - DATE-WHEN-LIVE
