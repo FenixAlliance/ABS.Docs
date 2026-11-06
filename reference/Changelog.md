@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
-## [2.8.0] - DATE-WHEN-LIVE
+## [2.8.0] - 2026-11-06
 
 This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0* further down this page.
 
@@ -35,10 +35,14 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - **Your own licenses.** A signed-in member can list the licenses they hold in a workspace.
 - **A live payments kill switch.** An administrator can pause live payment collection at once. The platform checks the switch every few seconds, and if it cannot read it, it does not collect.
 - **Electronic invoicing (DIAN).** A signed electronic document is sent to the tax authority through one queue. The platform asks the authority for the document's status before every send, retries a limited number of times, and raises an alert when it stops retrying.
+- **Edit Office documents in the browser with Collabora.** You can open Word, Excel and PowerPoint files stored in your workspace and edit them in the browser with Collabora Online, either the platform's editor or a Collabora server your workspace connects. Each save keeps the previous version. Editing is available once an editor is enabled for your environment. OnlyOffice and Microsoft editors come in 2.9.
+- **Japanese and Chinese.** Studio and the customer portals are now available in Japanese and Chinese (Simplified), alongside English, Spanish, French, German, Italian and Portuguese. Any text not yet translated falls back to English instead of showing an internal key. Emails are sent in Japanese and Chinese too.
+- **For self-hosted operators: a license is bound to its installation.** Each self-hosted installation now has its own Installation ID. The installer creates it and shows it during setup. Use it when you buy a license, and you can enter the license in the installer's last step. A license issued for one installation works only on that installation, and earlier versions refuse it, so upgrade to 2.8.0 before applying a new license. Restoring or cloning a database carries its Installation ID with it, and the copy counts as the same installation. The binding stops copying a license between installations; it is not a substitute for the license terms. If you use the hosted service, nothing changes.
+- **Use your own OAuth application for an integration or an MCP server.** Workspace administrators can use their own OAuth application for an integration provider or an MCP server, so the sign-in screen and limits are your workspace's. The client secret is stored encrypted and never shown again. Changing or removing the application asks everyone connected to that provider to connect again.
+- **Refund a payment from its details page.** A payment's details page now lists its provider operations (collections, refunds and voids) with their status and amount. A person with the refund permission can refund a succeeded collection in full from there, after a confirmation that shows the amount. Studio says a refund is done only once the provider confirms it; until then it shows that the refund was sent and is awaiting the provider. If a refund can't be made (for example, one is already in progress, or the collection was cancelled), it explains why in plain words. Refunds are always for the full amount of one collection; partial refunds are not available. A refund is made by a person in Studio, not by an integration or an agent. Find it in Accounting > Billing > Payments, or Wallet > Payments, then open a payment.
 
 ### Changed (please read)
 
-- **Unpaid checkouts expire.** An unpaid self-serve purchase now expires after the number of days its plan sets. A payment that arrives after that cannot revive it; buy again instead.
 - **A refund or chargeback withdraws a course.** When a course payment is fully refunded or charged back, the enrollment and its completion certificate are revoked, and the reason is recorded.
 - **Invoice adjustments are typed as percents.** The adjustment columns and fields read "Discount %" and "Surcharge %", and you type 15 for 15%. A value outside 0% to 100% is refused.
 - **A deleted workspace is closed at once.** When a workspace is deleted, its members, applications and agents are refused, the tokens of its connected applications are revoked, its subscriptions stop and its open invoices are voided.
@@ -46,6 +50,13 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - **Some lists now need their read permission.** Course content and enrollments, knowledge articles, warranty, return and refund policies and ticket priorities each need their own read permission. Members and viewers keep reading them. Creating, editing and deleting ticket priorities still needs the ticket permissions. For custom roles, see Known issues.
 - **Approvals.** Nobody approves their own agent export, agent publish, payment, invoice request or project hours, and a deadline that passes never approves anything.
 - **A cart refuses mixed currencies.** A cart refuses an item priced in another currency, and checkout refuses an item that is no longer available.
+- **For self-hosted operators: open the gate before you re-drive expired mail.** If you re-drive a dead-lettered mail message that expired while its gate is still held, it goes back to the dead-letter queue. Open the gate first, then re-drive.
+- **Archiving a workflow version doesn't stop runs already in flight.** Runs that started on that version keep going. If they must stop, cancel them.
+- **Marketplace sellers pay no commission.** Marketplace sellers pay no platform commission in 2.8.0: the rate is 0%. The commission is now a dated platform setting that the platform operator controls, never a workspace; self-hosted operators set it in the ABP Commerce settings (`ABP:Commerce:MarketplaceCommissionRates`). Any rate above 0% applies only to orders placed at least 60 days after sellers are notified, and it never re-prices an earlier order. Seller payouts are not automated yet; they come in 2.9.
+- **Every Marketplace seller invoices under its own DIAN identity.** To sell, a seller needs its own electronic-invoicing identity with the tax authority (DIAN). An order line from a seller without one is refused at checkout, and again if an invoice is issued, and the platform never invoices it under its own identity.
+- **Prices show the IVA before you pay.** Plan, add-on and AI credit pack prices now show the 19% IVA and the total you will pay before you confirm, and that total is exactly what the invoice charges. IVA applies to workspaces in Colombia and to workspaces with no confirmed country; a workspace whose confirmed country is outside Colombia is billed as an export, with no IVA.
+- **Electronic-invoicing records are kept.** A workspace that holds issued invoices, claimed invoice numbers, documents sent to the tax authority (DIAN), posted ledger entries or payments cannot be permanently deleted while they must be kept: the platform administrator who tries is told why, and nothing is deleted. The documents exchanged with DIAN, including the signed invoice and DIAN's response, are also kept for at least 10 years from 1 January of the year after they were stored. Removing a person's data works as before.
+- **Paid plans now include the business modules.** Every paid plan (Starter and up) includes the horizontal modules, such as Accounting, Marketing, Projects and Helpdesk, and plans still differ by seats, usage and AI. If you already pay for a plan, its modules turn on at once. Free workspaces keep the modules they have today.
 
 ### Improved
 
@@ -54,6 +65,7 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - Portal pages render with fewer database reads, and a portal address with or without `www` reaches the same portal.
 - Studio: percent fields show the percent you typed, the business switcher and the account home grid work as expected, grids stack on a phone in dark mode, and a list that fails to load shows a plain sentence instead of error text. The storefront cart shows a message instead of failing when a cart call fails.
 - A deleted CRM contact's activities leave search.
+- **Workflows keep their run settings after a wait.** A durable workflow that resumes after a delay, a user task or an approval now keeps its run settings, so the steps after the wait behave as they did before it. A governed step after a Delay step now runs when the Delay's timer resumes the workflow, and every pass records its step history.
 
 ### Security
 
@@ -62,6 +74,11 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - A platform-managed application can be changed or removed only by a platform administrator.
 - Records that point at other records (HR approvals, appraisals, leave, payroll, invoice price lists and shipping locations, communication session rosters) accept only records from your own workspace.
 - Follow lists show only profiles you are allowed to see.
+- **License lists no longer return the signed license file.** In 2.7.0 to 2.7.4, the licenses API returned each legacy license's signed license file, which includes the license holder's name and email address. Only members of the same workspace with permission to read licenses could see it, plus the AI agents and MCP clients of a workspace that had turned on the license-listing AI capability (off by default). It was never visible outside the workspace, no Studio screen showed it, and the file can't be used to activate anything. No action is needed.
+- **Delivery tracking no longer stores plain email addresses.** Email addresses kept for delivery tracking and suppression are now stored as keyed digests, using a key only the operator holds, instead of a plain hash. A delivery log on its own can no longer be matched back to an address. Nothing changes in how email is sent or received. Self-hosted operators turn it on by setting `ABSUITE_ADDRESS_DIGEST_HMAC1` to 32 random bytes in base64 (a Key Vault reference in Azure), then running the one-time back-fill with `ABSUITE_ADDRESS_DIGEST_BACKFILL_ENABLED=true`. Until a key is set, the platform keeps using the previous digest, so nothing breaks.
+- Alert text in system emails is always HTML-encoded, so markup in an alert shows as text.
+- **Portal pages and templates never see the portal's secrets.** Portal pages, layouts and custom templates now receive a public-only copy of the portal and its settings. The portal app's keys, access tokens and integration secrets are never available to a page or template. A site address that no portal claims now shows the basic site shell instead of an error, and the account recovery and sign-out pages work on any address. If a custom template read a portal key or token from the settings, it now gets an empty value; move that logic server-side.
+- **For self-hosted operators: only the root workspace authors code templates.** Code templates (Razor and C#) can now be written and compiled only by the human owners and administrators of the root workspace. Every save and first compile is audited. A `CodeAuthoringTenantIds` entry for any other workspace is ignored, with a warning at startup. Code templates already saved in other workspaces are no longer compiled; they render as static, sanitized content.
 
 ### Known issues
 
@@ -71,8 +88,6 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 - **Grok** cannot connect yet.
 - **Connecting outside MCP servers to your agents** from Studio is not open yet. Tool grants work for connections that already exist.
 - **Renewals with a saved card** still need the buyer to pay. Charging a saved card automatically is prepared but no payment provider supports it yet.
-- **Workflows: a governed step after a Delay.** In a published workflow, a step that runs a governed action after a Delay step does not run when the Delay's timer resumes the workflow on its own, and the run ends as Faulted. Nothing is changed or exposed: the step refuses before it does anything. A run that a person resumes, for example through an approval or a user task, is not affected. Until 2.8.1, don't place a governed action after a Delay. The step history of a pass that the Delay timer resumes is not recorded either; every other pass is.
-- **The `absuite` npm package** is published in 2.8.1.
 
 ## [2.7.4] - DATE-WHEN-LIVE
 
