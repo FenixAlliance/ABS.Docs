@@ -6,6 +6,17 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 
 > Las versiones anteriores a la 2.7.0 están en el [registro de cambios en inglés](Changelog.md).
 
+## [2.8.1] - DATE-WHEN-LIVE
+
+### Añadido
+
+- **Gestiona los equipos de agente en Studio.** El dueño de un agente puede hacer que su equipo olvide sus archivos e inicios de sesión guardados, y los administradores eligen la región y el tamaño de los equipos alojados, desde Studio.
+
+### Cambiado (léelo, por favor)
+
+- **Para operadores con instalación propia: los complementos admitidos ahora se componen.** Un ensamblado de complemento que admite tu lista de permitidos DynamicModules ahora registra sus servicios y páginas al iniciar, una sola vez. Antes de la 2.8.1 sus constructores se ejecutaban, pero sus módulos nunca se componían. Con la lista de permitidos vacía (el valor por defecto), no se carga nada, como antes. Si el constructor o la composición de un módulo de complemento falla, la comprobación de estado de la composición de módulos lo marca como Degraded, solo con los nombres del tipo y de la excepción, y el inicio termina.
+- **Asigna tres cuentas más antes de la contabilización automática.** Antes de que la contabilización automática funcione en un espacio de trabajo, asigna también las cuentas de pérdida por contracargos, obligación con el vendedor y costo del vendedor del marketplace. Mientras no estén asignadas, el reconocimiento de ingresos por suscripciones se pausa en ese espacio de trabajo, y se reanuda sin perder nada cuando lo estén.
+
 ## [2.8.0] - 2026-11-06
 
 Esta es la versión semántica 2.8.0. No es la antigua *Product release 2.8.0* del registro en inglés.

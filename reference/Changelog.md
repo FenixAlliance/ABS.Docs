@@ -16,6 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[The re-architecture, 2.1.0 to 2.8.0](#product-release-210---2023-12-20--platform-re-architecture)**: Clean Architecture and CQRS, REST and OData service clients, new business services, and .NET 8 through .NET 10.
 - **[The composable platform, 2.1.2 onwards](#212---2026-10-02-the-composable-platform)**: governed AI, workflows, trust and commerce, documented as each capability ships, under semantic version numbers.
 
+## [2.8.1] - DATE-WHEN-LIVE
+
+### Added
+
+- **Manage agent computers in Studio.** An agent's owner can make its computer forget its saved files and sign-ins, and administrators choose a region and size for hosted computers, from Studio.
+
+### Changed (please read)
+
+- **For self-hosted operators: admitted plugins are now composed.** A plugin assembly that your DynamicModules allow-list admits now registers its services and pages at startup, exactly once. Before 2.8.1 its constructors ran, but its modules were never composed. With an empty allow-list (the default), nothing is loaded, as before. If a plugin module's constructor or composition fails, the module composition health check reports it as Degraded, with only the type and exception names, and startup completes.
+- **Map three more accounts before automatic ledger posting.** Before automatic posting can run for a workspace, also map the chargeback loss, seller obligation and marketplace seller cost accounts. Until they are mapped, subscription revenue recognition pauses for that workspace, and it resumes with nothing lost once they are.
+
 ## [2.8.0] - 2026-11-06
 
 This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0* further down this page.
