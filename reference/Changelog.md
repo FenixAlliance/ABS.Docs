@@ -20,12 +20,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- PENDING-ACHOSTED (AI m1794086322975, TL-accepted wording rule; keep only if hosted agent computers (e1) are in the pushed range and turned on; if hosted open web is switched on in 2.8.1 (CEO q12 b), replace the second sentence with "An owner can turn on the open web for a hosted computer."): **Hosted agent computers.** Hosted agent computers can use ABS and the files in their workspace. Browsing other websites is not available on hosted computers yet. Computers you run yourself keep their allowed sites as before.
+- PENDING-INCLUDED (Licensing m1794089760445, catalog seed 32eab5e67331; drop the line if the seed misses the PR 684 range; drop the last sentence if the snapshot or the SuiteSubscriptionPurchasedEntitlements migration misses it): **Agent computers are included in the paid plans.** Agent computers are now part of the paid platform plans, from a pool each workspace shares: Starter includes 10 RCU-hours a month, 5 GiB-months of Cloud Workspace Storage and 1 computer at a time; Growth 40 RCU-hours, 10 GiB-months and 3 computers; Professional 75, 20 GiB-months and 10; Business 150, 40 GiB-months and 50 (1 RCU = 1 vCPU + 2 GiB of memory, so a 2 vCPU / 4 GiB computer uses 2 RCU-hours per hour). A GiB-month is storage over time: 10 GiB kept for half of a 30-day month is 5 GiB-months. A paused agent computer's saved state counts toward it, and is kept while the device exists, under your subscription and storage terms. When storage runs out, new saved work is refused before it starts; computers that already exist still pause safely. On annual plans, twelve months of compute are available across the year, and the storage allowance is the same every month. The Free plan does not include agent computers. From 2.8.1, a subscription keeps the included usage it was bought with, even when the plans change later.
 - **Manage agent computers in Studio.** An agent's owner can make its computer forget its saved files and sign-ins, and administrators choose a region and size for hosted computers, from Studio.
+- PENDING-ACRESUME (Studio m1794081706491, pin 4d3e7f3a5392, Security PASS ON CONTENT m1794081661011; keep only if in the pushed range): **Choose how agent computers come back after a pause.** Workspace owners and admins can now choose, in the agent computer settings, how their agents' computers come back after a pause: "Resume apps and files" or "Restart apps, keep files", each allowed, required or not allowed, plus a default for new computers. Each agent's computer shows which behavior applies and why, and how much storage it keeps; a setting fixed by the workspace policy or by a data disk is shown read-only with the reason. A change applies at the computer's next pause. If the workspace no longer allows a computer's saved open apps, it won't resume them; you can restart its apps and keep its files, or reset it.
 
 ### Changed (please read)
 
 - **For self-hosted operators: admitted plugins are now composed.** A plugin assembly that your DynamicModules allow-list admits now registers its services and pages at startup, exactly once. Before 2.8.1 its constructors ran, but its modules were never composed. With an empty allow-list (the default), nothing is loaded, as before. If a plugin module's constructor or composition fails, the module composition health check reports it as Degraded, with only the type and exception names, and startup completes.
 - **Map three more accounts before automatic ledger posting.** Before automatic posting can run for a workspace, also map the chargeback loss, seller obligation and marketplace seller cost accounts. Until they are mapped, subscription revenue recognition pauses for that workspace, and it resumes with nothing lost once they are.
+
+### Security
+
+- PENDING-POCKETB1 (M&D m1794051000881; keep once Pocket B1 is committed, passed at SHA and its CI (def 70) is green): **Nucleus Pocket keeps approval and agent screens private.** On Android, approval and agent screens are hidden in the app switcher and cannot be captured in screenshots or screen recordings. On iOS they are hidden in the app switcher, but iOS does not let an app block screenshots or screen recording. On Android, Pocket data is left out of cloud backup and device-to-device transfer.
 
 ## [2.8.0] - 2026-11-06
 
@@ -97,7 +104,7 @@ This is the semantic version 2.8.0. It is not the earlier *Product release 2.8.0
 
 ### Known issues
 
-- **Open web on hosted agent computers** is not available yet. It works on computers you run yourself.
+- PENDING-OPENWEB (CEO q12 b, 2026-11-08: drop this line if hosted open web is switched on in 2.8.1): **Open web on hosted agent computers** is not available yet. It works on computers you run yourself.
 - **Connecting an AI assistant is not on at launch.** MCP connections open shortly after 2.8.0 goes live. Until then, `https://absuite.net/mcp` does not answer.
 - **Self-registration for other MCP clients is off at launch.** Other MCP clients (Cursor, VS Code and others) can register themselves once dynamic registration is switched on; we will announce it.
 - **Custom roles and the Support lists.** A custom role that read knowledge articles, warranty, return or refund policies or ticket priorities before 2.8.0 may see "not authorized" on those lists and their Helpdesk details pages until we restore its access. To fix it now, a workspace administrator grants the role the matching read permission: KnowledgeArticles.Read, WarrantyPolicies.Read, ReturnPolicies.Read, RefundPolicies.Read or SupportTicketPriorities.Read.
