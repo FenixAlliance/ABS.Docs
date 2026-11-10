@@ -6,14 +6,11 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 
 > Las versiones anteriores a la 2.7.0 están en el [registro de cambios en inglés](Changelog.md).
 
-## [2.8.1] - DATE-WHEN-LIVE
+## [2.8.1] - 2026-11-09
 
 ### Añadido
 
-- PENDING-ACHOSTED (AI m1794086322975, regla de texto aceptada por el TL; conservar solo si los computadores de agente alojados (e1) están en el rango con push y activados; si la web abierta alojada se activa en la 2.8.1 (CEO q12 b), cambiar la segunda frase por "El dueño puede elegir la web abierta al crear un computador alojado."): **Computadores de agente alojados.** Los computadores de agente alojados pueden usar ABS y los archivos de su espacio de trabajo. Navegar por otros sitios web aún no está disponible en los computadores alojados. Los computadores que ejecutas tú mismo conservan sus sitios permitidos como antes.
 - **Los computadores de agente vienen incluidos en los planes de pago.** Los computadores de agente ahora forman parte de los planes de pago de la plataforma, con una reserva que comparte cada espacio de trabajo: Starter incluye 10 horas RCU al mes, 5 GiB-mes de Cloud Workspace Storage y 1 computador a la vez; Growth, 40 horas RCU, 10 GiB-mes y 3 computadores; Professional, 75, 20 GiB-mes y 10; Business, 150, 40 GiB-mes y 50 (1 RCU = 1 vCPU + 2 GiB de memoria, así que un computador de 2 vCPU / 4 GiB usa 2 horas RCU por hora). Un GiB-mes es almacenamiento en el tiempo: 10 GiB guardados durante la mitad de un mes de 30 días son 5 GiB-mes. El estado guardado de un computador de agente en pausa cuenta en él y se conserva mientras exista el dispositivo, según los términos de tu suscripción y de almacenamiento. Cuando se agota el almacenamiento, el nuevo trabajo guardado se rechaza antes de empezar; los computadores que ya existen siguen pausándose de forma segura. En los planes anuales, los doce meses de cómputo están disponibles durante todo el año, y la asignación de almacenamiento es la misma cada mes. El plan Free no incluye computadores de agente. Desde la 2.8.1, una suscripción registra el uso incluido de su plan cuando se activa o cambia de plan, y lo conserva hasta que cambie de plan, aunque los planes cambien después. Una suscripción existente lo registra en su siguiente renovación y, hasta entonces, usa el plan actual.
-- PENDING-RESET (Security m1794167975811: restablecer un computador alojado respondía true y no hacía nada; conservar "restablecerlo para que olvide" solo cuando S11 esté en verde sobre el SHA de la corrección) PENDING-FORGET (Security m1794163783695: Firefox 153 puede guardar los inicios de sesión en ~/.config/mozilla/firefox, que olvidar no borra; conservar "e inicios de sesión" solo cuando se vea funcionar en la ruta real sobre el digest en aceptación; si no, quitarlo o que el CEO lo acepte con sus propias palabras): **Gestiona los computadores de agente alojados.** En un computador alojado, el dueño de un agente puede restablecerlo para que olvide sus archivos e inicios de sesión guardados, o activar "Olvidar las sesiones iniciadas al detenerse", y los administradores eligen su región y su tamaño, en Studio y Nucleus Web.
-- PENDING-RESTART (TL 2026-11-08: SupportsRestartKeepFiles es false en ACA y AgentComputerResumeUseCases:43 rechaza "Reiniciar aplicaciones, conservar archivos" en alojados; conservar esta línea solo cuando el servidor lo ejecute y una fila S lo muestre; si no, quitarla o reescribirla): **Elige cómo vuelven los computadores de agente alojados después de una pausa.** Los dueños y administradores del espacio de trabajo ahora pueden elegir, en los ajustes de los computadores de agente, cómo vuelven los computadores alojados de sus agentes después de una pausa: "Reanudar aplicaciones y archivos" o "Reiniciar aplicaciones, conservar archivos", cada uno permitido, obligatorio o no permitido, además de un valor por defecto para los computadores nuevos. El computador de cada agente muestra qué comportamiento aplica y por qué, y cuánto almacenamiento conserva; un ajuste fijado por la política del espacio de trabajo o por un disco de datos se muestra de solo lectura con el motivo. Un cambio aplica en la siguiente pausa del computador. Si el espacio de trabajo ya no permite las aplicaciones abiertas guardadas de un computador, no las reanudará; puedes reiniciar sus aplicaciones y conservar sus archivos, o restablecerlo.
 
 ### Cambiado (léelo, por favor)
 
@@ -23,6 +20,10 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y 
 ### Seguridad
 
 - **Nucleus Pocket mantiene privadas las pantallas de aprobación y de agentes.** En Android, las pantallas de aprobación y de agentes se ocultan en el selector de aplicaciones y no se pueden capturar en capturas de pantalla ni grabaciones de pantalla. En iOS se ocultan en el selector de aplicaciones, pero iOS no permite que una aplicación bloquee las capturas ni la grabación de pantalla. En Android, los datos de Pocket quedan fuera de la copia de seguridad en la nube y de la transferencia entre dispositivos.
+
+### Problemas conocidos
+
+- **Los computadores de agente alojados están desactivados en la 2.8.1.** Los computadores de agente alojados no están disponibles en esta versión. Los computadores de agente que ejecutas tú mismo funcionan como antes.
 
 ## [2.8.0] - 2026-11-06
 
@@ -94,7 +95,7 @@ Esta es la versión semántica 2.8.0. No es la antigua *Product release 2.8.0* d
 
 ### Problemas conocidos
 
-- PENDING-OPENWEB (CEO q12 b, 2026-11-08: quitar esta línea si la web abierta alojada se activa en la 2.8.1): **La web abierta en los computadores de agente alojados** aún no está disponible. Funciona en los computadores que ejecutas tú mismo.
+- **La web abierta en los computadores de agente alojados** no está disponible. Funciona en los computadores que ejecutas tú mismo.
 - **La conexión de asistentes de IA no está encendida al lanzamiento.** Las conexiones MCP se abren poco después de que la 2.8.0 esté en línea. Hasta entonces, `https://absuite.net/mcp` no responde.
 - **El autorregistro de otros clientes MCP está apagado al lanzamiento.** Otros clientes MCP (Cursor, VS Code y otros) podrán registrarse solos cuando se encienda el registro dinámico; lo anunciaremos.
 - **Roles personalizados y las listas de Soporte.** Un rol personalizado que leía artículos de conocimiento, políticas de garantía, devolución o reembolso o prioridades de tickets antes de la 2.8.0 puede ver "no autorizado" en esas listas y en sus páginas de detalles de Helpdesk hasta que restauremos su acceso. Para arreglarlo ya, un administrador del espacio de trabajo le concede al rol el permiso de lectura correspondiente: KnowledgeArticles.Read, WarrantyPolicies.Read, ReturnPolicies.Read, RefundPolicies.Read o SupportTicketPriorities.Read.
